@@ -333,8 +333,8 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-fopdt-transfer-function">The FOPDT Transfer Function</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-fopdt-step-response">The FOPDT Step Response</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-1-tangent-and-inflection-smith-ziegler-nichols-original">Method 1: Tangent-and-Inflection (Smith / Ziegler-Nichols Original)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2-sundaresankrishnaswamy-two-point-fit">Method 2: Sundaresan–Krishnaswamy Two-Point Fit</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-35-3-and-85-3-a-quick-derivation-sketch">Why 35.3% and 85.3%? — A Quick Derivation Sketch</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2-sundaresan-krishnaswamy-two-point-fit">Method 2: Sundaresan-Krishnaswamy Two-Point Fit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-35-3-and-85-3-a-quick-derivation-sketch">Why 35.3% and 85.3%?  -  A Quick Derivation Sketch</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#worked-example-heat-exchanger-cooling-water-step">Worked Example: Heat-Exchanger Cooling-Water Step</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#worked-example-higher-order-process-fit-to-fopdt">Worked Example: Higher-Order Process Fit to FOPDT</a></li>
 </ul>
@@ -354,7 +354,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inherent-vs-installed-characteristic">Inherent vs. Installed Characteristic</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#worked-example-linear-vs-equal-percentage-lift-calculation">Worked Example: Linear vs. Equal-Percentage Lift Calculation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loop-gain-and-why-constant-loop-gain-matters">Loop Gain and Why Constant Loop Gain Matters</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#choked-flow-the-upper-limit-on-equation-2">Choked Flow — The Upper Limit on Equation 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#choked-flow-the-upper-limit-on-equation-2">Choked Flow  -  The Upper Limit on Equation 2</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compressible-gas-flow-through-control-valves">Compressible (Gas) Flow Through Control Valves</a></li>
 </ul>
 </li>
@@ -375,8 +375,8 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#direct-vs-indirect-sensors">Direct vs. Indirect Sensors</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sensor-vocabulary">Sensor Vocabulary</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-sensor-types-by-variable">Common Sensor Types by Variable</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-420-ma-standard">The 4–20 mA Standard</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#worked-example-420-ma-loop-calibration">Worked Example: 4–20 mA Loop Calibration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-4-20-ma-standard">The 4-20 mA Standard</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#worked-example-4-20-ma-loop-calibration">Worked Example: 4-20 mA Loop Calibration</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#closed-loop-block-diagrams-and-block-diagram-algebra">Closed-Loop Block Diagrams and Block-Diagram Algebra</a><ul class="visible nav section-nav flex-column">
@@ -384,7 +384,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-sensor-transmitter-as-a-block">The Sensor/Transmitter as a Block</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pid-controllers-algorithms-and-tuning">PID Controllers — Algorithms and Tuning</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pid-controllers-algorithms-and-tuning">PID Controllers  -  Algorithms and Tuning</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ideal-continuous-pid-algorithm">The Ideal Continuous PID Algorithm</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mode-selection-guidelines">Mode-Selection Guidelines</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ziegler-nichols-open-loop-step-test-tuning-rules">Ziegler-Nichols Open-Loop (Step-Test) Tuning Rules</a></li>
@@ -428,39 +428,39 @@
 For a time-domain signal <span class="math notranslate nohighlight">\(f(t)\)</span> defined for <span class="math notranslate nohighlight">\(t \geq 0\)</span>, the Laplace transform is</p>
 <div class="math notranslate nohighlight">
 \[
-F(s) = L{f(t)} = \int_0^{\infty} f(t)e^{-s t}dt
+F(s) = L\{f(t)\} = \int_0^{\infty} f(t) e^{-s t} dt
 \]</div>
-<p>The variable <span class="math notranslate nohighlight">\(s\)</span> is complex. The transform converts differentiation into multiplication, integration into division, and convolution into a product — which is why every linear ODE becomes a linear algebraic equation in the <span class="math notranslate nohighlight">\(s\)</span>-domain.</p>
+<p>The variable <span class="math notranslate nohighlight">\(s\)</span> is complex. The transform converts differentiation into multiplication, integration into division, and convolution into a product  -  which is why every linear ODE becomes a linear algebraic equation in the <span class="math notranslate nohighlight">\(s\)</span>-domain.</p>
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Transform Pairs We Will Use</strong></p>
 <ul class="simple">
-<li><p>Unit impulse: <span class="math notranslate nohighlight">\(\delta(t) \leftrightarrow 1\)</span></p></li>
-<li><p>Unit step: <span class="math notranslate nohighlight">\(u(t) \leftrightarrow \dfrac{1}{s}\)</span></p></li>
-<li><p>Step of magnitude <span class="math notranslate nohighlight">\(M\)</span>: <span class="math notranslate nohighlight">\(Mu(t) \leftrightarrow \dfrac{M}{s}\)</span></p></li>
-<li><p>Ramp: <span class="math notranslate nohighlight">\(t \leftrightarrow \dfrac{1}{s^2}\)</span></p></li>
-<li><p>Exponential decay: <span class="math notranslate nohighlight">\(e^{-a t} \leftrightarrow \dfrac{1}{s + a}\)</span></p></li>
-<li><p>Sine: <span class="math notranslate nohighlight">\(\sin(\omega t) \leftrightarrow \dfrac{\omega}{s^2 + \omega^2}\)</span></p></li>
-<li><p>Cosine: <span class="math notranslate nohighlight">\(\cos(\omega t) \leftrightarrow \dfrac{s}{s^2 + \omega^2}\)</span></p></li>
-<li><p>Damped sine: <span class="math notranslate nohighlight">\(e^{-a t}\sin(\omega t) \leftrightarrow \dfrac{\omega}{(s+a)^2 + \omega^2}\)</span></p></li>
-<li><p>Damped cosine: <span class="math notranslate nohighlight">\(e^{-a t}\cos(\omega t) \leftrightarrow \dfrac{s + a}{(s+a)^2 + \omega^2}\)</span></p></li>
-<li><p>Time-shifted: <span class="math notranslate nohighlight">\(f(t - \theta)u(t-\theta) \leftrightarrow e^{-\theta s}F(s)\)</span>   (dead time)</p></li>
+<li><p>Unit impulse: <span class="math notranslate nohighlight">\(\delta(t)  \leftrightarrow  1\)</span></p></li>
+<li><p>Unit step: <span class="math notranslate nohighlight">\(u(t)  \leftrightarrow  \dfrac{1}{s}\)</span></p></li>
+<li><p>Step of magnitude <span class="math notranslate nohighlight">\(M\)</span>: <span class="math notranslate nohighlight">\(M u(t)  \leftrightarrow  \dfrac{M}{s}\)</span></p></li>
+<li><p>Ramp: <span class="math notranslate nohighlight">\(t  \leftrightarrow  \dfrac{1}{s^2}\)</span></p></li>
+<li><p>Exponential decay: <span class="math notranslate nohighlight">\(e^{-a t}  \leftrightarrow  \dfrac{1}{s + a}\)</span></p></li>
+<li><p>Sine: <span class="math notranslate nohighlight">\(\sin(\omega t)  \leftrightarrow  \dfrac{\omega}{s^2 + \omega^2}\)</span></p></li>
+<li><p>Cosine: <span class="math notranslate nohighlight">\(\cos(\omega t)  \leftrightarrow  \dfrac{s}{s^2 + \omega^2}\)</span></p></li>
+<li><p>Damped sine: <span class="math notranslate nohighlight">\(e^{-a t}\sin(\omega t)  \leftrightarrow  \dfrac{\omega}{(s+a)^2 + \omega^2}\)</span></p></li>
+<li><p>Damped cosine: <span class="math notranslate nohighlight">\(e^{-a t}\cos(\omega t)  \leftrightarrow  \dfrac{s + a}{(s+a)^2 + \omega^2}\)</span></p></li>
+<li><p>Time-shifted: <span class="math notranslate nohighlight">\(f(t - \theta) u(t-\theta)  \leftrightarrow  e^{-\theta s} F(s)\)</span>   (dead time)</p></li>
 </ul>
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Operator Theorems</strong></p>
 <ul class="simple">
-<li><p>Derivative: <span class="math notranslate nohighlight">\(L\left{\dfrac{df}{dt}\right} = sF(s) - f(0)\)</span></p></li>
-<li><p>Second derivative: <span class="math notranslate nohighlight">\(L\left{\dfrac{d^2f}{dt^2}\right} = s^2F(s) - sf(0) - f'(0)\)</span></p></li>
-<li><p>Initial-value theorem: <span class="math notranslate nohighlight">\(\displaystyle\lim_{t \to 0^+} f(t) = \lim_{s \to \infty} sF(s)\)</span></p></li>
-<li><p>Final-value theorem: <span class="math notranslate nohighlight">\(\displaystyle\lim_{t \to \infty} f(t) = \lim_{s \to 0} sF(s)\)</span>   (only if all poles of <span class="math notranslate nohighlight">\(sF(s)\)</span> lie in the left half-plane).</p></li>
+<li><p>Derivative: <span class="math notranslate nohighlight">\(L\{\dfrac{df}{dt}\} = s F(s) - f(0)\)</span></p></li>
+<li><p>Second derivative: <span class="math notranslate nohighlight">\(L\{\dfrac{d^2f}{dt^2}\} = s^2 F(s) - s f(0) - f'(0)\)</span></p></li>
+<li><p>Initial-value theorem: <span class="math notranslate nohighlight">\(\displaystyle\lim_{t \to 0^+} f(t) = \lim_{s \to \infty} s F(s)\)</span></p></li>
+<li><p>Final-value theorem: <span class="math notranslate nohighlight">\(\displaystyle\lim_{t \to \infty} f(t) = \lim_{s \to 0} s F(s)\)</span>   (only if all poles of <span class="math notranslate nohighlight">\(sF(s)\)</span> lie in the left half-plane).</p></li>
 </ul>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Deviation Variables — Why We Always Use Them</strong>
+<p><strong>Deviation Variables  -  Why We Always Use Them</strong>
 Throughout this chapter, every variable is a <strong>deviation</strong> from a reference steady state:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -486,14 +486,14 @@ Inverting a rational <span class="math notranslate nohighlight">\(F(s) = N(s)/D(
 <p><strong>(b) Heaviside cover-up</strong> (faster for distinct linear factors): the residue at <span class="math notranslate nohighlight">\(s = a\)</span> is</p>
 <div class="math notranslate nohighlight">
 \[
-A = [ (s - a)F(s) ]_{s = a}
+A = [ (s - a) F(s) ]_{s = a}
 \]</div>
 <p>We will use partial fractions in deriving the first-order step response and the cover-up technique in deriving the FOPDT step response.</p>
 </div>
 </section>
 <section id="first-order-systems-complete-step-response-derivation">
 <h2>First-Order Systems: Complete Step-Response Derivation<a class="headerlink" href="#first-order-systems-complete-step-response-derivation" title="Link to this heading">#</a></h2>
-<p>A first-order linear process is the workhorse model of process control. A liquid-level tank with a linear outlet resistance, a stirred-tank thermocouple, a CSTR concentration response, the lag introduced by a valve actuator — all can be approximated as first-order with two parameters: a steady-state gain <span class="math notranslate nohighlight">\(K\)</span> and a time constant <span class="math notranslate nohighlight">\(\tau\)</span>.</p>
+<p>A first-order linear process is the workhorse model of process control. A liquid-level tank with a linear outlet resistance, a stirred-tank thermocouple, a CSTR concentration response, the lag introduced by a valve actuator  -  all can be approximated as first-order with two parameters: a steady-state gain <span class="math notranslate nohighlight">\(K\)</span> and a time constant <span class="math notranslate nohighlight">\(\tau\)</span>.</p>
 <section id="the-transfer-function-in-standard-form">
 <h3>The Transfer Function in Standard Form<a class="headerlink" href="#the-transfer-function-in-standard-form" title="Link to this heading">#</a></h3>
 <div class="admonition note">
@@ -501,35 +501,35 @@ A = [ (s - a)F(s) ]_{s = a}
 <p>A <strong>first-order process</strong> is one whose time-domain dynamics are described by the linear, constant-coefficient ODE (in deviation variables)</p>
 <div class="math notranslate nohighlight">
 \[
-\tau\frac{dy(t)}{dt} + y(t) = Kx(t)
+\tau \frac{dy(t)}{dt} + y(t) = K x(t)
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(x\)</span> is the input deviation, <span class="math notranslate nohighlight">\(y\)</span> is the output deviation, <span class="math notranslate nohighlight">\(K\)</span> is the steady-state gain, and <span class="math notranslate nohighlight">\(\tau\)</span> is the time constant. Taking the Laplace transform (with <span class="math notranslate nohighlight">\(y(0) = 0\)</span>) gives</p>
 <div class="math notranslate nohighlight">
 \[
-\tausY(s) + Y(s) = KX(s)
+\tau s Y(s) + Y(s) = K X(s)
 \]</div>
 <div class="math notranslate nohighlight">
 \[
-\frac{Y(s){X(s)} = G(s) = \frac{K}{\tau s + 1}}
+\frac{Y(s)}{X(s)} = G(s) = \frac{K}{\tau s + 1}
 \]</div>
-<p>This rational function is the <em>transfer function</em> of the process in <em>standard form</em> — denominator polynomial normalized so the constant term is unity.</p>
+<p>This rational function is the <em>transfer function</em> of the process in <em>standard form</em>  -  denominator polynomial normalized so the constant term is unity.</p>
 </div>
 </section>
 <section id="step-input-derivation-in-generic-terms">
 <h3>Step-Input Derivation in Generic Terms<a class="headerlink" href="#step-input-derivation-in-generic-terms" title="Link to this heading">#</a></h3>
-<p>We will follow the transcript exactly: a generic transfer function <span class="math notranslate nohighlight">\(G(s) = K/(\tau s + 1)\)</span> subjected to a step input of magnitude <span class="math notranslate nohighlight">\(M\)</span>. Working in generic letters means the answer is universal — the same formula applies whether the process is a level tank, a heat exchanger, or a reactor.</p>
+<p>We will follow the transcript exactly: a generic transfer function <span class="math notranslate nohighlight">\(G(s) = K/(\tau s + 1)\)</span> subjected to a step input of magnitude <span class="math notranslate nohighlight">\(M\)</span>. Working in generic letters means the answer is universal  -  the same formula applies whether the process is a level tank, a heat exchanger, or a reactor.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Transform the input.</strong> The step of magnitude <span class="math notranslate nohighlight">\(M\)</span> is <span class="math notranslate nohighlight">\(x(t) = Mu(t)\)</span>, whose Laplace transform is</p></li>
+<li><p class="sd-card-text"><strong>Transform the input.</strong> The step of magnitude <span class="math notranslate nohighlight">\(M\)</span> is <span class="math notranslate nohighlight">\(x(t) = M u(t)\)</span>, whose Laplace transform is</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
-X(s) = L{Mu(t)} = \frac{M}{s}
+X(s) = L\{M u(t)\} = \frac{M}{s}
 \]</div>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Form the output transform.</strong> Substitute into <span class="math notranslate nohighlight">\(Y(s) = G(s)X(s)\)</span>:</p></li>
+<li><p class="sd-card-text"><strong>Form the output transform.</strong> Substitute into <span class="math notranslate nohighlight">\(Y(s) = G(s) X(s)\)</span>:</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
@@ -550,12 +550,12 @@ Y(s) = \frac{K}{\tau s + 1} \cdot \frac{M}{s} = \frac{K M}{s(\tau s + 1)}
 </div>
 <div class="math notranslate nohighlight">
 \[
-K M = A(\tau s + 1) + B s = (\tau A + B)s + A
+K M = A(\tau s + 1) + B s = (\tau A + B) s + A
 \]</div>
 <ul>
 <li><p class="sd-card-text"><strong>Match coefficients.</strong> The left side is <span class="math notranslate nohighlight">\(KM\)</span>, a constant, so coefficient of <span class="math notranslate nohighlight">\(s^1\)</span> must vanish and coefficient of <span class="math notranslate nohighlight">\(s^0\)</span> must equal <span class="math notranslate nohighlight">\(KM\)</span>:</p></li>
 <li><p class="sd-card-text"><span class="math notranslate nohighlight">\(s^0\)</span> (constants): <span class="math notranslate nohighlight">\(A = K M\)</span>.</p></li>
-<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(s^1\)</span>: <span class="math notranslate nohighlight">\(\tau A + B = 0 \Longrightarrow B = -\tauA = -K M \tau\)</span>.</p>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(s^1\)</span>: <span class="math notranslate nohighlight">\(\tau A + B = 0  \Longrightarrow  B = -\tau A = -K M \tau\)</span>.</p>
 <p class="sd-card-text">Therefore</p>
 </li>
 </ul>
@@ -564,17 +564,17 @@ K M = A(\tau s + 1) + B s = (\tau A + B)s + A
 Y(s) = \frac{K M}{s} - \frac{K M \tau}{\tau s + 1}
 \]</div>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Invert term by term.</strong> Use <span class="math notranslate nohighlight">\(L^{-1}{1/s} = 1\)</span> and <span class="math notranslate nohighlight">\(L^{-1}{1/(\tau s + 1)} = (1/\tau)e^{-t/\tau}\)</span>:</p></li>
+<li><p class="sd-card-text"><strong>Invert term by term.</strong> Use <span class="math notranslate nohighlight">\(L^{-1}\{1/s\} = 1\)</span> and <span class="math notranslate nohighlight">\(L^{-1}\{1/(\tau s + 1)\} = (1/\tau) e^{-t/\tau}\)</span>:</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-0451c060-b4d1-49bc-8323-239e983bdcc7">
-<span class="eqno">(6)<a class="headerlink" href="#equation-0451c060-b4d1-49bc-8323-239e983bdcc7" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-bb24d91a-9775-4dc5-96c9-29c28a3271a2">
+<span class="eqno">(6)<a class="headerlink" href="#equation-bb24d91a-9775-4dc5-96c9-29c28a3271a2" title="Permalink to this equation">#</a></span>\[\begin{align}
 
 
-    y(t) &amp;= L^{-1}\left{ \frac{K M}{s} \right} - K M \tau \cdot L^{-1}\left{ \frac{1}{\tau s + 1} \right}
-&amp;= K M - K M \tau \cdot \frac{1}{\tau}e^{-t/\tau}
-&amp;= K M - K Me^{-t/\tau}
+    y(t) &amp;= L^{-1}\{ \frac{K M}{s} \} - K M \tau \cdot L^{-1}\{ \frac{1}{\tau s + 1} \}
+&amp;= K M - K M \tau \cdot \frac{1}{\tau} e^{-t/\tau}
+&amp;= K M - K M e^{-t/\tau}
     \end{align}\]</div>
 <div class="math notranslate nohighlight">
 \[\]</div>
@@ -583,7 +583,7 @@ Y(s) = \frac{K M}{s} - \frac{K M \tau}{\tau s + 1}
 </div>
 <div class="math notranslate nohighlight">
 \[
-y(t) = K M ( 1 - e^{-t/\tau )}   (Equation 1)
+y(t) = K M ( 1 - e^{-t/\tau} )    (Equation 1)
 \]</div>
 </div>
 </details></section>
@@ -595,7 +595,7 @@ y(t) = K M ( 1 - e^{-t/\tau )}   (Equation 1)
 The exponential approach to the new steady state has five reference points worth memorizing:</p>
 <ul class="simple">
 <li><p><strong>At <span class="math notranslate nohighlight">\(t = 0\)</span>:</strong> <span class="math notranslate nohighlight">\(y(0) = K M (1 - 1) = 0\)</span>. The output is unchanged from the reference steady state at the instant of the step.</p></li>
-<li><p><strong>At <span class="math notranslate nohighlight">\(t = \tau\)</span>:</strong> <span class="math notranslate nohighlight">\(y(\tau) = K M (1 - e^{-1}) = 0.632K M\)</span>. This is the <strong>63.2% landmark</strong> — the time constant equals the time required to reach 63.2% of the eventual change. It is the universal definition by which <span class="math notranslate nohighlight">\(\tau\)</span> is read from experimental data.</p></li>
+<li><p><strong>At <span class="math notranslate nohighlight">\(t = \tau\)</span>:</strong> <span class="math notranslate nohighlight">\(y(\tau) = K M (1 - e^{-1}) = 0.632 K M\)</span>. This is the <strong>63.2% landmark</strong>  -  the time constant equals the time required to reach 63.2% of the eventual change. It is the universal definition by which <span class="math notranslate nohighlight">\(\tau\)</span> is read from experimental data.</p></li>
 <li><p><strong>At <span class="math notranslate nohighlight">\(t = 2\tau\)</span>:</strong> <span class="math notranslate nohighlight">\(y/y(\infty) = 1 - e^{-2} = 0.865\)</span>.</p></li>
 <li><p><strong>At <span class="math notranslate nohighlight">\(t = 3\tau\)</span>:</strong> <span class="math notranslate nohighlight">\(y/y(\infty) = 1 - e^{-3} = 0.950\)</span>. “Settled to within 5%.”</p></li>
 <li><p><strong>At <span class="math notranslate nohighlight">\(t = 5\tau\)</span>:</strong> <span class="math notranslate nohighlight">\(y/y(\infty) = 1 - e^{-5} = 0.993\)</span>. Practically at steady state.</p></li>
@@ -634,7 +634,7 @@ The same Equation 1 applies for any sign of <span class="math notranslate nohigh
 </ul>
 <div class="math notranslate nohighlight">
 \[
-q_i(t) = Q_i(t) - Q_i = 0.41 - 0.40 = 0.01m^3/s for  t &gt; 0
+q_i(t) = Q_i(t) - Q_i = 0.41 - 0.40 = 0.01 m^3/s for  t &gt; 0
 \]</div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>so the step magnitude is $M = 0.01$. The output deviation is $h(t) = H(t) - 3.0$, with $h(0) = 0$.
 </pre></div>
@@ -644,21 +644,21 @@ q_i(t) = Q_i(t) - Q_i = 0.41 - 0.40 = 0.01m^3/s for  t &gt; 0
 </ul>
 <div class="math notranslate nohighlight">
 \[
-h(t) = K M ( 1 - e^{-t/\tau} ) = (10)(0.01)(1 - e^{-t/50}) = 0.10(1 - e^{-t/50})m
+h(t) = K M ( 1 - e^{-t/\tau} ) = (10)(0.01)(1 - e^{-t/50}) = 0.10(1 - e^{-t/50}) m
 \]</div>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>(a) Evaluate at <span class="math notranslate nohighlight">\(t = 100\)</span> s.</strong> Note <span class="math notranslate nohighlight">\(100/50 = 2\)</span>, so <span class="math notranslate nohighlight">\(e^{-100/50} = e^{-2} = 0.1353\)</span>.</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
-h(100) = 0.10(1 - 0.1353) = 0.10(0.8647) = 0.0865m
+h(100) = 0.10 (1 - 0.1353) = 0.10 (0.8647) = 0.0865 m
 \]</div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Convert back to absolute level:
 </pre></div>
 </div>
 <div class="math notranslate nohighlight">
 \[
-H(100) = H + h(100) = 3.000 + 0.0865 = 3.087m
+H(100) = H + h(100) = 3.000 + 0.0865 = 3.087 m
 \]</div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>A common student error is to read $h(100) = 0.0865$ m and *report it* as the answer; the absolute level is what an instrument actually shows.
 </pre></div>
@@ -668,21 +668,21 @@ H(100) = H + h(100) = 3.000 + 0.0865 = 3.087m
 </ul>
 <div class="math notranslate nohighlight">
 \[
-h(\infty) = K M = (10)(0.01) = 0.10m  \Longrightarrow  H(\infty) = 3.10m
+h(\infty) = K M = (10)(0.01) = 0.10 m  \Longrightarrow  H(\infty) = 3.10 m
 \]</div>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>© Time to reach 63.2% of the ultimate change.</strong> By the landmark property of <span class="math notranslate nohighlight">\(\tau\)</span>,</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
-t_{63.2%} = \tau = 50s
+t_{63.2%} = \tau = 50 s
 \]</div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Verify by solving $1 - e^{-t/\tau} = 0.632$:
 </pre></div>
 </div>
 <div class="math notranslate nohighlight">
 \[
-e^{-t/\tau} = 0.368 \Longrightarrow t/\tau = -\ln(0.368) = 1.0 \Longrightarrow t = \tau = 50s\checkmark
+e^{-t/\tau} = 0.368  \Longrightarrow  t/\tau = -\ln(0.368) = 1.0  \Longrightarrow  t = \tau = 50 s \checkmark
 \]</div>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Cross-check by material balance.</strong> A sustained extra <span class="math notranslate nohighlight">\(0.01\)</span> m\textsuperscript{3}/s inflow must, at steady state, be matched by an extra <span class="math notranslate nohighlight">\(0.01\)</span> m\textsuperscript{3}/s outflow. If the outlet flow is linear in head, <span class="math notranslate nohighlight">\(Q_o = h/R\)</span>, then <span class="math notranslate nohighlight">\(R = K = 10\)</span> s/m\textsuperscript{2}. The extra head needed to drive <span class="math notranslate nohighlight">\(0.01\)</span> extra m\textsuperscript{3}/s through resistance <span class="math notranslate nohighlight">\(R\)</span> is <span class="math notranslate nohighlight">\(\Delta h = R \cdot \Delta Q = 10 \times 0.01 = 0.10\)</span> m. \checkmark Matches the transfer-function answer exactly.</p></li>
@@ -705,34 +705,34 @@ e^{-t/\tau} = 0.368 \Longrightarrow t/\tau = -\ln(0.368) = 1.0 \Longrightarrow t
 </ul>
 <div class="math notranslate nohighlight">
 \[
-t(t) = K M (1 - e^{-t/\tau}) = (-3.0)(2.0)(1 - e^{-t/8}) = -6.0(1 - e^{-t/8})^\circF
+t(t) = K M (1 - e^{-t/\tau}) = (-3.0)(2.0)(1 - e^{-t/8}) = -6.0(1 - e^{-t/8}) ^\circ F
 \]</div>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Evaluate at <span class="math notranslate nohighlight">\(t = 4\)</span> s.</strong> <span class="math notranslate nohighlight">\(e^{-4/8} = e^{-0.5} = 0.6065\)</span>.</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
-t(4) = -6.0(1 - 0.6065) = -6.0(0.3935) = -2.36^\circF
+t(4) = -6.0 (1 - 0.6065) = -6.0 (0.3935) = -2.36^\circ F
 \]</div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Absolute temperature:
 </pre></div>
 </div>
 <div class="math notranslate nohighlight">
 \[
-T(4) = 175 + (-2.36) = 172.64^\circF
+T(4) = 175 + (-2.36) = 172.64^\circ F
 \]</div>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Steady state:</strong> <span class="math notranslate nohighlight">\(t(\infty) = K M = -6.0^\circ\)</span>F, so <span class="math notranslate nohighlight">\(T(\infty) = 175 - 6.0 = 169.0^\circ\)</span>F.</p></li>
-<li><p class="sd-card-text"><strong>Verification:</strong> The temperature <em>decreases</em> (consistent with negative gain and positive step). At <span class="math notranslate nohighlight">\(t = \tau = 8\)</span> s the deviation should be <span class="math notranslate nohighlight">\(0.632 \times (-6) = -3.79^\circ\)</span>F, giving <span class="math notranslate nohighlight">\(T(8) = 171.2^\circ\)</span>F. At <span class="math notranslate nohighlight">\(t = 5\tau = 40\)</span> s the response is at 99.3% — effectively done. The exponential shape is the same; only the asymptotic level is signed.</p></li>
+<li><p class="sd-card-text"><strong>Verification:</strong> The temperature <em>decreases</em> (consistent with negative gain and positive step). At <span class="math notranslate nohighlight">\(t = \tau = 8\)</span> s the deviation should be <span class="math notranslate nohighlight">\(0.632 \times (-6) = -3.79^\circ\)</span>F, giving <span class="math notranslate nohighlight">\(T(8) = 171.2^\circ\)</span>F. At <span class="math notranslate nohighlight">\(t = 5\tau = 40\)</span> s the response is at 99.3%  -  effectively done. The exponential shape is the same; only the asymptotic level is signed.</p></li>
 </ul>
 </div>
 </details><div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Exam Tips — First-Order Step Response</strong></p>
+<p><strong>Exam Tips  -  First-Order Step Response</strong></p>
 <ul class="simple">
 <li><p>Equation 1 is in <em>deviation</em> variables. Always add the prior steady state back before quoting the answer.</p></li>
 <li><p>The four memorized fractions are <span class="math notranslate nohighlight">\(0.632, 0.865, 0.950, 0.993\)</span> at <span class="math notranslate nohighlight">\(1\tau, 2\tau, 3\tau, 5\tau\)</span>. Many exam questions can be answered by inspection if you know these.</p></li>
-<li><p>The slope at <span class="math notranslate nohighlight">\(t=0\)</span> is <span class="math notranslate nohighlight">\(K M / \tau\)</span>, not zero. A first-order response starts moving immediately — there is no initial flatness. If you see a flat region at the beginning of a trace, the system has dead time (covered next).</p></li>
+<li><p>The slope at <span class="math notranslate nohighlight">\(t=0\)</span> is <span class="math notranslate nohighlight">\(K M / \tau\)</span>, not zero. A first-order response starts moving immediately  -  there is no initial flatness. If you see a flat region at the beginning of a trace, the system has dead time (covered next).</p></li>
 <li><p>For <em>negative</em> gain, the response goes down. Sign of <span class="math notranslate nohighlight">\(K\)</span> is preserved through Equation 1.</p></li>
 </ul>
 </div>
@@ -740,7 +740,7 @@ T(4) = 175 + (-2.36) = 172.64^\circF
 </section>
 <section id="first-order-plus-dead-time-fopdt-identification">
 <h2>First-Order Plus Dead Time (FOPDT) Identification<a class="headerlink" href="#first-order-plus-dead-time-fopdt-identification" title="Link to this heading">#</a></h2>
-<p>Real industrial processes almost always show a measurable delay between the moment a manipulated variable is changed and the moment the controlled variable begins to move. This delay — the <strong>dead time</strong>, <span class="math notranslate nohighlight">\(\theta\)</span> (also called transportation lag) — comes from finite-velocity transport in piping, from analyzer cycle times, from sampling intervals in digital controllers, and from any pure-delay element in the loop. The FOPDT model adds this dead time to the first-order model and is the foundation of nearly every classical PID tuning rule.</p>
+<p>Real industrial processes almost always show a measurable delay between the moment a manipulated variable is changed and the moment the controlled variable begins to move. This delay  -  the <strong>dead time</strong>, <span class="math notranslate nohighlight">\(\theta\)</span> (also called transportation lag)  -  comes from finite-velocity transport in piping, from analyzer cycle times, from sampling intervals in digital controllers, and from any pure-delay element in the loop. The FOPDT model adds this dead time to the first-order model and is the foundation of nearly every classical PID tuning rule.</p>
 <section id="the-fopdt-transfer-function">
 <h3>The FOPDT Transfer Function<a class="headerlink" href="#the-fopdt-transfer-function" title="Link to this heading">#</a></h3>
 <div class="admonition note">
@@ -748,7 +748,7 @@ T(4) = 175 + (-2.36) = 172.64^\circF
 <p>The First-Order Plus Dead Time (FOPDT) transfer function in standard form is</p>
 <div class="math notranslate nohighlight">
 \[
-G(s) = \frac{Ke^{-\theta s}}{\tau s + 1}
+G(s) = \frac{K e^{-\theta s}}{\tau s + 1}
 \]</div>
 <p>The factor <span class="math notranslate nohighlight">\(e^{-\theta s}\)</span> is the Laplace-domain representation of a pure delay of <span class="math notranslate nohighlight">\(\theta\)</span> time units. Three parameters: the steady-state gain <span class="math notranslate nohighlight">\(K\)</span>, the dominant time constant <span class="math notranslate nohighlight">\(\tau\)</span>, and the dead time <span class="math notranslate nohighlight">\(\theta\)</span>. Two reasons we love this model:</p>
 <ul class="simple">
@@ -762,7 +762,7 @@ G(s) = \frac{Ke^{-\theta s}}{\tau s + 1}
 <p>Subjecting <span class="math notranslate nohighlight">\(G(s)\)</span> to a step input of magnitude <span class="math notranslate nohighlight">\(M\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
-Y(s) = \frac{K e^{-\theta s}}{\tau s + 1} \cdot \frac{M}{s} = e^{-\theta s}\frac{K M}{s(\tau s + 1)}
+Y(s) = \frac{K e^{-\theta s}}{\tau s + 1} \cdot \frac{M}{s} = e^{-\theta s} \frac{K M}{s(\tau s + 1)}
 \]</div>
 <p>The factor <span class="math notranslate nohighlight">\(e^{-\theta s}\)</span> is a pure time-shift operator: when we invert, the time-domain answer is the first-order step response delayed by <span class="math notranslate nohighlight">\(\theta\)</span>. Using Equation 1 of the previous section and the time-shift theorem:</p>
 <div class="math notranslate nohighlight">
@@ -779,7 +779,7 @@ K M (1 - e^{-(t-\theta)/\tau}), | t \geq \theta \end{cases}
 <p><strong>Tangent-and-Inflection Construction</strong></p>
 <ul class="simple">
 <li><p>Draw the experimental step response.</p></li>
-<li><p>Find the inflection point — where the slope is steepest. For a pure first-order trace the inflection is at <span class="math notranslate nohighlight">\(t = \theta\)</span> itself; for higher-order processes it shifts later.</p></li>
+<li><p>Find the inflection point  -  where the slope is steepest. For a pure first-order trace the inflection is at <span class="math notranslate nohighlight">\(t = \theta\)</span> itself; for higher-order processes it shifts later.</p></li>
 <li><p>Draw a tangent line at the inflection. Extend it to (a) the original baseline and (b) the new asymptote.</p></li>
 <li><p>The tangent’s intersection with the baseline gives <span class="math notranslate nohighlight">\(\theta\)</span> (apparent dead time).</p></li>
 <li><p>The tangent’s intersection with the asymptote gives <span class="math notranslate nohighlight">\(t_{intercept} = \theta + \tau\)</span>. So <span class="math notranslate nohighlight">\(\tau = t_{intercept} - \theta\)</span>.</p></li>
@@ -787,8 +787,8 @@ K M (1 - e^{-(t-\theta)/\tau}), | t \geq \theta \end{cases}
 <p>This is fast on a graph but sensitive to where the eye places the tangent. We will not use it for numerical work; it is included because the original Ziegler-Nichols tuning rules were derived assuming this construction.</p>
 </div>
 </section>
-<section id="method-2-sundaresankrishnaswamy-two-point-fit">
-<h3>Method 2: Sundaresan–Krishnaswamy Two-Point Fit<a class="headerlink" href="#method-2-sundaresankrishnaswamy-two-point-fit" title="Link to this heading">#</a></h3>
+<section id="method-2-sundaresan-krishnaswamy-two-point-fit">
+<h3>Method 2: Sundaresan-Krishnaswamy Two-Point Fit<a class="headerlink" href="#method-2-sundaresan-krishnaswamy-two-point-fit" title="Link to this heading">#</a></h3>
 <p>The two-point fit, developed by Sundaresan and Krishnaswamy in the late 1970s, is much more reproducible than the tangent method because it uses fixed reference fractions rather than a hand-drawn line. It is the method the transcript uses, and it is the method most often expected on the PE exam.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
@@ -796,30 +796,30 @@ K M (1 - e^{-(t-\theta)/\tau}), | t \geq \theta \end{cases}
 Read off the times <span class="math notranslate nohighlight">\(t_{35.3%}\)</span> and <span class="math notranslate nohighlight">\(t_{85.3%}\)</span> at which the response reaches 35.3% and 85.3% of its ultimate change. Then</p>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-22d643c3-3c88-485c-9788-d6d4e925e8ac">
-<span class="eqno">(7)<a class="headerlink" href="#equation-22d643c3-3c88-485c-9788-d6d4e925e8ac" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-44c0ee26-a82f-4ac6-b93a-61ef2848a639">
+<span class="eqno">(7)<a class="headerlink" href="#equation-44c0ee26-a82f-4ac6-b93a-61ef2848a639" title="Permalink to this equation">#</a></span>\[\begin{align}
 
 
-\theta &amp;= 1.3t_{35.3%} - 0.29t_{85.3%}
-\tau   &amp;= 0.67(t_{85.3%} - t_{35.3%})
+\theta &amp;= 1.3 t_{35.3%} - 0.29 t_{85.3%}
+\tau   &amp;= 0.67 (t_{85.3%} - t_{35.3%})
 K      &amp;= \frac{\Delta y_{ss}}{\Delta x}
 \end{align}\]</div>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<p>The fractions 35.3% and 85.3% are not arbitrary — they are chosen so that the two-point fit exactly reproduces <span class="math notranslate nohighlight">\(\tau\)</span> and <span class="math notranslate nohighlight">\(\theta\)</span> for a pure FOPDT process. For higher-order processes, the fit minimizes least-squares error in the dominant pole.</p>
+<p>The fractions 35.3% and 85.3% are not arbitrary  -  they are chosen so that the two-point fit exactly reproduces <span class="math notranslate nohighlight">\(\tau\)</span> and <span class="math notranslate nohighlight">\(\theta\)</span> for a pure FOPDT process. For higher-order processes, the fit minimizes least-squares error in the dominant pole.</p>
 </div>
 </section>
 <section id="why-35-3-and-85-3-a-quick-derivation-sketch">
-<h3>Why 35.3% and 85.3%? — A Quick Derivation Sketch<a class="headerlink" href="#why-35-3-and-85-3-a-quick-derivation-sketch" title="Link to this heading">#</a></h3>
+<h3>Why 35.3% and 85.3%?  -  A Quick Derivation Sketch<a class="headerlink" href="#why-35-3-and-85-3-a-quick-derivation-sketch" title="Link to this heading">#</a></h3>
 <p>For a true FOPDT signal, <span class="math notranslate nohighlight">\(y(t) = KM(1 - e^{-(t-\theta)/\tau})\)</span> for <span class="math notranslate nohighlight">\(t \geq \theta\)</span>. The time at which the response reaches a fraction <span class="math notranslate nohighlight">\(f\)</span> of the ultimate is</p>
 <div class="math notranslate nohighlight">
 \[
-y/y(\infty) = f \Longrightarrow 1 - e^{-(t-\theta)/\tau} = f \Longrightarrow t - \theta = -\tau \ln(1 - f)
+y/y(\infty) = f  \Longrightarrow  1 - e^{-(t-\theta)/\tau} = f  \Longrightarrow  t - \theta = -\tau \ln(1 - f)
 \]</div>
 <p>So</p>
 <div class="math notranslate nohighlight">
 \[
-t_f = \theta + \tau[-\ln(1-f)]
+t_f = \theta + \tau [-\ln(1-f)]
 \]</div>
 <p>For two fractions <span class="math notranslate nohighlight">\(f_1\)</span> and <span class="math notranslate nohighlight">\(f_2\)</span>, the two times are</p>
 <div class="math notranslate nohighlight">
@@ -832,7 +832,7 @@ t_{f_2} &amp;= \theta + \tau \cdot b,   b \equiv -\ln(1-f_2)
 <div class="math notranslate nohighlight">
 \[ \begin{align}\begin{aligned}
 \begin{align}\\\tau   &amp;= \frac{t_{f_2} - t_{f_1}}{b - a}
-\theta &amp;= \frac{at_{f_2} - bt_{f_1}}{a - b}
+\theta &amp;= \frac{a t_{f_2} - b t_{f_1}}{a - b}
 \end{align}
 \end{aligned}\end{align} \]</div>
 <p>The Sundaresan-Krishnaswamy fractions <span class="math notranslate nohighlight">\(f_1 = 0.353, f_2 = 0.853\)</span> give <span class="math notranslate nohighlight">\(a = -\ln(0.647) = 0.4357\)</span> and <span class="math notranslate nohighlight">\(b = -\ln(0.147) = 1.9173\)</span>, so <span class="math notranslate nohighlight">\(b - a = 1.4816\)</span> and <span class="math notranslate nohighlight">\(1/(b - a) = 0.675 \approx 0.67\)</span>, and <span class="math notranslate nohighlight">\(b/(b-a) - a/(b-a) \cdot (rearranged) \to\)</span> the textbook constants 1.3 and 0.29. The 0.67 and 1.3/0.29 numbers in the formulas are direct consequences of these two chosen levels.</p>
@@ -852,7 +852,7 @@ t_{f_2} &amp;= \theta + \tau \cdot b,   b \equiv -\ln(1-f_2)
 </ul>
 <div class="math notranslate nohighlight">
 \[
-K = \frac{\Delta y_{ss}}{\Delta x} = \frac{T_{new} - T_{old}}{Q_{cw,new} - Q_{cw,old}} = \frac{53.2 - 55.0}{9.2 - 8.0} = \frac{-1.8}{1.2} = -1.5\frac{^\circF}{gpm}
+K = \frac{\Delta y_{ss}}{\Delta x} = \frac{T_{new} - T_{old}}{Q_{cw,new} - Q_{cw,old}} = \frac{53.2 - 55.0}{9.2 - 8.0} = \frac{-1.8}{1.2} = -1.5 \frac{^\circ F}{gpm}
 \]</div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Negative as expected (more cooling water lowers process outlet temperature).
 </pre></div>
@@ -867,12 +867,12 @@ K = \frac{\Delta y_{ss}}{\Delta x} = \frac{T_{new} - T_{old}}{Q_{cw,new} - Q_{cw
 </ul>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-0897c3fa-416b-4776-85fc-561d69d5b9c9">
-<span class="eqno">(8)<a class="headerlink" href="#equation-0897c3fa-416b-4776-85fc-561d69d5b9c9" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-99bf57f8-f9cb-4ed4-826f-d7b0893cce5e">
+<span class="eqno">(8)<a class="headerlink" href="#equation-99bf57f8-f9cb-4ed4-826f-d7b0893cce5e" title="Permalink to this equation">#</a></span>\[\begin{align}
 
 
-    \theta &amp;= 1.3(6.3) - 0.29(9.5) = 8.19 - 2.755 = 5.435 \approx 5.4min
-\tau   &amp;= 0.67(9.5 - 6.3) = 0.67(3.2) = 2.144 \approx 2.14min
+    \theta &amp;= 1.3 (6.3) - 0.29 (9.5) = 8.19 - 2.755 = 5.435 \approx 5.4 min
+\tau   &amp;= 0.67 (9.5 - 6.3) = 0.67 (3.2) = 2.144 \approx 2.14 min
     \end{align}\]</div>
 <div class="math notranslate nohighlight">
 \[\]</div>
@@ -881,7 +881,7 @@ K = \frac{\Delta y_{ss}}{\Delta x} = \frac{T_{new} - T_{old}}{Q_{cw,new} - Q_{cw
 </ul>
 <div class="math notranslate nohighlight">
 \[
-G(s) = \frac{-1.5e^{-5.4 s}}{2.14 s + 1}\frac{^\circF}{gpm}   (\theta, \tau  in min)
+G(s) = \frac{-1.5 e^{-5.4 s}}{2.14 s + 1}  \frac{^\circ F}{gpm}   (\theta, \tau  in min)
 \]</div>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -894,7 +894,7 @@ G(s) = \frac{-1.5e^{-5.4 s}}{2.14 s + 1}\frac{^\circF}{gpm}   (\theta, \tau  in 
 \[
 \frac{\theta}{\tau} = \frac{5.4}{2.14} = 2.52
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>This is a dead-time-dominant process ($\theta/\tau &gt; 1$). PI control alone will be sluggish — the controller cannot see any effect of its own action for $\theta = 5.4$ min after the action. Strategies for dead-time-dominant processes:
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>This is a dead-time-dominant process ($\theta/\tau &gt; 1$). PI control alone will be sluggish  -  the controller cannot see any effect of its own action for $\theta = 5.4$ min after the action. Strategies for dead-time-dominant processes:
 </pre></div>
 </div>
 <ul class="simple">
@@ -905,13 +905,13 @@ G(s) = \frac{-1.5e^{-5.4 s}}{2.14 s + 1}\frac{^\circF}{gpm}   (\theta, \tau  in 
 </ul>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-4ff6df03-c335-4964-b937-549f51de559c">
-<span class="eqno">(9)<a class="headerlink" href="#equation-4ff6df03-c335-4964-b937-549f51de559c" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ab185f0f-b7a2-42e0-98f0-99b1bafe3eea">
+<span class="eqno">(9)<a class="headerlink" href="#equation-ab185f0f-b7a2-42e0-98f0-99b1bafe3eea" title="Permalink to this equation">#</a></span>\[\begin{align}
 
 
-    T_{50%} &amp;= 55.0 + 0.5(-1.8) = 54.10^\circF
-1 - e^{-(t - \theta)/\tau} &amp;= 0.50 \Longrightarrow t - \theta = \tau \ln(2) = 2.14(0.693) = 1.485min
-t &amp;= 5.4 + 1.485 = 6.88min
+    T_{50%} &amp;= 55.0 + 0.5(-1.8) = 54.10^\circ F
+1 - e^{-(t - \theta)/\tau} &amp;= 0.50  \Longrightarrow  t - \theta = \tau \ln(2) = 2.14 (0.693) = 1.485 min
+t &amp;= 5.4 + 1.485 = 6.88 min
     \end{align}\]</div>
 <div class="math notranslate nohighlight">
 \[\]</div>
@@ -936,29 +936,29 @@ t &amp;= 5.4 + 1.485 = 6.88min
 </ul>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-ebbb522d-3ce2-498c-b4be-5ef5df846582">
-<span class="eqno">(10)<a class="headerlink" href="#equation-ebbb522d-3ce2-498c-b4be-5ef5df846582" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3509875e-595c-4d38-b31a-2bac8eab2b8a">
+<span class="eqno">(10)<a class="headerlink" href="#equation-3509875e-595c-4d38-b31a-2bac8eab2b8a" title="Permalink to this equation">#</a></span>\[\begin{align}
 
 
-    \theta_{app} &amp;= 1.3(2.6) - 0.29(8.0) = 3.38 - 2.32 = 1.06
-\tau_{app}   &amp;= 0.67(8.0 - 2.6) = 0.67(5.4) = 3.62
+    \theta_{app} &amp;= 1.3 (2.6) - 0.29 (8.0) = 3.38 - 2.32 = 1.06
+\tau_{app}   &amp;= 0.67 (8.0 - 2.6) = 0.67 (5.4) = 3.62
     \end{align}\]</div>
 <div class="math notranslate nohighlight">
 \[\]</div>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Interpretation:</strong> The dominant true time constant is 5, the secondary is 1. The fit recovers <span class="math notranslate nohighlight">\(\tau_{app} = 3.62\)</span> (an underestimate of the dominant pole because the secondary pole hides behind it) and gives a nonzero <span class="math notranslate nohighlight">\(\theta_{app} = 1.06\)</span> that mimics the secondary lag with an equivalent dead time. The empirical rule of thumb is <span class="math notranslate nohighlight">\(\theta_{app} \approx\)</span> the smaller time constant, <span class="math notranslate nohighlight">\(\tau_{app} \approx\)</span> the larger one — here <span class="math notranslate nohighlight">\(\theta_{app} = 1.06 \approx 1\)</span> \checkmark, and <span class="math notranslate nohighlight">\(\tau_{app} = 3.62\)</span> (within <span class="math notranslate nohighlight">\(\sim\)</span>30% of 5).</p></li>
+<li><p class="sd-card-text"><strong>Interpretation:</strong> The dominant true time constant is 5, the secondary is 1. The fit recovers <span class="math notranslate nohighlight">\(\tau_{app} = 3.62\)</span> (an underestimate of the dominant pole because the secondary pole hides behind it) and gives a nonzero <span class="math notranslate nohighlight">\(\theta_{app} = 1.06\)</span> that mimics the secondary lag with an equivalent dead time. The empirical rule of thumb is <span class="math notranslate nohighlight">\(\theta_{app} \approx\)</span> the smaller time constant, <span class="math notranslate nohighlight">\(\tau_{app} \approx\)</span> the larger one  -  here <span class="math notranslate nohighlight">\(\theta_{app} = 1.06 \approx 1\)</span> \checkmark, and <span class="math notranslate nohighlight">\(\tau_{app} = 3.62\)</span> (within <span class="math notranslate nohighlight">\(\sim\)</span>30% of 5).</p></li>
 <li><p class="sd-card-text"><strong>Engineering takeaway:</strong> FOPDT <em>fits</em> a higher-order process. The tuning constants computed from the apparent FOPDT will give acceptable, if not optimal, closed-loop behavior. This is the universal industrial practice.</p></li>
 </ul>
 </div>
 </details><div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Exam Tips — FOPDT Identification</strong></p>
+<p><strong>Exam Tips  -  FOPDT Identification</strong></p>
 <ul class="simple">
 <li><p>The Sundaresan-Krishnaswamy method (35.3% / 85.3%) is the standard. Memorize the formulas <span class="math notranslate nohighlight">\(\theta = 1.3 t_{35.3} - 0.29 t_{85.3}\)</span>, <span class="math notranslate nohighlight">\(\tau = 0.67(t_{85.3} - t_{35.3})\)</span>.</p></li>
 <li><p>Always state <span class="math notranslate nohighlight">\(K\)</span> <em>with its sign.</em> Direct/reverse acting controller selection depends on it.</p></li>
 <li><p>Diagnostic: <span class="math notranslate nohighlight">\(\theta/\tau\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(&lt; 0.1\)</span>: tight control with PI is easy.</p></li>
-<li><p><span class="math notranslate nohighlight">\(0.1\)</span>–<span class="math notranslate nohighlight">\(1.0\)</span>: classical PID territory.</p></li>
+<li><p><span class="math notranslate nohighlight">\(0.1\)</span>-<span class="math notranslate nohighlight">\(1.0\)</span>: classical PID territory.</p></li>
 <li><p><span class="math notranslate nohighlight">\(&gt; 1\)</span>: dead-time dominant. Plain PI/PID is sluggish; use Smith predictor, feedforward, or MPC.</p></li>
 <li><p>Cohen-Coon tuning (covered later) is more accurate than Ziegler-Nichols when <span class="math notranslate nohighlight">\(\theta/\tau &gt; 0.3\)</span>.</p></li>
 </ul>
@@ -967,7 +967,7 @@ t &amp;= 5.4 + 1.485 = 6.88min
 </section>
 <section id="second-order-systems-damping-coefficient">
 <h2>Second-Order Systems: Damping Coefficient<a class="headerlink" href="#second-order-systems-damping-coefficient" title="Link to this heading">#</a></h2>
-<p>Two first-order processes in series, or a process plus controller, or many intrinsic mechanical and pneumatic devices, produce <strong>second-order</strong> dynamics. Second-order systems are the first family in which the response shape itself — monotonic vs. oscillatory — depends on a parameter, the <strong>damping coefficient</strong> <span class="math notranslate nohighlight">\(\zeta\)</span> (zeta). Understanding <span class="math notranslate nohighlight">\(\zeta\)</span> is what lets you predict whether a control loop will be sluggish, snappy, or wildly oscillating.</p>
+<p>Two first-order processes in series, or a process plus controller, or many intrinsic mechanical and pneumatic devices, produce <strong>second-order</strong> dynamics. Second-order systems are the first family in which the response shape itself  -  monotonic vs. oscillatory  -  depends on a parameter, the <strong>damping coefficient</strong> <span class="math notranslate nohighlight">\(\zeta\)</span> (zeta). Understanding <span class="math notranslate nohighlight">\(\zeta\)</span> is what lets you predict whether a control loop will be sluggish, snappy, or wildly oscillating.</p>
 <section id="standard-form-of-the-second-order-transfer-function">
 <h3>Standard Form of the Second-Order Transfer Function<a class="headerlink" href="#standard-form-of-the-second-order-transfer-function" title="Link to this heading">#</a></h3>
 <div class="admonition note">
@@ -975,34 +975,34 @@ t &amp;= 5.4 + 1.485 = 6.88min
 <p>The standard form of a second-order transfer function in process control is</p>
 <div class="math notranslate nohighlight">
 \[
-G(s) = \frac{Y(s)}{X(s)} = \frac{K}{\tau^2 s^2 + 2\zeta\taus + 1}
+G(s) = \frac{Y(s)}{X(s)} = \frac{K}{\tau^2 s^2 + 2 \zeta \tau s + 1}
 \]</div>
 <p>Three parameters:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(K\)</span> — steady-state (process) gain.</p></li>
-<li><p><span class="math notranslate nohighlight">\(\tau\)</span> — the natural period parameter (units of time). The undamped natural frequency is <span class="math notranslate nohighlight">\(\omega_n = 1/\tau\)</span>.</p></li>
-<li><p><span class="math notranslate nohighlight">\(\zeta\)</span> — the dimensionless damping coefficient (sometimes called the damping ratio).</p></li>
+<li><p><span class="math notranslate nohighlight">\(K\)</span>  -  steady-state (process) gain.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\tau\)</span>  -  the natural period parameter (units of time). The undamped natural frequency is <span class="math notranslate nohighlight">\(\omega_n = 1/\tau\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\zeta\)</span>  -  the dimensionless damping coefficient (sometimes called the damping ratio).</p></li>
 </ul>
 <p>The denominator constant term is normalized to 1; if you encounter a denominator <span class="math notranslate nohighlight">\(a s^2 + b s + c\)</span> with <span class="math notranslate nohighlight">\(c \neq 1\)</span>, divide numerator and denominator by <span class="math notranslate nohighlight">\(c\)</span> first.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Putting an Arbitrary Second-Order ODE Into Standard Form</strong>
-Given <span class="math notranslate nohighlight">\(ay + by + cy = dx\)</span>, take the Laplace transform with <span class="math notranslate nohighlight">\(y(0) = y(0) = 0\)</span> and divide through by <span class="math notranslate nohighlight">\(c\)</span>:</p>
+Given <span class="math notranslate nohighlight">\(a y + b y + c y = d x\)</span>, take the Laplace transform with <span class="math notranslate nohighlight">\(y(0) = y(0) = 0\)</span> and divide through by <span class="math notranslate nohighlight">\(c\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
-\frac{Y(s)}{X(s)} = \frac{d/c}{(a/c)s^2 + (b/c)s + 1}
+\frac{Y(s)}{X(s)} = \frac{d/c}{(a/c) s^2 + (b/c) s + 1}
 \]</div>
 <p>Identify</p>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-7d9fbeea-c0a1-40de-9f2d-e71fb0ac48db">
-<span class="eqno">(11)<a class="headerlink" href="#equation-7d9fbeea-c0a1-40de-9f2d-e71fb0ac48db" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1b3840a7-fbeb-4a43-9b51-68a4146af5c6">
+<span class="eqno">(11)<a class="headerlink" href="#equation-1b3840a7-fbeb-4a43-9b51-68a4146af5c6" title="Permalink to this equation">#</a></span>\[\begin{align}
 
 
 K           &amp;= d/c
-\tau^2      &amp;= a/c \Longrightarrow \tau = \sqrt{a/c}
-2\zeta\tau  &amp;= b/c \Longrightarrow \zeta = \frac{b}{2 c \tau} = \frac{b}{2 \sqrt{a c}}
+\tau^2      &amp;= a/c  \Longrightarrow  \tau = \sqrt{a/c}
+2\zeta\tau  &amp;= b/c  \Longrightarrow  \zeta = \frac{b}{2 c \tau} = \frac{b}{2 \sqrt{a c}}
 \end{align}\]</div>
 <div class="math notranslate nohighlight">
 \[\]</div>
@@ -1035,7 +1035,7 @@ For a step input, the second-order time-domain response takes one of five shapes
 </ul>
 <div class="math notranslate nohighlight">
 \[
-Y(s) = \frac{K}{\tau^2 s^2 + 2\zeta\tau s + 1} \cdot \frac{M}{s} = \frac{K M}{s(\tau^2 s^2 + 2 \zeta \tau s + 1)}
+Y(s) = \frac{K}{\tau^2 s^2 + 2\zeta\tau s + 1} \cdot \frac{M}{s} = \frac{K M}{s (\tau^2 s^2 + 2 \zeta \tau s + 1)}
 \]</div>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Factor the denominator quadratic.</strong> The roots of <span class="math notranslate nohighlight">\(\tau^2 s^2 + 2\zeta\tau s + 1 = 0\)</span> are</p></li>
@@ -1049,7 +1049,7 @@ s = \frac{-2\zeta\tau \pm \sqrt{4\zeta^2\tau^2 - 4\tau^2}}{2\tau^2} = \frac{-\ze
 </div>
 <div class="math notranslate nohighlight">
 \[
-s = -\frac{\zeta}{\tau} \pm j\frac{\sqrt{1 - \zeta^2}}{\tau}
+s = -\frac{\zeta}{\tau} \pm j \frac{\sqrt{1 - \zeta^2}}{\tau}
 \]</div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Define the damped frequency $\omega_d = \sqrt{1-\zeta^2}/\tau$ and the decay rate $\alpha = \zeta/\tau$. The poles are $s = -\alpha \pm j \omega_d$.
 </pre></div>
@@ -1059,26 +1059,26 @@ s = -\frac{\zeta}{\tau} \pm j\frac{\sqrt{1 - \zeta^2}}{\tau}
 </ul>
 <div class="math notranslate nohighlight">
 \[
-Y(s) = \frac{KM}{\tau^2}\frac{1}{s(s+\alpha-j\omega_d)(s+\alpha+j\omega_d)} = \frac{A}{s} + \frac{B s + C}{(s+\alpha)^2 + \omega_d^2}
+Y(s) = \frac{KM}{\tau^2} \frac{1}{s (s+\alpha-j\omega_d)(s+\alpha+j\omega_d)} = \frac{A}{s} + \frac{B s + C}{(s+\alpha)^2 + \omega_d^2}
 \]</div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Multiplying through and matching coefficients (standard algebra; details suppressed for compactness) gives
 </pre></div>
 </div>
 <div class="math notranslate nohighlight">
 \[
-A = K M,   B = -K M,   C = -2\alphaK M
+A = K M,   B = -K M,   C = -2 \alpha K M
 \]</div>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Inverse transform.</strong> Using the damped-sine and damped-cosine pairs from the toolbox:</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-b94909d2-36a3-4212-97e2-0c3c1a4608ab">
-<span class="eqno">(12)<a class="headerlink" href="#equation-b94909d2-36a3-4212-97e2-0c3c1a4608ab" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a4731578-e7bc-45a3-83d4-c3b451792e72">
+<span class="eqno">(12)<a class="headerlink" href="#equation-a4731578-e7bc-45a3-83d4-c3b451792e72" title="Permalink to this equation">#</a></span>\[\begin{align}
 
 
-    L^{-1}\left{\frac{s + \alpha}{(s+\alpha)^2 + \omega_d^2}\right} &amp;= e^{-\alpha t}\cos(\omega_d t)
-L^{-1}\left{\frac{\omega_d}{(s+\alpha)^2 + \omega_d^2}\right} &amp;= e^{-\alpha t}\sin(\omega_d t)
+    L^{-1}\{\frac{s + \alpha}{(s+\alpha)^2 + \omega_d^2}\} &amp;= e^{-\alpha t}\cos(\omega_d t)
+L^{-1}\{\frac{\omega_d}{(s+\alpha)^2 + \omega_d^2}\} &amp;= e^{-\alpha t}\sin(\omega_d t)
     \end{align}\]</div>
 <div class="math notranslate nohighlight">
 \[\]</div>
@@ -1087,9 +1087,9 @@ L^{-1}\left{\frac{\omega_d}{(s+\alpha)^2 + \omega_d^2}\right} &amp;= e^{-\alpha 
 </div>
 <div class="math notranslate nohighlight">
 \[
-y(t) = K M [1 - \frac{1{\sqrt{1-\zeta^2}}e^{-\zeta t/\tau}\sin(\frac{\sqrt{1-\zeta^2}}{\tau}t + \phi)]}   (0 &lt; \zeta &lt; 1)
+y(t) = K M [ 1 - \frac{1}{\sqrt{1-\zeta^2}} e^{-\zeta t/\tau}\sin (\frac{\sqrt{1-\zeta^2}}{\tau} t + \phi)]    (0 &lt; \zeta &lt; 1)
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>where the phase $\phi = \tan^{-1}(\sqrt{1-\zeta^2}/\zeta) = \cos^{-1}(\zeta)$.
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>where the phase $\phi = \tan^{-1} (\sqrt{1-\zeta^2}/\zeta) = \cos^{-1}(\zeta)$.
 </pre></div>
 </div>
 </div>
@@ -1106,14 +1106,14 @@ y(t) = K M [1 - \frac{1{\sqrt{1-\zeta^2}}e^{-\zeta t/\tau}\sin(\frac{\sqrt{1-\ze
 </ul>
 <div class="math notranslate nohighlight">
 \[
-OS = \exp(-\frac{\pi\zeta}{\sqrt{1-\zeta^2}})
+OS = \exp (-\frac{\pi \zeta}{\sqrt{1-\zeta^2}})
 \]</div>
 <ul class="simple">
 <li><p><strong>Decay ratio</strong> (ratio of the second peak height to the first):</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
-DR = OS^{2} = \exp(-\frac{2\pi\zeta}{\sqrt{1-\zeta^2}})
+DR = OS^{ 2} = \exp (-\frac{2\pi \zeta}{\sqrt{1-\zeta^2}})
 \]</div>
 <ul class="simple">
 <li><p><strong>Quarter-decay target (Ziegler-Nichols target):</strong> <span class="math notranslate nohighlight">\(DR = 1/4\)</span> corresponds to <span class="math notranslate nohighlight">\(\zeta \approx 0.215\)</span>.</p></li>
@@ -1129,7 +1129,7 @@ DR = OS^{2} = \exp(-\frac{2\pi\zeta}{\sqrt{1-\zeta^2}})
 <p>A process is governed by the ODE</p>
 <div class="math notranslate nohighlight">
 \[
-\frac{d^2 y}{dt^2} + K\frac{dy}{dt} + 4y = x(t)
+\frac{d^2 y}{dt^2} + K \frac{dy}{dt} + 4 y = x(t)
 \]</div>
 <p>with <span class="math notranslate nohighlight">\(y(0) = y'(0) = 0\)</span>. The coefficient <span class="math notranslate nohighlight">\(K\)</span> (here a real parameter of the process, not a controller gain) can vary. Determine:</p>
 <ul class="simple">
@@ -1141,18 +1141,18 @@ DR = OS^{2} = \exp(-\frac{2\pi\zeta}{\sqrt{1-\zeta^2}})
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Laplace transform the ODE.</strong> With zero initial conditions, <span class="math notranslate nohighlight">\(L{y} = s^2 Y\)</span> and <span class="math notranslate nohighlight">\(L{y} = s Y\)</span>:</p></li>
+<li><p class="sd-card-text"><strong>Laplace transform the ODE.</strong> With zero initial conditions, <span class="math notranslate nohighlight">\(L\{y\} = s^2 Y\)</span> and <span class="math notranslate nohighlight">\(L\{y\} = s Y\)</span>:</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
-s^2Y + K sY + 4 Y = X
+s^2 Y + K s Y + 4 Y = X
 \]</div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Factor out $Y$:
 </pre></div>
 </div>
 <div class="math notranslate nohighlight">
 \[
-Y(s^2 + K s + 4) = X \Longrightarrow \frac{Y(s)}{X(s)} = \frac{1}{s^2 + K s + 4}
+Y (s^2 + K s + 4) = X  \Longrightarrow  \frac{Y(s)}{X(s)} = \frac{1}{s^2 + K s + 4}
 \]</div>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Reduce to standard form.</strong> The denominator constant term is 4; divide numerator and denominator by 4:</p></li>
@@ -1166,13 +1166,13 @@ Y(s^2 + K s + 4) = X \Longrightarrow \frac{Y(s)}{X(s)} = \frac{1}{s^2 + K s + 4}
 </div>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-d6a36c8b-afae-4b32-8b5f-afe061931ad4">
-<span class="eqno">(13)<a class="headerlink" href="#equation-d6a36c8b-afae-4b32-8b5f-afe061931ad4" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1a67de8b-29e8-41ac-9f0d-d41f076a369a">
+<span class="eqno">(13)<a class="headerlink" href="#equation-1a67de8b-29e8-41ac-9f0d-d41f076a369a" title="Permalink to this equation">#</a></span>\[\begin{align}
 
 
     K_p          &amp;= \frac{1}{4}
-\tau^2       &amp;= \frac{1}{4} \Longrightarrow \tau = \frac{1}{2}   (positive root)
-2 \zeta \tau &amp;= \frac{K}{4} \Longrightarrow \zeta = \frac{K}{8 \tau} = \frac{K}{8 \cdot (1/2)} = \frac{K}{4}
+\tau^2       &amp;= \frac{1}{4}  \Longrightarrow  \tau = \frac{1}{2}   (positive root)
+2 \zeta \tau &amp;= \frac{K}{4}  \Longrightarrow  \zeta = \frac{K}{8 \tau} = \frac{K}{8 \cdot (1/2)} = \frac{K}{4}
     \end{align}\]</div>
 <div class="math notranslate nohighlight">
 \[\]</div>
@@ -1185,27 +1185,27 @@ Y(s^2 + K s + 4) = X \Longrightarrow \frac{Y(s)}{X(s)} = \frac{1}{s^2 + K s + 4}
 </ul>
 <div class="math notranslate nohighlight">
 \[
-|\frac{K}{4}| &lt; 1 \Longrightarrow -4 &lt; K &lt; 4
+|\frac{K}{4}| &lt; 1  \Longrightarrow  -4 &lt; K &lt; 4
 \]</div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>*However,* $\zeta &lt; 0$ ($K &lt; 0$) gives unstable, growing oscillations. The transcript&#39;s stated answer is the full range $-4 &lt; K &lt; 4$ (oscillatory in form), but for a stable, decaying oscillation you need $0 &lt; K &lt; 4$. The PE-exam convention is to state the full range and then comment on stability separately, so:
 </pre></div>
 </div>
 <div class="math notranslate nohighlight">
 \[
--4 &lt; K &lt; 4   oscillatory (any decay direction)
+-4 &lt; K &lt; 4    oscillatory (any decay direction)
 \]</div>
 <div class="math notranslate nohighlight">
 \[
-0 &lt; K &lt; 4   stable, decaying oscillation
+0 &lt; K &lt; 4    stable, decaying oscillation
 \]</div>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>(b) Overdamped range.</strong> Overdamped means <span class="math notranslate nohighlight">\(\zeta \geq 1\)</span> (and stable):</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
-\frac{K}{4} \geq 1 \Longrightarrow K \geq 4
+\frac{K}{4} \geq 1  \Longrightarrow   K \geq 4
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>At exactly $K = 4$, $\zeta = 1$ (critically damped — the boundary).
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>At exactly $K = 4$, $\zeta = 1$ (critically damped  -  the boundary).
 </pre></div>
 </div>
 <ul class="simple">
@@ -1232,13 +1232,13 @@ Y(s^2 + K s + 4) = X \Longrightarrow \frac{Y(s)}{X(s)} = \frac{1}{s^2 + K s + 4}
 </ul>
 <div class="math notranslate nohighlight">
 \[
-DR = e^{-2\pi\zeta/\sqrt{1-\zeta^2}} = 0.25 \Longrightarrow -\frac{2\pi\zeta}{\sqrt{1-\zeta^2}} = \ln(0.25) = -1.386
+DR = e^{-2\pi\zeta/\sqrt{1-\zeta^2}} = 0.25  \Longrightarrow  -\frac{2\pi\zeta}{\sqrt{1-\zeta^2}} = \ln(0.25) = -1.386
 \]</div>
 <div class="math notranslate nohighlight">
 \[
 \frac{\zeta}{\sqrt{1-\zeta^2}} = \frac{1.386}{2\pi} = 0.2206
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Squaring: $\zeta^2/(1-\zeta^2) = 0.0487$, so $\zeta^2 = 0.0487(1-\zeta^2)$, i.e. $\zeta^2(1+0.0487) = 0.0487$, giving $\zeta^2 = 0.0464$, $\zeta = 0.215$. \checkmark The well-known “$\zeta \approx 0.215$ for quarter-decay” result.
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Squaring: $\zeta^2/(1-\zeta^2) = 0.0487$, so $\zeta^2 = 0.0487(1-\zeta^2)$, i.e. $\zeta^2(1+0.0487) = 0.0487$, giving $\zeta^2 = 0.0464$, $\zeta = 0.215$. \checkmark The well-known &quot;$\zeta \approx 0.215$ for quarter-decay&quot; result.
 </pre></div>
 </div>
 <ul class="simple">
@@ -1246,14 +1246,14 @@ DR = e^{-2\pi\zeta/\sqrt{1-\zeta^2}} = 0.25 \Longrightarrow -\frac{2\pi\zeta}{\s
 </ul>
 <div class="math notranslate nohighlight">
 \[
-T/4 = 12 \Longrightarrow T = 48s
+T/4 = 12  \Longrightarrow  T = 48 s
 \]</div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Solve $T = 2\pi\tau/\sqrt{1-\zeta^2}$ for $\tau$:
 </pre></div>
 </div>
 <div class="math notranslate nohighlight">
 \[
-\tau = \frac{T\sqrt{1-\zeta^2}}{2\pi} = \frac{48\sqrt{1-0.0464}}{2\pi} = \frac{48 \times 0.9766}{6.283} = 7.46s
+\tau = \frac{T \sqrt{1-\zeta^2}}{2\pi} = \frac{48 \sqrt{1-0.0464}}{2\pi} = \frac{48 \times 0.9766}{6.283} = 7.46 s
 \]</div>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Verification.</strong> <span class="math notranslate nohighlight">\(\omega_d = \sqrt{1-\zeta^2}/\tau = 0.9766/7.46 = 0.131\)</span> rad/s. Damped period <span class="math notranslate nohighlight">\(T = 2\pi/\omega_d = 48\)</span> s. \checkmark</p></li>
@@ -1261,13 +1261,13 @@ T/4 = 12 \Longrightarrow T = 48s
 </div>
 </details><div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Exam Tips — Second-Order Systems</strong></p>
+<p><strong>Exam Tips  -  Second-Order Systems</strong></p>
 <ul class="simple">
 <li><p>Always normalize the denominator so its constant term is 1 <em>before</em> reading <span class="math notranslate nohighlight">\(\tau\)</span> and <span class="math notranslate nohighlight">\(\zeta\)</span>. Skipping this step is the most common error.</p></li>
 <li><p>For a polynomial <span class="math notranslate nohighlight">\(a s^2 + b s + c\)</span>, <span class="math notranslate nohighlight">\(\zeta = b/(2\sqrt{ac})\)</span>, <span class="math notranslate nohighlight">\(\tau = \sqrt{a/c}\)</span>.</p></li>
 <li><p>Quarter-decay (<span class="math notranslate nohighlight">\(DR = 1/4\)</span>) <span class="math notranslate nohighlight">\(\Leftrightarrow \zeta = 0.215\)</span>. Memorize.</p></li>
 <li><p>Two limiting cases that come up: <span class="math notranslate nohighlight">\(\zeta = 1\)</span> (critical damping, fastest non-oscillatory) and <span class="math notranslate nohighlight">\(\zeta = 0\)</span> (sustained oscillation at <span class="math notranslate nohighlight">\(\omega_n\)</span>).</p></li>
-<li><p>The Routh-Hurwitz criterion generalizes the stability test to higher-order polynomials. For a second-order <span class="math notranslate nohighlight">\(a s^2 + b s + c\)</span> with <span class="math notranslate nohighlight">\(a &gt; 0\)</span>, the system is stable iff <span class="math notranslate nohighlight">\(b &gt; 0\)</span> and <span class="math notranslate nohighlight">\(c &gt; 0\)</span> — equivalent to <span class="math notranslate nohighlight">\(\zeta &gt; 0\)</span> in standard form.</p></li>
+<li><p>The Routh-Hurwitz criterion generalizes the stability test to higher-order polynomials. For a second-order <span class="math notranslate nohighlight">\(a s^2 + b s + c\)</span> with <span class="math notranslate nohighlight">\(a &gt; 0\)</span>, the system is stable iff <span class="math notranslate nohighlight">\(b &gt; 0\)</span> and <span class="math notranslate nohighlight">\(c &gt; 0\)</span>  -  equivalent to <span class="math notranslate nohighlight">\(\zeta &gt; 0\)</span> in standard form.</p></li>
 </ul>
 </div>
 </section>
@@ -1285,11 +1285,11 @@ T/4 = 12 \Longrightarrow T = 48s
 q = C_v \cdot f(\ell) \cdot \sqrt{\frac{\Delta P_v}{G_s}}   (Equation 2)
 \]</div>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(q\)</span> — volumetric flow rate. US customary units: US gpm. Metric: m\textsuperscript{3}/h with <span class="math notranslate nohighlight">\(K_v\)</span> instead of <span class="math notranslate nohighlight">\(C_v\)</span> (see conversion below).</p></li>
-<li><p><span class="math notranslate nohighlight">\(C_v\)</span> — valve flow coefficient. <em>Definition:</em> the volumetric flow of water (specific gravity 1) in US gpm that passes through a fully open valve when the pressure drop across the valve is exactly 1 psi. So <span class="math notranslate nohighlight">\(C_v\)</span> has units of <span class="math notranslate nohighlight">\(gpm/\sqrt{psi}\)</span>.</p></li>
-<li><p><span class="math notranslate nohighlight">\(f(\ell)\)</span> — the valve characteristic, a dimensionless function of the lift <span class="math notranslate nohighlight">\(\ell\)</span> (fraction open, <span class="math notranslate nohighlight">\(0 \leq \ell \leq 1\)</span>). The three classical forms are presented below.</p></li>
-<li><p><span class="math notranslate nohighlight">\(\Delta P_v\)</span> — the pressure drop across the valve <em>only</em> (not the whole system) in psi. This is the single most error-prone variable in valve sizing because students confuse <span class="math notranslate nohighlight">\(\Delta P_v\)</span> with the total system <span class="math notranslate nohighlight">\(\Delta P\)</span>.</p></li>
-<li><p><span class="math notranslate nohighlight">\(G_s\)</span> — specific gravity of the liquid (dimensionless, water = 1).</p></li>
+<li><p><span class="math notranslate nohighlight">\(q\)</span>  -  volumetric flow rate. US customary units: US gpm. Metric: m\textsuperscript{3}/h with <span class="math notranslate nohighlight">\(K_v\)</span> instead of <span class="math notranslate nohighlight">\(C_v\)</span> (see conversion below).</p></li>
+<li><p><span class="math notranslate nohighlight">\(C_v\)</span>  -  valve flow coefficient. <em>Definition:</em> the volumetric flow of water (specific gravity 1) in US gpm that passes through a fully open valve when the pressure drop across the valve is exactly 1 psi. So <span class="math notranslate nohighlight">\(C_v\)</span> has units of <span class="math notranslate nohighlight">\(gpm/\sqrt{psi}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(f(\ell)\)</span>  -  the valve characteristic, a dimensionless function of the lift <span class="math notranslate nohighlight">\(\ell\)</span> (fraction open, <span class="math notranslate nohighlight">\(0 \leq \ell \leq 1\)</span>). The three classical forms are presented below.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Delta P_v\)</span>  -  the pressure drop across the valve <em>only</em> (not the whole system) in psi. This is the single most error-prone variable in valve sizing because students confuse <span class="math notranslate nohighlight">\(\Delta P_v\)</span> with the total system <span class="math notranslate nohighlight">\(\Delta P\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(G_s\)</span>  -  specific gravity of the liquid (dimensionless, water = 1).</p></li>
 </ul>
 <p>Limitations: Equation 2 is valid for incompressible liquids only. For gases, the equation must be modified with an expansion factor <span class="math notranslate nohighlight">\(Y\)</span> and a choked-flow check. For two-phase flow, use the Sheldon-Schnelle or Diehl-Lockhart-Martinelli correlations.</p>
 </div>
@@ -1300,9 +1300,9 @@ US: <span class="math notranslate nohighlight">\(C_v\)</span> in gpm/<span class
 <p>Metric: <span class="math notranslate nohighlight">\(K_v\)</span> in m\textsuperscript{3}/h/<span class="math notranslate nohighlight">\(\sqrt{bar}\)</span>, <span class="math notranslate nohighlight">\(q\)</span> in m\textsuperscript{3}/h, <span class="math notranslate nohighlight">\(\Delta P_v\)</span> in bar.</p>
 <div class="math notranslate nohighlight">
 \[
-K_v \approx 0.865C_v   C_v \approx 1.156K_v
+K_v \approx 0.865 C_v   C_v \approx 1.156 K_v
 \]</div>
-<p>A third coefficient <span class="math notranslate nohighlight">\(A_v\)</span> in SI (m\textsuperscript{2}) is sometimes used: <span class="math notranslate nohighlight">\(A_v = 2.4 \times 10^{-5}C_v\)</span>.</p>
+<p>A third coefficient <span class="math notranslate nohighlight">\(A_v\)</span> in SI (m\textsuperscript{2}) is sometimes used: <span class="math notranslate nohighlight">\(A_v = 2.4 \times 10^{-5} C_v\)</span>.</p>
 </div>
 </section>
 <section id="the-three-classical-valve-characteristics">
@@ -1310,10 +1310,10 @@ K_v \approx 0.865C_v   C_v \approx 1.156K_v
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p><strong><span class="math notranslate nohighlight">\(f(\ell)\)</span> for Inherent Characteristics</strong>
-“Inherent” means measured at constant <span class="math notranslate nohighlight">\(\Delta P_v\)</span> — as if the valve were on a test bench, not installed in a system.</p>
+“Inherent” means measured at constant <span class="math notranslate nohighlight">\(\Delta P_v\)</span>  -  as if the valve were on a test bench, not installed in a system.</p>
 <ul class="simple">
 <li><p><strong>Linear:</strong> <span class="math notranslate nohighlight">\(f(\ell) = \ell\)</span>. Equal increments of lift produce equal increments of flow. Slope <span class="math notranslate nohighlight">\(df/d\ell = 1\)</span>, constant.</p></li>
-<li><p><strong>Equal percentage:</strong> <span class="math notranslate nohighlight">\(f(\ell) = R^{\ell - 1}\)</span> where <span class="math notranslate nohighlight">\(R\)</span> is the <strong>rangeability</strong> or rangeability ratio (typical values 20–50; common is 50). Slope <span class="math notranslate nohighlight">\(df/d\ell = R^{\ell - 1}\ln R = f \cdot \ln R\)</span>. <em>Equal fractional</em> increments of lift produce equal fractional increments of flow — hence the name.</p></li>
+<li><p><strong>Equal percentage:</strong> <span class="math notranslate nohighlight">\(f(\ell) = R^{ \ell - 1}\)</span> where <span class="math notranslate nohighlight">\(R\)</span> is the <strong>rangeability</strong> or rangeability ratio (typical values 20-50; common is 50). Slope <span class="math notranslate nohighlight">\(df/d\ell = R^{ \ell - 1} \ln R = f \cdot \ln R\)</span>. <em>Equal fractional</em> increments of lift produce equal fractional increments of flow  -  hence the name.</p></li>
 <li><p><strong>Quick opening:</strong> <span class="math notranslate nohighlight">\(f(\ell) \approx \sqrt{\ell}\)</span> or similar. Most of the flow appears at small lift, with diminishing returns at high lift. Slope <span class="math notranslate nohighlight">\(df/d\ell\)</span> is largest near <span class="math notranslate nohighlight">\(\ell = 0\)</span>. Used for safety-shutoff and bypass valves <em>only</em>, never for modulating control.</p></li>
 </ul>
 <p>At <span class="math notranslate nohighlight">\(\ell = 0\)</span> all three give <span class="math notranslate nohighlight">\(f \to 0\)</span>; at <span class="math notranslate nohighlight">\(\ell = 1\)</span> all give <span class="math notranslate nohighlight">\(f = 1\)</span>. The shapes between those endpoints differ dramatically.</p>
@@ -1334,14 +1334,14 @@ On a real plant, the control valve is in series with a long run of piping, fitti
 <li><p>At low <span class="math notranslate nohighlight">\(q\)</span> (valve mostly throttled), <span class="math notranslate nohighlight">\(\Delta P_v \approx \Delta P_{total}\)</span>.</p></li>
 <li><p>At high <span class="math notranslate nohighlight">\(q\)</span> (valve wide open), <span class="math notranslate nohighlight">\(\Delta P_v\)</span> may be only a small fraction of <span class="math notranslate nohighlight">\(\Delta P_{total}\)</span>.</p></li>
 </ul>
-<p>This shifts the apparent <span class="math notranslate nohighlight">\(f\)</span>–versus–<span class="math notranslate nohighlight">\(\ell\)</span> relationship. The <em>installed</em> characteristic is what you actually get when the valve is in service; the <em>inherent</em> characteristic is what the manufacturer’s catalogue tells you.</p>
+<p>This shifts the apparent <span class="math notranslate nohighlight">\(f\)</span>-versus-<span class="math notranslate nohighlight">\(\ell\)</span> relationship. The <em>installed</em> characteristic is what you actually get when the valve is in service; the <em>inherent</em> characteristic is what the manufacturer’s catalogue tells you.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p><strong>Two Key Consequences for Valve Selection</strong></p>
 <ul class="simple">
-<li><p>A <strong>linear</strong> inherent valve becomes <strong>nonlinear</strong> (concave-down) when installed — the slope <span class="math notranslate nohighlight">\(dq/d\ell\)</span> drops at high flow, so the loop gain decreases at high flow.</p></li>
-<li><p>An <strong>equal-percentage</strong> inherent valve becomes <strong>more linear</strong> when installed — the natural curvature of the equal-percentage characteristic partially cancels the curvature introduced by the piping.</p></li>
+<li><p>A <strong>linear</strong> inherent valve becomes <strong>nonlinear</strong> (concave-down) when installed  -  the slope <span class="math notranslate nohighlight">\(dq/d\ell\)</span> drops at high flow, so the loop gain decreases at high flow.</p></li>
+<li><p>An <strong>equal-percentage</strong> inherent valve becomes <strong>more linear</strong> when installed  -  the natural curvature of the equal-percentage characteristic partially cancels the curvature introduced by the piping.</p></li>
 </ul>
 <p>This is the <em>reason</em> equal-percentage is the dominant industrial choice: it gives a more constant loop gain over the operating range when the valve is in a system with significant fixed piping.</p>
 <p><strong>Design rule of thumb (Hutchinson):</strong> Let <span class="math notranslate nohighlight">\(\beta = \Delta P_v / \Delta P_{total}\)</span> at maximum design flow.</p>
@@ -1349,7 +1349,7 @@ On a real plant, the control valve is in series with a long run of piping, fitti
 <li><p><span class="math notranslate nohighlight">\(\beta &gt; 0.5\)</span> (valve takes the majority of system <span class="math notranslate nohighlight">\(\Delta P\)</span>): use <strong>linear</strong>.</p></li>
 <li><p><span class="math notranslate nohighlight">\(\beta &lt; 0.5\)</span> (piping takes the majority): use <strong>equal percentage</strong>.</p></li>
 </ul>
-<p>The crossover <span class="math notranslate nohighlight">\(\beta = 0.25\)</span>–<span class="math notranslate nohighlight">\(0.33\)</span> is often a useful target for new designs.</p>
+<p>The crossover <span class="math notranslate nohighlight">\(\beta = 0.25\)</span>-<span class="math notranslate nohighlight">\(0.33\)</span> is often a useful target for new designs.</p>
 </div>
 </section>
 <section id="worked-example-linear-vs-equal-percentage-lift-calculation">
@@ -1357,7 +1357,7 @@ On a real plant, the control valve is in series with a long run of piping, fitti
 <div class="proof example admonition" id="example-6">
 <p class="admonition-title"><span class="caption-number">Example 164 </span> (Required Lift for Two Pressure-Drop Scenarios)</p>
 <section class="example-content" id="proof-content">
-<p>A control valve with <span class="math notranslate nohighlight">\(C_v = 110\)</span> gpm/<span class="math notranslate nohighlight">\(\sqrt{psi}\)</span> must pass 200 gpm of water (<span class="math notranslate nohighlight">\(G_s = 1\)</span>). Find the required lift for (a) inherent conditions with constant <span class="math notranslate nohighlight">\(\Delta P_v = 10\)</span> psi, and (b) installed conditions with <span class="math notranslate nohighlight">\(\Delta P_v = 10 - 0.03q\)</span> psi. Repeat the analysis for an equal-percentage valve with rangeability <span class="math notranslate nohighlight">\(R = 40\)</span>.</p>
+<p>A control valve with <span class="math notranslate nohighlight">\(C_v = 110\)</span> gpm/<span class="math notranslate nohighlight">\(\sqrt{psi}\)</span> must pass 200 gpm of water (<span class="math notranslate nohighlight">\(G_s = 1\)</span>). Find the required lift for (a) inherent conditions with constant <span class="math notranslate nohighlight">\(\Delta P_v = 10\)</span> psi, and (b) installed conditions with <span class="math notranslate nohighlight">\(\Delta P_v = 10 - 0.03 q\)</span> psi. Repeat the analysis for an equal-percentage valve with rangeability <span class="math notranslate nohighlight">\(R = 40\)</span>.</p>
 </section>
 </div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -1367,30 +1367,30 @@ On a real plant, the control valve is in series with a long run of piping, fitti
 </ul>
 <div class="math notranslate nohighlight">
 \[
-f(\ell) = \frac{q}{C_v}\sqrt{\frac{G_s}{\Delta P_v}}
+f(\ell) = \frac{q}{C_v} \sqrt{\frac{G_s}{\Delta P_v}}
 \]</div>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Linear inherent, (a) <span class="math notranslate nohighlight">\(\Delta P_v = 10\)</span> psi, <span class="math notranslate nohighlight">\(f = \ell\)</span>:</strong></p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
-\ell_{a,lin} = \frac{200}{110}\sqrt{\frac{1}{10}} = 1.818 \times 0.3162 = 0.575
+\ell_{a,lin} = \frac{200}{110} \sqrt{\frac{1}{10}} = 1.818 \times 0.3162 = 0.575
 \]</div>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Linear installed, (b) compute the actual <span class="math notranslate nohighlight">\(\Delta P_v\)</span> at the design flow:</strong></p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
-\Delta P_v(q=200) = 10 - 0.03(200) = 10 - 6 = 4psi
+\Delta P_v(q=200) = 10 - 0.03(200) = 10 - 6 = 4 psi
 \]</div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>*Note: less valve pressure drop because the rest of the system is taking 6 psi at this flow.* Then
 </pre></div>
 </div>
 <div class="math notranslate nohighlight">
 \[
-\ell_{b,lin} = \frac{200}{110}\sqrt{\frac{1}{4}} = 1.818 \times 0.500 = 0.909
+\ell_{b,lin} = \frac{200}{110} \sqrt{\frac{1}{4}} = 1.818 \times 0.500 = 0.909
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The installed linear valve is at 91% lift — close to fully open. Little upward authority remains.
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The installed linear valve is at 91% lift  -  close to fully open. Little upward authority remains.
 </pre></div>
 </div>
 <ul class="simple">
@@ -1419,8 +1419,8 @@ f(\ell) = \frac{q}{C_v}\sqrt{\frac{G_s}{\Delta P_v}}
 <li><p class="sd-card-text">Equal-pct installed: <span class="math notranslate nohighlight">\(\ell = 0.974\)</span></p></li>
 <li><p class="sd-card-text"><strong>Engineering interpretation.</strong></p></li>
 <li><p class="sd-card-text">For the linear valve, the lift jumps from 0.575 (inherent) to 0.909 (installed) at the same flow. A real plant operator would see a valve that is 91% open and would conclude there is little room to handle an upset that demands even more flow.</p></li>
-<li><p class="sd-card-text">For the equal-pct valve, both lifts (0.850 and 0.974) are also near full open — but importantly, the slope <span class="math notranslate nohighlight">\(df/d\ell = f \ln R\)</span> at the high-<span class="math notranslate nohighlight">\(f\)</span> end is much steeper than the linear-valve slope, so a small lift change produces a large flow change. This means <em>this <span class="math notranslate nohighlight">\(C_v\)</span> is too large</em> or the design flow is too high a fraction of the valve’s range.</p></li>
-<li><p class="sd-card-text"><strong>Designer’s response:</strong> pick a valve with a smaller <span class="math notranslate nohighlight">\(C_v\)</span> so that at design flow the lift falls in the recommended 0.30–0.75 range (some references say 0.20–0.80). Re-do the calculation. The valve must have enough <span class="math notranslate nohighlight">\(C_v\)</span> to pass the maximum required flow (<span class="math notranslate nohighlight">\(\sim\)</span>1.2–2.0 <span class="math notranslate nohighlight">\(\times\)</span> design) at <span class="math notranslate nohighlight">\(\ell \approx 0.9\)</span>, and not so much <span class="math notranslate nohighlight">\(C_v\)</span> that the minimum required flow drives the valve below <span class="math notranslate nohighlight">\(\ell = 0.1\)</span> (poor controllability near the seat).</p></li>
+<li><p class="sd-card-text">For the equal-pct valve, both lifts (0.850 and 0.974) are also near full open  -  but importantly, the slope <span class="math notranslate nohighlight">\(df/d\ell = f \ln R\)</span> at the high-<span class="math notranslate nohighlight">\(f\)</span> end is much steeper than the linear-valve slope, so a small lift change produces a large flow change. This means <em>this <span class="math notranslate nohighlight">\(C_v\)</span> is too large</em> or the design flow is too high a fraction of the valve’s range.</p></li>
+<li><p class="sd-card-text"><strong>Designer’s response:</strong> pick a valve with a smaller <span class="math notranslate nohighlight">\(C_v\)</span> so that at design flow the lift falls in the recommended 0.30-0.75 range (some references say 0.20-0.80). Re-do the calculation. The valve must have enough <span class="math notranslate nohighlight">\(C_v\)</span> to pass the maximum required flow (<span class="math notranslate nohighlight">\(\sim\)</span>1.2-2.0 <span class="math notranslate nohighlight">\(\times\)</span> design) at <span class="math notranslate nohighlight">\(\ell \approx 0.9\)</span>, and not so much <span class="math notranslate nohighlight">\(C_v\)</span> that the minimum required flow drives the valve below <span class="math notranslate nohighlight">\(\ell = 0.1\)</span> (poor controllability near the seat).</p></li>
 <li><p class="sd-card-text"><strong>Verification of the equal-pct algebra.</strong> Direct check: with <span class="math notranslate nohighlight">\(R = 40\)</span> and <span class="math notranslate nohighlight">\(\ell = 0.850\)</span>, <span class="math notranslate nohighlight">\(f = 40^{0.850 - 1} = 40^{-0.15} = e^{-0.15 \ln 40} = e^{-0.5527} = 0.575\)</span>. \checkmark</p></li>
 </ul>
 </div>
@@ -1429,17 +1429,17 @@ f(\ell) = \frac{q}{C_v}\sqrt{\frac{G_s}{\Delta P_v}}
 <h3>Loop Gain and Why Constant Loop Gain Matters<a class="headerlink" href="#loop-gain-and-why-constant-loop-gain-matters" title="Link to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Valve Gain — The Slope of the Installed Characteristic</strong>
+<p><strong>Valve Gain  -  The Slope of the Installed Characteristic</strong>
 The <strong>valve gain</strong> <span class="math notranslate nohighlight">\(K_v(\ell) \equiv dq/d\ell\)</span> is the local sensitivity of the flow to a lift change. The overall <strong>loop gain</strong> of a control loop is the product of the process gain, the controller proportional gain, the sensor gain, and the valve gain:</p>
 <div class="math notranslate nohighlight">
 \[
 K_{loop} = K_p \cdot K_c \cdot K_s \cdot K_v
 \]</div>
-<p>For stable, well-damped control, this product should be approximately constant over the operating range. The process gain is set by physics, the sensor gain by calibration, and the controller gain is fixed by the tuning. So the only knob the valve designer has to keep the loop gain constant is the valve characteristic. An equal-percentage valve gives <span class="math notranslate nohighlight">\(K_v \propto f \propto q\)</span> (in inherent form), which is constant on a logarithmic scale — exactly the property needed to compensate for a process whose gain decreases with throughput (most processes).</p>
+<p>For stable, well-damped control, this product should be approximately constant over the operating range. The process gain is set by physics, the sensor gain by calibration, and the controller gain is fixed by the tuning. So the only knob the valve designer has to keep the loop gain constant is the valve characteristic. An equal-percentage valve gives <span class="math notranslate nohighlight">\(K_v \propto f \propto q\)</span> (in inherent form), which is constant on a logarithmic scale  -  exactly the property needed to compensate for a process whose gain decreases with throughput (most processes).</p>
 </div>
 </section>
 <section id="choked-flow-the-upper-limit-on-equation-2">
-<h3>Choked Flow — The Upper Limit on Equation 2<a class="headerlink" href="#choked-flow-the-upper-limit-on-equation-2" title="Link to this heading">#</a></h3>
+<h3>Choked Flow  -  The Upper Limit on Equation 2<a class="headerlink" href="#choked-flow-the-upper-limit-on-equation-2" title="Link to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Liquid Choking (Cavitation and Flashing)</strong>
@@ -1447,10 +1447,10 @@ Equation 2 predicts that flow rises indefinitely as <span class="math notranslat
 <p>The ISA-defined choked-flow limit:</p>
 <div class="math notranslate nohighlight">
 \[
-\Delta P_{choked} = F_L^2(P_1 - F_FP_v)
+\Delta P_{choked} = F_L^2 (P_1 - F_F P_v)
 \]</div>
-<p>where <span class="math notranslate nohighlight">\(F_L\)</span> is the liquid-recovery factor (typical 0.6–0.9), <span class="math notranslate nohighlight">\(F_F\)</span> is the liquid critical-pressure ratio factor <span class="math notranslate nohighlight">\(\approx 0.96 - 0.28\sqrt{P_v/P_c}\)</span>. If <span class="math notranslate nohighlight">\(\Delta P_v &lt; \Delta P_{choked}\)</span> flow scales with <span class="math notranslate nohighlight">\(\sqrt{\Delta P_v}\)</span> (Equation 2); if <span class="math notranslate nohighlight">\(\Delta P_v &gt; \Delta P_{choked}\)</span> flow saturates at <span class="math notranslate nohighlight">\(C_v\sqrt{\Delta P_{choked}/G_s}\)</span>.</p>
-<p>Cavitation is destructive — the imploding bubbles erode trim. If predicted in service, specify anti-cavitation trim (multistage, drilled, or path-trim valves).</p>
+<p>where <span class="math notranslate nohighlight">\(F_L\)</span> is the liquid-recovery factor (typical 0.6-0.9), <span class="math notranslate nohighlight">\(F_F\)</span> is the liquid critical-pressure ratio factor <span class="math notranslate nohighlight">\(\approx 0.96 - 0.28\sqrt{P_v/P_c}\)</span>. If <span class="math notranslate nohighlight">\(\Delta P_v &lt; \Delta P_{choked}\)</span> flow scales with <span class="math notranslate nohighlight">\(\sqrt{\Delta P_v}\)</span> (Equation 2); if <span class="math notranslate nohighlight">\(\Delta P_v &gt; \Delta P_{choked}\)</span> flow saturates at <span class="math notranslate nohighlight">\(C_v\sqrt{\Delta P_{choked}/G_s}\)</span>.</p>
+<p>Cavitation is destructive  -  the imploding bubbles erode trim. If predicted in service, specify anti-cavitation trim (multistage, drilled, or path-trim valves).</p>
 </div>
 </section>
 <section id="compressible-gas-flow-through-control-valves">
@@ -1461,24 +1461,24 @@ Equation 2 predicts that flow rises indefinitely as <span class="math notranslat
 For a compressible gas with upstream pressure <span class="math notranslate nohighlight">\(P_1\)</span>, downstream pressure <span class="math notranslate nohighlight">\(P_2\)</span>, ratio of specific heats <span class="math notranslate nohighlight">\(k = c_p/c_v\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
-q_{std} = 1360C_vF_pP_1Y\sqrt{\frac{x}{M T_1 Z}}
+q_{std} = 1360 C_v F_p P_1 Y \sqrt{\frac{x}{M T_1 Z}}
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(q_{std}\)</span> is in scfh, <span class="math notranslate nohighlight">\(P_1\)</span> in psia, <span class="math notranslate nohighlight">\(T_1\)</span> in <span class="math notranslate nohighlight">\(^\circ\)</span>R, <span class="math notranslate nohighlight">\(M\)</span> is molecular weight, <span class="math notranslate nohighlight">\(Z\)</span> is compressibility, <span class="math notranslate nohighlight">\(x = (P_1 - P_2)/P_1\)</span> is the pressure-ratio drop, and <span class="math notranslate nohighlight">\(Y\)</span> is the expansion factor</p>
 <div class="math notranslate nohighlight">
 \[
-Y = 1 - \frac{x}{3F_kx_T}
+Y = 1 - \frac{x}{3 F_k x_T}
 \]</div>
-<p>with <span class="math notranslate nohighlight">\(F_k = k/1.40\)</span> and <span class="math notranslate nohighlight">\(x_T\)</span> a valve-style modifier (0.6–0.8 typical).</p>
-<p><strong>Choked-flow limit for gases:</strong> when <span class="math notranslate nohighlight">\(x \geq F_kx_T\)</span>, <span class="math notranslate nohighlight">\(Y = 2/3\)</span> and flow saturates; further <span class="math notranslate nohighlight">\(\Delta P\)</span> has no effect (the flow at the vena contracta has reached sonic velocity). For air, <span class="math notranslate nohighlight">\(k = 1.40\)</span> so <span class="math notranslate nohighlight">\(F_k = 1\)</span>; choked when <span class="math notranslate nohighlight">\(P_2/P_1 \leq 0.53\)</span> (typical valve).</p>
+<p>with <span class="math notranslate nohighlight">\(F_k = k/1.40\)</span> and <span class="math notranslate nohighlight">\(x_T\)</span> a valve-style modifier (0.6-0.8 typical).</p>
+<p><strong>Choked-flow limit for gases:</strong> when <span class="math notranslate nohighlight">\(x \geq F_k x_T\)</span>, <span class="math notranslate nohighlight">\(Y = 2/3\)</span> and flow saturates; further <span class="math notranslate nohighlight">\(\Delta P\)</span> has no effect (the flow at the vena contracta has reached sonic velocity). For air, <span class="math notranslate nohighlight">\(k = 1.40\)</span> so <span class="math notranslate nohighlight">\(F_k = 1\)</span>; choked when <span class="math notranslate nohighlight">\(P_2/P_1 \leq 0.53\)</span> (typical valve).</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Exam Tips — Control-Valve Sizing</strong></p>
+<p><strong>Exam Tips  -  Control-Valve Sizing</strong></p>
 <ul class="simple">
-<li><p>Memorize the liquid sizing equation and its US units (gpm, psi, gpm/<span class="math notranslate nohighlight">\(\sqrt{psi}\)</span>). The conversion to metric <span class="math notranslate nohighlight">\(K_v\)</span> (<span class="math notranslate nohighlight">\(0.865C_v\)</span>) is testable.</p></li>
+<li><p>Memorize the liquid sizing equation and its US units (gpm, psi, gpm/<span class="math notranslate nohighlight">\(\sqrt{psi}\)</span>). The conversion to metric <span class="math notranslate nohighlight">\(K_v\)</span> (<span class="math notranslate nohighlight">\(0.865 C_v\)</span>) is testable.</p></li>
 <li><p><span class="math notranslate nohighlight">\(\Delta P_v\)</span> is the drop <em>across the valve</em> alone, never the total system <span class="math notranslate nohighlight">\(\Delta P\)</span>.</p></li>
 <li><p>Equal-percentage valves are the default for processes with significant piping pressure drop; linear valves are used only when the valve takes more than half the total system <span class="math notranslate nohighlight">\(\Delta P\)</span>.</p></li>
-<li><p>Design lift should land between 0.3 and 0.75 (some say 0.2–0.8) at normal flow. Outside that band, replace with a more appropriately sized valve.</p></li>
+<li><p>Design lift should land between 0.3 and 0.75 (some say 0.2-0.8) at normal flow. Outside that band, replace with a more appropriately sized valve.</p></li>
 <li><p>Cavitation predicted in service requires anti-cavitation trim.</p></li>
 </ul>
 </div>
@@ -1486,15 +1486,15 @@ Y = 1 - \frac{x}{3F_kx_T}
 </section>
 <section id="fail-safe-valve-action">
 <h2>Fail-Safe Valve Action<a class="headerlink" href="#fail-safe-valve-action" title="Link to this heading">#</a></h2>
-<p>Every control valve in a chemical plant must be specified with a <strong>fail-safe action</strong> — the position the valve assumes when its motive power (typically instrument air, 3–15 psi or 4–20 mA via I/P converter) is lost. This is a safety decision driven by the worst-case consequences of loss-of-power. Both local and downstream consequences must be considered.</p>
+<p>Every control valve in a chemical plant must be specified with a <strong>fail-safe action</strong>  -  the position the valve assumes when its motive power (typically instrument air, 3-15 psi or 4-20 mA via I/P converter) is lost. This is a safety decision driven by the worst-case consequences of loss-of-power. Both local and downstream consequences must be considered.</p>
 <section id="the-two-failsafe-modes">
 <h3>The Two Failsafe Modes<a class="headerlink" href="#the-two-failsafe-modes" title="Link to this heading">#</a></h3>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p><strong>Failsafe Modes and Their Aliases</strong></p>
 <ul class="simple">
-<li><p><strong>Fail-Open (FO).</strong> Synonym: <strong>Air-To-Close (ATC)</strong>. On loss of air, the valve drives <em>open</em>. To close it, the controller must <em>supply</em> air pressure — hence “air to close.”</p></li>
-<li><p><strong>Fail-Closed (FC).</strong> Synonym: <strong>Air-To-Open (ATO)</strong>. On loss of air, the valve drives <em>closed</em>. To open it, the controller must supply air — hence “air to open.”</p></li>
+<li><p><strong>Fail-Open (FO).</strong> Synonym: <strong>Air-To-Close (ATC)</strong>. On loss of air, the valve drives <em>open</em>. To close it, the controller must <em>supply</em> air pressure  -  hence “air to close.”</p></li>
+<li><p><strong>Fail-Closed (FC).</strong> Synonym: <strong>Air-To-Open (ATO)</strong>. On loss of air, the valve drives <em>closed</em>. To open it, the controller must supply air  -  hence “air to open.”</p></li>
 </ul>
 <p>The fail-direction is set mechanically by the spring inside the diaphragm actuator. A direct-acting actuator has the spring pushing the stem up (fail-down for a globe valve with flow-to-open); a reverse-acting actuator does the opposite. A solenoid in the air line provides additional failsafe enforcement for shutdown valves (SDVs).</p>
 </div>
@@ -1544,7 +1544,7 @@ For a temperature loop heating with steam (FC valve, <span class="math notransla
 <li><p>Drain on a containment vessel: <strong>Fail-Closed</strong>. (Maintain containment.)</p></li>
 <li><p>Chemical injection of a hazardous reagent: <strong>Fail-Closed</strong>. (Stop adding hazard when uncertain.)</p></li>
 </ul>
-<p>These are heuristics — the actual decision is made in a HAZOP study weighing local and global consequences.</p>
+<p>These are heuristics  -  the actual decision is made in a HAZOP study weighing local and global consequences.</p>
 </div>
 </section>
 <section id="worked-example-two-service-scenarios">
@@ -1565,7 +1565,7 @@ For a temperature loop heating with steam (FC valve, <span class="math notransla
 <li><p class="sd-card-text"><em>Loss-of-air scenario A2: valve fails open.</em> Cooling water flows at maximum. Worst case: process fluid is cooled below its design lower limit (possible freeze-up of high-pour-point streams, viscosity rise, or undesirable phase change). Generally tolerable for a short time; the reactor’s protective interlocks have time to intervene.</p></li>
 <li><p class="sd-card-text"><strong>Selection: Fail-Open (ATC).</strong> Keep coolant flowing on power loss.</p></li>
 <li><p class="sd-card-text"><strong>(b) Wastewater discharge valve.</strong></p></li>
-<li><p class="sd-card-text"><em>Scenario B1: valve fails closed.</em> Wastewater is held in the neutralization tank. The tank capacity may be exceeded if the inflow continues for a long outage — a high-level alarm and operator response are required, but the local consequence is bounded by tank volume.</p></li>
+<li><p class="sd-card-text"><em>Scenario B1: valve fails closed.</em> Wastewater is held in the neutralization tank. The tank capacity may be exceeded if the inflow continues for a long outage  -  a high-level alarm and operator response are required, but the local consequence is bounded by tank volume.</p></li>
 <li><p class="sd-card-text"><em>Scenario B2: valve fails open.</em> Wastewater of possibly off-spec pH (the neutralization control loop is also lost during a power outage) flows continuously to the bio-treatment plant. The biological organisms can be killed by a pH shock or by a slug of toxic substance; the bio-plant takes days to repopulate. Regulatory permit violation is likely.</p></li>
 <li><p class="sd-card-text"><strong>Selection: Fail-Closed (ATO).</strong> Contain the wastewater until controls are restored.</p></li>
 <li><p class="sd-card-text"><strong>The general lesson:</strong> “fail safe” does not mean “fail in the direction of the normal operating point.” It means “fail in the direction of lower consequence,” which is determined by what can go wrong downstream, not by what is comfortable now. HAZOP studies systematically test each control valve against each possible failure scenario; the fail-safe decision is one of the outputs of HAZOP.</p></li>
@@ -1578,7 +1578,7 @@ For a temperature loop heating with steam (FC valve, <span class="math notransla
 </div>
 </details><div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Exam Tips — Fail-Safe Selection</strong></p>
+<p><strong>Exam Tips  -  Fail-Safe Selection</strong></p>
 <ul class="simple">
 <li><p>Read the entire scenario before answering. The PE-exam fail-safe questions almost always have a hidden downstream consequence. Don’t fixate on the immediate unit operation.</p></li>
 <li><p>Memorize the alias pairs: FO = ATC, FC = ATO. A controller asking for “air to open” is FC, not FO.</p></li>
@@ -1616,8 +1616,8 @@ P_{source} - P_{sink} = \Delta P_{piping}(q) + \Delta P_v(q)
 <h3>Graphical Interpretation: Four Curves on One Plot<a class="headerlink" href="#graphical-interpretation-four-curves-on-one-plot" title="Link to this heading">#</a></h3>
 <p>On a standard “flow vs. lift” plot, four curves can be drawn for a given valve and system:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- Linear inherent: straight line from (0, 0) to (1, $q_{\max}^{inh}$).
-- Linear installed: concave-down curve — starts steep, flattens at high lift.
-- Equal-pct inherent: convex-up curve — starts flat, steepens at high lift.
+- Linear installed: concave-down curve  -  starts steep, flattens at high lift.
+- Equal-pct inherent: convex-up curve  -  starts flat, steepens at high lift.
 - Equal-pct installed: nearly straight line in the middle range, the curvatures partially cancel.
 </pre></div>
 </div>
@@ -1628,21 +1628,21 @@ P_{source} - P_{sink} = \Delta P_{piping}(q) + \Delta P_v(q)
 <div class="proof example admonition" id="example-8">
 <p class="admonition-title"><span class="caption-number">Example 166 </span> (Comparing <span class="math notranslate nohighlight">\(dq/d\ell\)</span> for Linear and Equal-Pct at Two Operating Points)</p>
 <section class="example-content" id="proof-content">
-<p>For the system in the previous worked example (<span class="math notranslate nohighlight">\(C_v = 110\)</span>, water, design flow 200 gpm), compute the valve gain <span class="math notranslate nohighlight">\(dq/d\ell\)</span> at <span class="math notranslate nohighlight">\(\ell = 0.5\)</span> and <span class="math notranslate nohighlight">\(\ell = 0.9\)</span> for both characteristics. Use the installed pressure-drop relationship <span class="math notranslate nohighlight">\(\Delta P_v = 10 - 0.03q\)</span>.</p>
+<p>For the system in the previous worked example (<span class="math notranslate nohighlight">\(C_v = 110\)</span>, water, design flow 200 gpm), compute the valve gain <span class="math notranslate nohighlight">\(dq/d\ell\)</span> at <span class="math notranslate nohighlight">\(\ell = 0.5\)</span> and <span class="math notranslate nohighlight">\(\ell = 0.9\)</span> for both characteristics. Use the installed pressure-drop relationship <span class="math notranslate nohighlight">\(\Delta P_v = 10 - 0.03 q\)</span>.</p>
 </section>
 </div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <ul>
 <li><p class="sd-card-text"><strong>Setup.</strong> For each characteristic and lift, solve <span class="math notranslate nohighlight">\(q = C_v f(\ell) \sqrt{(10 - 0.03 q)/1}\)</span> implicitly for <span class="math notranslate nohighlight">\(q\)</span>, then approximate <span class="math notranslate nohighlight">\(dq/d\ell \approx [q(\ell + 0.01) - q(\ell - 0.01)]/0.02\)</span>.</p></li>
-<li><p class="sd-card-text"><strong>Linear, <span class="math notranslate nohighlight">\(\ell = 0.5\)</span>.</strong> <span class="math notranslate nohighlight">\(q = 55\sqrt{10 - 0.03 q}\)</span>. Iterate:</p></li>
+<li><p class="sd-card-text"><strong>Linear, <span class="math notranslate nohighlight">\(\ell = 0.5\)</span>.</strong> <span class="math notranslate nohighlight">\(q = 55 \sqrt{10 - 0.03 q}\)</span>. Iterate:</p></li>
 <li><p class="sd-card-text">Guess <span class="math notranslate nohighlight">\(q = 150\)</span>: RHS <span class="math notranslate nohighlight">\(= 55\sqrt{10 - 4.5} = 55\sqrt{5.5} = 55(2.345) = 129\)</span>. Lower.</p></li>
 <li><p class="sd-card-text">Try <span class="math notranslate nohighlight">\(q = 130\)</span>: RHS <span class="math notranslate nohighlight">\(= 55\sqrt{10 - 3.9} = 55\sqrt{6.1} = 55(2.470) = 136\)</span>.</p></li>
 <li><p class="sd-card-text">Try <span class="math notranslate nohighlight">\(q = 136\)</span>: RHS <span class="math notranslate nohighlight">\(= 55\sqrt{10 - 4.08} = 55\sqrt{5.92} = 55(2.433) = 134\)</span>.</p></li>
 <li><p class="sd-card-text">Converged at <span class="math notranslate nohighlight">\(q \approx 135\)</span>.</p>
 <p class="sd-card-text">Repeat for <span class="math notranslate nohighlight">\(\ell = 0.51, 0.49\)</span> to get gain <span class="math notranslate nohighlight">\(\approx 270\)</span> gpm/lift.</p>
 </li>
-<li><p class="sd-card-text"><strong>Linear, <span class="math notranslate nohighlight">\(\ell = 0.9\)</span>.</strong> <span class="math notranslate nohighlight">\(q = 99\sqrt{10 - 0.03 q}\)</span>. Iterate:</p></li>
+<li><p class="sd-card-text"><strong>Linear, <span class="math notranslate nohighlight">\(\ell = 0.9\)</span>.</strong> <span class="math notranslate nohighlight">\(q = 99 \sqrt{10 - 0.03 q}\)</span>. Iterate:</p></li>
 <li><p class="sd-card-text">Guess <span class="math notranslate nohighlight">\(q = 200\)</span>: RHS <span class="math notranslate nohighlight">\(= 99\sqrt{4} = 198\)</span>. Converged.</p>
 <p class="sd-card-text">Compute gain near <span class="math notranslate nohighlight">\(\ell = 0.9\)</span>: <span class="math notranslate nohighlight">\(\approx 130\)</span> gpm/lift (much smaller).</p>
 </li>
@@ -1650,16 +1650,16 @@ P_{source} - P_{sink} = \Delta P_{piping}(q) + \Delta P_v(q)
 <li><p class="sd-card-text">Iterate around <span class="math notranslate nohighlight">\(q = 55\)</span>: <span class="math notranslate nohighlight">\(q = 17.4\sqrt{10 - 1.65} = 17.4\sqrt{8.35} = 17.4(2.89) = 50.3\)</span>. Iterate to convergence <span class="math notranslate nohighlight">\(\approx 51\)</span>.</p>
 <p class="sd-card-text">Gain near <span class="math notranslate nohighlight">\(\ell = 0.5\)</span>: small (because <span class="math notranslate nohighlight">\(f\)</span> is small).</p>
 </li>
-<li><p class="sd-card-text"><strong>Equal-pct, <span class="math notranslate nohighlight">\(\ell = 0.9\)</span>.</strong> <span class="math notranslate nohighlight">\(f = 40^{-0.1} = 0.692\)</span>. <span class="math notranslate nohighlight">\(q = 110(0.692)\sqrt{10 - 0.03 q} = 76.1\sqrt{…}\)</span>:</p></li>
+<li><p class="sd-card-text"><strong>Equal-pct, <span class="math notranslate nohighlight">\(\ell = 0.9\)</span>.</strong> <span class="math notranslate nohighlight">\(f = 40^{-0.1} = 0.692\)</span>. <span class="math notranslate nohighlight">\(q = 110(0.692)\sqrt{10 - 0.03 q} = 76.1\sqrt{...}\)</span>:</p></li>
 <li><p class="sd-card-text">Iterate around <span class="math notranslate nohighlight">\(q = 180\)</span>: <span class="math notranslate nohighlight">\(76.1\sqrt{10 - 5.4} = 76.1\sqrt{4.6} = 163\)</span>. Try <span class="math notranslate nohighlight">\(q = 165\)</span>: <span class="math notranslate nohighlight">\(76.1\sqrt{5.05} = 171\)</span>. Converged at <span class="math notranslate nohighlight">\(\approx 170\)</span>.</p>
 <p class="sd-card-text">Gain near <span class="math notranslate nohighlight">\(\ell = 0.9\)</span>: large (because <span class="math notranslate nohighlight">\(f\)</span> is large and equal-pct has <span class="math notranslate nohighlight">\(df/d\ell = f \ln R\)</span>).</p>
 </li>
-<li><p class="sd-card-text"><strong>Comparison.</strong> The linear valve’s gain <em>drops</em> from 270 to 130 across the operating range — the loop becomes sluggish at high flow. The equal-pct valve’s gain <em>rises</em> across the same range — but the multiplication by the falling process gain (which usually decreases with throughput) tends to cancel, giving more constant loop gain overall. This is the algebraic statement of the heuristic that equal-pct is preferred in installed conditions.</p></li>
+<li><p class="sd-card-text"><strong>Comparison.</strong> The linear valve’s gain <em>drops</em> from 270 to 130 across the operating range  -  the loop becomes sluggish at high flow. The equal-pct valve’s gain <em>rises</em> across the same range  -  but the multiplication by the falling process gain (which usually decreases with throughput) tends to cancel, giving more constant loop gain overall. This is the algebraic statement of the heuristic that equal-pct is preferred in installed conditions.</p></li>
 </ul>
 </div>
 </details><div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Exam Tips — Inherent vs. Installed</strong></p>
+<p><strong>Exam Tips  -  Inherent vs. Installed</strong></p>
 <ul class="simple">
 <li><p>“Inherent” = constant <span class="math notranslate nohighlight">\(\Delta P_v\)</span>; “installed” = variable <span class="math notranslate nohighlight">\(\Delta P_v\)</span> that decreases as flow rises.</p></li>
 <li><p>Linear <span class="math notranslate nohighlight">\(\to\)</span> nonlinear (concave-down) when installed; equal-pct <span class="math notranslate nohighlight">\(\to\)</span> more linear.</p></li>
@@ -1671,7 +1671,7 @@ P_{source} - P_{sink} = \Delta P_{piping}(q) + \Delta P_v(q)
 </section>
 <section id="sensors-and-transmitters">
 <h2>Sensors and Transmitters<a class="headerlink" href="#sensors-and-transmitters" title="Link to this heading">#</a></h2>
-<p>The sensor (or primary element) physically detects the process variable; the transmitter converts the raw sensor signal into a standardized current (4–20 mA) or pneumatic (3–15 psi) signal that the controller can read.</p>
+<p>The sensor (or primary element) physically detects the process variable; the transmitter converts the raw sensor signal into a standardized current (4-20 mA) or pneumatic (3-15 psi) signal that the controller can read.</p>
 <section id="direct-vs-indirect-sensors">
 <h3>Direct vs. Indirect Sensors<a class="headerlink" href="#direct-vs-indirect-sensors" title="Link to this heading">#</a></h3>
 <div class="admonition note">
@@ -1687,13 +1687,13 @@ P_{source} - P_{sink} = \Delta P_{piping}(q) + \Delta P_v(q)
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <ul class="simple">
-<li><p><strong>Range:</strong> the low and high values to which the sensor is calibrated (e.g. 50–250 psi or <span class="math notranslate nohighlight">\(-50\)</span> to <span class="math notranslate nohighlight">\(+100^\circ\)</span>C).</p></li>
+<li><p><strong>Range:</strong> the low and high values to which the sensor is calibrated (e.g. 50-250 psi or <span class="math notranslate nohighlight">\(-50\)</span> to <span class="math notranslate nohighlight">\(+100^\circ\)</span>C).</p></li>
 <li><p><strong>Zero:</strong> the low end of the range. <em>Not necessarily 0.</em> In the examples above, the zeros are 50 psi and <span class="math notranslate nohighlight">\(-50^\circ\)</span>C respectively.</p></li>
 <li><p><strong>Span:</strong> the difference high <span class="math notranslate nohighlight">\(-\)</span> low. For the examples: 200 psi and 150<span class="math notranslate nohighlight">\(^\circ\)</span>C.</p></li>
 <li><p><strong>Turndown (rangeability):</strong> the ratio of the highest reliably-readable value to the lowest. A Coriolis flowmeter with turndown 100:1 can read accurately from 1% to 100% of full scale; an orifice plate with turndown 4:1 is only reliable from 25% to 100%.</p></li>
 <li><p><strong>Accuracy:</strong> closeness to true value. Usually quoted as <span class="math notranslate nohighlight">\(\pm\)</span>% of span (e.g. “<span class="math notranslate nohighlight">\(\pm\)</span>0.5% of span”) or <span class="math notranslate nohighlight">\(\pm\)</span>% of reading.</p></li>
 <li><p><strong>Resolution:</strong> smallest detectable change.</p></li>
-<li><p><strong>Time constant <span class="math notranslate nohighlight">\(\tau_s\)</span>:</strong> the sensor itself has dynamics, modeled (for slow sensors) as first-order. For thermowells, <span class="math notranslate nohighlight">\(\tau_s\)</span> can be 10–60 s; for direct thermocouples in fluid, 1–5 s; for pressure transmitters, <span class="math notranslate nohighlight">\(&lt; 0.1\)</span> s. When <span class="math notranslate nohighlight">\(\tau_s\)</span> is small compared to the process <span class="math notranslate nohighlight">\(\tau\)</span>, the sensor block in the loop diagram is approximated as zero-order (instantaneous).</p></li>
+<li><p><strong>Time constant <span class="math notranslate nohighlight">\(\tau_s\)</span>:</strong> the sensor itself has dynamics, modeled (for slow sensors) as first-order. For thermowells, <span class="math notranslate nohighlight">\(\tau_s\)</span> can be 10-60 s; for direct thermocouples in fluid, 1-5 s; for pressure transmitters, <span class="math notranslate nohighlight">\(&lt; 0.1\)</span> s. When <span class="math notranslate nohighlight">\(\tau_s\)</span> is small compared to the process <span class="math notranslate nohighlight">\(\tau\)</span>, the sensor block in the loop diagram is approximated as zero-order (instantaneous).</p></li>
 <li><p><strong>Dead time <span class="math notranslate nohighlight">\(\theta_s\)</span>:</strong> from sample-line transport, analyzer cycle time (gas chromatograph), or digital scan rate.</p></li>
 </ul>
 </div>
@@ -1705,7 +1705,7 @@ P_{source} - P_{sink} = \Delta P_{piping}(q) + \Delta P_v(q)
 <p><strong>Sensor Catalogue</strong>
 <strong>Temperature:</strong></p>
 <ul class="simple">
-<li><p><em>Thermocouple</em> (T, J, K, E, etc.): junction of two dissimilar metals; voltage proportional to <span class="math notranslate nohighlight">\(T\)</span>. Robust, cheap, wide range, lower accuracy (<span class="math notranslate nohighlight">\(\pm\)</span>1–2<span class="math notranslate nohighlight">\(^\circ\)</span>C).</p></li>
+<li><p><em>Thermocouple</em> (T, J, K, E, etc.): junction of two dissimilar metals; voltage proportional to <span class="math notranslate nohighlight">\(T\)</span>. Robust, cheap, wide range, lower accuracy (<span class="math notranslate nohighlight">\(\pm\)</span>1-2<span class="math notranslate nohighlight">\(^\circ\)</span>C).</p></li>
 <li><p><em>RTD (Pt-100, Pt-1000):</em> platinum resistance increases linearly with <span class="math notranslate nohighlight">\(T\)</span>. Accurate (<span class="math notranslate nohighlight">\(\pm\)</span>0.1<span class="math notranslate nohighlight">\(^\circ\)</span>C), slower than TC.</p></li>
 <li><p><em>Thermistor:</em> semiconductor with strongly nonlinear <span class="math notranslate nohighlight">\(R(T)\)</span>; high sensitivity, narrow useful range (typ. <span class="math notranslate nohighlight">\(-50\)</span> to <span class="math notranslate nohighlight">\(+150^\circ\)</span>C).</p></li>
 <li><p><em>Infrared pyrometer:</em> non-contact, used above 500<span class="math notranslate nohighlight">\(^\circ\)</span>C or where touching is impractical.</p></li>
@@ -1721,7 +1721,7 @@ P_{source} - P_{sink} = \Delta P_{piping}(q) + \Delta P_v(q)
 <p><strong>Flow:</strong></p>
 <ul class="simple">
 <li><p><em>Orifice plate:</em> cheap, ubiquitous, <span class="math notranslate nohighlight">\(\sim\)</span>$ vs. Coriolis but high permanent loss; turndown <span class="math notranslate nohighlight">\(\sim\)</span>4:1.</p></li>
-<li><p><em>Venturi:</em> similar idea, lower permanent loss (5–15% of <span class="math notranslate nohighlight">\(\Delta P\)</span>).</p></li>
+<li><p><em>Venturi:</em> similar idea, lower permanent loss (5-15% of <span class="math notranslate nohighlight">\(\Delta P\)</span>).</p></li>
 <li><p><em>Coriolis:</em> mass-flow, very accurate (<span class="math notranslate nohighlight">\(\pm\)</span>0.1%), works on any fluid including slurries, expensive.</p></li>
 <li><p><em>Magnetic (mag meter):</em> conductive liquids only; no obstruction; high turndown.</p></li>
 <li><p><em>Turbine:</em> rotor-spin counting; clean liquids; moderate accuracy.</p></li>
@@ -1739,7 +1739,7 @@ P_{source} - P_{sink} = \Delta P_{piping}(q) + \Delta P_v(q)
 </ul>
 <p><strong>Composition:</strong></p>
 <ul class="simple">
-<li><p><em>Gas chromatograph (GC):</em> accurate, broad, slow (cycle time 2–30 min). Adds dead time to the loop.</p></li>
+<li><p><em>Gas chromatograph (GC):</em> accurate, broad, slow (cycle time 2-30 min). Adds dead time to the loop.</p></li>
 <li><p><em>IR/UV/NIR analyzer:</em> continuous, fast, specific to a molecular bond.</p></li>
 <li><p><em>Mass spectrometer:</em> fast, accurate, expensive.</p></li>
 <li><p><em>pH electrode:</em> potentiometric; needs frequent calibration.</p></li>
@@ -1747,23 +1747,23 @@ P_{source} - P_{sink} = \Delta P_{piping}(q) + \Delta P_v(q)
 </ul>
 </div>
 </section>
-<section id="the-420-ma-standard">
-<h3>The 4–20 mA Standard<a class="headerlink" href="#the-420-ma-standard" title="Link to this heading">#</a></h3>
+<section id="the-4-20-ma-standard">
+<h3>The 4-20 mA Standard<a class="headerlink" href="#the-4-20-ma-standard" title="Link to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The industry-standard transmitter output is a current loop ranging from 4 mA at the low end of the sensor range to 20 mA at the high end. Two design reasons for the 4 mA “live zero” (rather than 0 mA):</p>
 <ul class="simple">
-<li><p>A broken wire or dead transmitter shows 0 mA — distinguishable from a real low-end reading. The controller knows the loop is dead and can alarm.</p></li>
-<li><p>The transmitter can be loop-powered (the 4–20 mA current carries power as well as signal), removing the need for a separate power line.</p></li>
+<li><p>A broken wire or dead transmitter shows 0 mA  -  distinguishable from a real low-end reading. The controller knows the loop is dead and can alarm.</p></li>
+<li><p>The transmitter can be loop-powered (the 4-20 mA current carries power as well as signal), removing the need for a separate power line.</p></li>
 </ul>
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Calibration Equations</strong>
-Linear map between measurement and 4–20 mA current:</p>
+Linear map between measurement and 4-20 mA current:</p>
 <div class="math notranslate nohighlight">
 \[
-I[mA] = 4 + 16 \cdot \frac{measurement - zero}{span}
+I [mA] = 4 + 16 \cdot \frac{measurement - zero}{span}
 \]</div>
 <div class="math notranslate nohighlight">
 \[
@@ -1776,12 +1776,12 @@ measurement = zero + span \cdot \frac{I - 4}{16}
 \]</div>
 </div>
 </section>
-<section id="worked-example-420-ma-loop-calibration">
-<h3>Worked Example: 4–20 mA Loop Calibration<a class="headerlink" href="#worked-example-420-ma-loop-calibration" title="Link to this heading">#</a></h3>
+<section id="worked-example-4-20-ma-loop-calibration">
+<h3>Worked Example: 4-20 mA Loop Calibration<a class="headerlink" href="#worked-example-4-20-ma-loop-calibration" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-9">
-<p class="admonition-title"><span class="caption-number">Example 167 </span> (Reading and Setting Alarms on a 4–20 mA Loop)</p>
+<p class="admonition-title"><span class="caption-number">Example 167 </span> (Reading and Setting Alarms on a 4-20 mA Loop)</p>
 <section class="example-content" id="proof-content">
-<p>A pressure transmitter has range 50–250 psi. The controller’s analog input reads 12.8 mA.</p>
+<p>A pressure transmitter has range 50-250 psi. The controller’s analog input reads 12.8 mA.</p>
 <ul class="simple">
 <li><p>What is the measured pressure?</p></li>
 <li><p>The operator wants a high-pressure alarm at 200 psi. What is the alarm trip in mA?</p></li>
@@ -1792,7 +1792,7 @@ measurement = zero + span \cdot \frac{I - 4}{16}
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Range, zero, span.</strong> Range = 50–250 psi. Zero = 50 psi. Span = 250 - 50 = 200 psi.</p></li>
+<li><p class="sd-card-text"><strong>Range, zero, span.</strong> Range = 50-250 psi. Zero = 50 psi. Span = 250 - 50 = 200 psi.</p></li>
 <li><p class="sd-card-text"><strong>(a) 12.8 mA <span class="math notranslate nohighlight">\(\to\)</span> pressure.</strong></p></li>
 </ul>
 <div class="math notranslate nohighlight">
@@ -1801,7 +1801,7 @@ measurement = zero + span \cdot \frac{I - 4}{16}
 \]</div>
 <div class="math notranslate nohighlight">
 \[
-P = 50 + 0.55(200) = 50 + 110 = 160psi
+P = 50 + 0.55(200) = 50 + 110 = 160 psi
 \]</div>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>(b) 200 psi <span class="math notranslate nohighlight">\(\to\)</span> mA.</strong></p></li>
@@ -1812,7 +1812,7 @@ P = 50 + 0.55(200) = 50 + 110 = 160psi
 \]</div>
 <div class="math notranslate nohighlight">
 \[
-I = 4 + 16(0.75) = 4 + 12 = 16.0mA
+I = 4 + 16(0.75) = 4 + 12 = 16.0 mA
 \]</div>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>© 75 psi <span class="math notranslate nohighlight">\(\to\)</span> mA.</strong></p></li>
@@ -1823,16 +1823,16 @@ I = 4 + 16(0.75) = 4 + 12 = 16.0mA
 \]</div>
 <div class="math notranslate nohighlight">
 \[
-I = 4 + 16(0.125) = 4 + 2 = 6.0mA
+I = 4 + 16(0.125) = 4 + 2 = 6.0 mA
 \]</div>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Verification by midpoint.</strong> Mid-range pressure 150 psi <span class="math notranslate nohighlight">\(\to\)</span> %TO <span class="math notranslate nohighlight">\(= 50%\)</span> <span class="math notranslate nohighlight">\(\to\)</span> <span class="math notranslate nohighlight">\(I = 4 + 8 = 12\)</span> mA. \checkmark Linear calibration confirmed.</p></li>
-<li><p class="sd-card-text"><strong>Practical note on alarm settings.</strong> A 6 mA low-trip is close to the 4 mA live zero — if the loop opens, the controller would also see <span class="math notranslate nohighlight">\(&lt; 6\)</span> mA. Modern DCS systems distinguish “signal within range, low alarm” from “signal failure” by checking for <span class="math notranslate nohighlight">\(I &lt; 3.8\)</span> mA or <span class="math notranslate nohighlight">\(&gt; 20.5\)</span> mA (out-of-range diagnostic).</p></li>
+<li><p class="sd-card-text"><strong>Practical note on alarm settings.</strong> A 6 mA low-trip is close to the 4 mA live zero  -  if the loop opens, the controller would also see <span class="math notranslate nohighlight">\(&lt; 6\)</span> mA. Modern DCS systems distinguish “signal within range, low alarm” from “signal failure” by checking for <span class="math notranslate nohighlight">\(I &lt; 3.8\)</span> mA or <span class="math notranslate nohighlight">\(&gt; 20.5\)</span> mA (out-of-range diagnostic).</p></li>
 </ul>
 </div>
 </details><div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Exam Tips — Sensors and Transmitters</strong></p>
+<p><strong>Exam Tips  -  Sensors and Transmitters</strong></p>
 <ul class="simple">
 <li><p>Zero is the <em>low end of the range</em>, not the absolute zero of the measurement scale.</p></li>
 <li><p>Span = high <span class="math notranslate nohighlight">\(-\)</span> low.</p></li>
@@ -1887,7 +1887,7 @@ Load response:   \frac{Y(s)}{D(s)} = \frac{G_d}{1 + G_c G_v G_p G_m}
 </section>
 </section>
 <section id="pid-controllers-algorithms-and-tuning">
-<h2>PID Controllers — Algorithms and Tuning<a class="headerlink" href="#pid-controllers-algorithms-and-tuning" title="Link to this heading">#</a></h2>
+<h2>PID Controllers  -  Algorithms and Tuning<a class="headerlink" href="#pid-controllers-algorithms-and-tuning" title="Link to this heading">#</a></h2>
 <p>The Proportional-Integral-Derivative (PID) controller is responsible for an estimated 90%+ of all single-loop control in the world’s chemical plants. The PE exam tests three things: knowing what each mode does, knowing when to use which combination, and being able to apply a tuning rule (typically Ziegler-Nichols or Cohen-Coon) from a FOPDT identification.</p>
 <section id="the-ideal-continuous-pid-algorithm">
 <h3>The Ideal Continuous PID Algorithm<a class="headerlink" href="#the-ideal-continuous-pid-algorithm" title="Link to this heading">#</a></h3>
@@ -1896,7 +1896,7 @@ Load response:   \frac{Y(s)}{D(s)} = \frac{G_d}{1 + G_c G_v G_p G_m}
 <p>The most common form is the <em>parallel</em> or <em>textbook</em> form:</p>
 <div class="math notranslate nohighlight">
 \[
-u(t) = u_{bias} + K_ce(t) + \frac{K_c}{\tau_I}\int_0^t e(\tau)d\tau + K_c\tau_D\frac{de(t)}{dt}
+u(t) = u_{bias} + K_c e(t) + \frac{K_c}{\tau_I}\int_0^t e(\tau) d\tau + K_c \tau_D \frac{de(t)}{dt}
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(e(t) = r(t) - y(t)\)</span> is the error. The Laplace-domain transfer function is</p>
 <div class="math notranslate nohighlight">
@@ -1915,7 +1915,7 @@ G_c(s) = \frac{U(s)}{E(s)} = K_c(1 + \frac{1}{\tau_I s} + \tau_D s)
 <p class="admonition-title">Note</p>
 <p><strong>What Each Mode Does</strong></p>
 <ul class="simple">
-<li><p><strong>Proportional (<span class="math notranslate nohighlight">\(K_c\)</span>):</strong> reacts to the <em>current</em> error. Cannot, by itself, eliminate steady-state offset — a sustained nonzero <span class="math notranslate nohighlight">\(u_{bias}\)</span> requires a sustained nonzero <span class="math notranslate nohighlight">\(e\)</span>.</p></li>
+<li><p><strong>Proportional (<span class="math notranslate nohighlight">\(K_c\)</span>):</strong> reacts to the <em>current</em> error. Cannot, by itself, eliminate steady-state offset  -  a sustained nonzero <span class="math notranslate nohighlight">\(u_{bias}\)</span> requires a sustained nonzero <span class="math notranslate nohighlight">\(e\)</span>.</p></li>
 <li><p><strong>Integral (<span class="math notranslate nohighlight">\(\tau_I\)</span>):</strong> reacts to the <em>accumulated</em> error. Drives steady-state offset to zero. Adds phase lag (slows the loop) and can cause windup if the manipulated variable saturates.</p></li>
 <li><p><strong>Derivative (<span class="math notranslate nohighlight">\(\tau_D\)</span>):</strong> reacts to the <em>rate of change</em> of the error. Adds phase lead (speeds the loop). Amplifies measurement noise (high-frequency noise has a large derivative).</p></li>
 </ul>
@@ -1928,7 +1928,7 @@ G_c(s) = \frac{U(s)}{E(s)} = K_c(1 + \frac{1}{\tau_I s} + \tau_D s)
 <ul class="simple">
 <li><p><strong>P only:</strong> the simplest and most tolerant; leaves offset proportional to the load. Used on noncritical level loops where some offset is acceptable.</p></li>
 <li><p><strong>PI:</strong> the workhorse. Eliminates offset. Used on virtually all flow, pressure, most level, and most temperature loops. Probably 75% of all industrial loops.</p></li>
-<li><p><strong>PID:</strong> adds derivative to PI. Used on slow temperature loops with low noise (large <span class="math notranslate nohighlight">\(\tau\)</span>). <em>Never</em> use on flow loops — they are too noisy and the derivative action amplifies the noise dramatically.</p></li>
+<li><p><strong>PID:</strong> adds derivative to PI. Used on slow temperature loops with low noise (large <span class="math notranslate nohighlight">\(\tau\)</span>). <em>Never</em> use on flow loops  -  they are too noisy and the derivative action amplifies the noise dramatically.</p></li>
 <li><p><strong>PD:</strong> rare. Acceptable when offset is tolerable, the process is fast and noise is low. Used in some servomechanism applications.</p></li>
 </ul>
 </div>
@@ -1940,9 +1940,9 @@ G_c(s) = \frac{U(s)}{E(s)} = K_c(1 + \frac{1}{\tau_I s} + \tau_D s)
 <p><strong>{Ziegler-Nichols Tuning from a FOPDT Identification}</strong>
 Given an FOPDT model with gain <span class="math notranslate nohighlight">\(K\)</span>, time constant <span class="math notranslate nohighlight">\(\tau\)</span>, dead time <span class="math notranslate nohighlight">\(\theta\)</span>:</p>
 <ul class="simple">
-<li><p><strong>P only:</strong> <span class="math notranslate nohighlight">\(K_c = \dfrac{1}{K}\dfrac{\tau}{\theta}\)</span>.</p></li>
-<li><p><strong>PI:</strong> <span class="math notranslate nohighlight">\(K_c = \dfrac{0.9}{K}\dfrac{\tau}{\theta}\)</span>,   <span class="math notranslate nohighlight">\(\tau_I = 3.33\theta\)</span>.</p></li>
-<li><p><strong>PID:</strong> <span class="math notranslate nohighlight">\(K_c = \dfrac{1.2}{K}\dfrac{\tau}{\theta}\)</span>,   <span class="math notranslate nohighlight">\(\tau_I = 2.0\theta\)</span>,   <span class="math notranslate nohighlight">\(\tau_D = 0.5\theta\)</span>.</p></li>
+<li><p><strong>P only:</strong> <span class="math notranslate nohighlight">\(K_c = \dfrac{1}{K} \dfrac{\tau}{\theta}\)</span>.</p></li>
+<li><p><strong>PI:</strong> <span class="math notranslate nohighlight">\(K_c = \dfrac{0.9}{K} \dfrac{\tau}{\theta}\)</span>,   <span class="math notranslate nohighlight">\(\tau_I = 3.33 \theta\)</span>.</p></li>
+<li><p><strong>PID:</strong> <span class="math notranslate nohighlight">\(K_c = \dfrac{1.2}{K} \dfrac{\tau}{\theta}\)</span>,   <span class="math notranslate nohighlight">\(\tau_I = 2.0 \theta\)</span>,   <span class="math notranslate nohighlight">\(\tau_D = 0.5 \theta\)</span>.</p></li>
 </ul>
 <p>These rules give a <em>quarter-decay</em> closed-loop response (decay ratio <span class="math notranslate nohighlight">\(\approx 0.25\)</span>, <span class="math notranslate nohighlight">\(\zeta \approx 0.215\)</span>), which is aggressive and on the boundary of acceptability. For smoother response, use Cohen-Coon (next) or IMC tuning.</p>
 <p>Sign of <span class="math notranslate nohighlight">\(K_c\)</span>: use the magnitude formula and <em>set the controller direct/reverse switch to give negative feedback</em>. A negative-gain process needs a direct-acting controller, and vice versa.</p>
@@ -1954,9 +1954,9 @@ Given an FOPDT model with gain <span class="math notranslate nohighlight">\(K\)<
 <p class="admonition-title">Important</p>
 <p><strong>{Cohen-Coon Tuning Rules (more accurate when <span class="math notranslate nohighlight">\(\theta/\tau &gt; 0.3\)</span>)}</strong></p>
 <ul class="simple">
-<li><p><strong>P only:</strong> <span class="math notranslate nohighlight">\(K_c = \dfrac{1}{K}\dfrac{\tau}{\theta}(1 + \dfrac{\theta}{3\tau})\)</span></p></li>
-<li><p><strong>PI:</strong> <span class="math notranslate nohighlight">\(K_c = \dfrac{1}{K}\dfrac{\tau}{\theta}(0.9 + \dfrac{\theta}{12\tau})\)</span>,   <span class="math notranslate nohighlight">\(\tau_I = \theta\dfrac{30 + 3\theta/\tau}{9 + 20\theta/\tau}\)</span></p></li>
-<li><p><strong>PID:</strong> <span class="math notranslate nohighlight">\(K_c = \dfrac{1}{K}\dfrac{\tau}{\theta}(1.35 + \dfrac{\theta}{4\tau})\)</span>,   <span class="math notranslate nohighlight">\(\tau_I = \theta\dfrac{32 + 6\theta/\tau}{13 + 8\theta/\tau}\)</span>,   <span class="math notranslate nohighlight">\(\tau_D = \theta\dfrac{4}{11 + 2\theta/\tau}\)</span></p></li>
+<li><p><strong>P only:</strong> <span class="math notranslate nohighlight">\(K_c = \dfrac{1}{K} \dfrac{\tau}{\theta}(1 + \dfrac{\theta}{3\tau})\)</span></p></li>
+<li><p><strong>PI:</strong> <span class="math notranslate nohighlight">\(K_c = \dfrac{1}{K} \dfrac{\tau}{\theta}(0.9 + \dfrac{\theta}{12\tau})\)</span>,   <span class="math notranslate nohighlight">\(\tau_I = \theta \dfrac{30 + 3 \theta/\tau}{9 + 20 \theta/\tau}\)</span></p></li>
+<li><p><strong>PID:</strong> <span class="math notranslate nohighlight">\(K_c = \dfrac{1}{K} \dfrac{\tau}{\theta}(1.35 + \dfrac{\theta}{4\tau})\)</span>,   <span class="math notranslate nohighlight">\(\tau_I = \theta \dfrac{32 + 6 \theta/\tau}{13 + 8 \theta/\tau}\)</span>,   <span class="math notranslate nohighlight">\(\tau_D = \theta \dfrac{4}{11 + 2 \theta/\tau}\)</span></p></li>
 </ul>
 </div>
 </section>
@@ -1988,12 +1988,12 @@ K_c = \frac{1}{K} \cdot \frac{\tau}{\lambda + \theta},   \tau_I = \tau
 </ul>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-d2a4c6a6-e914-4e0e-b031-05582c6831e4">
-<span class="eqno">(14)<a class="headerlink" href="#equation-d2a4c6a6-e914-4e0e-b031-05582c6831e4" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d21f1bb8-7fb8-41cb-974e-4917b0db3692">
+<span class="eqno">(14)<a class="headerlink" href="#equation-d21f1bb8-7fb8-41cb-974e-4917b0db3692" title="Permalink to this equation">#</a></span>\[\begin{align}
 
 
-    K_c &amp;= \frac{0.9}{|K|}\frac{\tau}{\theta} = \frac{0.9}{1.5}\frac{2.14}{5.4} = 0.60 \times 0.396 = 0.238gpm/^\circF
-\tau_I &amp;= 3.33\theta = 3.33 \times 5.4 = 18.0min
+    K_c &amp;= \frac{0.9}{|K|} \frac{\tau}{\theta} = \frac{0.9}{1.5} \frac{2.14}{5.4} = 0.60 \times 0.396 = 0.238 gpm/^\circ F
+\tau_I &amp;= 3.33 \theta = 3.33 \times 5.4 = 18.0 min
     \end{align}\]</div>
 <div class="math notranslate nohighlight">
 \[\]</div>
@@ -2002,12 +2002,12 @@ K_c = \frac{1}{K} \cdot \frac{\tau}{\lambda + \theta},   \tau_I = \tau
 </ul>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-48db17c7-ca12-45df-a955-7414cf225367">
-<span class="eqno">(15)<a class="headerlink" href="#equation-48db17c7-ca12-45df-a955-7414cf225367" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-cdc70f59-1466-423f-95a4-09f7d7716c2a">
+<span class="eqno">(15)<a class="headerlink" href="#equation-cdc70f59-1466-423f-95a4-09f7d7716c2a" title="Permalink to this equation">#</a></span>\[\begin{align}
 
 
-    K_c &amp;= \frac{1}{1.5}\frac{2.14}{5.4}(0.9 + \frac{5.4}{12 \times 2.14}) = 0.667 \times 0.396 \times (0.9 + 0.210) = 0.293gpm/^\circF
-\tau_I &amp;= 5.4 \cdot \frac{30 + 3(2.524)}{9 + 20(2.524)} = 5.4 \cdot \frac{37.57}{59.48} = 5.4 \times 0.632 = 3.41min
+    K_c &amp;= \frac{1}{1.5} \frac{2.14}{5.4} (0.9 + \frac{5.4}{12 \times 2.14}) = 0.667 \times 0.396 \times (0.9 + 0.210) = 0.293 gpm/^\circ F
+\tau_I &amp;= 5.4 \cdot \frac{30 + 3(2.524)}{9 + 20(2.524)} = 5.4 \cdot \frac{37.57}{59.48} = 5.4 \times 0.632 = 3.41 min
     \end{align}\]</div>
 <div class="math notranslate nohighlight">
 \[\]</div>
@@ -2016,12 +2016,12 @@ K_c = \frac{1}{K} \cdot \frac{\tau}{\lambda + \theta},   \tau_I = \tau
 </ul>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-ef483b5c-9aa0-44be-b3c5-e44aee4fe32b">
-<span class="eqno">(16)<a class="headerlink" href="#equation-ef483b5c-9aa0-44be-b3c5-e44aee4fe32b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5c5e1f8d-c0e5-42b9-a42a-92127772e4f6">
+<span class="eqno">(16)<a class="headerlink" href="#equation-5c5e1f8d-c0e5-42b9-a42a-92127772e4f6" title="Permalink to this equation">#</a></span>\[\begin{align}
 
 
-    K_c &amp;= \frac{1}{|K|}\frac{\tau}{\lambda + \theta} = \frac{1}{1.5}\frac{2.14}{2.14 + 5.4} = \frac{1}{1.5} \times 0.284 = 0.189gpm/^\circF
-\tau_I &amp;= \tau = 2.14min
+    K_c &amp;= \frac{1}{|K|} \frac{\tau}{\lambda + \theta} = \frac{1}{1.5} \frac{2.14}{2.14 + 5.4} = \frac{1}{1.5} \times 0.284 = 0.189 gpm/^\circ F
+\tau_I &amp;= \tau = 2.14 min
     \end{align}\]</div>
 <div class="math notranslate nohighlight">
 \[\]</div>
@@ -2031,7 +2031,7 @@ K_c = \frac{1}{K} \cdot \frac{\tau}{\lambda + \theta},   \tau_I = \tau
 <li><p class="sd-card-text">ZN gives moderate <span class="math notranslate nohighlight">\(K_c\)</span> and slow integral; will produce overshoot.</p></li>
 <li><p class="sd-card-text">Cohen-Coon gives somewhat larger <span class="math notranslate nohighlight">\(K_c\)</span> and much faster integral; will respond faster but with more overshoot. CC is the recommended choice for dead-time-dominant processes (<span class="math notranslate nohighlight">\(\theta/\tau &gt; 0.3\)</span>).</p></li>
 <li><p class="sd-card-text">IMC gives the smallest <span class="math notranslate nohighlight">\(K_c\)</span> and a very fast integral (<span class="math notranslate nohighlight">\(\tau_I = \tau\)</span>); produces a smooth, no-overshoot response at the cost of speed.</p>
-<p class="sd-card-text">For a process this delay-dominant, none of these will be snappy — consider Smith predictor for dramatically better performance.</p>
+<p class="sd-card-text">For a process this delay-dominant, none of these will be snappy  -  consider Smith predictor for dramatically better performance.</p>
 </li>
 <li><p class="sd-card-text"><strong>Sanity check.</strong> The dimensionless loop gain at the chosen <span class="math notranslate nohighlight">\(K_c\)</span> is <span class="math notranslate nohighlight">\(|K_c \cdot K| \approx\)</span> 0.36 (ZN), 0.44 (CC), 0.28 (IMC). All are well below 1.0, so the loop is comfortably stable. ZN’s value (0.36) is closest to the quarter-decay target gain, consistent with its more aggressive tuning intent.</p></li>
 </ul>
@@ -2044,16 +2044,16 @@ K_c = \frac{1}{K} \cdot \frac{\tau}{\lambda + \theta},   \tau_I = \tau
 <p><strong>The Ziegler-Nichols Closed-Loop (Ultimate) Method</strong>
 An alternative to the step-test method: with integral and derivative disabled, increase <span class="math notranslate nohighlight">\(K_c\)</span> until the loop oscillates at a constant amplitude (the limit of stability). Record:</p>
 <ul class="simple">
-<li><p>Ultimate gain <span class="math notranslate nohighlight">\(K_u\)</span> — the <span class="math notranslate nohighlight">\(K_c\)</span> value at sustained oscillation.</p></li>
-<li><p>Ultimate period <span class="math notranslate nohighlight">\(P_u\)</span> — the period of the oscillation.</p></li>
+<li><p>Ultimate gain <span class="math notranslate nohighlight">\(K_u\)</span>  -  the <span class="math notranslate nohighlight">\(K_c\)</span> value at sustained oscillation.</p></li>
+<li><p>Ultimate period <span class="math notranslate nohighlight">\(P_u\)</span>  -  the period of the oscillation.</p></li>
 </ul>
 <p>Then:</p>
 <ul class="simple">
-<li><p>P only: <span class="math notranslate nohighlight">\(K_c = 0.5K_u\)</span>.</p></li>
-<li><p>PI: <span class="math notranslate nohighlight">\(K_c = 0.45K_u\)</span>, <span class="math notranslate nohighlight">\(\tau_I = P_u/1.2\)</span>.</p></li>
-<li><p>PID: <span class="math notranslate nohighlight">\(K_c = 0.6K_u\)</span>, <span class="math notranslate nohighlight">\(\tau_I = P_u/2\)</span>, <span class="math notranslate nohighlight">\(\tau_D = P_u/8\)</span>.</p></li>
+<li><p>P only: <span class="math notranslate nohighlight">\(K_c = 0.5 K_u\)</span>.</p></li>
+<li><p>PI: <span class="math notranslate nohighlight">\(K_c = 0.45 K_u\)</span>, <span class="math notranslate nohighlight">\(\tau_I = P_u/1.2\)</span>.</p></li>
+<li><p>PID: <span class="math notranslate nohighlight">\(K_c = 0.6 K_u\)</span>, <span class="math notranslate nohighlight">\(\tau_I = P_u/2\)</span>, <span class="math notranslate nohighlight">\(\tau_D = P_u/8\)</span>.</p></li>
 </ul>
-<p>Practical issue: deliberately bringing a real plant to its limit of stability is disruptive and not safe. The relay-feedback method (*\AA{*str”om-H”agglund}) gives the same <span class="math notranslate nohighlight">\(K_u, P_u\)</span> from a small relay-induced oscillation and is much safer.</p>
+<p>Practical issue: deliberately bringing a real plant to its limit of stability is disruptive and not safe. The relay-feedback method (<em>Åström-Hägglund</em>) gives the same <span class="math notranslate nohighlight">\(K_u, P_u\)</span> from a small relay-induced oscillation and is much safer.</p>
 </div>
 </section>
 <section id="anti-windup">
@@ -2084,7 +2084,7 @@ An alternative to the step-test method: with integral and derivative disabled, i
 </ul>
 <div class="math notranslate nohighlight">
 \[
-G_{OL}(s) = G_c G_p = K_c\frac{1}{(s+1)(s+2)}\cdot \frac{2s + 1}{2s} = \frac{K_c(2s + 1)}{2 s (s+1)(s+2)}
+G_{OL}(s) = G_c G_p = K_c \frac{1}{(s+1)(s+2)}\cdot \frac{2s + 1}{2s} = \frac{K_c (2s + 1)}{2 s (s+1)(s+2)}
 \]</div>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Characteristic equation:</strong> <span class="math notranslate nohighlight">\(1 + G_{OL} = 0\)</span>, i.e.\</p></li>
@@ -2122,9 +2122,9 @@ G_{OL}(s) = G_c G_p = K_c\frac{1}{(s+1)(s+2)}\cdot \frac{2s + 1}{2s} = \frac{K_c
 </div>
 </details><div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Exam Tips — PID and Tuning</strong></p>
+<p><strong>Exam Tips  -  PID and Tuning</strong></p>
 <ul class="simple">
-<li><p>Memorize the ZN PI rule: <span class="math notranslate nohighlight">\(K_c = 0.9\tau/(K\theta)\)</span>, <span class="math notranslate nohighlight">\(\tau_I = 3.33\theta\)</span>. PID rule: <span class="math notranslate nohighlight">\(K_c = 1.2\tau/(K\theta)\)</span>, <span class="math notranslate nohighlight">\(\tau_I = 2\theta\)</span>, <span class="math notranslate nohighlight">\(\tau_D = 0.5\theta\)</span>.</p></li>
+<li><p>Memorize the ZN PI rule: <span class="math notranslate nohighlight">\(K_c = 0.9 \tau/(K\theta)\)</span>, <span class="math notranslate nohighlight">\(\tau_I = 3.33 \theta\)</span>. PID rule: <span class="math notranslate nohighlight">\(K_c = 1.2 \tau/(K\theta)\)</span>, <span class="math notranslate nohighlight">\(\tau_I = 2 \theta\)</span>, <span class="math notranslate nohighlight">\(\tau_D = 0.5 \theta\)</span>.</p></li>
 <li><p>Direct vs. reverse: choose to keep the loop in negative feedback. For positive process gain <span class="math notranslate nohighlight">\(\to\)</span> reverse-acting controller; for negative gain <span class="math notranslate nohighlight">\(\to\)</span> direct-acting.</p></li>
 <li><p>Never use derivative action on flow loops (noise).</p></li>
 <li><p>Anti-windup is required on any loop whose MV can saturate (most temperature, level, and pressure loops with large operating ranges).</p></li>
@@ -2135,7 +2135,7 @@ G_{OL}(s) = G_c G_p = K_c\frac{1}{(s+1)(s+2)}\cdot \frac{2s + 1}{2s} = \frac{K_c
 </section>
 <section id="advanced-control-structures">
 <h2>Advanced Control Structures<a class="headerlink" href="#advanced-control-structures" title="Link to this heading">#</a></h2>
-<p>The single-loop PID is the workhorse, but many process challenges — significant dead time, measurable disturbances, multiple competing constraints, or interacting variables — call for richer control structures. The PE exam expects you to recognize these structures and to know when each is justified.</p>
+<p>The single-loop PID is the workhorse, but many process challenges  -  significant dead time, measurable disturbances, multiple competing constraints, or interacting variables  -  call for richer control structures. The PE exam expects you to recognize these structures and to know when each is justified.</p>
 <section id="cascade-control">
 <h3>Cascade Control<a class="headerlink" href="#cascade-control" title="Link to this heading">#</a></h3>
 <div class="admonition note">
@@ -2170,7 +2170,7 @@ G_{ff}(s) = -\frac{G_d(s)}{G_p(s)}
 <ul class="simple">
 <li><p>Feedforward is open-loop: it cannot correct for unmeasured disturbances or for model mismatch. Always combine with feedback PI/PID.</p></li>
 <li><p>Steady-state feedforward (static gain only) is often sufficient. Dynamic feedforward includes a lead-lag block.</p></li>
-<li><p>If <span class="math notranslate nohighlight">\(G_p\)</span> has more dead time than <span class="math notranslate nohighlight">\(G_d\)</span>, the ideal feedforward is non-causal — you would need to act before the disturbance arrives. The fix is to drop the dead-time inversion and accept imperfect cancellation.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(G_p\)</span> has more dead time than <span class="math notranslate nohighlight">\(G_d\)</span>, the ideal feedforward is non-causal  -  you would need to act before the disturbance arrives. The fix is to drop the dead-time inversion and accept imperfect cancellation.</p></li>
 </ul>
 </div>
 </section>
@@ -2229,7 +2229,7 @@ When a process has multiple controlled and manipulated variables (e.g. a distill
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Exam Tips — Advanced Structures</strong></p>
+<p><strong>Exam Tips  -  Advanced Structures</strong></p>
 <ul class="simple">
 <li><p>Cascade: two summing junctions, two PID blocks in series with outer feeding inner setpoint. Used for slow-variable outer, fast-variable inner, with disturbance entering near the inner variable.</p></li>
 <li><p>Feedforward: a measured-disturbance block computes a correction added to (not replacing) the feedback controller’s output.</p></li>
@@ -2248,10 +2248,10 @@ When a process has multiple controlled and manipulated variables (e.g. a distill
 <p class="admonition-title">Tip</p>
 <p><strong>Time- and Laplace-Domain Identities You Should Know Cold</strong></p>
 <ul class="simple">
-<li><p>Step <span class="math notranslate nohighlight">\(M\)</span>: <span class="math notranslate nohighlight">\(L{M u(t)} = M/s\)</span>.</p></li>
-<li><p>Exponential decay: <span class="math notranslate nohighlight">\(L{e^{-at}} = 1/(s+a)\)</span>.</p></li>
-<li><p>Dead time: <span class="math notranslate nohighlight">\(L{f(t-\theta)u(t-\theta)} = e^{-\theta s} F(s)\)</span>.</p></li>
-<li><p>First-derivative rule (zero IC): <span class="math notranslate nohighlight">\(L{f'(t)} = s F(s)\)</span>.</p></li>
+<li><p>Step <span class="math notranslate nohighlight">\(M\)</span>: <span class="math notranslate nohighlight">\(L\{M u(t)\} = M/s\)</span>.</p></li>
+<li><p>Exponential decay: <span class="math notranslate nohighlight">\(L\{e^{-at}\} = 1/(s+a)\)</span>.</p></li>
+<li><p>Dead time: <span class="math notranslate nohighlight">\(L\{f(t-\theta)u(t-\theta)\} = e^{-\theta s} F(s)\)</span>.</p></li>
+<li><p>First-derivative rule (zero IC): <span class="math notranslate nohighlight">\(L\{f'(t)\} = s F(s)\)</span>.</p></li>
 <li><p>Final-value theorem: <span class="math notranslate nohighlight">\(\lim_{t\to\infty} f(t) = \lim_{s\to 0} s F(s)\)</span>.</p></li>
 </ul>
 </div>
@@ -2273,9 +2273,9 @@ G(s) = \frac{K e^{-\theta s}}{\tau s + 1}
 \]</div>
 <div class="math notranslate nohighlight">
 \[
-\theta = 1.3t_{35.3%} - 0.29t_{85.3%},   \tau = 0.67(t_{85.3%} - t_{35.3%}),   K = \Delta y_{ss}/\Delta x
+\theta = 1.3 t_{35.3%} - 0.29 t_{85.3%},   \tau = 0.67(t_{85.3%} - t_{35.3%}),   K = \Delta y_{ss}/\Delta x
 \]</div>
-<p>Controllability: <span class="math notranslate nohighlight">\(\theta/\tau &lt; 0.1\)</span> easy; <span class="math notranslate nohighlight">\(0.1\)</span>–<span class="math notranslate nohighlight">\(1\)</span> classical; <span class="math notranslate nohighlight">\(&gt; 1\)</span> requires Smith predictor or feedforward.</p>
+<p>Controllability: <span class="math notranslate nohighlight">\(\theta/\tau &lt; 0.1\)</span> easy; <span class="math notranslate nohighlight">\(0.1\)</span>-<span class="math notranslate nohighlight">\(1\)</span> classical; <span class="math notranslate nohighlight">\(&gt; 1\)</span> requires Smith predictor or feedforward.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -2295,11 +2295,11 @@ OS = e^{-\pi\zeta/\sqrt{1-\zeta^2}},   DR = OS^2,   T = 2\pi\tau/\sqrt{1-\zeta^2
 <p><strong>Control-Valve Sizing</strong></p>
 <div class="math notranslate nohighlight">
 \[
-q = C_vf(\ell)\sqrt{\Delta P_v / G_s}   (liquid, gpm, psi, gpm/\sqrt{psi})
+q = C_v f(\ell) \sqrt{\Delta P_v / G_s}   (liquid, gpm, psi, gpm/\sqrt{psi})
 \]</div>
 <p>Linear <span class="math notranslate nohighlight">\(f = \ell\)</span>; Equal-pct <span class="math notranslate nohighlight">\(f = R^{\ell-1}\)</span>; Quick-opening <span class="math notranslate nohighlight">\(f = \sqrt{\ell}\)</span>.
 <span class="math notranslate nohighlight">\(\beta = \Delta P_v/\Delta P_{total}\)</span>: <span class="math notranslate nohighlight">\(\beta &gt; 0.5\)</span> linear; <span class="math notranslate nohighlight">\(\beta &lt; 0.5\)</span> equal-pct.
-<span class="math notranslate nohighlight">\(K_v\)</span> (metric) <span class="math notranslate nohighlight">\(\approx 0.865C_v\)</span>. Target lift <span class="math notranslate nohighlight">\(0.3\)</span>–<span class="math notranslate nohighlight">\(0.75\)</span> at design.</p>
+<span class="math notranslate nohighlight">\(K_v\)</span> (metric) <span class="math notranslate nohighlight">\(\approx 0.865 C_v\)</span>. Target lift <span class="math notranslate nohighlight">\(0.3\)</span>-<span class="math notranslate nohighlight">\(0.75\)</span> at design.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -2309,10 +2309,10 @@ Cooling water: FO. Steam: FC. Vent: FO. Drain on inventory: FC. Hazardous reagen
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p><strong>4–20 mA Calibration</strong></p>
+<p><strong>4-20 mA Calibration</strong></p>
 <div class="math notranslate nohighlight">
 \[
-I = 4 + 16\frac{measurement - zero}{span},   %TO = (I-4)/16 \times 100
+I = 4 + 16 \frac{measurement - zero}{span},   %TO = (I-4)/16 \times 100
 \]</div>
 <p>Zero = low end of range; Span = high <span class="math notranslate nohighlight">\(-\)</span> low. Live zero (4 mA) distinguishes broken loop from low reading.</p>
 </div>
@@ -2425,8 +2425,8 @@ P: noncritical level. PI: flow, pressure, most level, most temperature (the work
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-fopdt-transfer-function">The FOPDT Transfer Function</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-fopdt-step-response">The FOPDT Step Response</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-1-tangent-and-inflection-smith-ziegler-nichols-original">Method 1: Tangent-and-Inflection (Smith / Ziegler-Nichols Original)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2-sundaresankrishnaswamy-two-point-fit">Method 2: Sundaresan–Krishnaswamy Two-Point Fit</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-35-3-and-85-3-a-quick-derivation-sketch">Why 35.3% and 85.3%? — A Quick Derivation Sketch</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2-sundaresan-krishnaswamy-two-point-fit">Method 2: Sundaresan-Krishnaswamy Two-Point Fit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-35-3-and-85-3-a-quick-derivation-sketch">Why 35.3% and 85.3%?  -  A Quick Derivation Sketch</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#worked-example-heat-exchanger-cooling-water-step">Worked Example: Heat-Exchanger Cooling-Water Step</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#worked-example-higher-order-process-fit-to-fopdt">Worked Example: Higher-Order Process Fit to FOPDT</a></li>
 </ul>
@@ -2446,7 +2446,7 @@ P: noncritical level. PI: flow, pressure, most level, most temperature (the work
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inherent-vs-installed-characteristic">Inherent vs. Installed Characteristic</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#worked-example-linear-vs-equal-percentage-lift-calculation">Worked Example: Linear vs. Equal-Percentage Lift Calculation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loop-gain-and-why-constant-loop-gain-matters">Loop Gain and Why Constant Loop Gain Matters</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#choked-flow-the-upper-limit-on-equation-2">Choked Flow — The Upper Limit on Equation 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#choked-flow-the-upper-limit-on-equation-2">Choked Flow  -  The Upper Limit on Equation 2</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compressible-gas-flow-through-control-valves">Compressible (Gas) Flow Through Control Valves</a></li>
 </ul>
 </li>
@@ -2467,8 +2467,8 @@ P: noncritical level. PI: flow, pressure, most level, most temperature (the work
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#direct-vs-indirect-sensors">Direct vs. Indirect Sensors</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sensor-vocabulary">Sensor Vocabulary</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-sensor-types-by-variable">Common Sensor Types by Variable</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-420-ma-standard">The 4–20 mA Standard</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#worked-example-420-ma-loop-calibration">Worked Example: 4–20 mA Loop Calibration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-4-20-ma-standard">The 4-20 mA Standard</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#worked-example-4-20-ma-loop-calibration">Worked Example: 4-20 mA Loop Calibration</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#closed-loop-block-diagrams-and-block-diagram-algebra">Closed-Loop Block Diagrams and Block-Diagram Algebra</a><ul class="visible nav section-nav flex-column">
@@ -2476,7 +2476,7 @@ P: noncritical level. PI: flow, pressure, most level, most temperature (the work
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-sensor-transmitter-as-a-block">The Sensor/Transmitter as a Block</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pid-controllers-algorithms-and-tuning">PID Controllers — Algorithms and Tuning</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pid-controllers-algorithms-and-tuning">PID Controllers  -  Algorithms and Tuning</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ideal-continuous-pid-algorithm">The Ideal Continuous PID Algorithm</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mode-selection-guidelines">Mode-Selection Guidelines</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ziegler-nichols-open-loop-step-test-tuning-rules">Ziegler-Nichols Open-Loop (Step-Test) Tuning Rules</a></li>

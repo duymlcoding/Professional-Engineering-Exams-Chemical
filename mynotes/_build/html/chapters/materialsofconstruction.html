@@ -321,12 +321,12 @@
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preliminaries-the-mechanics-of-materials-toolbox">Preliminaries: The Mechanics-of-Materials Toolbox</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#force-stress-and-the-internal-force-hypothesis">Force, Stress, and the Internal-Force Hypothesis</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-engineering-vs-true-and-why-it-matters">Why Engineering vs. True — and Why It Matters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-engineering-vs-true-and-why-it-matters">Why Engineering vs. True  -  and Why It Matters</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-conversions-and-practical-magnitudes">Unit Conversions and Practical Magnitudes</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-tensile-test-standardized-procedure">The Tensile Test — Standardized Procedure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-tensile-test-standardized-procedure">The Tensile Test  -  Standardized Procedure</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#engineering-stress-and-strain-computational-practice">Engineering Stress and Strain — Computational Practice</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#engineering-stress-and-strain-computational-practice">Engineering Stress and Strain  -  Computational Practice</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-computational-recipe">The Computational Recipe</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#worked-example-round-tensile-specimen">Worked Example: Round Tensile Specimen</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#worked-example-rectangular-cross-section">Worked Example: Rectangular Cross-Section</a></li>
@@ -340,7 +340,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-0-2-offset-yield-strength-definition">The 0.2% Offset Yield Strength Definition</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unloading-from-the-plastic-region">Unloading From the Plastic Region</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#necking-and-ultimate-tensile-strength">Necking and Ultimate Tensile Strength</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-the-curve-all-properties-together">Reading the Curve — All Properties Together</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-the-curve-all-properties-together">Reading the Curve  -  All Properties Together</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#worked-example-reading-all-properties-from-a-curve">Worked Example: Reading All Properties from a Curve</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ductile-vs-brittle-behavior">Ductile vs. Brittle Behavior</a></li>
 </ul>
@@ -455,10 +455,10 @@ A body in equilibrium under external loads contains <strong>internal forces</str
 </div>
 </section>
 <section id="why-engineering-vs-true-and-why-it-matters">
-<h3>Why Engineering vs. True — and Why It Matters<a class="headerlink" href="#why-engineering-vs-true-and-why-it-matters" title="Link to this heading">#</a></h3>
+<h3>Why Engineering vs. True  -  and Why It Matters<a class="headerlink" href="#why-engineering-vs-true-and-why-it-matters" title="Link to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>The Engineering–True Distinction</strong>
+<p><strong>The Engineering-True Distinction</strong>
 <strong>Engineering stress</strong> uses <span class="math notranslate nohighlight">\(A_0\)</span> (original area). <strong>True stress</strong> uses <span class="math notranslate nohighlight">\(A_i\)</span> (instantaneous, deformed area):</p>
 <div class="math notranslate nohighlight">
 \[
@@ -467,7 +467,7 @@ A body in equilibrium under external loads contains <strong>internal forces</str
 <p>Engineering and true stress are identical at zero strain and diverge as the specimen deforms. Up to the onset of necking, the relationship is approximately</p>
 <div class="math notranslate nohighlight">
 \[
-\sigma_{true} = \sigma(1 + \varepsilon),   \varepsilon_{true} = \ln(1 + \varepsilon)
+\sigma_{true} = \sigma (1 + \varepsilon),   \varepsilon_{true} = \ln(1 + \varepsilon)
 \]</div>
 <p>After necking begins, the specimen’s cross-section is no longer uniform and these formulas break down.</p>
 <p><strong>Design implication.</strong> Engineering stress is used everywhere in design codes (ASME, ASTM) because the original area is what the designer specifies. True stress matters in metal-forming and in research on deformation mechanisms but is rarely used in chemical-plant equipment design. Throughout this chapter, “stress” without qualifier means engineering stress.</p>
@@ -479,22 +479,22 @@ A body in equilibrium under external loads contains <strong>internal forces</str
 <p class="admonition-title">Tip</p>
 <p><strong>Stress Unit Conversions and Reference Magnitudes</strong></p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(1MPa = 1N/mm^2 = 10^6Pa = 145psi\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(1GPa = 10^9Pa = 145{,}000psi = 145ksi\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(1ksi = 1{,}000psi \approx 6.895MPa\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(1 MPa = 1 N/mm^2 = 10^6 Pa = 145 psi\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(1 GPa = 10^9 Pa = 145{,}000 psi = 145 ksi\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(1 ksi = 1{,}000 psi \approx 6.895 MPa\)</span></p></li>
 </ul>
 <p>Useful reference magnitudes:</p>
 <ul class="simple">
 <li><p>Atmospheric pressure <span class="math notranslate nohighlight">\(\approx 0.1\)</span> MPa or 14.7 psi.</p></li>
 <li><p>Yield strength of mild structural steel: <span class="math notranslate nohighlight">\(\sim\)</span>250 MPa (36 ksi).</p></li>
-<li><p>Ultimate tensile strength of high-strength steel: 600–1500 MPa.</p></li>
+<li><p>Ultimate tensile strength of high-strength steel: 600-1500 MPa.</p></li>
 <li><p>Young’s modulus of steel: <span class="math notranslate nohighlight">\(E = 207\)</span> GPa (30<span class="math notranslate nohighlight">\(\times 10^6\)</span> psi).</p></li>
-<li><p>Tensile strength of polymer plastics: 30–80 MPa.</p></li>
+<li><p>Tensile strength of polymer plastics: 30-80 MPa.</p></li>
 </ul>
 </div>
 </section>
 <section id="the-tensile-test-standardized-procedure">
-<h3>The Tensile Test — Standardized Procedure<a class="headerlink" href="#the-tensile-test-standardized-procedure" title="Link to this heading">#</a></h3>
+<h3>The Tensile Test  -  Standardized Procedure<a class="headerlink" href="#the-tensile-test-standardized-procedure" title="Link to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>ASTM E8 Tensile Test</strong>
@@ -504,14 +504,14 @@ The numbers populating the materials handbooks come from a standardized tensile 
 <li><p>Standard specimen geometry (ASTM E8/E8M): 0.505-in or 12.5-mm diameter round; 2-in or 50-mm gauge length. Other standards (ISO 6892, EN 10002) prescribe slightly different geometries.</p></li>
 <li><p>The specimen is loaded in tension on a Universal Testing Machine (UTM) at a controlled strain rate (typically <span class="math notranslate nohighlight">\(10^{-4}\)</span> to <span class="math notranslate nohighlight">\(10^{-2}\)</span> s<span class="math notranslate nohighlight">\(^{-1}\)</span> for quasi-static tests).</p></li>
 <li><p>Force is measured by a load cell; extension by an extensometer attached to the gauge section. Stress is computed from force/<span class="math notranslate nohighlight">\(A_0\)</span>; strain from extension/<span class="math notranslate nohighlight">\(L_0\)</span>.</p></li>
-<li><p>The recorded <span class="math notranslate nohighlight">\(\sigma\)</span>–<span class="math notranslate nohighlight">\(\varepsilon\)</span> curve is the engineering stress-strain diagram.</p></li>
+<li><p>The recorded <span class="math notranslate nohighlight">\(\sigma\)</span>-<span class="math notranslate nohighlight">\(\varepsilon\)</span> curve is the engineering stress-strain diagram.</p></li>
 </ul>
 <p>Adherence to the ASTM standard is what allows two different labs to obtain comparable numbers. Deviations (different rate, different geometry, different temperature) shift the curve and are routine sources of disagreement between datasets.</p>
 </div>
 </section>
 </section>
 <section id="engineering-stress-and-strain-computational-practice">
-<h2>Engineering Stress and Strain — Computational Practice<a class="headerlink" href="#engineering-stress-and-strain-computational-practice" title="Link to this heading">#</a></h2>
+<h2>Engineering Stress and Strain  -  Computational Practice<a class="headerlink" href="#engineering-stress-and-strain-computational-practice" title="Link to this heading">#</a></h2>
 <p>With definitions in hand, we work through the algebra of computing engineering stress and strain from raw tensile-test measurements. The PE exam will give you force, geometry, and gauge length and expect you to produce <span class="math notranslate nohighlight">\(\sigma\)</span> and <span class="math notranslate nohighlight">\(\varepsilon\)</span> with correct units carried through every step.</p>
 <section id="the-computational-recipe">
 <h3>The Computational Recipe<a class="headerlink" href="#the-computational-recipe" title="Link to this heading">#</a></h3>
@@ -520,18 +520,18 @@ The numbers populating the materials handbooks come from a standardized tensile 
 <p>For tensile or compressive uniaxial loading:</p>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-345c8ce2-688c-4247-a7de-1d7b2f01f331">
-<span class="eqno">(17)<a class="headerlink" href="#equation-345c8ce2-688c-4247-a7de-1d7b2f01f331" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-505fc59b-8476-40c9-914e-67e0846e677c">
+<span class="eqno">(17)<a class="headerlink" href="#equation-505fc59b-8476-40c9-914e-67e0846e677c" title="Permalink to this equation">#</a></span>\[\begin{align}
 
 
 \sigma &amp;= \frac{F}{A_0} = \frac{F}{\pi (d_0/2)^2}  (round cross-section)
-\sigma &amp;= \frac{F}{A_0} = \frac{F}{w_0  t_0}  (rectangular cross-section, width w, thickness t)
+\sigma &amp;= \frac{F}{A_0} = \frac{F}{w_0   t_0}  (rectangular cross-section, width w, thickness t)
 \varepsilon &amp;= \frac{L_i - L_0}{L_0}
 \end{align}\]</div>
 <div class="math notranslate nohighlight">
 \[\]</div>
 <p>Units: <span class="math notranslate nohighlight">\(F\)</span> in N gives <span class="math notranslate nohighlight">\(\sigma\)</span> in Pa when <span class="math notranslate nohighlight">\(A_0\)</span> is in m<span class="math notranslate nohighlight">\(^2\)</span>. To get MPa, either divide the Pa result by <span class="math notranslate nohighlight">\(10^6\)</span> or use <span class="math notranslate nohighlight">\(A_0\)</span> in mm<span class="math notranslate nohighlight">\(^2\)</span> (then Pa·mm<span class="math notranslate nohighlight">\(^2\)</span>/m<span class="math notranslate nohighlight">\(^2 = \)</span> MPa directly).</p>
-<p>The common-units shortcut: <span class="math notranslate nohighlight">\(\sigma[MPa] = F[N] / A_0[mm^2]\)</span>.</p>
+<p>The common-units shortcut: <span class="math notranslate nohighlight">\(\sigma [MPa] = F [N] / A_0 [mm^2]\)</span>.</p>
 </div>
 </section>
 <section id="worked-example-round-tensile-specimen">
@@ -556,16 +556,16 @@ A_0 = \pi(\frac{d_0}{2})^2 = \pi(\frac{9.6 \times 10^{-3}}{2})^2 = \pi (4.8 \tim
 </div>
 <div class="math notranslate nohighlight">
 \[
-A_0 = \pi \times 2.304 \times 10^{-5} = 7.238 \times 10^{-5}m^2
+A_0 = \pi \times 2.304 \times 10^{-5} = 7.238 \times 10^{-5} m^2
 \]</div>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Engineering stress.</strong></p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
-\sigma = \frac{F}{A_0} = \frac{18{,}000N}{7.238 \times 10^{-5}m^2} = 2.488 \times 10^{8}Pa = 248.8MPa \approx 249MPa
+\sigma = \frac{F}{A_0} = \frac{18{,}000 N}{7.238 \times 10^{-5} m^2} = 2.488 \times 10^{8} Pa = 248.8 MPa \approx 249 MPa
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Quick double-check via the mm$^2$ shortcut: $A_0[mm^2] = \pi (4.8)^2 = 72.38$ mm$^2$. $\sigma = 18{,}000/72.38 = 248.7$ MPa. \checkmark Same answer.
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Quick double-check via the mm$^2$ shortcut: $A_0 [mm^2] = \pi (4.8)^2 = 72.38$ mm$^2$. $\sigma = 18{,}000/72.38 = 248.7$ MPa. \checkmark Same answer.
 </pre></div>
 </div>
 <ul class="simple">
@@ -579,7 +579,7 @@ A_0 = \pi \times 2.304 \times 10^{-5} = 7.238 \times 10^{-5}m^2
 </pre></div>
 </div>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Elastic-region check.</strong> The applied stress 249 MPa is just below the yield strength 250 MPa — the specimen is at the very edge of elastic behavior. Any small additional load would induce permanent (plastic) deformation. A safety factor for design (typically <span class="math notranslate nohighlight">\(\sigma_{design} = \sigma_y / N\)</span> with <span class="math notranslate nohighlight">\(N = 2\)</span>–<span class="math notranslate nohighlight">\(4\)</span>) would have flagged this load level long before yield. The strain <span class="math notranslate nohighlight">\(\varepsilon = 0.00375\)</span> is also consistent with elastic behavior in steel (<span class="math notranslate nohighlight">\(\varepsilon_y \approx \sigma_y / E = 250/207000 \approx 0.0012\)</span> in pure elastic; here at 0.00375 the specimen has crossed slightly into the plastic regime if we trust the 250 MPa yield estimate). The numbers sit on the boundary.</p></li>
+<li><p class="sd-card-text"><strong>Elastic-region check.</strong> The applied stress 249 MPa is just below the yield strength 250 MPa  -  the specimen is at the very edge of elastic behavior. Any small additional load would induce permanent (plastic) deformation. A safety factor for design (typically <span class="math notranslate nohighlight">\(\sigma_{design} = \sigma_y / N\)</span> with <span class="math notranslate nohighlight">\(N = 2\)</span>-<span class="math notranslate nohighlight">\(4\)</span>) would have flagged this load level long before yield. The strain <span class="math notranslate nohighlight">\(\varepsilon = 0.00375\)</span> is also consistent with elastic behavior in steel (<span class="math notranslate nohighlight">\(\varepsilon_y \approx \sigma_y / E = 250/207000 \approx 0.0012\)</span> in pure elastic; here at 0.00375 the specimen has crossed slightly into the plastic regime if we trust the 250 MPa yield estimate). The numbers sit on the boundary.</p></li>
 <li><p class="sd-card-text"><strong>Verification.</strong> 249 MPa is a plausible value for a moderately-loaded steel specimen. The strain <span class="math notranslate nohighlight">\(3.75 \times 10^{-3}\)</span> is small (typical of elastic-region tensile tests); a strain in the percent range would indicate plastic deformation. The fact that <span class="math notranslate nohighlight">\(\varepsilon &lt; 0.01\)</span> supports the conclusion that the specimen is still near its elastic limit.</p></li>
 </ul>
 </div>
@@ -599,14 +599,14 @@ A_0 = \pi \times 2.304 \times 10^{-5} = 7.238 \times 10^{-5}m^2
 </ul>
 <div class="math notranslate nohighlight">
 \[
-A_0 = w_0 \times t_0 = 25 \times 6 = 150mm^2 = 1.5 \times 10^{-4}m^2
+A_0 = w_0 \times t_0 = 25 \times 6 = 150 mm^2 = 1.5 \times 10^{-4} m^2
 \]</div>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Stress (mm<span class="math notranslate nohighlight">\(^2\)</span> shortcut).</strong></p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
-\sigma = \frac{F}{A_0} = \frac{45{,}000N}{150mm^2} = 300MPa
+\sigma = \frac{F}{A_0} = \frac{45{,}000 N}{150 mm^2} = 300 MPa
 \]</div>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Strain.</strong></p></li>
@@ -616,7 +616,7 @@ A_0 = w_0 \times t_0 = 25 \times 6 = 150mm^2 = 1.5 \times 10^{-4}m^2
 \varepsilon = \frac{0.29}{200} = 1.45 \times 10^{-3}
 \]</div>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Hooke’s law cross-check.</strong> If the material is steel (<span class="math notranslate nohighlight">\(E = 207\)</span> GPa = 207{,}000 MPa) and elastic, <span class="math notranslate nohighlight">\(\sigma = E\varepsilon\)</span> predicts <span class="math notranslate nohighlight">\(\sigma = 207{,}000 \times 1.45 \times 10^{-3} = 300\)</span> MPa. \checkmark Excellent agreement — the elastic-region assumption is consistent.</p></li>
+<li><p class="sd-card-text"><strong>Hooke’s law cross-check.</strong> If the material is steel (<span class="math notranslate nohighlight">\(E = 207\)</span> GPa = 207{,}000 MPa) and elastic, <span class="math notranslate nohighlight">\(\sigma = E\varepsilon\)</span> predicts <span class="math notranslate nohighlight">\(\sigma = 207{,}000 \times 1.45 \times 10^{-3} = 300\)</span> MPa. \checkmark Excellent agreement  -  the elastic-region assumption is consistent.</p></li>
 <li><p class="sd-card-text"><strong>Verification.</strong> Both <span class="math notranslate nohighlight">\(\sigma\)</span> and <span class="math notranslate nohighlight">\(\varepsilon\)</span> are reasonable for a moderately-loaded steel sample. The agreement between the measured <span class="math notranslate nohighlight">\(\sigma\)</span> and the Hooke’s-law prediction from <span class="math notranslate nohighlight">\(\varepsilon\)</span> tells us the test is in the linear-elastic region and the assumed modulus is correct.</p></li>
 </ul>
 </div>
@@ -626,16 +626,16 @@ A_0 = w_0 \times t_0 = 25 \times 6 = 150mm^2 = 1.5 \times 10^{-4}m^2
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Beyond Pure Tension</strong>
-<strong>Compression:</strong> same formulas with <span class="math notranslate nohighlight">\(F\)</span> negative (or, conventionally, sign-flipped so <span class="math notranslate nohighlight">\(\sigma_{comp} &gt; 0\)</span>). For ductile metals, compressive yield strength is approximately equal to tensile yield strength (the von Mises criterion is symmetric). For brittle materials (concrete, ceramics, cast iron), compressive strength is typically 5–10<span class="math notranslate nohighlight">\(\times\)</span> tensile strength.</p>
-<p><strong>Shear:</strong> a tangential force on a surface gives shear stress <span class="math notranslate nohighlight">\(\tau = F/A\)</span> and shear strain <span class="math notranslate nohighlight">\(\gamma = \Delta x / h\)</span> (relative displacement over height). For metals, shear modulus <span class="math notranslate nohighlight">\(G = E / [2(1 + \nu)]\)</span> where <span class="math notranslate nohighlight">\(\nu\)</span> is Poisson’s ratio (typically 0.3 for steel). Shear yield strength <span class="math notranslate nohighlight">\(\tau_y \approx \sigma_y / \sqrt{3} \approx 0.577\sigma_y\)</span> (von Mises) or <span class="math notranslate nohighlight">\(\tau_y \approx \sigma_y/2\)</span> (Tresca).</p>
+<strong>Compression:</strong> same formulas with <span class="math notranslate nohighlight">\(F\)</span> negative (or, conventionally, sign-flipped so <span class="math notranslate nohighlight">\(\sigma_{comp} &gt; 0\)</span>). For ductile metals, compressive yield strength is approximately equal to tensile yield strength (the von Mises criterion is symmetric). For brittle materials (concrete, ceramics, cast iron), compressive strength is typically 5-10<span class="math notranslate nohighlight">\(\times\)</span> tensile strength.</p>
+<p><strong>Shear:</strong> a tangential force on a surface gives shear stress <span class="math notranslate nohighlight">\(\tau = F/A\)</span> and shear strain <span class="math notranslate nohighlight">\(\gamma = \Delta x / h\)</span> (relative displacement over height). For metals, shear modulus <span class="math notranslate nohighlight">\(G = E / [2(1 + \nu)]\)</span> where <span class="math notranslate nohighlight">\(\nu\)</span> is Poisson’s ratio (typically 0.3 for steel). Shear yield strength <span class="math notranslate nohighlight">\(\tau_y \approx \sigma_y / \sqrt{3} \approx 0.577 \sigma_y\)</span> (von Mises) or <span class="math notranslate nohighlight">\(\tau_y \approx \sigma_y/2\)</span> (Tresca).</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Exam Tips — Stress and Strain Computation</strong></p>
+<p><strong>Exam Tips  -  Stress and Strain Computation</strong></p>
 <ul class="simple">
 <li><p>Use <span class="math notranslate nohighlight">\(A_0\)</span>, the <em>original</em> area, for engineering stress. Always.</p></li>
 <li><p>Round-bar area: <span class="math notranslate nohighlight">\(A_0 = \pi (d_0/2)^2 = \pi d_0^2/4\)</span>. Rectangular: <span class="math notranslate nohighlight">\(A_0 = w_0 t_0\)</span>.</p></li>
-<li><p>Carry units explicitly. The mm<span class="math notranslate nohighlight">\(^2\)</span> + N shortcut delivers MPa directly — the most efficient unit choice for the PE exam.</p></li>
+<li><p>Carry units explicitly. The mm<span class="math notranslate nohighlight">\(^2\)</span> + N shortcut delivers MPa directly  -  the most efficient unit choice for the PE exam.</p></li>
 <li><p>Engineering strain is dimensionless. Don’t multiply by 100 unless you’re stating a percent.</p></li>
 <li><p>Hooke’s-law cross-check (<span class="math notranslate nohighlight">\(\sigma = E\varepsilon\)</span>) is the fastest sanity check on any elastic-region calculation.</p></li>
 </ul>
@@ -652,7 +652,7 @@ A_0 = w_0 \times t_0 = 25 \times 6 = 150mm^2 = 1.5 \times 10^{-4}m^2
 <p><strong>Walking the Curve</strong>
 Starting at the origin and following the curve, you encounter (in order):</p>
 <ul class="simple">
-<li><p><strong>Linear-elastic region.</strong> A straight line with slope <span class="math notranslate nohighlight">\(E\)</span> (Young’s modulus). Unloading retraces the same line — no permanent deformation. Bonds stretch elastically.</p></li>
+<li><p><strong>Linear-elastic region.</strong> A straight line with slope <span class="math notranslate nohighlight">\(E\)</span> (Young’s modulus). Unloading retraces the same line  -  no permanent deformation. Bonds stretch elastically.</p></li>
 <li><p><strong>Proportional limit.</strong> The highest stress at which strict linearity holds. Slightly below the yield point. Rarely tabulated separately.</p></li>
 <li><p><strong>Yield point (0.2% offset yield strength).</strong> The conventional onset of plastic (permanent) deformation. By convention: draw a line parallel to the elastic slope, offset to the right by <span class="math notranslate nohighlight">\(\varepsilon = 0.002\)</span> (0.2%); the intersection with the curve is <span class="math notranslate nohighlight">\(\sigma_y\)</span>.</p></li>
 <li><p><strong>Ultimate tensile strength (UTS).</strong> The peak of the engineering stress-strain curve. Past this point the specimen <em>necks</em> (a local cross-section shrinks rapidly), the engineering stress falls even though the true stress continues to rise.</p></li>
@@ -667,18 +667,18 @@ Starting at the origin and following the curve, you encounter (in order):</p>
 <p><strong>Hooke’s Law in 1-D</strong></p>
 <div class="math notranslate nohighlight">
 \[
-\sigma = E\varepsilon  (elastic region only)
+\sigma = E \varepsilon  (elastic region only)
 \]</div>
-<p><span class="math notranslate nohighlight">\(E\)</span> is the <strong>Young’s modulus</strong> or <strong>modulus of elasticity</strong>, with units of stress (GPa or psi). It is the slope of the linear portion of the stress-strain curve. It quantifies a material’s <em>stiffness</em> (resistance to elastic deformation) and is largely set by interatomic bond strength — it varies relatively little with alloying or processing.</p>
+<p><span class="math notranslate nohighlight">\(E\)</span> is the <strong>Young’s modulus</strong> or <strong>modulus of elasticity</strong>, with units of stress (GPa or psi). It is the slope of the linear portion of the stress-strain curve. It quantifies a material’s <em>stiffness</em> (resistance to elastic deformation) and is largely set by interatomic bond strength  -  it varies relatively little with alloying or processing.</p>
 <p>Typical values (room temperature):</p>
 <ul class="simple">
-<li><p>Steel: <span class="math notranslate nohighlight">\(E = 200\)</span>–210 GPa. Nearly independent of carbon content, heat treatment.</p></li>
+<li><p>Steel: <span class="math notranslate nohighlight">\(E = 200\)</span>-210 GPa. Nearly independent of carbon content, heat treatment.</p></li>
 <li><p>Aluminum: <span class="math notranslate nohighlight">\(E = 70\)</span> GPa.</p></li>
 <li><p>Copper: <span class="math notranslate nohighlight">\(E = 110\)</span> GPa.</p></li>
 <li><p>Titanium: <span class="math notranslate nohighlight">\(E = 110\)</span> GPa.</p></li>
-<li><p>Concrete: <span class="math notranslate nohighlight">\(E = 25\)</span>–30 GPa.</p></li>
-<li><p>Wood (along grain): <span class="math notranslate nohighlight">\(E = 10\)</span>–15 GPa.</p></li>
-<li><p>Polymers: <span class="math notranslate nohighlight">\(E = 1\)</span>–3 GPa.</p></li>
+<li><p>Concrete: <span class="math notranslate nohighlight">\(E = 25\)</span>-30 GPa.</p></li>
+<li><p>Wood (along grain): <span class="math notranslate nohighlight">\(E = 10\)</span>-15 GPa.</p></li>
+<li><p>Polymers: <span class="math notranslate nohighlight">\(E = 1\)</span>-3 GPa.</p></li>
 </ul>
 </div>
 </section>
@@ -687,8 +687,8 @@ Starting at the origin and following the curve, you encounter (in order):</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Why Elastic Is Reversible and Plastic Is Not</strong>
-At the atomic level, elastic deformation stretches the bonds between atoms while preserving their topological arrangement. Each pair of atoms has an equilibrium separation; small displacements from this equilibrium store energy linearly in the displacement (the spring approximation, <span class="math notranslate nohighlight">\(F = -k\Delta x\)</span>). Releasing the load returns each atom to its equilibrium position — the deformation is fully recovered.</p>
-<p>Plastic deformation, in contrast, involves the <em>collective motion of crystallographic defects</em> called <strong>dislocations</strong>. A dislocation is a line defect that lets a half-plane of atoms slip past the lattice by breaking and reforming bonds one row at a time — like sliding a heavy rug by walking a wrinkle across it rather than dragging the whole rug. Once dislocations move, the atomic arrangement is permanently altered; releasing the load doesn’t undo the slip.</p>
+At the atomic level, elastic deformation stretches the bonds between atoms while preserving their topological arrangement. Each pair of atoms has an equilibrium separation; small displacements from this equilibrium store energy linearly in the displacement (the spring approximation, <span class="math notranslate nohighlight">\(F = -k \Delta x\)</span>). Releasing the load returns each atom to its equilibrium position  -  the deformation is fully recovered.</p>
+<p>Plastic deformation, in contrast, involves the <em>collective motion of crystallographic defects</em> called <strong>dislocations</strong>. A dislocation is a line defect that lets a half-plane of atoms slip past the lattice by breaking and reforming bonds one row at a time  -  like sliding a heavy rug by walking a wrinkle across it rather than dragging the whole rug. Once dislocations move, the atomic arrangement is permanently altered; releasing the load doesn’t undo the slip.</p>
 <p>The transition from elastic to plastic at the yield point occurs because dislocation motion becomes thermodynamically favorable at that critical stress.</p>
 </div>
 </section>
@@ -697,7 +697,7 @@ At the atomic level, elastic deformation stretches the bonds between atoms while
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Why “0.2% Offset”?</strong>
-For some materials (low-carbon mild steel) the stress-strain curve has a clear “yield point” (an upper and lower yield), a horizontal plateau, and obvious onset of plastic flow. For most metals, the transition from elastic to plastic is gradual — there is no sharp “corner” on the curve.</p>
+For some materials (low-carbon mild steel) the stress-strain curve has a clear “yield point” (an upper and lower yield), a horizontal plateau, and obvious onset of plastic flow. For most metals, the transition from elastic to plastic is gradual  -  there is no sharp “corner” on the curve.</p>
 <p>The 0.2% offset convention solves this by defining a reproducible yield strength: draw a line through the strain axis at <span class="math notranslate nohighlight">\(\varepsilon = 0.002\)</span> with slope <span class="math notranslate nohighlight">\(E\)</span>; the intersection with the stress-strain curve is <span class="math notranslate nohighlight">\(\sigma_y\)</span>. The 0.2% value is arbitrary but standardized worldwide. Specifying any other offset (0.1%, 0.5%) shifts the reported yield strength somewhat.</p>
 <p>Equivalently: <span class="math notranslate nohighlight">\(\sigma_y\)</span> is the stress at which, if the specimen were unloaded, it would have an in-built 0.2% permanent (plastic) strain.</p>
 </div>
@@ -719,7 +719,7 @@ For some materials (low-carbon mild steel) the stress-strain curve has a clear �
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Necking: The Geometric Instability</strong>
-For a ductile metal in tension, the engineering stress rises as the specimen work-hardens, reaching a peak at the UTS. Past the peak, work-hardening can no longer keep pace with the geometric softening that comes from area reduction — some region of the gauge section begins to thin faster than the rest, concentrating strain locally. This is the <strong>necking instability</strong>.</p>
+For a ductile metal in tension, the engineering stress rises as the specimen work-hardens, reaching a peak at the UTS. Past the peak, work-hardening can no longer keep pace with the geometric softening that comes from area reduction  -  some region of the gauge section begins to thin faster than the rest, concentrating strain locally. This is the <strong>necking instability</strong>.</p>
 <p>Mathematically, the condition for the onset of necking (the Consid`ere criterion) is</p>
 <div class="math notranslate nohighlight">
 \[
@@ -730,7 +730,7 @@ For a ductile metal in tension, the engineering stress rises as the specimen wor
 </div>
 </section>
 <section id="reading-the-curve-all-properties-together">
-<h3>Reading the Curve — All Properties Together<a class="headerlink" href="#reading-the-curve-all-properties-together" title="Link to this heading">#</a></h3>
+<h3>Reading the Curve  -  All Properties Together<a class="headerlink" href="#reading-the-curve-all-properties-together" title="Link to this heading">#</a></h3>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p><strong>Mechanical Properties From the Stress-Strain Curve</strong></p>
@@ -744,7 +744,7 @@ For a ductile metal in tension, the engineering stress rises as the specimen wor
 </ul>
 <div class="math notranslate nohighlight">
 \[
-U_r = \int_0^{\varepsilon_y} \sigmad\varepsilon = \frac{1}{2}\sigma_y \varepsilon_y = \frac{\sigma_y^2}{2E}
+U_r = \int_0^{\varepsilon_y} \sigma d\varepsilon = \frac{1}{2}\sigma_y \varepsilon_y = \frac{\sigma_y^2}{2E}
 \]</div>
 <ul class="simple">
 <li><p><strong>Modulus of toughness</strong> = total area under the stress-strain curve up to fracture. Total energy absorbed per unit volume; a combined strength + ductility measure.</p></li>
@@ -773,7 +773,7 @@ U_r = \int_0^{\varepsilon_y} \sigmad\varepsilon = \frac{1}{2}\sigma_y \varepsilo
 </ul>
 <div class="math notranslate nohighlight">
 \[
-E = \frac{\sigma}{\varepsilon} = \frac{200MPa}{0.001} = 200{,}000MPa = 200GPa
+E = \frac{\sigma}{\varepsilon} = \frac{200 MPa}{0.001} = 200{,}000 MPa = 200 GPa
 \]</div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Consistent with typical steel.
 </pre></div>
@@ -790,7 +790,7 @@ E = \frac{\sigma}{\varepsilon} = \frac{200MPa}{0.001} = 200{,}000MPa = 200GPa
 </ul>
 <div class="math notranslate nohighlight">
 \[
-U_r = \frac{\sigma_y^2}{2E} = \frac{(415)^2}{2 \times 200{,}000} = \frac{172{,}225}{400{,}000} = 0.431MPa = 0.431MJ/m^3
+U_r = \frac{\sigma_y^2}{2E} = \frac{(415)^2}{2 \times 200{,}000} = \frac{172{,}225}{400{,}000} = 0.431 MPa = 0.431 MJ/m^3
 \]</div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Recall that MPa = MJ/m$^3$ when interpreting strain-energy density.
 </pre></div>
@@ -800,9 +800,9 @@ U_r = \frac{\sigma_y^2}{2E} = \frac{(415)^2}{2 \times 200{,}000} = \frac{172{,}2
 </ul>
 <div class="math notranslate nohighlight">
 \[
-U_T \approx U_r + 457.5 \times 0.178 = 0.43 + 81.4 = 81.8MJ/m^3
+U_T \approx U_r + 457.5 \times 0.178 = 0.43 + 81.4 = 81.8 MJ/m^3
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Toughness is dominated by the plastic-region area; resilience is a tiny fraction. This is why ductile materials are so much tougher than brittle ones — the plastic region is where energy is absorbed.
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Toughness is dominated by the plastic-region area; resilience is a tiny fraction. This is why ductile materials are so much tougher than brittle ones  -  the plastic region is where energy is absorbed.
 </pre></div>
 </div>
 <ul class="simple">
@@ -823,12 +823,12 @@ U_T \approx U_r + 457.5 \times 0.178 = 0.43 + 81.4 = 81.8MJ/m^3
 \[
 \varepsilon_{p,frac} = \varepsilon_f - \varepsilon_{e,frac} = 0.18 - 0.00190 = 0.178 = 17.8%
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The specimen&#39;s permanent elongation if recovered just before fracture would be 17.8%. This is the value typically quoted as “% elongation at fracture” on a material data sheet.
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The specimen&#39;s permanent elongation if recovered just before fracture would be 17.8%. This is the value typically quoted as &quot;% elongation at fracture&quot; on a material data sheet.
 </pre></div>
 </div>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Ductility interpretation.</strong> 17.8% elongation places this material firmly in the ductile-metal category. Brittle materials fail at <span class="math notranslate nohighlight">\(\varepsilon_f &lt; 1%\)</span>; ductile metals are typically 10–40%; very ductile (annealed copper, pure aluminum) can reach 50–60%.</p></li>
-<li><p class="sd-card-text"><strong>Verification.</strong> The UTS (500 MPa) exceeds the fracture stress (380 MPa) — consistent with engineering-stress-curve behavior past necking. The yield strain <span class="math notranslate nohighlight">\(2.1 \times 10^{-3}\)</span> matches the textbook value for steel (<span class="math notranslate nohighlight">\(\sim\)</span>0.2%). The strain-energy interpretation (MPa = MJ/m<span class="math notranslate nohighlight">\(^3\)</span>) is dimensionally sound: Pa <span class="math notranslate nohighlight">\(\times\)</span> m/m = J/m<span class="math notranslate nohighlight">\(^3\)</span>.</p></li>
+<li><p class="sd-card-text"><strong>Ductility interpretation.</strong> 17.8% elongation places this material firmly in the ductile-metal category. Brittle materials fail at <span class="math notranslate nohighlight">\(\varepsilon_f &lt; 1%\)</span>; ductile metals are typically 10-40%; very ductile (annealed copper, pure aluminum) can reach 50-60%.</p></li>
+<li><p class="sd-card-text"><strong>Verification.</strong> The UTS (500 MPa) exceeds the fracture stress (380 MPa)  -  consistent with engineering-stress-curve behavior past necking. The yield strain <span class="math notranslate nohighlight">\(2.1 \times 10^{-3}\)</span> matches the textbook value for steel (<span class="math notranslate nohighlight">\(\sim\)</span>0.2%). The strain-energy interpretation (MPa = MJ/m<span class="math notranslate nohighlight">\(^3\)</span>) is dimensionally sound: Pa <span class="math notranslate nohighlight">\(\times\)</span> m/m = J/m<span class="math notranslate nohighlight">\(^3\)</span>.</p></li>
 </ul>
 </div>
 </details></section>
@@ -852,13 +852,13 @@ U_T \approx U_r + 457.5 \times 0.178 = 0.43 + 81.4 = 81.8MJ/m^3
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Exam Tips — Stress-Strain Curve Reading</strong></p>
+<p><strong>Exam Tips  -  Stress-Strain Curve Reading</strong></p>
 <ul class="simple">
 <li><p>Yield strength is the design property against permanent deformation. UTS is the property against fracture-limited design. They are different.</p></li>
-<li><p>Modulus of elasticity <span class="math notranslate nohighlight">\(E\)</span> is the slope of the elastic line — not the yield strength divided by 0.002 (which differs by 0.2%).</p></li>
+<li><p>Modulus of elasticity <span class="math notranslate nohighlight">\(E\)</span> is the slope of the elastic line  -  not the yield strength divided by 0.002 (which differs by 0.2%).</p></li>
 <li><p>The 0.2% offset construction is a graphical convention; in practice the offset is small and the offset and proportional-limit yield strengths are close.</p></li>
 <li><p>For ductile metals, compressive yield <span class="math notranslate nohighlight">\(\approx\)</span> tensile yield. For brittle materials, compressive strength is much larger than tensile.</p></li>
-<li><p>Resilience <span class="math notranslate nohighlight">\(\propto \sigma_y^2/E\)</span>. Toughness <span class="math notranslate nohighlight">\(\propto\)</span> area under the whole curve — ductile materials excel.</p></li>
+<li><p>Resilience <span class="math notranslate nohighlight">\(\propto \sigma_y^2/E\)</span>. Toughness <span class="math notranslate nohighlight">\(\propto\)</span> area under the whole curve  -  ductile materials excel.</p></li>
 </ul>
 </div>
 </section>
@@ -906,7 +906,7 @@ Yield occurs when the equivalent (von Mises) stress reaches the uniaxial yield s
 \sigma_{vM} = \sqrt{\frac{1}{2}[(\sigma_1 - \sigma_2)^2 + (\sigma_2 - \sigma_3)^2 + (\sigma_3 - \sigma_1)^2]} = \sigma_y
 \]</div>
 <p>Slightly less conservative than Tresca; more accurate for most ductile metals. Used in modern finite-element codes by default.</p>
-<p>For pure shear (<span class="math notranslate nohighlight">\(\sigma_1 = \tau, \sigma_2 = 0, \sigma_3 = -\tau\)</span>), Tresca gives <span class="math notranslate nohighlight">\(\tau_y = \sigma_y/2\)</span>; von Mises gives <span class="math notranslate nohighlight">\(\tau_y = \sigma_y/\sqrt{3} = 0.577\sigma_y\)</span>. The two differ by about 15% in pure shear; closer in other states.</p>
+<p>For pure shear (<span class="math notranslate nohighlight">\(\sigma_1 = \tau, \sigma_2 = 0, \sigma_3 = -\tau\)</span>), Tresca gives <span class="math notranslate nohighlight">\(\tau_y = \sigma_y/2\)</span>; von Mises gives <span class="math notranslate nohighlight">\(\tau_y = \sigma_y/\sqrt{3} = 0.577 \sigma_y\)</span>. The two differ by about 15% in pure shear; closer in other states.</p>
 </div>
 </section>
 <section id="worked-example-yielding-of-a-pressure-vessel">
@@ -934,18 +934,18 @@ Yield occurs when the equivalent (von Mises) stress reaches the uniaxial yield s
 </ul>
 <div class="math notranslate nohighlight">
 \[
-\sigma_1 - \sigma_3 = 30P - 0 = 30P = \sigma_y = 250 \Longrightarrow P_Tresca = \frac{250}{30} = 8.33MPa
+\sigma_1 - \sigma_3 = 30P - 0 = 30P = \sigma_y = 250  \Longrightarrow  P_Tresca = \frac{250}{30} = 8.33 MPa
 \]</div>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>(b) von Mises criterion.</strong></p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
-\sigma_{vM}^2 = \tfrac{1}{2}[(30P - 15P)^2 + (15P - 0)^2 + (0 - 30P)^2] = \tfrac{1}{2}[225 + 225 + 900]P^2 = 675 P^2
+\sigma_{vM}^2 = \tfrac{1}{2} [(30P - 15P)^2 + (15P - 0)^2 + (0 - 30P)^2] = \tfrac{1}{2} [225 + 225 + 900] P^2 = 675 P^2
 \]</div>
 <div class="math notranslate nohighlight">
 \[
-\sigma_{vM} = P\sqrt{675} = 25.98 P = \sigma_y = 250 \Longrightarrow P_vM = \frac{250}{25.98} = 9.62MPa
+\sigma_{vM} = P \sqrt{675} = 25.98 P = \sigma_y = 250  \Longrightarrow  P_vM = \frac{250}{25.98} = 9.62 MPa
 \]</div>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Comparison.</strong> The von Mises criterion allows a 15% higher pressure (9.62 vs. 8.33 MPa). This is the classic 15% gap between the two yield criteria, with Tresca being the conservative bound.</p></li>
@@ -955,9 +955,9 @@ Yield occurs when the equivalent (von Mises) stress reaches the uniaxial yield s
 </div>
 </details><div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Exam Tips — Yield Criteria</strong></p>
+<p><strong>Exam Tips  -  Yield Criteria</strong></p>
 <ul class="simple">
-<li><p>Tresca is conservative (<span class="math notranslate nohighlight">\(\tau_y = \sigma_y/2\)</span>); von Mises is more accurate (<span class="math notranslate nohighlight">\(\tau_y = 0.577\sigma_y\)</span>).</p></li>
+<li><p>Tresca is conservative (<span class="math notranslate nohighlight">\(\tau_y = \sigma_y/2\)</span>); von Mises is more accurate (<span class="math notranslate nohighlight">\(\tau_y = 0.577 \sigma_y\)</span>).</p></li>
 <li><p>For a thin-walled cylindrical vessel, <span class="math notranslate nohighlight">\(\sigma_h = 2\sigma_\ell\)</span>. The hoop direction is the principal direction with the largest stress.</p></li>
 <li><p>For combined stress problems, identify <span class="math notranslate nohighlight">\(\sigma_1\)</span> and <span class="math notranslate nohighlight">\(\sigma_3\)</span> first (algebraic max and min principal stresses); then apply the criterion.</p></li>
 </ul>
@@ -985,7 +985,7 @@ Yield occurs when the equivalent (von Mises) stress reaches the uniaxial yield s
 <li><p><strong>Filter 2 (Deflection):</strong> reject any candidate whose <span class="math notranslate nohighlight">\(\Delta L &gt; \Delta L_{\max}\)</span>.</p></li>
 <li><p>Among final survivors, choose the cheapest (or the one best meeting secondary criteria: corrosion compatibility, weldability, density, etc.).</p></li>
 </ul>
-<p>The key insight: <em>strength</em> (resists yielding, governed by <span class="math notranslate nohighlight">\(\sigma_y\)</span>) and <em>stiffness</em> (resists deflection, governed by <span class="math notranslate nohighlight">\(E\)</span>) are independent properties. A material can pass one filter and fail the other — selection requires both.</p>
+<p>The key insight: <em>strength</em> (resists yielding, governed by <span class="math notranslate nohighlight">\(\sigma_y\)</span>) and <em>stiffness</em> (resists deflection, governed by <span class="math notranslate nohighlight">\(E\)</span>) are independent properties. A material can pass one filter and fail the other  -  selection requires both.</p>
 </div>
 </section>
 <section id="typical-elastic-properties">
@@ -1001,13 +1001,13 @@ Yield occurs when the equivalent (von Mises) stress reaches the uniaxial yield s
 <li><p><strong>Copper (cold-worked):</strong> <span class="math notranslate nohighlight">\(E = 110\)</span> GPa, <span class="math notranslate nohighlight">\(\sigma_y = 250\)</span> MPa.</p></li>
 <li><p><strong>Yellow brass:</strong> <span class="math notranslate nohighlight">\(E = 100\)</span> GPa, <span class="math notranslate nohighlight">\(\sigma_y = 345\)</span> MPa.</p></li>
 <li><p><strong>Mild carbon steel (A36):</strong> <span class="math notranslate nohighlight">\(E = 200\)</span> GPa, <span class="math notranslate nohighlight">\(\sigma_y = 250\)</span> MPa.</p></li>
-<li><p><strong>High-strength low-alloy steel:</strong> <span class="math notranslate nohighlight">\(E = 207\)</span> GPa, <span class="math notranslate nohighlight">\(\sigma_y = 450\)</span>–700 MPa.</p></li>
-<li><p><strong>Alloy steel (4140 Q&amp;T):</strong> <span class="math notranslate nohighlight">\(E = 207\)</span> GPa, <span class="math notranslate nohighlight">\(\sigma_y = 850\)</span>–1500 MPa.</p></li>
+<li><p><strong>High-strength low-alloy steel:</strong> <span class="math notranslate nohighlight">\(E = 207\)</span> GPa, <span class="math notranslate nohighlight">\(\sigma_y = 450\)</span>-700 MPa.</p></li>
+<li><p><strong>Alloy steel (4140 Q&amp;T):</strong> <span class="math notranslate nohighlight">\(E = 207\)</span> GPa, <span class="math notranslate nohighlight">\(\sigma_y = 850\)</span>-1500 MPa.</p></li>
 <li><p><strong>304 SS:</strong> <span class="math notranslate nohighlight">\(E = 193\)</span> GPa, <span class="math notranslate nohighlight">\(\sigma_y = 215\)</span> MPa.</p></li>
 <li><p><strong>316 SS:</strong> <span class="math notranslate nohighlight">\(E = 193\)</span> GPa, <span class="math notranslate nohighlight">\(\sigma_y = 240\)</span> MPa.</p></li>
 <li><p><strong>Ti-6Al-4V:</strong> <span class="math notranslate nohighlight">\(E = 114\)</span> GPa, <span class="math notranslate nohighlight">\(\sigma_y = 880\)</span> MPa.</p></li>
 </ul>
-<p>Note: <span class="math notranslate nohighlight">\(E\)</span> varies surprisingly little across the steel family; nearly all carbon and low-alloy steels are <span class="math notranslate nohighlight">\(E = 200\)</span>–210 GPa regardless of heat treatment. <em>Strength varies hugely; stiffness barely.</em></p>
+<p>Note: <span class="math notranslate nohighlight">\(E\)</span> varies surprisingly little across the steel family; nearly all carbon and low-alloy steels are <span class="math notranslate nohighlight">\(E = 200\)</span>-210 GPa regardless of heat treatment. <em>Strength varies hugely; stiffness barely.</em></p>
 </div>
 </section>
 <section id="worked-example-selecting-a-tensile-rod">
@@ -1025,11 +1025,11 @@ Yield occurs when the equivalent (von Mises) stress reaches the uniaxial yield s
 </ul>
 <div class="math notranslate nohighlight">
 \[
-A_0 = \pi(d/2)^2 = \pi(0.005)^2 = 7.854 \times 10^{-5}m^2 = 78.54mm^2
+A_0 = \pi(d/2)^2 = \pi(0.005)^2 = 7.854 \times 10^{-5} m^2 = 78.54 mm^2
 \]</div>
 <div class="math notranslate nohighlight">
 \[
-\sigma = \frac{F}{A_0} = \frac{24{,}500N}{78.54mm^2} = 312MPa
+\sigma = \frac{F}{A_0} = \frac{24{,}500 N}{78.54 mm^2} = 312 MPa
 \]</div>
 <ul>
 <li><p class="sd-card-text"><strong>Apply Filter 1: yield strength <span class="math notranslate nohighlight">\(&gt; \)</span> applied stress (312 MPa).</strong></p></li>
@@ -1063,14 +1063,14 @@ A_0 = \pi(d/2)^2 = \pi(0.005)^2 = 7.854 \times 10^{-5}m^2 = 78.54mm^2
 </ul>
 <div class="math notranslate nohighlight">
 \[
-\frac{F L_0}{A E} \leq \Delta L_{\max} \Longrightarrow A \geq \frac{F L_0}{E \Delta L_{\max}}
+\frac{F L_0}{A E} \leq \Delta L_{\max}  \Longrightarrow  A \geq \frac{F L_0}{E \Delta L_{\max}}
 \]</div>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Express the mass.</strong> The rod mass is</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
-m = \rho A L_0 \geq \rho L_0 \cdot \frac{F L_0}{E \Delta L_{\max}} = \frac{F L_0^2}{\Delta L_{\max}}\frac{\rho}{E}
+m = \rho A L_0 \geq \rho L_0 \cdot \frac{F L_0}{E \Delta L_{\max}} = \frac{F L_0^2}{\Delta L_{\max}} \frac{\rho}{E}
 \]</div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Everything inside the second-to-last fraction is a design constant. The only material-dependent factor is $\rho/E$. **Minimum mass** corresponds to **minimum $\rho/E$**, or equivalently **maximum $E/\rho$**.
 </pre></div>
@@ -1081,15 +1081,15 @@ m = \rho A L_0 \geq \rho L_0 \cdot \frac{F L_0}{E \Delta L_{\max}} = \frac{F L_0
 <li><p class="sd-card-text">Aluminum 6061: <span class="math notranslate nohighlight">\(70/2.7 \approx 26\)</span>.</p></li>
 <li><p class="sd-card-text">Titanium: <span class="math notranslate nohighlight">\(114/4.5 \approx 25\)</span>.</p></li>
 <li><p class="sd-card-text">CFRP (carbon-fiber composite, along fiber): <span class="math notranslate nohighlight">\(\sim\)</span>70.</p>
-<p class="sd-card-text">Notice that steel, aluminum, and titanium have nearly the same <span class="math notranslate nohighlight">\(E/\rho\)</span> — for stiffness-limited tensile rods at minimum mass, the choice between them is a wash on this criterion. CFRP wins decisively.</p>
+<p class="sd-card-text">Notice that steel, aluminum, and titanium have nearly the same <span class="math notranslate nohighlight">\(E/\rho\)</span>  -  for stiffness-limited tensile rods at minimum mass, the choice between them is a wash on this criterion. CFRP wins decisively.</p>
 </li>
-<li><p class="sd-card-text"><strong>Verification.</strong> For <em>strength</em>-limited tensile design at minimum mass, the same derivation with <span class="math notranslate nohighlight">\(\sigma_y\)</span> instead of <span class="math notranslate nohighlight">\(E\)</span> gives <span class="math notranslate nohighlight">\(M = \sigma_y/\rho\)</span> (“specific strength”), where the rankings differ from the stiffness case — high-strength steels and titanium become attractive.</p></li>
-<li><p class="sd-card-text"><strong>Pedagogical note.</strong> The Ashby approach generalizes the two-filter selection to multi-criteria optimization: tabulate the relevant material index for each constraint, plot materials on <span class="math notranslate nohighlight">\(E\)</span>–<span class="math notranslate nohighlight">\(\rho\)</span> or <span class="math notranslate nohighlight">\(\sigma_y\)</span>–<span class="math notranslate nohighlight">\(\rho\)</span> charts, and identify a Pareto-optimal subset. The PE exam doesn’t test the formalism but does test the spirit: strength and stiffness drive different decisions.</p></li>
+<li><p class="sd-card-text"><strong>Verification.</strong> For <em>strength</em>-limited tensile design at minimum mass, the same derivation with <span class="math notranslate nohighlight">\(\sigma_y\)</span> instead of <span class="math notranslate nohighlight">\(E\)</span> gives <span class="math notranslate nohighlight">\(M = \sigma_y/\rho\)</span> (“specific strength”), where the rankings differ from the stiffness case  -  high-strength steels and titanium become attractive.</p></li>
+<li><p class="sd-card-text"><strong>Pedagogical note.</strong> The Ashby approach generalizes the two-filter selection to multi-criteria optimization: tabulate the relevant material index for each constraint, plot materials on <span class="math notranslate nohighlight">\(E\)</span>-<span class="math notranslate nohighlight">\(\rho\)</span> or <span class="math notranslate nohighlight">\(\sigma_y\)</span>-<span class="math notranslate nohighlight">\(\rho\)</span> charts, and identify a Pareto-optimal subset. The PE exam doesn’t test the formalism but does test the spirit: strength and stiffness drive different decisions.</p></li>
 </ul>
 </div>
 </details><div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Exam Tips — Material Selection</strong></p>
+<p><strong>Exam Tips  -  Material Selection</strong></p>
 <ul class="simple">
 <li><p>Selection requires both filters: <span class="math notranslate nohighlight">\(\sigma_y &gt; \sigma_{applied}\)</span> <em>and</em> <span class="math notranslate nohighlight">\(\Delta L &lt; \Delta L_{\max}\)</span>.</p></li>
 <li><p>Don’t confuse strength (<span class="math notranslate nohighlight">\(\sigma_y\)</span>) with stiffness (<span class="math notranslate nohighlight">\(E\)</span>). A material can be strong but compliant (brass) or stiff but weak (annealed aluminum).</p></li>
@@ -1133,24 +1133,24 @@ m = \rho A L_0 \geq \rho L_0 \cdot \frac{F L_0}{E \Delta L_{\max}} = \frac{F L_0
 <p><strong>Hall-Petch Calculation</strong></p>
 <div class="math notranslate nohighlight">
 \[
-\sigma_y = \sigma_0 + k_yd^{-1/2}
+\sigma_y = \sigma_0 + k_y d^{-1/2}
 \]</div>
 <p>Typical low-carbon steel: <span class="math notranslate nohighlight">\(\sigma_0 \approx 70\)</span> MPa, <span class="math notranslate nohighlight">\(k_y \approx 0.74\)</span> MPa<span class="math notranslate nohighlight">\(\cdot\)</span>m<span class="math notranslate nohighlight">\(^{1/2}\)</span> (in SI). With <span class="math notranslate nohighlight">\(d\)</span> in m:</p>
 <ul class="simple">
-<li><p>Coarse grain <span class="math notranslate nohighlight">\(d = 100\mu\)</span>m = <span class="math notranslate nohighlight">\(10^{-4}\)</span> m: <span class="math notranslate nohighlight">\(d^{-1/2} = 100\)</span> m<span class="math notranslate nohighlight">\(^{-1/2}\)</span>; <span class="math notranslate nohighlight">\(\sigma_y = 70 + 0.74 \times 100 = 144\)</span> MPa.</p></li>
-<li><p>Medium grain <span class="math notranslate nohighlight">\(d = 25\mu\)</span>m: <span class="math notranslate nohighlight">\(d^{-1/2} = 200\)</span>; <span class="math notranslate nohighlight">\(\sigma_y = 70 + 148 = 218\)</span> MPa.</p></li>
-<li><p>Fine grain <span class="math notranslate nohighlight">\(d = 5\mu\)</span>m: <span class="math notranslate nohighlight">\(d^{-1/2} = 447\)</span>; <span class="math notranslate nohighlight">\(\sigma_y = 70 + 331 = 401\)</span> MPa.</p></li>
+<li><p>Coarse grain <span class="math notranslate nohighlight">\(d = 100 \mu\)</span>m = <span class="math notranslate nohighlight">\(10^{-4}\)</span> m: <span class="math notranslate nohighlight">\(d^{-1/2} = 100\)</span> m<span class="math notranslate nohighlight">\(^{-1/2}\)</span>; <span class="math notranslate nohighlight">\(\sigma_y = 70 + 0.74 \times 100 = 144\)</span> MPa.</p></li>
+<li><p>Medium grain <span class="math notranslate nohighlight">\(d = 25 \mu\)</span>m: <span class="math notranslate nohighlight">\(d^{-1/2} = 200\)</span>; <span class="math notranslate nohighlight">\(\sigma_y = 70 + 148 = 218\)</span> MPa.</p></li>
+<li><p>Fine grain <span class="math notranslate nohighlight">\(d = 5 \mu\)</span>m: <span class="math notranslate nohighlight">\(d^{-1/2} = 447\)</span>; <span class="math notranslate nohighlight">\(\sigma_y = 70 + 331 = 401\)</span> MPa.</p></li>
 </ul>
 <p>A 20<span class="math notranslate nohighlight">\(\times\)</span> reduction in grain size nearly triples the yield strength. This is why thermomechanical processing (controlled rolling, accelerated cooling) is a central tool in steel mill metallurgy.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Exam Tips — Strengthening Mechanisms</strong></p>
+<p><strong>Exam Tips  -  Strengthening Mechanisms</strong></p>
 <ul class="simple">
 <li><p>Hall-Petch: <span class="math notranslate nohighlight">\(\sigma_y = \sigma_0 + k_y d^{-1/2}\)</span>. Memorize the <span class="math notranslate nohighlight">\(d^{-1/2}\)</span> dependence.</p></li>
 <li><p>Cold work raises <span class="math notranslate nohighlight">\(\sigma_y\)</span> and lowers ductility; annealing reverses both.</p></li>
 <li><p>Precipitation hardening requires a soluble alloying element and a heat-treatment cycle (solution treat + quench + age).</p></li>
-<li><p>For pressure-vessel steels, the controlling code (ASME Sec. II) specifies allowable stresses by alloy class — you do not normally compute strengthening explicitly.</p></li>
+<li><p>For pressure-vessel steels, the controlling code (ASME Sec. II) specifies allowable stresses by alloy class  -  you do not normally compute strengthening explicitly.</p></li>
 </ul>
 </div>
 </section>
@@ -1187,10 +1187,10 @@ Creep becomes significant above the <strong>homologous temperature</strong> <spa
 The steady-state creep rate depends on stress and temperature as</p>
 <div class="math notranslate nohighlight">
 \[
-\varepsilon_s = A\sigma^n\exp(-\frac{Q_c}{RT})
+\varepsilon_s = A \sigma^n \exp (-\frac{Q_c}{RT})
 \]</div>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(n\)</span>: material constants. <span class="math notranslate nohighlight">\(n\)</span> is typically 3–8 for metals; large <span class="math notranslate nohighlight">\(n\)</span> means steep stress dependence (small stress change <span class="math notranslate nohighlight">\(\to\)</span> big creep-rate change).</p></li>
+<li><p><span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(n\)</span>: material constants. <span class="math notranslate nohighlight">\(n\)</span> is typically 3-8 for metals; large <span class="math notranslate nohighlight">\(n\)</span> means steep stress dependence (small stress change <span class="math notranslate nohighlight">\(\to\)</span> big creep-rate change).</p></li>
 <li><p><span class="math notranslate nohighlight">\(Q_c\)</span>: activation energy for creep, typically close to that of self-diffusion.</p></li>
 <li><p><span class="math notranslate nohighlight">\(R\)</span>: gas constant; <span class="math notranslate nohighlight">\(T\)</span>: absolute temperature.</p></li>
 </ul>
@@ -1198,9 +1198,9 @@ The steady-state creep rate depends on stress and temperature as</p>
 <p><strong>Larson-Miller parameter (LMP)</strong>: a single parameter combining temperature and time-to-rupture:</p>
 <div class="math notranslate nohighlight">
 \[
-LMP = T(C + \log t_r)
+LMP = T (C + \log t_r)
 \]</div>
-<p>with <span class="math notranslate nohighlight">\(T\)</span> in K, <span class="math notranslate nohighlight">\(t_r\)</span> in hours, and <span class="math notranslate nohighlight">\(C \approx 20\)</span> for most steels. Stress vs. LMP is a master curve — a single line that combines all <span class="math notranslate nohighlight">\(T\)</span>, <span class="math notranslate nohighlight">\(t_r\)</span> pairs. Used to estimate creep life from short-term high-T tests.</p>
+<p>with <span class="math notranslate nohighlight">\(T\)</span> in K, <span class="math notranslate nohighlight">\(t_r\)</span> in hours, and <span class="math notranslate nohighlight">\(C \approx 20\)</span> for most steels. Stress vs. LMP is a master curve  -  a single line that combines all <span class="math notranslate nohighlight">\(T\)</span>, <span class="math notranslate nohighlight">\(t_r\)</span> pairs. Used to estimate creep life from short-term high-T tests.</p>
 </div>
 </section>
 <section id="worked-example-estimating-creep-life-from-lmp">
@@ -1218,7 +1218,7 @@ LMP = T(C + \log t_r)
 </ul>
 <div class="math notranslate nohighlight">
 \[
-LMP = T(C + \log t_r) \Longrightarrow \log t_r = \frac{LMP}{T} - C
+LMP = T(C + \log t_r)  \Longrightarrow  \log t_r = \frac{LMP}{T} - C
 \]</div>
 <div class="math notranslate nohighlight">
 \[
@@ -1229,9 +1229,9 @@ LMP = T(C + \log t_r) \Longrightarrow \log t_r = \frac{LMP}{T} - C
 </ul>
 <div class="math notranslate nohighlight">
 \[
-t_r = 10^{-1.24} = 0.058hours = 3.5minutes
+t_r = 10^{-1.24} = 0.058 hours = 3.5 minutes
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The tube ruptures in about 3.5 minutes. *Not* the design life — the LMP curve was either misread or the chosen stress/temperature combination is well outside the design envelope.
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The tube ruptures in about 3.5 minutes. *Not* the design life  -  the LMP curve was either misread or the chosen stress/temperature combination is well outside the design envelope.
 </pre></div>
 </div>
 <ul class="simple">
@@ -1241,7 +1241,7 @@ t_r = 10^{-1.24} = 0.058hours = 3.5minutes
 \[
 LMP_{design} = 1173 \times (20 + \log 100{,}000) = 1173 \times 25 = 29{,}325
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Reading the material&#39;s master curve at LMP = 29{,}325 gives the maximum allowable design stress — typically 5–10 MPa for 100{,}000-hour life on Inconel 800H or HK-40 alloy. The 25 MPa in this example exceeds the allowable, hence the very short life.
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Reading the material&#39;s master curve at LMP = 29{,}325 gives the maximum allowable design stress  -  typically 5-10 MPa for 100{,}000-hour life on Inconel 800H or HK-40 alloy. The 25 MPa in this example exceeds the allowable, hence the very short life.
 </pre></div>
 </div>
 <ul class="simple">
@@ -1250,7 +1250,7 @@ LMP_{design} = 1173 \times (20 + \log 100{,}000) = 1173 \times 25 = 29{,}325
 </div>
 </details><div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Exam Tips — Creep</strong></p>
+<p><strong>Exam Tips  -  Creep</strong></p>
 <ul class="simple">
 <li><p>Creep matters above <span class="math notranslate nohighlight">\(T/T_m \approx 0.4\)</span> (absolute scale).</p></li>
 <li><p>Three stages: primary (decelerating), secondary (steady-state), tertiary (accelerating to rupture).</p></li>
@@ -1270,8 +1270,8 @@ LMP_{design} = 1173 \times (20 + \log 100{,}000) = 1173 \times 25 = 29{,}325
 <p class="admonition-title">Note</p>
 <p><strong>The Stress-Life Approach</strong>
 A standard fatigue test cycles a specimen between <span class="math notranslate nohighlight">\(\sigma_{\max}\)</span> and <span class="math notranslate nohighlight">\(\sigma_{\min}\)</span> (or, more commonly, fully reversed: <span class="math notranslate nohighlight">\(\sigma_{\min} = -\sigma_{\max}\)</span>). The number of cycles to failure <span class="math notranslate nohighlight">\(N_f\)</span> is recorded for each stress amplitude <span class="math notranslate nohighlight">\(S_a = (\sigma_{\max} - \sigma_{\min})/2\)</span>. The resulting plot of <span class="math notranslate nohighlight">\(S_a\)</span> vs. <span class="math notranslate nohighlight">\(\log N_f\)</span> is the <strong>S-N curve</strong>.</p>
-<p>For <strong>ferrous metals</strong>, the S-N curve approaches a horizontal asymptote at large <span class="math notranslate nohighlight">\(N_f\)</span> (typically <span class="math notranslate nohighlight">\(&gt; 10^7\)</span> cycles). The asymptotic stress is the <strong>endurance limit</strong> <span class="math notranslate nohighlight">\(S_e\)</span> — below this stress amplitude, the material can survive infinite cycles. Roughly <span class="math notranslate nohighlight">\(S_e \approx 0.5\sigma_u\)</span> for low-strength steel; deviates above <span class="math notranslate nohighlight">\(\sigma_u \approx 1400\)</span> MPa.</p>
-<p>For <strong>non-ferrous metals</strong> (aluminum, copper) the S-N curve continues to decline indefinitely — no true endurance limit. A “fatigue strength” at <span class="math notranslate nohighlight">\(10^7\)</span> or <span class="math notranslate nohighlight">\(10^8\)</span> cycles is reported instead.</p>
+<p>For <strong>ferrous metals</strong>, the S-N curve approaches a horizontal asymptote at large <span class="math notranslate nohighlight">\(N_f\)</span> (typically <span class="math notranslate nohighlight">\(&gt; 10^7\)</span> cycles). The asymptotic stress is the <strong>endurance limit</strong> <span class="math notranslate nohighlight">\(S_e\)</span>  -  below this stress amplitude, the material can survive infinite cycles. Roughly <span class="math notranslate nohighlight">\(S_e \approx 0.5 \sigma_u\)</span> for low-strength steel; deviates above <span class="math notranslate nohighlight">\(\sigma_u \approx 1400\)</span> MPa.</p>
+<p>For <strong>non-ferrous metals</strong> (aluminum, copper) the S-N curve continues to decline indefinitely  -  no true endurance limit. A “fatigue strength” at <span class="math notranslate nohighlight">\(10^7\)</span> or <span class="math notranslate nohighlight">\(10^8\)</span> cycles is reported instead.</p>
 </div>
 </section>
 <section id="modified-goodman-diagram-for-mean-stress">
@@ -1297,15 +1297,15 @@ Most fatigue data is for fully reversed loading (<span class="math notranslate n
 A discontinuity (hole, notch, weld toe, change in section) locally amplifies stress. The <strong>stress concentration factor</strong> <span class="math notranslate nohighlight">\(K_t\)</span> multiplies the nominal stress to give the actual peak stress at the discontinuity:</p>
 <div class="math notranslate nohighlight">
 \[
-\sigma_{peak} = K_t\sigma_{nominal}
+\sigma_{peak} = K_t \sigma_{nominal}
 \]</div>
-<p>Typical values: small drilled hole in a wide plate <span class="math notranslate nohighlight">\(K_t = 3\)</span>; sharp notch <span class="math notranslate nohighlight">\(K_t = 5\)</span>–10; weld toe <span class="math notranslate nohighlight">\(K_t = 2\)</span>–4 (depending on geometry and grinding).</p>
+<p>Typical values: small drilled hole in a wide plate <span class="math notranslate nohighlight">\(K_t = 3\)</span>; sharp notch <span class="math notranslate nohighlight">\(K_t = 5\)</span>-10; weld toe <span class="math notranslate nohighlight">\(K_t = 2\)</span>-4 (depending on geometry and grinding).</p>
 <p>In fatigue, the <strong>fatigue stress concentration factor</strong> <span class="math notranslate nohighlight">\(K_f\)</span> replaces the geometric <span class="math notranslate nohighlight">\(K_t\)</span>, with <span class="math notranslate nohighlight">\(K_f \leq K_t\)</span> (the difference accounts for “notch sensitivity” of the material). The allowable amplitude in Goodman is divided by <span class="math notranslate nohighlight">\(K_f\)</span>.</p>
 <p><strong>Practical implication.</strong> Welds are the dominant fatigue-initiation site in chemical-plant pressure vessels. Code-prescribed fatigue curves (ASME Sec. VIII Div. 2 Annex 3-F) embed the weld <span class="math notranslate nohighlight">\(K_f\)</span> implicitly and assign design-fatigue-curve allowable stresses much lower than parent-metal yield.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Exam Tips — Fatigue</strong></p>
+<p><strong>Exam Tips  -  Fatigue</strong></p>
 <ul class="simple">
 <li><p>S-N curve: amplitude vs. cycles to failure. Ferrous metals have an endurance limit (<span class="math notranslate nohighlight">\(\approx 0.5\sigma_u\)</span>); non-ferrous do not.</p></li>
 <li><p>Mean-stress correction: modified Goodman or Soderberg. Tensile mean reduces allowable amplitude.</p></li>
@@ -1329,7 +1329,7 @@ Aqueous corrosion of a metal is a redox process consisting of two coupled half-r
 </ul>
 <div class="math notranslate nohighlight">
 \[
-\mathrm{M \rightarrow M^{n+} + ne^-}  (e.g., \mathrm{Fe \rightarrow Fe^{2+} + 2e^-})
+\mathrm{M \rightarrow M^{n+} + n e^-}  (e.g., \mathrm{Fe \rightarrow Fe^{2+} + 2e^-})
 \]</div>
 <ul class="simple">
 <li><p><strong>Cathodic</strong> (reduction): the released electrons reduce some species in the environment. In oxygenated water:</p></li>
@@ -1366,7 +1366,7 @@ Each half-reaction has a characteristic <strong>standard electrode potential</st
 <p>The <strong>Nernst equation</strong> corrects <span class="math notranslate nohighlight">\(E^\circ\)</span> for non-standard activities:</p>
 <div class="math notranslate nohighlight">
 \[
-E = E^\circ - \frac{RT}{nF}\ln Q = E^\circ - \frac{0.0592}{n}\log_{10} Q  (at 25^\circC)
+E = E^\circ - \frac{RT}{nF} \ln Q = E^\circ - \frac{0.0592}{n} \log_{10} Q  (at 25^\circ C)
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(Q\)</span> is the reaction quotient, <span class="math notranslate nohighlight">\(n\)</span> is the number of electrons transferred, <span class="math notranslate nohighlight">\(R\)</span> is the gas constant, <span class="math notranslate nohighlight">\(F\)</span> is the Faraday constant (<span class="math notranslate nohighlight">\(96{,}485\)</span> C/mol).</p>
 </div>
@@ -1382,7 +1382,7 @@ A <strong>Pourbaix diagram</strong> plots electrochemical potential <span class=
 <li><p><strong>Active</strong> region: soluble ion is stable; metal corrodes.</p></li>
 <li><p><strong>Passive</strong> region: insoluble oxide/hydroxide film forms, isolating metal from solution; <em>kinetic</em> barrier to corrosion (very slow rate even though dissolution is thermodynamically favorable).</p></li>
 </ul>
-<p>The iron Pourbaix diagram has a passive region centered around pH 9–13 (where Fe(OH)<span class="math notranslate nohighlight">\(_3\)</span> or Fe<span class="math notranslate nohighlight">\(_3\)</span>O<span class="math notranslate nohighlight">\(_4\)</span> films form) and an active region at low pH (acid attack) and high pH for amphoteric metals.</p>
+<p>The iron Pourbaix diagram has a passive region centered around pH 9-13 (where Fe(OH)<span class="math notranslate nohighlight">\(_3\)</span> or Fe<span class="math notranslate nohighlight">\(_3\)</span>O<span class="math notranslate nohighlight">\(_4\)</span> films form) and an active region at low pH (acid attack) and high pH for amphoteric metals.</p>
 <p><strong>Engineering use:</strong> given a process fluid’s pH and the metal’s natural rest potential, locate yourself on the Pourbaix diagram. Land in the passive region <span class="math notranslate nohighlight">\(\to\)</span> corrosion is slow. Land in the active region <span class="math notranslate nohighlight">\(\to\)</span> alternative metallurgy or pH adjustment is needed. Land in immune <span class="math notranslate nohighlight">\(\to\)</span> unlimited service.</p>
 </div>
 </section>
@@ -1394,15 +1394,15 @@ A <strong>Pourbaix diagram</strong> plots electrochemical potential <span class=
 At the freely-corroding (open-circuit) potential, both anodic and cathodic reactions proceed at the same current density <span class="math notranslate nohighlight">\(i_{corr}\)</span>, the <strong>corrosion current density</strong>. The corrosion rate is directly proportional to <span class="math notranslate nohighlight">\(i_{corr}\)</span> by Faraday’s law:</p>
 <div class="math notranslate nohighlight">
 \[
-r_{corr} = \frac{i_{corr}M}{nF\rho}
+r_{corr} = \frac{i_{corr} M}{n F \rho}
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(M\)</span> is the metal’s molar mass, <span class="math notranslate nohighlight">\(n\)</span> is the electron-transfer number, and <span class="math notranslate nohighlight">\(\rho\)</span> is the metal density. Units of <span class="math notranslate nohighlight">\(r_{corr}\)</span>: m/s (penetration rate); often converted to mm/yr or mpy (mils per year).</p>
 <p>The activation polarization of each half-reaction is described by the <strong>Tafel equation</strong>:</p>
 <div class="math notranslate nohighlight">
 \[
-\eta = a + b\log_{10}(i/i_0)
+\eta = a + b \log_{10}(i/i_0)
 \]</div>
-<p>where <span class="math notranslate nohighlight">\(\eta\)</span> is the overpotential (deviation from equilibrium potential), <span class="math notranslate nohighlight">\(i\)</span> is the current density, and <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span> are Tafel constants. Extrapolating both Tafel lines to their intersection gives the corrosion potential and corrosion current density — the <strong>Tafel-extrapolation method</strong> of corrosion-rate measurement.</p>
+<p>where <span class="math notranslate nohighlight">\(\eta\)</span> is the overpotential (deviation from equilibrium potential), <span class="math notranslate nohighlight">\(i\)</span> is the current density, and <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span> are Tafel constants. Extrapolating both Tafel lines to their intersection gives the corrosion potential and corrosion current density  -  the <strong>Tafel-extrapolation method</strong> of corrosion-rate measurement.</p>
 </div>
 </section>
 <section id="faradays-law-and-corrosion-rate">
@@ -1413,19 +1413,19 @@ r_{corr} = \frac{i_{corr}M}{nF\rho}
 For a uniformly corroding flat surface, the penetration rate (depth lost per year) from a current density measurement is, in convenient engineering units:</p>
 <div class="math notranslate nohighlight">
 \[
-CR[mpy] = \frac{0.129i(eq.wt.)}{\rho}
+CR [mpy] = \frac{0.129 i (eq.wt.)}{\rho}
 \]</div>
 <p>with <span class="math notranslate nohighlight">\(i\)</span> in <span class="math notranslate nohighlight">\(\mu\)</span>A/cm<span class="math notranslate nohighlight">\(^2\)</span>, equivalent weight in g/eq, <span class="math notranslate nohighlight">\(\rho\)</span> in g/cm<span class="math notranslate nohighlight">\(^3\)</span>. “mpy” is mils per year (<span class="math notranslate nohighlight">\(1\)</span> mil <span class="math notranslate nohighlight">\(= 0.001\)</span> in).</p>
 <p>From weight-loss measurements (standard coupon test):</p>
 <div class="math notranslate nohighlight">
 \[
-CR[mpy] = \frac{534W}{\rhoAt}
+CR [mpy] = \frac{534 W}{\rho A t}
 \]</div>
 <p>with <span class="math notranslate nohighlight">\(W\)</span> = mass loss [mg], <span class="math notranslate nohighlight">\(\rho\)</span> = density [g/cm<span class="math notranslate nohighlight">\(^3\)</span>], <span class="math notranslate nohighlight">\(A\)</span> = exposed area [in<span class="math notranslate nohighlight">\(^2\)</span>], <span class="math notranslate nohighlight">\(t\)</span> = exposure time [hr].</p>
 <p><strong>Acceptance criteria (rule of thumb):</strong></p>
 <ul class="simple">
 <li><p>CR <span class="math notranslate nohighlight">\(&lt;\)</span> 5 mpy: <em>acceptable</em> for long service with a modest corrosion allowance.</p></li>
-<li><p>CR 5–20 mpy: <em>marginal</em>; acceptable if frequent inspection is planned.</p></li>
+<li><p>CR 5-20 mpy: <em>marginal</em>; acceptable if frequent inspection is planned.</p></li>
 <li><p>CR <span class="math notranslate nohighlight">\(&gt;\)</span> 50 mpy: <em>unacceptable</em> for long service; specify a different alloy.</p></li>
 </ul>
 <p>Conversion: <span class="math notranslate nohighlight">\(1\)</span> mm/yr <span class="math notranslate nohighlight">\(\approx 39.4\)</span> mpy.</p>
@@ -1446,7 +1446,7 @@ CR[mpy] = \frac{534W}{\rhoAt}
 </ul>
 <div class="math notranslate nohighlight">
 \[
-CR = \frac{534W}{\rhoAt} = \frac{534 \times 120}{7.9 \times 8 \times 720} = \frac{64{,}080}{45{,}504} = 1.41mpy
+CR = \frac{534 W}{\rho A t} = \frac{534 \times 120}{7.9 \times 8 \times 720} = \frac{64{,}080}{45{,}504} = 1.41 mpy
 \]</div>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Apply the acceptance rule of thumb.</strong> CR = 1.41 mpy <span class="math notranslate nohighlight">\(&lt;\)</span> 5 mpy: <em>acceptable</em>.</p></li>
@@ -1454,7 +1454,7 @@ CR = \frac{534W}{\rhoAt} = \frac{534 \times 120}{7.9 \times 8 \times 720} = \fra
 </ul>
 <div class="math notranslate nohighlight">
 \[
-Loss_{20 yr} = 1.41mpy \times 20yr = 28mils = 0.71mm
+Loss_{20 yr} = 1.41 mpy \times 20 yr = 28 mils = 0.71 mm
 \]</div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>This must be added as a corrosion allowance on top of the pressure-design wall thickness. Standard CA values: 1/16 in (1.6 mm), 1/8 in (3.2 mm), 1/4 in (6.4 mm). The 20-year loss (0.7 mm) easily fits inside a 1/16-in CA.
 </pre></div>
@@ -1463,18 +1463,18 @@ Loss_{20 yr} = 1.41mpy \times 20yr = 28mils = 0.71mm
 <li><p class="sd-card-text"><strong>Important caveats.</strong></p></li>
 <li><p class="sd-card-text"><em>Concentration and temperature matter strongly.</em> For 304 SS in H<span class="math notranslate nohighlight">\(_2\)</span>SO<span class="math notranslate nohighlight">\(_4\)</span>, the corrosion rate rises sharply above <span class="math notranslate nohighlight">\(\sim\)</span>50<span class="math notranslate nohighlight">\(^\circ\)</span>C or at concentrations above <span class="math notranslate nohighlight">\(\sim\)</span>80 wt%. The 1.41 mpy assumes the coupon-test conditions match the design conditions.</p></li>
 <li><p class="sd-card-text"><em>Uniform-corrosion rule fails for localized attack.</em> If the coupon shows pitting, crevice corrosion, or intergranular attack, the uniform-rate calculation grossly underestimates the failure risk. Always inspect the coupon visually for localized damage.</p></li>
-<li><p class="sd-card-text"><em>Sensitization risk.</em> 304 SS in the 425–870<span class="math notranslate nohighlight">\(^\circ\)</span>C range can sensitize (chromium carbide precipitation at grain boundaries), drastically increasing intergranular corrosion. Use 304L or stabilized 321/347 grades if welding will occur near these temperatures.</p></li>
+<li><p class="sd-card-text"><em>Sensitization risk.</em> 304 SS in the 425-870<span class="math notranslate nohighlight">\(^\circ\)</span>C range can sensitize (chromium carbide precipitation at grain boundaries), drastically increasing intergranular corrosion. Use 304L or stabilized 321/347 grades if welding will occur near these temperatures.</p></li>
 <li><p class="sd-card-text"><strong>Verification.</strong> The corrosion rate is well below the acceptable threshold, and the projected wall loss fits comfortably inside a standard corrosion allowance. <em>Subject to the caveats</em>, 304 SS is acceptable for the service.</p></li>
 </ul>
 </div>
 </details><div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Exam Tips — Corrosion Thermodynamics</strong></p>
+<p><strong>Exam Tips  -  Corrosion Thermodynamics</strong></p>
 <ul class="simple">
 <li><p>Anode = oxidation = metal dissolution. Cathode = reduction = O<span class="math notranslate nohighlight">\(_2\)</span> or H<span class="math notranslate nohighlight">\(^+\)</span> consumption.</p></li>
 <li><p>Galvanic series: more-active (negative <span class="math notranslate nohighlight">\(E^\circ\)</span>) metal corrodes preferentially when coupled.</p></li>
 <li><p>Pourbaix region: immune <span class="math notranslate nohighlight">\(\to\)</span> no corrosion; active <span class="math notranslate nohighlight">\(\to\)</span> corrosion; passive <span class="math notranslate nohighlight">\(\to\)</span> kinetically slow.</p></li>
-<li><p>Corrosion rate calculation: <span class="math notranslate nohighlight">\(CR_mpy = 534W/(\rho A t)\)</span> from coupon loss. Below 5 mpy acceptable; below 20 marginal.</p></li>
+<li><p>Corrosion rate calculation: <span class="math notranslate nohighlight">\(CR_mpy = 534 W/(\rho A t)\)</span> from coupon loss. Below 5 mpy acceptable; below 20 marginal.</p></li>
 </ul>
 </div>
 </section>
@@ -1489,7 +1489,7 @@ Loss_{20 yr} = 1.41mpy \times 20yr = 28mils = 0.71mm
 <p><strong>Mechanism.</strong> Anodic and cathodic reactions are uniformly distributed over the surface; the metal thins evenly.</p>
 <p><strong>Recognition.</strong> Even thickness reduction; entire surface affected.</p>
 <p><strong>Examples.</strong> Carbon steel in dilute aerated water; copper in mildly acidic solutions.</p>
-<p><strong>Defense.</strong> Most predictable form — design with a <strong>corrosion allowance</strong> (1/16 to 1/4 in extra wall thickness) based on the measured rate. Standard approach to non-corrosion-rate-limited services.</p>
+<p><strong>Defense.</strong> Most predictable form  -  design with a <strong>corrosion allowance</strong> (1/16 to 1/4 in extra wall thickness) based on the measured rate. Standard approach to non-corrosion-rate-limited services.</p>
 </div>
 </section>
 <section id="pitting-corrosion">
@@ -1501,7 +1501,7 @@ Loss_{20 yr} = 1.41mpy \times 20yr = 28mils = 0.71mm
 <p><strong>Examples.</strong> 304 SS in chloride-bearing waters above <span class="math notranslate nohighlight">\(\sim\)</span>60<span class="math notranslate nohighlight">\(^\circ\)</span>C; aluminum in chloride solutions.</p>
 <p><strong>Defense.</strong></p>
 <ul class="simple">
-<li><p>Specify <strong>Mo-containing alloys</strong>: 316 (2–3% Mo) is the standard upgrade from 304; duplex 2205 (2.5–3.5% Mo, 22% Cr) for tougher service; Hastelloy C-276 (15–17% Mo) for the harshest.</p></li>
+<li><p>Specify <strong>Mo-containing alloys</strong>: 316 (2-3% Mo) is the standard upgrade from 304; duplex 2205 (2.5-3.5% Mo, 22% Cr) for tougher service; Hastelloy C-276 (15-17% Mo) for the harshest.</p></li>
 <li><p>The <strong>Pitting Resistance Equivalent Number (PREN)</strong> quantifies pitting resistance:</p></li>
 </ul>
 <div class="math notranslate nohighlight">
@@ -1517,9 +1517,9 @@ PREN = %Cr + 3.3 \times %Mo + 16 \times %N
 <h3>3. Crevice Corrosion<a class="headerlink" href="#crevice-corrosion" title="Link to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Mechanism.</strong> Stagnant solution in a confined geometry (under gaskets, in lap joints, in O-ring grooves) experiences oxygen depletion, pH drop, and chloride concentration — producing the same conditions as inside a pit, but at a pre-existing geometric feature instead of a random breakdown site.</p>
+<p><strong>Mechanism.</strong> Stagnant solution in a confined geometry (under gaskets, in lap joints, in O-ring grooves) experiences oxygen depletion, pH drop, and chloride concentration  -  producing the same conditions as inside a pit, but at a pre-existing geometric feature instead of a random breakdown site.</p>
 <p><strong>Recognition.</strong> Corrosion under flanges, gaskets, threaded joints, deposit films. The surface away from the crevice is intact.</p>
-<p><strong>Defense.</strong> Same materials defense as pitting (Mo-bearing alloys, high PREN). Also: design out crevices — use full-penetration welds instead of threaded joints, eliminate lap joints, specify smooth-bore fittings.</p>
+<p><strong>Defense.</strong> Same materials defense as pitting (Mo-bearing alloys, high PREN). Also: design out crevices  -  use full-penetration welds instead of threaded joints, eliminate lap joints, specify smooth-bore fittings.</p>
 </div>
 </section>
 <section id="galvanic-corrosion">
@@ -1542,9 +1542,9 @@ PREN = %Cr + 3.3 \times %Mo + 16 \times %N
 <h3>5. Intergranular Corrosion (Sensitization in Stainless Steel)<a class="headerlink" href="#intergranular-corrosion-sensitization-in-stainless-steel" title="Link to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Mechanism.</strong> Preferential attack at grain boundaries due to compositional variation between grain interior and boundary. In austenitic stainless steel, heating in the 425–870<span class="math notranslate nohighlight">\(^\circ\)</span>C range precipitates chromium carbides (Cr<span class="math notranslate nohighlight">\(_{23}\)</span>C<span class="math notranslate nohighlight">\(_6\)</span>) at grain boundaries, locally depleting the boundary of chromium below the <span class="math notranslate nohighlight">\(\sim\)</span>12% needed for passivity — “<strong>sensitization</strong>.” Subsequent service in even mildly corrosive media attacks the depleted boundary regions.</p>
+<p><strong>Mechanism.</strong> Preferential attack at grain boundaries due to compositional variation between grain interior and boundary. In austenitic stainless steel, heating in the 425-870<span class="math notranslate nohighlight">\(^\circ\)</span>C range precipitates chromium carbides (Cr<span class="math notranslate nohighlight">\(_{23}\)</span>C<span class="math notranslate nohighlight">\(_6\)</span>) at grain boundaries, locally depleting the boundary of chromium below the <span class="math notranslate nohighlight">\(\sim\)</span>12% needed for passivity  -  “<strong>sensitization</strong>.” Subsequent service in even mildly corrosive media attacks the depleted boundary regions.</p>
 <p><strong>Recognition.</strong> Falls apart at grain boundaries; the affected region looks granular rather than smooth.</p>
-<p><strong>Examples.</strong> Weld heat-affected zone in 304 SS exposed to acid; “weld-decay” fissures running parallel to a weld bead at a 1–5 mm offset.</p>
+<p><strong>Examples.</strong> Weld heat-affected zone in 304 SS exposed to acid; “weld-decay” fissures running parallel to a weld bead at a 1-5 mm offset.</p>
 <p><strong>Defense.</strong></p>
 <ul class="simple">
 <li><p>Use <strong>low-carbon (L) grades:</strong> 304L, 316L (carbon <span class="math notranslate nohighlight">\(&lt; 0.03\)</span>%) prevent significant Cr-carbide precipitation.</p></li>
@@ -1599,12 +1599,12 @@ PREN = %Cr + 3.3 \times %Mo + 16 \times %N
 <li><p>Use lower-strength steels (NACE MR0175: <span class="math notranslate nohighlight">\(\sigma_y \leq 620\)</span> MPa hardness <span class="math notranslate nohighlight">\(\leq 22\)</span> HRC for sour service).</p></li>
 <li><p>PWHT to relieve residual stress.</p></li>
 <li><p>Switch to nickel-based alloys (Inconel, Hastelloy) for severe sour service.</p></li>
-<li><p>Outgas the metal by low-temperature bake-out (200–300<span class="math notranslate nohighlight">\(^\circ\)</span>C for several hours) before service.</p></li>
+<li><p>Outgas the metal by low-temperature bake-out (200-300<span class="math notranslate nohighlight">\(^\circ\)</span>C for several hours) before service.</p></li>
 </ul>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Exam Tips — Corrosion Forms</strong></p>
+<p><strong>Exam Tips  -  Corrosion Forms</strong></p>
 <ul class="simple">
 <li><p>Memorize the eight forms and one defense each.</p></li>
 <li><p>“Chloride + austenitic SS” = SCC. Switch to duplex 2205.</p></li>
@@ -1628,7 +1628,7 @@ PREN = %Cr + 3.3 \times %Mo + 16 \times %N
 <li><p><strong>A516-70:</strong> the workhorse plate for pressure vessels. Service: <span class="math notranslate nohighlight">\(-29\)</span> to <span class="math notranslate nohighlight">\(+425^\circ\)</span>C, non-corrosive service.</p></li>
 <li><p><strong>A106-B:</strong> seamless pipe for hydrocarbon service.</p></li>
 <li><p><strong>A350 LF2 / A203:</strong> low-temperature qualified versions; usable to <span class="math notranslate nohighlight">\(-45^\circ\)</span>C (LF2) or <span class="math notranslate nohighlight">\(-100^\circ\)</span>C (A203 9% Ni).</p></li>
-<li><p><strong>Cr-Mo alloy steels (1.25Cr, 2.25Cr, 5Cr, 9Cr):</strong> hydrogen service, elevated temperature (<span class="math notranslate nohighlight">\(425\)</span>–<span class="math notranslate nohighlight">\(650^\circ\)</span>C). The Nelson curves (API RP 941) govern hydrogen-attack design.</p></li>
+<li><p><strong>Cr-Mo alloy steels (1.25Cr, 2.25Cr, 5Cr, 9Cr):</strong> hydrogen service, elevated temperature (<span class="math notranslate nohighlight">\(425\)</span>-<span class="math notranslate nohighlight">\(650^\circ\)</span>C). The Nelson curves (API RP 941) govern hydrogen-attack design.</p></li>
 <li><p><strong>9% Ni steel (A553):</strong> LNG service, down to <span class="math notranslate nohighlight">\(-195^\circ\)</span>C.</p></li>
 </ul>
 <p>Cost benchmark: A516-70 plate is the cheapest pressure-vessel material; everything else is quoted as a multiple. Aluminum is similar to CS on a per-pound basis but cheaper per unit volume.</p>
@@ -1696,7 +1696,7 @@ When a baseline material is found inadequate, the standard “upgrade ladder” 
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Exam Tips — Alloy Selection</strong></p>
+<p><strong>Exam Tips  -  Alloy Selection</strong></p>
 <ul class="simple">
 <li><p>HF service <span class="math notranslate nohighlight">\(\to\)</span> Monel.</p></li>
 <li><p>Hot wet chloride <span class="math notranslate nohighlight">\(\to\)</span> duplex 2205 or Hastelloy.</p></li>
@@ -1704,14 +1704,14 @@ When a baseline material is found inadequate, the standard “upgrade ladder” 
 <li><p>Sour service (<span class="math notranslate nohighlight">\(H_2\)</span>S) <span class="math notranslate nohighlight">\(\to\)</span> NACE MR0175-compliant low-strength steels or nickel-based alloys.</p></li>
 <li><p>LNG / cryogenic <span class="math notranslate nohighlight">\(\to\)</span> 9% Ni steel or 304 SS or aluminum.</p></li>
 <li><p>Hot strong acid <span class="math notranslate nohighlight">\(\to\)</span> Hastelloy, Zr, Ta, or glass/PTFE lining.</p></li>
-<li><p>Cost ladder: CS <span class="math notranslate nohighlight">\(\to\)</span> 304 (<span class="math notranslate nohighlight">\(3\times\)</span>) <span class="math notranslate nohighlight">\(\to\)</span> 316 (<span class="math notranslate nohighlight">\(4\times\)</span>) <span class="math notranslate nohighlight">\(\to\)</span> duplex (<span class="math notranslate nohighlight">\(5\times\)</span>) <span class="math notranslate nohighlight">\(\to\)</span> Hastelloy (<span class="math notranslate nohighlight">\(15\times\)</span>) <span class="math notranslate nohighlight">\(\to\)</span> Ti/Zr (<span class="math notranslate nohighlight">\(20\)</span>–<span class="math notranslate nohighlight">\(50\times\)</span>) <span class="math notranslate nohighlight">\(\to\)</span> Ta (<span class="math notranslate nohighlight">\(&gt; 100\times\)</span>).</p></li>
+<li><p>Cost ladder: CS <span class="math notranslate nohighlight">\(\to\)</span> 304 (<span class="math notranslate nohighlight">\(3\times\)</span>) <span class="math notranslate nohighlight">\(\to\)</span> 316 (<span class="math notranslate nohighlight">\(4\times\)</span>) <span class="math notranslate nohighlight">\(\to\)</span> duplex (<span class="math notranslate nohighlight">\(5\times\)</span>) <span class="math notranslate nohighlight">\(\to\)</span> Hastelloy (<span class="math notranslate nohighlight">\(15\times\)</span>) <span class="math notranslate nohighlight">\(\to\)</span> Ti/Zr (<span class="math notranslate nohighlight">\(20\)</span>-<span class="math notranslate nohighlight">\(50\times\)</span>) <span class="math notranslate nohighlight">\(\to\)</span> Ta (<span class="math notranslate nohighlight">\(&gt; 100\times\)</span>).</p></li>
 </ul>
 </div>
 </section>
 </section>
 <section id="welding-and-post-weld-considerations">
 <h2>Welding and Post-Weld Considerations<a class="headerlink" href="#welding-and-post-weld-considerations" title="Link to this heading">#</a></h2>
-<p>Most chemical-plant equipment is fabricated by welding. The weld is the weakest link — it has different microstructure, residual stresses, and possible defects compared to the parent metal. The PE exam tests basic weld-procedure concepts, code-required nondestructive examination (NDE), and post-weld heat treatment (PWHT).</p>
+<p>Most chemical-plant equipment is fabricated by welding. The weld is the weakest link  -  it has different microstructure, residual stresses, and possible defects compared to the parent metal. The PE exam tests basic weld-procedure concepts, code-required nondestructive examination (NDE), and post-weld heat treatment (PWHT).</p>
 <section id="the-weld-joint-and-its-microstructure">
 <h3>The Weld Joint and Its Microstructure<a class="headerlink" href="#the-weld-joint-and-its-microstructure" title="Link to this heading">#</a></h3>
 <div class="admonition note">
@@ -1723,7 +1723,7 @@ A fusion weld has three distinct microstructural zones:</p>
 <li><p><strong>Heat-affected zone (HAZ):</strong> parent metal that was heated below the melting point but high enough to alter its microstructure. Hardness peak; site of most service failures.</p></li>
 <li><p><strong>Parent (base) metal:</strong> unaffected by the welding heat.</p></li>
 </ul>
-<p>The HAZ is the high-risk zone: it often has the highest residual stress, the most distorted microstructure, and (in carbon steels) the highest hardness — all of which compound to make it the preferred site for SCC, fatigue cracking, and hydrogen-induced cracking.</p>
+<p>The HAZ is the high-risk zone: it often has the highest residual stress, the most distorted microstructure, and (in carbon steels) the highest hardness  -  all of which compound to make it the preferred site for SCC, fatigue cracking, and hydrogen-induced cracking.</p>
 </div>
 </section>
 <section id="joint-efficiency-e-and-code-requirements">
@@ -1748,13 +1748,13 @@ The ASME Section VIII Div. 1 design formulas include a joint efficiency <span cl
 <p><strong>When PWHT Is Required</strong>
 ASME Sec. VIII Div. 1 Table UCS-56 mandates PWHT when wall thickness exceeds material-specific thresholds (e.g. 1.5 in for P-No. 1 carbon steel). The PWHT cycle:</p>
 <ul class="simple">
-<li><p>Heat to a specified temperature (typically 590–690<span class="math notranslate nohighlight">\(^\circ\)</span>C for carbon steel).</p></li>
+<li><p>Heat to a specified temperature (typically 590-690<span class="math notranslate nohighlight">\(^\circ\)</span>C for carbon steel).</p></li>
 <li><p>Hold for 1 hour per inch of thickness (minimum).</p></li>
 <li><p>Cool slowly in still air or controlled furnace.</p></li>
 </ul>
 <p>Purposes:</p>
 <ul class="simple">
-<li><p>Relieve residual stresses (typically reduces to 10–20% of yield).</p></li>
+<li><p>Relieve residual stresses (typically reduces to 10-20% of yield).</p></li>
 <li><p>Temper hard HAZ microstructures (martensite in C-Mn steel HAZ).</p></li>
 <li><p>Drive off any trapped hydrogen.</p></li>
 </ul>
@@ -1778,7 +1778,7 @@ ASME Sec. VIII Div. 1 Table UCS-56 mandates PWHT when wall thickness exceeds mat
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Exam Tips — Welding and NDE</strong></p>
+<p><strong>Exam Tips  -  Welding and NDE</strong></p>
 <ul class="simple">
 <li><p>ASME joint efficiency <span class="math notranslate nohighlight">\(E\)</span>: 1.00 (full RT), 0.85 (spot), 0.70 (none). Affects wall thickness.</p></li>
 <li><p>HAZ is the failure-prone zone in most weld-related service failures.</p></li>
@@ -1807,19 +1807,19 @@ ASME Sec. VIII Div. 1 Table UCS-56 mandates PWHT when wall thickness exceeds mat
 <span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <ul>
 <li><p class="sd-card-text"><strong>Apply the materials-selection algorithm.</strong></p>
-<p class="sd-card-text"><strong>Step 1.1 — Temperature.</strong> 200<span class="math notranslate nohighlight">\(^\circ\)</span>C design (90<span class="math notranslate nohighlight">\(^\circ\)</span>C process); within CS continuous-service envelope (<span class="math notranslate nohighlight">\(&lt; 425^\circ\)</span>C).</p>
-<p class="sd-card-text"><strong>Step 1.2 — Chemistry screening.</strong></p>
+<p class="sd-card-text"><strong>Step 1.1  -  Temperature.</strong> 200<span class="math notranslate nohighlight">\(^\circ\)</span>C design (90<span class="math notranslate nohighlight">\(^\circ\)</span>C process); within CS continuous-service envelope (<span class="math notranslate nohighlight">\(&lt; 425^\circ\)</span>C).</p>
+<p class="sd-card-text"><strong>Step 1.2  -  Chemistry screening.</strong></p>
 </li>
-<li><p class="sd-card-text">Dilute HCl: carbon steel attacked rapidly — reject CS.</p></li>
-<li><p class="sd-card-text">304 SS: HCl is reducing-acid service; the chloride content drives both general corrosion and pitting — reject 304 SS.</p></li>
-<li><p class="sd-card-text">316 SS: better than 304 but the trace H<span class="math notranslate nohighlight">\(_2\)</span>O<span class="math notranslate nohighlight">\(_2\)</span> creates oxidizing-acid conditions that can still cause pitting. Marginal at best — reject as the primary material.</p></li>
+<li><p class="sd-card-text">Dilute HCl: carbon steel attacked rapidly  -  reject CS.</p></li>
+<li><p class="sd-card-text">304 SS: HCl is reducing-acid service; the chloride content drives both general corrosion and pitting  -  reject 304 SS.</p></li>
+<li><p class="sd-card-text">316 SS: better than 304 but the trace H<span class="math notranslate nohighlight">\(_2\)</span>O<span class="math notranslate nohighlight">\(_2\)</span> creates oxidizing-acid conditions that can still cause pitting. Marginal at best  -  reject as the primary material.</p></li>
 <li><p class="sd-card-text">Hastelloy C-276: handles hot HCl with oxidizing contaminants; routine FGD service. <em>Candidate.</em></p></li>
 <li><p class="sd-card-text">Glass-lined CS: handles dilute HCl below 70<span class="math notranslate nohighlight">\(^\circ\)</span>C without issues; at 90<span class="math notranslate nohighlight">\(^\circ\)</span>C marginal; thermal-shock risk in a stirred reactor. Possible but not preferred.</p></li>
-<li><p class="sd-card-text">Titanium Gr 2: rapidly attacked by reducing HCl — reject.</p>
-<p class="sd-card-text"><strong>Step 1.3 — Cost.</strong> Hastelloy C-276 solid plate is very expensive (15–20<span class="math notranslate nohighlight">\(\times\)</span> CS). <strong>Cladded construction</strong> (CS base + 3 mm C-276 cladding on the process side) cuts cost to <span class="math notranslate nohighlight">\(\sim\)</span>7–10<span class="math notranslate nohighlight">\(\times\)</span> CS while preserving the C-276 corrosion resistance.</p>
+<li><p class="sd-card-text">Titanium Gr 2: rapidly attacked by reducing HCl  -  reject.</p>
+<p class="sd-card-text"><strong>Step 1.3  -  Cost.</strong> Hastelloy C-276 solid plate is very expensive (15-20<span class="math notranslate nohighlight">\(\times\)</span> CS). <strong>Cladded construction</strong> (CS base + 3 mm C-276 cladding on the process side) cuts cost to <span class="math notranslate nohighlight">\(\sim\)</span>7-10<span class="math notranslate nohighlight">\(\times\)</span> CS while preserving the C-276 corrosion resistance.</p>
 <p class="sd-card-text"><strong>Selection: Hastelloy C-276 clad on A516-70 CS plate.</strong></p>
 </li>
-<li><p class="sd-card-text"><strong>Corrosion allowance.</strong> The clad layer is the corrosion barrier; the CS substrate is structural. A 3 mm clad gives a corrosion allowance of 3 mm specifically on the clad layer. If C-276 corrodes at <span class="math notranslate nohighlight">\(&lt; 2\)</span> mpy (0.05 mm/yr) in this service, the 3 mm clad lasts <span class="math notranslate nohighlight">\(&gt; 60\)</span> years — comfortably beyond the 20-year requirement. <strong>Inspection schedule:</strong> verify clad integrity every 5 years via UT or visual entry.</p></li>
+<li><p class="sd-card-text"><strong>Corrosion allowance.</strong> The clad layer is the corrosion barrier; the CS substrate is structural. A 3 mm clad gives a corrosion allowance of 3 mm specifically on the clad layer. If C-276 corrodes at <span class="math notranslate nohighlight">\(&lt; 2\)</span> mpy (0.05 mm/yr) in this service, the 3 mm clad lasts <span class="math notranslate nohighlight">\(&gt; 60\)</span> years  -  comfortably beyond the 20-year requirement. <strong>Inspection schedule:</strong> verify clad integrity every 5 years via UT or visual entry.</p></li>
 </ul>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -1840,21 +1840,21 @@ ASME Sec. VIII Div. 1 Table UCS-56 mandates PWHT when wall thickness exceeds mat
 </div>
 <div class="math notranslate nohighlight">
 \[
-t_{pressure} = \frac{P R}{S E - 0.6 P} = \frac{(174)(59)}{(19{,}800)(1.0) - (0.6)(174)} = \frac{10{,}266}{19{,}696} = 0.521in
+t_{pressure} = \frac{P R}{S E - 0.6 P} = \frac{(174)(59)}{(19{,}800)(1.0) - (0.6)(174)} = \frac{10{,}266}{19{,}696} = 0.521 in
 \]</div>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Add the clad layer.</strong> The cladding does not contribute structural strength but its thickness is included in the total wall:</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
-t_{total} = t_{pressure} + t_{clad} = 0.521 + 0.118 = 0.639in(clad = 3  mm = 0.118  in)
+t_{total} = t_{pressure} + t_{clad} = 0.521 + 0.118 = 0.639 in (clad = 3  mm = 0.118  in)
 \]</div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Some codes also require a corrosion allowance on the structural CS substrate in case the clad fails locally; conservative practice adds 1/16 in (0.0625 in) for this:
 </pre></div>
 </div>
 <div class="math notranslate nohighlight">
 \[
-t_{final} = 0.521 + 0.0625 + 0.118 = 0.702in
+t_{final} = 0.521 + 0.0625 + 0.118 = 0.702 in
 \]</div>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Round up to standard plate.</strong> Next standard gauge above 0.702 in is <strong>3/4 in (0.750 in)</strong>. The fabrication spec: 3/4-in A516-70 plate clad with 1/8-in (3.2 mm) Hastelloy C-276 on the process side.</p></li>
@@ -1862,7 +1862,7 @@ t_{final} = 0.521 + 0.0625 + 0.118 = 0.702in
 </ul>
 <div class="math notranslate nohighlight">
 \[
-\sigma_h = \frac{PR}{t_{struct}} = \frac{(174)(59)}{0.5695} = 18{,}030psi &lt; S = 19{,}800psi\checkmark
+\sigma_h = \frac{PR}{t_{struct}} = \frac{(174)(59)}{0.5695} = 18{,}030 psi &lt; S = 19{,}800 psi \checkmark
 \]</div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The selection satisfies all constraints: pressure (Sec. VIII), corrosion (Hastelloy in dilute oxidizing HCl), cost (cladded construction saves $\sim$60% over solid C-276), and service life (60+ years on the clad layer for a 20-year requirement).
 </pre></div>
@@ -1870,7 +1870,7 @@ t_{final} = 0.521 + 0.0625 + 0.118 = 0.702in
 </div>
 </details><div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Exam Tips — Integrated Material Selection</strong></p>
+<p><strong>Exam Tips  -  Integrated Material Selection</strong></p>
 <ul class="simple">
 <li><p>Always combine chemical-compatibility screening with mechanical (pressure, temperature) design.</p></li>
 <li><p>Cladded construction is the standard cost-saver for large vessels in aggressive service.</p></li>
@@ -1901,17 +1901,17 @@ t_{final} = 0.521 + 0.0625 + 0.118 = 0.702in
 <span class="math notranslate nohighlight">\(\sigma = F/A_0\)</span> (engineering); <span class="math notranslate nohighlight">\(\sigma_{true} = F/A_i\)</span>.
 <span class="math notranslate nohighlight">\(\varepsilon = (L_i - L_0)/L_0\)</span> (engineering); <span class="math notranslate nohighlight">\(\varepsilon_{true} = \ln(1 + \varepsilon)\)</span>.</p>
 <p><strong>Hooke’s law:</strong>
-<span class="math notranslate nohighlight">\(\sigma = E\varepsilon\)</span> (elastic only). <span class="math notranslate nohighlight">\(\Delta L = \sigma L_0 / E = FL_0/(A_0 E)\)</span>.</p>
+<span class="math notranslate nohighlight">\(\sigma = E \varepsilon\)</span> (elastic only). <span class="math notranslate nohighlight">\(\Delta L = \sigma L_0 / E = FL_0/(A_0 E)\)</span>.</p>
 <p><strong>Resilience and toughness:</strong>
 <span class="math notranslate nohighlight">\(U_r = \sigma_y^2/(2E)\)</span>. Toughness <span class="math notranslate nohighlight">\(= \)</span> area under entire <span class="math notranslate nohighlight">\(\sigma\)</span>-<span class="math notranslate nohighlight">\(\varepsilon\)</span> curve.</p>
 <p><strong>Yield criteria (multi-axial):</strong>
 Tresca: <span class="math notranslate nohighlight">\(\sigma_1 - \sigma_3 = \sigma_y\)</span>.
 von Mises: <span class="math notranslate nohighlight">\(\sigma_{vM} = \sqrt{\tfrac{1}{2}[(\sigma_1-\sigma_2)^2 + (\sigma_2-\sigma_3)^2 + (\sigma_3-\sigma_1)^2]} = \sigma_y\)</span>.</p>
-<p><strong>Hall-Petch:</strong> <span class="math notranslate nohighlight">\(\sigma_y = \sigma_0 + k_yd^{-1/2}\)</span>.</p>
+<p><strong>Hall-Petch:</strong> <span class="math notranslate nohighlight">\(\sigma_y = \sigma_0 + k_y d^{-1/2}\)</span>.</p>
 <p><strong>Creep:</strong> <span class="math notranslate nohighlight">\(\varepsilon_s = A\sigma^n e^{-Q/RT}\)</span>. LMP <span class="math notranslate nohighlight">\(= T(C + \log t_r)\)</span>, <span class="math notranslate nohighlight">\(C \approx 20\)</span> for steels.</p>
 <p><strong>Fatigue:</strong> S-N curve. Endurance limit <span class="math notranslate nohighlight">\(S_e \approx 0.5\sigma_u\)</span> (steel). Modified Goodman: <span class="math notranslate nohighlight">\(S_a/S_e + \sigma_m/\sigma_u = 1/N\)</span>.</p>
-<p><strong>Corrosion rate (coupon):</strong> CR[mpy] <span class="math notranslate nohighlight">\(= 534W/(\rho A t)\)</span>. Acceptable <span class="math notranslate nohighlight">\(&lt; 5\)</span>, marginal 5–20, reject <span class="math notranslate nohighlight">\(&gt; 50\)</span> mpy.</p>
-<p><strong>PREN:</strong> <span class="math notranslate nohighlight">\(= %Cr + 3.3%Mo + 16%N\)</span>. 304 <span class="math notranslate nohighlight">\(\approx 19\)</span>; 316 <span class="math notranslate nohighlight">\(\approx 25\)</span>; 2205 <span class="math notranslate nohighlight">\(\approx 35\)</span>; 2507 <span class="math notranslate nohighlight">\(\approx 42\)</span>.</p>
+<p><strong>Corrosion rate (coupon):</strong> CR [mpy] <span class="math notranslate nohighlight">\(= 534 W/(\rho A t)\)</span>. Acceptable <span class="math notranslate nohighlight">\(&lt; 5\)</span>, marginal 5-20, reject <span class="math notranslate nohighlight">\(&gt; 50\)</span> mpy.</p>
+<p><strong>PREN:</strong> <span class="math notranslate nohighlight">\(= %Cr + 3.3 %Mo + 16 %N\)</span>. 304 <span class="math notranslate nohighlight">\(\approx 19\)</span>; 316 <span class="math notranslate nohighlight">\(\approx 25\)</span>; 2205 <span class="math notranslate nohighlight">\(\approx 35\)</span>; 2507 <span class="math notranslate nohighlight">\(\approx 42\)</span>.</p>
 <p><strong>Pressure vessel (ASME VIII):</strong>
 Hoop: <span class="math notranslate nohighlight">\(t = PR/(SE - 0.6P)\)</span>; longitudinal <span class="math notranslate nohighlight">\(t = PR/(2SE + 0.4P)\)</span>.
 Joint efficiency <span class="math notranslate nohighlight">\(E\)</span>: 1.00 (full RT), 0.85 (spot), 0.70 (none).</p>
@@ -1922,10 +1922,10 @@ Joint efficiency <span class="math notranslate nohighlight">\(E\)</span>: 1.00 (
 <p class="admonition-title">Note</p>
 <p><strong>Common PE-Exam Mistakes</strong></p>
 <ul class="simple">
-<li><p>Confusing strength (<span class="math notranslate nohighlight">\(\sigma_y\)</span>) with stiffness (<span class="math notranslate nohighlight">\(E\)</span>) — they govern different failure modes.</p></li>
+<li><p>Confusing strength (<span class="math notranslate nohighlight">\(\sigma_y\)</span>) with stiffness (<span class="math notranslate nohighlight">\(E\)</span>)  -  they govern different failure modes.</p></li>
 <li><p>Using engineering vs. true stress inconsistently. Design always uses engineering.</p></li>
 <li><p>Forgetting Hall-Petch <span class="math notranslate nohighlight">\(d^{-1/2}\)</span> scaling (not <span class="math notranslate nohighlight">\(d^{-1}\)</span>).</p></li>
-<li><p>Using room-temperature <span class="math notranslate nohighlight">\(\sigma_y\)</span> at high service temperature — always look up <span class="math notranslate nohighlight">\(S\)</span> at the actual design temperature.</p></li>
+<li><p>Using room-temperature <span class="math notranslate nohighlight">\(\sigma_y\)</span> at high service temperature  -  always look up <span class="math notranslate nohighlight">\(S\)</span> at the actual design temperature.</p></li>
 <li><p>Selecting 304 SS for chloride service above 60<span class="math notranslate nohighlight">\(^\circ\)</span>C (SCC trap).</p></li>
 <li><p>Selecting 304 SS for welded service without specifying 304L or 321/347 (sensitization trap).</p></li>
 <li><p>Forgetting joint efficiency <span class="math notranslate nohighlight">\(E\)</span> in ASME wall-thickness calculation.</p></li>
@@ -1995,12 +1995,12 @@ Joint efficiency <span class="math notranslate nohighlight">\(E\)</span>: 1.00 (
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preliminaries-the-mechanics-of-materials-toolbox">Preliminaries: The Mechanics-of-Materials Toolbox</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#force-stress-and-the-internal-force-hypothesis">Force, Stress, and the Internal-Force Hypothesis</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-engineering-vs-true-and-why-it-matters">Why Engineering vs. True — and Why It Matters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-engineering-vs-true-and-why-it-matters">Why Engineering vs. True  -  and Why It Matters</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-conversions-and-practical-magnitudes">Unit Conversions and Practical Magnitudes</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-tensile-test-standardized-procedure">The Tensile Test — Standardized Procedure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-tensile-test-standardized-procedure">The Tensile Test  -  Standardized Procedure</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#engineering-stress-and-strain-computational-practice">Engineering Stress and Strain — Computational Practice</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#engineering-stress-and-strain-computational-practice">Engineering Stress and Strain  -  Computational Practice</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-computational-recipe">The Computational Recipe</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#worked-example-round-tensile-specimen">Worked Example: Round Tensile Specimen</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#worked-example-rectangular-cross-section">Worked Example: Rectangular Cross-Section</a></li>
@@ -2014,7 +2014,7 @@ Joint efficiency <span class="math notranslate nohighlight">\(E\)</span>: 1.00 (
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-0-2-offset-yield-strength-definition">The 0.2% Offset Yield Strength Definition</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unloading-from-the-plastic-region">Unloading From the Plastic Region</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#necking-and-ultimate-tensile-strength">Necking and Ultimate Tensile Strength</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-the-curve-all-properties-together">Reading the Curve — All Properties Together</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-the-curve-all-properties-together">Reading the Curve  -  All Properties Together</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#worked-example-reading-all-properties-from-a-curve">Worked Example: Reading All Properties from a Curve</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ductile-vs-brittle-behavior">Ductile vs. Brittle Behavior</a></li>
 </ul>

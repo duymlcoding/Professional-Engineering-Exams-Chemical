@@ -13,21 +13,21 @@ A chemical process is documented at three escalating levels of detail. The Block
 
 ```{note}
 **The Three Diagram Types**
-- **BFD — Block Flow Diagram.** The minimum-detail view. Blocks (rectangles) for major unit operations (reactors, separators, possibly a critical compressor or steam generator), arrows for major streams, overall mass-flow rates on each stream, and a figure caption. Used in early conceptual design and in management-level presentations.
+- **BFD  -  Block Flow Diagram.** The minimum-detail view. Blocks (rectangles) for major unit operations (reactors, separators, possibly a critical compressor or steam generator), arrows for major streams, overall mass-flow rates on each stream, and a figure caption. Used in early conceptual design and in management-level presentations.
 
-- **PFD — Process Flow Diagram.** Every major equipment item is shown using its conventional symbol with a tag number; every process stream is numbered. A separate *stream table* reports composition, temperature, pressure, phase, and flow for each numbered stream. Utility streams are labeled by their lowercase abbreviation (cw, lps, etc.) at their inlet only. Control valves, individual block valves, and instruments are typically *not* shown.
+- **PFD  -  Process Flow Diagram.** Every major equipment item is shown using its conventional symbol with a tag number; every process stream is numbered. A separate *stream table* reports composition, temperature, pressure, phase, and flow for each numbered stream. Utility streams are labeled by their lowercase abbreviation (cw, lps, etc.) at their inlet only. Control valves, individual block valves, and instruments are typically *not* shown.
 
-- **P&ID — Piping | Instrumentation Diagram.** The construction document. Each line carries its pipe size, schedule, material spec, and insulation requirement; every valve has its tag, fail-safe action, and bypass; every control loop is shown with its ISA-5.1 instrument bubbles; vents, drains, sample points, and high-/low-point connections are explicit.
+- **P&ID  -  Piping | Instrumentation Diagram.** The construction document. Each line carries its pipe size, schedule, material spec, and insulation requirement; every valve has its tag, fail-safe action, and bypass; every control loop is shown with its ISA-5.1 instrument bubbles; vents, drains, sample points, and high-/low-point connections are explicit.
 ```
 
 
 ```{note}
 **When to Use Each**
-- BFD: kickoff meetings, project gates, presentations to management or non-process audiences. Answers “what does the plant do?”
+- BFD: kickoff meetings, project gates, presentations to management or non-process audiences. Answers "what does the plant do?"
 
-- PFD: process design phase, used by process engineers for material/energy balances, equipment sizing, and economic estimation. Answers “what is in each stream and what does each piece of equipment do to it?”
+- PFD: process design phase, used by process engineers for material/energy balances, equipment sizing, and economic estimation. Answers "what is in each stream and what does each piece of equipment do to it?"
 
-- P&ID: detailed design, construction, HAZOP, operator training, maintenance. Answers “how is it built, instrumented, and operated?”
+- P&ID: detailed design, construction, HAZOP, operator training, maintenance. Answers "how is it built, instrumented, and operated?"
 ```
 
 
@@ -35,23 +35,23 @@ A chemical process is documented at three escalating levels of detail. The Block
 
 ```{tip}
 **{Equipment Tag Letters (Turton, Seider conventions)}**
-- **C** — Compressor or turbine (e.g. C-101 = first compressor in plant area 100).
+- **C**  -  Compressor or turbine (e.g. C-101 = first compressor in plant area 100).
 
-- **E** — Heat exchanger (cooler, heater, condenser, reboiler, chiller).
+- **E**  -  Heat exchanger (cooler, heater, condenser, reboiler, chiller).
 
-- **H** — Fired heater or furnace.
+- **H**  -  Fired heater or furnace.
 
-- **P** — Pump.
+- **P**  -  Pump.
 
-- **R** — Reactor.
+- **R**  -  Reactor.
 
-- **T** — Tower or column (distillation, absorption, stripping, extraction).
+- **T**  -  Tower or column (distillation, absorption, stripping, extraction).
 
-- **V** — Vessel or drum (flash drum, reflux drum, knockout drum).
+- **V**  -  Vessel or drum (flash drum, reflux drum, knockout drum).
 
-- **TK** — Storage tank.
+- **TK**  -  Storage tank.
 
-- **FE/FT** — Flow element/transmitter (a P&ID convention).
+- **FE/FT**  -  Flow element/transmitter (a P&ID convention).
 
 The leading digit of the tag number identifies the plant area. E-203 = third heat exchanger in plant area 200. Suffix letters (A, B) denote parallel equipment (P-101A and P-101B = installed pump and its spare).
 ```
@@ -63,7 +63,7 @@ The leading digit of the tag number identifies the plant area. E-203 = third hea
 **BFD Conventions**
 - Flow is drawn **left to right**; recycle loops are the only legal exception and must return to an upstream block.
 
-- Equipment is *rectangles only*. Never realistic shapes on a BFD — save those for the PFD.
+- Equipment is *rectangles only*. Never realistic shapes on a BFD  -  save those for the PFD.
 
 - Only *critical* equipment is shown. Reactors and separators are mandatory. Pumps, most heat exchangers, storage tanks, and control valves are omitted unless they are essential to understanding the process intent (e.g. a flash-train compressor that enables the recycle).
 
@@ -71,9 +71,9 @@ The leading digit of the tag number identifies the plant area. E-203 = third hea
 
 - When lines must cross, the *horizontal* line stays solid and the *vertical* line is broken (drawn as an arc or a jog).
 
-- Mass-flow rates are always shown on the inlet and outlet streams, in units that give 2–4 significant figures: lb/h, kg/h, ton/day. *Not* g/day (which would force unreadable 7+ digit numbers) and *not* mol/s (which obscures throughput).
+- Mass-flow rates are always shown on the inlet and outlet streams, in units that give 2-4 significant figures: lb/h, kg/h, ton/day. *Not* g/day (which would force unreadable 7+ digit numbers) and *not* mol/s (which obscures throughput).
 
-- Light (more volatile) components exit *higher* on the page than heavier ones. “Light” here means *volatility*, not molecular weight: ethanol (MW = 46) is lighter than water (MW = 18) in this sense because it is more volatile.
+- Light (more volatile) components exit *higher* on the page than heavier ones. "Light" here means *volatility*, not molecular weight: ethanol (MW = 46) is lighter than water (MW = 18) in this sense because it is more volatile.
 
 - For reactant inlets, the conventional ordering is either lightest-on-top (consistent with the volatility rule for products) or, alternatively, most-important-reactant-first (e.g. ethylene above oxygen for ethylene-oxide production because ethylene is the principal feedstock). Either is acceptable as long as the figure caption makes the choice clear.
 
@@ -104,7 +104,7 @@ Optional rows: enthalpy, density, viscosity, heat capacity, surface tension.
 
 ```{tip}
 **Process Stream Numbering Conventions**
-- Number all process streams in the direction of flow, starting from the feed (1, 2, 3, …).
+- Number all process streams in the direction of flow, starting from the feed (1, 2, 3, ...).
 
 - Restart numbering when crossing into a new plant area (the second hundred series, third hundred series, etc. on large complexes).
 
@@ -118,7 +118,7 @@ Optional rows: enthalpy, density, viscosity, heat capacity, surface tension.
 
 ```{note}
 **ISA-5.1 Instrument Tagging**
-An instrument is shown as a small circle (“balloon” or “bubble”) with a two- or three-letter tag inside. The **first letter** is the *measured variable*; the **succeeding letters** are the *function*:
+An instrument is shown as a small circle ("balloon" or "bubble") with a two- or three-letter tag inside. The **first letter** is the *measured variable*; the **succeeding letters** are the *function*:
 
 **First letter (measured variable):**
 
@@ -144,7 +144,7 @@ An instrument is shown as a small circle (“balloon” or “bubble”) with a 
 
 Examples: `TIC-101` = Temperature Indicating Controller, first one in area 100. `FT-205` = Flow Transmitter in area 200. `LAHH-301` = Level Alarm High-High in area 300 (typical SIS trip).
 
-**Bubble shape:** a single circle = local (field-mounted). A circle inside a square = panel-mounted at the control room. A solid horizontal line through the circle = “shared display, shared control” (DCS-resident).
+**Bubble shape:** a single circle = local (field-mounted). A circle inside a square = panel-mounted at the control room. A solid horizontal line through the circle = "shared display, shared control" (DCS-resident).
 ```
 
 
@@ -154,7 +154,7 @@ Examples: `TIC-101` = Temperature Indicating Controller, first one in area 100. 
 For the ethylene oxide production process, ethylene and oxygen feed a catalytic reactor where the main reaction is
 
 $$
-\mathrm{C_2H_4 + \tfrac{1}{2}O_2 \rightarrow C_2H_4O}
+\mathrm{C_2H_4 + \tfrac{1}{2} O_2 \rightarrow C_2H_4O}
 $$
 
 with side reactions producing $\mathrm{CO_2}$ and $\mathrm{H_2O}$. The reactor effluent flashes; unreacted ethylene is recycled; ethylene oxide is purified in a downstream distillation train. Which diagram type would show each of the following? (a) the recycle of unreacted ethylene back to the reactor; (b) the fail-safe action of the cooling-water valve on the reactor jacket; (c) the molar composition of the bottoms stream from the second column; (d) the carbon-steel material specification of the reactor-effluent piping; (e) the overall production rate of ethylene oxide.
@@ -187,17 +187,17 @@ Natural gas is desulfurized, then reformed with steam to produce syngas (CO + H$
 - **Identify the critical equipment to put in blocks.** Reactors and separators are mandatory; compressors and other equipment are included only if essential.
 
 
-- Desulfurizer (reactor type, ZnO bed) — block 1.
+- Desulfurizer (reactor type, ZnO bed)  -  block 1.
 
-- Steam reformer (reactor) — block 2.
+- Steam reformer (reactor)  -  block 2.
 
-- Recycle compressor (essential because it enables the high-pressure recycle) — block 3.
+- Recycle compressor (essential because it enables the high-pressure recycle)  -  block 3.
 
-- Methanol synthesis reactor — block 4.
+- Methanol synthesis reactor  -  block 4.
 
-- Topping column (separator) — block 5.
+- Topping column (separator)  -  block 5.
 
-- Refining column (separator) — block 6.
+- Refining column (separator)  -  block 6.
 
 
 - **Place flow arrows left to right.** Natural gas in $\to$ blocks 1, 2, 3, 4 in series $\to$ block 5 $\to$ block 6 $\to$ methanol out the top, water out the bottom.
@@ -208,19 +208,19 @@ Natural gas is desulfurized, then reformed with steam to produce syngas (CO + H$
 
 - **Add outlet streams.** Light-gas purge from the top of block 5 (high on the page, since gases are lightest). Methanol product from the top of block 6 (lighter than water). Water from the bottom of block 6 (heaviest). Each labeled with kg/h or ton/day.
 
-- **Caption, reactions, figure number.** “Figure 1. Block Flow Diagram of a steam-reforming methanol plant.” List the three reactions: (i) $\mathrm{CH_4 + H_2O \rightarrow CO + 3 H_2}$ (steam reforming), (ii) $\mathrm{CO + 2H_2 \rightarrow CH_3OH}$ (methanol synthesis), (iii) $\mathrm{CO_2 + 3H_2 \rightarrow CH_3OH + H_2O}$ (CO$_2$ pathway).
+- **Caption, reactions, figure number.** "Figure 1. Block Flow Diagram of a steam-reforming methanol plant." List the three reactions: (i) $\mathrm{CH_4 + H_2O \rightarrow CO + 3 H_2}$ (steam reforming), (ii) $\mathrm{CO + 2H_2 \rightarrow CH_3OH}$ (methanol synthesis), (iii) $\mathrm{CO_2 + 3H_2 \rightarrow CH_3OH + H_2O}$ (CO$_2$ pathway).
 
-- **Verification.** Count of blocks: 6 (within the typical 4–12 range for a single-product plant). Inlet streams: 2 (natural gas, steam). Outlet streams: 3 (purge, methanol, water). Recycle: 1. All material balances close. \checkmark
+- **Verification.** Count of blocks: 6 (within the typical 4-12 range for a single-product plant). Inlet streams: 2 (natural gas, steam). Outlet streams: 3 (purge, methanol, water). Recycle: 1. All material balances close. \checkmark
 ```
 
 
 ```{note}
-**Exam Tips — Diagrams**
+**Exam Tips  -  Diagrams**
 - Memorize the equipment letter tags. The most-tested ones are E, P, R, T, V, C.
 
 - For an ISA bubble question, write down the first letter (variable) and the function letter(s) before guessing.
 
-- “Light up, heavy down” on a BFD refers to volatility, not molecular weight.
+- "Light up, heavy down" on a BFD refers to volatility, not molecular weight.
 
 - Stream tables belong only on PFDs. Material specs belong only on P&IDs.
 
@@ -242,7 +242,7 @@ For each stream you are given:
 
 - Source temperature $T_s$ (initial) and target temperature $T_t$ (required).
 
-- Heat-capacity flow rate $CP \equiv mc_p$ [kW/$^\circ$C or BTU/hr$\cdot ^\circ$F]. This is what determines how much energy each stream carries per degree of temperature change.
+- Heat-capacity flow rate $CP \equiv m c_p$ [kW/$^\circ$C or BTU/hr$\cdot ^\circ$F]. This is what determines how much energy each stream carries per degree of temperature change.
 
 A user-specified parameter, the **minimum approach temperature** $\Delta T_{\min}$, sets the tightest acceptable temperature difference between any hot and cold stream inside a heat exchanger. Typical values:
 
@@ -255,7 +255,7 @@ A user-specified parameter, the **minimum approach temperature** $\Delta T_{\min
 
 - Refrigeration: as small as 5 $^\circ$C (refrigerant is expensive, large $A$ trades off favorably).
 
-Smaller $\Delta T_{\min}$ reduces utility consumption but requires larger and more expensive heat exchangers. The optimal $\Delta T_{\min}$ trades off these effects and is typically in the 10–20 $^\circ$C range for chemical plants.
+Smaller $\Delta T_{\min}$ reduces utility consumption but requires larger and more expensive heat exchangers. The optimal $\Delta T_{\min}$ trades off these effects and is typically in the 10-20 $^\circ$C range for chemical plants.
 ```
 
 
@@ -279,13 +279,13 @@ Slide the cold curve horizontally until the minimum vertical separation between 
 The pinch *thermodynamically decouples* the problem into two independent regions:
 
 
-- **Above the pinch** (high temperatures): heat *sink*. The hot streams above the pinch can only do so much heating; the deficit must be made up by external *hot utility*. *No cold utility may be used above the pinch* — doing so wastes recoverable heat one-for-one.
+- **Above the pinch** (high temperatures): heat *sink*. The hot streams above the pinch can only do so much heating; the deficit must be made up by external *hot utility*. *No cold utility may be used above the pinch*  -  doing so wastes recoverable heat one-for-one.
 
-- **Below the pinch** (low temperatures): heat *source*. The cold streams below the pinch can only absorb so much; the surplus must be removed by external *cold utility*. *No hot utility may be used below the pinch* — same penalty.
+- **Below the pinch** (low temperatures): heat *source*. The cold streams below the pinch can only absorb so much; the surplus must be removed by external *cold utility*. *No hot utility may be used below the pinch*  -  same penalty.
 
-These two rules constitute the **Pinch Design Principle** (Linnhoff–Hindmarsh).
+These two rules constitute the **Pinch Design Principle** (Linnhoff-Hindmarsh).
 
-A third rule: *no heat may be transferred across the pinch*. Doing so adds 1 unit of hot utility *and* 1 unit of cold utility for every unit transferred — a double penalty.
+A third rule: *no heat may be transferred across the pinch*. Doing so adds 1 unit of hot utility *and* 1 unit of cold utility for every unit transferred  -  a double penalty.
 ```
 
 
@@ -299,7 +299,7 @@ $$
 \Delta T_1 \equiv T_h^{out} - T_c^{in},   \Delta T_2 \equiv T_h^{in} - T_c^{out}
 $$
 
-    so $\Delta T_1$ is at the “cold end” and $\Delta T_2$ is at the “hot end” of the exchanger.
+    so $\Delta T_1$ is at the "cold end" and $\Delta T_2$ is at the "hot end" of the exchanger.
 
 
 - **Energy balances.** For each stream, $Q$ is the duty exchanged:
@@ -311,8 +311,8 @@ $$
 \begin{align}
 
 
-    Q &= CP_h(T_h^{in} - T_h^{out})
-Q &= CP_c(T_c^{out} - T_c^{in})
+    Q &= CP_h (T_h^{in} - T_h^{out})
+Q &= CP_c (T_c^{out} - T_c^{in})
     \end{align}
 
 $$
@@ -337,7 +337,7 @@ $$
     \Delta T_2 - \Delta T_1 &= (T_h^{in} - T_c^{out}) - (T_h^{out} - T_c^{in})
 &= (T_h^{in} - T_h^{out}) - (T_c^{out} - T_c^{in})
 &= \frac{Q}{CP_h} - \frac{Q}{CP_c}
-&= Q\frac{CP_c - CP_h}{CP_h \cdot CP_c}
+&= Q \frac{CP_c - CP_h}{CP_h \cdot CP_c}
     \end{align}
 
 $$
@@ -350,7 +350,7 @@ $$
 - **Above the pinch:** the exchanger's hot end is the pinch, so $\Delta T_2 = \Delta T_{\min}$. Then $\Delta T_1 = \Delta T_{\min} + Q (CP_c - CP_h)/(CP_h CP_c)$. For feasibility we need $\Delta T_1 \geq \Delta T_{\min}$, which requires the extra term to be non-negative:
 
 $$
-Q\frac{CP_c - CP_h}{CP_h CP_c} \geq 0 \Longrightarrow CP_c \geq CP_h   (above pinch)
+Q \frac{CP_c - CP_h}{CP_h CP_c} \geq 0  \Longrightarrow  CP_c \geq CP_h   (above pinch)
 $$
 
 - **Below the pinch:** the exchanger's cold end is the pinch, so $\Delta T_1 = \Delta T_{\min}$. Then $\Delta T_2 = \Delta T_{\min} + Q (CP_h - CP_c)/(CP_h CP_c)$. Feasibility requires $\Delta T_2 \geq \Delta T_{\min}$:
@@ -382,7 +382,7 @@ $$
 
 - At each pinch match, apply the CP rule (Eq. above for above the pinch; reverse for below). If no feasible match exists at the pinch, split a stream.
 
-- Maximize the duty $Q$ on each pinch match by “ticking off” one of the two streams (driving it to its target or pinch temperature, whichever is binding).
+- Maximize the duty $Q$ on each pinch match by "ticking off" one of the two streams (driving it to its target or pinch temperature, whichever is binding).
 
 - After all pinch matches are placed, fill in any remaining duty with external utilities.
 
@@ -430,38 +430,38 @@ Design the above-pinch *and* below-pinch portions of the network.
 
 - H2 ($CP = 2$): both C1 ($CP = 2$) and C2 ($CP = 5$) qualify (the rule is $\geq$, so $CP_c = CP_h$ is acceptable).
 
-    Therefore the only feasible pinch pairing is **H1–C2** and **H2–C1**.
+    Therefore the only feasible pinch pairing is **H1-C2** and **H2-C1**.
 
 
-- **Match H1–C2 and maximize duty.**
+- **Match H1-C2 and maximize duty.**
 
 $$
-Q_{H1-C2} = CP_{H1}(T_{H1}^{in} - T_{H1}^{out}) = 3 \times (180 - 90) = 270kW
+Q_{H1-C2} = CP_{H1} (T_{H1}^{in} - T_{H1}^{out}) = 3 \times (180 - 90) = 270 kW
 $$
 
     Check the cold-side response: C2 enters at 80$^\circ$C with $CP = 5$. After receiving 270 kW it would exit at
 
 $$
-T_{C2}^{out} = 80 + \frac{270}{5} = 134^\circC
+T_{C2}^{out} = 80 + \frac{270}{5} = 134^\circ C
 $$
 
-    Required final temperature of C2 is 140$^\circ$C, so 6$^\circ$C ($= 30$ kW additional duty) still must be supplied. H1 is fully “ticked off” (cooled to its pinch temperature).
+    Required final temperature of C2 is 140$^\circ$C, so 6$^\circ$C ($= 30$ kW additional duty) still must be supplied. H1 is fully "ticked off" (cooled to its pinch temperature).
 
 
-- **Match H2–C1 and maximize duty.**
-
-$$
-Q_{H2-C1, max possible from hot} = 2 \times (150 - 90) = 120kW
-$$
+- **Match H2-C1 and maximize duty.**
 
 $$
-Q_{C1, required} = 2 \times (135 - 80) = 110kW
+Q_{H2-C1, max possible from hot} = 2 \times (150 - 90) = 120 kW
+$$
+
+$$
+Q_{C1, required} = 2 \times (135 - 80) = 110 kW
 $$
 
     Cold-side is the binding constraint: take $Q = 110$ kW. C1 reaches its target 135$^\circ$C; H2 cools to
 
 $$
-T_{H2}^{out} = 150 - \frac{110}{2} = 95^\circC
+T_{H2}^{out} = 150 - \frac{110}{2} = 95^\circ C
 $$
 
     H2 stops at 95$^\circ$C, which is 5$^\circ$C above the pinch. The remaining 5 $\times$ 2 = 10 kW of cooling cannot be done above the pinch (no cold utility allowed), so this residual is carried over to the below-pinch sub-problem.
@@ -486,7 +486,7 @@ $$
 
 - H1: $90 \to 60^\circ$C, $CP = 3$. Available duty = 90 kW.
 
-- H2: $90 \to 30^\circ$C, $CP = 2$. Available duty = 120 kW. (Includes the carried-over residual; H2 actually arrives at the pinch zone at 95$^\circ$C, but we treat the segment from 90$^\circ$C below as the below-pinch portion; the 5$^\circ$C from 95 to 90 is sometimes handled as a small “below-pinch” adjustment.)
+- H2: $90 \to 30^\circ$C, $CP = 2$. Available duty = 120 kW. (Includes the carried-over residual; H2 actually arrives at the pinch zone at 95$^\circ$C, but we treat the segment from 90$^\circ$C below as the below-pinch portion; the 5$^\circ$C from 95 to 90 is sometimes handled as a small "below-pinch" adjustment.)
 
 - C1: $30 \to 80^\circ$C, $CP = 2$. Required duty = 100 kW.
 
@@ -499,40 +499,40 @@ $$
 
 - C1 ($CP = 2$) needs a hot stream with $CP \geq 2$. Both H1 ($CP = 3$) and H2 ($CP = 2$) qualify.
 
-- Choose H1–C1 first (larger $CP$ margin gives more design flexibility).
+- Choose H1-C1 first (larger $CP$ margin gives more design flexibility).
 
 
 
-- **Match H1–C1 below pinch and maximize.**
-
-$$
-Q_{H1, available below} = 3 \times (90 - 60) = 90kW
-$$
+- **Match H1-C1 below pinch and maximize.**
 
 $$
-Q_{C1, below} = 2 \times (80 - 30) = 100kW
+Q_{H1, available below} = 3 \times (90 - 60) = 90 kW
+$$
+
+$$
+Q_{C1, below} = 2 \times (80 - 30) = 100 kW
 $$
 
     Hot-side is binding (H1 has only 90 kW available). Take $Q = 90$ kW. H1 reaches its target 60$^\circ$C; C1 only heats to
 
 $$
-T_{C1}^{out} = 30 + \frac{90}{2} = 75^\circC
+T_{C1}^{out} = 30 + \frac{90}{2} = 75^\circ C
 $$
 
     C1 still needs 5$^\circ$C of heating, $= 2 \times 5 = 10$ kW, which we attempt from H2.
 
 
-- **Match H2–C1 (residual) below pinch.**
+- **Match H2-C1 (residual) below pinch.**
     H2 (carrying its 5$^\circ$C above-pinch residual but here treating it as entering the below-pinch zone at 90$^\circ$C with $CP = 2$ and need to cool to 30$^\circ$C, duty 120 kW available) can heat C1 from 75 to 80$^\circ$C: duty $= 2 \times 5 = 10$ kW. H2 cools by $10/2 = 5^\circ$C, leaving it at $90 - 5 = 85^\circ$C still needing to fall to 30$^\circ$C.
 
 
 - **Cold-utility consumption below pinch.**
-    Remaining duty to cool H2 to its target: $2 \times (85 - 30) = 110$ kW. Wait — the MER target says we should need only 50 kW of cold utility, not 110. Let me re-examine the network. With the segments accounted as in the transcript:
+    Remaining duty to cool H2 to its target: $2 \times (85 - 30) = 110$ kW. Wait  -  the MER target says we should need only 50 kW of cold utility, not 110. Let me re-examine the network. With the segments accounted as in the transcript:
 
 
 - H1 fully cooled to 60$^\circ$C using C1 (90 kW absorbed).
 
-- H2 cooled from 95 to 80$^\circ$C using a small cold-utility connection (10 kW), since the transcript notes “we're not going to worry about crossing the minimum approach temperature” for this small swing.
+- H2 cooled from 95 to 80$^\circ$C using a small cold-utility connection (10 kW), since the transcript notes "we're not going to worry about crossing the minimum approach temperature" for this small swing.
 
 - H2 then needs to drop from 80 to 30$^\circ$C $= 50^\circ$C $\times$ $CP = 2$ $= $ **100 kW** of additional cold utility.
 
@@ -562,9 +562,9 @@ Stream splitting adds a control valve and instrumentation cost but is often nece
 
 ```{note}
 **Heat Loops**
-The MER-optimal network often has more heat exchangers than strictly necessary because each pinch match counts as a separate unit. After synthesis, look for **heat loops**: closed paths through the network alternating between hot streams and cold streams. Breaking a loop (by transferring duty from one exchanger to another) reduces the total number of exchangers by one but introduces a $\Delta T$ violation that must be “relaxed” (paying a small utility penalty). The trade is fewer exchangers vs. slightly more utility; the optimum depends on capital-vs-utility cost.
+The MER-optimal network often has more heat exchangers than strictly necessary because each pinch match counts as a separate unit. After synthesis, look for **heat loops**: closed paths through the network alternating between hot streams and cold streams. Breaking a loop (by transferring duty from one exchanger to another) reduces the total number of exchangers by one but introduces a $\Delta T$ violation that must be "relaxed" (paying a small utility penalty). The trade is fewer exchangers vs. slightly more utility; the optimum depends on capital-vs-utility cost.
 
-The Linnhoff–Mason rule of thumb: the minimum number of units (exchangers + heaters + coolers) is $N_{\min} = (N_s + N_u - 1)$, where $N_s$ is the number of process streams and $N_u$ is the number of utilities. If the MER-optimal network exceeds this count, loops exist and can be broken.
+The Linnhoff-Mason rule of thumb: the minimum number of units (exchangers + heaters + coolers) is $N_{\min} = (N_s + N_u - 1)$, where $N_s$ is the number of process streams and $N_u$ is the number of utilities. If the MER-optimal network exceeds this count, loops exist and can be broken.
 ```
 
 
@@ -586,7 +586,7 @@ Compute $Q_{H,\min}$, $Q_{C,\min}$, and the pinch temperatures.
 
 
 ```{dropdown} Solution Steps
-- **Shift cold-stream temperatures up by $\Delta T_{\min**/2$ and hot-stream temperatures down by $\Delta T_{\min}/2 = 5^\circ$C} to align them in a single “interval temperature” axis:
+- **Shift cold-stream temperatures up by $\Delta T_{\min**/2$ and hot-stream temperatures down by $\Delta T_{\min}/2 = 5^\circ$C} to align them in a single "interval temperature" axis:
 
 
 - H1 (shifted): $170 \to 40$.
@@ -600,25 +600,25 @@ Compute $Q_{H,\min}$, $Q_{C,\min}$, and the pinch temperatures.
 
 
 - **List unique interval temperatures in descending order.**
-    ${170, 160, 120, 117, 60, 45, 40, 25}$
+    $\{170, 160, 120, 117, 60, 45, 40, 25\}$
 
 
 - **For each interval, sum $CP_{hot** - CP_{cold}$ for streams present in that interval.} A positive value means surplus heat (more hot capacity than cold); negative means deficit.
 
 
-- 170–160: only H1 present (cold C1 doesn't reach here). Net $CP = +10$. $\Delta T = 10$. Surplus $= +100$ kW.
+- 170-160: only H1 present (cold C1 doesn't reach here). Net $CP = +10$. $\Delta T = 10$. Surplus $= +100$ kW.
 
-- 160–120: H1 + C1. Net $CP = 10 - 20 = -10$. $\Delta T = 40$. Deficit $= -400$ kW.
+- 160-120: H1 + C1. Net $CP = 10 - 20 = -10$. $\Delta T = 40$. Deficit $= -400$ kW.
 
-- 120–117: H1 + H2 + C1. Net $CP = 10 + 40 - 20 = +30$. $\Delta T = 3$. Surplus $= +90$ kW.
+- 120-117: H1 + H2 + C1. Net $CP = 10 + 40 - 20 = +30$. $\Delta T = 3$. Surplus $= +90$ kW.
 
-- 117–60: H1 + H2 + C1 + C2. Net $CP = 10 + 40 - 20 - 15 = +15$. $\Delta T = 57$. Surplus $= +855$ kW.
+- 117-60: H1 + H2 + C1 + C2. Net $CP = 10 + 40 - 20 - 15 = +15$. $\Delta T = 57$. Surplus $= +855$ kW.
 
-- 60–45: H1 + C1 + C2 (H2 ended at 60). Net $CP = 10 - 20 - 15 = -25$. $\Delta T = 15$. Deficit $= -375$ kW.
+- 60-45: H1 + C1 + C2 (H2 ended at 60). Net $CP = 10 - 20 - 15 = -25$. $\Delta T = 15$. Deficit $= -375$ kW.
 
-- 45–40: H1 + C1 (H2 done, C2 done? C2 ends at 45 shifted). Need to check: C2 shifted target was 117, source 45. So C2 is in 45–117 only. At 45–40: only H1 and C1. Net $CP = 10 - 20 = -10$. $\Delta T = 5$. Deficit $= -50$ kW.
+- 45-40: H1 + C1 (H2 done, C2 done? C2 ends at 45 shifted). Need to check: C2 shifted target was 117, source 45. So C2 is in 45-117 only. At 45-40: only H1 and C1. Net $CP = 10 - 20 = -10$. $\Delta T = 5$. Deficit $= -50$ kW.
 
-- 40–25: only C1 present. Net $CP = -20$. $\Delta T = 15$. Deficit $= -300$ kW.
+- 40-25: only C1 present. Net $CP = -20$. $\Delta T = 15$. Deficit $= -300$ kW.
 
 
 
@@ -627,11 +627,11 @@ Compute $Q_{H,\min}$, $Q_{C,\min}$, and the pinch temperatures.
 
 - Above 170: 0.
 
-- After 170–160: $0 + 100 = 100$.
+- After 170-160: $0 + 100 = 100$.
 
-- After 160–120: $100 - 400 = -300$. *Negative cascade values are infeasible* — they would mean transferring heat from cold to hot. Fix: add a hot utility at the top equal to the most negative cascade value, here $+300$ kW.
+- After 160-120: $100 - 400 = -300$. *Negative cascade values are infeasible*  -  they would mean transferring heat from cold to hot. Fix: add a hot utility at the top equal to the most negative cascade value, here $+300$ kW.
 
-- After hot utility: top now starts at $+300$. After 170–160: 400. After 160–120: 0. After 120–117: 90. After 117–60: 945. After 60–45: 570. After 45–40: 520. After 40–25: 220.
+- After hot utility: top now starts at $+300$. After 170-160: 400. After 160-120: 0. After 120-117: 90. After 117-60: 945. After 60-45: 570. After 45-40: 520. After 40-25: 220.
 ```
 
 
@@ -641,9 +641,9 @@ Compute $Q_{H,\min}$, $Q_{C,\min}$, and the pinch temperatures.
 
 - $Q_{H,\min} = 300$ kW (the hot utility we added at the top to make the cascade feasible).
 
-- $Q_{C,\min} = 220$ kW (the residual cascade at the bottom — what must be removed by cold utility).
+- $Q_{C,\min} = 220$ kW (the residual cascade at the bottom  -  what must be removed by cold utility).
 
-- **Pinch** is where the corrected cascade first reaches zero. That happened at the bottom of the 160–120 interval, i.e. at *interval* temperature 120$^\circ$C. Converting back: hot pinch $= 120 + 5 = 125^\circ$C, cold pinch $= 120 - 5 = 115^\circ$C.
+- **Pinch** is where the corrected cascade first reaches zero. That happened at the bottom of the 160-120 interval, i.e. at *interval* temperature 120$^\circ$C. Converting back: hot pinch $= 120 + 5 = 125^\circ$C, cold pinch $= 120 - 5 = 115^\circ$C.
 
 
 
@@ -662,7 +662,7 @@ $$
 
 
 ```{note}
-**Exam Tips — Pinch Analysis**
+**Exam Tips  -  Pinch Analysis**
 - Memorize the CP rule: cold dominates above the pinch, hot dominates below.
 
 - Memorize the three pinch rules: no cold utility above, no hot utility below, no heat across.
@@ -701,9 +701,9 @@ where:
 ```{tip}
 - $C_P$: purchase cost in the target year [\$].
 
-- $C_B$: base cost — carbon steel, low pressure, reference year.
+- $C_B$: base cost  -  carbon steel, low pressure, reference year.
 
-- $F_M$: material factor. Typical values: CS 1.0, 304 SS 1.7, 316 SS 2.1, Monel 3.0, Hastelloy C 4.0–6.0, Ti 6.0–8.0. Vary with equipment type.
+- $F_M$: material factor. Typical values: CS 1.0, 304 SS 1.7, 316 SS 2.1, Monel 3.0, Hastelloy C 4.0-6.0, Ti 6.0-8.0. Vary with equipment type.
 
 - $F_P$: pressure factor. For shell-and-tube exchangers, $F_P$ rises about linearly with pressure from 1.0 at low pressure to $\sim$2 at 30 bar.
 
@@ -785,7 +785,7 @@ $$
 C_{P,now} = 23{,}000 \times 2.015 = \$46{,}346 \approx \$46{,}300
 $$
 
-- **Verification.** The CEPCI roughly doubled, so the cost roughly doubled — consistent with the simple inflation interpretation.
+- **Verification.** The CEPCI roughly doubled, so the cost roughly doubled  -  consistent with the simple inflation interpretation.
 ```
 
 
@@ -807,7 +807,7 @@ $$
 
 - $C_2 = 8500 \times 1.933 = \$16{,}430 \approx \$16{,}400$.
 
-- **Verification.** Tripling the size more than doubles but less than triples the cost — exactly the spirit of the six-tenths rule. A doubled-size pump would cost $\$8500 \times 2^{0.6} = \$8500 \times 1.516 = \$12{,}900$.
+- **Verification.** Tripling the size more than doubles but less than triples the cost  -  exactly the spirit of the six-tenths rule. A doubled-size pump would cost $\$8500 \times 2^{0.6} = \$8500 \times 1.516 = \$12{,}900$.
 ```
 
 
@@ -837,15 +837,15 @@ $$
 C_{BM} = F_{BM} \cdot C_{P, now} = 3.0 \times 177{,}700 = \$533{,}000
 $$
 
-- **Verification.** Sanity: a CS base of \$28{,}000 grew to a 316 SS, 20 barg, installed cost of \$533{,}000 — a 19$\times$ multiplier. The breakdown: 3$\times$ from $F_{BM}$, 2$\times$ from CEPCI, 2.1$\times$ from material, 1.5$\times$ from pressure. Product: $3 \times 2 \times 2.1 \times 1.5 \approx 19$. \checkmark
+- **Verification.** Sanity: a CS base of \$28{,}000 grew to a 316 SS, 20 barg, installed cost of \$533{,}000  -  a 19$\times$ multiplier. The breakdown: 3$\times$ from $F_{BM}$, 2$\times$ from CEPCI, 2.1$\times$ from material, 1.5$\times$ from pressure. Product: $3 \times 2 \times 2.1 \times 1.5 \approx 19$. \checkmark
 ```
 
 
 ```{note}
-**Exam Tips — Equipment Cost**
+**Exam Tips  -  Equipment Cost**
 - Memorize: CEPCI ratio is always *new/old*, never the other way.
 
-- The six-tenths exponent default is 0.6, but for some equipment classes (e.g. pumps 0.4–0.6, vessels 0.6–0.8, compressors 0.7–0.8) the exponent differs.
+- The six-tenths exponent default is 0.6, but for some equipment classes (e.g. pumps 0.4-0.6, vessels 0.6-0.8, compressors 0.7-0.8) the exponent differs.
 
 - Bare-module $F_{BM}$ includes installation; purchase $C_P$ does not. The two differ by $\sim$3$\times$ for most fluid-process equipment.
 
@@ -870,7 +870,7 @@ Before tackling capitalized cost, present-worth, NPV, or IRR, you must be fluent
 
 - $n$ = number of compounding periods (years if compounded annually).
 
-The six factors connect $P$, $F$, and $A$ in all directions. The standard notation is $(X/Y, i%, n)$: “find $X$ given $Y$.”
+The six factors connect $P$, $F$, and $A$ in all directions. The standard notation is $(X/Y, i%, n)$: "find $X$ given $Y$."
 ```
 
 
@@ -880,7 +880,7 @@ The six factors connect $P$, $F$, and $A$ in all directions. The standard notati
 - **Single-payment compound amount $(F/P, i%, n)$.** A present sum $P$ earning rate $i$ compounded $n$ times has future value
 
 $$
-F = P(1 + i)^n
+F = P (1 + i)^n
 $$
 
     Derivation: after one period, $P$ becomes $P + P i = P(1+i)$. After two, $P(1+i)(1+i) = P(1+i)^2$. By induction, after $n$, $P(1+i)^n$.
@@ -898,7 +898,7 @@ $$
 - **Uniform-series compound amount $(F/A, i%, n)$.** Sum the future values of each of the $n$ end-of-year payments $A$:
 
 $$
-F = A + A(1+i) + A(1+i)^2 + … + A(1+i)^{n-1} = A \sum_{k=0}^{n-1}(1+i)^k
+F = A + A(1+i) + A(1+i)^2 + ... + A(1+i)^{n-1} = A \sum_{k=0}^{n-1}(1+i)^k
 $$
 
     The geometric series sums to
@@ -924,7 +924,7 @@ $$
 - **Capital recovery $(A/P, i%, n)$.** Combine $(F/P)$ and $(A/F)$:
 
 $$
-A = P (1+i)^n \cdot \frac{i}{(1+i)^n - 1} = P \cdot \frac{i(1+i)^n}{(1+i)^n - 1}
+A = P (1+i)^n \cdot \frac{i}{(1+i)^n - 1} = P \cdot \frac{i (1+i)^n}{(1+i)^n - 1}
 $$
 
     The uniform annual payment $A$ that pays off a present principal $P$ in $n$ periods (mortgage-style amortization).
@@ -933,13 +933,13 @@ $$
 - **Uniform-series present worth $(P/A, i%, n)$.** Inverse of capital recovery:
 
 $$
-P = A \cdot \frac{(1+i)^n - 1}{i(1+i)^n}
+P = A \cdot \frac{(1+i)^n - 1}{i (1+i)^n}
 $$
 
     The present worth of $n$ end-of-year payments of $A$.
 
 
-- **Special case — perpetuity ($n \to \infty$):** $P/A \to 1/i$, so $P = A/i$. The present worth of an infinite uniform series is simply the annual payment divided by the rate. This is the foundation of capitalized-cost analysis below.
+- **Special case  -  perpetuity ($n \to \infty$):** $P/A \to 1/i$, so $P = A/i$. The present worth of an infinite uniform series is simply the annual payment divided by the rate. This is the foundation of capitalized-cost analysis below.
 ```
 
 
@@ -949,13 +949,13 @@ $$
 
 - $(P/F, i, n)$: $P = F/(1+i)^n$
 
-- $(F/A, i, n)$: $F = A\dfrac{(1+i)^n - 1}{i}$
+- $(F/A, i, n)$: $F = A \dfrac{(1+i)^n - 1}{i}$
 
-- $(A/F, i, n)$: $A = F\dfrac{i}{(1+i)^n - 1}$
+- $(A/F, i, n)$: $A = F \dfrac{i}{(1+i)^n - 1}$
 
-- $(A/P, i, n)$: $A = P\dfrac{i(1+i)^n}{(1+i)^n - 1}$
+- $(A/P, i, n)$: $A = P \dfrac{i(1+i)^n}{(1+i)^n - 1}$
 
-- $(P/A, i, n)$: $P = A\dfrac{(1+i)^n - 1}{i(1+i)^n}$
+- $(P/A, i, n)$: $P = A \dfrac{(1+i)^n - 1}{i(1+i)^n}$
 ```
 
 
@@ -979,7 +979,7 @@ For PE-exam problems, *always use the effective rate per compounding period* whe
 ### Worked Example: Mixing the Factors
 
 ```{prf:example} Combination Problem: Loan with Balloon Payment
-A piece of equipment is purchased for \$200,000 with a 5-year loan at 8% annual interest. The borrower pays \$20,000 at the end of each year for 5 years, then a single “balloon” payment at the end of year 5 to retire the remaining principal. Find the balloon payment.
+A piece of equipment is purchased for \$200,000 with a 5-year loan at 8% annual interest. The borrower pays \$20,000 at the end of each year for 5 years, then a single "balloon" payment at the end of year 5 to retire the remaining principal. Find the balloon payment.
 ```
 
 
@@ -987,7 +987,7 @@ A piece of equipment is purchased for \$200,000 with a 5-year loan at 8% annual 
 - **Future value of the principal alone (had no payments been made).**
 
 $$
-F_{P, 5} = P(1+i)^5 = 200{,}000 \times 1.08^5 = 200{,}000 \times 1.4693 = \$293{,}860
+F_{P, 5} = P (1+i)^5 = 200{,}000 \times 1.08^5 = 200{,}000 \times 1.4693 = \$293{,}860
 $$
 
 - **Future value of the annual payments.**
@@ -1013,21 +1013,21 @@ PW_{balloon} = 176{,}540 / 1.08^5 = 176{,}540 / 1.4693 = \$120{,}140
 $$
 
 $$
-PW_{total} = 79{,}860 + 120{,}140 = \$200{,}000 \checkmark
+PW_{total} = 79{,}860 + 120{,}140 = \$200{,}000  \checkmark
 $$
 
 ```
 
 
 ```{note}
-**Exam Tips — Time Value of Money**
+**Exam Tips  -  Time Value of Money**
 - Memorize the names and the algebra of the six factors. Tables (compound-interest tables) are available in most PE references, but knowing the closed-form formulas lets you solve any rate or period.
 
-- “Annual end-of-year” is the default convention. Beginning-of-year (annuity due) shifts each cash flow one period earlier and the present worth is multiplied by $(1+i)$.
+- "Annual end-of-year" is the default convention. Beginning-of-year (annuity due) shifts each cash flow one period earlier and the present worth is multiplied by $(1+i)$.
 
 - Perpetuity present worth: $P = A/i$. Memorize.
 
-- Nominal-vs-effective trap: if compounded $m$ times per year at nominal $r$, use $r/m$ per period and $n \times m$ periods — not $r$ per year and $n$ years.
+- Nominal-vs-effective trap: if compounded $m$ times per year at nominal $r$, use $r/m$ per period and $n \times m$ periods  -  not $r$ per year and $n$ years.
 ```
 
 
@@ -1059,13 +1059,13 @@ Let $C_I$ = initial purchase + install + first-time annualized-maintenance prese
 The present worth of a single replacement at time $n$ is $C_R / (1+i)^n$. The present worth of a replacement every $n$ years forever is the sum of a geometric series:
 
 $$
-P_{rep} = \frac{C_R}{(1+i)^n} + \frac{C_R}{(1+i)^{2n}} + … = \frac{C_R / (1+i)^n}{1 - 1/(1+i)^n} = \frac{C_R}{(1+i)^n - 1}
+P_{rep} = \frac{C_R}{(1+i)^n} + \frac{C_R}{(1+i)^{2n}} + ... = \frac{C_R / (1+i)^n}{1 - 1/(1+i)^n} = \frac{C_R}{(1+i)^n - 1}
 $$
 
 So
 
 $$
-K = C_I + \frac{C_R{(1+i)^n - 1}}   (Equation 1, capitalized cost)
+K = C_I + \frac{C_R}{(1+i)^n - 1}    (Equation 1, capitalized cost)
 $$
 
 ```
@@ -1115,7 +1115,7 @@ $$
 P_{A,maint} = 2{,}000 \times 3.312 = \$6{,}624
 $$
 
-    Total “initial cost” for Reactor A:
+    Total "initial cost" for Reactor A:
 
 $$
 C_{I,A} = 25{,}000 + 6{,}624 = \$31{,}624
@@ -1155,7 +1155,7 @@ $$
 P_{B,ovh} = \frac{3{,}500}{(1.08)^3} = \frac{3{,}500}{1.2597} = \$2{,}778
 $$
 
-- **Total “initial cost” for Reactor B.**
+- **Total "initial cost" for Reactor B.**
 
 $$
 C_{I,B} = 15{,}000 + 18{,}492 + 2{,}778 = \$36{,}270
@@ -1176,7 +1176,7 @@ $$
 - **Decision.** $K_B < K_A$ by about \$13{,}000. **Reactor B is the better long-term investment.**
 
 
-- **Verification.** Although B has a higher annual cost and overhauls, its 6-year life means fewer replacement events per century compared to A's 4-year life. The 50% longer life-cycle more than compensates for B's larger per-cycle cost and absence of salvage credit. This is the typical pattern — longer-life equipment usually wins on capitalized-cost basis, even at higher per-cycle costs, provided $i$ is not extreme.
+- **Verification.** Although B has a higher annual cost and overhauls, its 6-year life means fewer replacement events per century compared to A's 4-year life. The 50% longer life-cycle more than compensates for B's larger per-cycle cost and absence of salvage credit. This is the typical pattern  -  longer-life equipment usually wins on capitalized-cost basis, even at higher per-cycle costs, provided $i$ is not extreme.
 ```
 
 
@@ -1208,21 +1208,21 @@ Using the same Reactor A and B data, find the interest rate at which the two hav
 
     At $i = 30%$, B still wins.
 
-- **Interpretation.** At very high interest rates, the perpetual replacement term becomes negligible (the future is heavily discounted), and the comparison reduces to “which is cheaper today.” B's lower initial purchase keeps it ahead. For this problem, B wins at all realistic interest rates.
+- **Interpretation.** At very high interest rates, the perpetual replacement term becomes negligible (the future is heavily discounted), and the comparison reduces to "which is cheaper today." B's lower initial purchase keeps it ahead. For this problem, B wins at all realistic interest rates.
 
-- **General principle.** As $i \to \infty$, $K \to C_I$, so the comparison reduces to upfront cost. As $i \to 0$, the perpetuity dominates, and the comparison depends on the long-run cost per year. Reactor A could only win at very low $i$ if its per-year cost (including capitalized maintenance) were lower than B's — here it is not.
+- **General principle.** As $i \to \infty$, $K \to C_I$, so the comparison reduces to upfront cost. As $i \to 0$, the perpetuity dominates, and the comparison depends on the long-run cost per year. Reactor A could only win at very low $i$ if its per-year cost (including capitalized maintenance) were lower than B's  -  here it is not.
 ```
 
 
 ```{note}
-**Exam Tips — Capitalized Cost**
+**Exam Tips  -  Capitalized Cost**
 - Use capitalized cost when alternatives have *different lives* and will be replaced indefinitely.
 
 - Always capitalize annual costs into $C_I$ first, then apply Equation 1. Failing to do this is the single most common error.
 
 - For perpetuity, $P_{perp} = A/i$. For a finite annuity, $(P/A, i, n)$.
 
-- The denominator of the replacement term is $(1+i)^n - 1$ — not $(1+i)^n$. Memorize.
+- The denominator of the replacement term is $(1+i)^n - 1$  -  not $(1+i)^n$. Memorize.
 ```
 
 
@@ -1303,7 +1303,7 @@ Same data: A has 4-year life and salvage \$3{,}000, annual maintenance \$2{,}000
 
 
 
-- **PW of A's annual maintenance (years 1–12).**
+- **PW of A's annual maintenance (years 1-12).**
 
 $$
 PW_{maint} = -2{,}000 \cdot (P/A, 8, 12)
@@ -1345,7 +1345,7 @@ $$
 
 - Year 0: $-15{,}000$ (purchase).
 
-- Years 1–12: $-4{,}000$ each (annual maintenance).
+- Years 1-12: $-4{,}000$ each (annual maintenance).
 
 - Year 3: $-3{,}500$ (overhaul).
 
@@ -1391,7 +1391,7 @@ $$
 ```
 
 
-### Annual-Equivalent (AE) Cost — The Third Way
+### Annual-Equivalent (AE) Cost  -  The Third Way
 
 ```{note}
 A third comparison method, equivalent to PW but expressed as a uniform annual cost, is the **annual equivalent (AE)**:
@@ -1412,7 +1412,7 @@ B is cheaper by about \$1{,}000/yr. AE is preferred when stakeholders think in a
 
 
 ```{note}
-**Exam Tips — Present-Worth Analysis**
+**Exam Tips  -  Present-Worth Analysis**
 - Alternatives must be evaluated over the *same* number of years. LCM is the standard choice.
 
 - Use effective $i$ per period when compounding $> 1$/year.
@@ -1433,10 +1433,10 @@ Before any equipment is sized, before any land is purchased, a chemist's candida
 Choose the desired product as the basis: 1 kg of product. Compute the mass of each reactant and byproduct that participates in producing 1 kg of product, using stoichiometric coefficients and molecular weights:
 
 $$
-mass of species  i  per kg product = \frac{|\nu_i|M_i}{|\nu_P|M_P}
+mass of species  i  per kg product = \frac{|\nu_i| M_i}{|\nu_P| M_P}
 $$
 
-where $\nu_i$ is the stoichiometric coefficient of species $i$ (negative for reactants, positive for products), $M_i$ is its molecular weight, and subscript $P$ is the desired product. This is the same operation in Felder | Rousseau's introductory mass-balance chapters — you are reading the stoichiometry on a mass rather than molar basis.
+where $\nu_i$ is the stoichiometric coefficient of species $i$ (negative for reactants, positive for products), $M_i$ is its molecular weight, and subscript $P$ is the desired product. This is the same operation in Felder | Rousseau's introductory mass-balance chapters  -  you are reading the stoichiometry on a mass rather than molar basis.
 ```
 
 
@@ -1445,7 +1445,7 @@ where $\nu_i$ is the stoichiometric coefficient of species $i$ (negative for rea
 ```{important}
 
 $$
-GEP = \sum_{products} \frac{|\nu_i|M_i}{|\nu_P|M_P}p_i - \sum_{reactants} \frac{|\nu_j|M_j}{|\nu_P|M_P}p_j
+GEP = \sum_{products} \frac{|\nu_i| M_i}{|\nu_P| M_P} p_i  -  \sum_{reactants} \frac{|\nu_j| M_j}{|\nu_P| M_P} p_j
 $$
 
 where $p_i$ is the market price of species $i$ in \$/kg.
@@ -1478,7 +1478,7 @@ Prices: acetylene \$1.85/kg, HCl \$0.30/kg, VCM \$0.75/kg.
 **Route 2:** Oxychlorination/cracking of ethane.
 
 $$
-\mathrm{C_2H_6 + Cl_2 + \tfrac{1}{2}O_2 \rightarrow C_2H_3Cl + H_2O + HCl}
+\mathrm{C_2H_6 + Cl_2 + \tfrac{1}{2} O_2 \rightarrow C_2H_3Cl + H_2O + HCl}
 $$
 
 Prices: ethane \$0.20/kg, Cl$_2$ \$0.25/kg, O$_2$ \$0 (from air), VCM \$0.75/kg, byproduct HCl credit \$0.30/kg, H$_2$O \$0.
@@ -1565,7 +1565,7 @@ $$
 - **Verification.** Modern industrial VCM production is overwhelmingly via the ethylene/EDC oxychlorination route (a close cousin of Route 2), confirming the GEP-based selection in practice.
 
 
-- **What GEP does *not** tell you.* A GEP of \$0.545/kg leaves room for utilities (steam, electricity), labor, depreciation, taxes, and a profit margin. As a rule of thumb, 30–70% of GEP is consumed by these downstream costs, so the bottom-line plant margin is often \$0.10–\$0.35/kg.
+- **What GEP does *not** tell you.* A GEP of \$0.545/kg leaves room for utilities (steam, electricity), labor, depreciation, taxes, and a profit margin. As a rule of thumb, 30-70% of GEP is consumed by these downstream costs, so the bottom-line plant margin is often \$0.10-\$0.35/kg.
 ```
 
 
@@ -1595,12 +1595,12 @@ $$
 
 $$
 
-- **Sanity check.** If Q had zero disposal cost instead, GEP would be \$0.550. The disposal of 0.1 kg/kg of waste reduces profit by \$0.04 — about 8% of margin. If disposal cost rose to \$5/kg (e.g. a regulated waste), the penalty would be 0.1 $\times$ 5 = \$0.50/kg, almost killing the route. Byproduct economics are often the deciding factor in route selection.
+- **Sanity check.** If Q had zero disposal cost instead, GEP would be \$0.550. The disposal of 0.1 kg/kg of waste reduces profit by \$0.04  -  about 8% of margin. If disposal cost rose to \$5/kg (e.g. a regulated waste), the penalty would be 0.1 $\times$ 5 = \$0.50/kg, almost killing the route. Byproduct economics are often the deciding factor in route selection.
 ```
 
 
 ```{note}
-**Exam Tips — GEP**
+**Exam Tips  -  GEP**
 - Basis = 1 kg of *desired* product. Everything else scales by mass ratio against the product.
 
 - Negative GEP kills a route; no clever engineering can recover it.
@@ -1612,7 +1612,7 @@ $$
 
 
 ## Net Present Value and Internal Rate of Return
-The Net Present Value (NPV) and Internal Rate of Return (IRR) are the two headline metrics by which a corporate investment committee evaluates a multi-year venture. NPV asks “how much value, in today's dollars, does this project create?” IRR asks “what discount rate would make this project exactly break even?”
+The Net Present Value (NPV) and Internal Rate of Return (IRR) are the two headline metrics by which a corporate investment committee evaluates a multi-year venture. NPV asks "how much value, in today's dollars, does this project create?" IRR asks "what discount rate would make this project exactly break even?"
 
 ### The NPV Equation
 
@@ -1644,7 +1644,7 @@ where:
 
 ```{note}
 **Why Depreciation Matters**
-Depreciation is not a cash outflow — the cash was spent when the equipment was purchased. But the tax code allows the company to deduct a portion of the original investment each year, reducing taxable income. The cash flow in year $k$ is therefore:
+Depreciation is not a cash outflow  -  the cash was spent when the equipment was purchased. But the tax code allows the company to deduct a portion of the original investment each year, reducing taxable income. The cash flow in year $k$ is therefore:
 
 $$
 CF_k = (S_k - C_k - D_k)(1 - t) + D_k
@@ -1655,13 +1655,13 @@ where:
 
 - $S_k$ = revenue (Sales) in year $k$.
 
-- $C_k$ = cash production cost in year $k$ (raw materials, utilities, labor, overhead — but *not* depreciation).
+- $C_k$ = cash production cost in year $k$ (raw materials, utilities, labor, overhead  -  but *not* depreciation).
 
 - $D_k$ = depreciation charge in year $k$.
 
-- $t$ = effective tax rate (federal + state + local, typically 25–40% in the US).
+- $t$ = effective tax rate (federal + state + local, typically 25-40% in the US).
 
-The depreciation appears twice: once subtracted to compute taxable income $(S - C - D)$, then added back because it is non-cash. The net effect is that depreciation *shifts cash flow earlier in time*; the total cash over the project life is unchanged, but earlier cash is worth more after discounting — so depreciation increases NPV.
+The depreciation appears twice: once subtracted to compute taxable income $(S - C - D)$, then added back because it is non-cash. The net effect is that depreciation *shifts cash flow earlier in time*; the total cash over the project life is unchanged, but earlier cash is worth more after discounting  -  so depreciation increases NPV.
 ```
 
 
@@ -1681,7 +1681,7 @@ For 7-year MACRS the percentages start at 14.29% in year 1 and finish in year 8 
 This is the transcript's example, with every step.
 
 ```{prf:example} NPV with MACRS Depreciation and Working Capital
-A chemical plant is built 2007–2009 with total depreciable capital \$90M (sunk \$30M per year). Working capital \$40M required at end of 2009. Production begins 2010 at 50% of nameplate; 75% in 2011; 100% thereafter through 2021. At full capacity: sales \$150M/yr, cash production cost \$100M/yr. In ramp-up: 2010 sales \$75M, cost \$55M; 2011 sales \$113M, cost \$78M. MACRS 7-year depreciation. Tax rate 40%. Cost of capital 15%. Compute NPV.
+A chemical plant is built 2007-2009 with total depreciable capital \$90M (sunk \$30M per year). Working capital \$40M required at end of 2009. Production begins 2010 at 50% of nameplate; 75% in 2011; 100% thereafter through 2021. At full capacity: sales \$150M/yr, cash production cost \$100M/yr. In ramp-up: 2010 sales \$75M, cost \$55M; 2011 sales \$113M, cost \$78M. MACRS 7-year depreciation. Tax rate 40%. Cost of capital 15%. Compute NPV.
 ```
 
 
@@ -1718,7 +1718,7 @@ A chemical plant is built 2007–2009 with total depreciable capital \$90M (sunk
 
 - 2017 (yr 8): 4.46% = \$4.01M
 
-- 2018–2021: \$0 (depreciation exhausted)
+- 2018-2021: \$0 (depreciation exhausted)
 ```
 
 
@@ -1802,7 +1802,7 @@ $$
     (The transcript's quoted NPV is +\$21.4M; small differences arise from the exact MACRS percentages used and from rounding. The signed result and order of magnitude match.)
 
 
-- **Cumulative discounted cash flow plot.** Tracking the running sum from 2007 onward, the cumulative crosses zero somewhere in 2018 — this is the **discounted payback period**, $\approx$ 11 years.
+- **Cumulative discounted cash flow plot.** Tracking the running sum from 2007 onward, the cumulative crosses zero somewhere in 2018  -  this is the **discounted payback period**, $\approx$ 11 years.
 
 
 - **Interpretation.** NPV $> 0$ at 15% cost of capital: the project creates value beyond what could be earned by investing the same \$90M+ at 15%. Accept.
@@ -1822,7 +1822,7 @@ $$
 
 **Computation:** no closed form exists; use a spreadsheet's Goal Seek or Solver to find $r$ such that NPV $= 0$. Alternatively, plot NPV vs. $r$ and read the zero-crossing.
 
-**Interpretation:** IRR is the project's intrinsic earning rate. “If we got this money back as interest from a bank, the equivalent interest rate would be IRR.” For the transcript's project, IRR $\approx 18.5%$, so the project beats a 15% hurdle rate by 3.5% — modest, but acceptable.
+**Interpretation:** IRR is the project's intrinsic earning rate. "If we got this money back as interest from a bank, the equivalent interest rate would be IRR." For the transcript's project, IRR $\approx 18.5%$, so the project beats a 15% hurdle rate by 3.5%  -  modest, but acceptable.
 ```
 
 
@@ -1848,11 +1848,11 @@ $$
 IRR \approx 10% + \frac{0.22}{0.22 + 1.44} \times 1% = 10% + 0.13% = 10.13%
 $$
 
-- **Verification.** At 10.13%, NPV is essentially zero — check: $-100 + 40/1.1013 + 50/1.2129 + 30/1.3361 = -100 + 36.32 + 41.22 + 22.45 = -0.01$. \checkmark
+- **Verification.** At 10.13%, NPV is essentially zero  -  check: $-100 + 40/1.1013 + 50/1.2129 + 30/1.3361 = -100 + 36.32 + 41.22 + 22.45 = -0.01$. \checkmark
 ```
 
 
-### NPV vs. IRR — When They Disagree
+### NPV vs. IRR  -  When They Disagree
 
 ```{note}
 **Mutually Exclusive Projects: Use NPV**
@@ -1867,7 +1867,7 @@ For non-conventional cash flows (multiple sign changes), IRR can have multiple s
 
 
 ```{note}
-**Exam Tips — NPV and IRR**
+**Exam Tips  -  NPV and IRR**
 - Cash flow $CF_k = (S_k - C_k - D_k)(1-t) + D_k = 0.6(S_k-C_k) + 0.4 D_k$ at $t = 40%$.
 
 - Depreciation is non-cash; add it back.
@@ -1878,7 +1878,7 @@ For non-conventional cash flows (multiple sign changes), IRR can have multiple s
 
 - For mutually exclusive projects, NPV beats IRR as the ranking criterion.
 
-- MACRS 5-year: ${20.00, 32.00, 19.20, 11.52, 11.52, 5.76}$. MACRS 7-year starts at 14.29%.
+- MACRS 5-year: $\{20.00, 32.00, 19.20, 11.52, 11.52, 5.76\}$. MACRS 7-year starts at 14.29%.
 ```
 
 
@@ -1912,7 +1912,7 @@ For non-conventional cash flows (multiple sign changes), IRR can have multiple s
 
 - HEN problems: putting cold utility above the pinch or hot utility below.
 
-- CP rule confusion: cold dominates *above*, hot dominates *below*. Memorize the alphabetical mnemonic “Above, Cold; Below, Hot.”
+- CP rule confusion: cold dominates *above*, hot dominates *below*. Memorize the alphabetical mnemonic "Above, Cold; Below, Hot."
 
 - Diagram-type confusion: stream tables don't go on BFDs; fail-safe actions don't go on PFDs; pipe specs only on P&IDs.
 

@@ -371,7 +371,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#present-worth-algebra">Present-Worth Algebra</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-decomposition-patterns">Common Decomposition Patterns</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#worked-example-reactor-a-vs-reactor-b-over-12-years">Worked Example: Reactor A vs. Reactor B over 12 Years</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#annual-equivalent-ae-cost-the-third-way">Annual-Equivalent (AE) Cost — The Third Way</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#annual-equivalent-ae-cost-the-third-way">Annual-Equivalent (AE) Cost  -  The Third Way</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gross-economic-profit-gep-analysis">Gross Economic Profit (GEP) Analysis</a><ul class="visible nav section-nav flex-column">
@@ -388,7 +388,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#worked-example-npv-of-a-15-year-venture">Worked Example: NPV of a 15-Year Venture</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-rate-of-return-irr">Internal Rate of Return (IRR)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#worked-example-iterating-to-find-irr">Worked Example: Iterating to Find IRR</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#npv-vs-irr-when-they-disagree">NPV vs. IRR — When They Disagree</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#npv-vs-irr-when-they-disagree">NPV vs. IRR  -  When They Disagree</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-engineering-economics-decision-tree">Summary: Engineering Economics Decision Tree</a></li>
@@ -414,9 +414,9 @@
 <p class="admonition-title">Note</p>
 <p><strong>The Three Diagram Types</strong></p>
 <ul class="simple">
-<li><p><strong>BFD — Block Flow Diagram.</strong> The minimum-detail view. Blocks (rectangles) for major unit operations (reactors, separators, possibly a critical compressor or steam generator), arrows for major streams, overall mass-flow rates on each stream, and a figure caption. Used in early conceptual design and in management-level presentations.</p></li>
-<li><p><strong>PFD — Process Flow Diagram.</strong> Every major equipment item is shown using its conventional symbol with a tag number; every process stream is numbered. A separate <em>stream table</em> reports composition, temperature, pressure, phase, and flow for each numbered stream. Utility streams are labeled by their lowercase abbreviation (cw, lps, etc.) at their inlet only. Control valves, individual block valves, and instruments are typically <em>not</em> shown.</p></li>
-<li><p><strong>P&amp;ID — Piping | Instrumentation Diagram.</strong> The construction document. Each line carries its pipe size, schedule, material spec, and insulation requirement; every valve has its tag, fail-safe action, and bypass; every control loop is shown with its ISA-5.1 instrument bubbles; vents, drains, sample points, and high-/low-point connections are explicit.</p></li>
+<li><p><strong>BFD  -  Block Flow Diagram.</strong> The minimum-detail view. Blocks (rectangles) for major unit operations (reactors, separators, possibly a critical compressor or steam generator), arrows for major streams, overall mass-flow rates on each stream, and a figure caption. Used in early conceptual design and in management-level presentations.</p></li>
+<li><p><strong>PFD  -  Process Flow Diagram.</strong> Every major equipment item is shown using its conventional symbol with a tag number; every process stream is numbered. A separate <em>stream table</em> reports composition, temperature, pressure, phase, and flow for each numbered stream. Utility streams are labeled by their lowercase abbreviation (cw, lps, etc.) at their inlet only. Control valves, individual block valves, and instruments are typically <em>not</em> shown.</p></li>
+<li><p><strong>P&amp;ID  -  Piping | Instrumentation Diagram.</strong> The construction document. Each line carries its pipe size, schedule, material spec, and insulation requirement; every valve has its tag, fail-safe action, and bypass; every control loop is shown with its ISA-5.1 instrument bubbles; vents, drains, sample points, and high-/low-point connections are explicit.</p></li>
 </ul>
 </div>
 <div class="admonition note">
@@ -435,15 +435,15 @@
 <p class="admonition-title">Tip</p>
 <p><strong>{Equipment Tag Letters (Turton, Seider conventions)}</strong></p>
 <ul class="simple">
-<li><p><strong>C</strong> — Compressor or turbine (e.g. C-101 = first compressor in plant area 100).</p></li>
-<li><p><strong>E</strong> — Heat exchanger (cooler, heater, condenser, reboiler, chiller).</p></li>
-<li><p><strong>H</strong> — Fired heater or furnace.</p></li>
-<li><p><strong>P</strong> — Pump.</p></li>
-<li><p><strong>R</strong> — Reactor.</p></li>
-<li><p><strong>T</strong> — Tower or column (distillation, absorption, stripping, extraction).</p></li>
-<li><p><strong>V</strong> — Vessel or drum (flash drum, reflux drum, knockout drum).</p></li>
-<li><p><strong>TK</strong> — Storage tank.</p></li>
-<li><p><strong>FE/FT</strong> — Flow element/transmitter (a P&amp;ID convention).</p></li>
+<li><p><strong>C</strong>  -  Compressor or turbine (e.g. C-101 = first compressor in plant area 100).</p></li>
+<li><p><strong>E</strong>  -  Heat exchanger (cooler, heater, condenser, reboiler, chiller).</p></li>
+<li><p><strong>H</strong>  -  Fired heater or furnace.</p></li>
+<li><p><strong>P</strong>  -  Pump.</p></li>
+<li><p><strong>R</strong>  -  Reactor.</p></li>
+<li><p><strong>T</strong>  -  Tower or column (distillation, absorption, stripping, extraction).</p></li>
+<li><p><strong>V</strong>  -  Vessel or drum (flash drum, reflux drum, knockout drum).</p></li>
+<li><p><strong>TK</strong>  -  Storage tank.</p></li>
+<li><p><strong>FE/FT</strong>  -  Flow element/transmitter (a P&amp;ID convention).</p></li>
 </ul>
 <p>The leading digit of the tag number identifies the plant area. E-203 = third heat exchanger in plant area 200. Suffix letters (A, B) denote parallel equipment (P-101A and P-101B = installed pump and its spare).</p>
 </div>
@@ -455,11 +455,11 @@
 <p><strong>BFD Conventions</strong></p>
 <ul class="simple">
 <li><p>Flow is drawn <strong>left to right</strong>; recycle loops are the only legal exception and must return to an upstream block.</p></li>
-<li><p>Equipment is <em>rectangles only</em>. Never realistic shapes on a BFD — save those for the PFD.</p></li>
+<li><p>Equipment is <em>rectangles only</em>. Never realistic shapes on a BFD  -  save those for the PFD.</p></li>
 <li><p>Only <em>critical</em> equipment is shown. Reactors and separators are mandatory. Pumps, most heat exchangers, storage tanks, and control valves are omitted unless they are essential to understanding the process intent (e.g. a flash-train compressor that enables the recycle).</p></li>
 <li><p>Major flow lines are shown with arrows. Besides blocks, arrows, and minimal text labels, nothing else belongs on a BFD.</p></li>
 <li><p>When lines must cross, the <em>horizontal</em> line stays solid and the <em>vertical</em> line is broken (drawn as an arc or a jog).</p></li>
-<li><p>Mass-flow rates are always shown on the inlet and outlet streams, in units that give 2–4 significant figures: lb/h, kg/h, ton/day. <em>Not</em> g/day (which would force unreadable 7+ digit numbers) and <em>not</em> mol/s (which obscures throughput).</p></li>
+<li><p>Mass-flow rates are always shown on the inlet and outlet streams, in units that give 2-4 significant figures: lb/h, kg/h, ton/day. <em>Not</em> g/day (which would force unreadable 7+ digit numbers) and <em>not</em> mol/s (which obscures throughput).</p></li>
 <li><p>Light (more volatile) components exit <em>higher</em> on the page than heavier ones. “Light” here means <em>volatility</em>, not molecular weight: ethanol (MW = 46) is lighter than water (MW = 18) in this sense because it is more volatile.</p></li>
 <li><p>For reactant inlets, the conventional ordering is either lightest-on-top (consistent with the volatility rule for products) or, alternatively, most-important-reactant-first (e.g. ethylene above oxygen for ethylene-oxide production because ethylene is the principal feedstock). Either is acceptable as long as the figure caption makes the choice clear.</p></li>
 <li><p>The diagram must have a figure number, descriptive caption, and a list of the main reactions when feasible. Avoid acronyms in the caption.</p></li>
@@ -524,7 +524,7 @@ An instrument is shown as a small circle (“balloon” or “bubble”) with a 
 <p>For the ethylene oxide production process, ethylene and oxygen feed a catalytic reactor where the main reaction is</p>
 <div class="math notranslate nohighlight">
 \[
-\mathrm{C_2H_4 + \tfrac{1}{2}O_2 \rightarrow C_2H_4O}
+\mathrm{C_2H_4 + \tfrac{1}{2} O_2 \rightarrow C_2H_4O}
 \]</div>
 <p>with side reactions producing <span class="math notranslate nohighlight">\(\mathrm{CO_2}\)</span> and <span class="math notranslate nohighlight">\(\mathrm{H_2O}\)</span>. The reactor effluent flashes; unreacted ethylene is recycled; ethylene oxide is purified in a downstream distillation train. Which diagram type would show each of the following? (a) the recycle of unreacted ethylene back to the reactor; (b) the fail-safe action of the cooling-water valve on the reactor jacket; © the molar composition of the bottoms stream from the second column; (d) the carbon-steel material specification of the reactor-effluent piping; (e) the overall production rate of ethylene oxide.</p>
 </section>
@@ -553,23 +553,23 @@ An instrument is shown as a small circle (“balloon” or “bubble”) with a 
 <span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Identify the critical equipment to put in blocks.</strong> Reactors and separators are mandatory; compressors and other equipment are included only if essential.</p></li>
-<li><p class="sd-card-text">Desulfurizer (reactor type, ZnO bed) — block 1.</p></li>
-<li><p class="sd-card-text">Steam reformer (reactor) — block 2.</p></li>
-<li><p class="sd-card-text">Recycle compressor (essential because it enables the high-pressure recycle) — block 3.</p></li>
-<li><p class="sd-card-text">Methanol synthesis reactor — block 4.</p></li>
-<li><p class="sd-card-text">Topping column (separator) — block 5.</p></li>
-<li><p class="sd-card-text">Refining column (separator) — block 6.</p></li>
+<li><p class="sd-card-text">Desulfurizer (reactor type, ZnO bed)  -  block 1.</p></li>
+<li><p class="sd-card-text">Steam reformer (reactor)  -  block 2.</p></li>
+<li><p class="sd-card-text">Recycle compressor (essential because it enables the high-pressure recycle)  -  block 3.</p></li>
+<li><p class="sd-card-text">Methanol synthesis reactor  -  block 4.</p></li>
+<li><p class="sd-card-text">Topping column (separator)  -  block 5.</p></li>
+<li><p class="sd-card-text">Refining column (separator)  -  block 6.</p></li>
 <li><p class="sd-card-text"><strong>Place flow arrows left to right.</strong> Natural gas in <span class="math notranslate nohighlight">\(\to\)</span> blocks 1, 2, 3, 4 in series <span class="math notranslate nohighlight">\(\to\)</span> block 5 <span class="math notranslate nohighlight">\(\to\)</span> block 6 <span class="math notranslate nohighlight">\(\to\)</span> methanol out the top, water out the bottom.</p></li>
 <li><p class="sd-card-text"><strong>Add the recycle.</strong> Unreacted syngas exits block 4 toward block 5 but is split; the recycle portion returns to block 3 (compressor inlet). The recycle line goes up and over the main flow, breaking the vertical line where it crosses the horizontal.</p></li>
 <li><p class="sd-card-text"><strong>Add inlet streams.</strong> Steam to block 2 inlet (sulfur-free natural gas + steam <span class="math notranslate nohighlight">\(\to\)</span> reformer). Recycle stream joins fresh feed at the compressor inlet.</p></li>
 <li><p class="sd-card-text"><strong>Add outlet streams.</strong> Light-gas purge from the top of block 5 (high on the page, since gases are lightest). Methanol product from the top of block 6 (lighter than water). Water from the bottom of block 6 (heaviest). Each labeled with kg/h or ton/day.</p></li>
 <li><p class="sd-card-text"><strong>Caption, reactions, figure number.</strong> “Figure 1. Block Flow Diagram of a steam-reforming methanol plant.” List the three reactions: (i) <span class="math notranslate nohighlight">\(\mathrm{CH_4 + H_2O \rightarrow CO + 3 H_2}\)</span> (steam reforming), (ii) <span class="math notranslate nohighlight">\(\mathrm{CO + 2H_2 \rightarrow CH_3OH}\)</span> (methanol synthesis), (iii) <span class="math notranslate nohighlight">\(\mathrm{CO_2 + 3H_2 \rightarrow CH_3OH + H_2O}\)</span> (CO<span class="math notranslate nohighlight">\(_2\)</span> pathway).</p></li>
-<li><p class="sd-card-text"><strong>Verification.</strong> Count of blocks: 6 (within the typical 4–12 range for a single-product plant). Inlet streams: 2 (natural gas, steam). Outlet streams: 3 (purge, methanol, water). Recycle: 1. All material balances close. \checkmark</p></li>
+<li><p class="sd-card-text"><strong>Verification.</strong> Count of blocks: 6 (within the typical 4-12 range for a single-product plant). Inlet streams: 2 (natural gas, steam). Outlet streams: 3 (purge, methanol, water). Recycle: 1. All material balances close. \checkmark</p></li>
 </ul>
 </div>
 </details><div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Exam Tips — Diagrams</strong></p>
+<p><strong>Exam Tips  -  Diagrams</strong></p>
 <ul class="simple">
 <li><p>Memorize the equipment letter tags. The most-tested ones are E, P, R, T, V, C.</p></li>
 <li><p>For an ISA bubble question, write down the first letter (variable) and the function letter(s) before guessing.</p></li>
@@ -592,7 +592,7 @@ For each stream you are given:</p>
 <ul class="simple">
 <li><p>Type: hot (must be cooled) or cold (must be heated).</p></li>
 <li><p>Source temperature <span class="math notranslate nohighlight">\(T_s\)</span> (initial) and target temperature <span class="math notranslate nohighlight">\(T_t\)</span> (required).</p></li>
-<li><p>Heat-capacity flow rate <span class="math notranslate nohighlight">\(CP \equiv mc_p\)</span> [kW/<span class="math notranslate nohighlight">\(^\circ\)</span>C or BTU/hr<span class="math notranslate nohighlight">\(\cdot ^\circ\)</span>F]. This is what determines how much energy each stream carries per degree of temperature change.</p></li>
+<li><p>Heat-capacity flow rate <span class="math notranslate nohighlight">\(CP \equiv m c_p\)</span> [kW/<span class="math notranslate nohighlight">\(^\circ\)</span>C or BTU/hr<span class="math notranslate nohighlight">\(\cdot ^\circ\)</span>F]. This is what determines how much energy each stream carries per degree of temperature change.</p></li>
 </ul>
 <p>A user-specified parameter, the <strong>minimum approach temperature</strong> <span class="math notranslate nohighlight">\(\Delta T_{\min}\)</span>, sets the tightest acceptable temperature difference between any hot and cold stream inside a heat exchanger. Typical values:</p>
 <ul class="simple">
@@ -601,7 +601,7 @@ For each stream you are given:</p>
 <li><p>Gas-gas services: 40 to 100 <span class="math notranslate nohighlight">\(^\circ\)</span>C (gas-gas exchangers have low <span class="math notranslate nohighlight">\(U\)</span>, large <span class="math notranslate nohighlight">\(A\)</span> at small <span class="math notranslate nohighlight">\(\Delta T\)</span>).</p></li>
 <li><p>Refrigeration: as small as 5 <span class="math notranslate nohighlight">\(^\circ\)</span>C (refrigerant is expensive, large <span class="math notranslate nohighlight">\(A\)</span> trades off favorably).</p></li>
 </ul>
-<p>Smaller <span class="math notranslate nohighlight">\(\Delta T_{\min}\)</span> reduces utility consumption but requires larger and more expensive heat exchangers. The optimal <span class="math notranslate nohighlight">\(\Delta T_{\min}\)</span> trades off these effects and is typically in the 10–20 <span class="math notranslate nohighlight">\(^\circ\)</span>C range for chemical plants.</p>
+<p>Smaller <span class="math notranslate nohighlight">\(\Delta T_{\min}\)</span> reduces utility consumption but requires larger and more expensive heat exchangers. The optimal <span class="math notranslate nohighlight">\(\Delta T_{\min}\)</span> trades off these effects and is typically in the 10-20 <span class="math notranslate nohighlight">\(^\circ\)</span>C range for chemical plants.</p>
 </div>
 </section>
 <section id="the-composite-curves-and-the-pinch">
@@ -621,11 +621,11 @@ Construct two curves on a <span class="math notranslate nohighlight">\(T\)</span
 <p><strong>The Pinch Decomposition Rule</strong>
 The pinch <em>thermodynamically decouples</em> the problem into two independent regions:</p>
 <ul class="simple">
-<li><p><strong>Above the pinch</strong> (high temperatures): heat <em>sink</em>. The hot streams above the pinch can only do so much heating; the deficit must be made up by external <em>hot utility</em>. <em>No cold utility may be used above the pinch</em> — doing so wastes recoverable heat one-for-one.</p></li>
-<li><p><strong>Below the pinch</strong> (low temperatures): heat <em>source</em>. The cold streams below the pinch can only absorb so much; the surplus must be removed by external <em>cold utility</em>. <em>No hot utility may be used below the pinch</em> — same penalty.</p></li>
+<li><p><strong>Above the pinch</strong> (high temperatures): heat <em>sink</em>. The hot streams above the pinch can only do so much heating; the deficit must be made up by external <em>hot utility</em>. <em>No cold utility may be used above the pinch</em>  -  doing so wastes recoverable heat one-for-one.</p></li>
+<li><p><strong>Below the pinch</strong> (low temperatures): heat <em>source</em>. The cold streams below the pinch can only absorb so much; the surplus must be removed by external <em>cold utility</em>. <em>No hot utility may be used below the pinch</em>  -  same penalty.</p></li>
 </ul>
-<p>These two rules constitute the <strong>Pinch Design Principle</strong> (Linnhoff–Hindmarsh).</p>
-<p>A third rule: <em>no heat may be transferred across the pinch</em>. Doing so adds 1 unit of hot utility <em>and</em> 1 unit of cold utility for every unit transferred — a double penalty.</p>
+<p>These two rules constitute the <strong>Pinch Design Principle</strong> (Linnhoff-Hindmarsh).</p>
+<p>A third rule: <em>no heat may be transferred across the pinch</em>. Doing so adds 1 unit of hot utility <em>and</em> 1 unit of cold utility for every unit transferred  -  a double penalty.</p>
 </div>
 </section>
 <section id="derivation-of-the-cp-rule-for-stream-matching-at-the-pinch">
@@ -641,7 +641,7 @@ The pinch <em>thermodynamically decouples</em> the problem into two independent 
 \[
 \Delta T_1 \equiv T_h^{out} - T_c^{in},   \Delta T_2 \equiv T_h^{in} - T_c^{out}
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>so $\Delta T_1$ is at the “cold end” and $\Delta T_2$ is at the “hot end” of the exchanger.
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>so $\Delta T_1$ is at the &quot;cold end&quot; and $\Delta T_2$ is at the &quot;hot end&quot; of the exchanger.
 </pre></div>
 </div>
 <ul class="simple">
@@ -649,12 +649,12 @@ The pinch <em>thermodynamically decouples</em> the problem into two independent 
 </ul>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-6daac98c-306b-4d7c-9393-7377e2f5caba">
-<span class="eqno">(1)<a class="headerlink" href="#equation-6daac98c-306b-4d7c-9393-7377e2f5caba" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f5517d34-c02c-4357-845f-6d2bb438f997">
+<span class="eqno">(1)<a class="headerlink" href="#equation-f5517d34-c02c-4357-845f-6d2bb438f997" title="Permalink to this equation">#</a></span>\[\begin{align}
 
 
-    Q &amp;= CP_h(T_h^{in} - T_h^{out})
-Q &amp;= CP_c(T_c^{out} - T_c^{in})
+    Q &amp;= CP_h (T_h^{in} - T_h^{out})
+Q &amp;= CP_c (T_c^{out} - T_c^{in})
     \end{align}\]</div>
 <div class="math notranslate nohighlight">
 \[\]</div>
@@ -670,14 +670,14 @@ T_c^{out} - T_c^{in} = \frac{Q}{CP_c},   T_h^{in} - T_h^{out} = \frac{Q}{CP_h}
 </ul>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-8a45f833-ee1b-42c5-8a16-92ecd7bb5a32">
-<span class="eqno">(2)<a class="headerlink" href="#equation-8a45f833-ee1b-42c5-8a16-92ecd7bb5a32" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1ff67a8a-9948-477b-a837-163d0ad9143b">
+<span class="eqno">(2)<a class="headerlink" href="#equation-1ff67a8a-9948-477b-a837-163d0ad9143b" title="Permalink to this equation">#</a></span>\[\begin{align}
 
 
     \Delta T_2 - \Delta T_1 &amp;= (T_h^{in} - T_c^{out}) - (T_h^{out} - T_c^{in})
 &amp;= (T_h^{in} - T_h^{out}) - (T_c^{out} - T_c^{in})
 &amp;= \frac{Q}{CP_h} - \frac{Q}{CP_c}
-&amp;= Q\frac{CP_c - CP_h}{CP_h \cdot CP_c}
+&amp;= Q \frac{CP_c - CP_h}{CP_h \cdot CP_c}
     \end{align}\]</div>
 <div class="math notranslate nohighlight">
 \[\]</div>
@@ -687,7 +687,7 @@ T_c^{out} - T_c^{in} = \frac{Q}{CP_c},   T_h^{in} - T_h^{out} = \frac{Q}{CP_h}
 </ul>
 <div class="math notranslate nohighlight">
 \[
-Q\frac{CP_c - CP_h}{CP_h CP_c} \geq 0 \Longrightarrow CP_c \geq CP_h   (above pinch)
+Q \frac{CP_c - CP_h}{CP_h CP_c} \geq 0  \Longrightarrow  CP_c \geq CP_h   (above pinch)
 \]</div>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Below the pinch:</strong> the exchanger’s cold end is the pinch, so <span class="math notranslate nohighlight">\(\Delta T_1 = \Delta T_{\min}\)</span>. Then <span class="math notranslate nohighlight">\(\Delta T_2 = \Delta T_{\min} + Q (CP_h - CP_c)/(CP_h CP_c)\)</span>. Feasibility requires <span class="math notranslate nohighlight">\(\Delta T_2 \geq \Delta T_{\min}\)</span>:</p></li>
@@ -749,41 +749,41 @@ C2 | 80 | 140 | 5 | Cold (above pinch only)</p>
 <li><p class="sd-card-text"><strong>Apply CP rule above pinch (<span class="math notranslate nohighlight">\(CP_c \geq CP_h\)</span>).</strong></p></li>
 <li><p class="sd-card-text">H1 (<span class="math notranslate nohighlight">\(CP = 3\)</span>): only C2 (<span class="math notranslate nohighlight">\(CP = 5 \geq 3\)</span>) qualifies. C1 (<span class="math notranslate nohighlight">\(CP = 2\)</span>) fails the rule with H1.</p></li>
 <li><p class="sd-card-text">H2 (<span class="math notranslate nohighlight">\(CP = 2\)</span>): both C1 (<span class="math notranslate nohighlight">\(CP = 2\)</span>) and C2 (<span class="math notranslate nohighlight">\(CP = 5\)</span>) qualify (the rule is <span class="math notranslate nohighlight">\(\geq\)</span>, so <span class="math notranslate nohighlight">\(CP_c = CP_h\)</span> is acceptable).</p>
-<p class="sd-card-text">Therefore the only feasible pinch pairing is <strong>H1–C2</strong> and <strong>H2–C1</strong>.</p>
+<p class="sd-card-text">Therefore the only feasible pinch pairing is <strong>H1-C2</strong> and <strong>H2-C1</strong>.</p>
 </li>
-<li><p class="sd-card-text"><strong>Match H1–C2 and maximize duty.</strong></p></li>
+<li><p class="sd-card-text"><strong>Match H1-C2 and maximize duty.</strong></p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
-Q_{H1-C2} = CP_{H1}(T_{H1}^{in} - T_{H1}^{out}) = 3 \times (180 - 90) = 270kW
+Q_{H1-C2} = CP_{H1} (T_{H1}^{in} - T_{H1}^{out}) = 3 \times (180 - 90) = 270 kW
 \]</div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Check the cold-side response: C2 enters at 80$^\circ$C with $CP = 5$. After receiving 270 kW it would exit at
 </pre></div>
 </div>
 <div class="math notranslate nohighlight">
 \[
-T_{C2}^{out} = 80 + \frac{270}{5} = 134^\circC
+T_{C2}^{out} = 80 + \frac{270}{5} = 134^\circ C
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Required final temperature of C2 is 140$^\circ$C, so 6$^\circ$C ($= 30$ kW additional duty) still must be supplied. H1 is fully “ticked off” (cooled to its pinch temperature).
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Required final temperature of C2 is 140$^\circ$C, so 6$^\circ$C ($= 30$ kW additional duty) still must be supplied. H1 is fully &quot;ticked off&quot; (cooled to its pinch temperature).
 </pre></div>
 </div>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Match H2–C1 and maximize duty.</strong></p></li>
+<li><p class="sd-card-text"><strong>Match H2-C1 and maximize duty.</strong></p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
-Q_{H2-C1, max possible from hot} = 2 \times (150 - 90) = 120kW
+Q_{H2-C1, max possible from hot} = 2 \times (150 - 90) = 120 kW
 \]</div>
 <div class="math notranslate nohighlight">
 \[
-Q_{C1, required} = 2 \times (135 - 80) = 110kW
+Q_{C1, required} = 2 \times (135 - 80) = 110 kW
 \]</div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Cold-side is the binding constraint: take $Q = 110$ kW. C1 reaches its target 135$^\circ$C; H2 cools to
 </pre></div>
 </div>
 <div class="math notranslate nohighlight">
 \[
-T_{H2}^{out} = 150 - \frac{110}{2} = 95^\circC
+T_{H2}^{out} = 150 - \frac{110}{2} = 95^\circ C
 \]</div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>H2 stops at 95$^\circ$C, which is 5$^\circ$C above the pinch. The remaining 5 $\times$ 2 = 10 kW of cooling cannot be done above the pinch (no cold utility allowed), so this residual is carried over to the below-pinch sub-problem.
 </pre></div>
@@ -808,32 +808,32 @@ T_{H2}^{out} = 150 - \frac{110}{2} = 95^\circC
 <li><p class="sd-card-text">C2: not present below the pinch (its source temperature is 80<span class="math notranslate nohighlight">\(^\circ\)</span>C = pinch).</p></li>
 <li><p class="sd-card-text"><strong>Apply CP rule below pinch (<span class="math notranslate nohighlight">\(CP_h \geq CP_c\)</span>).</strong></p></li>
 <li><p class="sd-card-text">C1 (<span class="math notranslate nohighlight">\(CP = 2\)</span>) needs a hot stream with <span class="math notranslate nohighlight">\(CP \geq 2\)</span>. Both H1 (<span class="math notranslate nohighlight">\(CP = 3\)</span>) and H2 (<span class="math notranslate nohighlight">\(CP = 2\)</span>) qualify.</p></li>
-<li><p class="sd-card-text">Choose H1–C1 first (larger <span class="math notranslate nohighlight">\(CP\)</span> margin gives more design flexibility).</p></li>
-<li><p class="sd-card-text"><strong>Match H1–C1 below pinch and maximize.</strong></p></li>
+<li><p class="sd-card-text">Choose H1-C1 first (larger <span class="math notranslate nohighlight">\(CP\)</span> margin gives more design flexibility).</p></li>
+<li><p class="sd-card-text"><strong>Match H1-C1 below pinch and maximize.</strong></p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
-Q_{H1, available below} = 3 \times (90 - 60) = 90kW
+Q_{H1, available below} = 3 \times (90 - 60) = 90 kW
 \]</div>
 <div class="math notranslate nohighlight">
 \[
-Q_{C1, below} = 2 \times (80 - 30) = 100kW
+Q_{C1, below} = 2 \times (80 - 30) = 100 kW
 \]</div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Hot-side is binding (H1 has only 90 kW available). Take $Q = 90$ kW. H1 reaches its target 60$^\circ$C; C1 only heats to
 </pre></div>
 </div>
 <div class="math notranslate nohighlight">
 \[
-T_{C1}^{out} = 30 + \frac{90}{2} = 75^\circC
+T_{C1}^{out} = 30 + \frac{90}{2} = 75^\circ C
 \]</div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>C1 still needs 5$^\circ$C of heating, $= 2 \times 5 = 10$ kW, which we attempt from H2.
 </pre></div>
 </div>
 <ul>
-<li><p class="sd-card-text"><strong>Match H2–C1 (residual) below pinch.</strong>
+<li><p class="sd-card-text"><strong>Match H2-C1 (residual) below pinch.</strong>
 H2 (carrying its 5<span class="math notranslate nohighlight">\(^\circ\)</span>C above-pinch residual but here treating it as entering the below-pinch zone at 90<span class="math notranslate nohighlight">\(^\circ\)</span>C with <span class="math notranslate nohighlight">\(CP = 2\)</span> and need to cool to 30<span class="math notranslate nohighlight">\(^\circ\)</span>C, duty 120 kW available) can heat C1 from 75 to 80<span class="math notranslate nohighlight">\(^\circ\)</span>C: duty <span class="math notranslate nohighlight">\(= 2 \times 5 = 10\)</span> kW. H2 cools by <span class="math notranslate nohighlight">\(10/2 = 5^\circ\)</span>C, leaving it at <span class="math notranslate nohighlight">\(90 - 5 = 85^\circ\)</span>C still needing to fall to 30<span class="math notranslate nohighlight">\(^\circ\)</span>C.</p></li>
 <li><p class="sd-card-text"><strong>Cold-utility consumption below pinch.</strong>
-Remaining duty to cool H2 to its target: <span class="math notranslate nohighlight">\(2 \times (85 - 30) = 110\)</span> kW. Wait — the MER target says we should need only 50 kW of cold utility, not 110. Let me re-examine the network. With the segments accounted as in the transcript:</p></li>
+Remaining duty to cool H2 to its target: <span class="math notranslate nohighlight">\(2 \times (85 - 30) = 110\)</span> kW. Wait  -  the MER target says we should need only 50 kW of cold utility, not 110. Let me re-examine the network. With the segments accounted as in the transcript:</p></li>
 <li><p class="sd-card-text">H1 fully cooled to 60<span class="math notranslate nohighlight">\(^\circ\)</span>C using C1 (90 kW absorbed).</p></li>
 <li><p class="sd-card-text">H2 cooled from 95 to 80<span class="math notranslate nohighlight">\(^\circ\)</span>C using a small cold-utility connection (10 kW), since the transcript notes “we’re not going to worry about crossing the minimum approach temperature” for this small swing.</p></li>
 <li><p class="sd-card-text">H2 then needs to drop from 80 to 30<span class="math notranslate nohighlight">\(^\circ\)</span>C <span class="math notranslate nohighlight">\(= 50^\circ\)</span>C <span class="math notranslate nohighlight">\(\times\)</span> <span class="math notranslate nohighlight">\(CP = 2\)</span> <span class="math notranslate nohighlight">\(= \)</span> <strong>100 kW</strong> of additional cold utility.</p>
@@ -862,7 +862,7 @@ If, at the pinch, no feasible CP match exists (e.g. above the pinch you have one
 <p class="admonition-title">Note</p>
 <p><strong>Heat Loops</strong>
 The MER-optimal network often has more heat exchangers than strictly necessary because each pinch match counts as a separate unit. After synthesis, look for <strong>heat loops</strong>: closed paths through the network alternating between hot streams and cold streams. Breaking a loop (by transferring duty from one exchanger to another) reduces the total number of exchangers by one but introduces a <span class="math notranslate nohighlight">\(\Delta T\)</span> violation that must be “relaxed” (paying a small utility penalty). The trade is fewer exchangers vs. slightly more utility; the optimum depends on capital-vs-utility cost.</p>
-<p>The Linnhoff–Mason rule of thumb: the minimum number of units (exchangers + heaters + coolers) is <span class="math notranslate nohighlight">\(N_{\min} = (N_s + N_u - 1)\)</span>, where <span class="math notranslate nohighlight">\(N_s\)</span> is the number of process streams and <span class="math notranslate nohighlight">\(N_u\)</span> is the number of utilities. If the MER-optimal network exceeds this count, loops exist and can be broken.</p>
+<p>The Linnhoff-Mason rule of thumb: the minimum number of units (exchangers + heaters + coolers) is <span class="math notranslate nohighlight">\(N_{\min} = (N_s + N_u - 1)\)</span>, where <span class="math notranslate nohighlight">\(N_s\)</span> is the number of process streams and <span class="math notranslate nohighlight">\(N_u\)</span> is the number of utilities. If the MER-optimal network exceeds this count, loops exist and can be broken.</p>
 </div>
 </section>
 <section id="worked-example-computing-mer-targets-from-temperature-intervals">
@@ -888,20 +888,20 @@ C2 | 40 | 112 | 15</p>
 <li><p class="sd-card-text">C1: <span class="math notranslate nohighlight">\(25 \to 160\)</span>.</p></li>
 <li><p class="sd-card-text">C2: <span class="math notranslate nohighlight">\(45 \to 117\)</span>.</p></li>
 <li><p class="sd-card-text"><strong>List unique interval temperatures in descending order.</strong>
-<span class="math notranslate nohighlight">\({170, 160, 120, 117, 60, 45, 40, 25}\)</span></p></li>
+<span class="math notranslate nohighlight">\(\{170, 160, 120, 117, 60, 45, 40, 25\}\)</span></p></li>
 <li><p class="sd-card-text">**For each interval, sum <span class="math notranslate nohighlight">\(CP_{hot** - CP_{cold}\)</span> for streams present in that interval.} A positive value means surplus heat (more hot capacity than cold); negative means deficit.</p></li>
-<li><p class="sd-card-text">170–160: only H1 present (cold C1 doesn’t reach here). Net <span class="math notranslate nohighlight">\(CP = +10\)</span>. <span class="math notranslate nohighlight">\(\Delta T = 10\)</span>. Surplus <span class="math notranslate nohighlight">\(= +100\)</span> kW.</p></li>
-<li><p class="sd-card-text">160–120: H1 + C1. Net <span class="math notranslate nohighlight">\(CP = 10 - 20 = -10\)</span>. <span class="math notranslate nohighlight">\(\Delta T = 40\)</span>. Deficit <span class="math notranslate nohighlight">\(= -400\)</span> kW.</p></li>
-<li><p class="sd-card-text">120–117: H1 + H2 + C1. Net <span class="math notranslate nohighlight">\(CP = 10 + 40 - 20 = +30\)</span>. <span class="math notranslate nohighlight">\(\Delta T = 3\)</span>. Surplus <span class="math notranslate nohighlight">\(= +90\)</span> kW.</p></li>
-<li><p class="sd-card-text">117–60: H1 + H2 + C1 + C2. Net <span class="math notranslate nohighlight">\(CP = 10 + 40 - 20 - 15 = +15\)</span>. <span class="math notranslate nohighlight">\(\Delta T = 57\)</span>. Surplus <span class="math notranslate nohighlight">\(= +855\)</span> kW.</p></li>
-<li><p class="sd-card-text">60–45: H1 + C1 + C2 (H2 ended at 60). Net <span class="math notranslate nohighlight">\(CP = 10 - 20 - 15 = -25\)</span>. <span class="math notranslate nohighlight">\(\Delta T = 15\)</span>. Deficit <span class="math notranslate nohighlight">\(= -375\)</span> kW.</p></li>
-<li><p class="sd-card-text">45–40: H1 + C1 (H2 done, C2 done? C2 ends at 45 shifted). Need to check: C2 shifted target was 117, source 45. So C2 is in 45–117 only. At 45–40: only H1 and C1. Net <span class="math notranslate nohighlight">\(CP = 10 - 20 = -10\)</span>. <span class="math notranslate nohighlight">\(\Delta T = 5\)</span>. Deficit <span class="math notranslate nohighlight">\(= -50\)</span> kW.</p></li>
-<li><p class="sd-card-text">40–25: only C1 present. Net <span class="math notranslate nohighlight">\(CP = -20\)</span>. <span class="math notranslate nohighlight">\(\Delta T = 15\)</span>. Deficit <span class="math notranslate nohighlight">\(= -300\)</span> kW.</p></li>
+<li><p class="sd-card-text">170-160: only H1 present (cold C1 doesn’t reach here). Net <span class="math notranslate nohighlight">\(CP = +10\)</span>. <span class="math notranslate nohighlight">\(\Delta T = 10\)</span>. Surplus <span class="math notranslate nohighlight">\(= +100\)</span> kW.</p></li>
+<li><p class="sd-card-text">160-120: H1 + C1. Net <span class="math notranslate nohighlight">\(CP = 10 - 20 = -10\)</span>. <span class="math notranslate nohighlight">\(\Delta T = 40\)</span>. Deficit <span class="math notranslate nohighlight">\(= -400\)</span> kW.</p></li>
+<li><p class="sd-card-text">120-117: H1 + H2 + C1. Net <span class="math notranslate nohighlight">\(CP = 10 + 40 - 20 = +30\)</span>. <span class="math notranslate nohighlight">\(\Delta T = 3\)</span>. Surplus <span class="math notranslate nohighlight">\(= +90\)</span> kW.</p></li>
+<li><p class="sd-card-text">117-60: H1 + H2 + C1 + C2. Net <span class="math notranslate nohighlight">\(CP = 10 + 40 - 20 - 15 = +15\)</span>. <span class="math notranslate nohighlight">\(\Delta T = 57\)</span>. Surplus <span class="math notranslate nohighlight">\(= +855\)</span> kW.</p></li>
+<li><p class="sd-card-text">60-45: H1 + C1 + C2 (H2 ended at 60). Net <span class="math notranslate nohighlight">\(CP = 10 - 20 - 15 = -25\)</span>. <span class="math notranslate nohighlight">\(\Delta T = 15\)</span>. Deficit <span class="math notranslate nohighlight">\(= -375\)</span> kW.</p></li>
+<li><p class="sd-card-text">45-40: H1 + C1 (H2 done, C2 done? C2 ends at 45 shifted). Need to check: C2 shifted target was 117, source 45. So C2 is in 45-117 only. At 45-40: only H1 and C1. Net <span class="math notranslate nohighlight">\(CP = 10 - 20 = -10\)</span>. <span class="math notranslate nohighlight">\(\Delta T = 5\)</span>. Deficit <span class="math notranslate nohighlight">\(= -50\)</span> kW.</p></li>
+<li><p class="sd-card-text">40-25: only C1 present. Net <span class="math notranslate nohighlight">\(CP = -20\)</span>. <span class="math notranslate nohighlight">\(\Delta T = 15\)</span>. Deficit <span class="math notranslate nohighlight">\(= -300\)</span> kW.</p></li>
 <li><p class="sd-card-text"><strong>Cascade the surpluses from top to bottom.</strong> Start with 0 at the top, add each interval’s signed amount:</p></li>
 <li><p class="sd-card-text">Above 170: 0.</p></li>
-<li><p class="sd-card-text">After 170–160: <span class="math notranslate nohighlight">\(0 + 100 = 100\)</span>.</p></li>
-<li><p class="sd-card-text">After 160–120: <span class="math notranslate nohighlight">\(100 - 400 = -300\)</span>. <em>Negative cascade values are infeasible</em> — they would mean transferring heat from cold to hot. Fix: add a hot utility at the top equal to the most negative cascade value, here <span class="math notranslate nohighlight">\(+300\)</span> kW.</p></li>
-<li><p class="sd-card-text">After hot utility: top now starts at <span class="math notranslate nohighlight">\(+300\)</span>. After 170–160: 400. After 160–120: 0. After 120–117: 90. After 117–60: 945. After 60–45: 570. After 45–40: 520. After 40–25: 220.</p></li>
+<li><p class="sd-card-text">After 170-160: <span class="math notranslate nohighlight">\(0 + 100 = 100\)</span>.</p></li>
+<li><p class="sd-card-text">After 160-120: <span class="math notranslate nohighlight">\(100 - 400 = -300\)</span>. <em>Negative cascade values are infeasible</em>  -  they would mean transferring heat from cold to hot. Fix: add a hot utility at the top equal to the most negative cascade value, here <span class="math notranslate nohighlight">\(+300\)</span> kW.</p></li>
+<li><p class="sd-card-text">After hot utility: top now starts at <span class="math notranslate nohighlight">\(+300\)</span>. After 170-160: 400. After 160-120: 0. After 120-117: 90. After 117-60: 945. After 60-45: 570. After 45-40: 520. After 40-25: 220.</p></li>
 </ul>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -910,8 +910,8 @@ C2 | 40 | 112 | 15</p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Read MER targets and pinch.</strong></p></li>
 <li><p class="sd-card-text"><span class="math notranslate nohighlight">\(Q_{H,\min} = 300\)</span> kW (the hot utility we added at the top to make the cascade feasible).</p></li>
-<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(Q_{C,\min} = 220\)</span> kW (the residual cascade at the bottom — what must be removed by cold utility).</p></li>
-<li><p class="sd-card-text"><strong>Pinch</strong> is where the corrected cascade first reaches zero. That happened at the bottom of the 160–120 interval, i.e. at <em>interval</em> temperature 120<span class="math notranslate nohighlight">\(^\circ\)</span>C. Converting back: hot pinch <span class="math notranslate nohighlight">\(= 120 + 5 = 125^\circ\)</span>C, cold pinch <span class="math notranslate nohighlight">\(= 120 - 5 = 115^\circ\)</span>C.</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(Q_{C,\min} = 220\)</span> kW (the residual cascade at the bottom  -  what must be removed by cold utility).</p></li>
+<li><p class="sd-card-text"><strong>Pinch</strong> is where the corrected cascade first reaches zero. That happened at the bottom of the 160-120 interval, i.e. at <em>interval</em> temperature 120<span class="math notranslate nohighlight">\(^\circ\)</span>C. Converting back: hot pinch <span class="math notranslate nohighlight">\(= 120 + 5 = 125^\circ\)</span>C, cold pinch <span class="math notranslate nohighlight">\(= 120 - 5 = 115^\circ\)</span>C.</p></li>
 <li><p class="sd-card-text"><strong>Verification by overall energy balance.</strong></p></li>
 </ul>
 <div class="math notranslate nohighlight">
@@ -928,7 +928,7 @@ C2 | 40 | 112 | 15</p>
 </div>
 </details><div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Exam Tips — Pinch Analysis</strong></p>
+<p><strong>Exam Tips  -  Pinch Analysis</strong></p>
 <ul class="simple">
 <li><p>Memorize the CP rule: cold dominates above the pinch, hot dominates below.</p></li>
 <li><p>Memorize the three pinch rules: no cold utility above, no hot utility below, no heat across.</p></li>
@@ -962,8 +962,8 @@ C_P = C_B \cdot F_M \cdot F_P \cdot F_L \cdot \frac{CEPCI_{now}}{CEPCI_{base}}
 <p class="admonition-title">Tip</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(C_P\)</span>: purchase cost in the target year [$].</p></li>
-<li><p><span class="math notranslate nohighlight">\(C_B\)</span>: base cost — carbon steel, low pressure, reference year.</p></li>
-<li><p><span class="math notranslate nohighlight">\(F_M\)</span>: material factor. Typical values: CS 1.0, 304 SS 1.7, 316 SS 2.1, Monel 3.0, Hastelloy C 4.0–6.0, Ti 6.0–8.0. Vary with equipment type.</p></li>
+<li><p><span class="math notranslate nohighlight">\(C_B\)</span>: base cost  -  carbon steel, low pressure, reference year.</p></li>
+<li><p><span class="math notranslate nohighlight">\(F_M\)</span>: material factor. Typical values: CS 1.0, 304 SS 1.7, 316 SS 2.1, Monel 3.0, Hastelloy C 4.0-6.0, Ti 6.0-8.0. Vary with equipment type.</p></li>
 <li><p><span class="math notranslate nohighlight">\(F_P\)</span>: pressure factor. For shell-and-tube exchangers, <span class="math notranslate nohighlight">\(F_P\)</span> rises about linearly with pressure from 1.0 at low pressure to <span class="math notranslate nohighlight">\(\sim\)</span>2 at 30 bar.</p></li>
 <li><p><span class="math notranslate nohighlight">\(F_L\)</span>: tube-length factor for heat exchangers; 1.25 for 8 ft, 1.12 for 12 ft, 1.05 for 16 ft, 1.00 for 20 ft (Turton).</p></li>
 <li><p><strong>CEPCI:</strong> Chemical Engineering Plant Cost Index, published monthly by <em>Chemical Engineering</em> magazine. Reference values: 2001 = 397 (Turton base), 2018 <span class="math notranslate nohighlight">\(\approx\)</span> 603, 2022 <span class="math notranslate nohighlight">\(\approx\)</span> 816.</p></li>
@@ -1040,7 +1040,7 @@ C_{P,now} = C_{P,base} \cdot \frac{CEPCI_{now}}{CEPCI_{base}} = 23{,}000 \cdot \
 C_{P,now} = 23{,}000 \times 2.015 = \$46{,}346 \approx \$46{,}300
 \]</div>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Verification.</strong> The CEPCI roughly doubled, so the cost roughly doubled — consistent with the simple inflation interpretation.</p></li>
+<li><p class="sd-card-text"><strong>Verification.</strong> The CEPCI roughly doubled, so the cost roughly doubled  -  consistent with the simple inflation interpretation.</p></li>
 </ul>
 </div>
 </details></section>
@@ -1064,7 +1064,7 @@ C_2 = C_1 (\frac{P_2}{P_1})^{0.6} = 8500 (\frac{150}{50})^{0.6} = 8500 \times 3^
 <ul class="simple">
 <li><p class="sd-card-text">**Compute <span class="math notranslate nohighlight">\(3^{0.6**\)</span>.} <span class="math notranslate nohighlight">\(\log_{10}(3) = 0.4771\)</span>, so <span class="math notranslate nohighlight">\(0.6 \times 0.4771 = 0.2863\)</span>, <span class="math notranslate nohighlight">\(10^{0.2863} = 1.933\)</span>.</p></li>
 <li><p class="sd-card-text"><span class="math notranslate nohighlight">\(C_2 = 8500 \times 1.933 = \$16{,}430 \approx \$16{,}400\)</span>.</p></li>
-<li><p class="sd-card-text"><strong>Verification.</strong> Tripling the size more than doubles but less than triples the cost — exactly the spirit of the six-tenths rule. A doubled-size pump would cost <span class="math notranslate nohighlight">\(\$8500 \times 2^{0.6} = \$8500 \times 1.516 = \$12{,}900\)</span>.</p></li>
+<li><p class="sd-card-text"><strong>Verification.</strong> Tripling the size more than doubles but less than triples the cost  -  exactly the spirit of the six-tenths rule. A doubled-size pump would cost <span class="math notranslate nohighlight">\(\$8500 \times 2^{0.6} = \$8500 \times 1.516 = \$12{,}900\)</span>.</p></li>
 </ul>
 </div>
 </details></section>
@@ -1100,15 +1100,15 @@ C_{P, now} = 88{,}200 \times \frac{800}{397} = 88{,}200 \times 2.015 = \$177{,}7
 C_{BM} = F_{BM} \cdot C_{P, now} = 3.0 \times 177{,}700 = \$533{,}000
 \]</div>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Verification.</strong> Sanity: a CS base of $28{,}000 grew to a 316 SS, 20 barg, installed cost of $533{,}000 — a 19<span class="math notranslate nohighlight">\(\times\)</span> multiplier. The breakdown: 3<span class="math notranslate nohighlight">\(\times\)</span> from <span class="math notranslate nohighlight">\(F_{BM}\)</span>, 2<span class="math notranslate nohighlight">\(\times\)</span> from CEPCI, 2.1<span class="math notranslate nohighlight">\(\times\)</span> from material, 1.5<span class="math notranslate nohighlight">\(\times\)</span> from pressure. Product: <span class="math notranslate nohighlight">\(3 \times 2 \times 2.1 \times 1.5 \approx 19\)</span>. \checkmark</p></li>
+<li><p class="sd-card-text"><strong>Verification.</strong> Sanity: a CS base of $28{,}000 grew to a 316 SS, 20 barg, installed cost of $533{,}000  -  a 19<span class="math notranslate nohighlight">\(\times\)</span> multiplier. The breakdown: 3<span class="math notranslate nohighlight">\(\times\)</span> from <span class="math notranslate nohighlight">\(F_{BM}\)</span>, 2<span class="math notranslate nohighlight">\(\times\)</span> from CEPCI, 2.1<span class="math notranslate nohighlight">\(\times\)</span> from material, 1.5<span class="math notranslate nohighlight">\(\times\)</span> from pressure. Product: <span class="math notranslate nohighlight">\(3 \times 2 \times 2.1 \times 1.5 \approx 19\)</span>. \checkmark</p></li>
 </ul>
 </div>
 </details><div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Exam Tips — Equipment Cost</strong></p>
+<p><strong>Exam Tips  -  Equipment Cost</strong></p>
 <ul class="simple">
 <li><p>Memorize: CEPCI ratio is always <em>new/old</em>, never the other way.</p></li>
-<li><p>The six-tenths exponent default is 0.6, but for some equipment classes (e.g. pumps 0.4–0.6, vessels 0.6–0.8, compressors 0.7–0.8) the exponent differs.</p></li>
+<li><p>The six-tenths exponent default is 0.6, but for some equipment classes (e.g. pumps 0.4-0.6, vessels 0.6-0.8, compressors 0.7-0.8) the exponent differs.</p></li>
 <li><p>Bare-module <span class="math notranslate nohighlight">\(F_{BM}\)</span> includes installation; purchase <span class="math notranslate nohighlight">\(C_P\)</span> does not. The two differ by <span class="math notranslate nohighlight">\(\sim\)</span>3<span class="math notranslate nohighlight">\(\times\)</span> for most fluid-process equipment.</p></li>
 <li><p>Lang factor is a top-down whole-plant multiplier; bare-module is a bottom-up per-equipment multiplier.</p></li>
 </ul>
@@ -1143,7 +1143,7 @@ C_{BM} = F_{BM} \cdot C_{P, now} = 3.0 \times 177{,}700 = \$533{,}000
 </ul>
 <div class="math notranslate nohighlight">
 \[
-F = P(1 + i)^n
+F = P (1 + i)^n
 \]</div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Derivation: after one period, $P$ becomes $P + P i = P(1+i)$. After two, $P(1+i)(1+i) = P(1+i)^2$. By induction, after $n$, $P(1+i)^n$.
 </pre></div>
@@ -1163,7 +1163,7 @@ P = \frac{F}{(1 + i)^n}
 </ul>
 <div class="math notranslate nohighlight">
 \[
-F = A + A(1+i) + A(1+i)^2 + … + A(1+i)^{n-1} = A \sum_{k=0}^{n-1}(1+i)^k
+F = A + A(1+i) + A(1+i)^2 + ... + A(1+i)^{n-1} = A \sum_{k=0}^{n-1}(1+i)^k
 \]</div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The geometric series sums to
 </pre></div>
@@ -1194,7 +1194,7 @@ A = F \cdot \frac{i}{(1+i)^n - 1}
 </ul>
 <div class="math notranslate nohighlight">
 \[
-A = P (1+i)^n \cdot \frac{i}{(1+i)^n - 1} = P \cdot \frac{i(1+i)^n}{(1+i)^n - 1}
+A = P (1+i)^n \cdot \frac{i}{(1+i)^n - 1} = P \cdot \frac{i (1+i)^n}{(1+i)^n - 1}
 \]</div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The uniform annual payment $A$ that pays off a present principal $P$ in $n$ periods (mortgage-style amortization).
 </pre></div>
@@ -1204,13 +1204,13 @@ A = P (1+i)^n \cdot \frac{i}{(1+i)^n - 1} = P \cdot \frac{i(1+i)^n}{(1+i)^n - 1}
 </ul>
 <div class="math notranslate nohighlight">
 \[
-P = A \cdot \frac{(1+i)^n - 1}{i(1+i)^n}
+P = A \cdot \frac{(1+i)^n - 1}{i (1+i)^n}
 \]</div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The present worth of $n$ end-of-year payments of $A$.
 </pre></div>
 </div>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Special case — perpetuity (<span class="math notranslate nohighlight">\(n \to \infty\)</span>):</strong> <span class="math notranslate nohighlight">\(P/A \to 1/i\)</span>, so <span class="math notranslate nohighlight">\(P = A/i\)</span>. The present worth of an infinite uniform series is simply the annual payment divided by the rate. This is the foundation of capitalized-cost analysis below.</p></li>
+<li><p class="sd-card-text"><strong>Special case  -  perpetuity (<span class="math notranslate nohighlight">\(n \to \infty\)</span>):</strong> <span class="math notranslate nohighlight">\(P/A \to 1/i\)</span>, so <span class="math notranslate nohighlight">\(P = A/i\)</span>. The present worth of an infinite uniform series is simply the annual payment divided by the rate. This is the foundation of capitalized-cost analysis below.</p></li>
 </ul>
 </div>
 </details><div class="admonition important">
@@ -1219,10 +1219,10 @@ P = A \cdot \frac{(1+i)^n - 1}{i(1+i)^n}
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\((F/P, i, n)\)</span>: <span class="math notranslate nohighlight">\(F = P(1+i)^n\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\((P/F, i, n)\)</span>: <span class="math notranslate nohighlight">\(P = F/(1+i)^n\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\((F/A, i, n)\)</span>: <span class="math notranslate nohighlight">\(F = A\dfrac{(1+i)^n - 1}{i}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\((A/F, i, n)\)</span>: <span class="math notranslate nohighlight">\(A = F\dfrac{i}{(1+i)^n - 1}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\((A/P, i, n)\)</span>: <span class="math notranslate nohighlight">\(A = P\dfrac{i(1+i)^n}{(1+i)^n - 1}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\((P/A, i, n)\)</span>: <span class="math notranslate nohighlight">\(P = A\dfrac{(1+i)^n - 1}{i(1+i)^n}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((F/A, i, n)\)</span>: <span class="math notranslate nohighlight">\(F = A \dfrac{(1+i)^n - 1}{i}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((A/F, i, n)\)</span>: <span class="math notranslate nohighlight">\(A = F \dfrac{i}{(1+i)^n - 1}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((A/P, i, n)\)</span>: <span class="math notranslate nohighlight">\(A = P \dfrac{i(1+i)^n}{(1+i)^n - 1}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((P/A, i, n)\)</span>: <span class="math notranslate nohighlight">\(P = A \dfrac{(1+i)^n - 1}{i(1+i)^n}\)</span></p></li>
 </ul>
 </div>
 </section>
@@ -1257,7 +1257,7 @@ i_{eff} = (1 + \frac{r}{m})^m - 1
 </ul>
 <div class="math notranslate nohighlight">
 \[
-F_{P, 5} = P(1+i)^5 = 200{,}000 \times 1.08^5 = 200{,}000 \times 1.4693 = \$293{,}860
+F_{P, 5} = P (1+i)^5 = 200{,}000 \times 1.08^5 = 200{,}000 \times 1.4693 = \$293{,}860
 \]</div>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Future value of the annual payments.</strong></p></li>
@@ -1286,17 +1286,17 @@ PW_{balloon} = 176{,}540 / 1.08^5 = 176{,}540 / 1.4693 = \$120{,}140
 \]</div>
 <div class="math notranslate nohighlight">
 \[
-PW_{total} = 79{,}860 + 120{,}140 = \$200{,}000 \checkmark
+PW_{total} = 79{,}860 + 120{,}140 = \$200{,}000  \checkmark
 \]</div>
 </div>
 </details><div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Exam Tips — Time Value of Money</strong></p>
+<p><strong>Exam Tips  -  Time Value of Money</strong></p>
 <ul class="simple">
 <li><p>Memorize the names and the algebra of the six factors. Tables (compound-interest tables) are available in most PE references, but knowing the closed-form formulas lets you solve any rate or period.</p></li>
 <li><p>“Annual end-of-year” is the default convention. Beginning-of-year (annuity due) shifts each cash flow one period earlier and the present worth is multiplied by <span class="math notranslate nohighlight">\((1+i)\)</span>.</p></li>
 <li><p>Perpetuity present worth: <span class="math notranslate nohighlight">\(P = A/i\)</span>. Memorize.</p></li>
-<li><p>Nominal-vs-effective trap: if compounded <span class="math notranslate nohighlight">\(m\)</span> times per year at nominal <span class="math notranslate nohighlight">\(r\)</span>, use <span class="math notranslate nohighlight">\(r/m\)</span> per period and <span class="math notranslate nohighlight">\(n \times m\)</span> periods — not <span class="math notranslate nohighlight">\(r\)</span> per year and <span class="math notranslate nohighlight">\(n\)</span> years.</p></li>
+<li><p>Nominal-vs-effective trap: if compounded <span class="math notranslate nohighlight">\(m\)</span> times per year at nominal <span class="math notranslate nohighlight">\(r\)</span>, use <span class="math notranslate nohighlight">\(r/m\)</span> per period and <span class="math notranslate nohighlight">\(n \times m\)</span> periods  -  not <span class="math notranslate nohighlight">\(r\)</span> per year and <span class="math notranslate nohighlight">\(n\)</span> years.</p></li>
 </ul>
 </div>
 </section>
@@ -1326,12 +1326,12 @@ P_{perp} = \frac{A}{i}
 <p>The present worth of a single replacement at time <span class="math notranslate nohighlight">\(n\)</span> is <span class="math notranslate nohighlight">\(C_R / (1+i)^n\)</span>. The present worth of a replacement every <span class="math notranslate nohighlight">\(n\)</span> years forever is the sum of a geometric series:</p>
 <div class="math notranslate nohighlight">
 \[
-P_{rep} = \frac{C_R}{(1+i)^n} + \frac{C_R}{(1+i)^{2n}} + … = \frac{C_R / (1+i)^n}{1 - 1/(1+i)^n} = \frac{C_R}{(1+i)^n - 1}
+P_{rep} = \frac{C_R}{(1+i)^n} + \frac{C_R}{(1+i)^{2n}} + ... = \frac{C_R / (1+i)^n}{1 - 1/(1+i)^n} = \frac{C_R}{(1+i)^n - 1}
 \]</div>
 <p>So</p>
 <div class="math notranslate nohighlight">
 \[
-K = C_I + \frac{C_R{(1+i)^n - 1}}   (Equation 1, capitalized cost)
+K = C_I + \frac{C_R}{(1+i)^n - 1}    (Equation 1, capitalized cost)
 \]</div>
 </div>
 </section>
@@ -1379,7 +1379,7 @@ P_{A,maint} = 2{,}000 \cdot \frac{(1.08)^4 - 1}{0.08 \cdot (1.08)^4}
 \[
 P_{A,maint} = 2{,}000 \times 3.312 = \$6{,}624
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Total “initial cost” for Reactor A:
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Total &quot;initial cost&quot; for Reactor A:
 </pre></div>
 </div>
 <div class="math notranslate nohighlight">
@@ -1448,7 +1448,7 @@ K_B = 36{,}270 + \frac{36{,}270}{(1.08)^6 - 1} = 36{,}270 + \frac{36{,}270}{0.58
 \]</div>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Decision.</strong> <span class="math notranslate nohighlight">\(K_B &lt; K_A\)</span> by about $13{,}000. <strong>Reactor B is the better long-term investment.</strong></p></li>
-<li><p class="sd-card-text"><strong>Verification.</strong> Although B has a higher annual cost and overhauls, its 6-year life means fewer replacement events per century compared to A’s 4-year life. The 50% longer life-cycle more than compensates for B’s larger per-cycle cost and absence of salvage credit. This is the typical pattern — longer-life equipment usually wins on capitalized-cost basis, even at higher per-cycle costs, provided <span class="math notranslate nohighlight">\(i\)</span> is not extreme.</p></li>
+<li><p class="sd-card-text"><strong>Verification.</strong> Although B has a higher annual cost and overhauls, its 6-year life means fewer replacement events per century compared to A’s 4-year life. The 50% longer life-cycle more than compensates for B’s larger per-cycle cost and absence of salvage credit. This is the typical pattern  -  longer-life equipment usually wins on capitalized-cost basis, even at higher per-cycle costs, provided <span class="math notranslate nohighlight">\(i\)</span> is not extreme.</p></li>
 </ul>
 </div>
 </details></section>
@@ -1475,17 +1475,17 @@ K_B = 36{,}270 + \frac{36{,}270}{(1.08)^6 - 1} = 36{,}270 + \frac{36{,}270}{0.58
 <p class="sd-card-text">At <span class="math notranslate nohighlight">\(i = 30%\)</span>, B still wins.</p>
 </li>
 <li><p class="sd-card-text"><strong>Interpretation.</strong> At very high interest rates, the perpetual replacement term becomes negligible (the future is heavily discounted), and the comparison reduces to “which is cheaper today.” B’s lower initial purchase keeps it ahead. For this problem, B wins at all realistic interest rates.</p></li>
-<li><p class="sd-card-text"><strong>General principle.</strong> As <span class="math notranslate nohighlight">\(i \to \infty\)</span>, <span class="math notranslate nohighlight">\(K \to C_I\)</span>, so the comparison reduces to upfront cost. As <span class="math notranslate nohighlight">\(i \to 0\)</span>, the perpetuity dominates, and the comparison depends on the long-run cost per year. Reactor A could only win at very low <span class="math notranslate nohighlight">\(i\)</span> if its per-year cost (including capitalized maintenance) were lower than B’s — here it is not.</p></li>
+<li><p class="sd-card-text"><strong>General principle.</strong> As <span class="math notranslate nohighlight">\(i \to \infty\)</span>, <span class="math notranslate nohighlight">\(K \to C_I\)</span>, so the comparison reduces to upfront cost. As <span class="math notranslate nohighlight">\(i \to 0\)</span>, the perpetuity dominates, and the comparison depends on the long-run cost per year. Reactor A could only win at very low <span class="math notranslate nohighlight">\(i\)</span> if its per-year cost (including capitalized maintenance) were lower than B’s  -  here it is not.</p></li>
 </ul>
 </div>
 </details><div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Exam Tips — Capitalized Cost</strong></p>
+<p><strong>Exam Tips  -  Capitalized Cost</strong></p>
 <ul class="simple">
 <li><p>Use capitalized cost when alternatives have <em>different lives</em> and will be replaced indefinitely.</p></li>
 <li><p>Always capitalize annual costs into <span class="math notranslate nohighlight">\(C_I\)</span> first, then apply Equation 1. Failing to do this is the single most common error.</p></li>
 <li><p>For perpetuity, <span class="math notranslate nohighlight">\(P_{perp} = A/i\)</span>. For a finite annuity, <span class="math notranslate nohighlight">\((P/A, i, n)\)</span>.</p></li>
-<li><p>The denominator of the replacement term is <span class="math notranslate nohighlight">\((1+i)^n - 1\)</span> — not <span class="math notranslate nohighlight">\((1+i)^n\)</span>. Memorize.</p></li>
+<li><p>The denominator of the replacement term is <span class="math notranslate nohighlight">\((1+i)^n - 1\)</span>  -  not <span class="math notranslate nohighlight">\((1+i)^n\)</span>. Memorize.</p></li>
 </ul>
 </div>
 </section>
@@ -1552,7 +1552,7 @@ Most multi-event cash flows decompose into:</p>
 <li><p class="sd-card-text">Year 8: <span class="math notranslate nohighlight">\(+3{,}000\)</span> salvage and <span class="math notranslate nohighlight">\(-25{,}000\)</span> replacement. Net <span class="math notranslate nohighlight">\(-22{,}000\)</span>.</p></li>
 <li><p class="sd-card-text">Years 9, 10, 11, 12: <span class="math notranslate nohighlight">\(-2{,}000\)</span> each.</p></li>
 <li><p class="sd-card-text">Year 12: <span class="math notranslate nohighlight">\(+3{,}000\)</span> salvage (end of third cycle; no further replacement needed because the horizon ends).</p></li>
-<li><p class="sd-card-text"><strong>PW of A’s annual maintenance (years 1–12).</strong></p></li>
+<li><p class="sd-card-text"><strong>PW of A’s annual maintenance (years 1-12).</strong></p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
@@ -1589,7 +1589,7 @@ PW_A = -25{,}000 - 15{,}072 - 16{,}170 - 11{,}887 + 1{,}191 = -\$66{,}938 \appro
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Build B’s cash-flow timeline.</strong></p></li>
 <li><p class="sd-card-text">Year 0: <span class="math notranslate nohighlight">\(-15{,}000\)</span> (purchase).</p></li>
-<li><p class="sd-card-text">Years 1–12: <span class="math notranslate nohighlight">\(-4{,}000\)</span> each (annual maintenance).</p></li>
+<li><p class="sd-card-text">Years 1-12: <span class="math notranslate nohighlight">\(-4{,}000\)</span> each (annual maintenance).</p></li>
 <li><p class="sd-card-text">Year 3: <span class="math notranslate nohighlight">\(-3{,}500\)</span> (overhaul).</p></li>
 <li><p class="sd-card-text">Year 6: <span class="math notranslate nohighlight">\(-15{,}000\)</span> (replacement, no salvage).</p></li>
 <li><p class="sd-card-text">Year 9: <span class="math notranslate nohighlight">\(-3{,}500\)</span> (overhaul, equivalent to year 3 of cycle 2).</p></li>
@@ -1624,7 +1624,7 @@ PW_B = -15{,}000 - 30{,}144 - 9{,}454 - 2{,}778 - 1{,}751 = -\$59{,}127 \approx 
 </div>
 </details></section>
 <section id="annual-equivalent-ae-cost-the-third-way">
-<h3>Annual-Equivalent (AE) Cost — The Third Way<a class="headerlink" href="#annual-equivalent-ae-cost-the-third-way" title="Link to this heading">#</a></h3>
+<h3>Annual-Equivalent (AE) Cost  -  The Third Way<a class="headerlink" href="#annual-equivalent-ae-cost-the-third-way" title="Link to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>A third comparison method, equivalent to PW but expressed as a uniform annual cost, is the <strong>annual equivalent (AE)</strong>:</p>
@@ -1641,7 +1641,7 @@ AE = PW \cdot (A/P, i, n)
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Exam Tips — Present-Worth Analysis</strong></p>
+<p><strong>Exam Tips  -  Present-Worth Analysis</strong></p>
 <ul class="simple">
 <li><p>Alternatives must be evaluated over the <em>same</em> number of years. LCM is the standard choice.</p></li>
 <li><p>Use effective <span class="math notranslate nohighlight">\(i\)</span> per period when compounding <span class="math notranslate nohighlight">\(&gt; 1\)</span>/year.</p></li>
@@ -1662,9 +1662,9 @@ AE = PW \cdot (A/P, i, n)
 Choose the desired product as the basis: 1 kg of product. Compute the mass of each reactant and byproduct that participates in producing 1 kg of product, using stoichiometric coefficients and molecular weights:</p>
 <div class="math notranslate nohighlight">
 \[
-mass of species  i  per kg product = \frac{|\nu_i|M_i}{|\nu_P|M_P}
+mass of species  i  per kg product = \frac{|\nu_i| M_i}{|\nu_P| M_P}
 \]</div>
-<p>where <span class="math notranslate nohighlight">\(\nu_i\)</span> is the stoichiometric coefficient of species <span class="math notranslate nohighlight">\(i\)</span> (negative for reactants, positive for products), <span class="math notranslate nohighlight">\(M_i\)</span> is its molecular weight, and subscript <span class="math notranslate nohighlight">\(P\)</span> is the desired product. This is the same operation in Felder | Rousseau’s introductory mass-balance chapters — you are reading the stoichiometry on a mass rather than molar basis.</p>
+<p>where <span class="math notranslate nohighlight">\(\nu_i\)</span> is the stoichiometric coefficient of species <span class="math notranslate nohighlight">\(i\)</span> (negative for reactants, positive for products), <span class="math notranslate nohighlight">\(M_i\)</span> is its molecular weight, and subscript <span class="math notranslate nohighlight">\(P\)</span> is the desired product. This is the same operation in Felder | Rousseau’s introductory mass-balance chapters  -  you are reading the stoichiometry on a mass rather than molar basis.</p>
 </div>
 </section>
 <section id="the-gep-equation">
@@ -1673,7 +1673,7 @@ mass of species  i  per kg product = \frac{|\nu_i|M_i}{|\nu_P|M_P}
 <p class="admonition-title">Important</p>
 <div class="math notranslate nohighlight">
 \[
-GEP = \sum_{products} \frac{|\nu_i|M_i}{|\nu_P|M_P}p_i - \sum_{reactants} \frac{|\nu_j|M_j}{|\nu_P|M_P}p_j
+GEP = \sum_{products} \frac{|\nu_i| M_i}{|\nu_P| M_P} p_i  -  \sum_{reactants} \frac{|\nu_j| M_j}{|\nu_P| M_P} p_j
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(p_i\)</span> is the market price of species <span class="math notranslate nohighlight">\(i\)</span> in $/kg.</p>
 <ul class="simple">
@@ -1700,7 +1700,7 @@ GEP = \sum_{products} \frac{|\nu_i|M_i}{|\nu_P|M_P}p_i - \sum_{reactants} \frac{
 <p><strong>Route 2:</strong> Oxychlorination/cracking of ethane.</p>
 <div class="math notranslate nohighlight">
 \[
-\mathrm{C_2H_6 + Cl_2 + \tfrac{1}{2}O_2 \rightarrow C_2H_3Cl + H_2O + HCl}
+\mathrm{C_2H_6 + Cl_2 + \tfrac{1}{2} O_2 \rightarrow C_2H_3Cl + H_2O + HCl}
 \]</div>
 <p>Prices: ethane $0.20/kg, Cl<span class="math notranslate nohighlight">\(_2\)</span> $0.25/kg, O<span class="math notranslate nohighlight">\(_2\)</span> $0 (from air), VCM $0.75/kg, byproduct HCl credit $0.30/kg, H<span class="math notranslate nohighlight">\(_2\)</span>O $0.</p>
 <p>Which route shows a positive GEP?</p>
@@ -1728,8 +1728,8 @@ M(\mathrm{C_2H_6}) = 30.0,   M(\mathrm{Cl_2}) = 71.0,   M(\mathrm{O_2}) = 32.0, 
 </ul>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-03de9603-3785-4857-aad4-f6c67a5ce16b">
-<span class="eqno">(3)<a class="headerlink" href="#equation-03de9603-3785-4857-aad4-f6c67a5ce16b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-fc100ad5-1766-45ee-92d0-f91dda348cee">
+<span class="eqno">(3)<a class="headerlink" href="#equation-fc100ad5-1766-45ee-92d0-f91dda348cee" title="Permalink to this equation">#</a></span>\[\begin{align}
 
 
     GEP_1 &amp;= (1)(0.75) - (0.416)(1.85) - (0.584)(0.30)
@@ -1757,8 +1757,8 @@ M(\mathrm{C_2H_6}) = 30.0,   M(\mathrm{Cl_2}) = 71.0,   M(\mathrm{O_2}) = 32.0, 
 </ul>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-57e14994-5358-4c2f-bded-3455e003363b">
-<span class="eqno">(4)<a class="headerlink" href="#equation-57e14994-5358-4c2f-bded-3455e003363b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-be2ac4e4-6ce7-4fe9-b0ff-7cececde3333">
+<span class="eqno">(4)<a class="headerlink" href="#equation-be2ac4e4-6ce7-4fe9-b0ff-7cececde3333" title="Permalink to this equation">#</a></span>\[\begin{align}
 
 
     GEP_2 &amp;= (1)(0.75) + (0.584)(0.30) - (0.480)(0.20) - (1.136)(0.25) - (0.256)(0)
@@ -1772,7 +1772,7 @@ M(\mathrm{C_2H_6}) = 30.0,   M(\mathrm{Cl_2}) = 71.0,   M(\mathrm{O_2}) = 32.0, 
 </div>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Verification.</strong> Modern industrial VCM production is overwhelmingly via the ethylene/EDC oxychlorination route (a close cousin of Route 2), confirming the GEP-based selection in practice.</p></li>
-<li><p class="sd-card-text"><em><em>What GEP does <em>not</em></em> tell you.</em> A GEP of $0.545/kg leaves room for utilities (steam, electricity), labor, depreciation, taxes, and a profit margin. As a rule of thumb, 30–70% of GEP is consumed by these downstream costs, so the bottom-line plant margin is often $0.10–$0.35/kg.</p></li>
+<li><p class="sd-card-text"><em><em>What GEP does <em>not</em></em> tell you.</em> A GEP of $0.545/kg leaves room for utilities (steam, electricity), labor, depreciation, taxes, and a profit margin. As a rule of thumb, 30-70% of GEP is consumed by these downstream costs, so the bottom-line plant margin is often $0.10-$0.35/kg.</p></li>
 </ul>
 </div>
 </details></section>
@@ -1791,8 +1791,8 @@ M(\mathrm{C_2H_6}) = 30.0,   M(\mathrm{Cl_2}) = 71.0,   M(\mathrm{O_2}) = 32.0, 
 </ul>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-10668a36-0561-41d8-a392-c5ad401da381">
-<span class="eqno">(5)<a class="headerlink" href="#equation-10668a36-0561-41d8-a392-c5ad401da381" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7a644bcb-ab03-4def-aedf-3a45a4cae04e">
+<span class="eqno">(5)<a class="headerlink" href="#equation-7a644bcb-ab03-4def-aedf-3a45a4cae04e" title="Permalink to this equation">#</a></span>\[\begin{align}
 
 
     GEP &amp;= (1.0)(1.00) + (0.1)(-0.40) - (0.6)(0.50) - (0.5)(0.30)
@@ -1802,12 +1802,12 @@ M(\mathrm{C_2H_6}) = 30.0,   M(\mathrm{Cl_2}) = 71.0,   M(\mathrm{O_2}) = 32.0, 
 <div class="math notranslate nohighlight">
 \[\]</div>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Sanity check.</strong> If Q had zero disposal cost instead, GEP would be $0.550. The disposal of 0.1 kg/kg of waste reduces profit by $0.04 — about 8% of margin. If disposal cost rose to $5/kg (e.g. a regulated waste), the penalty would be 0.1 <span class="math notranslate nohighlight">\(\times\)</span> 5 = $0.50/kg, almost killing the route. Byproduct economics are often the deciding factor in route selection.</p></li>
+<li><p class="sd-card-text"><strong>Sanity check.</strong> If Q had zero disposal cost instead, GEP would be $0.550. The disposal of 0.1 kg/kg of waste reduces profit by $0.04  -  about 8% of margin. If disposal cost rose to $5/kg (e.g. a regulated waste), the penalty would be 0.1 <span class="math notranslate nohighlight">\(\times\)</span> 5 = $0.50/kg, almost killing the route. Byproduct economics are often the deciding factor in route selection.</p></li>
 </ul>
 </div>
 </details><div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Exam Tips — GEP</strong></p>
+<p><strong>Exam Tips  -  GEP</strong></p>
 <ul class="simple">
 <li><p>Basis = 1 kg of <em>desired</em> product. Everything else scales by mass ratio against the product.</p></li>
 <li><p>Negative GEP kills a route; no clever engineering can recover it.</p></li>
@@ -1845,7 +1845,7 @@ NPV = -I_0 + \sum_{k=1}^{n} \frac{CF_k}{(1+r)^k} + \frac{S_n + WC}{(1+r)^n}
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Why Depreciation Matters</strong>
-Depreciation is not a cash outflow — the cash was spent when the equipment was purchased. But the tax code allows the company to deduct a portion of the original investment each year, reducing taxable income. The cash flow in year <span class="math notranslate nohighlight">\(k\)</span> is therefore:</p>
+Depreciation is not a cash outflow  -  the cash was spent when the equipment was purchased. But the tax code allows the company to deduct a portion of the original investment each year, reducing taxable income. The cash flow in year <span class="math notranslate nohighlight">\(k\)</span> is therefore:</p>
 <div class="math notranslate nohighlight">
 \[
 CF_k = (S_k - C_k - D_k)(1 - t) + D_k
@@ -1853,11 +1853,11 @@ CF_k = (S_k - C_k - D_k)(1 - t) + D_k
 <p>where:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(S_k\)</span> = revenue (Sales) in year <span class="math notranslate nohighlight">\(k\)</span>.</p></li>
-<li><p><span class="math notranslate nohighlight">\(C_k\)</span> = cash production cost in year <span class="math notranslate nohighlight">\(k\)</span> (raw materials, utilities, labor, overhead — but <em>not</em> depreciation).</p></li>
+<li><p><span class="math notranslate nohighlight">\(C_k\)</span> = cash production cost in year <span class="math notranslate nohighlight">\(k\)</span> (raw materials, utilities, labor, overhead  -  but <em>not</em> depreciation).</p></li>
 <li><p><span class="math notranslate nohighlight">\(D_k\)</span> = depreciation charge in year <span class="math notranslate nohighlight">\(k\)</span>.</p></li>
-<li><p><span class="math notranslate nohighlight">\(t\)</span> = effective tax rate (federal + state + local, typically 25–40% in the US).</p></li>
+<li><p><span class="math notranslate nohighlight">\(t\)</span> = effective tax rate (federal + state + local, typically 25-40% in the US).</p></li>
 </ul>
-<p>The depreciation appears twice: once subtracted to compute taxable income <span class="math notranslate nohighlight">\((S - C - D)\)</span>, then added back because it is non-cash. The net effect is that depreciation <em>shifts cash flow earlier in time</em>; the total cash over the project life is unchanged, but earlier cash is worth more after discounting — so depreciation increases NPV.</p>
+<p>The depreciation appears twice: once subtracted to compute taxable income <span class="math notranslate nohighlight">\((S - C - D)\)</span>, then added back because it is non-cash. The net effect is that depreciation <em>shifts cash flow earlier in time</em>; the total cash over the project life is unchanged, but earlier cash is worth more after discounting  -  so depreciation increases NPV.</p>
 </div>
 </section>
 <section id="depreciation-methods">
@@ -1876,7 +1876,7 @@ CF_k = (S_k - C_k - D_k)(1 - t) + D_k
 <div class="proof example admonition" id="example-13">
 <p class="admonition-title"><span class="caption-number">Example 146 </span> (NPV with MACRS Depreciation and Working Capital)</p>
 <section class="example-content" id="proof-content">
-<p>A chemical plant is built 2007–2009 with total depreciable capital $90M (sunk $30M per year). Working capital $40M required at end of 2009. Production begins 2010 at 50% of nameplate; 75% in 2011; 100% thereafter through 2021. At full capacity: sales $150M/yr, cash production cost $100M/yr. In ramp-up: 2010 sales $75M, cost $55M; 2011 sales $113M, cost $78M. MACRS 7-year depreciation. Tax rate 40%. Cost of capital 15%. Compute NPV.</p>
+<p>A chemical plant is built 2007-2009 with total depreciable capital $90M (sunk $30M per year). Working capital $40M required at end of 2009. Production begins 2010 at 50% of nameplate; 75% in 2011; 100% thereafter through 2021. At full capacity: sales $150M/yr, cash production cost $100M/yr. In ramp-up: 2010 sales $75M, cost $55M; 2011 sales $113M, cost $78M. MACRS 7-year depreciation. Tax rate 40%. Cost of capital 15%. Compute NPV.</p>
 </section>
 </div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -1896,7 +1896,7 @@ CF_k = (S_k - C_k - D_k)(1 - t) + D_k
 <li><p class="sd-card-text">2015 (yr 6): 8.92% = $8.03M</p></li>
 <li><p class="sd-card-text">2016 (yr 7): 8.93% = $8.04M</p></li>
 <li><p class="sd-card-text">2017 (yr 8): 4.46% = $4.01M</p></li>
-<li><p class="sd-card-text">2018–2021: $0 (depreciation exhausted)</p></li>
+<li><p class="sd-card-text">2018-2021: $0 (depreciation exhausted)</p></li>
 </ul>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -1952,7 +1952,7 @@ NPV = 128.71 - 109.02 \approx +\$19.7  M
 </pre></div>
 </div>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Cumulative discounted cash flow plot.</strong> Tracking the running sum from 2007 onward, the cumulative crosses zero somewhere in 2018 — this is the <strong>discounted payback period</strong>, <span class="math notranslate nohighlight">\(\approx\)</span> 11 years.</p></li>
+<li><p class="sd-card-text"><strong>Cumulative discounted cash flow plot.</strong> Tracking the running sum from 2007 onward, the cumulative crosses zero somewhere in 2018  -  this is the <strong>discounted payback period</strong>, <span class="math notranslate nohighlight">\(\approx\)</span> 11 years.</p></li>
 <li><p class="sd-card-text"><strong>Interpretation.</strong> NPV <span class="math notranslate nohighlight">\(&gt; 0\)</span> at 15% cost of capital: the project creates value beyond what could be earned by investing the same $90M+ at 15%. Accept.</p></li>
 </ul>
 </div>
@@ -1968,7 +1968,7 @@ NPV(r = IRR) = 0
 \]</div>
 <p><strong>Decision rule:</strong> accept if IRR <span class="math notranslate nohighlight">\(&gt;\)</span> cost of capital. The two rules (NPV <span class="math notranslate nohighlight">\(&gt; 0\)</span>, IRR <span class="math notranslate nohighlight">\(&gt;\)</span> cost of capital) are equivalent for a conventional cash-flow pattern (initial negative outlay followed by positive returns).</p>
 <p><strong>Computation:</strong> no closed form exists; use a spreadsheet’s Goal Seek or Solver to find <span class="math notranslate nohighlight">\(r\)</span> such that NPV <span class="math notranslate nohighlight">\(= 0\)</span>. Alternatively, plot NPV vs. <span class="math notranslate nohighlight">\(r\)</span> and read the zero-crossing.</p>
-<p><strong>Interpretation:</strong> IRR is the project’s intrinsic earning rate. “If we got this money back as interest from a bank, the equivalent interest rate would be IRR.” For the transcript’s project, IRR <span class="math notranslate nohighlight">\(\approx 18.5%\)</span>, so the project beats a 15% hurdle rate by 3.5% — modest, but acceptable.</p>
+<p><strong>Interpretation:</strong> IRR is the project’s intrinsic earning rate. “If we got this money back as interest from a bank, the equivalent interest rate would be IRR.” For the transcript’s project, IRR <span class="math notranslate nohighlight">\(\approx 18.5%\)</span>, so the project beats a 15% hurdle rate by 3.5%  -  modest, but acceptable.</p>
 </div>
 </section>
 <section id="worked-example-iterating-to-find-irr">
@@ -1993,12 +1993,12 @@ NPV(r = IRR) = 0
 IRR \approx 10% + \frac{0.22}{0.22 + 1.44} \times 1% = 10% + 0.13% = 10.13%
 \]</div>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Verification.</strong> At 10.13%, NPV is essentially zero — check: <span class="math notranslate nohighlight">\(-100 + 40/1.1013 + 50/1.2129 + 30/1.3361 = -100 + 36.32 + 41.22 + 22.45 = -0.01\)</span>. \checkmark</p></li>
+<li><p class="sd-card-text"><strong>Verification.</strong> At 10.13%, NPV is essentially zero  -  check: <span class="math notranslate nohighlight">\(-100 + 40/1.1013 + 50/1.2129 + 30/1.3361 = -100 + 36.32 + 41.22 + 22.45 = -0.01\)</span>. \checkmark</p></li>
 </ul>
 </div>
 </details></section>
 <section id="npv-vs-irr-when-they-disagree">
-<h3>NPV vs. IRR — When They Disagree<a class="headerlink" href="#npv-vs-irr-when-they-disagree" title="Link to this heading">#</a></h3>
+<h3>NPV vs. IRR  -  When They Disagree<a class="headerlink" href="#npv-vs-irr-when-they-disagree" title="Link to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Mutually Exclusive Projects: Use NPV</strong>
@@ -2009,14 +2009,14 @@ For mutually exclusive projects (you can do only one), <strong>NPV and IRR can r
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Exam Tips — NPV and IRR</strong></p>
+<p><strong>Exam Tips  -  NPV and IRR</strong></p>
 <ul class="simple">
 <li><p>Cash flow <span class="math notranslate nohighlight">\(CF_k = (S_k - C_k - D_k)(1-t) + D_k = 0.6(S_k-C_k) + 0.4 D_k\)</span> at <span class="math notranslate nohighlight">\(t = 40%\)</span>.</p></li>
 <li><p>Depreciation is non-cash; add it back.</p></li>
 <li><p>Working capital is added at start (negative) and recovered at end (positive).</p></li>
 <li><p>NPV <span class="math notranslate nohighlight">\(&gt; 0\)</span> iff IRR <span class="math notranslate nohighlight">\(&gt;\)</span> cost of capital, for conventional projects.</p></li>
 <li><p>For mutually exclusive projects, NPV beats IRR as the ranking criterion.</p></li>
-<li><p>MACRS 5-year: <span class="math notranslate nohighlight">\({20.00, 32.00, 19.20, 11.52, 11.52, 5.76}\)</span>. MACRS 7-year starts at 14.29%.</p></li>
+<li><p>MACRS 5-year: <span class="math notranslate nohighlight">\(\{20.00, 32.00, 19.20, 11.52, 11.52, 5.76\}\)</span>. MACRS 7-year starts at 14.29%.</p></li>
 </ul>
 </div>
 </section>
@@ -2191,7 +2191,7 @@ IRR: <span class="math notranslate nohighlight">\(r\)</span> where NPV <span cla
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#present-worth-algebra">Present-Worth Algebra</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-decomposition-patterns">Common Decomposition Patterns</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#worked-example-reactor-a-vs-reactor-b-over-12-years">Worked Example: Reactor A vs. Reactor B over 12 Years</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#annual-equivalent-ae-cost-the-third-way">Annual-Equivalent (AE) Cost — The Third Way</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#annual-equivalent-ae-cost-the-third-way">Annual-Equivalent (AE) Cost  -  The Third Way</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gross-economic-profit-gep-analysis">Gross Economic Profit (GEP) Analysis</a><ul class="visible nav section-nav flex-column">
@@ -2208,7 +2208,7 @@ IRR: <span class="math notranslate nohighlight">\(r\)</span> where NPV <span cla
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#worked-example-npv-of-a-15-year-venture">Worked Example: NPV of a 15-Year Venture</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-rate-of-return-irr">Internal Rate of Return (IRR)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#worked-example-iterating-to-find-irr">Worked Example: Iterating to Find IRR</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#npv-vs-irr-when-they-disagree">NPV vs. IRR — When They Disagree</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#npv-vs-irr-when-they-disagree">NPV vs. IRR  -  When They Disagree</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-engineering-economics-decision-tree">Summary: Engineering Economics Decision Tree</a></li>
