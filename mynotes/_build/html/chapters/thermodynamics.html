@@ -570,9 +570,8 @@
 \[\text{Error \%} = \left|\frac{0.7141 - 0.7109}{0.7109}\right| \times 100\% = 0.45\%\]</div>
 <p class="sd-card-text"><strong>Step 5: Calculate for High Pressure (17.0 MPa)</strong></p>
 <div class="math notranslate nohighlight">
-\[V = \frac{(8.314)(773.15)}{17.0} = 378.2 \text{ cm}^3\text{/mol}\]</div>
-<div class="math notranslate nohighlight">
-\[v_{calc} = 378.2 \times \frac{1}{18.015} \times \frac{1}{1000} \times \frac{1}{10^6} = 0.0210 \text{ m}^3\text{/kg}\]</div>
+\[ \begin{align}\begin{aligned}V = \frac{(8.314)(773.15)}{17.0} = 378.2 \text{ cm}^3\text{/mol}\\
+v_{calc} = 378.2 \times \frac{1}{18.015} \times \frac{1}{1000} \times \frac{1}{10^6} = 0.0210 \text{ m}^3\text{/kg}\end{aligned}\end{align} \]</div>
 <p class="sd-card-text"><strong>Step 6: Calculate Error for High Pressure</strong></p>
 <div class="math notranslate nohighlight">
 \[\text{Error \%} = \left|\frac{0.0210 - 0.0482}{0.0482}\right| \times 100\% = 56.4\%\]</div>
@@ -655,9 +654,8 @@ For any state function <span class="math notranslate nohighlight">\(\phi\)</span
 \[\Delta U = Q - W \quad \text{(Equation 1)}\]</div>
 <p><strong>Enthalpy Definition:</strong></p>
 <div class="math notranslate nohighlight">
-\[H = U + PV \quad \text{(Equation 2)}\]</div>
-<div class="math notranslate nohighlight">
-\[\Delta H = \Delta U + \Delta(PV) \quad \text{(Equation 3)}\]</div>
+\[ \begin{align}\begin{aligned}H = U + PV \quad \text{(Equation 2)}\\
+\Delta H = \Delta U + \Delta(PV) \quad \text{(Equation 3)}\end{aligned}\end{align} \]</div>
 </div>
 <section id="id1">
 <h3>Worked Examples<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
@@ -674,9 +672,8 @@ The process is adiabatic (<span class="math notranslate nohighlight">\(Q = 0\)</
 <p class="sd-card-text"><strong>Step 2: Apply First Law and State Function Principle</strong>
 Since total energy is conserved and enthalpy is a state function:</p>
 <div class="math notranslate nohighlight">
-\[H_{initial} = H_{final}\]</div>
-<div class="math notranslate nohighlight">
-\[m_{initial} \cdot \hat{H}_{liquid, 40^\circ\text{C}} = m_{ice} \cdot \hat{H}_{ice, 0^\circ\text{C}} + m_{vapor} \cdot \hat{H}_{vapor}\]</div>
+\[ \begin{align}\begin{aligned}H_{initial} = H_{final}\\
+m_{initial} \cdot \hat{H}_{liquid, 40^\circ\text{C}} = m_{ice} \cdot \hat{H}_{ice, 0^\circ\text{C}} + m_{vapor} \cdot \hat{H}_{vapor}\end{aligned}\end{align} \]</div>
 <p class="sd-card-text"><strong>Step 3: Define Variables and Reference State</strong>
 Using liquid water at <span class="math notranslate nohighlight">\(0^\circ\text{C}\)</span> as reference (<span class="math notranslate nohighlight">\(\hat{H}_{liquid, 0^\circ\text{C}} = 0\)</span>):</p>
 <ul class="simple">
@@ -691,13 +688,10 @@ Substituting masses and enthalpy values:</p>
 \[(1 \text{ kg}) \cdot (168 \text{ kJ/kg}) = (1-x) \text{ kg} \cdot (-334 \text{ kJ/kg}) + (x) \text{ kg} \cdot (2537 \text{ kJ/kg})\]</div>
 <p class="sd-card-text"><strong>Step 5: Solve for Evaporation Fraction</strong></p>
 <div class="math notranslate nohighlight">
-\[168 = -334 + 334x + 2537x\]</div>
-<div class="math notranslate nohighlight">
-\[168 + 334 = (334 + 2537)x\]</div>
-<div class="math notranslate nohighlight">
-\[502 = 2871x\]</div>
-<div class="math notranslate nohighlight">
-\[x = \frac{502}{2871} = 0.175\]</div>
+\[ \begin{align}\begin{aligned}168 = -334 + 334x + 2537x\\
+168 + 334 = (334 + 2537)x\\
+502 = 2871x\\
+x = \frac{502}{2871} = 0.175\end{aligned}\end{align} \]</div>
 <p class="sd-card-text"><strong>Step 6: Final Answer</strong>
 Approximately <strong>17.5%</strong> of the water will have evaporated by the time the rest has frozen.</p>
 <p class="sd-card-text"><strong>Physical Interpretation:</strong> The energy stored as sensible heat in the <span class="math notranslate nohighlight">\(40^\circ\text{C}\)</span> water (168 kJ/kg) provides the energy needed for both freezing the remaining liquid (<span class="math notranslate nohighlight">\(-334\)</span> kJ/kg per kg frozen) and vaporizing the evaporated portion (2537 kJ/kg per kg evaporated).</p>
@@ -711,9 +705,9 @@ Approximately <strong>17.5%</strong> of the water will have evaporated by the ti
 <p><strong>Given Data:</strong></p>
 <ul class="simple">
 <li><p>Heat of formation of NH<span class="math notranslate nohighlight">\(_3\)</span> at <span class="math notranslate nohighlight">\(25^\circ\text{C}\)</span>: <span class="math notranslate nohighlight">\(\Delta H_{f, 25^\circ\text{C}} = -45.9\)</span> kJ/mol</p></li>
-<li><p><span class="math notranslate nohighlight">\(C_{P, N_2} = 29\)</span> J/(mol<span class="math notranslate nohighlight">\(\cdot\)</span>K)</p></li>
-<li><p><span class="math notranslate nohighlight">\(C_{P, H_2} = 29\)</span> J/(mol<span class="math notranslate nohighlight">\(\cdot\)</span>K)</p></li>
-<li><p><span class="math notranslate nohighlight">\(C_{P, NH_3} = 35.7\)</span> J/(mol<span class="math notranslate nohighlight">\(\cdot\)</span>K)</p></li>
+<li><p><span class="math notranslate nohighlight">\(C_{P, N_2} = 29\)</span> J/(mol·K)</p></li>
+<li><p><span class="math notranslate nohighlight">\(C_{P, H_2} = 29\)</span> J/(mol·K)</p></li>
+<li><p><span class="math notranslate nohighlight">\(C_{P, NH_3} = 35.7\)</span> J/(mol·K)</p></li>
 </ul>
 </section>
 </div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -731,21 +725,18 @@ Since enthalpy is a state function, we can construct a hypothetical three-step p
 <p class="sd-card-text"><strong>Step 2: Calculate Reaction Enthalpy at <span class="math notranslate nohighlight">\(25^\circ\text{C}\)</span></strong>
 Heat of formation for elemental species = 0:</p>
 <div class="math notranslate nohighlight">
-\[\Delta H_{rxn, 25^\circ\text{C}} = [2 \cdot \Delta H_{f, NH_3}] - [1 \cdot \Delta H_{f, N_2} + 3 \cdot \Delta H_{f, H_2}]\]</div>
-<div class="math notranslate nohighlight">
-\[\Delta H_{rxn, 25^\circ\text{C}} = [2 \cdot (-45.9)] - [0 + 0] = -91.8 \text{ kJ}\]</div>
+\[ \begin{align}\begin{aligned}\Delta H_{rxn, 25^\circ\text{C}} = [2 \cdot \Delta H_{f, NH_3}] - [1 \cdot \Delta H_{f, N_2} + 3 \cdot \Delta H_{f, H_2}]\\
+\Delta H_{rxn, 25^\circ\text{C}} = [2 \cdot (-45.9)] - [0 + 0] = -91.8 \text{ kJ}\end{aligned}\end{align} \]</div>
 <p class="sd-card-text"><strong>Step 3: Calculate <span class="math notranslate nohighlight">\(\Delta H_1\)</span> (Cooling Reactants)</strong>
 Using <span class="math notranslate nohighlight">\(\Delta H = nC_P\Delta T\)</span> with <span class="math notranslate nohighlight">\(\Delta T = 25^\circ\text{C} - 175^\circ\text{C} = -150\)</span> K:</p>
 <div class="math notranslate nohighlight">
-\[\Delta H_1 = [(1 \text{ mol} \cdot 29 \text{ J/(mol$\cdot$K)}) + (3 \text{ mol} \cdot 29 \text{ J/(mol$\cdot$K)})] \cdot (-150 \text{ K})\]</div>
-<div class="math notranslate nohighlight">
-\[\Delta H_1 = (116 \text{ J/K}) \cdot (-150 \text{ K}) = -17,400 \text{ J} = -17.4 \text{ kJ}\]</div>
+\[ \begin{align}\begin{aligned}\Delta H_1 = [(1 \text{ mol} \cdot 29 \text{ J/(mol$\cdot$K)}) + (3 \text{ mol} \cdot 29 \text{ J/(mol$\cdot$K)})] \cdot (-150 \text{ K})\\
+\Delta H_1 = (116 \text{ J/K}) \cdot (-150 \text{ K}) = -17,400 \text{ J} = -17.4 \text{ kJ}\end{aligned}\end{align} \]</div>
 <p class="sd-card-text"><strong>Step 4: Calculate <span class="math notranslate nohighlight">\(\Delta H_2\)</span> (Heating Products)</strong>
 With <span class="math notranslate nohighlight">\(\Delta T = 175^\circ\text{C} - 25^\circ\text{C} = +150\)</span> K:</p>
 <div class="math notranslate nohighlight">
-\[\Delta H_2 = (2 \text{ mol} \cdot 35.7 \text{ J/(mol$\cdot$K)}) \cdot (150 \text{ K})\]</div>
-<div class="math notranslate nohighlight">
-\[\Delta H_2 = (71.4 \text{ J/K}) \cdot (150 \text{ K}) = 10,710 \text{ J} = +10.71 \text{ kJ}\]</div>
+\[ \begin{align}\begin{aligned}\Delta H_2 = (2 \text{ mol} \cdot 35.7 \text{ J/(mol$\cdot$K)}) \cdot (150 \text{ K})\\
+\Delta H_2 = (71.4 \text{ J/K}) \cdot (150 \text{ K}) = 10,710 \text{ J} = +10.71 \text{ kJ}\end{aligned}\end{align} \]</div>
 <p class="sd-card-text"><strong>Step 5: Sum All Enthalpy Changes</strong></p>
 <div class="math notranslate nohighlight">
 \[\Delta H_{rxn, 175^\circ\text{C}} = (-17.4) + (-91.8) + (10.71) = -98.49 \text{ kJ}\]</div>
@@ -792,11 +783,11 @@ The heat of reaction at <span class="math notranslate nohighlight">\(175^\circ\t
 <p class="admonition-title">Term Definitions</p>
 <p><strong>Critical Sign Conventions:</strong></p>
 <ul class="simple">
-<li><p>Heat <strong>added</strong> to system: <span class="math notranslate nohighlight">\(Q\)</span> <span class="math notranslate nohighlight">\(&gt;\)</span> <span class="math notranslate nohighlight">\(0\)</span> (positive)</p></li>
-<li><p>Heat <strong>removed</strong> from system: <span class="math notranslate nohighlight">\(Q\)</span> <span class="math notranslate nohighlight">\(&lt;\)</span> <span class="math notranslate nohighlight">\(0\)</span> (negative)</p></li>
+<li><p>Heat <strong>added</strong> to system: <span class="math notranslate nohighlight">\(Q &gt; 0\)</span> (positive)</p></li>
+<li><p>Heat <strong>removed</strong> from system: <span class="math notranslate nohighlight">\(Q &lt; 0\)</span> (negative)</p></li>
 <li><p>Adiabatic process: <span class="math notranslate nohighlight">\(Q = 0\)</span> (no heat transfer)</p></li>
-<li><p>Work done <strong>on</strong> system (compression): <span class="math notranslate nohighlight">\(W\)</span> <span class="math notranslate nohighlight">\(&gt;\)</span> <span class="math notranslate nohighlight">\(0\)</span> (positive)</p></li>
-<li><p>Work done <strong>by</strong> system (expansion): <span class="math notranslate nohighlight">\(W\)</span> <span class="math notranslate nohighlight">\(&lt;\)</span> <span class="math notranslate nohighlight">\(0\)</span> (negative)</p></li>
+<li><p>Work done <strong>on</strong> system (compression): <span class="math notranslate nohighlight">\(W &gt; 0\)</span> (positive)</p></li>
+<li><p>Work done <strong>by</strong> system (expansion): <span class="math notranslate nohighlight">\(W &lt; 0\)</span> (negative)</p></li>
 <li><p>Reversible process: <span class="math notranslate nohighlight">\(P_{gas} = P_{ext}\)</span> (system always in equilibrium)</p></li>
 </ul>
 </div>
@@ -819,11 +810,9 @@ The heat of reaction at <span class="math notranslate nohighlight">\(175^\circ\t
 \[\frac{T_2}{T_1} = \left( \frac{P_2}{P_1} \right)^{\frac{R}{C_P}} \quad \text{(Equation 4)}\]</div>
 <p><strong>Heat Capacity Relations:</strong></p>
 <div class="math notranslate nohighlight">
-\[C_P = C_V + R \quad \text{(Equation 5)}\]</div>
-<div class="math notranslate nohighlight">
-\[\Delta U = C_V \Delta T \quad \text{(Equation 6)}\]</div>
-<div class="math notranslate nohighlight">
-\[\Delta H = C_P \Delta T \quad \text{(Equation 7)}\]</div>
+\[ \begin{align}\begin{aligned}C_P = C_V + R \quad \text{(Equation 5)}\\
+\Delta U = C_V \Delta T \quad \text{(Equation 6)}\\
+\Delta H = C_P \Delta T \quad \text{(Equation 7)}\end{aligned}\end{align} \]</div>
 </div>
 <section id="special-process-cases">
 <h3>Special Process Cases<a class="headerlink" href="#special-process-cases" title="Link to this heading">#</a></h3>
@@ -838,18 +827,14 @@ When pressure is constant and the process is reversible, heat added equals the c
 <p class="admonition-title">Important</p>
 <p><strong>Constant Volume Process:</strong></p>
 <div class="math notranslate nohighlight">
-\[W_{EC} = 0 \quad \text{(no volume change)}\]</div>
-<div class="math notranslate nohighlight">
-\[\Delta U = Q_v \quad \text{(Equation 8)}\]</div>
-<div class="math notranslate nohighlight">
-\[Q_v = C_V \Delta T \quad \text{(Equation 9)}\]</div>
+\[ \begin{align}\begin{aligned}W_{EC} = 0 \quad \text{(no volume change)}\\
+\Delta U = Q_v \quad \text{(Equation 8)}\\
+Q_v = C_V \Delta T \quad \text{(Equation 9)}\end{aligned}\end{align} \]</div>
 <p><strong>Constant Pressure Process (Reversible):</strong></p>
 <div class="math notranslate nohighlight">
-\[W_{EC} = -P\Delta V \quad \text{(Equation 10)}\]</div>
-<div class="math notranslate nohighlight">
-\[Q_p = \Delta H = \Delta U + P\Delta V \quad \text{(Equation 11)}\]</div>
-<div class="math notranslate nohighlight">
-\[Q_p = C_P \Delta T \quad \text{(Equation 12)}\]</div>
+\[ \begin{align}\begin{aligned}W_{EC} = -P\Delta V \quad \text{(Equation 10)}\\
+Q_p = \Delta H = \Delta U + P\Delta V \quad \text{(Equation 11)}\\
+Q_p = C_P \Delta T \quad \text{(Equation 12)}\end{aligned}\end{align} \]</div>
 </div>
 </section>
 <section id="derivation-of-adiabatic-reversible-process">
@@ -882,9 +867,8 @@ Dividing both sides appropriately:</p>
 <p class="sd-card-text"><strong>Step 5: Integrate from Initial to Final State</strong>
 Assuming constant heat capacities:</p>
 <div class="math notranslate nohighlight">
-\[\int_{T_1}^{T_2} \frac{C_V}{T} dT = -\int_{V_1}^{V_2} \frac{nR}{V} dV\]</div>
-<div class="math notranslate nohighlight">
-\[C_V \ln\left(\frac{T_2}{T_1}\right) = -nR \ln\left(\frac{V_2}{V_1}\right)\]</div>
+\[ \begin{align}\begin{aligned}\int_{T_1}^{T_2} \frac{C_V}{T} dT = -\int_{V_1}^{V_2} \frac{nR}{V} dV\\
+C_V \ln\left(\frac{T_2}{T_1}\right) = -nR \ln\left(\frac{V_2}{V_1}\right)\end{aligned}\end{align} \]</div>
 <p class="sd-card-text"><strong>Step 6: Relate Volume Ratio to Temperature and Pressure</strong>
 From ideal gas law at two states: <span class="math notranslate nohighlight">\(\frac{P_1V_1}{T_1} = \frac{P_2V_2}{T_2}\)</span></p>
 <div class="math notranslate nohighlight">
@@ -895,15 +879,13 @@ From ideal gas law at two states: <span class="math notranslate nohighlight">\(\
 <p class="sd-card-text"><strong>Step 8: Expand Logarithm and Rearrange</strong>
 Using <span class="math notranslate nohighlight">\(\ln(ab) = \ln(a) + \ln(b)\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[C_V \ln\left(\frac{T_2}{T_1}\right) = -nR \ln\left(\frac{T_2}{T_1}\right) - nR \ln\left(\frac{P_1}{P_2}\right)\]</div>
-<div class="math notranslate nohighlight">
-\[(C_V + nR) \ln\left(\frac{T_2}{T_1}\right) = nR \ln\left(\frac{P_2}{P_1}\right)\]</div>
+\[ \begin{align}\begin{aligned}C_V \ln\left(\frac{T_2}{T_1}\right) = -nR \ln\left(\frac{T_2}{T_1}\right) - nR \ln\left(\frac{P_1}{P_2}\right)\\
+(C_V + nR) \ln\left(\frac{T_2}{T_1}\right) = nR \ln\left(\frac{P_2}{P_1}\right)\end{aligned}\end{align} \]</div>
 <p class="sd-card-text"><strong>Step 9: Apply Heat Capacity Relationship</strong>
 For ideal gas: <span class="math notranslate nohighlight">\(C_P = C_V + nR\)</span>, so:</p>
 <div class="math notranslate nohighlight">
-\[C_P \ln\left(\frac{T_2}{T_1}\right) = nR \ln\left(\frac{P_2}{P_1}\right)\]</div>
-<div class="math notranslate nohighlight">
-\[\ln\left(\frac{T_2}{T_1}\right) = \frac{nR}{C_P} \ln\left(\frac{P_2}{P_1}\right)\]</div>
+\[ \begin{align}\begin{aligned}C_P \ln\left(\frac{T_2}{T_1}\right) = nR \ln\left(\frac{P_2}{P_1}\right)\\
+\ln\left(\frac{T_2}{T_1}\right) = \frac{nR}{C_P} \ln\left(\frac{P_2}{P_1}\right)\end{aligned}\end{align} \]</div>
 <p class="sd-card-text"><strong>Step 10: Final Result</strong>
 Exponentiating both sides:</p>
 <div class="math notranslate nohighlight">
@@ -911,7 +893,7 @@ Exponentiating both sides:</p>
 <p class="sd-card-text">For molar basis (<span class="math notranslate nohighlight">\(n = 1\)</span> mol), this becomes:</p>
 <div class="math notranslate nohighlight">
 \[\frac{T_2}{T_1} = \left( \frac{P_2}{P_1} \right)^{\frac{R}{C_P}}\]</div>
-<p class="sd-card-text"><strong>Physical Interpretation:</strong> This relationship shows that for adiabatic compression (<span class="math notranslate nohighlight">\(P_2\)</span> <span class="math notranslate nohighlight">\(&gt;\)</span> <span class="math notranslate nohighlight">\(P_1\)</span>), the temperature must increase (<span class="math notranslate nohighlight">\(T_2\)</span> <span class="math notranslate nohighlight">\(&gt;\)</span> <span class="math notranslate nohighlight">\(T_1\)</span>). The exponent <span class="math notranslate nohighlight">\(R/C_P\)</span> is always positive and less than 1 for real gases, making this relationship physically meaningful.</p>
+<p class="sd-card-text"><strong>Physical Interpretation:</strong> This relationship shows that for adiabatic compression (<span class="math notranslate nohighlight">\(P_2 &gt; P_1\)</span>), the temperature must increase (<span class="math notranslate nohighlight">\(T_2 &gt; T_1\)</span>). The exponent <span class="math notranslate nohighlight">\(R/C_P\)</span> is always positive and less than 1 for real gases, making this relationship physically meaningful.</p>
 </div>
 </details></section>
 <section id="examples-for-closed-systems">
@@ -946,9 +928,8 @@ Using <span class="math notranslate nohighlight">\(P = \frac{RT}{V}\)</span>:</p
 \[\frac{C_V}{T} dT = -\frac{R}{V} dV\]</div>
 <p class="sd-card-text">Integrating from state 1 to state 2:</p>
 <div class="math notranslate nohighlight">
-\[\int_{T_1}^{T_2} \frac{C_V}{T} dT = -\int_{V_1}^{V_2} \frac{R}{V} dV\]</div>
-<div class="math notranslate nohighlight">
-\[C_V \ln\left(\frac{T_2}{T_1}\right) = -R \ln\left(\frac{V_2}{V_1}\right)\]</div>
+\[ \begin{align}\begin{aligned}\int_{T_1}^{T_2} \frac{C_V}{T} dT = -\int_{V_1}^{V_2} \frac{R}{V} dV\\
+C_V \ln\left(\frac{T_2}{T_1}\right) = -R \ln\left(\frac{V_2}{V_1}\right)\end{aligned}\end{align} \]</div>
 <p class="sd-card-text"><strong>Step 4: Solve for Temperature Ratio</strong></p>
 <div class="math notranslate nohighlight">
 \[\ln\left(\frac{T_2}{T_1}\right) = -\frac{R}{C_V} \ln\left(\frac{V_2}{V_1}\right) = \ln\left[\left(\frac{V_1}{V_2}\right)^{\frac{R}{C_V}}\right]\]</div>
@@ -959,9 +940,8 @@ Using <span class="math notranslate nohighlight">\(P = \frac{RT}{V}\)</span>:</p
 For diatomic gases: <span class="math notranslate nohighlight">\(\gamma = C_P/C_V \approx 1.4\)</span>
 Since <span class="math notranslate nohighlight">\(C_P - C_V = R\)</span>: <span class="math notranslate nohighlight">\(\frac{R}{C_V} = \gamma - 1 = 0.4\)</span></p>
 <div class="math notranslate nohighlight">
-\[T_2 = T_1 \left(\frac{V_1}{V_2}\right)^{0.4} = 300 \text{ K} \cdot \left(\frac{10}{1}\right)^{0.4}\]</div>
-<div class="math notranslate nohighlight">
-\[T_2 = 300 \text{ K} \cdot (10)^{0.4} = 300 \text{ K} \cdot 2.51 = 753 \text{ K}\]</div>
+\[ \begin{align}\begin{aligned}T_2 = T_1 \left(\frac{V_1}{V_2}\right)^{0.4} = 300 \text{ K} \cdot \left(\frac{10}{1}\right)^{0.4}\\
+T_2 = 300 \text{ K} \cdot (10)^{0.4} = 300 \text{ K} \cdot 2.51 = 753 \text{ K}\end{aligned}\end{align} \]</div>
 <p class="sd-card-text">Converting to Celsius: <span class="math notranslate nohighlight">\(753 - 273 = 480^\circ\text{C}\)</span></p>
 <p class="sd-card-text"><strong>Step 6: Calculate Final Pressure</strong>
 Using combined ideal gas law:</p>
@@ -969,9 +949,8 @@ Using combined ideal gas law:</p>
 \[\frac{P_1 V_1}{T_1} = \frac{P_2 V_2}{T_2}\]</div>
 <p class="sd-card-text">Solving for <span class="math notranslate nohighlight">\(P_2\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[P_2 = P_1 \left(\frac{V_1}{V_2}\right) \left(\frac{T_2}{T_1}\right) = 1 \text{ bar} \cdot \left(\frac{10}{1}\right) \cdot \left(\frac{753}{300}\right)\]</div>
-<div class="math notranslate nohighlight">
-\[P_2 = 1 \cdot 10 \cdot 2.51 = 25.1 \text{ bar}\]</div>
+\[ \begin{align}\begin{aligned}P_2 = P_1 \left(\frac{V_1}{V_2}\right) \left(\frac{T_2}{T_1}\right) = 1 \text{ bar} \cdot \left(\frac{10}{1}\right) \cdot \left(\frac{753}{300}\right)\\
+P_2 = 1 \cdot 10 \cdot 2.51 = 25.1 \text{ bar}\end{aligned}\end{align} \]</div>
 <p class="sd-card-text"><strong>Final Answer:</strong>
 Final conditions: <span class="math notranslate nohighlight">\(T_2 = \textbf{753 K}\)</span> and <span class="math notranslate nohighlight">\(P_2 = \textbf{25.1 bar}\)</span></p>
 </div>
@@ -983,7 +962,7 @@ If this compression were irreversible, more work would be required to reach the 
 <div class="proof example admonition" id="example-6">
 <p class="admonition-title"><span class="caption-number">Example 29 </span> (Constant Pressure vs. Constant Volume Heating)</p>
 <section class="example-content" id="proof-content">
-<p>Two containers at 350 K and 0.5 MPa each contain 1.0 mol of ideal gas with <span class="math notranslate nohighlight">\(C_P = 31\)</span> J/(mol<span class="math notranslate nohighlight">\(\cdot\)</span>K).</p>
+<p>Two containers at 350 K and 0.5 MPa each contain 1.0 mol of ideal gas with <span class="math notranslate nohighlight">\(C_P = 31\)</span> J/(mol·K).</p>
 <ul class="simple">
 <li><p><strong>Container A:</strong> Constant pressure piston-cylinder</p></li>
 <li><p><strong>Container B:</strong> Fixed volume container</p></li>
@@ -997,14 +976,12 @@ If this compression were irreversible, more work would be required to reach the 
 For reversible constant pressure process in closed system:</p>
 <div class="math notranslate nohighlight">
 \[Q_p = \Delta H = nC_P\Delta T = nC_P(T_2 - T_1)\]</div>
-<p class="sd-card-text">Given: <span class="math notranslate nohighlight">\(Q_p = 8.5\)</span> kJ = 8500 J, <span class="math notranslate nohighlight">\(n = 1.0\)</span> mol, <span class="math notranslate nohighlight">\(C_P = 31\)</span> J/(mol<span class="math notranslate nohighlight">\(\cdot\)</span>K), <span class="math notranslate nohighlight">\(T_1 = 350\)</span> K</p>
+<p class="sd-card-text">Given: <span class="math notranslate nohighlight">\(Q_p = 8.5\)</span> kJ = 8500 J, <span class="math notranslate nohighlight">\(n = 1.0\)</span> mol, <span class="math notranslate nohighlight">\(C_P = 31\)</span> J/(mol·K), <span class="math notranslate nohighlight">\(T_1 = 350\)</span> K</p>
 <p class="sd-card-text"><strong>Step 2: Solve for Final Temperature (Container A)</strong></p>
 <div class="math notranslate nohighlight">
-\[8500 \text{ J} = (1.0 \text{ mol}) \cdot (31 \text{ J/(mol$\cdot$K)}) \cdot (T_2 - 350 \text{ K})\]</div>
-<div class="math notranslate nohighlight">
-\[T_2 - 350 = \frac{8500}{31} = 274 \text{ K}\]</div>
-<div class="math notranslate nohighlight">
-\[T_2 = 350 + 274 = \textbf{624 K}\]</div>
+\[ \begin{align}\begin{aligned}8500 \text{ J} = (1.0 \text{ mol}) \cdot (31 \text{ J/(mol$\cdot$K)}) \cdot (T_2 - 350 \text{ K})\\
+T_2 - 350 = \frac{8500}{31} = 274 \text{ K}\\
+T_2 = 350 + 274 = \textbf{624 K}\end{aligned}\end{align} \]</div>
 <p class="sd-card-text">Pressure remains constant: <span class="math notranslate nohighlight">\(P_2 = P_1 = \textbf{0.5 MPa}\)</span></p>
 <p class="sd-card-text"><strong>Step 3: Container B: Constant Volume Analysis</strong>
 For constant volume process, no expansion work (<span class="math notranslate nohighlight">\(W = 0\)</span>):</p>
@@ -1015,17 +992,14 @@ For constant volume process, no expansion work (<span class="math notranslate no
 \[C_V = C_P - R = 31 - 8.314 = 22.686 \text{ J/(mol$\cdot$K)}\]</div>
 <p class="sd-card-text"><strong>Step 4: Solve for Final Temperature (Container B)</strong></p>
 <div class="math notranslate nohighlight">
-\[8500 \text{ J} = (1.0 \text{ mol}) \cdot (22.686 \text{ J/(mol$\cdot$K)}) \cdot (T_2 - 350 \text{ K})\]</div>
-<div class="math notranslate nohighlight">
-\[T_2 - 350 = \frac{8500}{22.686} = 375 \text{ K}\]</div>
-<div class="math notranslate nohighlight">
-\[T_2 = 350 + 375 = \textbf{725 K}\]</div>
+\[ \begin{align}\begin{aligned}8500 \text{ J} = (1.0 \text{ mol}) \cdot (22.686 \text{ J/(mol$\cdot$K)}) \cdot (T_2 - 350 \text{ K})\\
+T_2 - 350 = \frac{8500}{22.686} = 375 \text{ K}\\
+T_2 = 350 + 375 = \textbf{725 K}\end{aligned}\end{align} \]</div>
 <p class="sd-card-text"><strong>Step 5: Calculate Final Pressure (Container B)</strong>
 For constant volume, using ideal gas law:</p>
 <div class="math notranslate nohighlight">
-\[\frac{P_1}{T_1} = \frac{P_2}{T_2}\]</div>
-<div class="math notranslate nohighlight">
-\[P_2 = P_1 \left(\frac{T_2}{T_1}\right) = 0.5 \text{ MPa} \cdot \left(\frac{725}{350}\right) = \textbf{1.04 MPa}\]</div>
+\[ \begin{align}\begin{aligned}\frac{P_1}{T_1} = \frac{P_2}{T_2}\\
+P_2 = P_1 \left(\frac{T_2}{T_1}\right) = 0.5 \text{ MPa} \cdot \left(\frac{725}{350}\right) = \textbf{1.04 MPa}\end{aligned}\end{align} \]</div>
 <p class="sd-card-text"><strong>Summary of Results:</strong></p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Container A (Constant Pressure):</strong> <span class="math notranslate nohighlight">\(T_2 = 624\)</span> K, <span class="math notranslate nohighlight">\(P_2 = 0.5\)</span> MPa</p></li>
@@ -1151,7 +1125,7 @@ The temperature increases from <span class="math notranslate nohighlight">\(450^
 <p class="admonition-title"><span class="caption-number">Example 31 </span> (Adiabatic Semi-Batch Reactor)</p>
 <section class="example-content" id="proof-content">
 <p>An adiabatic reactor initially contains 100 mol of product B at <span class="math notranslate nohighlight">\(50^\circ\text{C}\)</span>. Reactant A is fed at <span class="math notranslate nohighlight">\(90^\circ\text{C}\)</span> at 15 mol/hr. The exothermic reaction A <span class="math notranslate nohighlight">\(\rightarrow\)</span> B is very fast. Find reactor temperature after 6 hours.</p>
-<p><strong>Given Data:</strong> <span class="math notranslate nohighlight">\(\Delta H_{rxn} = -20\)</span> kJ/mol, <span class="math notranslate nohighlight">\(C_{P,A} = 60\)</span> J/(mol<span class="math notranslate nohighlight">\(\cdot\)</span>K), <span class="math notranslate nohighlight">\(C_{P,B} = 70\)</span> J/(mol<span class="math notranslate nohighlight">\(\cdot\)</span>K)</p>
+<p><strong>Given Data:</strong> <span class="math notranslate nohighlight">\(\Delta H_{rxn} = -20\)</span> kJ/mol, <span class="math notranslate nohighlight">\(C_{P,A} = 60\)</span> J/(mol·K), <span class="math notranslate nohighlight">\(C_{P,B} = 70\)</span> J/(mol·K)</p>
 </section>
 </div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -1163,9 +1137,8 @@ Since reaction is very fast, A instantly converts to B upon entering. System con
 <p class="sd-card-text"><strong>Step 2: Integrate Over 6-Hour Period</strong>
 With constant inlet conditions:</p>
 <div class="math notranslate nohighlight">
-\[\int_{initial}^{final} d(N_B H_B) = \int_{0}^{6} \dot{N}_{A,in} H_{A,in} dt\]</div>
-<div class="math notranslate nohighlight">
-\[(N_B H_B)_{final} - (N_B H_B)_{initial} = (\dot{N}_{A,in} \cdot t) \cdot H_{A,in}\]</div>
+\[ \begin{align}\begin{aligned}\int_{initial}^{final} d(N_B H_B) = \int_{0}^{6} \dot{N}_{A,in} H_{A,in} dt\\
+(N_B H_B)_{final} - (N_B H_B)_{initial} = (\dot{N}_{A,in} \cdot t) \cdot H_{A,in}\end{aligned}\end{align} \]</div>
 <p class="sd-card-text"><strong>Step 3: Calculate Mole Quantities</strong></p>
 <ul class="simple">
 <li><p class="sd-card-text">Initial moles B: <span class="math notranslate nohighlight">\(N_{B,i} = 100\)</span> mol</p></li>
@@ -1191,16 +1164,13 @@ Since <span class="math notranslate nohighlight">\(H_{f,A}^\circ - H_{f,B}^\circ
 \[N_{B,f}C_{P,B}(T_f - 25) = N_{A,added}(20000) + N_{B,i}C_{P,B}(25) + N_{A,added}C_{P,A}(65)\]</div>
 <p class="sd-card-text"><strong>Step 7: Substitute Numerical Values</strong></p>
 <div class="math notranslate nohighlight">
-\[(190)(70)(T_f - 25) = (90)(20000) + (100)(70)(25) + (90)(60)(65)\]</div>
-<div class="math notranslate nohighlight">
-\[13300(T_f - 25) = 1,800,000 + 175,000 + 351,000\]</div>
-<div class="math notranslate nohighlight">
-\[13300(T_f - 25) = 2,326,000\]</div>
+\[ \begin{align}\begin{aligned}(190)(70)(T_f - 25) = (90)(20000) + (100)(70)(25) + (90)(60)(65)\\
+13300(T_f - 25) = 1,800,000 + 175,000 + 351,000\\
+13300(T_f - 25) = 2,326,000\end{aligned}\end{align} \]</div>
 <p class="sd-card-text"><strong>Step 8: Solve for Final Temperature</strong></p>
 <div class="math notranslate nohighlight">
-\[T_f - 25 = \frac{2,326,000}{13300} = 174.9\]</div>
-<div class="math notranslate nohighlight">
-\[T_f = 174.9 + 25 = \textbf{199.9}^{\circ}\text{C}\]</div>
+\[ \begin{align}\begin{aligned}T_f - 25 = \frac{2,326,000}{13300} = 174.9\\
+T_f = 174.9 + 25 = \textbf{199.9}^{\circ}\text{C}\end{aligned}\end{align} \]</div>
 <p class="sd-card-text"><strong>Step 9: Final Answer and Analysis</strong>
 The reactor temperature increases from <span class="math notranslate nohighlight">\(50^{\circ}\text{C}\)</span> to approximately <span class="math notranslate nohighlight">\(\textbf{200}^{\circ}\text{C}\)</span> due to:</p>
 <ul class="simple">
@@ -1324,11 +1294,9 @@ By definition: <span class="math notranslate nohighlight">\(dH = C_P dT\)</span>
 <p class="admonition-title">Important</p>
 <p><strong>Key Enthalpy Relationships for Ideal Gas:</strong></p>
 <div class="math notranslate nohighlight">
-\[C_P = C_V + R \quad \text{(Equation 3)}\]</div>
-<div class="math notranslate nohighlight">
-\[\Delta H = C_P \Delta T \quad \text{(Equation 4)}\]</div>
-<div class="math notranslate nohighlight">
-\[\Delta U = C_V \Delta T \quad \text{(Equation 5)}\]</div>
+\[ \begin{align}\begin{aligned}C_P = C_V + R \quad \text{(Equation 3)}\\
+\Delta H = C_P \Delta T \quad \text{(Equation 4)}\\
+\Delta U = C_V \Delta T \quad \text{(Equation 5)}\end{aligned}\end{align} \]</div>
 <p><strong>Constant Pressure Heat Transfer:</strong></p>
 <div class="math notranslate nohighlight">
 \[Q_P = \Delta H \quad \text{(Equation 6)}\]</div>
@@ -1353,8 +1321,8 @@ By definition: <span class="math notranslate nohighlight">\(dH = C_P dT\)</span>
 <p><strong>Process Classification:</strong></p>
 <ul class="simple">
 <li><p><strong>Reversible process:</strong> <span class="math notranslate nohighlight">\(\Delta S_{total} = 0\)</span> (theoretical limit)</p></li>
-<li><p><strong>Irreversible process:</strong> <span class="math notranslate nohighlight">\(\Delta S_{total}\)</span> <span class="math notranslate nohighlight">\(&gt;\)</span> <span class="math notranslate nohighlight">\(0\)</span> (all real processes)</p></li>
-<li><p><strong>Impossible process:</strong> <span class="math notranslate nohighlight">\(\Delta S_{total}\)</span> <span class="math notranslate nohighlight">\(&lt;\)</span> <span class="math notranslate nohighlight">\(0\)</span> (violates Second Law)</p></li>
+<li><p><strong>Irreversible process:</strong> <span class="math notranslate nohighlight">\(\Delta S_{total} &gt; 0\)</span> (all real processes)</p></li>
+<li><p><strong>Impossible process:</strong> <span class="math notranslate nohighlight">\(\Delta S_{total} &lt; 0\)</span> (violates Second Law)</p></li>
 </ul>
 </div>
 <div class="tip admonition">
@@ -1386,9 +1354,8 @@ By definition: <span class="math notranslate nohighlight">\(dH = C_P dT\)</span>
 <p class="admonition-title">Important</p>
 <p><strong>Entropy Change for Ideal Gas:</strong></p>
 <div class="math notranslate nohighlight">
-\[\Delta S = C_P \ln\left(\frac{T_2}{T_1}\right) - R \ln\left(\frac{P_2}{P_1}\right) \quad \text{(Equation 10)}\]</div>
-<div class="math notranslate nohighlight">
-\[\Delta S = C_V \ln\left(\frac{T_2}{T_1}\right) + R \ln\left(\frac{V_2}{V_1}\right) \quad \text{(Equation 11)}\]</div>
+\[ \begin{align}\begin{aligned}\Delta S = C_P \ln\left(\frac{T_2}{T_1}\right) - R \ln\left(\frac{P_2}{P_1}\right) \quad \text{(Equation 10)}\\
+\Delta S = C_V \ln\left(\frac{T_2}{T_1}\right) + R \ln\left(\frac{V_2}{V_1}\right) \quad \text{(Equation 11)}\end{aligned}\end{align} \]</div>
 <p><strong>Entropy of Mixing (Ideal Gases):</strong></p>
 <div class="math notranslate nohighlight">
 \[\Delta S = -R \sum_{i} (y_i \ln y_i) \quad \text{(Equation 12)}\]</div>
@@ -1550,19 +1517,18 @@ Assume surface temperature leads to film temperature: <span class="math notransl
 <p class="sd-card-text">Look up air properties at 320 K:</p>
 <ul class="simple">
 <li><p class="sd-card-text">Kinematic viscosity: <span class="math notranslate nohighlight">\(\nu = 1.7 \times 10^{-6}\)</span> m<span class="math notranslate nohighlight">\(^2\)</span>/s (note: this appears to be an error in reference material)</p></li>
-<li><p class="sd-card-text">Thermal conductivity: <span class="math notranslate nohighlight">\(k_f = 0.0269\)</span> W/(m<span class="math notranslate nohighlight">\(\cdot\)</span>K)</p></li>
+<li><p class="sd-card-text">Thermal conductivity: <span class="math notranslate nohighlight">\(k_f = 0.0269\)</span> W/(m·K)</p></li>
 <li><p class="sd-card-text">Prandtl number: <span class="math notranslate nohighlight">\(Pr = 0.706\)</span></p></li>
 </ul>
 <p class="sd-card-text"><strong>Step 2: Calculate Reynolds Number</strong></p>
 <div class="math notranslate nohighlight">
 \[Re_L = \frac{U_{\infty} L}{\nu} = \frac{(5 \text{ m/s})(0.5 \text{ m})}{1.7 \times 10^{-6} \text{ m}^2\text{/s}} = 1.47 \times 10^6\]</div>
-<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(Re_L\)</span> <span class="math notranslate nohighlight">\(&gt;\)</span> <span class="math notranslate nohighlight">\(5 \times 10^5\)</span>, flow would typically be classified as turbulent.</p>
+<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(Re_L &gt; 5 \times 10^5\)</span>, flow would typically be classified as turbulent.</p>
 <p class="sd-card-text"><strong>Step 3: Apply Nusselt Number Correlation</strong>
 Following reference material (noting inconsistency), using laminar correlation:</p>
 <div class="math notranslate nohighlight">
-\[Nu_L = 0.664 Re_L^{1/2} Pr^{1/3}\]</div>
-<div class="math notranslate nohighlight">
-\[Nu_L = 0.664 (1.47 \times 10^6)^{1/2} (0.706)^{1/3} \approx 717\]</div>
+\[ \begin{align}\begin{aligned}Nu_L = 0.664 Re_L^{1/2} Pr^{1/3}\\
+Nu_L = 0.664 (1.47 \times 10^6)^{1/2} (0.706)^{1/3} \approx 717\end{aligned}\end{align} \]</div>
 <p class="sd-card-text"><strong>Step 4: Calculate Heat Transfer Coefficient</strong></p>
 <div class="math notranslate nohighlight">
 \[\bar{h} = \frac{Nu_L k_f}{L} = \frac{(717)(0.0269\, \text{W/(m$\cdot$K)})}{0.5\, \text{m}} = \textbf{38.6}\, \text{W/(m}^2\text{·K)}\]</div>
@@ -1585,7 +1551,7 @@ Guess: <span class="math notranslate nohighlight">\(T_s = 250^\circ\text{C}\)</s
 <p class="sd-card-text"><strong>Step 3: Air Properties at 412 K</strong>
 Look up properties:</p>
 <ul class="simple">
-<li><p class="sd-card-text">Thermal conductivity: <span class="math notranslate nohighlight">\(k_f = 0.0346\)</span> W/(m<span class="math notranslate nohighlight">\(\cdot\)</span>K)</p></li>
+<li><p class="sd-card-text">Thermal conductivity: <span class="math notranslate nohighlight">\(k_f = 0.0346\)</span> W/(m·K)</p></li>
 <li><p class="sd-card-text">Kinematic viscosity: <span class="math notranslate nohighlight">\(\nu = 27.85 \times 10^{-6}\)</span> m<span class="math notranslate nohighlight">\(^2\)</span>/s</p></li>
 <li><p class="sd-card-text">Prandtl number: <span class="math notranslate nohighlight">\(Pr = 0.69\)</span></p></li>
 </ul>
@@ -1594,7 +1560,7 @@ Convert velocity: <span class="math notranslate nohighlight">\(U_{\infty} = 40\)
 <p class="sd-card-text">Length: <span class="math notranslate nohighlight">\(L = 0.05\)</span> m</p>
 <div class="math notranslate nohighlight">
 \[Re_L = \frac{U_{\infty} L}{\nu} = \frac{(11.11)(0.05)}{27.85 \times 10^{-6}} = 19,946\]</div>
-<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(Re_L\)</span> <span class="math notranslate nohighlight">\(&lt;\)</span> <span class="math notranslate nohighlight">\(5 \times 10^5\)</span>, flow is laminar.</p>
+<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(Re_L &lt; 5 \times 10^5\)</span>, flow is laminar.</p>
 <p class="sd-card-text"><strong>Step 5: Calculate Nusselt Number</strong>
 For laminar flow over flat plate:</p>
 <div class="math notranslate nohighlight">
@@ -1605,9 +1571,8 @@ For laminar flow over flat plate:</p>
 <p class="sd-card-text"><strong>Step 7: Solve for Surface Temperature</strong>
 Rearranging heat transfer equation:</p>
 <div class="math notranslate nohighlight">
-\[T_s = T_{\infty} + \frac{q'}{2\bar{h}L} = 27 + \frac{1200}{2(57.4)(0.05)}\]</div>
-<div class="math notranslate nohighlight">
-\[T_s = 27 + \frac{1200}{5.74} = 27 + 209 = \mathbf{236^\circ\text{C}}\]</div>
+\[ \begin{align}\begin{aligned}T_s = T_{\infty} + \frac{q'}{2\bar{h}L} = 27 + \frac{1200}{2(57.4)(0.05)}\\
+T_s = 27 + \frac{1200}{5.74} = 27 + 209 = \mathbf{236^\circ\text{C}}\end{aligned}\end{align} \]</div>
 </div>
 </details><div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1615,7 +1580,7 @@ Rearranging heat transfer equation:</p>
 <ul class="simple">
 <li><p>For unknown surface temperatures, use iterative approach</p></li>
 <li><p>Film temperature determines fluid properties: <span class="math notranslate nohighlight">\(T_f = (T_s + T_{\infty})/2\)</span></p></li>
-<li><p>Reynolds number determines flow regime: laminar if <span class="math notranslate nohighlight">\(Re_L\)</span> <span class="math notranslate nohighlight">\(&lt;\)</span> <span class="math notranslate nohighlight">\(5 \times 10^5\)</span></p></li>
+<li><p>Reynolds number determines flow regime: laminar if <span class="math notranslate nohighlight">\(Re_L &lt; 5 \times 10^5\)</span></p></li>
 <li><p>Select appropriate Nusselt correlation based on geometry and flow regime</p></li>
 <li><p>Check convergence between guessed and calculated temperatures</p></li>
 <li><p>For fins and extended surfaces, account for heat transfer from all surfaces</p></li>
@@ -1745,19 +1710,15 @@ The process is possible if the total entropy change of the universe (the three r
 <li><p class="sd-card-text"><strong>Given:</strong> <span class="math notranslate nohighlight">\(Q_{H,eng} = +200\)</span> kJ at <span class="math notranslate nohighlight">\(T_H = 400\)</span> K, <span class="math notranslate nohighlight">\(T_C = 300\)</span> K</p></li>
 <li><p class="sd-card-text"><strong>Entropy Balance:</strong> For the Carnot engine, <span class="math notranslate nohighlight">\(\Delta S_{engine} = 0\)</span></p>
 <div class="math notranslate nohighlight">
-\[  \frac{Q_{H,eng}}{T_H} + \frac{Q_{C,eng}}{T_C} = 0\]</div>
-<div class="math notranslate nohighlight">
-\[  \frac{200 \text{ kJ}}{400 \text{ K}} + \frac{Q_{C,eng}}{300 \text{ K}} = 0\]</div>
-<div class="math notranslate nohighlight">
-\[  Q_{C,eng} = -300 \left(\frac{200}{400}\right) = -150 \text{ kJ}\]</div>
+\[ \begin{align}\begin{aligned}  \frac{Q_{H,eng}}{T_H} + \frac{Q_{C,eng}}{T_C} = 0\\  
+  \frac{200 \text{ kJ}}{400 \text{ K}} + \frac{Q_{C,eng}}{300 \text{ K}} = 0\\  
+  Q_{C,eng} = -300 \left(\frac{200}{400}\right) = -150 \text{ kJ}\end{aligned}\end{align} \]</div>
 </li>
 <li><p class="sd-card-text"><strong>Energy Balance:</strong> Find work output <span class="math notranslate nohighlight">\(W_{eng}\)</span></p>
 <div class="math notranslate nohighlight">
-\[  Q_{H,eng} + Q_{C,eng} + W_{eng} = 0\]</div>
-<div class="math notranslate nohighlight">
-\[  200 - 150 + W_{eng} = 0\]</div>
-<div class="math notranslate nohighlight">
-\[  W_{eng} = -50 \text{ kJ} \quad \text{(Work output)}\]</div>
+\[ \begin{align}\begin{aligned}  Q_{H,eng} + Q_{C,eng} + W_{eng} = 0\\  
+  200 - 150 + W_{eng} = 0\\  
+  W_{eng} = -50 \text{ kJ} \quad \text{(Work output)}\end{aligned}\end{align} \]</div>
 </li>
 </ul>
 <p class="sd-card-text"><strong>Step 3: Analyze the Heat Pump</strong></p>
@@ -1765,11 +1726,9 @@ The process is possible if the total entropy change of the universe (the three r
 <li><p class="sd-card-text"><strong>Given:</strong> Work input <span class="math notranslate nohighlight">\(W_{pump} = -W_{eng} = +50\)</span> kJ, Heat delivered <span class="math notranslate nohighlight">\(Q_{H,pump} = -75\)</span> kJ to 500 K reservoir</p></li>
 <li><p class="sd-card-text"><strong>Energy Balance:</strong> Find heat absorbed from cold reservoir <span class="math notranslate nohighlight">\(Q_{C,pump}\)</span></p>
 <div class="math notranslate nohighlight">
-\[  Q_{C,pump} + Q_{H,pump} + W_{pump} = 0\]</div>
-<div class="math notranslate nohighlight">
-\[  Q_{C,pump} - 75 + 50 = 0\]</div>
-<div class="math notranslate nohighlight">
-\[  Q_{C,pump} = +25 \text{ kJ}\]</div>
+\[ \begin{align}\begin{aligned}  Q_{C,pump} + Q_{H,pump} + W_{pump} = 0\\  
+  Q_{C,pump} - 75 + 50 = 0\\  
+  Q_{C,pump} = +25 \text{ kJ}\end{aligned}\end{align} \]</div>
 </li>
 </ul>
 <p class="sd-card-text"><strong>Step 4: Calculate Total Entropy Change of Universe</strong>
@@ -1790,9 +1749,8 @@ The universe consists of three reservoirs. We sum their individual entropy chang
 </ul>
 <p class="sd-card-text"><strong>Step 5: Sum Total Entropy Changes</strong></p>
 <div class="math notranslate nohighlight">
-\[\Delta S_{total} = \Delta S_{400K} + \Delta S_{300K} + \Delta S_{500K}\]</div>
-<div class="math notranslate nohighlight">
-\[\Delta S_{total} = -0.50 + 0.417 + 0.15 = \textbf{+0.067 kJ/K}\]</div>
+\[ \begin{align}\begin{aligned}\Delta S_{total} = \Delta S_{400K} + \Delta S_{300K} + \Delta S_{500K}\\
+\Delta S_{total} = -0.50 + 0.417 + 0.15 = \textbf{+0.067 kJ/K}\end{aligned}\end{align} \]</div>
 <p class="sd-card-text"><strong>Step 6: Determine Feasibility</strong>
 Since the total entropy change of the universe is positive (<span class="math notranslate nohighlight">\(\Delta S_{total} = +0.067\)</span> kJ/K <span class="math notranslate nohighlight">\(&gt; 0\)</span>), the process does not violate the Second Law of Thermodynamics and is therefore <strong>theoretically possible</strong>.</p>
 </div>
@@ -1874,11 +1832,9 @@ The turbine is reversible and adiabatic, so the process is isentropic (<span cla
 At <span class="math notranslate nohighlight">\(P_4 = 15\)</span> kPa, we must find the quality (<span class="math notranslate nohighlight">\(x_4\)</span>) of the steam.
 At 15 kPa: <span class="math notranslate nohighlight">\(S_{liquid} = 0.7549\)</span> and <span class="math notranslate nohighlight">\(S_{vapor} = 8.0085\)</span></p>
 <div class="math notranslate nohighlight">
-\[S_4 = (1-x_4)S_{liquid} + x_4 S_{vapor}\]</div>
-<div class="math notranslate nohighlight">
-\[6.7266 = (1-x_4)(0.7549) + x_4(8.0085)\]</div>
-<div class="math notranslate nohighlight">
-\[5.9717 = 7.2536 x_4 \implies x_4 \approx 0.823\]</div>
+\[ \begin{align}\begin{aligned}S_4 = (1-x_4)S_{liquid} + x_4 S_{vapor}\\
+6.7266 = (1-x_4)(0.7549) + x_4(8.0085)\\
+5.9717 = 7.2536 x_4 \implies x_4 \approx 0.823\end{aligned}\end{align} \]</div>
 <p class="sd-card-text">Now find <span class="math notranslate nohighlight">\(H_4\)</span> using the quality.
 At 15 kPa: <span class="math notranslate nohighlight">\(H_{liquid} = 225.94\)</span> and <span class="math notranslate nohighlight">\(H_{vapor} = 2598.3\)</span></p>
 <div class="math notranslate nohighlight">
@@ -1902,9 +1858,8 @@ From an energy balance on the turbine: <span class="math notranslate nohighlight
 \[W_{turbine} = 2178.3 - 3399.5 = -1221.2 \text{ kJ/kg}\]</div>
 <p class="sd-card-text"><strong>Step 9: Calculate Net Work and Efficiency</strong></p>
 <div class="math notranslate nohighlight">
-\[W_{net} = W_{turbine} + W_{pump} = -1221.2 + 8.1 = -1213.1 \text{ kJ/kg}\]</div>
-<div class="math notranslate nohighlight">
-\[\eta = \frac{|W_{net}|}{Q_H} = \frac{|-1213.1|}{3165.5} = 0.383 \approx \textbf{38.3\%}\]</div>
+\[ \begin{align}\begin{aligned}W_{net} = W_{turbine} + W_{pump} = -1221.2 + 8.1 = -1213.1 \text{ kJ/kg}\\
+\eta = \frac{|W_{net}|}{Q_H} = \frac{|-1213.1|}{3165.5} = 0.383 \approx \textbf{38.3\%}\end{aligned}\end{align} \]</div>
 </div>
 </details><div class="proof example admonition" id="example-18">
 <p class="admonition-title"><span class="caption-number">Example 41 </span> (Component Heat and Work Calculation)</p>
@@ -1947,9 +1902,8 @@ At 10 kPa: <span class="math notranslate nohighlight">\(H_{liquid} = 191.81\)</s
 \[Q_C = H_5 - H_4 = 191.81 - 2356.6 = \textbf{-2164.8 kJ/kg}\]</div>
 <p class="sd-card-text"><strong>Step 9: Calculate Cycle Efficiency</strong></p>
 <div class="math notranslate nohighlight">
-\[W_{net} = W_{turbine} + W_{pump} = -1113.1 + 2.0 = -1111.1 \text{ kJ/kg}\]</div>
-<div class="math notranslate nohighlight">
-\[\eta = \frac{|W_{net}|}{Q_H} = \frac{|-1111.1|}{3275.9} = 0.339 \approx \textbf{33.9\%}\]</div>
+\[ \begin{align}\begin{aligned}W_{net} = W_{turbine} + W_{pump} = -1113.1 + 2.0 = -1111.1 \text{ kJ/kg}\\
+\eta = \frac{|W_{net}|}{Q_H} = \frac{|-1111.1|}{3275.9} = 0.339 \approx \textbf{33.9\%}\end{aligned}\end{align} \]</div>
 </div>
 </details></section>
 </section>
@@ -2167,8 +2121,8 @@ The entropy change for an ideal gas is:</p>
 \[\Delta S = C_P \ln\left(\frac{T_2}{T_1}\right) - R \ln\left(\frac{P_2}{P_1}\right)\]</div>
 <p class="sd-card-text"><strong>Key insights:</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">An irreversible process generates entropy: <span class="math notranslate nohighlight">\(\Delta S\)</span> <span class="math notranslate nohighlight">\(&gt;\)</span> 0</p></li>
-<li><p class="sd-card-text">Less efficient turbine B is more irreversible: <span class="math notranslate nohighlight">\(\Delta S_B\)</span> <span class="math notranslate nohighlight">\(&gt;\)</span> <span class="math notranslate nohighlight">\(\Delta S_A\)</span> <span class="math notranslate nohighlight">\(&gt;\)</span> 0</p></li>
+<li><p class="sd-card-text">An irreversible process generates entropy: <span class="math notranslate nohighlight">\(\Delta S &gt; 0\)</span></p></li>
+<li><p class="sd-card-text">Less efficient turbine B is more irreversible: <span class="math notranslate nohighlight">\(\Delta S_B &gt; \Delta S_A &gt; 0\)</span></p></li>
 <li><p class="sd-card-text">The temperature term <span class="math notranslate nohighlight">\(C_P \ln(T_2/T_1)\)</span> is identical for both turbines</p></li>
 <li><p class="sd-card-text">To achieve larger <span class="math notranslate nohighlight">\(\Delta S\)</span> (Turbine B), the pressure term must be more positive</p></li>
 <li><p class="sd-card-text">This requires <span class="math notranslate nohighlight">\(\ln(P_2/P_1)\)</span> to be more negative, meaning smaller <span class="math notranslate nohighlight">\(P_2/P_1\)</span> ratio</p></li>
@@ -2192,9 +2146,8 @@ For an ideal gas: <span class="math notranslate nohighlight">\(C_V = C_P - R = 2
 For a reversible, adiabatic compression of an ideal gas, use the T-P relationship.
 <strong>Given:</strong> <span class="math notranslate nohighlight">\(T_1 = 25^\circ\)</span>C <span class="math notranslate nohighlight">\(= 298\)</span> K, <span class="math notranslate nohighlight">\(P_1 = 2.0\)</span> bar, <span class="math notranslate nohighlight">\(P_2 = 7.0\)</span> bar</p>
 <div class="math notranslate nohighlight">
-\[T_2 = T_1 \left(\frac{P_2}{P_1}\right)^{(\gamma-1)/\gamma} = (298 \text{ K}) \left(\frac{7.0 \text{ bar}}{2.0 \text{ bar}}\right)^{(1.50-1)/1.50}\]</div>
-<div class="math notranslate nohighlight">
-\[T_2 = 298 \cdot (3.5)^{1/3} \approx 298 \cdot (1.518) \approx \textbf{452 K}\]</div>
+\[ \begin{align}\begin{aligned}T_2 = T_1 \left(\frac{P_2}{P_1}\right)^{(\gamma-1)/\gamma} = (298 \text{ K}) \left(\frac{7.0 \text{ bar}}{2.0 \text{ bar}}\right)^{(1.50-1)/1.50}\\
+T_2 = 298 \cdot (3.5)^{1/3} \approx 298 \cdot (1.518) \approx \textbf{452 K}\end{aligned}\end{align} \]</div>
 <p class="sd-card-text"><strong>Step 3: Calculate Reversible Work</strong>
 For an adiabatic compressor: <span class="math notranslate nohighlight">\(W = \Delta H = C_P(T_2 - T_1)\)</span></p>
 <div class="math notranslate nohighlight">
@@ -2206,11 +2159,9 @@ The irreversible process requires 20% more work:</p>
 <p class="sd-card-text"><strong>Step 5: Calculate Irreversible Exit Temperature</strong>
 The First Law still applies: <span class="math notranslate nohighlight">\(W_{irrev} = \Delta H_{irrev} = C_P(T_{2,irrev} - T_1)\)</span></p>
 <div class="math notranslate nohighlight">
-\[4620 \text{ J/mol} = \left(25 \frac{\text{J}}{\text{mol·K}}\right) \cdot (T_{2,irrev} - 298 \text{ K})\]</div>
-<div class="math notranslate nohighlight">
-\[T_{2,irrev} - 298 = \frac{4620}{25} = 184.8\]</div>
-<div class="math notranslate nohighlight">
-\[T_{2,irrev} = 298 + 184.8 = \textbf{482.8 K}\]</div>
+\[ \begin{align}\begin{aligned}4620 \text{ J/mol} = \left(25 \frac{\text{J}}{\text{mol·K}}\right) \cdot (T_{2,irrev} - 298 \text{ K})\\
+T_{2,irrev} - 298 = \frac{4620}{25} = 184.8\\
+T_{2,irrev} = 298 + 184.8 = \textbf{482.8 K}\end{aligned}\end{align} \]</div>
 </div>
 </details></section>
 </section>
@@ -2218,7 +2169,7 @@ The First Law still applies: <span class="math notranslate nohighlight">\(W_{irr
 <section id="pe-exam-practice-problems">
 <h2>PE Exam Practice Problems<a class="headerlink" href="#pe-exam-practice-problems" title="Link to this heading">#</a></h2>
 <div class="proof example admonition" id="example-23">
-<p class="admonition-title"><span class="caption-number">Example 46 </span> (Practice Problem 1 — Carnot vs. Rankine Efficiency)</p>
+<p class="admonition-title"><span class="caption-number">Example 46 </span> (Practice Problem 1: Carnot vs. Rankine Efficiency)</p>
 <section class="example-content" id="proof-content">
 <p>A steam power plant operates with steam entering the turbine at 500°C and 6 MPa, and condensing at 40°C. The isentropic efficiency of the turbine is 85% and the pump is ideal.</p>
 <p>From steam tables:</p>
@@ -2250,11 +2201,11 @@ The First Law still applies: <span class="math notranslate nohighlight">\(W_{irr
 <p class="sd-card-text"><strong>Step 4: Cycle efficiency</strong></p>
 <div class="math notranslate nohighlight">
 \[\eta = \frac{w_{turbine} - w_{pump}}{q_{in}} = \frac{(3423-2274) - 6}{3249.5} = \frac{1143}{3249.5} = 0.352 = \mathbf{35.2\%}\]</div>
-<p class="sd-card-text">The actual efficiency is only 59% of the Carnot limit — irreversibilities in the turbine and the non-Carnot cycle path account for the gap.</p>
+<p class="sd-card-text">The actual efficiency is only 59% of the Carnot limit - irreversibilities in the turbine and the non-Carnot cycle path account for the gap.</p>
 </div>
 </details><hr class="docutils" />
 <div class="proof example admonition" id="example-24">
-<p class="admonition-title"><span class="caption-number">Example 47 </span> (Practice Problem 2 — Adiabatic Compression)</p>
+<p class="admonition-title"><span class="caption-number">Example 47 </span> (Practice Problem 2: Adiabatic Compression)</p>
 <section class="example-content" id="proof-content">
 <p>Air (<span class="math notranslate nohighlight">\(C_p = 29.1\)</span> J/mol·K, <span class="math notranslate nohighlight">\(\gamma = 1.40\)</span>) is compressed adiabatically and reversibly from 1 atm, 25°C to 10 atm.</p>
 <p><strong>(a)</strong> What is the final temperature?</p>
@@ -2276,16 +2227,16 @@ The First Law still applies: <span class="math notranslate nohighlight">\(W_{irr
 <div class="math notranslate nohighlight">
 \[W = C_v(T_2 - T_1) = 20.79(575-298) = \mathbf{5759 \text{ J/mol}} \approx 5.76 \text{ kJ/mol}\]</div>
 <p class="sd-card-text">Alternatively using <span class="math notranslate nohighlight">\(\Delta H = C_p\Delta T\)</span> and <span class="math notranslate nohighlight">\(W_s = \Delta H\)</span> for an open system:
-<span class="math notranslate nohighlight">\(W_s = 29.1(575-298) = 8071\)</span> J/mol — this is the shaft work for a continuous compressor.</p>
+<span class="math notranslate nohighlight">\(W_s = 29.1(575-298) = 8071\)</span> J/mol - this is the shaft work for a continuous compressor.</p>
 </div>
 </details><div class="admonition caution">
 <p class="admonition-title">Caution</p>
-<p><strong>PE Exam Traps — Thermodynamics</strong></p>
+<p><strong>PE Exam Traps: Thermodynamics</strong></p>
 <ul class="simple">
 <li><p><strong>Temperature must be in Kelvin.</strong> The Carnot efficiency formula, adiabatic process relations, entropy calculations, and the ideal gas law all require absolute temperature. Plugging in °C is the most common single error on PE thermo problems.</p></li>
 <li><p><strong>Closed vs. open system First Law.</strong> For a closed system: <span class="math notranslate nohighlight">\(\Delta U = Q - W\)</span> (work = <span class="math notranslate nohighlight">\(\int P\,dV\)</span>). For an open steady-state system: <span class="math notranslate nohighlight">\(\Delta H = Q - W_s\)</span> (shaft work only). Using <span class="math notranslate nohighlight">\(\Delta U\)</span> when you have a turbine or compressor (open system) gives the wrong answer.</p></li>
-<li><p><strong>Isentropic efficiency direction.</strong> For a turbine: <span class="math notranslate nohighlight">\(\eta_T = w_{actual}/w_{isentropic} &lt; 1\)</span> (actual work is less than ideal). For a compressor: <span class="math notranslate nohighlight">\(\eta_C = w_{isentropic}/w_{actual} &lt; 1\)</span> (ideal work is less than actual). These are NOT symmetric — mixing them up swaps the numerator and denominator.</p></li>
-<li><p><strong><span class="math notranslate nohighlight">\(\Delta H\)</span> vs. <span class="math notranslate nohighlight">\(\Delta U\)</span> for ideal gas:</strong> Both hold <span class="math notranslate nohighlight">\(\Delta H = C_p\Delta T\)</span> and <span class="math notranslate nohighlight">\(\Delta U = C_v\Delta T\)</span> for any process — but <span class="math notranslate nohighlight">\(W = Q - \Delta U\)</span> for closed systems (use <span class="math notranslate nohighlight">\(C_v\)</span>) and <span class="math notranslate nohighlight">\(W_s = \Delta H - Q\)</span> for open systems (use <span class="math notranslate nohighlight">\(C_p\)</span>). The trap is using <span class="math notranslate nohighlight">\(C_p\)</span> in a closed-system piston work problem.</p></li>
+<li><p><strong>Isentropic efficiency direction.</strong> For a turbine: <span class="math notranslate nohighlight">\(\eta_T = w_{actual}/w_{isentropic} &lt; 1\)</span> (actual work is less than ideal). For a compressor: <span class="math notranslate nohighlight">\(\eta_C = w_{isentropic}/w_{actual} &lt; 1\)</span> (ideal work is less than actual). These are NOT symmetric - mixing them up swaps the numerator and denominator.</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(\Delta H\)</span> vs. <span class="math notranslate nohighlight">\(\Delta U\)</span> for ideal gas:</strong> Both hold <span class="math notranslate nohighlight">\(\Delta H = C_p\Delta T\)</span> and <span class="math notranslate nohighlight">\(\Delta U = C_v\Delta T\)</span> for any process - but <span class="math notranslate nohighlight">\(W = Q - \Delta U\)</span> for closed systems (use <span class="math notranslate nohighlight">\(C_v\)</span>) and <span class="math notranslate nohighlight">\(W_s = \Delta H - Q\)</span> for open systems (use <span class="math notranslate nohighlight">\(C_p\)</span>). The trap is using <span class="math notranslate nohighlight">\(C_p\)</span> in a closed-system piston work problem.</p></li>
 <li><p><strong>COP vs. efficiency:</strong> COP for a heat pump can be greater than 1 (it moves heat, not just converts it). A COP of 4 means 4 kJ of heat delivered per 1 kJ of work input. Never call a COP &gt; 1 “impossible.”</p></li>
 </ul>
 </div>

@@ -2505,7 +2505,7 @@
 <section id="pe-exam-practice-problems">
 <h2>PE Exam Practice Problems<a class="headerlink" href="#pe-exam-practice-problems" title="Link to this heading">#</a></h2>
 <div class="proof example admonition" id="example-29">
-<p class="admonition-title"><span class="caption-number">Example 76 </span> (Practice Problem 1 — Composite Wall with Convection)</p>
+<p class="admonition-title"><span class="caption-number">Example 76 </span> (Practice Problem 1: Composite Wall with Convection)</p>
 <section class="example-content" id="proof-content">
 <p>A furnace wall consists of three layers in series:</p>
 <ul class="simple">
@@ -2537,11 +2537,11 @@
 <p class="sd-card-text"><strong>Step 3: Heat flux</strong></p>
 <div class="math notranslate nohighlight">
 \[q'' = \frac{\Delta T}{R''_{total}} = \frac{900 - 25}{0.967} = \mathbf{905 \text{ W/m}^2}\]</div>
-<p class="sd-card-text"><strong>Key observation:</strong> The insulating firebrick (<span class="math notranslate nohighlight">\(R'' = 0.667\)</span>) dominates — it accounts for 69% of the total resistance. The steel shell is negligible (0.02%). This is typical: metals conduct very well and rarely limit heat transfer in industrial walls.</p>
+<p class="sd-card-text"><strong>Key observation:</strong> The insulating firebrick (<span class="math notranslate nohighlight">\(R'' = 0.667\)</span>) dominates - it accounts for 69% of the total resistance. The steel shell is negligible (0.02%). This is typical: metals conduct very well and rarely limit heat transfer in industrial walls.</p>
 </div>
 </details><hr class="docutils" />
 <div class="proof example admonition" id="example-30">
-<p class="admonition-title"><span class="caption-number">Example 77 </span> (Practice Problem 2 — Shell-and-Tube Heat Exchanger (LMTD))</p>
+<p class="admonition-title"><span class="caption-number">Example 77 </span> (Practice Problem 2: Shell-and-Tube Heat Exchanger (LMTD))</p>
 <section class="example-content" id="proof-content">
 <p>A counterflow shell-and-tube heat exchanger heats 2.0 kg/s of water from 20°C to 70°C using hot oil (<span class="math notranslate nohighlight">\(C_p = 2.0\)</span> kJ/kg·K) entering at 120°C. The overall heat transfer coefficient is <span class="math notranslate nohighlight">\(U = 350\)</span> W/m²·K.</p>
 <p><strong>(a)</strong> What is the required heat duty (kW)?</p>
@@ -2566,10 +2566,10 @@
 </div>
 </details><div class="admonition caution">
 <p class="admonition-title">Caution</p>
-<p><strong>PE Exam Traps — Heat Transfer</strong></p>
+<p><strong>PE Exam Traps: Heat Transfer</strong></p>
 <ul class="simple">
 <li><p><strong>LMTD <span class="math notranslate nohighlight">\(\Delta T\)</span> assignment in counterflow vs. parallel flow:</strong> In counterflow, <span class="math notranslate nohighlight">\(\Delta T_1\)</span> is hot-in minus cold-OUT and <span class="math notranslate nohighlight">\(\Delta T_2\)</span> is hot-out minus cold-IN. Swapping these (using the parallel-flow convention) gives a wrong (smaller) LMTD and an overestimated area. Draw the temperature profiles first.</p></li>
-<li><p><strong>Radiation requires absolute temperature (K⁴).</strong> Stefan-Boltzmann is <span class="math notranslate nohighlight">\(q = \varepsilon\sigma A(T_s^4 - T_{surr}^4)\)</span>, where <span class="math notranslate nohighlight">\(T\)</span> is in Kelvin. Using Celsius gives an answer off by orders of magnitude. 273 K vs. 0°C barely matters for <span class="math notranslate nohighlight">\(\Delta T\)</span> in conduction/convection — but <span class="math notranslate nohighlight">\(T^4\)</span> makes it critical for radiation.</p></li>
+<li><p><strong>Radiation requires absolute temperature (K⁴).</strong> Stefan-Boltzmann is <span class="math notranslate nohighlight">\(q = \varepsilon\sigma A(T_s^4 - T_{surr}^4)\)</span>, where <span class="math notranslate nohighlight">\(T\)</span> is in Kelvin. Using Celsius gives an answer off by orders of magnitude. 273 K vs. 0°C barely matters for <span class="math notranslate nohighlight">\(\Delta T\)</span> in conduction/convection - but <span class="math notranslate nohighlight">\(T^4\)</span> makes it critical for radiation.</p></li>
 <li><p><strong>Thermal resistance is additive only in series.</strong> Parallel resistances add as <span class="math notranslate nohighlight">\(1/R_{total} = 1/R_1 + 1/R_2\)</span>. A composite wall with different paths (fin + bare wall) is a parallel network, not series. Treating parallel paths as series dramatically overestimates resistance.</p></li>
 <li><p><strong>Dittus-Boelter exponent:</strong> <span class="math notranslate nohighlight">\(n = 0.4\)</span> when the fluid is being <strong>heated</strong> (fluid is cooler than the wall); <span class="math notranslate nohighlight">\(n = 0.3\)</span> when the fluid is being <strong>cooled</strong>. This affects Nu by ~10-15% and is frequently tested.</p></li>
 <li><p><strong>NTU method required for unknown exit temperatures:</strong> If both outlet temperatures are unknown (e.g., “find exit temperatures given UA and inlet conditions”), use NTU-effectiveness, not LMTD. LMTD requires knowing all four temperatures.</p></li>

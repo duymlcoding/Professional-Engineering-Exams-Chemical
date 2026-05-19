@@ -526,7 +526,7 @@ An instrument is shown as a small circle (“balloon” or “bubble”) with a 
 \[
 \mathrm{C_2H_4 + \tfrac{1}{2} O_2 \rightarrow C_2H_4O}
 \]</div>
-<p>with side reactions producing <span class="math notranslate nohighlight">\(\mathrm{CO_2}\)</span> and <span class="math notranslate nohighlight">\(\mathrm{H_2O}\)</span>. The reactor effluent flashes; unreacted ethylene is recycled; ethylene oxide is purified in a downstream distillation train. Which diagram type would show each of the following? (a) the recycle of unreacted ethylene back to the reactor; (b) the fail-safe action of the cooling-water valve on the reactor jacket; (c) the molar composition of the bottoms stream from the second column; (d) the carbon-steel material specification of the reactor-effluent piping; (e) the overall production rate of ethylene oxide.</p>
+<p>with side reactions producing <span class="math notranslate nohighlight">\(\mathrm{CO_2}\)</span> and <span class="math notranslate nohighlight">\(\mathrm{H_2O}\)</span>. The reactor effluent flashes; unreacted ethylene is recycled; ethylene oxide is purified in a downstream distillation train. Which diagram type would show each of the following? (a) the recycle of unreacted ethylene back to the reactor; (b) the fail-safe action of the cooling-water valve on the reactor jacket; © the molar composition of the bottoms stream from the second column; (d) the carbon-steel material specification of the reactor-effluent piping; (e) the overall production rate of ethylene oxide.</p>
 </section>
 </div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -534,7 +534,7 @@ An instrument is shown as a small circle (“balloon” or “bubble”) with a 
 <ul class="simple">
 <li><p class="sd-card-text"><strong>(a) Recycle loop.</strong> A recycle is a major process stream connecting two unit operations. It is essential to understanding the plant intent and therefore appears on the <strong>BFD</strong>, the <strong>PFD</strong>, and the <strong>P&amp;ID</strong>. The BFD alone is sufficient to know the recycle exists.</p></li>
 <li><p class="sd-card-text"><strong>(b) Fail-safe action.</strong> Fail-open or fail-closed is a construction-level specification governed by the actuator spring and the loss-of-air strategy. It appears <strong>only on the P&amp;ID</strong>.</p></li>
-<li><p class="sd-card-text"><strong>(c) Stream composition.</strong> Quantitative composition lives in the <strong>PFD stream table</strong>. The BFD shows only total mass flows by stream; the P&amp;ID does not typically repeat composition data because its purpose is mechanical/instrumented detail, not material balance.</p></li>
+<li><p class="sd-card-text"><strong>© Stream composition.</strong> Quantitative composition lives in the <strong>PFD stream table</strong>. The BFD shows only total mass flows by stream; the P&amp;ID does not typically repeat composition data because its purpose is mechanical/instrumented detail, not material balance.</p></li>
 <li><p class="sd-card-text"><strong>(d) Pipe material spec.</strong> A pipe material code (e.g. <code class="docutils literal notranslate"><span class="pre">A106-B-CS-3&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">A312-TP316L-SS-2&quot;</span></code>) is part of the line list that accompanies the <strong>P&amp;ID</strong>. It does not appear on the BFD or PFD.</p></li>
 <li><p class="sd-card-text"><strong>(e) Overall production rate.</strong> The total mass flow rate of the ethylene-oxide product is shown on the <strong>BFD</strong> (as a labeled outlet stream), repeated in detail on the <strong>PFD stream table</strong>, and rarely shown on the P&amp;ID (which focuses on one section, not plant totals).</p></li>
 <li><p class="sd-card-text"><strong>Verification.</strong> Each piece of information is filed at the lowest-detail diagram where it naturally belongs. BFD = blocks, arrows, overall rates. PFD = equipment, streams, conditions, composition. P&amp;ID = pipes, valves, instruments, materials, fail actions. Mapping a question to the correct diagram is the most common pattern on PE-exam diagram questions.</p></li>
@@ -596,12 +596,12 @@ For each stream you are given:</p>
 </ul>
 <p>A user-specified parameter, the <strong>minimum approach temperature</strong> <span class="math notranslate nohighlight">\(\Delta T_{\min}\)</span>, sets the tightest acceptable temperature difference between any hot and cold stream inside a heat exchanger. Typical values:</p>
 <ul class="simple">
-<li><p>Liquid-liquid services: <span class="math notranslate nohighlight">\(\Delta T_{\min} = 10\)</span> to 20 <span class="math notranslate nohighlight">\(^\circ\)</span>C.</p></li>
-<li><p>Gas-liquid services: 20 to 40 <span class="math notranslate nohighlight">\(^\circ\)</span>C.</p></li>
-<li><p>Gas-gas services: 40 to 100 <span class="math notranslate nohighlight">\(^\circ\)</span>C (gas-gas exchangers have low <span class="math notranslate nohighlight">\(U\)</span>, large <span class="math notranslate nohighlight">\(A\)</span> at small <span class="math notranslate nohighlight">\(\Delta T\)</span>).</p></li>
-<li><p>Refrigeration: as small as 5 <span class="math notranslate nohighlight">\(^\circ\)</span>C (refrigerant is expensive, large <span class="math notranslate nohighlight">\(A\)</span> trades off favorably).</p></li>
+<li><p>Liquid-liquid services: <span class="math notranslate nohighlight">\(\Delta T_{\min} = 10\)</span> to 20°C.</p></li>
+<li><p>Gas-liquid services: 20 to 40°C.</p></li>
+<li><p>Gas-gas services: 40 to 100°C (gas-gas exchangers have low <span class="math notranslate nohighlight">\(U\)</span>, large <span class="math notranslate nohighlight">\(A\)</span> at small <span class="math notranslate nohighlight">\(\Delta T\)</span>).</p></li>
+<li><p>Refrigeration: as small as 5°C (refrigerant is expensive, large <span class="math notranslate nohighlight">\(A\)</span> trades off favorably).</p></li>
 </ul>
-<p>Smaller <span class="math notranslate nohighlight">\(\Delta T_{\min}\)</span> reduces utility consumption but requires larger and more expensive heat exchangers. The optimal <span class="math notranslate nohighlight">\(\Delta T_{\min}\)</span> trades off these effects and is typically in the 10-20 <span class="math notranslate nohighlight">\(^\circ\)</span>C range for chemical plants.</p>
+<p>Smaller <span class="math notranslate nohighlight">\(\Delta T_{\min}\)</span> reduces utility consumption but requires larger and more expensive heat exchangers. The optimal <span class="math notranslate nohighlight">\(\Delta T_{\min}\)</span> trades off these effects and is typically in the 10-20°C range for chemical plants.</p>
 </div>
 </section>
 <section id="the-composite-curves-and-the-pinch">
@@ -777,12 +777,12 @@ CP_h \geq CP_c   \text{(below pinch)}
 \[
 Q_{H1\text{-}C2} = CP_{H1} (T_{H1}^{\text{in}} - T_{H1}^{\text{out}}) = 3 \times (180 - 90) = 270 \text{kW}
 \]</div>
-<p class="sd-card-text">Check the cold-side response: C2 enters at 80<span class="math notranslate nohighlight">\(^\circ\)</span>C with <span class="math notranslate nohighlight">\(CP = 5\)</span>. After receiving 270 kW it would exit at</p>
+<p class="sd-card-text">Check the cold-side response: C2 enters at 80°C with <span class="math notranslate nohighlight">\(CP = 5\)</span>. After receiving 270 kW it would exit at</p>
 <div class="math notranslate nohighlight">
 \[
 T_{C2}^{\text{out}} = 80 + \frac{270}{5} = 134^\circ\text{C}
 \]</div>
-<p class="sd-card-text">Required final temperature of C2 is 140<span class="math notranslate nohighlight">\(^\circ\)</span>C, so 6<span class="math notranslate nohighlight">\(^\circ\)</span>C (<span class="math notranslate nohighlight">\(= 30\)</span> kW additional duty) still must be supplied. H1 is fully “ticked off” (cooled to its pinch temperature).</p>
+<p class="sd-card-text">Required final temperature of C2 is 140°C, so 6°C (<span class="math notranslate nohighlight">\(= 30\)</span> kW additional duty) still must be supplied. H1 is fully “ticked off” (cooled to its pinch temperature).</p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Match H2-C1 and maximize duty.</strong></p></li>
 </ul>
@@ -794,12 +794,12 @@ Q_{H2\text{-}C1, \text{max possible from hot}} = 2 \times (150 - 90) = 120 \text
 \[
 Q_{C1, \text{required}} = 2 \times (135 - 80) = 110 \text{kW}
 \]</div>
-<p class="sd-card-text">Cold-side is the binding constraint: take <span class="math notranslate nohighlight">\(Q = 110\)</span> kW. C1 reaches its target 135<span class="math notranslate nohighlight">\(^\circ\)</span>C; H2 cools to</p>
+<p class="sd-card-text">Cold-side is the binding constraint: take <span class="math notranslate nohighlight">\(Q = 110\)</span> kW. C1 reaches its target 135°C; H2 cools to</p>
 <div class="math notranslate nohighlight">
 \[
 T_{H2}^{\text{out}} = 150 - \frac{110}{2} = 95^\circ\text{C}
 \]</div>
-<p class="sd-card-text">H2 stops at 95<span class="math notranslate nohighlight">\(^\circ\)</span>C, which is 5<span class="math notranslate nohighlight">\(^\circ\)</span>C above the pinch. The remaining 5 <span class="math notranslate nohighlight">\(\times\)</span> 2 = 10 kW of cooling cannot be done above the pinch (no cold utility allowed), so this residual is carried over to the below-pinch sub-problem.</p>
+<p class="sd-card-text">H2 stops at 95°C, which is 5°C above the pinch. The remaining 5 <span class="math notranslate nohighlight">\(\times\)</span> 2 = 10 kW of cooling cannot be done above the pinch (no cold utility allowed), so this residual is carried over to the below-pinch sub-problem.</p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Hot-utility tally above the pinch.</strong></p></li>
 <li><p class="sd-card-text">C2 needs 30 kW more (from <span class="math notranslate nohighlight">\(134 \to 140^\circ\)</span>C).</p></li>
@@ -814,9 +814,9 @@ T_{H2}^{\text{out}} = 150 - \frac{110}{2} = 95^\circ\text{C}
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Below-pinch sub-problem: stream segments.</strong></p></li>
 <li><p class="sd-card-text">H1: <span class="math notranslate nohighlight">\(90 \to 60^\circ\)</span>C, <span class="math notranslate nohighlight">\(CP = 3\)</span>. Available duty = 90 kW.</p></li>
-<li><p class="sd-card-text">H2: <span class="math notranslate nohighlight">\(90 \to 30^\circ\)</span>C, <span class="math notranslate nohighlight">\(CP = 2\)</span>. Available duty = 120 kW. (Includes the carried-over residual; H2 actually arrives at the pinch zone at 95<span class="math notranslate nohighlight">\(^\circ\)</span>C, but we treat the segment from 90<span class="math notranslate nohighlight">\(^\circ\)</span>C below as the below-pinch portion; the 5<span class="math notranslate nohighlight">\(^\circ\)</span>C from 95 to 90 is sometimes handled as a small “below-pinch” adjustment.)</p></li>
+<li><p class="sd-card-text">H2: <span class="math notranslate nohighlight">\(90 \to 30^\circ\)</span>C, <span class="math notranslate nohighlight">\(CP = 2\)</span>. Available duty = 120 kW. (Includes the carried-over residual; H2 actually arrives at the pinch zone at 95°C, but we treat the segment from 90°C below as the below-pinch portion; the 5°C from 95 to 90 is sometimes handled as a small “below-pinch” adjustment.)</p></li>
 <li><p class="sd-card-text">C1: <span class="math notranslate nohighlight">\(30 \to 80^\circ\)</span>C, <span class="math notranslate nohighlight">\(CP = 2\)</span>. Required duty = 100 kW.</p></li>
-<li><p class="sd-card-text">C2: not present below the pinch (its source temperature is 80<span class="math notranslate nohighlight">\(^\circ\)</span>C = pinch).</p></li>
+<li><p class="sd-card-text">C2: not present below the pinch (its source temperature is 80°C = pinch).</p></li>
 <li><p class="sd-card-text"><strong>Apply CP rule below pinch (<span class="math notranslate nohighlight">\(CP_h \geq CP_c\)</span>).</strong></p></li>
 <li><p class="sd-card-text">C1 (<span class="math notranslate nohighlight">\(CP = 2\)</span>) needs a hot stream with <span class="math notranslate nohighlight">\(CP \geq 2\)</span>. Both H1 (<span class="math notranslate nohighlight">\(CP = 3\)</span>) and H2 (<span class="math notranslate nohighlight">\(CP = 2\)</span>) qualify.</p></li>
 <li><p class="sd-card-text">Choose H1-C1 first (larger <span class="math notranslate nohighlight">\(CP\)</span> margin gives more design flexibility).</p></li>
@@ -830,20 +830,20 @@ Q_{H1, \text{available below}} = 3 \times (90 - 60) = 90 \text{kW}
 \[
 Q_{C1, \text{below}} = 2 \times (80 - 30) = 100 \text{kW}
 \]</div>
-<p class="sd-card-text">Hot-side is binding (H1 has only 90 kW available). Take <span class="math notranslate nohighlight">\(Q = 90\)</span> kW. H1 reaches its target 60<span class="math notranslate nohighlight">\(^\circ\)</span>C; C1 only heats to</p>
+<p class="sd-card-text">Hot-side is binding (H1 has only 90 kW available). Take <span class="math notranslate nohighlight">\(Q = 90\)</span> kW. H1 reaches its target 60°C; C1 only heats to</p>
 <div class="math notranslate nohighlight">
 \[
 T_{C1}^{\text{out}} = 30 + \frac{90}{2} = 75^\circ\text{C}
 \]</div>
-<p class="sd-card-text">C1 still needs 5<span class="math notranslate nohighlight">\(^\circ\)</span>C of heating, <span class="math notranslate nohighlight">\(= 2 \times 5 = 10\)</span> kW, which we attempt from H2.</p>
+<p class="sd-card-text">C1 still needs 5°C of heating, <span class="math notranslate nohighlight">\(= 2 \times 5 = 10\)</span> kW, which we attempt from H2.</p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Match H2-C1 (residual) below pinch.</strong>
-H2 (carrying its 5<span class="math notranslate nohighlight">\(^\circ\)</span>C above-pinch residual but here treating it as entering the below-pinch zone at 90<span class="math notranslate nohighlight">\(^\circ\)</span>C with <span class="math notranslate nohighlight">\(CP = 2\)</span> and need to cool to 30<span class="math notranslate nohighlight">\(^\circ\)</span>C, duty 120 kW available) can heat C1 from 75 to 80<span class="math notranslate nohighlight">\(^\circ\)</span>C: duty <span class="math notranslate nohighlight">\(= 2 \times 5 = 10\)</span> kW. H2 cools by <span class="math notranslate nohighlight">\(10/2 = 5^\circ\)</span>C, leaving it at <span class="math notranslate nohighlight">\(90 - 5 = 85^\circ\)</span>C still needing to fall to 30<span class="math notranslate nohighlight">\(^\circ\)</span>C.</p></li>
+H2 (carrying its 5°C above-pinch residual but here treating it as entering the below-pinch zone at 90°C with <span class="math notranslate nohighlight">\(CP = 2\)</span> and need to cool to 30°C, duty 120 kW available) can heat C1 from 75 to 80°C: duty <span class="math notranslate nohighlight">\(= 2 \times 5 = 10\)</span> kW. H2 cools by <span class="math notranslate nohighlight">\(10/2 = 5^\circ\)</span>C, leaving it at <span class="math notranslate nohighlight">\(90 - 5 = 85^\circ\)</span>C still needing to fall to 30°C.</p></li>
 <li><p class="sd-card-text"><strong>Cold-utility consumption below pinch.</strong>
 Remaining duty to cool H2 to its target: <span class="math notranslate nohighlight">\(2 \times (85 - 30) = 110\)</span> kW. Wait  -  the MER target says we should need only 50 kW of cold utility, not 110. Let me re-examine the network. With the segments accounted as in the transcript:</p></li>
-<li><p class="sd-card-text">H1 fully cooled to 60<span class="math notranslate nohighlight">\(^\circ\)</span>C using C1 (90 kW absorbed).</p></li>
-<li><p class="sd-card-text">H2 cooled from 95 to 80<span class="math notranslate nohighlight">\(^\circ\)</span>C using a small cold-utility connection (10 kW), since the transcript notes “we’re not going to worry about crossing the minimum approach temperature” for this small swing.</p></li>
-<li><p class="sd-card-text">H2 then needs to drop from 80 to 30<span class="math notranslate nohighlight">\(^\circ\)</span>C <span class="math notranslate nohighlight">\(= 50^\circ\)</span>C <span class="math notranslate nohighlight">\(\times\)</span> <span class="math notranslate nohighlight">\(CP = 2\)</span> <span class="math notranslate nohighlight">\(= \)</span> <strong>100 kW</strong> of additional cold utility.</p></li>
+<li><p class="sd-card-text">H1 fully cooled to 60°C using C1 (90 kW absorbed).</p></li>
+<li><p class="sd-card-text">H2 cooled from 95 to 80°C using a small cold-utility connection (10 kW), since the transcript notes “we’re not going to worry about crossing the minimum approach temperature” for this small swing.</p></li>
+<li><p class="sd-card-text">H2 then needs to drop from 80 to 30°C <span class="math notranslate nohighlight">\(= 50^\circ\)</span>C <span class="math notranslate nohighlight">\(\times\)</span> <span class="math notranslate nohighlight">\(CP = 2\)</span> <span class="math notranslate nohighlight">\(= \)</span> <strong>100 kW</strong> of additional cold utility.</p></li>
 </ul>
 <p class="sd-card-text">Total cold utility: 10 + 100 = 110 kW. The discrepancy with the transcript’s value of 50 kW indicates one of two things: either the transcript’s MER targets were computed for a slightly different problem (the original lecture used different stream data), or the network is non-optimal as drawn. The pedagogical point holds: the network design is constructed match-by-match, ticking off streams, and the residual goes to utilities.</p>
 <ul class="simple">
@@ -946,7 +946,7 @@ The MER-optimal network often has more heat exchangers than strictly necessary b
 <li><p class="sd-card-text"><strong>Read MER targets and pinch.</strong></p></li>
 <li><p class="sd-card-text"><span class="math notranslate nohighlight">\(Q_{H,\min} = 300\)</span> kW (the hot utility we added at the top to make the cascade feasible).</p></li>
 <li><p class="sd-card-text"><span class="math notranslate nohighlight">\(Q_{C,\min} = 220\)</span> kW (the residual cascade at the bottom  -  what must be removed by cold utility).</p></li>
-<li><p class="sd-card-text"><strong>Pinch</strong> is where the corrected cascade first reaches zero. That happened at the bottom of the 160-120 interval, i.e. at <em>interval</em> temperature 120<span class="math notranslate nohighlight">\(^\circ\)</span>C. Converting back: hot pinch <span class="math notranslate nohighlight">\(= 120 + 5 = 125^\circ\)</span>C, cold pinch <span class="math notranslate nohighlight">\(= 120 - 5 = 115^\circ\)</span>C.</p></li>
+<li><p class="sd-card-text"><strong>Pinch</strong> is where the corrected cascade first reaches zero. That happened at the bottom of the 160-120 interval, i.e. at <em>interval</em> temperature 120°C. Converting back: hot pinch <span class="math notranslate nohighlight">\(= 120 + 5 = 125^\circ\)</span>C, cold pinch <span class="math notranslate nohighlight">\(= 120 - 5 = 115^\circ\)</span>C.</p></li>
 <li><p class="sd-card-text"><strong>Verification by overall energy balance.</strong></p></li>
 </ul>
 <div class="math notranslate nohighlight">
@@ -1258,7 +1258,7 @@ i_{\text{eff}} = (1 + \frac{r}{m})^m - 1
 <li><p>Monthly compounding (<span class="math notranslate nohighlight">\(m = 12\)</span>) at 12% nominal: <span class="math notranslate nohighlight">\(i_{\text{eff}} = (1.01)^{12} - 1 = 12.68\%\)</span>.</p></li>
 <li><p>Continuous compounding (<span class="math notranslate nohighlight">\(m \to \infty\)</span>): <span class="math notranslate nohighlight">\(i_{\text{eff}} = e^r - 1\)</span>. At <span class="math notranslate nohighlight">\(r = 12\%\)</span>, <span class="math notranslate nohighlight">\(i_{\text{eff}} = e^{0.12} - 1 = 12.75\%\)</span>.</p></li>
 </ul>
-<p>For PE-exam problems, <em>always use the effective rate per compounding period</em> when plugging into the six factors, and match <span class="math notranslate nohighlight">\(n\)</span> to the number of compounding periods (not just years if compounding <span class="math notranslate nohighlight">\(&gt; \)</span> once per year).</p>
+<p>For PE-exam problems, <em>always use the effective rate per compounding period</em> when plugging into the six factors, and match <span class="math notranslate nohighlight">\(n\)</span> to the number of compounding periods (not just years if compounding <span class="math notranslate nohighlight">\(&gt;\)</span> once per year).</p>
 </div>
 </section>
 <section id="worked-example-mixing-the-factors">

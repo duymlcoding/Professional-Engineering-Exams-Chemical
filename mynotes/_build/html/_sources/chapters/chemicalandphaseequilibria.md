@@ -198,7 +198,7 @@ The reaction is endothermic since $\Delta H^\circ > 0$.
 
 **Step 2: Calculate Equilibrium Constant $K_{298}$ at $25^\circ\text{C}$**
 
-Using Equation 2 with $T_1 = 298.15$ K and $R = 8.314$ J/(mol$\cdot$K).
+Using Equation 2 with $T_1 = 298.15$ K and $R = 8.314$ J/(mol·K).
 
 $$
 
@@ -276,7 +276,7 @@ $$
 
 $$
 
-The equilibrium conversion is **92.3\%**.
+The equilibrium conversion is **92.3%**.
 ```
 
 ```{prf:example} Dehydrogenation of Butene
@@ -322,7 +322,7 @@ x = \frac{-3.29 + \sqrt{(3.29)^2 - 4(1.329)(-3.619)}}{2(1.329)} \approx 0.825
 
 $$
 
-The conversion is $x/1.0 = 0.825$, or **82.5\%**.
+The conversion is $x/1.0 = 0.825$, or **82.5%**.
 
 **Step 2: Calculate Conversion without Steam**
 
@@ -336,7 +336,7 @@ $$
 
 Solving for $x$: $0.329(1-x^2) = x^2 \implies 1.329x^2 = 0.329 \implies x = \sqrt{0.329/1.329} \approx 0.498$.
 
-Without steam, the equilibrium conversion is **49.8\%**.
+Without steam, the equilibrium conversion is **49.8%**.
 ```
 
 ## Thermal Effects in Chemical Reactions
@@ -474,7 +474,7 @@ This is the straight energy balance line, which starts at $X=0$ for $T=300$ K.
 We set $X_e = X_{energy}$ and solve for the common point $(T, X)$. This system of equations is typically solved graphically or with a numerical solver. The intersection of the equilibrium curve and the energy balance line yields the unique adiabatic operating point. The simultaneous solution of the two equations gives the final state of the reactor:
 
 - **Adiabatic Equilibrium Temperature: $T \approx 460$ K**
-- **Adiabatic Equilibrium Conversion: $X \approx 0.40$ (or 40\%)**
+- **Adiabatic Equilibrium Conversion: $X \approx 0.40$ (or 40%)**
 ```
 
 ```{prf:example} Heat Duty for an Isothermal Reactor
@@ -486,7 +486,7 @@ $$
 
 $$
 
-How much heat must be removed to maintain the reactor temperature if the conversion of $\text{N}_2$ is 75\%?
+How much heat must be removed to maintain the reactor temperature if the conversion of $\text{N}_2$ is 75%?
 
 - $C_P(\text{N}_2) = C_P(\text{H}_2) = 29\ \text{J/(mol}\cdot\text{K)}$
 - $C_P(\text{NH}_3) = 36\ \text{J/(mol}\cdot\text{K)}$
@@ -498,7 +498,7 @@ We calculate the total enthalpy change ($\Delta H_{\text{total}}$) from inlet to
 
 **Step 1: Determine Outlet Molar Flow Rates**
 
-The feed is stoichiometric. For 75\% conversion of $\text{N}_2$ (the limiting reactant):
+The feed is stoichiometric. For 75% conversion of $\text{N}_2$ (the limiting reactant):
 
 - $\text{N}_2$ reacted: $100\ \text{mol/h} \times 0.75 = 75\ \text{mol/h}$
 - $\text{H}_2$ reacted: $75 \times 3 = 225\ \text{mol/h}$
@@ -920,7 +920,7 @@ According to Le Châtelier's principle, changing the temperature of a system at 
 Application to the Haber-Bosch process ($\Delta H < 0$, exothermic):
 - **Prediction**: If temperature is increased, the system will try to "cool down" by shifting in the endothermic (reverse) direction. This means the equilibrium shifts to the left, consuming NH$_{3}$ and producing more N$_{2}$ and H$_{2}$.
 - **Result**: A higher temperature leads to a lower equilibrium conversion and a smaller yield of ammonia.
-- **Conclusion**: To maximize the equilibrium yield, a low temperature is thermodynamically favorable. However, reaction rates are slow at low temperatures, so a compromise temperature (e.g., 400-450$^\circ$C) is used in practice.
+- **Conclusion**: To maximize the equilibrium yield, a low temperature is thermodynamically favorable. However, reaction rates are slow at low temperatures, so a compromise temperature (e.g., 400-450°C) is used in practice.
 ```
 
 ```{important}
@@ -1320,7 +1320,7 @@ Some common alternative definitions of Henry's Law are:
 ### Example Problem
 
 ```{prf:example} Single-Stage Stripping Process
-A stream of dry air at 5 bar and 20$^\circ$C is used to strip a volatile organic compound (VOC) from a wastewater stream. The process occurs in a single equilibrium stage. The Henry's constant for the VOC in water at this temperature is 2.5 bar. The inlet water contains the VOC at a mole fraction of 0.0005. What flow rate of air (in moles per mole of water) is needed to remove 95\% of the VOC from the water?
+A stream of dry air at 5 bar and 20°C is used to strip a volatile organic compound (VOC) from a wastewater stream. The process occurs in a single equilibrium stage. The Henry's constant for the VOC in water at this temperature is 2.5 bar. The inlet water contains the VOC at a mole fraction of 0.0005. What flow rate of air (in moles per mole of water) is needed to remove 95% of the VOC from the water?
 ```
 
 ```{dropdown} Solution Steps
@@ -1334,7 +1334,7 @@ A stream of dry air at 5 bar and 20$^\circ$C is used to strip a volatile organic
 Total Pressure: $P = 5$ bar
 Henry's Constant: $H_C = 2.5$ bar
 Inlet VOC mole fraction in liquid: $x_{C,in} = 0.0005$
-Removal efficiency: 95\%
+Removal efficiency: 95%
 
 **Step 2: State Simplifying Assumptions**
 
@@ -1429,7 +1429,7 @@ The result indicates that to achieve the desired stripping, we need **38 moles o
 
 A rigorous solution would account for the water that evaporates into the air stream. We can check if this amount was truly negligible. The solvent (water) is nearly pure, so we can use Raoult's Law for it.
 
-- **Water Saturation Pressure**: At 20$^\circ$C, the saturation pressure of water is $P_W^{sat} \approx 0.0234$ bar.
+- **Water Saturation Pressure**: At 20°C, the saturation pressure of water is $P_W^{sat} \approx 0.0234$ bar.
 - **Water Mole Fraction in Outlet Liquid**: The outlet liquid is almost pure water, so $x_{W,out} \approx 1$.
 - **Calculate Water Mole Fraction in Outlet Vapor**: Using Raoult's Law for the water component:
 
@@ -1462,8 +1462,8 @@ A rigorous solution would account for the water that evaporates into the air str
   $$
 
 **Conclusion on Assumptions**:
-- The amount of evaporated water (0.18 mol) is only about 0.5\% of the total air flow (38 mol). Thus, the assumption that $n_{V,out} \approx n_{A,in}$ was excellent.
-- The amount of evaporated water is about 18\% of the liquid water feed (1 mol). This is more significant, but since our primary goal was to find the air-to-water ratio, and the air flow is by far the largest stream, the effect on the final answer is minor. A fully rigorous iterative solution would yield a nearly identical result of ~38 mol air/mol water. Our simplifying assumptions were justified.
+- The amount of evaporated water (0.18 mol) is only about 0.5% of the total air flow (38 mol). Thus, the assumption that $n_{V,out} \approx n_{A,in}$ was excellent.
+- The amount of evaporated water is about 18% of the liquid water feed (1 mol). This is more significant, but since our primary goal was to find the air-to-water ratio, and the air flow is by far the largest stream, the effect on the final answer is minor. A fully rigorous iterative solution would yield a nearly identical result of ~38 mol air/mol water. Our simplifying assumptions were justified.
 ```
 
 ## Phase Transitions: Clapeyron, Clausius-Clapeyron, and Antoine Equations
@@ -1645,7 +1645,7 @@ The constants $A, B,$ and $C$ are specific to each substance and depend on the u
 ### Example Problems
 
 ```{prf:example} Melting Point of Ice under Pressure
-The molar heat of fusion of ice is 335 J/g. The densities of liquid water and ice at 0$^\circ$C are 1.00 g/cm$^3$ and 0.915 g/cm$^3$, respectively. Calculate the melting temperature of ice when the system pressure is 110 MPa.
+The molar heat of fusion of ice is 335 J/g. The densities of liquid water and ice at 0°C are 1.00 g/cm$^3$ and 0.915 g/cm$^3$, respectively. Calculate the melting temperature of ice when the system pressure is 110 MPa.
 ```
 
 ```{dropdown} Solution Steps
@@ -1775,19 +1775,19 @@ $$
 ```
 
 ```{prf:example} Estimate $\Delta H_{vap}$ from the Antoine Equation
-Given the Antoine equation for benzene, $\log_{10}P^{sat} = 6.90 - 1211/(220.8 + T)$, where $P^{sat}$ is in torr and $T$ is in $^\circ$C, estimate the heat of vaporization of benzene at 60$^\circ$C.
+Given the Antoine equation for benzene, $\log_{10}P^{sat} = 6.90 - 1211/(220.8 + T)$, where $P^{sat}$ is in torr and $T$ is in $^\circ$C, estimate the heat of vaporization of benzene at 60°C.
 ```
 
 ```{dropdown} Solution Steps
 **Step 1: Identify Strategy**
 
-The Clausius-Clapeyron equation relates the heat of vaporization to the slope of a $\ln(P^{sat})$ vs. $1/T$ plot: $\frac{d(\ln P^{sat})}{d(1/T)} = -\frac{\Delta H_{vap}}{R}$. We can use the given Antoine equation to approximate this derivative at 60$^\circ$C using a finite difference method. We will calculate $P^{sat}$ at two temperatures bracketing 60$^\circ$C (e.g., 55$^\circ$C and 65$^\circ$C) and use the slope between these two points.
+The Clausius-Clapeyron equation relates the heat of vaporization to the slope of a $\ln(P^{sat})$ vs. $1/T$ plot: $\frac{d(\ln P^{sat})}{d(1/T)} = -\frac{\Delta H_{vap}}{R}$. We can use the given Antoine equation to approximate this derivative at 60°C using a finite difference method. We will calculate $P^{sat}$ at two temperatures bracketing 60°C (e.g., 55°C and 65°C) and use the slope between these two points.
 
 **Step 2: Generate Data Points from Antoine Equation**
 
 First, calculate $P^{sat}$ at $T_1 = 55^\circ$C and $T_2 = 65^\circ$C. Then convert all values to absolute units (K, ln(P)).
 
-- **At T$_1$ = 55$^\circ$C (328.15 K)**:
+- **At T$_1$ = 55°C (328.15 K)**:
   
   $$
 
@@ -1807,7 +1807,7 @@ First, calculate $P^{sat}$ at $T_1 = 55^\circ$C and $T_2 = 65^\circ$C. Then conv
 
   $$
 
-- **At T$_2$ = 65$^\circ$C (338.15 K)**:
+- **At T$_2$ = 65°C (338.15 K)**:
   
   $$
 
@@ -1948,7 +1948,7 @@ Activity coefficients are functions of composition and sometimes temperature. Th
 ### Example Problems
 
 ```{prf:example} Bubble Pressure using the Margules Equation
-A vapor-phase mixture containing 30 mol\% component 1 and 70 mol\% component 2 is compressed at a fixed temperature until it is completely liquefied. The saturation pressures are $P_1^{sat} = 0.82$ bar and $P_2^{sat} = 1.93$ bar. Experimental data shows that the bubble pressure of a 50:50 mixture of these components is 1.08 bar.
+A vapor-phase mixture containing 30 mol% component 1 and 70 mol% component 2 is compressed at a fixed temperature until it is completely liquefied. The saturation pressures are $P_1^{sat} = 0.82$ bar and $P_2^{sat} = 1.93$ bar. Experimental data shows that the bubble pressure of a 50:50 mixture of these components is 1.08 bar.
 
 - a) Assuming the one-parameter Margules equation applies, estimate the pressure required to completely liquefy the 30:70 mixture.
 - b) Would the required pressure be higher or lower if the components formed an ideal solution? Explain.
@@ -2179,7 +2179,7 @@ The following equations are used to calculate the fugacity of component $i$ in a
 ## Conceptual Examples of Fugacity
 
 ```{prf:example} Fugacity in a Binary VLE System
-A binary liquid mixture containing 70 mol\% component A and 30 mol\% component B is in equilibrium with its vapor. The partial pressures in the vapor phase are measured to be $P_A = 0.2$ bar and $P_B = 0.8$ bar. Which component has the higher fugacity in the liquid phase?
+A binary liquid mixture containing 70 mol% component A and 30 mol% component B is in equilibrium with its vapor. The partial pressures in the vapor phase are measured to be $P_A = 0.2$ bar and $P_B = 0.8$ bar. Which component has the higher fugacity in the liquid phase?
 ```
 
 ```{dropdown} Solution Steps
@@ -2229,13 +2229,13 @@ $$
 ```
 
 ```{prf:example} Fugacity of Salt in Water
-Sufficient NaCl is added to water at 25$^\circ$C so that a saturated solution is formed, with solid salt crystals present at the bottom. Does the water or the salt have a higher fugacity in the liquid solution?
+Sufficient NaCl is added to water at 25°C so that a saturated solution is formed, with solid salt crystals present at the bottom. Does the water or the salt have a higher fugacity in the liquid solution?
 ```
 
 ```{dropdown} Solution Steps
 **Step 1: Estimate the Fugacity of Water**
 
-The fugacity of water in the salt solution, $\hat{f}_{H_2O}^L$, is equal to the fugacity of water in the vapor phase it's in equilibrium with. We can estimate this using Modified Raoult's Law. At 25$^\circ$C, $P_{H_2O}^{sat} \approx 0.0317$ bar.
+The fugacity of water in the salt solution, $\hat{f}_{H_2O}^L$, is equal to the fugacity of water in the vapor phase it's in equilibrium with. We can estimate this using Modified Raoult's Law. At 25°C, $P_{H_2O}^{sat} \approx 0.0317$ bar.
 
 $$
 
@@ -2247,7 +2247,7 @@ In a saturated salt solution, $x_{H_2O}$ is less than 1 but still high (e.g., $\
 
 **Step 2: Estimate the Fugacity of Salt**
 
-The system contains solid salt in equilibrium with the dissolved salt. Therefore, the fugacity of the dissolved salt must equal the fugacity of the solid salt. Salt (NaCl) is a non-volatile solid, meaning its tendency to enter the vapor phase is extremely low. Its vapor pressure at 25$^\circ$C is infinitesimally small. Thus, its fugacity is practically zero.
+The system contains solid salt in equilibrium with the dissolved salt. Therefore, the fugacity of the dissolved salt must equal the fugacity of the solid salt. Salt (NaCl) is a non-volatile solid, meaning its tendency to enter the vapor phase is extremely low. Its vapor pressure at 25°C is infinitesimally small. Thus, its fugacity is practically zero.
 
 **Step 3: Conclusion**
 
@@ -2268,7 +2268,7 @@ The principle that matter spontaneously moves from a state of higher fugacity to
 - **Saturated Sugar in Iced Tea**: When solid sugar is present, the system is at equilibrium. This means the fugacity of sugar in the solid crystals is equal to the fugacity of the sugar dissolved in the tea. If you add more tea (pure water), the sugar fugacity in the liquid drops, so more solid sugar dissolves to restore equilibrium.
 - **Reverse Osmosis**: High mechanical pressure is applied to a salt water solution. This pressure greatly increases the fugacity of the water in that solution (via the Poynting correction). When the fugacity of water in the salt solution exceeds the fugacity of pure water on the other side of a membrane, water is forced to move "backwards" against the concentration gradient.
 - **A Carrot in Salt Water**: A carrot contains mostly fresh water, which has a high fugacity. The salt in the surrounding water lowers the fugacity of the water in the solution. Because the fugacity of water inside the carrot is now higher than that outside, water spontaneously moves out of the carrot, causing it to shrivel.
-- **Melting Ice with Salt**: At 0$^\circ$C, pure solid ice and pure liquid water are in equilibrium, so $f_{ice} = f_{liquid}$. When salt is added, it dissolves in the liquid water and lowers the fugacity of the water in that phase ($f_{new\_liquid} < f_{liquid}$). Now, the fugacity of the solid ice is higher than the fugacity of the saltwater ($f_{ice} > f_{new\_liquid}$). To restore equilibrium, the ice melts, moving from a state of high fugacity to low fugacity.
+- **Melting Ice with Salt**: At 0°C, pure solid ice and pure liquid water are in equilibrium, so $f_{ice} = f_{liquid}$. When salt is added, it dissolves in the liquid water and lowers the fugacity of the water in that phase ($f_{new\_liquid} < f_{liquid}$). Now, the fugacity of the solid ice is higher than the fugacity of the saltwater ($f_{ice} > f_{new\_liquid}$). To restore equilibrium, the ice melts, moving from a state of high fugacity to low fugacity.
 - **Gas Mask Filter**: A gas mask filter contains an adsorbent material like activated carbon. The fugacity of a contaminant molecule is much lower when it is adsorbed onto the carbon surface than when it is in the air. This large fugacity difference drives the harmful molecules from the air onto the filter, purifying the air that is breathed.
 ```
 
@@ -2365,7 +2365,7 @@ A T-x-y diagram for a binary, partially-miscible system at constant pressure sho
 ### Example Problems
 
 ```{prf:example} Three-Phase Mass Balance
-One mole of a liquid mixture containing 25 mol\% component A and 75 mol\% component B is heated at constant pressure. When 0.05 moles of vapor have formed, the system is found to be at the three-phase equilibrium temperature. At this temperature, the compositions of the coexisting phases are:
+One mole of a liquid mixture containing 25 mol% component A and 75 mol% component B is heated at constant pressure. When 0.05 moles of vapor have formed, the system is found to be at the three-phase equilibrium temperature. At this temperature, the compositions of the coexisting phases are:
 - Liquid $\alpha$ phase: $x_A = 0.73, x_B = 0.27$
 - Liquid $\beta$ phase: $x_A = 0.17, x_B = 0.83$
 - Vapor phase: $y_A = 0.40, y_B = 0.60$
@@ -2477,7 +2477,7 @@ The system contains three phases with the following amounts and compositions:
 ```
 
 ```{prf:example} Effect of Cooling from a Three-Phase State
-A cyclohexane-water system is at equilibrium at 50$^\circ$C and a fixed pressure. The system contains three phases: a vapor phase, a water-rich liquid phase, and a cyclohexane-rich liquid phase. If the temperature is now decreased to 45$^\circ$C while keeping the pressure constant, what change will occur in the system?
+A cyclohexane-water system is at equilibrium at 50°C and a fixed pressure. The system contains three phases: a vapor phase, a water-rich liquid phase, and a cyclohexane-rich liquid phase. If the temperature is now decreased to 45°C while keeping the pressure constant, what change will occur in the system?
 ```
 
 ```{dropdown} Solution Steps
@@ -2488,11 +2488,11 @@ The Gibbs Phase Rule provides a rigorous way to understand the constraints on th
 - **Initial Phases**: $P = 3$ (vapor, liquid $\alpha$, liquid $\beta$).
 - **Initial Degrees of Freedom**: $F = C - P + 2 = 2 - 3 + 2 = 1$.
 - **Constraint**: The problem states the pressure is held constant. This uses up the single available degree of freedom.
-- **Interpretation**: This means that for the given pressure, the three phases can only coexist at a single, unique temperature (50$^\circ$C). It is thermodynamically impossible for the system to remain in a three-phase state if the temperature is changed.
+- **Interpretation**: This means that for the given pressure, the three phases can only coexist at a single, unique temperature (50°C). It is thermodynamically impossible for the system to remain in a three-phase state if the temperature is changed.
 
 **Step 2: Predict the Change**
 
-To exist at the new temperature of 45$^\circ$C, the system must change in a way that increases its degrees of freedom. This requires a reduction in the number of phases. Since the temperature is being lowered (energy is being removed), the highest-energy phase is the most likely to disappear. In a vapor-liquid system, the vapor phase is the highest-energy phase.
+To exist at the new temperature of 45°C, the system must change in a way that increases its degrees of freedom. This requires a reduction in the number of phases. Since the temperature is being lowered (energy is being removed), the highest-energy phase is the most likely to disappear. In a vapor-liquid system, the vapor phase is the highest-energy phase.
 
 **Step 3: Visualize on a Phase Diagram**
 
@@ -2556,7 +2556,7 @@ When both immiscible liquids (A and B) are present and in equilibrium with a vap
 ### Example Problems
 
 ```{prf:example} Condensation of an Immiscible System
-A gas mixture containing 75 mol\% component A and 25 mol\% component B is compressed isothermally. At a total pressure of 1.6 bar, liquid A begins to condense. As the pressure is increased further, liquid B begins to condense at a total pressure of 2.4 bar. What are the saturation pressures of pure A and pure B at this temperature?
+A gas mixture containing 75 mol% component A and 25 mol% component B is compressed isothermally. At a total pressure of 1.6 bar, liquid A begins to condense. As the pressure is increased further, liquid B begins to condense at a total pressure of 2.4 bar. What are the saturation pressures of pure A and pure B at this temperature?
 ```
 
 ```{dropdown} Solution Steps
@@ -2615,7 +2615,7 @@ $$
 ```
 
 ```{prf:example} Identifying Phases in an Immiscible System
-A closed system contains 6 mol of component A and 4 mol of component B. The system is at equilibrium at 100$^\circ$C and a total pressure of 2.0 atm. A and B are completely immiscible in the liquid phase. Their saturation pressures at 100$^\circ$C are known to be $P_A^{sat} = 2.0$ atm and $P_B^{sat} = 0.5$ atm. Determine the phases present at equilibrium.
+A closed system contains 6 mol of component A and 4 mol of component B. The system is at equilibrium at 100°C and a total pressure of 2.0 atm. A and B are completely immiscible in the liquid phase. Their saturation pressures at 100°C are known to be $P_A^{sat} = 2.0$ atm and $P_B^{sat} = 0.5$ atm. Determine the phases present at equilibrium.
 ```
 
 ```{dropdown} Solution Steps
@@ -2863,7 +2863,7 @@ $$
 ### Example Problems
 
 ```{prf:example} Flash with Known Vaporized Fraction
-A 50/50 molar liquid mixture of benzene(1) and toluene(2) is flashed to a drum operating at 1.4 bar. At the resulting equilibrium temperature, it is known that 25\% of the feed vaporizes. The saturation pressure of benzene at this temperature is $P_1^{sat} = 2.0$ bar. Assuming an ideal solution, what is the composition of the vapor leaving the drum?
+A 50/50 molar liquid mixture of benzene(1) and toluene(2) is flashed to a drum operating at 1.4 bar. At the resulting equilibrium temperature, it is known that 25% of the feed vaporizes. The saturation pressure of benzene at this temperature is $P_1^{sat} = 2.0$ bar. Assuming an ideal solution, what is the composition of the vapor leaving the drum?
 ```
 
 ```{dropdown} Solution Steps
@@ -2911,11 +2911,11 @@ $$
 
 **Step 5: Final Answer**
 
-The vapor composition is approximately **64.5\% benzene** ($y_1 = 0.645$) and 35.5\% toluene.
+The vapor composition is approximately **64.5% benzene** ($y_1 = 0.645$) and 35.5% toluene.
 ```
 
 ```{prf:example} Isothermal Flash Calculation
-A liquid feed containing 60 mol\% component 1 and 40 mol\% component 2 is flashed to an outlet condition of 150$^\circ$C and 1210 kPa. The system behaves as an ideal solution. The saturation pressures (in kPa) are given by the Antoine equations, where T is in $^\circ$C:
+A liquid feed containing 60 mol% component 1 and 40 mol% component 2 is flashed to an outlet condition of 150°C and 1210 kPa. The system behaves as an ideal solution. The saturation pressures (in kPa) are given by the Antoine equations, where T is in $^\circ$C:
 
 $$
 
@@ -2931,7 +2931,7 @@ Calculate the fraction of the feed that leaves as liquid ($L/F$) and the composi
 
 In an isothermal flash, the temperature and pressure in the drum are known. This means the K-factors are fixed. The first step is to determine the compositions of the liquid and vapor phases that can coexist at these conditions. Then, a material balance is used to find the relative amounts of the two phases.
 
-**Step 2: Calculate Saturation Pressures and K-factors at 150$^\circ$C**
+**Step 2: Calculate Saturation Pressures and K-factors at 150°C**
 
 Substitute $T=150^\circ$C into the given Antoine equations.
 
@@ -3031,9 +3031,9 @@ Now that we know $V/F$, we can use the composition formulas from the Rachford-Ri
 **Step 6: Final Answer**
 
 The results of the isothermal flash calculation are:
-- The fraction of the effluent that is liquid is **68.8\%** ($L/F = 0.688$).
-- **Liquid Phase Composition**: 52.5\% component 1 ($x_1 = 0.525$).
-- **Vapor Phase Composition**: 76.5\% component 1 ($y_1 = 0.765$).
+- The fraction of the effluent that is liquid is **68.8%** ($L/F = 0.688$).
+- **Liquid Phase Composition**: 52.5% component 1 ($x_1 = 0.525$).
+- **Vapor Phase Composition**: 76.5% component 1 ($y_1 = 0.765$).
 ```
 
 ## Solid-Liquid Equilibrium: Solubility
@@ -3078,14 +3078,14 @@ $$
 ```
 
 ```{prf:example} Crystallizer Material Balance
-A saturated aqueous solution of potassium dichromate (K$_2$Cr$_2$O$_7$) at 60$^\circ$C is fed to a crystallizer that operates at 20$^\circ$C. The outlet slurry is filtered, yielding 200 kg of solid K$_2$Cr$_2$O$_7$ crystals and 400 kg of saturated solution at 20$^\circ$C. How much water was evaporated in the crystallizer?
+A saturated aqueous solution of potassium dichromate (K$_2$Cr$_2$O$_7$) at 60°C is fed to a crystallizer that operates at 20°C. The outlet slurry is filtered, yielding 200 kg of solid K$_2$Cr$_2$O$_7$ crystals and 400 kg of saturated solution at 20°C. How much water was evaporated in the crystallizer?
 ```
 
 ```{dropdown} Solution Steps
 **Step 1: Find Compositions from Solubility Data**
 
 We use a standard solubility chart for K$_2$Cr$_2$O$_7$ to find the compositions of the inlet and outlet solutions.
-- **Inlet (60$^\circ$C)**: Solubility $\approx$ 38 g K$_2$Cr$_2$O$_7$ / 100 g H$_2$O.
+- **Inlet (60°C)**: Solubility $\approx$ 38 g K$_2$Cr$_2$O$_7$ / 100 g H$_2$O.
   
   $$
 
@@ -3093,7 +3093,7 @@ We use a standard solubility chart for K$_2$Cr$_2$O$_7$ to find the compositions
 
   $$
 
-- **Outlet Solution (20$^\circ$C)**: Solubility $\approx$ 12 g K$_2$Cr$_2$O$_7$ / 100 g H$_2$O.
+- **Outlet Solution (20°C)**: Solubility $\approx$ 12 g K$_2$Cr$_2$O$_7$ / 100 g H$_2$O.
   
   $$
 
@@ -3204,7 +3204,7 @@ Approximately **282 kg** of water must be evaporated in the crystallizer.
 
 ## PE Exam Practice Problems
 
-```{prf:example} Practice Problem 1 — Bubble Point Calculation (Raoult's Law)
+```{prf:example} Practice Problem 1: Bubble Point Calculation (Raoult's Law)
 
 A liquid mixture of 30 mol% benzene (1) and 70 mol% toluene (2) is at 1 atm total pressure. Use Raoult's Law to find the bubble point temperature and vapor composition.
 
@@ -3250,7 +3250,7 @@ $$y_1 = x_1 K_1 = 0.30 \times (1349/760) \approx 0.532 \quad y_2 = 0.468$$
 
 ---
 
-```{prf:example} Practice Problem 2 — Chemical Equilibrium: $K$ and Conversion
+```{prf:example} Practice Problem 2: Chemical Equilibrium: $K$ and Conversion
 
 The gas-phase reaction $\text{N}_2\text{O}_4(g) \rightleftharpoons 2\,\text{NO}_2(g)$ has $\Delta G^\circ_{298} = +4.7$ kJ/mol and $\Delta H^\circ_{rxn} = +57.2$ kJ/mol.
 
@@ -3277,21 +3277,21 @@ $$= 6880 \times (3.356\times10^{-3} - 2.500\times10^{-3}) = 6880 \times 8.56\tim
 
 $$K_2 = 0.150 \times e^{5.89} = 0.150 \times 361.7 = \mathbf{54.3}$$
 
-At 400 K, $K_a = 54.3 \gg 1$ — products (NO₂) are strongly favored. Higher temperature **increases** conversion for this endothermic reaction.
+At 400 K, $K_a = 54.3 \gg 1$ - products (NO₂) are strongly favored. Higher temperature **increases** conversion for this endothermic reaction.
 
 **Part (c): Pressure effect**
 
-$\sum\nu_i = 2 - 1 = +1$ (reaction increases moles). Higher total pressure shifts equilibrium **toward reactants** (Le Châtelier's principle — the system compresses by favoring fewer moles). Increasing pressure **decreases** NO₂ yield.
+$\sum\nu_i = 2 - 1 = +1$ (reaction increases moles). Higher total pressure shifts equilibrium **toward reactants** (Le Châtelier's principle - the system compresses by favoring fewer moles). Increasing pressure **decreases** NO₂ yield.
 ```
 
 ```{caution}
-**PE Exam Traps — Chemical and Phase Equilibria**
+**PE Exam Traps: Chemical and Phase Equilibria**
 
 - **$K_a$ is dimensionless but $K_y$ is not.** The thermodynamic equilibrium constant $K_a = K_y \cdot P^{\sum\nu_i}$ (with $P$ in bar). If $\sum\nu_i \neq 0$, changing pressure changes $K_y$ even though $K_a$ is fixed by temperature alone. Forgetting the pressure factor in gas-phase equilibrium is extremely common.
-- **Van't Hoff direction:** For exothermic reactions ($\Delta H^\circ < 0$), increasing $T$ decreases $K$. For endothermic ($\Delta H^\circ > 0$), increasing $T$ increases $K$. Le Châtelier's principle and Van't Hoff must be consistent — always check the sign of $\Delta H^\circ$ before stating whether higher $T$ helps or hurts yield.
+- **Van't Hoff direction:** For exothermic reactions ($\Delta H^\circ < 0$), increasing $T$ decreases $K$. For endothermic ($\Delta H^\circ > 0$), increasing $T$ increases $K$. Le Châtelier's principle and Van't Hoff must be consistent - always check the sign of $\Delta H^\circ$ before stating whether higher $T$ helps or hurts yield.
 - **Bubble vs. dew point:** At the **bubble point**, you know the liquid composition ($x_i$) and the condition $\sum x_i K_i = 1$. At the **dew point**, you know the vapor composition ($y_i$) and the condition $\sum y_i/K_i = 1$. Mixing these up inverts the problem entirely.
 - **Raoult's Law requires ideal liquid AND ideal vapor.** If activity coefficients are given ($\gamma_i \neq 1$), use modified Raoult's: $y_i P = \gamma_i x_i P_i^{sat}$. Neglecting $\gamma_i$ when it's provided leads to wrong bubble/dew point temperatures.
-- **Flash calculation: $\psi$ is the vapor fraction, not liquid fraction.** In the Rachford-Rice equation, $\psi = V/F$ varies between 0 (all liquid, bubble point) and 1 (all vapor, dew point). If your answer gives $\psi$ outside $[0,1]$, the feed is either entirely liquid or entirely vapor at those conditions — not a two-phase flash.
+- **Flash calculation: $\psi$ is the vapor fraction, not liquid fraction.** In the Rachford-Rice equation, $\psi = V/F$ varies between 0 (all liquid, bubble point) and 1 (all vapor, dew point). If your answer gives $\psi$ outside $[0,1]$, the feed is either entirely liquid or entirely vapor at those conditions - not a two-phase flash.
 ```
 
 ## Phase Behavior Near the Critical Point
@@ -3310,6 +3310,6 @@ The critical point represents the terminus of the vapor-liquid equilibrium curve
 ```{note}
 **Phenomena at the Critical Point**
 The transition into and out of the supercritical state involves unique and observable phenomena.
-- **Heating to the Critical Point**: Imagine a sealed container holding a liquid and its vapor, with the overall density being exactly the critical density. As the system is heated towards the critical temperature, the liquid expands (density decreases) and the vapor is compressed (density increases). The properties of the two phases converge. The meniscus—the visible boundary between the liquid and vapor—becomes progressively fainter and then vanishes completely at the critical point, as the system becomes one uniform, homogeneous supercritical fluid.
+- **Heating to the Critical Point**: Imagine a sealed container holding a liquid and its vapor, with the overall density being exactly the critical density. As the system is heated towards the critical temperature, the liquid expands (density decreases) and the vapor is compressed (density increases). The properties of the two phases converge. The meniscus, the visible boundary between the liquid and vapor, becomes progressively fainter and then vanishes completely at the critical point, as the system becomes one uniform, homogeneous supercritical fluid.
 - **Cooling from the Supercritical State**: If a supercritical fluid is cooled back down through its critical point, it exhibits a phenomenon called **critical opalescence**. At the instant of passing through the critical point, large-scale density fluctuations form spontaneously throughout the fluid. These fluctuations have a size comparable to the wavelength of visible light, causing them to scatter light intensely. This makes the fluid, for a moment, appear milky, cloudy, or opaque. Immediately after this flash of opalescence, the fluid separates back into distinct liquid and vapor phases.
 ```

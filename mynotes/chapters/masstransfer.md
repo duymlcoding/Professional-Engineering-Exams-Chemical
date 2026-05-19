@@ -49,7 +49,7 @@ $$
 
 ```{admonition} Term Definitions
 :class: tip
-- $C_A$: Concentration of the diffusing substance A [mol/m$^3$ or wt\%].
+- $C_A$: Concentration of the diffusing substance A [mol/m$^3$ or wt%].
 - $t$: Time [s].
 - $x$: Position or distance into the solid [m].
 - $D_{AB}$: The diffusion coefficient (or diffusivity) of A in B [m$^2$/s].
@@ -82,15 +82,15 @@ $$
 ### Example Problem: Carburization of a Steel Alloy
 
 ```{prf:example} Carburization of a Steel Alloy
-A steel alloy initially has a uniform carbon concentration of 0.10 wt\%. To harden the surface, it is placed in a high-temperature furnace at 1000$^\circ$C where the carbon concentration at the surface is maintained at 1.5 wt\%. The diffusion coefficient of carbon in steel at this temperature is $D_{AB} = 2.0 \times 10^{-11}$ m$^2$/s. How long (in hours) will it take for the carbon concentration to reach 1.0 wt\% at a depth of 1.0 mm below the surface?
+A steel alloy initially has a uniform carbon concentration of 0.10 wt%. To harden the surface, it is placed in a high-temperature furnace at 1000°C where the carbon concentration at the surface is maintained at 1.5 wt%. The diffusion coefficient of carbon in steel at this temperature is $D_{AB} = 2.0 \times 10^{-11}$ m$^2$/s. How long (in hours) will it take for the carbon concentration to reach 1.0 wt% at a depth of 1.0 mm below the surface?
 ```
 
 ```{dropdown} Solution Steps
 **Step 1: Identify Knowns and Strategy**
 The problem describes diffusion into a semi-infinite solid with constant surface concentration, matching the conditions for the error function solution. We will solve Equation 2 for time, $t$.
-- Target Concentration: $C_A(x,t) = 1.0$ wt\%
-- Initial Concentration: $C_{A0} = 0.10$ wt\%
-- Surface Concentration: $C_{As} = 1.5$ wt\%
+- Target Concentration: $C_A(x,t) = 1.0$ wt%
+- Initial Concentration: $C_{A0} = 0.10$ wt%
+- Surface Concentration: $C_{As} = 1.5$ wt%
 - Depth: $x = 1.0 \, \text{mm} = 1.0 \times 10^{-3}$ m
 - Diffusivity: $D_{AB} = 2.0 \times 10^{-11}$ m$^2$/s
 
@@ -260,7 +260,7 @@ To construct the diagram, one draws the q-line starting from the point $(z_F, z_
 ### Comprehensive Example: Acetone-Ethanol Separation
 
 ```{prf:example} Acetone-Ethanol Separation
-Acetone and ethanol are to be separated in a distillation column. The column has a **partial condenser** and a **partial reboiler**, which each function as an equilibrium stage. An equimolar ($z_F=0.5$), sub-cooled liquid feed enters at 100 kmol/hr. The feed is cold enough that it condenses 1 mole of vapor inside the column for every 6 moles of feed that enters. The desired separation is a distillate **vapor** product of 95 mol\% acetone ($y_D=0.95$) and a bottoms liquid product of 5 mol\% acetone ($x_B=0.05$). The reflux returned from the condenser is a saturated liquid. The column is operated with a liquid-to-vapor flow ratio in the rectifying section of $(L/V) = 1.4 \times (L/V)_{\text{min}}$. Assume Constant Molar Overflow.
+Acetone and ethanol are to be separated in a distillation column. The column has a **partial condenser** and a **partial reboiler**, which each function as an equilibrium stage. An equimolar ($z_F=0.5$), sub-cooled liquid feed enters at 100 kmol/hr. The feed is cold enough that it condenses 1 mole of vapor inside the column for every 6 moles of feed that enters. The desired separation is a distillate **vapor** product of 95 mol% acetone ($y_D=0.95$) and a bottoms liquid product of 5 mol% acetone ($x_B=0.05$). The reflux returned from the condenser is a saturated liquid. The column is operated with a liquid-to-vapor flow ratio in the rectifying section of $(L/V) = 1.4 \times (L/V)_{\text{min}}$. Assume Constant Molar Overflow.
 
 **Tasks:**
 1. Plot the operating lines for the rectifying and stripping sections and the feed line.
@@ -410,7 +410,7 @@ These two equations can be solved simultaneously for two unknowns (e.g., $D$ and
 ### Example Problem: Variable Reflux Distillation
 
 ```{prf:example} Variable Reflux Distillation
-A batch still is charged with 1000 moles of an ethanol-water mixture containing 30 mole \% ethanol ($x_{W,i}=0.3$). The column has 2 equilibrium stages (including the partial reboiler). The distillation is run with a constant distillate composition of $x_D=0.6$ until the reboiler composition drops to $x_{W,f}=0.09$. How much distillate is produced, and what is the range of reflux ratios used?
+A batch still is charged with 1000 moles of an ethanol-water mixture containing 30 mole % ethanol ($x_{W,i}=0.3$). The column has 2 equilibrium stages (including the partial reboiler). The distillation is run with a constant distillate composition of $x_D=0.6$ until the reboiler composition drops to $x_{W,f}=0.09$. How much distillate is produced, and what is the range of reflux ratios used?
 ```
 
 ```{dropdown} Solution Steps
@@ -658,7 +658,7 @@ Eventually, the liquid in the still will reach the azeotropic composition, $x_W 
 ### Example Problem: Distillation using T-x-y Data
 
 ```{prf:example} Distillation using T-x-y Data
-A simple pot still is charged with 50 moles of an ethanol-water mixture. The distillation is started, and the initial vapor temperature (head temperature) is 84$^\circ$C. The process is stopped when the head temperature rises to 89$^\circ$C. Using the provided T-x-y diagram for the ethanol-water system, determine:
+A simple pot still is charged with 50 moles of an ethanol-water mixture. The distillation is started, and the initial vapor temperature (head temperature) is 84°C. The process is stopped when the head temperature rises to 89°C. Using the provided T-x-y diagram for the ethanol-water system, determine:
 1. The total amount of distillate collected (D).
 2. The final composition of the liquid remaining in the still (the waste).
 3. The average composition of the total collected distillate.
@@ -682,7 +682,7 @@ Our plan is to:
 The head temperature is the boiling point of the liquid currently in the still. We use this to find the liquid composition from the bubble-point line on the diagram.
 - Initial State ($T=84^\circ$C): Following the 84°C line to the liquid curve gives the initial still composition: $\mathbf{x_{W0} \approx 0.17}$.
 - Final State ($T=89^\circ$C): Following the 89°C line to the liquid curve gives the final still composition: $\mathbf{x_{Wf} \approx 0.07}$.
-The distillation proceeds from a liquid concentration of 17\% ethanol down to 7\% ethanol.
+The distillation proceeds from a liquid concentration of 17% ethanol down to 7% ethanol.
 
 **Step 3: Perform Numerical Integration**
 We must evaluate the integral $\int_{0.17}^{0.07} \frac{dx_W}{y - x_W}$. This is done by taking several points from the VLE diagram between $x_W = 0.07$ and $x_W = 0.17$, calculating the value of $1/(y-x_W)$ at each point, and finding the area under the curve. Using a numerical method like the trapezoidal rule, the value is found to be:
@@ -727,16 +727,16 @@ $$
 
 **Final Answer Summary for Example 1**
 - Total Distillate Collected (D): $\approx 12$ moles.
-- Final Still Composition ($x_{Wf}$): 7\% ethanol.
+- Final Still Composition ($x_{Wf}$): 7% ethanol.
 - Average Distillate Composition ($x_{D,avg}$): $\approx 49\%$ ethanol.
-A sanity check confirms this is reasonable: the instantaneous vapor was richer than 49\% at the start and leaner at the end.
+A sanity check confirms this is reasonable: the instantaneous vapor was richer than 49% at the start and leaner at the end.
 
 ```
 
 ### Example Problem: Distillation using Raoult's Law
 
 ```{prf:example} Distillation using Raoult's Law
-A single-stage batch still is charged with 75 mol of an 82 mol\% methanol / 18 mol\% water mixture. The distillation is run until the **average** distillate concentration collected is 90.0 mol\% methanol. Assuming the mixture is an ideal solution (follows Raoult's Law) and operates at 760 mmHg:
+A single-stage batch still is charged with 75 mol of an 82 mol% methanol / 18 mol% water mixture. The distillation is run until the **average** distillate concentration collected is 90.0 mol% methanol. Assuming the mixture is an ideal solution (follows Raoult's Law) and operates at 760 mmHg:
 1. How much total distillate will be collected?
 2. How many moles will remain in the still, and what is its final methanol concentration?
 
@@ -886,7 +886,7 @@ The number of stages is found by constructing a staircase between the operating 
 1. **Start at the Bottom:** Begin at the point $(x_N, y_{N+1})$ on the operating line. This represents the rich entering gas ($y_{N+1}$) and the rich exiting liquid ($x_N$).
 2. **Move to Equilibrium:** The vapor that leaves stage N ($y_N$) is in equilibrium with the liquid on stage N ($x_N$). To find its composition, move **vertically down** from the operating line to the **equilibrium line**.
 3. **Move to Operating Line:** The vapor leaving stage N ($y_N$) passes the liquid entering from the stage above ($x_{N-1}$). To find this liquid's composition, move **horizontally to the left** from the equilibrium line to the **operating line**.
-4. **Repeat:** This completes one "step" (one theoretical stage). Repeat this process—vertically to equilibrium, horizontally to the operating line—counting each step until the gas composition ($y$) is less than or equal to the desired exit gas composition, $y_1$.
+4. **Repeat:** This completes one "step" (one theoretical stage). Repeat this process, vertically to equilibrium, horizontally to the operating line, counting each step until the gas composition ($y$) is less than or equal to the desired exit gas composition, $y_1$.
 ```
 
 ### Effect of Operating Parameters
@@ -927,7 +927,7 @@ The graphical method provides an excellent way to visualize how changing operati
 ### Example Problem: Dilute System - Chloroform Scrubbing
 
 ```{prf:example} Chloroform Scrubbing
-A laboratory process releases an air stream of 1000 kmol/hr containing 200 ppm of chloroform. To meet environmental standards, this concentration must be reduced to 10 ppm before release. An absorption column using pure water as the solvent is proposed. The system operates at 25$^\circ$C and 1.5 atm. How many theoretical equilibrium stages are required for this separation?
+A laboratory process releases an air stream of 1000 kmol/hr containing 200 ppm of chloroform. To meet environmental standards, this concentration must be reduced to 10 ppm before release. An absorption column using pure water as the solvent is proposed. The system operates at 25°C and 1.5 atm. How many theoretical equilibrium stages are required for this separation?
 ```
 
 ```{dropdown} Solution Steps
@@ -1009,7 +1009,7 @@ The Kremser equation predicts that **6.1 theoretical stages** are required. We w
 ### Example Problem: Concentrated System - CO$_2$ Removal
 
 ```{prf:example} CO2 Removal
-We wish to remove 65\% of the CO$_2$ from a 100 mol/hr gas stream that is initially 8 mol\% CO$_2$ in nitrogen. The scrubbing is done with pure water at room temperature and atmospheric pressure, where the VLE relationship is approximately $y=1640x$. How many equilibrium stages are required if the solvent flow rate is 1.5 times the minimum?
+We wish to remove 65% of the CO$_2$ from a 100 mol/hr gas stream that is initially 8 mol% CO$_2$ in nitrogen. The scrubbing is done with pure water at room temperature and atmospheric pressure, where the VLE relationship is approximately $y=1640x$. How many equilibrium stages are required if the solvent flow rate is 1.5 times the minimum?
 ```
 
 ```{dropdown} Solution Steps
@@ -1019,7 +1019,7 @@ First, we must determine if the system is dilute. A significant change in the to
 - Moles CO$_2$ removed: $8.0 \, \text{mol/hr} \times 0.65 = 5.2$ mol/hr.
 - Percent change in total gas flow rate: $\frac{5.2 \, \text{mol/hr removed}}{100 \, \text{mol/hr total in}} = 5.2\%$.
 
-**Rule of Thumb: Concentrated Systems:** When the amount of solute transferred causes the total molar flow rate of either the gas or liquid phase to change by more than 5-10\%, the system should be treated as **concentrated**. This requires using constant **solute-free flow rates** (G for carrier gas, S for solvent) and compositions expressed as **mole ratios** (Y, X).
+**Rule of Thumb: Concentrated Systems:** When the amount of solute transferred causes the total molar flow rate of either the gas or liquid phase to change by more than 5-10%, the system should be treated as **concentrated**. This requires using constant **solute-free flow rates** (G for carrier gas, S for solvent) and compositions expressed as **mole ratios** (Y, X).
 
 **Step 2: Define Solute-Free Flow Rates and Mole Ratios**
 - **Carrier Gas Flow ($G$):** The inert N$_2$ flow is constant: $G = 100 \cdot (1-0.08) = 92$ mol/hr.
@@ -1104,7 +1104,7 @@ The number of stages is found by constructing a staircase between the equilibriu
 1. **Plot the Lines:** Draw the equilibrium line ($y=mx$) and the operating line, which is the straight line connecting the known top-of-column point $(x_0, y_1)$ and bottom-of-column point $(x_N, y_{N+1})$.
 2. **Begin at Stage 1:** The liquid entering the column is $x_0$. This liquid enters Stage 1. Find the point $(x_0, y_1)$ on the diagram. This point is on the operating line. The liquid leaving stage 1 ($x_1$) is in equilibrium with the vapor leaving stage 1 ($y_1$). To find $x_1$, start at $y_1$ and move **horizontally to the right** to the **equilibrium line**. The x-coordinate of this point is $x_1$.
 3. **Move to Stage 2:** The liquid $x_1$ flows from stage 1 to stage 2. The vapor that it passes, which is rising from stage 2, is $y_2$. Their compositions are related by the operating line. To find $y_2$, start at $x_1$ and move **vertically up** to the **operating line**. The y-coordinate is $y_2$.
-4. **Repeat:** Now find the liquid on stage 2 ($x_2$) that is in equilibrium with $y_2$ by moving **horizontally to the right** to the **equilibrium line**. This completes the step for Stage 2. Continue this process—vertically to the operating line, horizontally to the equilibrium line—counting each "triangle" as one stage, until the liquid composition $x$ is less than or equal to the desired exit liquid composition, $x_N$.
+4. **Repeat:** Now find the liquid on stage 2 ($x_2$) that is in equilibrium with $y_2$ by moving **horizontally to the right** to the **equilibrium line**. This completes the step for Stage 2. Continue this process, vertically to the operating line, horizontally to the equilibrium line, counting each "triangle" as one stage, until the liquid composition $x$ is less than or equal to the desired exit liquid composition, $x_N$.
 ```
 
 ### Effect of Operating Parameters
@@ -1138,7 +1138,7 @@ The performance of a stripping column is highly sensitive to the operating condi
 ### Example Problem: Stripping an Organic from Water
 
 ```{prf:example} Stripping an Organic from Water
-A single-stage stripping process is used to remove a dissolved organic compound from a water stream. The contaminated water enters the stage at 20$^\circ$C with an organic concentration of 0.05 mol\%. A stream of pure, dry air at 5 bar is contacted with the water to act as the stripping agent. The Henry's Law constant for the organic in water at this temperature is 2.5 bar. What flow rate of air (in moles of air per mole of water) is needed to reduce the amount of organic in the water by 95\%?
+A single-stage stripping process is used to remove a dissolved organic compound from a water stream. The contaminated water enters the stage at 20°C with an organic concentration of 0.05 mol%. A stream of pure, dry air at 5 bar is contacted with the water to act as the stripping agent. The Henry's Law constant for the organic in water at this temperature is 2.5 bar. What flow rate of air (in moles of air per mole of water) is needed to reduce the amount of organic in the water by 95%?
 ```
 
 ```{dropdown} Solution Steps
@@ -1156,19 +1156,19 @@ Our goal is to find the ratio $n_{air} / L_{in}$. Since our basis is $L_{in}=1$ 
 
 **Step 2: Material Balance on the Organic Solute**
 First, let's quantify the moles of the organic contaminant (C) entering and leaving based on our 1-mole basis.
-- **Moles of C IN:** The inlet water has a concentration of 0.05 mol\%, which is a mole fraction of $x_{C,in} = 0.0005$.
+- **Moles of C IN:** The inlet water has a concentration of 0.05 mol%, which is a mole fraction of $x_{C,in} = 0.0005$.
 
   $$
   n_{C,in} = x_{C,in} \cdot L_{in} = (0.0005) \cdot (1 \, \text{mol}) = 5 \times 10^{-4} \, \text{mol}
   $$
 
-- **Moles of C OUT (in Liquid):** The process removes 95\% of the organic, meaning 5\% remains in the liquid.
+- **Moles of C OUT (in Liquid):** The process removes 95% of the organic, meaning 5% remains in the liquid.
 
   $$
   n_{C,L,out} = 0.05 \cdot n_{C,in} = 0.05 \cdot (5 \times 10^{-4}) = 2.5 \times 10^{-5} \, \text{mol}
   $$
 
-- **Moles of C OUT (in Gas):** By difference, 95\% of the inlet organic must have been transferred to the air stream.
+- **Moles of C OUT (in Gas):** By difference, 95% of the inlet organic must have been transferred to the air stream.
 
   $$
   n_{C,V,out} = 0.95 \cdot n_{C,in} = 0.95 \cdot (5 \times 10^{-4}) = 4.75 \times 10^{-4} \, \text{mol}
@@ -1219,7 +1219,7 @@ Based on our simplifying assumption that $V_{out} \approx V_{in} = n_{air}$, the
 **Step 6: Evaluate the Assumptions**
 Is it valid to assume the total flow rates are constant? Let's check the two effects we ignored.
 - **Solute Transfer:** The amount of organic transferred ($4.75 \times 10^{-4}$ mol) is tiny compared to the water (1 mol) and air (38 mol) flows. This part of the assumption is excellent.
-- **Water Evaporation:** Dry air enters and will become saturated with water vapor. The exiting liquid is almost pure water, so $x_W \approx 1$. The saturation pressure of water at 20$^\circ$C is $P_{W,sat} \approx 0.0234$ bar. The mole fraction of water in the exit gas will be:
+- **Water Evaporation:** Dry air enters and will become saturated with water vapor. The exiting liquid is almost pure water, so $x_W \approx 1$. The saturation pressure of water at 20°C is $P_{W,sat} \approx 0.0234$ bar. The mole fraction of water in the exit gas will be:
 
   $$
   y_W = \frac{x_W P_{W,sat}}{P_{total}} \approx \frac{1 \cdot (0.0234 \, \text{bar})}{5 \, \text{bar}} = 0.00468
@@ -1231,10 +1231,10 @@ Is it valid to assume the total flow rates are constant? Let's check the two eff
   n_{W,evap} = \frac{y_W}{1-y_W-y_C} \cdot (n_{air}+n_{C,V,out}) \approx y_W \cdot V_{out} \approx (0.00468) \cdot (38) = 0.178 \, \text{mol}
   $$
   
-  The total exiting gas flow is actually $V_{out} = n_{air} + n_{C,V,out} + n_{W,evap} \approx 38 + 0.000475 + 0.178 \approx 38.18$ moles. This is very close to our assumed 38 moles, so the assumption that $V_{out} \approx V_{in}$ is reasonable for this calculation. However, the water loss ($0.178$ mol) is nearly 18\% of the inlet liquid, which might be significant depending on the process objectives.
+  The total exiting gas flow is actually $V_{out} = n_{air} + n_{C,V,out} + n_{W,evap} \approx 38 + 0.000475 + 0.178 \approx 38.18$ moles. This is very close to our assumed 38 moles, so the assumption that $V_{out} \approx V_{in}$ is reasonable for this calculation. However, the water loss ($0.178$ mol) is nearly 18% of the inlet liquid, which might be significant depending on the process objectives.
 
 **Final Answer Summary**
-To achieve 95\% removal of the organic compound, approximately **38 moles of air are needed per mole of water**. The high ratio of air to water is required because the organic is not highly volatile out of water.
+To achieve 95% removal of the organic compound, approximately **38 moles of air are needed per mole of water**. The high ratio of air to water is required because the organic is not highly volatile out of water.
 
 ```
 
@@ -1242,7 +1242,7 @@ To achieve 95\% removal of the organic compound, approximately **38 moles of air
 
 ## PE Exam Practice Problems
 
-```{prf:example} Practice Problem 1 — McCabe-Thiele Minimum Reflux
+```{prf:example} Practice Problem 1: McCabe-Thiele Minimum Reflux
 
 A distillation column separates a binary mixture of benzene (more volatile) and toluene. The feed is 40 mol% benzene, saturated liquid ($q = 1$). The distillate specification is $x_D = 0.95$ mol fraction benzene and the bottoms specification is $x_B = 0.05$.
 
@@ -1278,7 +1278,7 @@ The rectifying operating line: $y = 0.692\,x + (1-0.692) \times x_D = 0.692\,x +
 
 ---
 
-```{prf:example} Practice Problem 2 — Unsteady Diffusion (Fick's Law)
+```{prf:example} Practice Problem 2: Unsteady Diffusion (Fick's Law)
 
 A large slab of rubber initially contains no solvent ($C_{A0} = 0$). One surface is suddenly exposed to a solvent vapor maintaining $C_{As} = 0.8$ kg/m³ at the surface. The diffusivity of solvent in rubber is $D_{AB} = 8 \times 10^{-12}$ m²/s.
 
@@ -1311,11 +1311,11 @@ $$t = \frac{1.510\times10^{-6}}{8\times10^{-12}} = 188{,}750 \text{ s} = \mathbf
 ```
 
 ```{caution}
-**PE Exam Traps — Mass Transfer**
+**PE Exam Traps: Mass Transfer**
 
-- **Mole fraction vs. mole ratio in absorption:** Operating and equilibrium lines on an absorption diagram are often plotted in mole ratio ($Y = y/(1-y)$) coordinates for concentrated systems. Using mole fractions when mole ratios are required makes the operating line curved instead of straight — the stage count will be wrong.
-- **Absorption vs. stripping — which phase is which:** In absorption, the solute transfers from gas to liquid (gas is stripped, liquid is loaded). In stripping, it goes liquid → gas. The operating line is above the equilibrium curve for absorption, below for stripping. Drawing these backwards is a common diagram error.
-- **Minimum reflux pinch point location:** For a saturated liquid feed ($q=1$), the pinch is at the intersection of the $q$-line (vertical at $x_F$) with the equilibrium curve. For a partially vaporized feed ($0 < q < 1$), the $q$-line has a negative slope — the pinch point shifts. Don't assume the pinch is always at the feed tray composition.
-- **Error function argument:** The argument of erf is $x/(2\sqrt{Dt})$, not $x/\sqrt{Dt}$ (missing the factor of 2 is extremely common). If you get an erf argument greater than ~2.5, recheck — erf saturates at 1.0 for large arguments.
+- **Mole fraction vs. mole ratio in absorption:** Operating and equilibrium lines on an absorption diagram are often plotted in mole ratio ($Y = y/(1-y)$) coordinates for concentrated systems. Using mole fractions when mole ratios are required makes the operating line curved instead of straight - the stage count will be wrong.
+- **Absorption vs. stripping - which phase is which:** In absorption, the solute transfers from gas to liquid (gas is stripped, liquid is loaded). In stripping, it goes liquid → gas. The operating line is above the equilibrium curve for absorption, below for stripping. Drawing these backwards is a common diagram error.
+- **Minimum reflux pinch point location:** For a saturated liquid feed ($q=1$), the pinch is at the intersection of the $q$-line (vertical at $x_F$) with the equilibrium curve. For a partially vaporized feed ($0 < q < 1$), the $q$-line has a negative slope - the pinch point shifts. Don't assume the pinch is always at the feed tray composition.
+- **Error function argument:** The argument of erf is $x/(2\sqrt{Dt})$, not $x/\sqrt{Dt}$ (missing the factor of 2 is extremely common). If you get an erf argument greater than ~2.5, recheck - erf saturates at 1.0 for large arguments.
 - **Fick's First vs. Second Law:** First Law ($J = -D\,dC/dz$) is for steady-state. Second Law ($\partial C/\partial t = D\,\partial^2C/\partial x^2$) is for unsteady. Using a steady-state flux equation to analyze a time-varying concentration profile gives nonsense.
 ```

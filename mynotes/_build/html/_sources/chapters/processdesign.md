@@ -161,7 +161,7 @@ $$
 $$
 
 
-with side reactions producing $\mathrm{CO_2}$ and $\mathrm{H_2O}$. The reactor effluent flashes; unreacted ethylene is recycled; ethylene oxide is purified in a downstream distillation train. Which diagram type would show each of the following? (a) the recycle of unreacted ethylene back to the reactor; (b) the fail-safe action of the cooling-water valve on the reactor jacket; &#40;c&#41; the molar composition of the bottoms stream from the second column; (d) the carbon-steel material specification of the reactor-effluent piping; (e) the overall production rate of ethylene oxide.
+with side reactions producing $\mathrm{CO_2}$ and $\mathrm{H_2O}$. The reactor effluent flashes; unreacted ethylene is recycled; ethylene oxide is purified in a downstream distillation train. Which diagram type would show each of the following? (a) the recycle of unreacted ethylene back to the reactor; (b) the fail-safe action of the cooling-water valve on the reactor jacket; (c) the molar composition of the bottoms stream from the second column; (d) the carbon-steel material specification of the reactor-effluent piping; (e) the overall production rate of ethylene oxide.
 ```
 
 
@@ -170,7 +170,7 @@ with side reactions producing $\mathrm{CO_2}$ and $\mathrm{H_2O}$. The reactor e
 
 - **(b) Fail-safe action.** Fail-open or fail-closed is a construction-level specification governed by the actuator spring and the loss-of-air strategy. It appears **only on the P&ID**.
 
-- **&#40;c&#41; Stream composition.** Quantitative composition lives in the **PFD stream table**. The BFD shows only total mass flows by stream; the P&ID does not typically repeat composition data because its purpose is mechanical/instrumented detail, not material balance.
+- **(c) Stream composition.** Quantitative composition lives in the **PFD stream table**. The BFD shows only total mass flows by stream; the P&ID does not typically repeat composition data because its purpose is mechanical/instrumented detail, not material balance.
 
 - **(d) Pipe material spec.** A pipe material code (e.g. `A106-B-CS-3"` or `A312-TP316L-SS-2"`) is part of the line list that accompanies the **P&ID**. It does not appear on the BFD or PFD.
 
@@ -253,15 +253,15 @@ For each stream you are given:
 A user-specified parameter, the **minimum approach temperature** $\Delta T_{\min}$, sets the tightest acceptable temperature difference between any hot and cold stream inside a heat exchanger. Typical values:
 
 
-- Liquid-liquid services: $\Delta T_{\min} = 10$ to 20 $^\circ$C.
+- Liquid-liquid services: $\Delta T_{\min} = 10$ to 20°C.
 
-- Gas-liquid services: 20 to 40 $^\circ$C.
+- Gas-liquid services: 20 to 40°C.
 
-- Gas-gas services: 40 to 100 $^\circ$C (gas-gas exchangers have low $U$, large $A$ at small $\Delta T$).
+- Gas-gas services: 40 to 100°C (gas-gas exchangers have low $U$, large $A$ at small $\Delta T$).
 
-- Refrigeration: as small as 5 $^\circ$C (refrigerant is expensive, large $A$ trades off favorably).
+- Refrigeration: as small as 5°C (refrigerant is expensive, large $A$ trades off favorably).
 
-Smaller $\Delta T_{\min}$ reduces utility consumption but requires larger and more expensive heat exchangers. The optimal $\Delta T_{\min}$ trades off these effects and is typically in the 10-20 $^\circ$C range for chemical plants.
+Smaller $\Delta T_{\min}$ reduces utility consumption but requires larger and more expensive heat exchangers. The optimal $\Delta T_{\min}$ trades off these effects and is typically in the 10-20°C range for chemical plants.
 ```
 
 
@@ -440,7 +440,7 @@ Q_{H1\text{-}C2} = CP_{H1} (T_{H1}^{\text{in}} - T_{H1}^{\text{out}}) = 3 \times
 $$
 
 
-Check the cold-side response: C2 enters at 80$^\circ$C with $CP = 5$. After receiving 270 kW it would exit at
+Check the cold-side response: C2 enters at 80°C with $CP = 5$. After receiving 270 kW it would exit at
 
 
 $$
@@ -448,7 +448,7 @@ T_{C2}^{\text{out}} = 80 + \frac{270}{5} = 134^\circ\text{C}
 $$
 
 
-Required final temperature of C2 is 140$^\circ$C, so 6$^\circ$C ($= 30$ kW additional duty) still must be supplied. H1 is fully "ticked off" (cooled to its pinch temperature).
+Required final temperature of C2 is 140°C, so 6°C ($= 30$ kW additional duty) still must be supplied. H1 is fully "ticked off" (cooled to its pinch temperature).
 
 
 - **Match H2-C1 and maximize duty.**
@@ -464,7 +464,7 @@ Q_{C1, \text{required}} = 2 \times (135 - 80) = 110 \text{kW}
 $$
 
 
-Cold-side is the binding constraint: take $Q = 110$ kW. C1 reaches its target 135$^\circ$C; H2 cools to
+Cold-side is the binding constraint: take $Q = 110$ kW. C1 reaches its target 135°C; H2 cools to
 
 
 $$
@@ -472,7 +472,7 @@ T_{H2}^{\text{out}} = 150 - \frac{110}{2} = 95^\circ\text{C}
 $$
 
 
-H2 stops at 95$^\circ$C, which is 5$^\circ$C above the pinch. The remaining 5 $\times$ 2 = 10 kW of cooling cannot be done above the pinch (no cold utility allowed), so this residual is carried over to the below-pinch sub-problem.
+H2 stops at 95°C, which is 5°C above the pinch. The remaining 5 $\times$ 2 = 10 kW of cooling cannot be done above the pinch (no cold utility allowed), so this residual is carried over to the below-pinch sub-problem.
 
 
 - **Hot-utility tally above the pinch.**
@@ -494,11 +494,11 @@ Hot utility used above the pinch: **30 kW.**
 
 - H1: $90 \to 60^\circ$C, $CP = 3$. Available duty = 90 kW.
 
-- H2: $90 \to 30^\circ$C, $CP = 2$. Available duty = 120 kW. (Includes the carried-over residual; H2 actually arrives at the pinch zone at 95$^\circ$C, but we treat the segment from 90$^\circ$C below as the below-pinch portion; the 5$^\circ$C from 95 to 90 is sometimes handled as a small "below-pinch" adjustment.)
+- H2: $90 \to 30^\circ$C, $CP = 2$. Available duty = 120 kW. (Includes the carried-over residual; H2 actually arrives at the pinch zone at 95°C, but we treat the segment from 90°C below as the below-pinch portion; the 5°C from 95 to 90 is sometimes handled as a small "below-pinch" adjustment.)
 
 - C1: $30 \to 80^\circ$C, $CP = 2$. Required duty = 100 kW.
 
-- C2: not present below the pinch (its source temperature is 80$^\circ$C = pinch).
+- C2: not present below the pinch (its source temperature is 80°C = pinch).
 
 
 - **Apply CP rule below pinch ($CP_h \geq CP_c$).**
@@ -522,7 +522,7 @@ Q_{C1, \text{below}} = 2 \times (80 - 30) = 100 \text{kW}
 $$
 
 
-Hot-side is binding (H1 has only 90 kW available). Take $Q = 90$ kW. H1 reaches its target 60$^\circ$C; C1 only heats to
+Hot-side is binding (H1 has only 90 kW available). Take $Q = 90$ kW. H1 reaches its target 60°C; C1 only heats to
 
 
 $$
@@ -530,22 +530,22 @@ T_{C1}^{\text{out}} = 30 + \frac{90}{2} = 75^\circ\text{C}
 $$
 
 
-C1 still needs 5$^\circ$C of heating, $= 2 \times 5 = 10$ kW, which we attempt from H2.
+C1 still needs 5°C of heating, $= 2 \times 5 = 10$ kW, which we attempt from H2.
 
 
 - **Match H2-C1 (residual) below pinch.**
-H2 (carrying its 5$^\circ$C above-pinch residual but here treating it as entering the below-pinch zone at 90$^\circ$C with $CP = 2$ and need to cool to 30$^\circ$C, duty 120 kW available) can heat C1 from 75 to 80$^\circ$C: duty $= 2 \times 5 = 10$ kW. H2 cools by $10/2 = 5^\circ$C, leaving it at $90 - 5 = 85^\circ$C still needing to fall to 30$^\circ$C.
+H2 (carrying its 5°C above-pinch residual but here treating it as entering the below-pinch zone at 90°C with $CP = 2$ and need to cool to 30°C, duty 120 kW available) can heat C1 from 75 to 80°C: duty $= 2 \times 5 = 10$ kW. H2 cools by $10/2 = 5^\circ$C, leaving it at $90 - 5 = 85^\circ$C still needing to fall to 30°C.
 
 
 - **Cold-utility consumption below pinch.**
 Remaining duty to cool H2 to its target: $2 \times (85 - 30) = 110$ kW. Wait  -  the MER target says we should need only 50 kW of cold utility, not 110. Let me re-examine the network. With the segments accounted as in the transcript:
 
 
-- H1 fully cooled to 60$^\circ$C using C1 (90 kW absorbed).
+- H1 fully cooled to 60°C using C1 (90 kW absorbed).
 
-- H2 cooled from 95 to 80$^\circ$C using a small cold-utility connection (10 kW), since the transcript notes "we're not going to worry about crossing the minimum approach temperature" for this small swing.
+- H2 cooled from 95 to 80°C using a small cold-utility connection (10 kW), since the transcript notes "we're not going to worry about crossing the minimum approach temperature" for this small swing.
 
-- H2 then needs to drop from 80 to 30$^\circ$C $= 50^\circ$C $\times$ $CP = 2$ $= $ **100 kW** of additional cold utility.
+- H2 then needs to drop from 80 to 30°C $= 50^\circ$C $\times$ $CP = 2$ $= $ **100 kW** of additional cold utility.
 
 Total cold utility: 10 + 100 = 110 kW. The discrepancy with the transcript's value of 50 kW indicates one of two things: either the transcript's MER targets were computed for a slightly different problem (the original lecture used different stream data), or the network is non-optimal as drawn. The pedagogical point holds: the network design is constructed match-by-match, ticking off streams, and the residual goes to utilities.
 
@@ -653,7 +653,7 @@ $\{170, 160, 120, 117, 60, 45, 40, 25\}$
 
 - $Q_{C,\min} = 220$ kW (the residual cascade at the bottom  -  what must be removed by cold utility).
 
-- **Pinch** is where the corrected cascade first reaches zero. That happened at the bottom of the 160-120 interval, i.e. at *interval* temperature 120$^\circ$C. Converting back: hot pinch $= 120 + 5 = 125^\circ$C, cold pinch $= 120 - 5 = 115^\circ$C.
+- **Pinch** is where the corrected cascade first reaches zero. That happened at the bottom of the 160-120 interval, i.e. at *interval* temperature 120°C. Converting back: hot pinch $= 120 + 5 = 125^\circ$C, cold pinch $= 120 - 5 = 115^\circ$C.
 
 
 - **Verification by overall energy balance.**
@@ -1022,11 +1022,11 @@ i_{\text{eff}} = (1 + \frac{r}{m})^m - 1
 $$
 
 
-- Monthly compounding ($m = 12$) at 12\% nominal: $i_{\text{eff}} = (1.01)^{12} - 1 = 12.68\%$.
+- Monthly compounding ($m = 12$) at 12% nominal: $i_{\text{eff}} = (1.01)^{12} - 1 = 12.68\%$.
 
 - Continuous compounding ($m \to \infty$): $i_{\text{eff}} = e^r - 1$. At $r = 12\%$, $i_{\text{eff}} = e^{0.12} - 1 = 12.75\%$.
 
-For PE-exam problems, *always use the effective rate per compounding period* when plugging into the six factors, and match $n$ to the number of compounding periods (not just years if compounding $> $ once per year).
+For PE-exam problems, *always use the effective rate per compounding period* when plugging into the six factors, and match $n$ to the number of compounding periods (not just years if compounding $>$ once per year).
 ```
 
 
@@ -1035,7 +1035,7 @@ For PE-exam problems, *always use the effective rate per compounding period* whe
 ```{prf:example} Combination Problem: Loan with Balloon Payment
 :label: processdesign-example-7
 
-A piece of equipment is purchased for \$200,000 with a 5-year loan at 8\% annual interest. The borrower pays \$20,000 at the end of each year for 5 years, then a single "balloon" payment at the end of year 5 to retire the remaining principal. Find the balloon payment.
+A piece of equipment is purchased for \$200,000 with a 5-year loan at 8% annual interest. The borrower pays \$20,000 at the end of each year for 5 years, then a single "balloon" payment at the end of year 5 to retire the remaining principal. Find the balloon payment.
 ```
 
 
@@ -1274,7 +1274,7 @@ $$
 - **Decision.** $K_B < K_A$ by about \$13,000. **Reactor B is the better long-term investment.**
 
 
-- **Verification.** Although B has a higher annual cost and overhauls, its 6-year life means fewer replacement events per century compared to A's 4-year life. The 50\% longer life-cycle more than compensates for B's larger per-cycle cost and absence of salvage credit. This is the typical pattern  -  longer-life equipment usually wins on capitalized-cost basis, even at higher per-cycle costs, provided $i$ is not extreme.
+- **Verification.** Although B has a higher annual cost and overhauls, its 6-year life means fewer replacement events per century compared to A's 4-year life. The 50% longer life-cycle more than compensates for B's larger per-cycle cost and absence of salvage credit. This is the typical pattern  -  longer-life equipment usually wins on capitalized-cost basis, even at higher per-cycle costs, provided $i$ is not extreme.
 ```
 
 
@@ -1682,7 +1682,7 @@ $$
 - **Verification.** Modern industrial VCM production is overwhelmingly via the ethylene/EDC oxychlorination route (a close cousin of Route 2), confirming the GEP-based selection in practice.
 
 
-- **What GEP does *not* tell you.** A GEP of \$0.545/kg leaves room for utilities (steam, electricity), labor, depreciation, taxes, and a profit margin. As a rule of thumb, 30-70\% of GEP is consumed by these downstream costs, so the bottom-line plant margin is often \$0.10-\$0.35/kg.
+- **What GEP does *not* tell you.** A GEP of \$0.545/kg leaves room for utilities (steam, electricity), labor, depreciation, taxes, and a profit margin. As a rule of thumb, 30-70% of GEP is consumed by these downstream costs, so the bottom-line plant margin is often \$0.10-\$0.35/kg.
 ```
 
 
@@ -1708,7 +1708,7 @@ $$
 $$
 
 
-- **Sanity check.** If Q had zero disposal cost instead, GEP would be \$0.550. The disposal of 0.1 kg/kg of waste reduces profit by \$0.04  -  about 8\% of margin. If disposal cost rose to \$5/kg (e.g. a regulated waste), the penalty would be 0.1 $\times$ 5 = \$0.50/kg, almost killing the route. Byproduct economics are often the deciding factor in route selection.
+- **Sanity check.** If Q had zero disposal cost instead, GEP would be \$0.550. The disposal of 0.1 kg/kg of waste reduces profit by \$0.04  -  about 8% of margin. If disposal cost rose to \$5/kg (e.g. a regulated waste), the penalty would be 0.1 $\times$ 5 = \$0.50/kg, almost killing the route. Byproduct economics are often the deciding factor in route selection.
 ```
 
 
@@ -1776,7 +1776,7 @@ where:
 
 - $D_k$ = depreciation charge in year $k$.
 
-- $t$ = effective tax rate (federal + state + local, typically 25-40\% in the US).
+- $t$ = effective tax rate (federal + state + local, typically 25-40% in the US).
 
 The depreciation appears twice: once subtracted to compute taxable income $(S - C - D)$, then added back because it is non-cash. The net effect is that depreciation *shifts cash flow earlier in time*; the total cash over the project life is unchanged, but earlier cash is worth more after discounting  -  so depreciation increases NPV.
 ```
@@ -1791,7 +1791,7 @@ The depreciation appears twice: once subtracted to compute taxable income $(S - 
 **MACRS (Modified Accelerated Cost Recovery System):** US tax depreciation. Chemical-plant equipment is typically 5- or 7-year MACRS class. The percentages of $I_0$ depreciated each year (5-year MACRS, half-year convention):
 
 
-| Year | \% of $I_0$ |
+| Year | % of $I_0$ |
 | --- | --- |
 | 1 | 20.00 |
 | 2 | 32.00 |
@@ -1801,7 +1801,7 @@ The depreciation appears twice: once subtracted to compute taxable income $(S - 
 | 6 | 5.76 |
 
 
-For 7-year MACRS the percentages start at 14.29\% in year 1 and finish in year 8 at 4.46\%. The point of accelerated depreciation is to bring the tax shield earlier in time, increasing NPV.
+For 7-year MACRS the percentages start at 14.29% in year 1 and finish in year 8 at 4.46%. The point of accelerated depreciation is to bring the tax shield earlier in time, increasing NPV.
 ```
 
 
@@ -1811,7 +1811,7 @@ This is the transcript's example, with every step.
 ```{prf:example} NPV with MACRS Depreciation and Working Capital
 :label: processdesign-example-13
 
-A chemical plant is built 2007-2009 with total depreciable capital \$90M (sunk \$30M per year). Working capital \$40M required at end of 2009. Production begins 2010 at 50\% of nameplate; 75\% in 2011; 100\% thereafter through 2021. At full capacity: sales \$150M/yr, cash production cost \$100M/yr. In ramp-up: 2010 sales \$75M, cost \$55M; 2011 sales \$113M, cost \$78M. MACRS 7-year depreciation. Tax rate 40\%. Cost of capital 15\%. Compute NPV.
+A chemical plant is built 2007-2009 with total depreciable capital \$90M (sunk \$30M per year). Working capital \$40M required at end of 2009. Production begins 2010 at 50% of nameplate; 75% in 2011; 100% thereafter through 2021. At full capacity: sales \$150M/yr, cash production cost \$100M/yr. In ramp-up: 2010 sales \$75M, cost \$55M; 2011 sales \$113M, cost \$78M. MACRS 7-year depreciation. Tax rate 40%. Cost of capital 15%. Compute NPV.
 ```
 
 
@@ -1831,21 +1831,21 @@ A chemical plant is built 2007-2009 with total depreciable capital \$90M (sunk \
 - **MACRS 7-year depreciation schedule of \$90M total.**
 
 
-- 2010 (yr 1): 14.29\% $\times$ 90 = \$12.86M
+- 2010 (yr 1): 14.29% $\times$ 90 = \$12.86M
 
-- 2011 (yr 2): 24.49\% $\times$ 90 = \$22.04M
+- 2011 (yr 2): 24.49% $\times$ 90 = \$22.04M
 
-- 2012 (yr 3): 17.49\% = \$15.74M
+- 2012 (yr 3): 17.49% = \$15.74M
 
-- 2013 (yr 4): 12.49\% = \$11.24M
+- 2013 (yr 4): 12.49% = \$11.24M
 
-- 2014 (yr 5): 8.93\% = \$8.04M
+- 2014 (yr 5): 8.93% = \$8.04M
 
-- 2015 (yr 6): 8.92\% = \$8.03M
+- 2015 (yr 6): 8.92% = \$8.03M
 
-- 2016 (yr 7): 8.93\% = \$8.04M
+- 2016 (yr 7): 8.93% = \$8.04M
 
-- 2017 (yr 8): 4.46\% = \$4.01M
+- 2017 (yr 8): 4.46% = \$4.01M
 
 - 2018-2021: \$0 (depreciation exhausted)
 ```
@@ -1934,7 +1934,7 @@ $$
 - **Cumulative discounted cash flow plot.** Tracking the running sum from 2007 onward, the cumulative crosses zero somewhere in 2018  -  this is the **discounted payback period**, $\approx$ 11 years.
 
 
-- **Interpretation.** NPV $> 0$ at 15\% cost of capital: the project creates value beyond what could be earned by investing the same \$90M+ at 15\%. Accept.
+- **Interpretation.** NPV $> 0$ at 15% cost of capital: the project creates value beyond what could be earned by investing the same \$90M+ at 15%. Accept.
 ```
 
 
@@ -1953,7 +1953,7 @@ $$
 
 **Computation:** no closed form exists; use a spreadsheet's Goal Seek or Solver to find $r$ such that NPV $= 0$. Alternatively, plot NPV vs. $r$ and read the zero-crossing.
 
-**Interpretation:** IRR is the project's intrinsic earning rate. "If we got this money back as interest from a bank, the equivalent interest rate would be IRR." For the transcript's project, IRR $\approx 18.5\%$, so the project beats a 15\% hurdle rate by 3.5\%  -  modest, but acceptable.
+**Interpretation:** IRR is the project's intrinsic earning rate. "If we got this money back as interest from a bank, the equivalent interest rate would be IRR." For the transcript's project, IRR $\approx 18.5\%$, so the project beats a 15% hurdle rate by 3.5%  -  modest, but acceptable.
 ```
 
 
@@ -1962,7 +1962,7 @@ $$
 ```{prf:example} Quick IRR Bracket for a Three-Year Project
 :label: processdesign-example-14
 
-A project costs \$100K at $t=0$ and returns \$40K, \$50K, \$30K at the ends of years 1, 2, 3. Find IRR (within $\pm$1\%).
+A project costs \$100K at $t=0$ and returns \$40K, \$50K, \$30K at the ends of years 1, 2, 3. Find IRR (within $\pm$1%).
 ```
 
 
@@ -1975,7 +1975,7 @@ A project costs \$100K at $t=0$ and returns \$40K, \$50K, \$30K at the ends of y
 
 - **Refine: try $r = 11\%$.** NPV $= -100 + 40/1.11 + 50/1.2321 + 30/1.3676 = -100 + 36.04 + 40.58 + 21.94 = -1.44$. Negative.
 
-- **IRR is between 10\% and 11\%, closer to 10\%. Linear interpolation:**
+- **IRR is between 10% and 11%, closer to 10%. Linear interpolation:**
 
 
 $$
@@ -1983,7 +1983,7 @@ $$
 $$
 
 
-- **Verification.** At 10.13\%, NPV is essentially zero  -  check: $-100 + 40/1.1013 + 50/1.2129 + 30/1.3361 = -100 + 36.32 + 41.22 + 22.45 = -0.01$. ✓
+- **Verification.** At 10.13%, NPV is essentially zero  -  check: $-100 + 40/1.1013 + 50/1.2129 + 30/1.3361 = -100 + 36.32 + 41.22 + 22.45 = -0.01$. ✓
 ```
 
 
@@ -1991,7 +1991,7 @@ $$
 
 ```{note}
 **Mutually Exclusive Projects: Use NPV**
-For mutually exclusive projects (you can do only one), **NPV and IRR can rank them differently**. Example: Project A has NPV \$1M and IRR 25\%. Project B has NPV \$5M and IRR 15\%. If the cost of capital is 10\%, both meet the hurdle, but they rank oppositely. The **NPV ranking is correct** because NPV measures absolute value created, while IRR is a rate (which can be misleadingly high for a small project).
+For mutually exclusive projects (you can do only one), **NPV and IRR can rank them differently**. Example: Project A has NPV \$1M and IRR 25%. Project B has NPV \$5M and IRR 15%. If the cost of capital is 10%, both meet the hurdle, but they rank oppositely. The **NPV ranking is correct** because NPV measures absolute value created, while IRR is a rate (which can be misleadingly high for a small project).
 
 For independent projects (you can do all of them up to a budget), either rule works.
 
@@ -2013,7 +2013,7 @@ For non-conventional cash flows (multiple sign changes), IRR can have multiple s
 
 - For mutually exclusive projects, NPV beats IRR as the ranking criterion.
 
-- MACRS 5-year: $\{20.00, 32.00, 19.20, 11.52, 11.52, 5.76\}$. MACRS 7-year starts at 14.29\%.
+- MACRS 5-year: $\{20.00, 32.00, 19.20, 11.52, 11.52, 5.76\}$. MACRS 7-year starts at 14.29%.
 ```
 
 

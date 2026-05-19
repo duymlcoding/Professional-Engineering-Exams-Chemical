@@ -832,7 +832,7 @@ Let’s check each parameter and convert it if necessary.
 Density (<span class="math notranslate nohighlight">\(\rho\)</span>): Given as <span class="math notranslate nohighlight">\(1.0 \, \text{g/cm}^3\)</span>, already in CGS units.
 Velocity (<span class="math notranslate nohighlight">\(\nu\)</span>): Given as <span class="math notranslate nohighlight">\(100 \, \text{cm/s}\)</span>, already in CGS units.
 Diameter (<span class="math notranslate nohighlight">\(D\)</span>): Given as <span class="math notranslate nohighlight">\(1.0 \, \text{m}\)</span>, convert to cm: <span class="math notranslate nohighlight">\(D = 1.0 \, \text{m} \times \frac{100 \, \text{cm}}{1 \, \text{m}} = 100 \, \text{cm}\)</span>.
-Viscosity (<span class="math notranslate nohighlight">\(\mu\)</span>): Given as <span class="math notranslate nohighlight">\(1.0 \, \text{centipoise (cP)}\)</span>. The base unit in CGS is the poise, where 1 poise = 1 g/(cm<span class="math notranslate nohighlight">\(\cdot\)</span>s), so <span class="math notranslate nohighlight">\(\mu = 1.0 \, \text{cP} = 0.01 \, \text{poise} = 0.01 \, \frac{\text{g}}{\text{cm}\cdot\text{s}}\)</span>.</p>
+Viscosity (<span class="math notranslate nohighlight">\(\mu\)</span>): Given as <span class="math notranslate nohighlight">\(1.0 \, \text{centipoise (cP)}\)</span>. The base unit in CGS is the poise, where 1 poise = 1 g/(cm·s), so <span class="math notranslate nohighlight">\(\mu = 1.0 \, \text{cP} = 0.01 \, \text{poise} = 0.01 \, \frac{\text{g}}{\text{cm}\cdot\text{s}}\)</span>.</p>
 <p class="sd-card-text"><strong>Step 3: Calculate the Reynolds Number:</strong>
 Substitute the consistent CGS values into the formula. First, verify that units cancel correctly:</p>
 <div class="math notranslate nohighlight">
@@ -975,7 +975,7 @@ To solve for pressure directly, we exponentiate both sides:</p>
 <ul class="simple">
 <li><p><strong>Altitude:</strong> <span class="math notranslate nohighlight">\(z_2 = 40,000 \, \text{ft} \times \frac{0.3048 \, \text{m}}{1 \, \text{ft}} = 12,192\)</span> m.</p></li>
 <li><p><strong>Sea Level (Point 1):</strong> <span class="math notranslate nohighlight">\(z_1 = 0\)</span> m, <span class="math notranslate nohighlight">\(P_1 = 101.33\)</span> kPa = 101,330 Pa, <span class="math notranslate nohighlight">\(T_1 = T_0 = 15^\circ\text{C} = 288.15\)</span> K.</p></li>
-<li><p><strong>Constants:</strong> <span class="math notranslate nohighlight">\(g = 9.807\)</span> m/s<span class="math notranslate nohighlight">\(^2\)</span>. Gas constant for air, <span class="math notranslate nohighlight">\(R = 286.9\)</span> J/(kg<span class="math notranslate nohighlight">\(\cdot\)</span>K).</p></li>
+<li><p><strong>Constants:</strong> <span class="math notranslate nohighlight">\(g = 9.807\)</span> m/s<span class="math notranslate nohighlight">\(^2\)</span>. Gas constant for air, <span class="math notranslate nohighlight">\(R = 286.9\)</span> J/(kg·K).</p></li>
 <li><p><strong>Model 1 Data:</strong> Specific weight of air at sea level, <span class="math notranslate nohighlight">\(\gamma = 12.014\)</span> N/m<span class="math notranslate nohighlight">\(^3\)</span>.</p></li>
 <li><p><strong>Model 3 Data:</strong> Standard atmospheric temperature lapse rate, <span class="math notranslate nohighlight">\(\beta = 0.00650\)</span> K/m.</p></li>
 </ul>
@@ -997,7 +997,7 @@ The result of a negative absolute pressure is <strong>physically impossible</str
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution: Model 2 Compressible Isothermal Fluid</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">This model accounts for the fact that density changes with pressure, but assumes the temperature remains constant at its sea-level value of 15<span class="math notranslate nohighlight">\(^\circ\)</span>C.</p>
+<p class="sd-card-text">This model accounts for the fact that density changes with pressure, but assumes the temperature remains constant at its sea-level value of 15°C.</p>
 <p class="sd-card-text"><strong>Isothermal Compressible Formula</strong></p>
 <div class="math notranslate nohighlight">
 \[P_2 = P_1 \exp\left[-\frac{g(z_2-z_1)}{RT_0}\right]\]</div>
@@ -1008,7 +1008,7 @@ The result of a negative absolute pressure is <strong>physically impossible</str
 <div class="math notranslate nohighlight">
 \[P_2 = (101.33 \, \text{kPa}) \cdot \exp(-1.446) = (101.33) \cdot (0.2355) = \textbf{23.9 kPa}\]</div>
 <p class="sd-card-text"><strong>Analysis of Model 2</strong>
-This result is physically realistic—a positive pressure that is much lower than sea-level pressure. However, it is still significantly different from the true value. This is because the atmosphere is not isothermal; it gets much colder at high altitudes. Assuming a constant warm temperature underestimates the density of the air aloft, which in turn underestimates the weight of the air column and results in a predicted pressure that is too high.</p>
+This result is physically realistic: a positive pressure that is much lower than sea-level pressure. However, it is still significantly different from the true value. This is because the atmosphere is not isothermal; it gets much colder at high altitudes. Assuming a constant warm temperature underestimates the density of the air aloft, which in turn underestimates the weight of the air column and results in a predicted pressure that is too high.</p>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -1028,7 +1028,7 @@ This result is physically realistic—a positive pressure that is much lower tha
 <div class="math notranslate nohighlight">
 \[P_2 = (101.33) \cdot (0.1842) = \textbf{18.67 kPa}\]</div>
 <p class="sd-card-text"><strong>Analysis of Model 3</strong>
-This result is extremely close to the standard tabulated value of 18.7 kPa. This demonstrates that using a more realistic physical model—one that accounts for both compressibility and the actual temperature profile of the atmosphere.</p>
+This result is extremely close to the standard tabulated value of 18.7 kPa. This demonstrates that using a more realistic physical model, one that accounts for both compressibility and the actual temperature profile of the atmosphere.</p>
 </div>
 </details><div class="tip admonition">
 <p class="admonition-title">Final Comparison and Key Takeaway</p>
@@ -1051,7 +1051,7 @@ This result is extremely close to the standard tabulated value of 18.7 kPa. This
 <div class="proof example admonition" id="example-7">
 <p class="admonition-title"><span class="caption-number">Example 55 </span> (Pumping Water for Snow Making)</p>
 <section class="example-content" id="proof-content">
-<p><strong>Question:</strong> A ski resort needs to pump water at 10<span class="math notranslate nohighlight">\(^\circ\)</span>C from a reservoir at an elevation of 6500 ft to a snow-making machine at 7300 ft. The water flows through 1000 ft of 2-inch diameter commercial steel pipe at a rate of 0.25 ft<span class="math notranslate nohighlight">\(^3\)</span>/s. The pressure required at the inlet of the snow machine is 20 psi (gauge). The piping system includes a sharp-edged entrance, a fully open gate valve, and two standard 90<span class="math notranslate nohighlight">\(^\circ\)</span> elbows. Determine the horsepower that must be delivered to the water by the pump.</p>
+<p><strong>Question:</strong> A ski resort needs to pump water at 10°C from a reservoir at an elevation of 6500 ft to a snow-making machine at 7300 ft. The water flows through 1000 ft of 2-inch diameter commercial steel pipe at a rate of 0.25 ft<span class="math notranslate nohighlight">\(^3\)</span>/s. The pressure required at the inlet of the snow machine is 20 psi (gauge). The piping system includes a sharp-edged entrance, a fully open gate valve, and two standard 90<span class="math notranslate nohighlight">\(^\circ\)</span> elbows. Determine the horsepower that must be delivered to the water by the pump.</p>
 </section>
 </div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -1249,7 +1249,7 @@ Imagine a stationary column of water in a glass. The water has mass, and due to 
 <div class="math notranslate nohighlight">
 \[P_{\text{hydrostatic}} = \rho g h\]</div>
 </div>
-<p>This important result tells us that the pressure exerted by a fluid column depends only on its density (<span class="math notranslate nohighlight">\(\rho\)</span>), height (<span class="math notranslate nohighlight">\(h\)</span>), and gravity (<span class="math notranslate nohighlight">\(g\)</span>)—not on the shape of the container or the total amount of fluid. The term <span class="math notranslate nohighlight">\(\rho g\)</span> is also known as the <strong>specific weight</strong>, <span class="math notranslate nohighlight">\(\gamma\)</span>. So, the equation is often written as <span class="math notranslate nohighlight">\(P = \gamma h\)</span>.</p>
+<p>This important result tells us that the pressure exerted by a fluid column depends only on its density (<span class="math notranslate nohighlight">\(\rho\)</span>), height (<span class="math notranslate nohighlight">\(h\)</span>), and gravity (<span class="math notranslate nohighlight">\(g\)</span>) - not on the shape of the container or the total amount of fluid. The term <span class="math notranslate nohighlight">\(\rho g\)</span> is also known as the <strong>specific weight</strong>, <span class="math notranslate nohighlight">\(\gamma\)</span>. So, the equation is often written as <span class="math notranslate nohighlight">\(P = \gamma h\)</span>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>The Fundamental Rule of Manometry</strong>
@@ -1393,7 +1393,7 @@ For many common fluids, the relationship between the internal “smearing” for
 <p class="admonition-title">Variable Definitions</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\tau\)</span>: <strong>Shear Stress</strong> - This is the force per unit area that acts <em>parallel</em> (tangential) to a surface. Imagine spreading honey on toast; the force you apply with the knife parallel to the bread creates a shear stress in the honey. Its units are Pascals (Pa) or Newtons per square meter (N/m<span class="math notranslate nohighlight">\(^2\)</span>).</p></li>
-<li><p><span class="math notranslate nohighlight">\(\mu\)</span>: <strong>Dynamic Viscosity</strong> - This is a fluid property that measures its intrinsic resistance to flow. Honey has a high viscosity; water has a low viscosity. Its units are Pascal-seconds (Pa<span class="math notranslate nohighlight">\(\cdot\)</span>s).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mu\)</span>: <strong>Dynamic Viscosity</strong> - This is a fluid property that measures its intrinsic resistance to flow. Honey has a high viscosity; water has a low viscosity. Its units are Pascal-seconds (Pa·s).</p></li>
 <li><p><span class="math notranslate nohighlight">\(\frac{du}{dy}\)</span>: <strong>Velocity Gradient</strong> (or Rate of Shearing Strain) - This term describes how quickly the fluid velocity changes as you move away from a surface. A steep gradient means the velocity changes rapidly over a short distance. Its units are inverse seconds (s<span class="math notranslate nohighlight">\(^{-1}\)</span>).</p></li>
 </ul>
 </div>
@@ -1527,14 +1527,14 @@ Our governing equation is <span class="math notranslate nohighlight">\(\tau = \m
 <li><p class="sd-card-text">The distance over which this change occurs, <span class="math notranslate nohighlight">\(\Delta y\)</span>, is the size of the gap: <span class="math notranslate nohighlight">\(1 \, \text{mm} = 0.001 \, \text{m}\)</span>.</p></li>
 </ul>
 <div class="math notranslate nohighlight">
-\[\frac{du}{dy} \approx \frac{\Delta u}{\Delta y} = \frac{0.1 \, \text{m/s}}{0.001 \, \text{m}} = \textbf{100 s \textsuperscript{-1}}\]</div>
+\[\frac{du}{dy} \approx \frac{\Delta u}{\Delta y} = \frac{0.1 \, \text{m/s}}{0.001 \, \text{m}} = \textbf{100 s ⁻¹}\]</div>
 <p class="sd-card-text"><strong>Step 4: Solve for Viscosity (<span class="math notranslate nohighlight">\(\mu\)</span>):</strong>
 Now we can substitute our calculated values for <span class="math notranslate nohighlight">\(\tau\)</span> and <span class="math notranslate nohighlight">\(\frac{du}{dy}\)</span> into our rearranged equation from Step 1.</p>
 <p class="sd-card-text"><strong>Calculating Viscosity</strong></p>
 <div class="math notranslate nohighlight">
 \[\mu = \frac{\tau}{du/dy} = \frac{212.2 \, \text{Pa}}{100 \, \text{s}^{-1}} = 2.122 \, \text{Pa}\cdot\text{s}\]</div>
 <p class="sd-card-text"><strong>Step 5: Interpret the Result:</strong>
-The standard SI unit for viscosity is the Pascal-second (Pa<span class="math notranslate nohighlight">\(\cdot\)</span>s). A more common unit in practice is the centipoise (cP), where 1 Pa<span class="math notranslate nohighlight">\(\cdot\)</span>s = 1000 cP.</p>
+The standard SI unit for viscosity is the Pascal-second (Pa·s). A more common unit in practice is the centipoise (cP), where 1 Pa·s = 1000 cP.</p>
 <div class="math notranslate nohighlight">
 \[\mu = 2.122 \, \text{Pa}\cdot\text{s} \times \frac{1000 \, \text{cP}}{1 \, \text{Pa}\cdot\text{s}} = 2122 \, \text{cP}\]</div>
 <p class="sd-card-text">For context, the viscosity of water at room temperature is about 1 cP, olive oil is about 80 cP, and honey is around 2,000-10,000 cP. The mysterious fluid has a viscosity similar to that of honey or a thick syrup.</p>
@@ -1545,7 +1545,7 @@ The standard SI unit for viscosity is the Pascal-second (Pa<span class="math not
 <section id="pe-exam-practice-problems">
 <h2>PE Exam Practice Problems<a class="headerlink" href="#pe-exam-practice-problems" title="Link to this heading">#</a></h2>
 <div class="proof example admonition" id="example-12">
-<p class="admonition-title"><span class="caption-number">Example 60 </span> (Practice Problem 1 — Pump Sizing)</p>
+<p class="admonition-title"><span class="caption-number">Example 60 </span> (Practice Problem 1: Pump Sizing)</p>
 <section class="example-content" id="proof-content">
 <p>Water (<span class="math notranslate nohighlight">\(\rho = 1000\)</span> kg/m³, <span class="math notranslate nohighlight">\(\mu = 0.001\)</span> Pa·s) is pumped at 0.05 m³/s from a lower reservoir (elevation 0 m) to an upper tank (elevation 25 m) through 200 m of commercial steel pipe with inner diameter <span class="math notranslate nohighlight">\(D = 0.10\)</span> m. The Darcy friction factor is <span class="math notranslate nohighlight">\(f = 0.018\)</span>.</p>
 <p><strong>(a)</strong> What is the fluid velocity in the pipe?</p>
@@ -1574,7 +1574,7 @@ The standard SI unit for viscosity is the Pascal-second (Pa<span class="math not
 </div>
 </details><hr class="docutils" />
 <div class="proof example admonition" id="example-13">
-<p class="admonition-title"><span class="caption-number">Example 61 </span> (Practice Problem 2 — Reynolds Number and Flow Regime)</p>
+<p class="admonition-title"><span class="caption-number">Example 61 </span> (Practice Problem 2: Reynolds Number and Flow Regime)</p>
 <section class="example-content" id="proof-content">
 <p>Crude oil (<span class="math notranslate nohighlight">\(\rho = 870\)</span> kg/m³, <span class="math notranslate nohighlight">\(\mu = 0.025\)</span> Pa·s) flows through a 6-inch (0.152 m) pipeline at a volumetric flow rate of 0.08 m³/s.</p>
 <p><strong>(a)</strong> What is the Reynolds number? Is flow laminar or turbulent?</p>
@@ -1592,17 +1592,17 @@ The standard SI unit for viscosity is the Pascal-second (Pa<span class="math not
 <p class="sd-card-text"><strong>Part (b): Hagen-Poiseuille check</strong></p>
 <div class="math notranslate nohighlight">
 \[\Delta P = \frac{128 \mu L Q}{\pi D^4} = \frac{128 \times 0.025 \times 500 \times 0.08}{\pi \times (0.152)^4} = \frac{128}{8.39\times10^{-4}} \approx 38{,}500 \text{ Pa}\]</div>
-<p class="sd-card-text">This result is <strong>not physically valid</strong> here — Hagen-Poiseuille assumes laminar flow (<span class="math notranslate nohighlight">\(Re &lt; 2100\)</span>), but <span class="math notranslate nohighlight">\(Re = 23{,}350\)</span>. The actual turbulent pressure drop would be several times higher and must use the Darcy-Weisbach equation with a turbulent friction factor.</p>
+<p class="sd-card-text">This result is <strong>not physically valid</strong> here - Hagen-Poiseuille assumes laminar flow (<span class="math notranslate nohighlight">\(Re &lt; 2100\)</span>), but <span class="math notranslate nohighlight">\(Re = 23{,}350\)</span>. The actual turbulent pressure drop would be several times higher and must use the Darcy-Weisbach equation with a turbulent friction factor.</p>
 </div>
 </details><div class="admonition caution">
 <p class="admonition-title">Caution</p>
-<p><strong>PE Exam Traps — Fluid Mechanics</strong></p>
+<p><strong>PE Exam Traps: Fluid Mechanics</strong></p>
 <ul class="simple">
-<li><p><strong>Darcy vs. Fanning friction factor:</strong> The Darcy (Moody) friction factor <span class="math notranslate nohighlight">\(f_D = 4f_{Fanning}\)</span>. The Darcy-Weisbach equation uses <span class="math notranslate nohighlight">\(f_D\)</span>; many textbooks and the Churchill correlation give <span class="math notranslate nohighlight">\(f_F\)</span>. Always confirm which form a given <span class="math notranslate nohighlight">\(f\)</span> value is for — using <span class="math notranslate nohighlight">\(f_F\)</span> in place of <span class="math notranslate nohighlight">\(f_D\)</span> underestimates friction loss by 4×.</p></li>
+<li><p><strong>Darcy vs. Fanning friction factor:</strong> The Darcy (Moody) friction factor <span class="math notranslate nohighlight">\(f_D = 4f_{Fanning}\)</span>. The Darcy-Weisbach equation uses <span class="math notranslate nohighlight">\(f_D\)</span>; many textbooks and the Churchill correlation give <span class="math notranslate nohighlight">\(f_F\)</span>. Always confirm which form a given <span class="math notranslate nohighlight">\(f\)</span> value is for - using <span class="math notranslate nohighlight">\(f_F\)</span> in place of <span class="math notranslate nohighlight">\(f_D\)</span> underestimates friction loss by 4×.</p></li>
 <li><p><strong>MEB sign convention:</strong> <span class="math notranslate nohighlight">\(\dot{W}_s/\dot{m}\)</span> is positive when a pump adds energy to the fluid; it’s negative for a turbine that extracts energy. Getting this backwards gives pump power instead of turbine power or vice versa.</p></li>
 <li><p><strong>Bernoulli applies only to streamlines without friction or shaft work.</strong> If a pump is present, or the problem mentions a pressure drop, use the full MEB. Bernoulli applied across a pump gives zero work, which is wrong.</p></li>
 <li><p><strong>Velocity at open reservoir surface:</strong> At a large open reservoir, the surface velocity is approximately zero (<span class="math notranslate nohighlight">\(u \approx 0\)</span>). Using the pipe velocity at this point is a common mistake that adds a phantom kinetic energy term.</p></li>
-<li><p><strong>Hagen-Poiseuille is laminar only (<span class="math notranslate nohighlight">\(Re &lt; 2100\)</span>).</strong> Never apply it to turbulent flow — it will dramatically underpredict pressure drop. Always check Reynolds number first.</p></li>
+<li><p><strong>Hagen-Poiseuille is laminar only (<span class="math notranslate nohighlight">\(Re &lt; 2100\)</span>).</strong> Never apply it to turbulent flow - it will dramatically underpredict pressure drop. Always check Reynolds number first.</p></li>
 </ul>
 </div>
 </section>

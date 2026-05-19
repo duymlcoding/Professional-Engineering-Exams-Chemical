@@ -144,7 +144,7 @@ The common-units shortcut: $\sigma [\text{MPa}] = F [\text{N}] / A_0 [\text{mm}^
 ```{prf:example} Stress and Strain on a Round Bar
 :label: materialsofconstruction-example-0
 
-A round metal specimen of original diameter $d_0 = 9.6$ mm and original gauge length $L_0 = 400$ mm is subjected to a tensile force $F = 18{,}000$ N. The deformed gauge length under load is $L_i = 401.5$ mm. Compute (a) the engineering stress, (b) the engineering strain, &#40;c&#41; decide whether the specimen is still in the elastic region given that the material's yield strength is 250 MPa.
+A round metal specimen of original diameter $d_0 = 9.6$ mm and original gauge length $L_0 = 400$ mm is subjected to a tensile force $F = 18{,}000$ N. The deformed gauge length under load is $L_i = 401.5$ mm. Compute (a) the engineering stress, (b) the engineering strain, (c) decide whether the specimen is still in the elastic region given that the material's yield strength is 250 MPa.
 ```
 
 
@@ -184,7 +184,7 @@ $$
 $$
 
 
-Dimensionless. Often expressed as 0.375\%.
+Dimensionless. Often expressed as 0.375%.
 
 
 - **Elastic-region check.** The applied stress 249 MPa is just below the yield strength 250 MPa  -  the specimen is at the very edge of elastic behavior. Any small additional load would induce permanent (plastic) deformation. A safety factor for design (typically $\sigma_{\text{design}} = \sigma_y / N$ with $N = 2$-$4$) would have flagged this load level long before yield. The strain $\varepsilon = 0.00375$ is also consistent with elastic behavior in steel ($\varepsilon_y \approx \sigma_y / E = 250/207000 \approx 0.0012$ in pure elastic; here at 0.00375 the specimen has crossed slightly into the plastic regime if we trust the 250 MPa yield estimate). The numbers sit on the boundary.
@@ -272,7 +272,7 @@ Starting at the origin and following the curve, you encounter (in order):
 
 - **Proportional limit.** The highest stress at which strict linearity holds. Slightly below the yield point. Rarely tabulated separately.
 
-- **Yield point (0.2\% offset yield strength).** The conventional onset of plastic (permanent) deformation. By convention: draw a line parallel to the elastic slope, offset to the right by $\varepsilon = 0.002$ (0.2\%); the intersection with the curve is $\sigma_y$.
+- **Yield point (0.2% offset yield strength).** The conventional onset of plastic (permanent) deformation. By convention: draw a line parallel to the elastic slope, offset to the right by $\varepsilon = 0.002$ (0.2%); the intersection with the curve is $\sigma_y$.
 
 - **Ultimate tensile strength (UTS).** The peak of the engineering stress-strain curve. Past this point the specimen *necks* (a local cross-section shrinks rapidly), the engineering stress falls even though the true stress continues to rise.
 
@@ -296,7 +296,7 @@ $E$ is the **Young's modulus** or **modulus of elasticity**, with units of stres
 Typical values (room temperature):
 
 
-- Steel: $E = 200$-210 GPa. Nearly independent of carbon content, heat treatment.
+- Steel: $E = $200-210$ GPa. Nearly independent of carbon content, heat treatment.
 
 - Aluminum: $E = 70$ GPa.
 
@@ -304,11 +304,11 @@ Typical values (room temperature):
 
 - Titanium: $E = 110$ GPa.
 
-- Concrete: $E = 25$-30 GPa.
+- Concrete: $E = $25-30$ GPa.
 
-- Wood (along grain): $E = 10$-15 GPa.
+- Wood (along grain): $E = $10-15$ GPa.
 
-- Polymers: $E = 1$-3 GPa.
+- Polymers: $E = $1-3$ GPa.
 ```
 
 
@@ -324,15 +324,15 @@ The transition from elastic to plastic at the yield point occurs because disloca
 ```
 
 
-### The 0.2\% Offset Yield Strength Definition
+### The 0.2% Offset Yield Strength Definition
 
 ```{note}
-**Why "0.2\% Offset"?**
+**Why "0.2% Offset"?**
 For some materials (low-carbon mild steel) the stress-strain curve has a clear "yield point" (an upper and lower yield), a horizontal plateau, and obvious onset of plastic flow. For most metals, the transition from elastic to plastic is gradual  -  there is no sharp "corner" on the curve.
 
-The 0.2\% offset convention solves this by defining a reproducible yield strength: draw a line through the strain axis at $\varepsilon = 0.002$ with slope $E$; the intersection with the stress-strain curve is $\sigma_y$. The 0.2\% value is arbitrary but standardized worldwide. Specifying any other offset (0.1\%, 0.5\%) shifts the reported yield strength somewhat.
+The 0.2% offset convention solves this by defining a reproducible yield strength: draw a line through the strain axis at $\varepsilon = 0.002$ with slope $E$; the intersection with the stress-strain curve is $\sigma_y$. The 0.2% value is arbitrary but standardized worldwide. Specifying any other offset (0.1%, 0.5%) shifts the reported yield strength somewhat.
 
-Equivalently: $\sigma_y$ is the stress at which, if the specimen were unloaded, it would have an in-built 0.2\% permanent (plastic) strain.
+Equivalently: $\sigma_y$ is the stress at which, if the specimen were unloaded, it would have an in-built 0.2% permanent (plastic) strain.
 ```
 
 
@@ -377,7 +377,7 @@ After necking, the engineering stress drops (because the area, defined as $A_0$,
 **Mechanical Properties From the Stress-Strain Curve**
 - **Modulus of elasticity $E$** = slope of the elastic line.
 
-- **Yield strength $\sigma_y$** = stress at 0.2\% offset. Onset of plastic deformation.
+- **Yield strength $\sigma_y$** = stress at 0.2% offset. Onset of plastic deformation.
 
 - **Ultimate tensile strength (UTS, $\sigma_u$)** = peak of the engineering curve. Maximum sustainable engineering stress.
 
@@ -407,7 +407,7 @@ A steel specimen produces the following readings:
 
 - Stress at $\varepsilon = 0.001$ (elastic region): $\sigma = 200$ MPa.
 
-- Yield (0.2\% offset): $\sigma_y = 415$ MPa.
+- Yield (0.2% offset): $\sigma_y = 415$ MPa.
 
 - Peak engineering stress: $\sigma_u = 500$ MPa at $\varepsilon = 0.10$.
 
@@ -478,11 +478,11 @@ $$
 $$
 
 
-The specimen's permanent elongation if recovered just before fracture would be 17.8\%. This is the value typically quoted as "\% elongation at fracture" on a material data sheet.
+The specimen's permanent elongation if recovered just before fracture would be 17.8%. This is the value typically quoted as "% elongation at fracture" on a material data sheet.
 
-- **Ductility interpretation.** 17.8\% elongation places this material firmly in the ductile-metal category. Brittle materials fail at $\varepsilon_f < 1\%$; ductile metals are typically 10-40\%; very ductile (annealed copper, pure aluminum) can reach 50-60\%.
+- **Ductility interpretation.** 17.8% elongation places this material firmly in the ductile-metal category. Brittle materials fail at $\varepsilon_f < 1\%$; ductile metals are typically 10-40%; very ductile (annealed copper, pure aluminum) can reach 50-60%.
 
-- **Verification.** The UTS (500 MPa) exceeds the fracture stress (380 MPa)  -  consistent with engineering-stress-curve behavior past necking. The yield strain $2.1 \times 10^{-3}$ matches the textbook value for steel ($\sim$0.2\%). The strain-energy interpretation (MPa = MJ/m$^3$) is dimensionally sound: Pa $\times$ m/m = J/m$^3$.
+- **Verification.** The UTS (500 MPa) exceeds the fracture stress (380 MPa)  -  consistent with engineering-stress-curve behavior past necking. The yield strain $2.1 \times 10^{-3}$ matches the textbook value for steel ($\sim$0.2%). The strain-energy interpretation (MPa = MJ/m$^3$) is dimensionally sound: Pa $\times$ m/m = J/m$^3$.
 ```
 
 
@@ -513,9 +513,9 @@ The 1943 SS *Schenectady* catastrophe (a Liberty ship that fractured in half ove
 **Exam Tips  -  Stress-Strain Curve Reading**
 - Yield strength is the design property against permanent deformation. UTS is the property against fracture-limited design. They are different.
 
-- Modulus of elasticity $E$ is the slope of the elastic line  -  not the yield strength divided by 0.002 (which differs by 0.2\%).
+- Modulus of elasticity $E$ is the slope of the elastic line  -  not the yield strength divided by 0.002 (which differs by 0.2%).
 
-- The 0.2\% offset construction is a graphical convention; in practice the offset is small and the offset and proportional-limit yield strengths are close.
+- The 0.2% offset construction is a graphical convention; in practice the offset is small and the offset and proportional-limit yield strengths are close.
 
 - For ductile metals, compressive yield $\approx$ tensile yield. For brittle materials, compressive strength is much larger than tensile.
 
@@ -580,7 +580,7 @@ $$
 
 Slightly less conservative than Tresca; more accurate for most ductile metals. Used in modern finite-element codes by default.
 
-For pure shear ($\sigma_1 = \tau, \sigma_2 = 0, \sigma_3 = -\tau$), Tresca gives $\tau_y = \sigma_y/2$; von Mises gives $\tau_y = \sigma_y/\sqrt{3} = 0.577 \sigma_y$. The two differ by about 15\% in pure shear; closer in other states.
+For pure shear ($\sigma_1 = \tau, \sigma_2 = 0, \sigma_3 = -\tau$), Tresca gives $\tau_y = \sigma_y/2$; von Mises gives $\tau_y = \sigma_y/\sqrt{3} = 0.577 \sigma_y$. The two differ by about 15% in pure shear; closer in other states.
 ```
 
 
@@ -626,10 +626,10 @@ $$
 $$
 
 
-- **Comparison.** The von Mises criterion allows a 15\% higher pressure (9.62 vs. 8.33 MPa). This is the classic 15\% gap between the two yield criteria, with Tresca being the conservative bound.
+- **Comparison.** The von Mises criterion allows a 15% higher pressure (9.62 vs. 8.33 MPa). This is the classic 15% gap between the two yield criteria, with Tresca being the conservative bound.
 
 
-- **Engineering choice.** ASME Section VIII Division 1 implicitly uses a maximum-stress criterion (closer to Tresca with a safety factor). Modern pressure-vessel codes (Sec. VIII Div. 2, EN 13445) and finite-element analyses use von Mises. The 15\% difference matters when economic considerations push wall thickness aggressively.
+- **Engineering choice.** ASME Section VIII Division 1 implicitly uses a maximum-stress criterion (closer to Tresca with a safety factor). Modern pressure-vessel codes (Sec. VIII Div. 2, EN 13445) and finite-element analyses use von Mises. The 15% difference matters when economic considerations push wall thickness aggressively.
 
 
 - **Verification.** Both predicted yield pressures are reasonable for a 10-mm-wall, 600-mm-ID vessel in mild steel. Setting a design pressure with a safety factor of 3 (so $P_{\text{design}} \approx P_\text{Tresca}/3 \approx 2.8$ MPa) is consistent with a typical low-pressure process vessel.
@@ -691,9 +691,9 @@ The key insight: *strength* (resists yielding, governed by $\sigma_y$) and *stif
 
 - **Mild carbon steel (A36):** $E = 200$ GPa, $\sigma_y = 250$ MPa.
 
-- **High-strength low-alloy steel:** $E = 207$ GPa, $\sigma_y = 450$-700 MPa.
+- **High-strength low-alloy steel:** $E = 207$ GPa, $\sigma_y = $450-700$ MPa.
 
-- **Alloy steel (4140 Q&T):** $E = 207$ GPa, $\sigma_y = 850$-1500 MPa.
+- **Alloy steel (4140 Q&T):** $E = 207$ GPa, $\sigma_y = $850-1500$ MPa.
 
 - **304 SS:** $E = 193$ GPa, $\sigma_y = 215$ MPa.
 
@@ -701,7 +701,7 @@ The key insight: *strength* (resists yielding, governed by $\sigma_y$) and *stif
 
 - **Ti-6Al-4V:** $E = 114$ GPa, $\sigma_y = 880$ MPa.
 
-Note: $E$ varies surprisingly little across the steel family; nearly all carbon and low-alloy steels are $E = 200$-210 GPa regardless of heat treatment. *Strength varies hugely; stiffness barely.*
+Note: $E$ varies surprisingly little across the steel family; nearly all carbon and low-alloy steels are $E = $200-210$ GPa regardless of heat treatment. *Strength varies hugely; stiffness barely.*
 ```
 
 
@@ -753,7 +753,7 @@ Survivors: brass and steel.
 - **Selection.** Steel is the only candidate satisfying both constraints. Specify mild carbon steel for the rod.
 
 
-- **Lesson.** Brass had *adequate strength* (a yield-strength margin of 345 vs. 312 = 11\%) but *inadequate stiffness* (elongated 32\% more than allowed). The deflection constraint rejected an otherwise-acceptable strong material. The deciding property here is $E$, not $\sigma_y$.
+- **Lesson.** Brass had *adequate strength* (a yield-strength margin of 345 vs. 312 = 11%) but *inadequate stiffness* (elongated 32% more than allowed). The deflection constraint rejected an otherwise-acceptable strong material. The deciding property here is $E$, not $\sigma_y$.
 
 
 - **Verification.** Strain in the steel under load: $\varepsilon = \Delta L/L_0 = 0.573/380 = 1.51 \times 10^{-3}$. Hooke check: $\sigma = E\varepsilon = 207{,}000 \times 1.51 \times 10^{-3} = 313$ MPa, matching the applied 312 MPa. ✓
@@ -792,7 +792,7 @@ Everything inside the second-to-last fraction is a design constant. The only mat
 - **The material index.** $M = E/\rho$ is the **Ashby material index** for "stiffness-limited tensile rod at minimum mass." Tabulated $E/\rho$ ratios:
 
 
-- Steel: $E/\rho = 207/7.85 \approx 26$ GPa$\cdot$cm$^3$/g.
+- Steel: $E/\rho = 207/7.85 \approx 26$ GPa·cm$^3$/g.
 
 - Aluminum 6061: $70/2.7 \approx 26$.
 
@@ -862,7 +862,7 @@ $$
 $$
 
 
-Typical low-carbon steel: $\sigma_0 \approx 70$ MPa, $k_y \approx 0.74$ MPa$\cdot$m$^{1/2}$ (in SI). With $d$ in m:
+Typical low-carbon steel: $\sigma_0 \approx 70$ MPa, $k_y \approx 0.74$ MPa·m$^{1/2}$ (in SI). With $d$ in m:
 
 
 - Coarse grain $d = 100 \mu$m = $10^{-4}$ m: $d^{-1/2} = 100$ m$^{-1/2}$; $\sigma_y = 70 + 0.74 \times 100 = 144$ MPa.
@@ -894,7 +894,7 @@ At elevated temperature, materials deform slowly under sustained load even when 
 
 ```{note}
 **The Temperature Threshold for Creep**
-Creep becomes significant above the **homologous temperature** $T/T_m \approx 0.4$, where $T_m$ is the melting point in absolute units (K or $^\circ$R). For carbon steel ($T_m \approx 1810$ K), creep starts to matter above $\sim$450$^\circ$C (720 K). For aluminum ($T_m \approx 930$ K), already at room temperature in absolute terms ($\sim 0.32 T_m$, so creep is marginal). For polymers, creep matters even at room temperature because $T_m$ is low.
+Creep becomes significant above the **homologous temperature** $T/T_m \approx 0.4$, where $T_m$ is the melting point in absolute units (K or $^\circ$R). For carbon steel ($T_m \approx 1810$ K), creep starts to matter above $\sim$450°C (720 K). For aluminum ($T_m \approx 930$ K), already at room temperature in absolute terms ($\sim 0.32 T_m$, so creep is marginal). For polymers, creep matters even at room temperature because $T_m$ is low.
 ```
 
 
@@ -932,7 +932,7 @@ $$
 
 - $R$: gas constant; $T$: absolute temperature.
 
-The exponential dependence on $1/T$ means small temperature changes have outsized effects on creep life. A 25$^\circ$C overtemperature on a 500$^\circ$C tube can halve its remaining life.
+The exponential dependence on $1/T$ means small temperature changes have outsized effects on creep life. A 25°C overtemperature on a 500°C tube can halve its remaining life.
 
 **Larson-Miller parameter (LMP)**: a single parameter combining temperature and time-to-rupture:
 
@@ -980,7 +980,7 @@ $$
 The tube ruptures in about 3.5 minutes. *Not* the design life  -  the LMP curve was either misread or the chosen stress/temperature combination is well outside the design envelope.
 
 
-- **Lesson on LMP interpretation.** A reformer tube designed for 100,000-hour life at 900$^\circ$C requires
+- **Lesson on LMP interpretation.** A reformer tube designed for 100,000-hour life at 900°C requires
 
 
 $$
@@ -991,7 +991,7 @@ $$
 Reading the material's master curve at LMP = 29,325 gives the maximum allowable design stress  -  typically 5-10 MPa for 100,000-hour life on Inconel 800H or HK-40 alloy. The 25 MPa in this example exceeds the allowable, hence the very short life.
 
 
-- **Verification.** LMP is sensitive: a 100$^\circ$C temperature reduction (from 1173 to 1073 K) at constant LMP raises $t_r$ by $10^{(22000/1073 - 22000/1173)} = 10^{1.73} \approx 54\times$. Conversely, a 100$^\circ$C overtemperature reduces life by the same factor. This Arrhenius sensitivity is why creep-limited equipment is so unforgiving of process upsets.
+- **Verification.** LMP is sensitive: a 100°C temperature reduction (from 1173 to 1073 K) at constant LMP raises $t_r$ by $10^{(22000/1073 - 22000/1173)} = 10^{1.73} \approx 54\times$. Conversely, a 100°C overtemperature reduces life by the same factor. This Arrhenius sensitivity is why creep-limited equipment is so unforgiving of process upsets.
 ```
 
 
@@ -1118,7 +1118,7 @@ The two half-reactions must proceed at equal electron-transfer rates (charge bal
 
 ```{important}
 **Standard Electrode Potential**
-Each half-reaction has a characteristic **standard electrode potential** $E^\circ$ measured vs. the standard hydrogen electrode (SHE) at unit activity and 25$^\circ$C:
+Each half-reaction has a characteristic **standard electrode potential** $E^\circ$ measured vs. the standard hydrogen electrode (SHE) at unit activity and 25°C:
 
 
 - $\mathrm{Au^{3+} + 3e^- \to Au}$: $E^\circ = +1.50$ V (very noble).
@@ -1264,11 +1264,11 @@ This must be added as a corrosion allowance on top of the pressure-design wall t
 - **Important caveats.**
 
 
-- *Concentration and temperature matter strongly.* For 304 SS in H$_2$SO$_4$, the corrosion rate rises sharply above $\sim$50$^\circ$C or at concentrations above $\sim$80 wt\%. The 1.41 mpy assumes the coupon-test conditions match the design conditions.
+- *Concentration and temperature matter strongly.* For 304 SS in H$_2$SO$_4$, the corrosion rate rises sharply above $\sim$50°C or at concentrations above $\sim$80 wt%. The 1.41 mpy assumes the coupon-test conditions match the design conditions.
 
 - *Uniform-corrosion rule fails for localized attack.* If the coupon shows pitting, crevice corrosion, or intergranular attack, the uniform-rate calculation grossly underestimates the failure risk. Always inspect the coupon visually for localized damage.
 
-- *Sensitization risk.* 304 SS in the 425-870$^\circ$C range can sensitize (chromium carbide precipitation at grain boundaries), drastically increasing intergranular corrosion. Use 304L or stabilized 321/347 grades if welding will occur near these temperatures.
+- *Sensitization risk.* 304 SS in the 425-870°C range can sensitize (chromium carbide precipitation at grain boundaries), drastically increasing intergranular corrosion. Use 304L or stabilized 321/347 grades if welding will occur near these temperatures.
 
 
 - **Verification.** The corrosion rate is well below the acceptable threshold, and the projected wall loss fits comfortably inside a standard corrosion allowance. *Subject to the caveats*, 304 SS is acceptable for the service.
@@ -1310,12 +1310,12 @@ Fontana and Greene's classic textbook categorizes aqueous corrosion into eight f
 
 **Recognition.** Small, deep holes; the surface looks fine on visual inspection but a leak through a tube wall occurs at a single pit.
 
-**Examples.** 304 SS in chloride-bearing waters above $\sim$60$^\circ$C; aluminum in chloride solutions.
+**Examples.** 304 SS in chloride-bearing waters above $\sim$60°C; aluminum in chloride solutions.
 
 **Defense.**
 
 
-- Specify **Mo-containing alloys**: 316 (2-3\% Mo) is the standard upgrade from 304; duplex 2205 (2.5-3.5\% Mo, 22\% Cr) for tougher service; Hastelloy C-276 (15-17\% Mo) for the harshest.
+- Specify **Mo-containing alloys**: 316 (2-3% Mo) is the standard upgrade from 304; duplex 2205 (2.5-3.5% Mo, 22% Cr) for tougher service; Hastelloy C-276 (15-17% Mo) for the harshest.
 
 - The **Pitting Resistance Equivalent Number (PREN)** quantifies pitting resistance:
 
@@ -1365,7 +1365,7 @@ $$
 ### 5. Intergranular Corrosion (Sensitization in Stainless Steel)
 
 ```{note}
-**Mechanism.** Preferential attack at grain boundaries due to compositional variation between grain interior and boundary. In austenitic stainless steel, heating in the 425-870$^\circ$C range precipitates chromium carbides (Cr$_{23}$C$_6$) at grain boundaries, locally depleting the boundary of chromium below the $\sim$12\% needed for passivity  -  "**sensitization**." Subsequent service in even mildly corrosive media attacks the depleted boundary regions.
+**Mechanism.** Preferential attack at grain boundaries due to compositional variation between grain interior and boundary. In austenitic stainless steel, heating in the 425-870°C range precipitates chromium carbides (Cr$_{23}$C$_6$) at grain boundaries, locally depleting the boundary of chromium below the $\sim$12% needed for passivity  -  "**sensitization**." Subsequent service in even mildly corrosive media attacks the depleted boundary regions.
 
 **Recognition.** Falls apart at grain boundaries; the affected region looks granular rather than smooth.
 
@@ -1374,11 +1374,11 @@ $$
 **Defense.**
 
 
-- Use **low-carbon (L) grades:** 304L, 316L (carbon $< 0.03$\%) prevent significant Cr-carbide precipitation.
+- Use **low-carbon (L) grades:** 304L, 316L (carbon $< 0.03$%) prevent significant Cr-carbide precipitation.
 
 - Use **stabilized grades:** 321 (Ti-stabilized) or 347 (Nb-stabilized); the Ti or Nb preferentially forms carbides, leaving Cr in solid solution.
 
-- Apply **solution annealing** (heat to $\sim$1050$^\circ$C, quench) after welding to dissolve any precipitated carbides. Only practical for small parts.
+- Apply **solution annealing** (heat to $\sim$1050°C, quench) after welding to dissolve any precipitated carbides. Only practical for small parts.
 ```
 
 
@@ -1445,7 +1445,7 @@ $$
 
 - Switch to nickel-based alloys (Inconel, Hastelloy) for severe sour service.
 
-- Outgas the metal by low-temperature bake-out (200-300$^\circ$C for several hours) before service.
+- Outgas the metal by low-temperature bake-out (200-300°C for several hours) before service.
 ```
 
 
@@ -1476,11 +1476,11 @@ A consolidated catalogue of the alloys used in process plants, with service enve
 
 - **A106-B:** seamless pipe for hydrocarbon service.
 
-- **A350 LF2 / A203:** low-temperature qualified versions; usable to $-45^\circ$C (LF2) or $-100^\circ$C (A203 9\% Ni).
+- **A350 LF2 / A203:** low-temperature qualified versions; usable to $-45^\circ$C (LF2) or $-100^\circ$C (A203 9% Ni).
 
 - **Cr-Mo alloy steels (1.25Cr, 2.25Cr, 5Cr, 9Cr):** hydrogen service, elevated temperature ($425$-$650^\circ$C). The Nelson curves (API RP 941) govern hydrogen-attack design.
 
-- **9\% Ni steel (A553):** LNG service, down to $-195^\circ$C.
+- **9% Ni steel (A553):** LNG service, down to $-195^\circ$C.
 
 Cost benchmark: A516-70 plate is the cheapest pressure-vessel material; everything else is quoted as a multiple. Aluminum is similar to CS on a per-pound basis but cheaper per unit volume.
 ```
@@ -1490,17 +1490,17 @@ Cost benchmark: A516-70 plate is the cheapest pressure-vessel material; everythi
 
 ```{tip}
 **Stainless Steels**
-- **304/304L:** 18\% Cr, 8\% Ni austenitic. Workhorse SS. Food, pharma, mild oxidizers. Avoid chlorides above 50 ppm at $T > 60^\circ$C (SCC). 304L (low-C) is the welding-safe variant.
+- **304/304L:** 18% Cr, 8% Ni austenitic. Workhorse SS. Food, pharma, mild oxidizers. Avoid chlorides above 50 ppm at $T > 60^\circ$C (SCC). 304L (low-C) is the welding-safe variant.
 
-- **316/316L:** 16\% Cr, 10\% Ni, 2\% Mo. Mo adds pitting resistance. Dilute H$_2$SO$_4$, seawater (cold), most organic acids.
+- **316/316L:** 16% Cr, 10% Ni, 2% Mo. Mo adds pitting resistance. Dilute H$_2$SO$_4$, seawater (cold), most organic acids.
 
 - **321 / 347:** Ti- and Nb-stabilized 304-class. Prevent sensitization in high-temperature service (refineries, ammonia plants).
 
-- **Duplex 2205:** 22\% Cr, 5\% Ni, 3\% Mo + N. Ferrite + austenite microstructure. Resists chloride SCC and pitting better than 316. Offshore, geothermal, FGD service. About 25\% more expensive than 316.
+- **Duplex 2205:** 22% Cr, 5% Ni, 3% Mo + N. Ferrite + austenite microstructure. Resists chloride SCC and pitting better than 316. Offshore, geothermal, FGD service. About 25% more expensive than 316.
 
-- **Super-duplex 2507:** 25\% Cr, 7\% Ni, 4\% Mo + N. Marine, chlorinated chemical service. PREN $> 40$.
+- **Super-duplex 2507:** 25% Cr, 7% Ni, 4% Mo + N. Marine, chlorinated chemical service. PREN $> 40$.
 
-- **Ferritic SS (430, 444):** 17\% Cr, no Ni. Cheaper than austenitic; resistant to chloride SCC but less ductile and harder to weld.
+- **Ferritic SS (430, 444):** 17% Cr, no Ni. Cheaper than austenitic; resistant to chloride SCC but less ductile and harder to weld.
 
 Cost: 304 is roughly 3$\times$ A516-70; 316 is 4$\times$; duplex 2205 is 5$\times$; super-duplex 2507 is 8$\times$.
 ```
@@ -1514,7 +1514,7 @@ Cost: 304 is roughly 3$\times$ A516-70; 316 is 4$\times$; duplex 2205 is 5$\time
 
 - **Inconel 600/625 (Ni-Cr or Ni-Cr-Mo):** high-temperature corrosion (sulfidation, hydrogen, hot mixed acids). Inconel 600 in nuclear-steam-generator tubing; Inconel 625 in flue-gas desulfurization (FGD).
 
-- **Incoloy 800/800H:** reformer tubes, ethylene-cracker furnaces, high-temperature service to 1100$^\circ$C.
+- **Incoloy 800/800H:** reformer tubes, ethylene-cracker furnaces, high-temperature service to 1100°C.
 
 - **Hastelloy C-276:** the "universal" acid alloy. Hot HCl, mixed acids, FGD. Cost: $\sim$15$\times$ CS.
 
@@ -1532,9 +1532,9 @@ Cost: 304 is roughly 3$\times$ A516-70; 316 is 4$\times$; duplex 2205 is 5$\time
 
 - **Tantalum:** hot strong acids of all kinds; the "universal" acid material. Extremely expensive; used as heat-exchanger tubing or thin lining only.
 
-- **Glass-lined steel:** hot HCl, dilute sulfuric below 70$^\circ$C, fine chemicals. Subject to thermal-shock cracking; limited size.
+- **Glass-lined steel:** hot HCl, dilute sulfuric below 70°C, fine chemicals. Subject to thermal-shock cracking; limited size.
 
-- **PTFE-lined steel:** broad acid resistance, low cost relative to exotic alloys. Limited to $\sim$200$^\circ$C and moderate pressures.
+- **PTFE-lined steel:** broad acid resistance, low cost relative to exotic alloys. Limited to $\sim$200°C and moderate pressures.
 ```
 
 
@@ -1545,7 +1545,7 @@ Cost: 304 is roughly 3$\times$ A516-70; 316 is 4$\times$; duplex 2205 is 5$\time
 When a baseline material is found inadequate, the standard "upgrade ladder" for corrosion-driven decisions is:
 
 
-- Carbon steel $\to$ 304 SS (add 18\%Cr + 8\%Ni for general oxidizing resistance).
+- Carbon steel $\to$ 304 SS (add 18%Cr + 8%Ni for general oxidizing resistance).
 
 - 304 $\to$ 316 (add Mo for pitting in chloride service).
 
@@ -1571,7 +1571,7 @@ Each step roughly doubles the alloy cost. The economic optimum is the cheapest m
 
 - Sour service ($H_2$S) $\to$ NACE MR0175-compliant low-strength steels or nickel-based alloys.
 
-- LNG / cryogenic $\to$ 9\% Ni steel or 304 SS or aluminum.
+- LNG / cryogenic $\to$ 9% Ni steel or 304 SS or aluminum.
 
 - Hot strong acid $\to$ Hastelloy, Zr, Ta, or glass/PTFE lining.
 
@@ -1608,9 +1608,9 @@ The ASME Section VIII Div. 1 design formulas include a joint efficiency $E$ that
 
 - **$E = 1.00$**: fully radiographed butt welds. The full code allowable stress is usable in the design equation.
 
-- **$E = 0.85$**: spot-radiographed welds. Reduces allowable stress by 15\%.
+- **$E = 0.85$**: spot-radiographed welds. Reduces allowable stress by 15%.
 
-- **$E = 0.70$**: no radiography. Reduces by 30\%.
+- **$E = 0.70$**: no radiography. Reduces by 30%.
 
 - Other values for non-butt joints (fillet welds, single welds, etc.).
 
@@ -1625,7 +1625,7 @@ The choice trades **NDE cost** against **plate cost**: $E = 1.0$ requires costly
 ASME Sec. VIII Div. 1 Table UCS-56 mandates PWHT when wall thickness exceeds material-specific thresholds (e.g. 1.5 in for P-No. 1 carbon steel). The PWHT cycle:
 
 
-- Heat to a specified temperature (typically 590-690$^\circ$C for carbon steel).
+- Heat to a specified temperature (typically 590-690°C for carbon steel).
 
 - Hold for 1 hour per inch of thickness (minimum).
 
@@ -1634,7 +1634,7 @@ ASME Sec. VIII Div. 1 Table UCS-56 mandates PWHT when wall thickness exceeds mat
 Purposes:
 
 
-- Relieve residual stresses (typically reduces to 10-20\% of yield).
+- Relieve residual stresses (typically reduces to 10-20% of yield).
 
 - Temper hard HAZ microstructures (martensite in C-Mn steel HAZ).
 
@@ -1686,9 +1686,9 @@ A continuous stirred-tank reactor (CSTR) is being designed:
 
 - Capacity: 50 m$^3$, 3-m ID cylindrical vessel.
 
-- Design pressure 12 barg; design temperature 200$^\circ$C.
+- Design pressure 12 barg; design temperature 200°C.
 
-- Process side: dilute aqueous HCl (3 wt\%) at 90$^\circ$C with trace H$_2$O$_2$ as oxidizer.
+- Process side: dilute aqueous HCl (3 wt%) at 90°C with trace H$_2$O$_2$ as oxidizer.
 
 - Required service life: 20 years.
 
@@ -1699,7 +1699,7 @@ Select the wall material and the corrosion allowance. Compute the required wall 
 ```{dropdown} Solution Steps
 - **Apply the materials-selection algorithm.**
 
-**Step 1.1  -  Temperature.** 200$^\circ$C design (90$^\circ$C process); within CS continuous-service envelope ($< 425^\circ$C).
+**Step 1.1  -  Temperature.** 200°C design (90°C process); within CS continuous-service envelope ($< 425^\circ$C).
 
 **Step 1.2  -  Chemistry screening.**
 
@@ -1712,7 +1712,7 @@ Select the wall material and the corrosion allowance. Compute the required wall 
 
 - Hastelloy C-276: handles hot HCl with oxidizing contaminants; routine FGD service. *Candidate.*
 
-- Glass-lined CS: handles dilute HCl below 70$^\circ$C without issues; at 90$^\circ$C marginal; thermal-shock risk in a stirred reactor. Possible but not preferred.
+- Glass-lined CS: handles dilute HCl below 70°C without issues; at 90°C marginal; thermal-shock risk in a stirred reactor. Possible but not preferred.
 
 - Titanium Gr 2: rapidly attacked by reducing HCl  -  reject.
 
@@ -1727,7 +1727,7 @@ Select the wall material and the corrosion allowance. Compute the required wall 
 
 
 ```{dropdown} Solution Steps
-- **Wall thickness from ASME Sec. VIII Div. 1.** The structural CS substrate must withstand the design pressure. At 200$^\circ$C, A516-70 has $S = 19{,}800$ psi (from ASME Sec. II Part D table; the room-temp value 25,000 psi is reduced at elevated temp).
+- **Wall thickness from ASME Sec. VIII Div. 1.** The structural CS substrate must withstand the design pressure. At 200°C, A516-70 has $S = 19{,}800$ psi (from ASME Sec. II Part D table; the room-temp value 25,000 psi is reduced at elevated temp).
 
 Convert design pressure: 12 barg $= 174$ psig. ID $= 3$ m $= 118$ in, so $R = 59$ in.
 
@@ -1774,7 +1774,7 @@ $$
 $$
 
 
-The selection satisfies all constraints: pressure (Sec. VIII), corrosion (Hastelloy in dilute oxidizing HCl), cost (cladded construction saves $\sim$60\% over solid C-276), and service life (60+ years on the clad layer for a 20-year requirement).
+The selection satisfies all constraints: pressure (Sec. VIII), corrosion (Hastelloy in dilute oxidizing HCl), cost (cladded construction saves $\sim$60% over solid C-276), and service life (60+ years on the clad layer for a 20-year requirement).
 ```
 
 
@@ -1856,7 +1856,7 @@ Joint efficiency $E$: 1.00 (full RT), 0.85 (spot), 0.70 (none).
 
 - Using room-temperature $\sigma_y$ at high service temperature  -  always look up $S$ at the actual design temperature.
 
-- Selecting 304 SS for chloride service above 60$^\circ$C (SCC trap).
+- Selecting 304 SS for chloride service above 60°C (SCC trap).
 
 - Selecting 304 SS for welded service without specifying 304L or 321/347 (sensitization trap).
 

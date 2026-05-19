@@ -112,15 +112,9 @@ $$
 
 0.5[A]_0 = [A]_0 e^{-kt_{1/2}}
 
-$$
-
-$$
 
 0.5 = e^{-kt_{1/2}}
 
-$$
-
-$$
 
 \ln(0.5) = -kt_{1/2}
 
@@ -170,21 +164,12 @@ $$
 
 [A] = [A]_0 e^{-kt}
 
-$$
-
-$$
 
 [A] = (2.0 \, \text{M}) \exp\left(-(0.0003201 \, \text{s}^{-1})(3600 \, \text{s})\right)
 
-$$
-
-$$
 
 [A] = (2.0 \, \text{M}) \exp(-1.15236)
 
-$$
-
-$$
 
 [A] = (2.0 \, \text{M}) \times (0.3159) = 0.6318 \, \text{M}
 
@@ -210,9 +195,6 @@ $$
 
 [A] = [A]_0 e^{-kt}
 
-$$
-
-$$
 
 \frac{[A]}{[A]_0} = e^{-kt}
 
@@ -224,9 +206,6 @@ $$
 
 \ln\left(\frac{[A]}{[A]_0}\right) = -kt
 
-$$
-
-$$
 
 t = -\frac{1}{k} \ln\left(\frac{[A]}{[A]_0}\right)
 
@@ -238,21 +217,12 @@ $$
 
 t = -\frac{1}{0.0003201 \, \text{s}^{-1}} \ln\left(\frac{0.2 \, \text{M}}{2.0 \, \text{M}}\right)
 
-$$
-
-$$
 
 t = -\frac{1}{0.0003201 \, \text{s}^{-1}} \ln(0.1)
 
-$$
-
-$$
 
 t = -\frac{1}{0.0003201 \, \text{s}^{-1}} (-2.3026)
 
-$$
-
-$$
 
 t = 7193.4 \, \text{s}
 
@@ -300,7 +270,7 @@ This equation is in the form of a straight line, $y = b + mx$, where a plot of $
 
 ```{prf:example} Activation Energy and Temperature Effects
 **Question:** For a reaction $A \rightarrow \text{Products}$, a plot of $\ln(k)$ versus $1/T$ (where T is in Kelvin) yields a straight line with a slope of $-18000$ K.
-(a) What is the activation energy ($E_a$) for this reaction? Use $R \approx 1.99 \times 10^{-3}$ kcal/(mol$\cdot$K).
+(a) What is the activation energy ($E_a$) for this reaction? Use $R \approx 1.99 \times 10^{-3}$ kcal/(mol·K).
 (b) Given $k_1 = 2.15 \, \text{s}^{-1}$ at $T_1 = 600$ K, calculate the rate constant $k_2$ at $T_2 = 700$ K.
 ```
 
@@ -322,9 +292,6 @@ $$
 
 -18000 \, \text{K} = -\frac{E_a}{1.99 \times 10^{-3} \, \text{kcal/(mol}\cdot\text{K)}}
 
-$$
-
-$$
 
 E_a = (18000 \, \text{K}) \times (1.99 \times 10^{-3} \, \text{kcal/(mol}\cdot\text{K)}) = 35.82 \, \text{kcal/mol}
 
@@ -353,9 +320,6 @@ $$
 
 \ln\left(\frac{k_2}{2.15 \, \text{s}^{-1}}\right) = (18000 \, \text{K}) \left(\frac{1}{600 \, \text{K}} - \frac{1}{700 \, \text{K}}\right)
 
-$$
-
-$$
 
 \ln\left(\frac{k_2}{2.15}\right) = 18000 (0.0002381) = 4.2857
 
@@ -367,9 +331,6 @@ $$
 
 \frac{k_2}{2.15} = e^{4.2857} \approx 72.65
 
-$$
-
-$$
 
 k_2 = 72.65 \times 2.15 \, \text{s}^{-1} \approx 156.2 \, \text{s}^{-1}
 
@@ -551,9 +512,6 @@ $$
 
 V_{\text{CSTR}} = X \times \left(\frac{F_{A0}}{-r_A}\right)_{\text{exit}}
 
-$$
-
-$$
 
 15 \, \text{L} = X \times (50 \, \text{L}) \implies X = \frac{15}{50} = 0.3
 
@@ -568,9 +526,6 @@ $$
 
 V_{\text{CSTR}} = X \times \left(\frac{F_{A0}}{-r_A}\right)_{\text{exit}}
 
-$$
-
-$$
 
 25 \, \text{L} = X \times (50 \, \text{L}) \implies X = \frac{25}{50} = 0.5
 
@@ -661,15 +616,9 @@ $$
 
 \text{Volume: } V \propto D^3
 
-$$
-
-$$
 
 \text{Area: } A \propto D^2
 
-$$
-
-$$
 
 \frac{\text{Heat Transfer Area}}{\text{Volume}} = \frac{A}{V} \propto \frac{D^2}{D^3} = \frac{1}{D}
 
@@ -771,9 +720,6 @@ $$
 
 r_A = (-1)r_1 + (-2)r_3 = -k_1 C_A C_B - 2k_3 C_A^2
 
-$$
-
-$$
 
 \frac{dN_A}{dt} = r_A V = (-k_1 C_A C_B - 2k_3 C_A^2) V
 
@@ -786,9 +732,6 @@ $$
 
 r_B = (-1)r_1 = -k_1 C_A C_B
 
-$$
-
-$$
 
 \frac{dN_B}{dt} = r_B V = (-k_1 C_A C_B) V
 
@@ -801,9 +744,6 @@ $$
 
 r_C = (+1)r_1 + (-1)r_2 = k_1 C_A C_B - k_2 C_C
 
-$$
-
-$$
 
 \frac{dN_C}{dt} = r_C V = (k_1 C_A C_B - k_2 C_C) V
 
@@ -816,9 +756,6 @@ $$
 
 r_D = (+1)r_3 = k_3 C_A^2
 
-$$
-
-$$
 
 \frac{dN_D}{dt} = r_D V = (k_3 C_A^2) V
 
@@ -831,9 +768,6 @@ $$
 
 r_E = (+2)r_2 = 2k_2 C_C
 
-$$
-
-$$
 
 \frac{dN_E}{dt} = r_E V = (2k_2 C_C) V
 
@@ -863,9 +797,6 @@ $$
 
 N_{S0} = \frac{2200 \, \text{kg}}{104.15 \, \text{kg/kmol}} = 21.12 \, \text{kmol}
 
-$$
-
-$$
 
 N_{B0} = \frac{5000 \, \text{kg}}{54.09 \, \text{kg/kmol}} = 92.44 \, \text{kmol}
 
@@ -877,9 +808,6 @@ $$
 
 C_{S0} = \frac{N_{S0}}{V} = \frac{21.12 \, \text{kmol}}{27 \, \text{m}^3} = \textbf{0.782 kmol/m}^3
 
-$$
-
-$$
 
 C_{B0} = \frac{N_{B0}}{V} = \frac{92.44 \, \text{kmol}}{27 \, \text{m}^3} = \textbf{3.424 kmol/m}^3
 
@@ -897,9 +825,6 @@ $$
 
 \frac{dC_S}{dt} = -k C_S C_B
 
-$$
-
-$$
 
 \frac{dC_B}{dt} = -3.2 k C_S C_B
 
@@ -939,7 +864,7 @@ This system would be integrated using a numerical solver (e.g., in MATLAB, Pytho
 ### Example: Pseudo-First-Order Reaction
 
 ```{prf:example} Hydration with a Component in Large Excess
-**Question:** The elementary, irreversible liquid-phase hydration of butylene oxide (A) produces butylene glycol (C): $C_4H_8O \text{ (A)} + H_2O \text{ (B)} \rightarrow C_4H_{10}O_2 \text{ (C)}$. The reaction is conducted using water (B) as the solvent, so it is in large excess. The initial concentration of butylene oxide is $C_{A0} = 0.25$ mol/L. The rate constant is $k' = 8.3 \times 10^{-4}$ L/(mol$\cdot$min) at 323 K. A batch reactor is used.
+**Question:** The elementary, irreversible liquid-phase hydration of butylene oxide (A) produces butylene glycol (C): $C_4H_8O \text{ (A)} + H_2O \text{ (B)} \rightarrow C_4H_{10}O_2 \text{ (C)}$. The reaction is conducted using water (B) as the solvent, so it is in large excess. The initial concentration of butylene oxide is $C_{A0} = 0.25$ mol/L. The rate constant is $k' = 8.3 \times 10^{-4}$ L/(mol·min) at 323 K. A batch reactor is used.
 (a) Determine the final concentration of butylene oxide after 45 min.
 (b) A consultant suggests enhancing the rate by continuously feeding water at 25 L/min into the initial 500 L volume. Will this proposal increase, decrease, or have no effect on the time required to reach a given conversion?
 ```
@@ -956,9 +881,6 @@ $$
 
 r_A = -k' C_A C_B \approx -(k' C_B) C_A = -k C_A
 
-$$
-
-$$
 
 k = k' C_B = (8.3 \times 10^{-4} \, \frac{\text{L}}{\text{mol}\cdot\text{min}}) \cdot (55.5 \, \frac{\text{mol}}{\text{L}}) = 0.046065 \, \text{min}^{-1}
 
@@ -979,15 +901,9 @@ $$
 
 \ln\left(\frac{0.25 \, \text{mol/L}}{C_A}\right) = (0.046065 \, \text{min}^{-1}) \cdot (45 \, \text{min}) = 2.073
 
-$$
-
-$$
 
 \frac{0.25}{C_A} = e^{2.073} \approx 7.948
 
-$$
-
-$$
 
 C_A = \frac{0.25}{7.948} \approx \textbf{0.0315 mol/L}
 
@@ -1144,15 +1060,9 @@ $$
 
 \ln(0.2) = -(0.0074 \, \text{bar}^{-1}\text{min}^{-1}) \cdot (3 \, \text{bar}) \cdot t
 
-$$
-
-$$
 
 -1.6094 = -0.0222 \cdot t
 
-$$
-
-$$
 
 t = \frac{1.6094}{0.0222} = \textbf{72.5 min}
 
@@ -1214,7 +1124,7 @@ This result shows that the hydrogen flow rate required is highest at $t=0$ when 
 ### Example: Catalytic Semibatch Reaction
 
 ```{prf:example} Semibatch Reaction with Changing Volume
-**Question:** A catalytic reaction, $A \rightarrow C$, takes place in the liquid phase of an isothermal semibatch reactor. The rate law is $r_A = -k C_A C_B$, with $k = 0.25$ L/(mol$\cdot$min), where B is the catalyst. Initially, the reactor contains 2700 L of a solution with $C_{A0} = 20.0$ mol/L. The initial concentration of catalyst B is zero. Starting at $t=0$, a solution containing 0.05 mol/L of B is fed to the reactor at a flow rate of 12.5 L/min. How many moles of product C are in the reactor after 200 min?
+**Question:** A catalytic reaction, $A \rightarrow C$, takes place in the liquid phase of an isothermal semibatch reactor. The rate law is $r_A = -k C_A C_B$, with $k = 0.25$ L/(mol·min), where B is the catalyst. Initially, the reactor contains 2700 L of a solution with $C_{A0} = 20.0$ mol/L. The initial concentration of catalyst B is zero. Starting at $t=0$, a solution containing 0.05 mol/L of B is fed to the reactor at a flow rate of 12.5 L/min. How many moles of product C are in the reactor after 200 min?
 ```
 
 ```{dropdown} Solution Steps
@@ -1342,7 +1252,7 @@ This algebraic equation must be solved for the unknown outlet concentration, $C_
 ### Example: Second-Order Reaction in a CSTR
 
 ```{prf:example} Second-Order Hydrolysis in a CSTR
-**Question:** The hydrolysis of acetic anhydride (A) to form acetic acid is carried out in a 1250-L CSTR. The feed contains 2.5 mol/L acetic anhydride and 50.0 mol/L of water (W). The reaction, $(CH_3CO)_2O + H_2O \rightarrow 2CH_3COOH$, is first order in acetic anhydride and first order in water. At the reactor temperature, the rate constant is $k = 0.075$ L/(mol$\cdot$s). The feed flow rate is 15 L/s. What is the conversion of acetic anhydride?
+**Question:** The hydrolysis of acetic anhydride (A) to form acetic acid is carried out in a 1250-L CSTR. The feed contains 2.5 mol/L acetic anhydride and 50.0 mol/L of water (W). The reaction, $(CH_3CO)_2O + H_2O \rightarrow 2CH_3COOH$, is first order in acetic anhydride and first order in water. At the reactor temperature, the rate constant is $k = 0.075$ L/(mol·s). The feed flow rate is 15 L/s. What is the conversion of acetic anhydride?
 ```
 
 ```{dropdown} Solution Steps
@@ -1363,7 +1273,7 @@ $$
 
 **Step 2: Substitute Known Values to Form a System of Equations:**
 We have a system of two algebraic equations with two unknowns: the outlet concentrations $C_A$ and $C_W$.
-Given: $v = 15$ L/s, $V = 1250$ L, $C_{A0} = 2.5$ mol/L, $C_{W0} = 50.0$ mol/L, $k = 0.075$ L/(mol$\cdot$s).
+Given: $v = 15$ L/s, $V = 1250$ L, $C_{A0} = 2.5$ mol/L, $C_{W0} = 50.0$ mol/L, $k = 0.075$ L/(mol·s).
 
 **System of Algebraic Equations**
 Substituting the values:
@@ -1441,9 +1351,6 @@ $$
 
 k_1 (0.2 C_{A0})(0.2 C_{A0}) = k_2 (1.6 C_{A0})^2
 
-$$
-
-$$
 
 k_1 (0.04 C_{A0}^2) = k_2 (2.56 C_{A0}^2)
 
@@ -1482,9 +1389,6 @@ $$
 
 -r_{A1} = k_1 C_{A1} C_{B1} - k_2 C_{C1}^2 = 64k_2(0.4C_{A0})^2 - k_2(1.2C_{A0})^2
 
-$$
-
-$$
 
 -r_{A1} = k_2 C_{A0}^2 [64(0.16) - 1.44] = k_2 C_{A0}^2 [10.24 - 1.44] = 8.8 k_2 C_{A0}^2
 
@@ -1553,15 +1457,9 @@ $$
 
 X_2 = (0.06818) \frac{64(1-2X_2+X_2^2) - 4X_2^2}{1.5}
 
-$$
-
-$$
 
 1.5 X_2 = 0.06818 [64 - 128X_2 + 64X_2^2 - 4X_2^2]
 
-$$
-
-$$
 
 1.5 X_2 = 0.06818 [60X_2^2 - 128X_2 + 64]
 
@@ -1747,7 +1645,7 @@ PFRs are generally preferred for:
 ### Example: Gas-Phase Reaction with Changing Mole Number
 
 ```{prf:example} Gas-Phase PFR with Changing Volumetric Flow
-**Question:** Develop the equations required to determine the plug flow reactor volume needed to achieve 50% conversion of reactant A. The gas-phase reaction, $A + 2B \rightarrow 2D$, is carried out in an isothermal PFR at 5.0 atm and 55$^\circ$C. The feed volumetric flow rate is 50 L/min. The rate law is $r_A = -2.5 C_A^{0.5} C_B$ mol/(L$\cdot$min). The feed consists of mole fractions $y_A = 0.2$, $y_B = 0.5$, and $y_C = 0.3$, where C is an inert.
+**Question:** Develop the equations required to determine the plug flow reactor volume needed to achieve 50% conversion of reactant A. The gas-phase reaction, $A + 2B \rightarrow 2D$, is carried out in an isothermal PFR at 5.0 atm and 55°C. The feed volumetric flow rate is 50 L/min. The rate law is $r_A = -2.5 C_A^{0.5} C_B$ mol/(L·min). The feed consists of mole fractions $y_A = 0.2$, $y_B = 0.5$, and $y_C = 0.3$, where C is an inert.
 ```
 
 ```{dropdown} Solution Steps
@@ -1758,7 +1656,7 @@ This is a gas-phase reaction where the total number of moles changes (1 mole of 
 First, we need the initial molar flow rate of each species. This requires finding the total molar feed rate, $F_{T0}$, using the ideal gas law.
 - Temperature: $T = 55 + 273.15 = 328.15$ K.
 - Pressure: $P = 5.0$ atm.
-- Gas Constant: $R = 0.08206$ L$\cdot$atm/(mol$\cdot$K).
+- Gas Constant: $R = 0.08206$ L·atm/(mol·K).
 
 **Initial Molar Flow Rates**
 Total Molar Feed Rate:
@@ -1847,7 +1745,7 @@ $$
 ### Example: Gas-to-Solid Reaction
 
 ```{prf:example} PFR with a Phase Change
-**Question:** An isothermal plug flow reactor is used for the reaction $10A(g) \rightarrow B(s)$. The rate law is first order in A, with a rate expression $r_A = -10kC_A$, where the intrinsic rate constant is $k=0.30$ L/(mol$\cdot$min). Small solid particles of product B are entrained in the gas flow. The solid is assumed to occupy a negligible volume compared to the gas. The feed of pure A is at a pressure of 10 bar, a temperature of 450 K, and a molar flow rate of 120 mol/min. The reactor volume is 100 L. Determine the exit conversion.
+**Question:** An isothermal plug flow reactor is used for the reaction $10A(g) \rightarrow B(s)$. The rate law is first order in A, with a rate expression $r_A = -10kC_A$, where the intrinsic rate constant is $k=0.30$ L/(mol·min). Small solid particles of product B are entrained in the gas flow. The solid is assumed to occupy a negligible volume compared to the gas. The feed of pure A is at a pressure of 10 bar, a temperature of 450 K, and a molar flow rate of 120 mol/min. The reactor volume is 100 L. Determine the exit conversion.
 ```
 
 ```{dropdown} Solution Steps
@@ -1858,7 +1756,7 @@ $$
 Using the ideal gas law for the inlet conditions (which apply everywhere in the reactor):
 - $P = 10$ bar
 - $T = 450$ K
-- $R = 0.08314$ L$\cdot$bar/(mol$\cdot$K)
+- $R = 0.08314$ L·bar/(mol·K)
 
 $$
 
@@ -1881,9 +1779,6 @@ $$
 
 \int_{F_{A0}}^{F_{A,exit}} dF_A = \int_0^{V_T} (-10 k C_{A0}) dV
 
-$$
-
-$$
 
 F_{A,exit} - F_{A0} = -10 \cdot k \cdot C_{A0} \cdot V_T
 
@@ -1901,7 +1796,7 @@ $$
 $$
 
 Now, substitute the known values:
-- $k = 0.30$ L/(mol$\cdot$min)
+- $k = 0.30$ L/(mol·min)
 - $C_{A0} = 0.267$ mol/L
 - $V_T = 100$ L
 
@@ -2017,7 +1912,7 @@ For an adiabatic process, there is no heat exchange with the surroundings ($\Del
 ### Example: Adiabatic Temperature Calculation
 
 ```{prf:example} Calculating Adiabatic Temperature Rise
-**Question:** The reaction $NO + 0.5 O_2 \rightarrow NO_2$ occurs in an adiabatic reactor. The feed enters at 100$^\circ$C and consists of 1 mole of NO and 0.5 moles of O$_2$. The heat of reaction at 25$^\circ$C is $\Delta H_{rxn, 298K} = -57.0$ kJ/mol. The heat capacities ($C_p/R$) are given as:
+**Question:** The reaction $NO + 0.5 O_2 \rightarrow NO_2$ occurs in an adiabatic reactor. The feed enters at 100°C and consists of 1 mole of NO and 0.5 moles of O$_2$. The heat of reaction at 25°C is $\Delta H_{rxn, 298K} = -57.0$ kJ/mol. The heat capacities ($C_p/R$) are given as:
 - $C_p(\text{NO})/R = 3.5 + 0.001 T$
 - $C_p(\text{O}_2)/R = 3.2 + 0.0018 T$
 - $C_p(\text{NO}_2)/R = 4.2 + 0.0025 T$
@@ -2039,23 +1934,17 @@ $$
 
 \Delta H_1 = \int_{373K}^{298K} \sum n_i C_{p,i} \, dT = \int_{373}^{298} R \left[ (1)(3.5 + 0.001T) + (0.5)(3.2 + 0.0018T) \right] dT
 
-$$
-
-$$
 
 \Delta H_1 = R \int_{373}^{298} (5.1 + 0.0019T) dT = R \left[ 5.1T + \frac{0.0019}{2}T^2 \right]_{373}^{298}
 
 $$
 
-Plugging in the limits and $R = 8.314$ J/(mol$\cdot$K):
+Plugging in the limits and $R = 8.314$ J/(mol·K):
 
 $$
 
 \Delta H_1 = 8.314 \left[ (5.1(298-373)) + (0.00095(298^2-373^2)) \right]
 
-$$
-
-$$
 
 \Delta H_1 = 8.314 [-382.5 - 47.8] = -3578 \, \text{J} = \textbf{-3.58 kJ}
 
@@ -2070,9 +1959,6 @@ $$
 
 \Delta H_2 = (\text{moles NO reacted}) \times (\Delta H_{rxn, 298K}) = (0.3 \, \text{mol}) \times (-57.0 \, \text{kJ/mol})
 
-$$
-
-$$
 
 \Delta H_2 = \textbf{-17.1 kJ}
 
@@ -2089,21 +1975,12 @@ $$
 
 \Delta H_3 = \int_{298K}^{T_f} \sum n_i C_{p,i} \, dT
 
-$$
-
-$$
 
 \Delta H_3 = R \int_{298}^{T_f} \left[ (0.7)(3.5+0.001T) + (0.35)(3.2+0.0018T) + (0.3)(4.2+0.0025T) \right] dT
 
-$$
-
-$$
 
 \Delta H_3 = R \int_{298}^{T_f} (2.45+0.0007T + 1.12+0.00063T + 1.26+0.00075T) dT
 
-$$
-
-$$
 
 \Delta H_3 = R \int_{298}^{T_f} (4.83 + 0.00208T) dT
 
@@ -2117,9 +1994,6 @@ $$
 
 \Delta H_3 = R \left[ 4.83T + \frac{0.00208}{2}T^2 \right]_{298}^{T_f}
 
-$$
-
-$$
 
 \Delta H_3 (\text{in kJ}) = \frac{8.314}{1000} \left[ 4.83(T_f-298) + 0.00104(T_f^2 - 298^2) \right]
 
@@ -2132,15 +2006,9 @@ $$
 
 -3.58 \, \text{kJ} - 17.1 \, \text{kJ} + 0.008314 \left[ 4.83(T_f-298) + 0.00104(T_f^2 - 298^2) \right] = 0
 
-$$
-
-$$
 
 -20.68 + 0.008314 [4.83 T_f - 1439.34 + 0.00104 T_f^2 - 92.1] = 0
 
-$$
-
-$$
 
 -20.68 + 0.04017 T_f - 11.97 + 8.647 \times 10^{-6} T_f^2 - 0.766 = 0
 
@@ -2164,7 +2032,7 @@ T_f = \frac{-0.04017 + \sqrt{0.04017^2 - 4(8.647 \times 10^{-6})(-33.416)}}{2(8.
 
 $$
 
-The final adiabatic temperature is approximately 720 K (or 447$^\circ$C).
+The final adiabatic temperature is approximately 720 K (or 447°C).
 ```
 
 ### Example: Endothermic Reaction in an Adiabatic PBR
@@ -2213,7 +2081,7 @@ The new conversion is **55%**.
 ### Example: Initial Temperature Profile in a Heated PFR
 
 ```{prf:example} Initial Temperature Profile in a Heated PFR
-**Question:** An endothermic, second-order reaction ($A \rightarrow \text{Products, } -r_A = k C_A^2$) takes place in a PFR with a diameter of 8 cm. The reactor is heated by a steam jacket that maintains a constant wall temperature of 300$^\circ$C. The feed enters at 250$^\circ$C. Other data includes: $\Delta H_{rxn} = 80$ kJ/mol, $k = 0.5$ L/(mol$\cdot$min) at 250$^\circ$C, and $U = 5000$ kJ/(m$^2\cdot$h$\cdot$K). Immediately downstream from the reactor inlet, will the fluid temperature increase, decrease, or stay the same?
+**Question:** An endothermic, second-order reaction ($A \rightarrow \text{Products, } -r_A = k C_A^2$) takes place in a PFR with a diameter of 8 cm. The reactor is heated by a steam jacket that maintains a constant wall temperature of 300°C. The feed enters at 250°C. Other data includes: $\Delta H_{rxn} = 80$ kJ/mol, $k = 0.5$ L/(mol·min) at 250°C, and $U = 5000$ kJ/(m$^2\cdot$h$\cdot$K). Immediately downstream from the reactor inlet, will the fluid temperature increase, decrease, or stay the same?
 ```
 
 ```{dropdown} Solution Steps
@@ -2240,9 +2108,6 @@ $$
 
 \text{Heat Added} = U \left(\frac{4}{D}\right)(T_a - T) = (83.33) \left(\frac{4}{0.08}\right)(50) = 208,333 \, \frac{\text{kJ}}{\text{m}^3 \cdot \text{min}}
 
-$$
-
-$$
 
 \text{Heat Added} = 208,333 \frac{\text{kJ}}{\text{m}^3\cdot\text{min}} \times \frac{1 \, \text{m}^3}{1000 \, \text{L}} = \textbf{208.3} \, \frac{\text{kJ}}{\text{L} \cdot \text{min}}
 
@@ -2255,16 +2120,13 @@ $$
 
 \text{Heat Consumed} = -r_A(\Delta H_{rxn}) = (k C_{A0}^2)(\Delta H_{rxn})
 
-$$
-
-$$
 
 \text{Heat Consumed} = (0.5 \frac{\text{L}}{\text{mol}\cdot\text{min}} \cdot C_{A0}^2)(80 \frac{\text{kJ}}{\text{mol}}) = \textbf{40} \cdot C_{A0}^2 \, \frac{\text{kJ}}{\text{L} \cdot \text{min}}
 
 $$
 
 **Step 4: Compare Heat Effects and Conclude:**
-The initial temperature trend depends on the sign of $(208.3 - 40 C_{A0}^2)$. The problem implies a realistic operating condition where the initial concentration is not excessively high. For any reasonable initial concentration (e.g., even if $C_{A0}$ were as high as 2 mol/L, the heat consumption term would be $40 \cdot 2^2 = 160$ kJ/(L$\cdot$min)), the heat addition term dominates.
+The initial temperature trend depends on the sign of $(208.3 - 40 C_{A0}^2)$. The problem implies a realistic operating condition where the initial concentration is not excessively high. For any reasonable initial concentration (e.g., even if $C_{A0}$ were as high as 2 mol/L, the heat consumption term would be $40 \cdot 2^2 = 160$ kJ/(L·min)), the heat addition term dominates.
 
 $$
 
@@ -2279,7 +2141,7 @@ Since the rate of heat addition from the steam jacket is greater than the rate o
 
 ## PE Exam Practice Problems
 
-```{prf:example} Practice Problem 1 — CSTR vs. PFR Sizing
+```{prf:example} Practice Problem 1: CSTR vs. PFR Sizing
 
 The liquid-phase reaction $A \rightarrow B$ follows second-order kinetics: $-r_A = k C_A^2$ with $k = 0.5$ L/mol·min.
 
@@ -2317,7 +2179,7 @@ For positive-order reactions, the PFR is always more efficient because it operat
 
 ---
 
-```{prf:example} Practice Problem 2 — Arrhenius: Finding $E_a$ from Two Temperature Data Points
+```{prf:example} Practice Problem 2: Arrhenius: Finding $E_a$ from Two Temperature Data Points
 
 A first-order reaction has rate constants $k_1 = 0.012$ min⁻¹ at 300 K and $k_2 = 0.135$ min⁻¹ at 350 K.
 
@@ -2348,11 +2210,11 @@ $$k_{325} = 0.012 \times e^{1.303} = 0.012 \times 3.681 = \mathbf{0.0442 \text{ 
 ```
 
 ```{caution}
-**PE Exam Traps — Chemical Reaction Engineering**
+**PE Exam Traps: Chemical Reaction Engineering**
 
 - **CSTR uses exit conditions, PFR integrates.** The CSTR design equation evaluates $-r_A$ at the **exit** (lowest) concentration. Evaluating $-r_A$ at the feed concentration for a CSTR gives a dramatically undersized reactor. The PFR integrates from feed to exit concentration, naturally accounting for the changing rate.
 - **Levenspiel plot area interpretation:** For a CSTR, volume = rectangle with width $X$ and height $F_{A0}/(-r_A)_{exit}$. For a PFR, volume = area under the $F_{A0}/(-r_A)$ curve from 0 to $X$. For a rate that increases with conversion (autocatalytic or unusual kinetics), a CSTR first + PFR second can be more efficient than PFR alone.
-- **Arrhenius $T$ must be in Kelvin.** $E_a/(RT)$ requires absolute temperature. Using °C gives a nonsensical exponent. Also, the pre-exponential $A$ has the same units as $k$ (s⁻¹ for first-order, L/mol·s for second-order) — its units are often omitted but are essential for dimensional consistency.
+- **Arrhenius $T$ must be in Kelvin.** $E_a/(RT)$ requires absolute temperature. Using °C gives a nonsensical exponent. Also, the pre-exponential $A$ has the same units as $k$ (s⁻¹ for first-order, L/mol·s for second-order) - its units are often omitted but are essential for dimensional consistency.
 - **Conversion $X$ is fraction reacted, not fraction remaining.** $C_A = C_{A0}(1-X)$, so at $X = 0.9$, only 10% of A remains. Writing $C_A = C_{A0}\,X$ is wrong and a very common slip.
 - **Space time $\tau = V/v_0$ is not residence time for gas-phase reactions** with changing mole number, because the volumetric flow rate $v$ changes with conversion. Use $\tau = C_{A0}\int_0^X dX/(-r_A)$ consistently.
 ```

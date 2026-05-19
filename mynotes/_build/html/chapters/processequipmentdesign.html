@@ -323,7 +323,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-exchanger-symbols-and-utility-streams-on-a-pfd">Heat-Exchanger Symbols and Utility Streams on a PFD</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-the-two-lines-on-a-heat-exchanger-symbol">Reading the Two Lines on a Heat-Exchanger Symbol</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-utility-stream-codes">Standard Utility Stream Codes</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#utility-sizing-rule-of-thumb-5-20-circc-rule">Utility-Sizing Rule of Thumb (5-20<span class="math notranslate nohighlight">\(^\circ\)</span>C Rule)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#utility-sizing-rule-of-thumb-5-20c-rule">Utility-Sizing Rule of Thumb (5-20°C Rule)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#worked-example-sizing-the-cooling-water-flow">Worked Example: Sizing the Cooling-Water Flow</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generic-vs-rigorous-heat-exchanger-blocks-in-simulators">Generic vs. Rigorous Heat-Exchanger Blocks in Simulators</a></li>
 </ul>
@@ -427,27 +427,27 @@ Most textbooks draw two lines through the heat-exchanger circle:</p>
 <p><strong>Lowercase Utility Codes Used on PFDs</strong>
 On a PFD, only the utility <em>inlet</em> stream is labeled with its lowercase code; the outlet is implicit (the same utility, warmer or cooler).</p>
 <ul class="simple">
-<li><p><strong>cw</strong>  -  cooling water from a cooling tower; inlet <span class="math notranslate nohighlight">\(\sim\)</span>30<span class="math notranslate nohighlight">\(^\circ\)</span>C, outlet <span class="math notranslate nohighlight">\(\sim\)</span>40-45<span class="math notranslate nohighlight">\(^\circ\)</span>C typical.</p></li>
-<li><p><strong>rw</strong>  -  refrigerated water; inlet <span class="math notranslate nohighlight">\(\sim\)</span>5-10<span class="math notranslate nohighlight">\(^\circ\)</span>C.</p></li>
-<li><p><strong>rb</strong>  -  refrigerated brine (CaCl<span class="math notranslate nohighlight">\(_2\)</span> or MEG solution); inlet <span class="math notranslate nohighlight">\(\sim\)</span>-45<span class="math notranslate nohighlight">\(^\circ\)</span>C.</p></li>
-<li><p><strong>lps</strong>  -  low-pressure saturated steam, <span class="math notranslate nohighlight">\(\sim\)</span>4 barg, <span class="math notranslate nohighlight">\(T_\text{sat} \approx 140\)</span>-160<span class="math notranslate nohighlight">\(^\circ\)</span>C.</p></li>
-<li><p><strong>mps</strong>  -  medium-pressure steam, <span class="math notranslate nohighlight">\(\sim\)</span>10 barg, <span class="math notranslate nohighlight">\(T_\text{sat} \approx 180\)</span>-200<span class="math notranslate nohighlight">\(^\circ\)</span>C.</p></li>
-<li><p><strong>hps</strong>  -  high-pressure steam, <span class="math notranslate nohighlight">\(\sim\)</span>40 barg, <span class="math notranslate nohighlight">\(T_\text{sat} \approx 250\)</span>-270<span class="math notranslate nohighlight">\(^\circ\)</span>C.</p></li>
+<li><p><strong>cw</strong>  -  cooling water from a cooling tower; inlet <span class="math notranslate nohighlight">\(\sim\)</span>30°C, outlet <span class="math notranslate nohighlight">\(\sim\)</span>40-45°C typical.</p></li>
+<li><p><strong>rw</strong>  -  refrigerated water; inlet <span class="math notranslate nohighlight">\(\sim\)</span>5-10°C.</p></li>
+<li><p><strong>rb</strong>  -  refrigerated brine (CaCl<span class="math notranslate nohighlight">\(_2\)</span> or MEG solution); inlet <span class="math notranslate nohighlight">\(\sim\)</span>-45°C.</p></li>
+<li><p><strong>lps</strong>  -  low-pressure saturated steam, <span class="math notranslate nohighlight">\(\sim\)</span>4 barg, <span class="math notranslate nohighlight">\(T_\text{sat} \approx 140\)</span>-160°C.</p></li>
+<li><p><strong>mps</strong>  -  medium-pressure steam, <span class="math notranslate nohighlight">\(\sim\)</span>10 barg, <span class="math notranslate nohighlight">\(T_\text{sat} \approx 180\)</span>-200°C.</p></li>
+<li><p><strong>hps</strong>  -  high-pressure steam, <span class="math notranslate nohighlight">\(\sim\)</span>40 barg, <span class="math notranslate nohighlight">\(T_\text{sat} \approx 250\)</span>-270°C.</p></li>
 <li><p><strong>el</strong>  -  electric resistance heating (220/440/660 V).</p></li>
-<li><p><strong>htm</strong>  -  heat-transfer medium (Dowtherm A, Therminol 66); can reach 350-400<span class="math notranslate nohighlight">\(^\circ\)</span>C without high pressure.</p></li>
+<li><p><strong>htm</strong>  -  heat-transfer medium (Dowtherm A, Therminol 66); can reach 350-400°C without high pressure.</p></li>
 </ul>
 <p>Cooling tower water is limited at the cold end by the local wet-bulb temperature: a tower can cool water to roughly <span class="math notranslate nohighlight">\(T_{\text{wet bulb}} + 3^\circ\)</span>C in practice. In hot, humid climates this places a floor on what process-stream temperatures cooling water can achieve.</p>
 </div>
 </section>
-<section id="utility-sizing-rule-of-thumb-5-20-circc-rule">
-<h3>Utility-Sizing Rule of Thumb (5-20<span class="math notranslate nohighlight">\(^\circ\)</span>C Rule)<a class="headerlink" href="#utility-sizing-rule-of-thumb-5-20-circc-rule" title="Link to this heading">#</a></h3>
+<section id="utility-sizing-rule-of-thumb-5-20c-rule">
+<h3>Utility-Sizing Rule of Thumb (5-20°C Rule)<a class="headerlink" href="#utility-sizing-rule-of-thumb-5-20c-rule" title="Link to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Why Utility <span class="math notranslate nohighlight">\(\Delta T\)</span> Should Be Modest</strong>
-Design the utility flow rate so the utility temperature change <span class="math notranslate nohighlight">\(\Delta T_{\text{util}}\)</span> falls between roughly 5 and 20<span class="math notranslate nohighlight">\(^\circ\)</span>C. Both ends of the range are bounded for economic reasons:</p>
+Design the utility flow rate so the utility temperature change <span class="math notranslate nohighlight">\(\Delta T_{\text{util}}\)</span> falls between roughly 5 and 20°C. Both ends of the range are bounded for economic reasons:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\Delta T_{\text{util}} &lt; 5^\circ\)</span>C requires a very large utility mass flow to carry the duty. The cooling-tower or steam-boiler equipment must be oversized to handle this flow, and pumping/blower costs rise.</p></li>
-<li><p><span class="math notranslate nohighlight">\(\Delta T_{\text{util}} &gt; 20^\circ\)</span>C means the utility supply equipment is being asked to deliver a large enthalpy swing per unit mass. For cooling water this is rarely a problem (the cooling tower can handle a 20<span class="math notranslate nohighlight">\(^\circ\)</span>C swing), but for steam, the upstream pressure-let-down station becomes constrained, and for refrigerants, more refrigeration compression power is needed.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Delta T_{\text{util}} &gt; 20^\circ\)</span>C means the utility supply equipment is being asked to deliver a large enthalpy swing per unit mass. For cooling water this is rarely a problem (the cooling tower can handle a 20°C swing), but for steam, the upstream pressure-let-down station becomes constrained, and for refrigerants, more refrigeration compression power is needed.</p></li>
 </ul>
 <p>For <em>condensing</em> steam or <em>evaporating</em> refrigerant, the temperature is fixed by saturation; only the flow rate varies. In those cases the rule of thumb is replaced by a target outlet vapor-fraction (condensate is typically returned as subcooled liquid; refrigerant is vaporized to dry saturation or slightly superheated).</p>
 </div>
@@ -457,7 +457,7 @@ Design the utility flow rate so the utility temperature change <span class="math
 <div class="proof example admonition" id="processequipmentdesign-example-0">
 <p class="admonition-title"><span class="caption-number">Example 148 </span> (Cooling-Water Flow for a Process Cooler)</p>
 <section class="example-content" id="proof-content">
-<p>A process stream delivers 250 kW of cooling duty to a heat exchanger. Cooling water enters at 30<span class="math notranslate nohighlight">\(^\circ\)</span>C. (a) What is the required cooling-water mass flow if the design <span class="math notranslate nohighlight">\(\Delta T_{\text{util}} = 10^\circ\)</span>C? (b) What is the flow if <span class="math notranslate nohighlight">\(\Delta T_{\text{util}}\)</span> is reduced to 3<span class="math notranslate nohighlight">\(^\circ\)</span>C? (c) Comment on the comparison.</p>
+<p>A process stream delivers 250 kW of cooling duty to a heat exchanger. Cooling water enters at 30°C. (a) What is the required cooling-water mass flow if the design <span class="math notranslate nohighlight">\(\Delta T_{\text{util}} = 10^\circ\)</span>C? (b) What is the flow if <span class="math notranslate nohighlight">\(\Delta T_{\text{util}}\)</span> is reduced to 3°C? © Comment on the comparison.</p>
 </section>
 </div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -469,7 +469,7 @@ Design the utility flow rate so the utility temperature change <span class="math
 \[
 Q = m_{\text{cw}} c_{p,\text{water}} \Delta T_{\text{util}}
 \]</div>
-<p class="sd-card-text">Using <span class="math notranslate nohighlight">\(c_{p,\text{water}} = 4.18\)</span> kJ/(kg<span class="math notranslate nohighlight">\(\cdot\)</span>K).</p>
+<p class="sd-card-text">Using <span class="math notranslate nohighlight">\(c_{p,\text{water}} = 4.18\)</span> kJ/(kg·K).</p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>(a) At <span class="math notranslate nohighlight">\(\Delta T_{\text{util}} = 10^\circ\)</span>C:</strong></p></li>
 </ul>
@@ -485,7 +485,7 @@ m_{\text{cw}} = \frac{250}{4.18 \times 10} = \frac{250}{41.8} = 5.98 \text{ kg/s
 m_{\text{cw}} = \frac{250}{4.18 \times 3} = \frac{250}{12.54} = 19.9 \text{ kg/s} = 71{,}700 \text{ kg/h}
 \]</div>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>(c) Comparison.</strong> Reducing <span class="math notranslate nohighlight">\(\Delta T_{\text{util}}\)</span> from 10 to 3<span class="math notranslate nohighlight">\(^\circ\)</span>C tripled the required cooling-water flow. The cooling tower, the supply pump, and all piping must be sized 3.3<span class="math notranslate nohighlight">\(\times\)</span> larger. The capital and operating cost penalty is significant for what is essentially the same heat duty. This is exactly why the 5-20<span class="math notranslate nohighlight">\(^\circ\)</span>C rule of thumb exists: it sits in the cost-minimum band where neither the heat-exchanger area (which favors low <span class="math notranslate nohighlight">\(\Delta T_\text{util}\)</span>) nor the utility equipment (which favors moderate-to-large <span class="math notranslate nohighlight">\(\Delta T_\text{util}\)</span>) dominates.</p></li>
+<li><p class="sd-card-text"><strong>© Comparison.</strong> Reducing <span class="math notranslate nohighlight">\(\Delta T_{\text{util}}\)</span> from 10 to 3°C tripled the required cooling-water flow. The cooling tower, the supply pump, and all piping must be sized 3.3<span class="math notranslate nohighlight">\(\times\)</span> larger. The capital and operating cost penalty is significant for what is essentially the same heat duty. This is exactly why the 5-20°C rule of thumb exists: it sits in the cost-minimum band where neither the heat-exchanger area (which favors low <span class="math notranslate nohighlight">\(\Delta T_\text{util}\)</span>) nor the utility equipment (which favors moderate-to-large <span class="math notranslate nohighlight">\(\Delta T_\text{util}\)</span>) dominates.</p></li>
 <li><p class="sd-card-text"><strong>Verification.</strong> The two flows differ by a factor of 3.33, which matches the inverse <span class="math notranslate nohighlight">\(\Delta T\)</span> ratio 10/3 = 3.33. ✓</p></li>
 </ul>
 </div>
@@ -500,7 +500,7 @@ Process simulators offer two heat-exchanger block types:</p>
 <li><p><strong>Generic / one-sided block:</strong> you specify only the process inlet and the desired outlet temperature; the simulator computes the duty <span class="math notranslate nohighlight">\(Q\)</span> and reports it. No utility stream is connected. The block is a <em>placeholder</em>.</p></li>
 <li><p><strong>Rigorous / two-sided block:</strong> both streams are connected; the block solves the energy balance and the <span class="math notranslate nohighlight">\(Q = UA\Delta T_{LM}\)</span> equation simultaneously. The simulator can return “infeasible” if the chosen utility is too cold/hot to drive the required temperature change.</p></li>
 </ul>
-<p>The danger of generic blocks: the simulator will happily heat your stream to 10,000<span class="math notranslate nohighlight">\(^\circ\)</span>C or cool it to near absolute zero if you ask. It assumes a utility of sufficient capacity exists. <strong>Always replace generic blocks with rigorous ones before finalizing a design.</strong> Design reactors and separators first (the process backbone); then size heat exchangers as the last step.</p>
+<p>The danger of generic blocks: the simulator will happily heat your stream to 10,000°C or cool it to near absolute zero if you ask. It assumes a utility of sufficient capacity exists. <strong>Always replace generic blocks with rigorous ones before finalizing a design.</strong> Design reactors and separators first (the process backbone); then size heat exchangers as the last step.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -508,7 +508,7 @@ Process simulators offer two heat-exchanger block types:</p>
 <ul class="simple">
 <li><p>Utility codes are lowercase, two- or three-letter (cw, rw, lps, mps, hps).</p></li>
 <li><p>Only the utility <em>inlet</em> stream gets labeled; outlet is implicit.</p></li>
-<li><p>Target utility <span class="math notranslate nohighlight">\(\Delta T\)</span>: 5-20<span class="math notranslate nohighlight">\(^\circ\)</span>C for sensible-heat utilities. Smaller <span class="math notranslate nohighlight">\(\to\)</span> utility equipment oversized; larger <span class="math notranslate nohighlight">\(\to\)</span> supply constraints.</p></li>
+<li><p>Target utility <span class="math notranslate nohighlight">\(\Delta T\)</span>: 5-20°C for sensible-heat utilities. Smaller <span class="math notranslate nohighlight">\(\to\)</span> utility equipment oversized; larger <span class="math notranslate nohighlight">\(\to\)</span> supply constraints.</p></li>
 <li><p>“E-tag” equipment is a heat exchanger (E-101 = first exchanger in plant area 100).</p></li>
 </ul>
 </div>
@@ -564,7 +564,7 @@ For processes that demand boiling or condensing, three families excel:</p>
 <p><strong>Plate-and-Frame, Plate-and-Fin</strong>
 Plate exchangers achieve very large area in small volume by stacking many thin plates with corrugated channels between them. Two main subtypes:</p>
 <ul class="simple">
-<li><p><strong>Plate-and-frame (PHE):</strong> a stack of corrugated metal plates separated by elastomeric gaskets and pressed together by a frame. Hot and cold fluids alternate channels. Very high <span class="math notranslate nohighlight">\(U\)</span> (5-7 kW/m<span class="math notranslate nohighlight">\(^2\)</span><span class="math notranslate nohighlight">\(\cdot\)</span>K for water-water), area up to <span class="math notranslate nohighlight">\(\sim\)</span>2500 m<span class="math notranslate nohighlight">\(^2\)</span>. Easy to expand (add plates). Limits: gasket-bounded temperature (<span class="math notranslate nohighlight">\(\sim\)</span>180<span class="math notranslate nohighlight">\(^\circ\)</span>C) and pressure (<span class="math notranslate nohighlight">\(\sim\)</span>25 barg). Not for fouling or large-particle fluids (narrow channels clog). The standard choice in food, dairy, and pharmaceutical service.</p></li>
+<li><p><strong>Plate-and-frame (PHE):</strong> a stack of corrugated metal plates separated by elastomeric gaskets and pressed together by a frame. Hot and cold fluids alternate channels. Very high <span class="math notranslate nohighlight">\(U\)</span> (5-7 kW/m<span class="math notranslate nohighlight">\(^2\)</span><span class="math notranslate nohighlight">\(\cdot\)</span>K for water-water), area up to <span class="math notranslate nohighlight">\(\sim\)</span>2500 m<span class="math notranslate nohighlight">\(^2\)</span>. Easy to expand (add plates). Limits: gasket-bounded temperature (<span class="math notranslate nohighlight">\(\sim\)</span>180°C) and pressure (<span class="math notranslate nohighlight">\(\sim\)</span>25 barg). Not for fouling or large-particle fluids (narrow channels clog). The standard choice in food, dairy, and pharmaceutical service.</p></li>
 <li><p><strong>Plate-and-fin (brazed aluminum):</strong> aluminum plates with corrugated fin spacers, brazed into a permanent block. Areas to 30,000 m<span class="math notranslate nohighlight">\(^2\)</span> in one unit. Excellent for cryogenic service (LNG, air separation) where the aluminum thermal conductivity matters. Multi-stream: a single block can handle 3-6 streams simultaneously, enabling high heat integration in a small footprint.</p></li>
 </ul>
 <p>Both plate styles tend to be expensive on a $/m<span class="math notranslate nohighlight">\(^2\)</span> basis at small areas but extremely cost-effective at large area where they dominate over shell-and-tube. Both have high pressure drop and are poor choices for viscous, fouling, or corrosive fluids.</p>
@@ -576,7 +576,7 @@ Plate exchangers achieve very large area in small volume by stacking many thin p
 <p class="admonition-title">Note</p>
 <p><strong>When Cooling Water Is Not Available</strong>
 <strong>Air-cooled (fin-fan):</strong> a tube bundle with extended-surface (finned) tubes, cooled by motor-driven fans blowing ambient air. No shell  -  the air is in open contact with the fins. Hot fluid always travels tube-side (air is always the cooling medium). Areas to 20,000 m<span class="math notranslate nohighlight">\(^2\)</span>.</p>
-<p><strong>Used when</strong> cooling water is scarce (desert plants, offshore platforms), or when the process side is above <span class="math notranslate nohighlight">\(\sim\)</span>60<span class="math notranslate nohighlight">\(^\circ\)</span>C and air-cooling is the most economical disposal of low-grade heat. <strong>Limitation:</strong> the cold-side temperature is bounded by the local dry-bulb temperature; air-coolers cannot achieve the lower temperatures that cooling water can in temperate climates.</p>
+<p><strong>Used when</strong> cooling water is scarce (desert plants, offshore platforms), or when the process side is above <span class="math notranslate nohighlight">\(\sim\)</span>60°C and air-cooling is the most economical disposal of low-grade heat. <strong>Limitation:</strong> the cold-side temperature is bounded by the local dry-bulb temperature; air-coolers cannot achieve the lower temperatures that cooling water can in temperate climates.</p>
 </div>
 </section>
 <section id="the-heat-exchanger-selection-algorithm">
@@ -589,8 +589,8 @@ Plate exchangers achieve very large area in small volume by stacking many thin p
 <li><p><strong>Filter by area range.</strong> Tiny areas <span class="math notranslate nohighlight">\(\to\)</span> double-pipe; small <span class="math notranslate nohighlight">\(\to\)</span> multi-pipe, spiral-plate; moderate to large <span class="math notranslate nohighlight">\(\to\)</span> shell-and-tube or plate-and-frame; very large <span class="math notranslate nohighlight">\(\to\)</span> plate-and-fin or air-cooler.</p></li>
 <li><p><strong>Filter by phase change.</strong> Boiling shell-side <span class="math notranslate nohighlight">\(\to\)</span> kettle reboiler. Submerged heating <span class="math notranslate nohighlight">\(\to\)</span> bayonet. Cryogenic multistream <span class="math notranslate nohighlight">\(\to\)</span> plate-and-fin.</p></li>
 <li><p><strong>Filter by viscosity, fouling, corrosivity.</strong> Viscous or slurry <span class="math notranslate nohighlight">\(\to\)</span> scraped-wall or spiral-plate. Highly fouling <span class="math notranslate nohighlight">\(\to\)</span> shell-and-tube (mechanically cleanable). Cleanable plate <span class="math notranslate nohighlight">\(\to\)</span> gasketed plate-and-frame.</p></li>
-<li><p><strong>Filter by temperature/pressure limits.</strong> Plate-and-frame caps at <span class="math notranslate nohighlight">\(\sim\)</span>180<span class="math notranslate nohighlight">\(^\circ\)</span>C, 25 barg. Plate-and-fin caps at moderate pressures, very low T good. Shell-and-tube can handle 600+ barg and -200 to +600<span class="math notranslate nohighlight">\(^\circ\)</span>C with appropriate metallurgy.</p></li>
-<li><p><strong>Filter by <span class="math notranslate nohighlight">\(\Delta T_{LM}\)</span>.</strong> Above <span class="math notranslate nohighlight">\(\sim\)</span>100<span class="math notranslate nohighlight">\(^\circ\)</span>C in shell-and-tube, switch from fixed-tubesheet to floating-head or U-tube to accommodate differential thermal expansion.</p></li>
+<li><p><strong>Filter by temperature/pressure limits.</strong> Plate-and-frame caps at <span class="math notranslate nohighlight">\(\sim\)</span>180°C, 25 barg. Plate-and-fin caps at moderate pressures, very low T good. Shell-and-tube can handle 600+ barg and -200 to +600°C with appropriate metallurgy.</p></li>
+<li><p><strong>Filter by <span class="math notranslate nohighlight">\(\Delta T_{LM}\)</span>.</strong> Above <span class="math notranslate nohighlight">\(\sim\)</span>100°C in shell-and-tube, switch from fixed-tubesheet to floating-head or U-tube to accommodate differential thermal expansion.</p></li>
 <li><p><strong>Compare lifetime cost</strong> (capital + utility + maintenance + cleaning) of the survivors and pick the cheapest.</p></li>
 </ul>
 </div>
@@ -598,7 +598,7 @@ Plate exchangers achieve very large area in small volume by stacking many thin p
 <p class="admonition-title">Note</p>
 <p><strong>Exam Tips  -  Heat-Exchanger Selection</strong></p>
 <ul class="simple">
-<li><p>Pairings to memorize: kettle reboiler <span class="math notranslate nohighlight">\(\leftrightarrow\)</span> distillation bottoms; floating-head <span class="math notranslate nohighlight">\(\leftrightarrow\)</span> high-<span class="math notranslate nohighlight">\(\Delta T\)</span> service (<span class="math notranslate nohighlight">\(\geq 100^\circ\)</span>C); air-cooler <span class="math notranslate nohighlight">\(\leftrightarrow\)</span> desert plants or condensers above 60<span class="math notranslate nohighlight">\(^\circ\)</span>C process side; plate-and-fin <span class="math notranslate nohighlight">\(\leftrightarrow\)</span> LNG / air separation; scraped-wall <span class="math notranslate nohighlight">\(\leftrightarrow\)</span> crystallizing or polymer service.</p></li>
+<li><p>Pairings to memorize: kettle reboiler <span class="math notranslate nohighlight">\(\leftrightarrow\)</span> distillation bottoms; floating-head <span class="math notranslate nohighlight">\(\leftrightarrow\)</span> high-<span class="math notranslate nohighlight">\(\Delta T\)</span> service (<span class="math notranslate nohighlight">\(\geq 100^\circ\)</span>C); air-cooler <span class="math notranslate nohighlight">\(\leftrightarrow\)</span> desert plants or condensers above 60°C process side; plate-and-fin <span class="math notranslate nohighlight">\(\leftrightarrow\)</span> LNG / air separation; scraped-wall <span class="math notranslate nohighlight">\(\leftrightarrow\)</span> crystallizing or polymer service.</p></li>
 <li><p>Fixed-tubesheet for clean, low-<span class="math notranslate nohighlight">\(\Delta T\)</span> service. The cheapest shell-and-tube  -  but only when it works.</p></li>
 <li><p>U-tube: only when the tube-side fluid is clean (cannot mechanically clean the U-bend).</p></li>
 <li><p>Plate-and-frame: highest <span class="math notranslate nohighlight">\(U\)</span> per dollar of capital  -  but watch pressure, temperature, and fouling limits.</p></li>
@@ -769,7 +769,7 @@ The overall coefficient referenced to the outside area of the tubes is</p>
 <div class="proof example admonition" id="processequipmentdesign-example-1">
 <p class="admonition-title"><span class="caption-number">Example 149 </span> (Sizing a Counter-Flow Cooler)</p>
 <section class="example-content" id="proof-content">
-<p>A process stream of <span class="math notranslate nohighlight">\(m = 15{,}000\)</span> kg/h, <span class="math notranslate nohighlight">\(c_p = 2.5\)</span> kJ/(kg<span class="math notranslate nohighlight">\(\cdot\)</span>K), must be cooled from 110<span class="math notranslate nohighlight">\(^\circ\)</span>C to 60<span class="math notranslate nohighlight">\(^\circ\)</span>C using cooling water entering at 30<span class="math notranslate nohighlight">\(^\circ\)</span>C and leaving at 45<span class="math notranslate nohighlight">\(^\circ\)</span>C. Counter-flow, <span class="math notranslate nohighlight">\(F = 1\)</span>, estimated <span class="math notranslate nohighlight">\(U = 600\)</span> W/(m<span class="math notranslate nohighlight">\(^2 \cdot\)</span>K). Find <span class="math notranslate nohighlight">\(Q\)</span>, the cooling-water flow, <span class="math notranslate nohighlight">\(\Delta T_{LM}\)</span>, and the heat-transfer area <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>A process stream of <span class="math notranslate nohighlight">\(m = 15{,}000\)</span> kg/h, <span class="math notranslate nohighlight">\(c_p = 2.5\)</span> kJ/(kg·K), must be cooled from 110°C to 60°C using cooling water entering at 30°C and leaving at 45°C. Counter-flow, <span class="math notranslate nohighlight">\(F = 1\)</span>, estimated <span class="math notranslate nohighlight">\(U = 600\)</span> W/(m<span class="math notranslate nohighlight">\(^2 \cdot\)</span>K). Find <span class="math notranslate nohighlight">\(Q\)</span>, the cooling-water flow, <span class="math notranslate nohighlight">\(\Delta T_{LM}\)</span>, and the heat-transfer area <span class="math notranslate nohighlight">\(A\)</span>.</p>
 </section>
 </div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -789,7 +789,7 @@ Q = m c_p \Delta T = (\frac{15{,}000}{3600})(2.5)(110 - 60) = (4.167)(2.5)(50) =
 m_{\text{cw}} = \frac{Q}{c_{p,\text{water}} \Delta T_{\text{cw}}} = \frac{520.9}{(4.18)(15)} = \frac{520.9}{62.7} = 8.31 \text{ kg/s} = 29{,}900 \text{ kg/h}
 \]</div>
 <ul class="simple">
-<li><p class="sd-card-text"><strong><span class="math notranslate nohighlight">\(\Delta T_{LM}\)</span> for counter-flow.</strong> End 1 (cold end): process exits at 60<span class="math notranslate nohighlight">\(^\circ\)</span>C, cooling water enters at 30<span class="math notranslate nohighlight">\(^\circ\)</span>C, so <span class="math notranslate nohighlight">\(\Delta T_1 = 60 - 30 = 30^\circ\)</span>C. End 2 (hot end): process enters at 110<span class="math notranslate nohighlight">\(^\circ\)</span>C, cooling water exits at 45<span class="math notranslate nohighlight">\(^\circ\)</span>C, so <span class="math notranslate nohighlight">\(\Delta T_2 = 110 - 45 = 65^\circ\)</span>C.</p></li>
+<li><p class="sd-card-text"><strong><span class="math notranslate nohighlight">\(\Delta T_{LM}\)</span> for counter-flow.</strong> End 1 (cold end): process exits at 60°C, cooling water enters at 30°C, so <span class="math notranslate nohighlight">\(\Delta T_1 = 60 - 30 = 30^\circ\)</span>C. End 2 (hot end): process enters at 110°C, cooling water exits at 45°C, so <span class="math notranslate nohighlight">\(\Delta T_2 = 110 - 45 = 65^\circ\)</span>C.</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
@@ -816,7 +816,7 @@ A = \frac{Q}{U F \Delta T_{LM}} = \frac{520{,}900 \text{W}}{(600)(1)(45.3)} = \f
 <div class="proof example admonition" id="processequipmentdesign-example-2">
 <p class="admonition-title"><span class="caption-number">Example 150 </span> (The <span class="math notranslate nohighlight">\(\Delta T_{LM}\)</span> Penalty of Co-Current Flow)</p>
 <section class="example-content" id="proof-content">
-<p>For the same service (process 110<span class="math notranslate nohighlight">\(\to\)</span>60<span class="math notranslate nohighlight">\(^\circ\)</span>C, cooling water 30<span class="math notranslate nohighlight">\(\to\)</span>45<span class="math notranslate nohighlight">\(^\circ\)</span>C), compute <span class="math notranslate nohighlight">\(\Delta T_{LM}\)</span> in (a) counter-flow and (b) co-current flow. By how much does the required area change?</p>
+<p>For the same service (process 110<span class="math notranslate nohighlight">\(\to\)</span>60°C, cooling water 30<span class="math notranslate nohighlight">\(\to\)</span>45°C), compute <span class="math notranslate nohighlight">\(\Delta T_{LM}\)</span> in (a) counter-flow and (b) co-current flow. By how much does the required area change?</p>
 </section>
 </div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -838,8 +838,8 @@ A = \frac{Q}{U F \Delta T_{LM}} = \frac{520{,}900 \text{W}}{(600)(1)(45.3)} = \f
 \]</div>
 <p class="sd-card-text">The co-current arrangement needs 17% more area for the same service.</p>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>The deeper limit.</strong> Co-current flow cannot in principle cool the process below the cooling-water outlet temperature  -  if the process target were 35<span class="math notranslate nohighlight">\(^\circ\)</span>C and the cooling-water outlet were 45<span class="math notranslate nohighlight">\(^\circ\)</span>C, the design would be infeasible in co-current and only feasible in counter-flow. <strong>Counter-flow is therefore the default</strong> for any service where the temperature ranges overlap.</p></li>
-<li><p class="sd-card-text"><strong>Verification.</strong> Co-current and counter-current give the same <span class="math notranslate nohighlight">\(\Delta T_{LM}\)</span> if and only if the temperature ranges of the two streams do not overlap (one stream is entirely above the other in temperature). The overlap here is significant (process 60-110<span class="math notranslate nohighlight">\(^\circ\)</span>C, water 30-45<span class="math notranslate nohighlight">\(^\circ\)</span>C), so counter-flow’s advantage is correspondingly large. ✓</p></li>
+<li><p class="sd-card-text"><strong>The deeper limit.</strong> Co-current flow cannot in principle cool the process below the cooling-water outlet temperature  -  if the process target were 35°C and the cooling-water outlet were 45°C, the design would be infeasible in co-current and only feasible in counter-flow. <strong>Counter-flow is therefore the default</strong> for any service where the temperature ranges overlap.</p></li>
+<li><p class="sd-card-text"><strong>Verification.</strong> Co-current and counter-current give the same <span class="math notranslate nohighlight">\(\Delta T_{LM}\)</span> if and only if the temperature ranges of the two streams do not overlap (one stream is entirely above the other in temperature). The overlap here is significant (process 60-110°C, water 30-45°C), so counter-flow’s advantage is correspondingly large. ✓</p></li>
 </ul>
 </div>
 </details></section>
@@ -848,7 +848,7 @@ A = \frac{Q}{U F \Delta T_{LM}} = \frac{520{,}900 \text{W}}{(600)(1)(45.3)} = \f
 <div class="proof example admonition" id="processequipmentdesign-example-3">
 <p class="admonition-title"><span class="caption-number">Example 151 </span> (Kettle Reboiler for a Distillation Column)</p>
 <section class="example-content" id="proof-content">
-<p>A distillation column requires 3,500 kW of reboil duty. The process side boils at 95<span class="math notranslate nohighlight">\(^\circ\)</span>C; low-pressure steam at 6 barg condenses at 158<span class="math notranslate nohighlight">\(^\circ\)</span>C and is returned as saturated condensate. Latent heat of steam at 158<span class="math notranslate nohighlight">\(^\circ\)</span>C: <span class="math notranslate nohighlight">\(\lambda = 2{,}080\)</span> kJ/kg. Estimated <span class="math notranslate nohighlight">\(U = 2{,}000\)</span> W/m<span class="math notranslate nohighlight">\(^2\)</span>K (steam condensing <span class="math notranslate nohighlight">\(\to\)</span> boiling, with <span class="math notranslate nohighlight">\(\sim\)</span>10% fouling allowance). Size the reboiler.</p>
+<p>A distillation column requires 3,500 kW of reboil duty. The process side boils at 95°C; low-pressure steam at 6 barg condenses at 158°C and is returned as saturated condensate. Latent heat of steam at 158°C: <span class="math notranslate nohighlight">\(\lambda = 2{,}080\)</span> kJ/kg. Estimated <span class="math notranslate nohighlight">\(U = 2{,}000\)</span> W/m<span class="math notranslate nohighlight">\(^2\)</span>K (steam condensing <span class="math notranslate nohighlight">\(\to\)</span> boiling, with <span class="math notranslate nohighlight">\(\sim\)</span>10% fouling allowance). Size the reboiler.</p>
 </section>
 </div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -861,7 +861,7 @@ A = \frac{Q}{U F \Delta T_{LM}} = \frac{520{,}900 \text{W}}{(600)(1)(45.3)} = \f
 m_{\text{steam}} = \frac{Q}{\lambda} = \frac{3{,}500 \text{kW}}{2{,}080 \text{kJ/kg}} = 1.683 \text{kg/s} = 6{,}060 \text{kg/h}
 \]</div>
 <ul class="simple">
-<li><p class="sd-card-text"><strong><span class="math notranslate nohighlight">\(\Delta T_{LM}\)</span> for two isothermal streams.</strong> Both sides are at constant temperature (condensing steam at 158<span class="math notranslate nohighlight">\(^\circ\)</span>C, boiling process at 95<span class="math notranslate nohighlight">\(^\circ\)</span>C), so <span class="math notranslate nohighlight">\(\Delta T_1 = \Delta T_2 = 158 - 95 = 63^\circ\)</span>C. The LMTD degenerates to this constant:</p></li>
+<li><p class="sd-card-text"><strong><span class="math notranslate nohighlight">\(\Delta T_{LM}\)</span> for two isothermal streams.</strong> Both sides are at constant temperature (condensing steam at 158°C, boiling process at 95°C), so <span class="math notranslate nohighlight">\(\Delta T_1 = \Delta T_2 = 158 - 95 = 63^\circ\)</span>C. The LMTD degenerates to this constant:</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
@@ -875,11 +875,11 @@ m_{\text{steam}} = \frac{Q}{\lambda} = \frac{3{,}500 \text{kW}}{2{,}080 \text{kJ
 A = \frac{Q}{U \cdot \Delta T_{LM}} = \frac{3{,}500{,}000 \text{W}}{(2{,}000)(63)} = \frac{3{,}500{,}000}{126{,}000} = 27.8 \text{m}^2
 \]</div>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Verification.</strong> A 28 m<span class="math notranslate nohighlight">\(^2\)</span> kettle reboiler is moderate-size, well within shell-and-tube range. The 63<span class="math notranslate nohighlight">\(^\circ\)</span>C driving force is comfortable. Steam flow 6,060 kg/h corresponds to roughly 1 ton/h  -  a small-to-medium distillation column.</p></li>
+<li><p class="sd-card-text"><strong>Verification.</strong> A 28 m<span class="math notranslate nohighlight">\(^2\)</span> kettle reboiler is moderate-size, well within shell-and-tube range. The 63°C driving force is comfortable. Steam flow 6,060 kg/h corresponds to roughly 1 ton/h  -  a small-to-medium distillation column.</p></li>
 <li><p class="sd-card-text"><strong>Design notes.</strong></p></li>
 <li><p class="sd-card-text">Use a <em>kettle</em> (expanded-shell) geometry to allow vapor disengagement above the tube bundle, preventing entrainment back to the column.</p></li>
 <li><p class="sd-card-text">Steam tube-side (high pressure tolerance, clean fluid); process boil shell-side.</p></li>
-<li><p class="sd-card-text">Tube MOC: carbon steel is adequate for both sides at 158<span class="math notranslate nohighlight">\(^\circ\)</span>C and benign process composition; upgrade for chloride or acid service.</p></li>
+<li><p class="sd-card-text">Tube MOC: carbon steel is adequate for both sides at 158°C and benign process composition; upgrade for chloride or acid service.</p></li>
 </ul>
 </div>
 </details><div class="admonition note">
@@ -932,7 +932,7 @@ A fluid prefers the <em>shell</em> side if it is:</p>
 <div class="proof example admonition" id="processequipmentdesign-example-4">
 <p class="admonition-title"><span class="caption-number">Example 152 </span> (Tube/Shell Assignment for High-Pressure Steam Heating Oxygen)</p>
 <section class="example-content" id="proof-content">
-<p>An exchanger heats 99%+ pure oxygen gas from 30 to 220<span class="math notranslate nohighlight">\(^\circ\)</span>C using high-pressure saturated steam at 45 barg (<span class="math notranslate nohighlight">\(T_\text{sat} \approx 257^\circ\)</span>C, condensing). Oxygen is an active oxidizer at elevated temperature. Steam is benign. Assign tube and shell sides.</p>
+<p>An exchanger heats 99%+ pure oxygen gas from 30 to 220°C using high-pressure saturated steam at 45 barg (<span class="math notranslate nohighlight">\(T_\text{sat} \approx 257^\circ\)</span>C, condensing). Oxygen is an active oxidizer at elevated temperature. Steam is benign. Assign tube and shell sides.</p>
 </section>
 </div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -946,7 +946,7 @@ A fluid prefers the <em>shell</em> side if it is:</p>
 \]</div>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Cross-check with the condensing criterion.</strong> Condensing fluids prefer shell-side. Here the steam is condensing  -  so the condensing criterion would put steam shell-side. <strong>Conflict.</strong> The pressure criterion takes precedence (capital savings from CS-tube + CS-shell design with steam in tubes outweigh the small condensing-side <span class="math notranslate nohighlight">\(\Delta P\)</span> penalty).</p></li>
-<li><p class="sd-card-text"><strong>Cross-check with the corrosive criterion.</strong> Hot oxygen at 220<span class="math notranslate nohighlight">\(^\circ\)</span>C is a fire/explosion hazard with hydrocarbon-contaminated carbon steel. The oxygen-wetted surface must be cleaned and made of an oxidation-resistant alloy (typically 316 SS). Putting oxygen shell-side means only the shell needs to be 316 SS; the tubes (steam-only) can be cheaper carbon steel. <strong>Confirms the assignment.</strong></p></li>
+<li><p class="sd-card-text"><strong>Cross-check with the corrosive criterion.</strong> Hot oxygen at 220°C is a fire/explosion hazard with hydrocarbon-contaminated carbon steel. The oxygen-wetted surface must be cleaned and made of an oxidation-resistant alloy (typically 316 SS). Putting oxygen shell-side means only the shell needs to be 316 SS; the tubes (steam-only) can be cheaper carbon steel. <strong>Confirms the assignment.</strong></p></li>
 <li><p class="sd-card-text"><strong>Verification.</strong> The chosen configuration minimizes the expensive-alloy footprint: only the shell wall sees oxygen. Tubes are CS, tubesheets and channel might be CS with a 316 SS oxygen-side cladding, and the cost penalty over an all-CS exchanger is modest. The alternative (oxygen tube-side, steam shell-side, full 316 SS tubing) would double or triple the cost without operational benefit.</p></li>
 </ul>
 </div>
@@ -956,7 +956,7 @@ A fluid prefers the <em>shell</em> side if it is:</p>
 <div class="proof example admonition" id="processequipmentdesign-example-5">
 <p class="admonition-title"><span class="caption-number">Example 153 </span> (Tube/Shell Assignment for a Fouling Process Cooler)</p>
 <section class="example-content" id="proof-content">
-<p>A heavy gasoil at 200<span class="math notranslate nohighlight">\(^\circ\)</span>C must be cooled to 80<span class="math notranslate nohighlight">\(^\circ\)</span>C using cooling water (clean, treated). The gasoil has a known fouling tendency (asphaltene deposition). Cooling water is at low pressure (<span class="math notranslate nohighlight">\(\sim\)</span>3 barg); gasoil at moderate pressure (<span class="math notranslate nohighlight">\(\sim\)</span>10 barg). Assign sides.</p>
+<p>A heavy gasoil at 200°C must be cooled to 80°C using cooling water (clean, treated). The gasoil has a known fouling tendency (asphaltene deposition). Cooling water is at low pressure (<span class="math notranslate nohighlight">\(\sim\)</span>3 barg); gasoil at moderate pressure (<span class="math notranslate nohighlight">\(\sim\)</span>10 barg). Assign sides.</p>
 </section>
 </div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -970,7 +970,7 @@ A fluid prefers the <em>shell</em> side if it is:</p>
 \]</div>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Cross-check with pressure:</strong> gasoil is higher pressure (10 vs. 3 barg)  -  also points to tube side. <strong>Confirms.</strong></p></li>
-<li><p class="sd-card-text"><strong>Cross-check with corrosivity:</strong> gasoil at 200<span class="math notranslate nohighlight">\(^\circ\)</span>C is not strongly corrosive (no <span class="math notranslate nohighlight">\(H_2S\)</span> specified), so MOC is not a deciding factor.</p></li>
+<li><p class="sd-card-text"><strong>Cross-check with corrosivity:</strong> gasoil at 200°C is not strongly corrosive (no <span class="math notranslate nohighlight">\(H_2S\)</span> specified), so MOC is not a deciding factor.</p></li>
 <li><p class="sd-card-text"><strong>Cleaning plan.</strong> Specify a removable bundle (floating-head shell-and-tube) and schedule periodic hydroblast cleaning of the tube ID. If the bundle were U-tube (cheaper), the tube-side U-bends could not be cleaned  -  a wrong choice given known fouling.</p></li>
 <li><p class="sd-card-text"><strong>Verification.</strong> The combination “floating-head + fouling fluid tube-side + clean shell-side fluid” is the textbook fouling-service configuration. ✓</p></li>
 </ul>
@@ -1009,7 +1009,7 @@ When two criteria point in opposite directions:</p>
 <p class="admonition-title">Note</p>
 <p><strong>Three-Step MOC Selection</strong></p>
 <ul class="simple">
-<li><p><strong>Temperature limits.</strong> Carbon steel (CS) A516 is good to about 425<span class="math notranslate nohighlight">\(^\circ\)</span>C continuously and down to roughly <span class="math notranslate nohighlight">\(-29^\circ\)</span>C (below this, impact testing per ASME is required; switch to low-temp variants A350 LF2 or A203, or to austenitic SS for cryogenic). Above 425<span class="math notranslate nohighlight">\(^\circ\)</span>C, low-Cr steels (1.25Cr, 2.25Cr) or austenitic SS take over. Below <span class="math notranslate nohighlight">\(-100^\circ\)</span>C: austenitic 304/304L SS. Below <span class="math notranslate nohighlight">\(-195^\circ\)</span>C (LNG, air separation): 9% Ni steel or aluminum.</p></li>
+<li><p><strong>Temperature limits.</strong> Carbon steel (CS) A516 is good to about 425°C continuously and down to roughly <span class="math notranslate nohighlight">\(-29^\circ\)</span>C (below this, impact testing per ASME is required; switch to low-temp variants A350 LF2 or A203, or to austenitic SS for cryogenic). Above 425°C, low-Cr steels (1.25Cr, 2.25Cr) or austenitic SS take over. Below <span class="math notranslate nohighlight">\(-100^\circ\)</span>C: austenitic 304/304L SS. Below <span class="math notranslate nohighlight">\(-195^\circ\)</span>C (LNG, air separation): 9% Ni steel or aluminum.</p></li>
 <li><p><strong>Chemical compatibility.</strong> Screen the candidate materials against the actual process chemistry: oxidizers, chlorides, sulfides, acids, bases, hydrogen. Eliminate alloys that fail in this service. This is where corrosion-engineering tables (Hamner’s, NACE) become essential.</p></li>
 <li><p><strong>Cost.</strong> Among the survivors, pick the cheapest. Consider <em>cladded</em> construction (cheap CS base + thin expensive liner) for large vessels where the wall thickness is dominated by mechanical strength, not corrosion.</p></li>
 </ul>
@@ -1023,14 +1023,14 @@ When two criteria point in opposite directions:</p>
 <ul class="simple">
 <li><p><strong>Carbon steel</strong> (A516-70, A106-B): cheap workhorse for non-corrosive service, steam, hydrocarbons, water below dew point. Service envelope <span class="math notranslate nohighlight">\(-29\)</span> to <span class="math notranslate nohighlight">\(+425^\circ\)</span>C.</p></li>
 <li><p><strong>A201 low-alloy steel</strong>: a CS variant good down to <span class="math notranslate nohighlight">\(-45^\circ\)</span>C; useful for refrigerant-side tubing.</p></li>
-<li><p><strong>304/304L SS</strong>: mildly oxidizing fluids, food, pharma. Avoid above 60<span class="math notranslate nohighlight">\(^\circ\)</span>C with chlorides (<span class="math notranslate nohighlight">\(&gt;\)</span> 50 ppm) due to chloride SCC.</p></li>
+<li><p><strong>304/304L SS</strong>: mildly oxidizing fluids, food, pharma. Avoid above 60°C with chlorides (<span class="math notranslate nohighlight">\(&gt;\)</span> 50 ppm) due to chloride SCC.</p></li>
 <li><p><strong>316/316L SS</strong>: Mo addition improves pitting resistance. Dilute sulfuric (below <span class="math notranslate nohighlight">\(\sim\)</span>10%), seawater (cold), most organic acids.</p></li>
 <li><p><strong>Copper alloys</strong>: Admiralty brass and 90/10 Cu-Ni for surface condensers in seawater; resists biofouling.</p></li>
 <li><p><strong>Monel (Ni-Cu 400)</strong>: HF service, hot caustic, seawater handling.</p></li>
 <li><p><strong>Inconel 625, Hastelloy C-276</strong>: aggressive oxidizing acids, hot chlorides, mixed acids.</p></li>
 <li><p><strong>Titanium Gr 2</strong>: wet chlorine, hypochlorite, oxidizing chlorides, seawater. Catastrophic in dry chlorine or HF.</p></li>
 <li><p><strong>Tantalum</strong>: hot strong acids; the “universal” acid material, very expensive.</p></li>
-<li><p><strong>Glass-lined steel, PTFE-lined steel</strong>: hot HCl, dilute sulfuric below 70<span class="math notranslate nohighlight">\(^\circ\)</span>C, concentrated organics.</p></li>
+<li><p><strong>Glass-lined steel, PTFE-lined steel</strong>: hot HCl, dilute sulfuric below 70°C, concentrated organics.</p></li>
 </ul>
 </div>
 </section>
@@ -1053,14 +1053,14 @@ A pressure vessel’s wall thickness is typically set by hoop stress (ASME Sec. 
 <div class="proof example admonition" id="processequipmentdesign-example-6">
 <p class="admonition-title"><span class="caption-number">Example 154 </span> (MOC Selection: Steam Heats Pure Oxygen)</p>
 <section class="example-content" id="proof-content">
-<p>For the previous example (steam at 45 barg, 257<span class="math notranslate nohighlight">\(^\circ\)</span>C condensing in the tubes; oxygen at 30 to 220<span class="math notranslate nohighlight">\(^\circ\)</span>C in the shell), select MOC for tubes and shell. Justify with cost and safety considerations.</p>
+<p>For the previous example (steam at 45 barg, 257°C condensing in the tubes; oxygen at 30 to 220°C in the shell), select MOC for tubes and shell. Justify with cost and safety considerations.</p>
 </section>
 </div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Shell MOC (oxygen-wetted).</strong> Pure oxygen at <span class="math notranslate nohighlight">\(&gt; 200^\circ\)</span>C is a fire and detonation hazard when in contact with hydrocarbon-contaminated carbon steel. The CS surface, if exposed to even trace amounts of oil, can ignite catastrophically in oxygen. The accepted MOC for hot pure-oxygen service is austenitic stainless  -  <strong>316 SS</strong> is the standard choice. This matches the upstream compressor (C-101, also 316 SS for oxygen service) per industry practice.</p></li>
-<li><p class="sd-card-text"><strong>Tube MOC (steam-wetted).</strong> Saturated steam at 257<span class="math notranslate nohighlight">\(^\circ\)</span>C and 45 barg is benign in carbon steel up to roughly 400-425<span class="math notranslate nohighlight">\(^\circ\)</span>C continuous service. <strong>Carbon steel (A179 or A210)</strong> is standard. Specifying 316 SS tubes for steam service would add cost without benefit.</p></li>
+<li><p class="sd-card-text"><strong>Tube MOC (steam-wetted).</strong> Saturated steam at 257°C and 45 barg is benign in carbon steel up to roughly 400-425°C continuous service. <strong>Carbon steel (A179 or A210)</strong> is standard. Specifying 316 SS tubes for steam service would add cost without benefit.</p></li>
 <li><p class="sd-card-text"><strong>Cost saving from mixed MOC.</strong> If we forced all-316 SS construction, the exchanger cost would approximately double over CS tubes + 316 SS shell. The mixed configuration uses 316 SS only where chemically required (the oxygen-wetted shell) and CS where it suffices (the steam-wetted tubes).</p></li>
 <li><p class="sd-card-text"><strong>Verification: NACE/ASME compliance.</strong> For oxygen service, both ASME B31.3 Chapter X and ASTM G88/G94 govern  -  requires degreased, particulate-free construction with non-flammable lubricants. The 316 SS shell satisfies the material requirement; the cleaning protocol is process-specification, not MOC-specification.</p></li>
 <li><p class="sd-card-text"><strong>Tubesheet MOC.</strong> The tubesheet sees both fluids; conventionally, the tubesheet matches the more demanding side. Here: 316 SS tubesheet, with the carbon-steel tubes seal-welded to it (autogenous TIG welds for compatibility).</p></li>
@@ -1109,7 +1109,7 @@ For a thin-walled cylindrical shell under internal pressure <span class="math no
 <li><p>Longitudinal (axial) stress: <span class="math notranslate nohighlight">\(\sigma_\ell = P R / (2t)\)</span>  -  exactly half the hoop stress.</p></li>
 </ul>
 <p>Hoop stress is always larger, so the hoop equation governs the design.</p>
-<p>The “thin-wall” assumption requires <span class="math notranslate nohighlight">\(t/R &lt; 0.1\)</span> (or equivalently <span class="math notranslate nohighlight">\(P/SE &lt; 0.385\)</span>). Above this, use the thick-wall (Lam’e) equations; below, the thin-wall ones are accurate.</p>
+<p>The “thin-wall” assumption requires <span class="math notranslate nohighlight">\(t/R &lt; 0.1\)</span> (or equivalently <span class="math notranslate nohighlight">\(P/SE &lt; 0.385\)</span>). Above this, use the thick-wall (Lamé) equations; below, the thin-wall ones are accurate.</p>
 </div>
 </section>
 <section id="the-asme-section-viii-div-1-design-equations">
@@ -1156,7 +1156,7 @@ A vessel under external pressure (vacuum service) fails by <em>buckling</em>, no
 <div class="proof example admonition" id="processequipmentdesign-example-8">
 <p class="admonition-title"><span class="caption-number">Example 156 </span> (Reactor Wall Thickness)</p>
 <section class="example-content" id="proof-content">
-<p>A vertical cylindrical reactor: ID = 60 in (1.524 m), design pressure 250 psig, design temperature 600<span class="math notranslate nohighlight">\(^\circ\)</span>F. MOC: SA-516 Gr. 70 carbon steel. <span class="math notranslate nohighlight">\(S = 17{,}500\)</span> psi at 600<span class="math notranslate nohighlight">\(^\circ\)</span>F (from ASME Sec. II Part D). Fully radiographed butt welds, <span class="math notranslate nohighlight">\(E = 1.0\)</span>. Corrosion allowance 1/8 in. Find the required wall thickness and the nearest commercial plate gauge.</p>
+<p>A vertical cylindrical reactor: ID = 60 in (1.524 m), design pressure 250 psig, design temperature 600°F. MOC: SA-516 Gr. 70 carbon steel. <span class="math notranslate nohighlight">\(S = 17{,}500\)</span> psi at 600°F (from ASME Sec. II Part D). Fully radiographed butt welds, <span class="math notranslate nohighlight">\(E = 1.0\)</span>. Corrosion allowance 1/8 in. Find the required wall thickness and the nearest commercial plate gauge.</p>
 </section>
 </div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -1168,7 +1168,7 @@ A vessel under external pressure (vacuum service) fails by <em>buckling</em>, no
 \[
 \frac{P}{SE} = \frac{250}{17{,}500 \times 1.0} = 0.0143 \ll 0.385  \checkmark
 \]</div>
-<p class="sd-card-text">The hoop equation governs. (If <span class="math notranslate nohighlight">\(P/SE &gt; 0.385\)</span>, use the thick-wall Lam’e equations from Sec. VIII Div. 1 Appendix 1-1.)</p>
+<p class="sd-card-text">The hoop equation governs. (If <span class="math notranslate nohighlight">\(P/SE &gt; 0.385\)</span>, use the thick-wall Lamé equations from Sec. VIII Div. 1 Appendix 1-1.)</p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Compute pressure-design thickness from the hoop equation.</strong> <span class="math notranslate nohighlight">\(R = 30\)</span> in.</p></li>
 </ul>
@@ -1309,7 +1309,7 @@ Cavitation occurs in a centrifugal pump when the local fluid pressure at the imp
 <li><p><span class="math notranslate nohighlight">\(z_s\)</span>: static suction head. Positive if the source is above the pump centerline (flooded suction); negative if below (suction lift).</p></li>
 <li><p><span class="math notranslate nohighlight">\(h_{f,s}\)</span>: friction head loss in the suction piping (positive value subtracted; never use a negative friction loss).</p></li>
 </ul>
-<p>Note that <span class="math notranslate nohighlight">\(P_{\text{vap}}\)</span> rises strongly with temperature. Hot fluids (water above 70<span class="math notranslate nohighlight">\(^\circ\)</span>C, hydrocarbons near their bubble point) are at maximum cavitation risk.</p>
+<p>Note that <span class="math notranslate nohighlight">\(P_{\text{vap}}\)</span> rises strongly with temperature. Hot fluids (water above 70°C, hydrocarbons near their bubble point) are at maximum cavitation risk.</p>
 </div>
 </section>
 <section id="worked-example-npsh-a-for-a-hot-water-pump">
@@ -1317,7 +1317,7 @@ Cavitation occurs in a centrifugal pump when the local fluid pressure at the imp
 <div class="proof example admonition" id="processequipmentdesign-example-9">
 <p class="admonition-title"><span class="caption-number">Example 157 </span> (Hot-Water Pump Cavitation Check)</p>
 <section class="example-content" id="proof-content">
-<p>Water at 90<span class="math notranslate nohighlight">\(^\circ\)</span>C (<span class="math notranslate nohighlight">\(P_{\text{vap}} = 70\)</span> kPa, <span class="math notranslate nohighlight">\(\rho = 965\)</span> kg/m<span class="math notranslate nohighlight">\(^3\)</span>) is pumped from an atmospheric tank (<span class="math notranslate nohighlight">\(P_{\text{abs}} = 101.3\)</span> kPa). The water surface is 2.0 m above the pump centerline (flooded suction). Suction-line friction loss is 1.5 m of water. The pump’s NPSH<span class="math notranslate nohighlight">\(_R\)</span> at the design flow is 3.0 m. Determine NPSH<span class="math notranslate nohighlight">\(_A\)</span> and assess whether the pump will cavitate.</p>
+<p>Water at 90°C (<span class="math notranslate nohighlight">\(P_{\text{vap}} = 70\)</span> kPa, <span class="math notranslate nohighlight">\(\rho = 965\)</span> kg/m<span class="math notranslate nohighlight">\(^3\)</span>) is pumped from an atmospheric tank (<span class="math notranslate nohighlight">\(P_{\text{abs}} = 101.3\)</span> kPa). The water surface is 2.0 m above the pump centerline (flooded suction). Suction-line friction loss is 1.5 m of water. The pump’s NPSH<span class="math notranslate nohighlight">\(_R\)</span> at the design flow is 3.0 m. Determine NPSH<span class="math notranslate nohighlight">\(_A\)</span> and assess whether the pump will cavitate.</p>
 </section>
 </div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -1345,7 +1345,7 @@ Cavitation occurs in a centrifugal pump when the local fluid pressure at the imp
 \]</div>
 <p class="sd-card-text">The pump will operate safely without cavitation at the design point.</p>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Sensitivity check: what if water is heated to 100<span class="math notranslate nohighlight">\(^\circ\)</span>C?</strong> <span class="math notranslate nohighlight">\(P_{\text{vap}}\)</span> rises to 101.3 kPa (boiling at atmospheric), so the pressure head term collapses:</p></li>
+<li><p class="sd-card-text"><strong>Sensitivity check: what if water is heated to 100°C?</strong> <span class="math notranslate nohighlight">\(P_{\text{vap}}\)</span> rises to 101.3 kPa (boiling at atmospheric), so the pressure head term collapses:</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
@@ -1355,9 +1355,9 @@ Cavitation occurs in a centrifugal pump when the local fluid pressure at the imp
 \[
 \text{NPSH}_A = 0 + 2.0 - 1.5 = 0.5 \text{m} \ll 3.0 \text{m}
 \]</div>
-<p class="sd-card-text">The pump would cavitate immediately. The design has very little thermal headroom  -  a process upset that heats the water by another 10<span class="math notranslate nohighlight">\(^\circ\)</span>C destroys NPSH<span class="math notranslate nohighlight">\(_A\)</span>. The fix is to raise the source tank (more <span class="math notranslate nohighlight">\(z_s\)</span>) or lower the operating temperature.</p>
+<p class="sd-card-text">The pump would cavitate immediately. The design has very little thermal headroom  -  a process upset that heats the water by another 10°C destroys NPSH<span class="math notranslate nohighlight">\(_A\)</span>. The fix is to raise the source tank (more <span class="math notranslate nohighlight">\(z_s\)</span>) or lower the operating temperature.</p>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Verification.</strong> Hot-water service is the classic cavitation risk: <span class="math notranslate nohighlight">\(P_{\text{vap}}\)</span> rises rapidly with <span class="math notranslate nohighlight">\(T\)</span> in the boiling region. The 90<span class="math notranslate nohighlight">\(^\circ\)</span>C operating point is at the edge of acceptability; a safer design would either use a flooded-suction configuration with more elevation or a deaerated, cooler feed.</p></li>
+<li><p class="sd-card-text"><strong>Verification.</strong> Hot-water service is the classic cavitation risk: <span class="math notranslate nohighlight">\(P_{\text{vap}}\)</span> rises rapidly with <span class="math notranslate nohighlight">\(T\)</span> in the boiling region. The 90°C operating point is at the edge of acceptability; a safer design would either use a flooded-suction configuration with more elevation or a deaerated, cooler feed.</p></li>
 </ul>
 </div>
 </details></section>
@@ -1624,7 +1624,7 @@ Souders-Brown diameter: <span class="math notranslate nohighlight">\(U_{\max} = 
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-exchanger-symbols-and-utility-streams-on-a-pfd">Heat-Exchanger Symbols and Utility Streams on a PFD</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-the-two-lines-on-a-heat-exchanger-symbol">Reading the Two Lines on a Heat-Exchanger Symbol</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-utility-stream-codes">Standard Utility Stream Codes</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#utility-sizing-rule-of-thumb-5-20-circc-rule">Utility-Sizing Rule of Thumb (5-20<span class="math notranslate nohighlight">\(^\circ\)</span>C Rule)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#utility-sizing-rule-of-thumb-5-20c-rule">Utility-Sizing Rule of Thumb (5-20°C Rule)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#worked-example-sizing-the-cooling-water-flow">Worked Example: Sizing the Cooling-Water Flow</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generic-vs-rigorous-heat-exchanger-blocks-in-simulators">Generic vs. Rigorous Heat-Exchanger Blocks in Simulators</a></li>
 </ul>

@@ -1,23 +1,47 @@
 /* ================================================================
    PE Chemical Engineering Study Guide — Custom Theme
+   Light + Dark mode aware
    ================================================================ */
 
-/* ── Typography ─────────────────────────────────────────────── */
+/* ── Typography (mode-neutral) ──────────────────────────────── */
 body {
   font-family: "Inter", "Segoe UI", system-ui, sans-serif;
   font-size: 16px;
   line-height: 1.75;
-  color: #1a1a2e;
 }
 
 .bd-article-container {
   max-width: 900px;
 }
 
-h1 { font-size: 2rem; font-weight: 700; color: #0d1b2a; margin-top: 1.5rem; border-bottom: 3px solid #3a86ff; padding-bottom: 0.4rem; }
-h2 { font-size: 1.55rem; font-weight: 700; color: #0d1b2a; margin-top: 2rem; border-bottom: 1px solid #d0d7e0; padding-bottom: 0.25rem; }
-h3 { font-size: 1.2rem; font-weight: 600; color: #1a1a2e; margin-top: 1.5rem; }
-h4 { font-size: 1.05rem; font-weight: 600; color: #374151; }
+h1 { font-size: 2rem;   font-weight: 700; margin-top: 1.5rem; border-bottom: 3px solid #3a86ff; padding-bottom: 0.4rem; }
+h2 { font-size: 1.55rem; font-weight: 700; margin-top: 2rem;  padding-bottom: 0.25rem; }
+h3 { font-size: 1.2rem;  font-weight: 600; margin-top: 1.5rem; }
+h4 { font-size: 1.05rem; font-weight: 600; }
+
+/* ── Light mode overrides ───────────────────────────────────── */
+html[data-theme="light"] body,
+html:not([data-theme]) body {
+  color: #1a1a2e;
+}
+html[data-theme="light"] h1,
+html:not([data-theme]) h1,
+html[data-theme="light"] h2,
+html:not([data-theme]) h2 { color: #0d1b2a; }
+html[data-theme="light"] h2,
+html:not([data-theme]) h2 { border-bottom: 1px solid #d0d7e0; }
+html[data-theme="light"] h3,
+html:not([data-theme]) h3 { color: #1a1a2e; }
+html[data-theme="light"] h4,
+html:not([data-theme]) h4 { color: #374151; }
+
+/* ── Dark mode overrides ────────────────────────────────────── */
+html[data-theme="dark"] body  { color: #e2e8f0; }
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4   { color: #f1f5f9; }
+html[data-theme="dark"] h2   { border-bottom: 1px solid #334155; }
 
 /* ── Math spacing ───────────────────────────────────────────── */
 mjx-container { font-size: 1.08em !important; }
@@ -33,7 +57,6 @@ mjx-container { font-size: 1.08em !important; }
   overflow: hidden;
 }
 
-/* Title bar */
 .admonition p.admonition-title {
   font-weight: 700;
   font-size: 0.85rem;
@@ -41,10 +64,9 @@ mjx-container { font-size: 1.08em !important; }
   letter-spacing: 0.06em;
   margin: 0;
   padding: 0.45rem 1rem;
-  display: block;       /* block so the hidden icon doesn't shift text */
+  display: block;
 }
 
-/* Body: give every direct child some padding */
 .admonition > *:not(p.admonition-title) {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -52,7 +74,7 @@ mjx-container { font-size: 1.08em !important; }
 .admonition > *:not(p.admonition-title):first-of-type { padding-top: 0.75rem; }
 .admonition > *:not(p.admonition-title):last-child    { padding-bottom: 0.75rem; }
 
-/* Kill every form of theme icon injection */
+/* Kill theme icon injection */
 .admonition p.admonition-title svg,
 .admonition p.admonition-title img,
 .admonition p.admonition-title .sd-sphinx-override,
@@ -62,72 +84,113 @@ mjx-container { font-size: 1.08em !important; }
 .admonition p.admonition-title::before,
 .admonition p.admonition-title::after { content: none !important; }
 
-/* Important / Key Formula → blue */
-.admonition.important {
-  background: #eef4ff;
-  border-color: #93c5fd;
+/* ── Admonition colors — LIGHT ──────────────────────────────── */
+html[data-theme="light"] .admonition.important,
+html:not([data-theme]) .admonition.important {
+  background: #eef4ff; border-color: #93c5fd;
 }
-.admonition.important > p.admonition-title {
-  color: #1d4ed8;
-  background: #dbeafe;
-  border-bottom: 1px solid #93c5fd;
-}
-
-/* Note / Key Concept → green */
-.admonition.note {
-  background: #f0fdf4;
-  border-color: #86efac;
-}
-.admonition.note > p.admonition-title {
-  color: #15803d;
-  background: #dcfce7;
-  border-bottom: 1px solid #86efac;
+html[data-theme="light"] .admonition.important > p.admonition-title,
+html:not([data-theme]) .admonition.important > p.admonition-title {
+  color: #1d4ed8; background: #dbeafe; border-bottom: 1px solid #93c5fd;
 }
 
-/* Tip / Term Definitions → amber */
-.admonition.tip {
-  background: #fffbeb;
-  border-color: #fcd34d;
+html[data-theme="light"] .admonition.note,
+html:not([data-theme]) .admonition.note {
+  background: #f0fdf4; border-color: #86efac;
 }
-.admonition.tip > p.admonition-title {
-  color: #92400e;
-  background: #fef3c7;
-  border-bottom: 1px solid #fcd34d;
+html[data-theme="light"] .admonition.note > p.admonition-title,
+html:not([data-theme]) .admonition.note > p.admonition-title {
+  color: #15803d; background: #dcfce7; border-bottom: 1px solid #86efac;
 }
 
-/* Warning → orange */
-.admonition.warning {
-  background: #fff7ed;
-  border-color: #fdba74;
+html[data-theme="light"] .admonition.tip,
+html:not([data-theme]) .admonition.tip {
+  background: #fffbeb; border-color: #fcd34d;
 }
-.admonition.warning > p.admonition-title {
-  color: #9a3412;
-  background: #ffedd5;
-  border-bottom: 1px solid #fdba74;
+html[data-theme="light"] .admonition.tip > p.admonition-title,
+html:not([data-theme]) .admonition.tip > p.admonition-title {
+  color: #92400e; background: #fef3c7; border-bottom: 1px solid #fcd34d;
 }
 
-/* Caution / PE Exam Traps → red */
-.admonition.caution {
-  background: #fff1f2;
-  border-color: #fca5a5;
+html[data-theme="light"] .admonition.warning,
+html:not([data-theme]) .admonition.warning {
+  background: #fff7ed; border-color: #fdba74;
 }
-.admonition.caution > p.admonition-title {
-  color: #991b1b;
-  background: #fee2e2;
-  border-bottom: 1px solid #fca5a5;
+html[data-theme="light"] .admonition.warning > p.admonition-title,
+html:not([data-theme]) .admonition.warning > p.admonition-title {
+  color: #9a3412; background: #ffedd5; border-bottom: 1px solid #fdba74;
 }
 
-/* ── prf:example boxes → orange card ───────────────────────── */
-.prf-prf-example {
+html[data-theme="light"] .admonition.caution,
+html:not([data-theme]) .admonition.caution {
+  background: #fff1f2; border-color: #fca5a5;
+}
+html[data-theme="light"] .admonition.caution > p.admonition-title,
+html:not([data-theme]) .admonition.caution > p.admonition-title {
+  color: #991b1b; background: #fee2e2; border-bottom: 1px solid #fca5a5;
+}
+
+/* ── Admonition colors — DARK ───────────────────────────────── */
+html[data-theme="dark"] .admonition.important {
+  background: #1e2d4a; border-color: #3b6fd4;
+}
+html[data-theme="dark"] .admonition.important > p.admonition-title {
+  color: #93c5fd; background: #1a2f52; border-bottom: 1px solid #3b6fd4;
+}
+
+html[data-theme="dark"] .admonition.note {
+  background: #14291e; border-color: #22c55e;
+}
+html[data-theme="dark"] .admonition.note > p.admonition-title {
+  color: #86efac; background: #15301f; border-bottom: 1px solid #22c55e;
+}
+
+html[data-theme="dark"] .admonition.tip {
+  background: #292008; border-color: #ca8a04;
+}
+html[data-theme="dark"] .admonition.tip > p.admonition-title {
+  color: #fde68a; background: #2d2208; border-bottom: 1px solid #ca8a04;
+}
+
+html[data-theme="dark"] .admonition.warning {
+  background: #2c1a08; border-color: #ea580c;
+}
+html[data-theme="dark"] .admonition.warning > p.admonition-title {
+  color: #fdba74; background: #2f1c09; border-bottom: 1px solid #ea580c;
+}
+
+html[data-theme="dark"] .admonition.caution {
+  background: #2d0f0f; border-color: #ef4444;
+}
+html[data-theme="dark"] .admonition.caution > p.admonition-title {
+  color: #fca5a5; background: #300f0f; border-bottom: 1px solid #ef4444;
+}
+
+/* Admonition body text in dark mode */
+html[data-theme="dark"] .admonition > *:not(p.admonition-title) {
+  color: #cbd5e1;
+}
+
+/* ── prf:example boxes ──────────────────────────────────────── */
+html[data-theme="light"] .prf-prf-example,
+html:not([data-theme]) .prf-prf-example {
   background: #fff8f0;
   border: 1.5px solid #fb923c;
   border-left: 5px solid #ea580c;
+  color: #1a1a2e;
+}
+html[data-theme="dark"] .prf-prf-example {
+  background: #2a1500;
+  border: 1.5px solid #c2410c;
+  border-left: 5px solid #ea580c;
+  color: #e2e8f0;
+}
+.prf-prf-example {
   border-radius: 8px;
   padding: 1rem 1.2rem;
   margin: 1.2rem 0;
   box-shadow: 0 1px 4px rgba(0,0,0,0.06);
 }
-
 .prf-prf-example .prf-prf-title {
   font-weight: 700;
   font-size: 0.88rem;
@@ -136,67 +199,59 @@ mjx-container { font-size: 1.08em !important; }
   color: #c2410c;
   margin-bottom: 0.5rem;
 }
-
+html[data-theme="dark"] .prf-prf-example .prf-prf-title {
+  color: #fb923c;
+}
 .prf-prf-example .prf-prf-title::before {
-  content: "📝 Example — ";
+  content: "Example: ";
 }
 
 /* ── Dropdown / Solution boxes ──────────────────────────────── */
-details.toggle {
+html[data-theme="light"] details.toggle,
+html:not([data-theme]) details.toggle {
   background: #f8fafc;
   border: 1px solid #cbd5e1;
   border-left: 4px solid #6366f1;
+}
+html[data-theme="dark"] details.toggle {
+  background: #1e1e2e;
+  border: 1px solid #3f3f5a;
+  border-left: 4px solid #818cf8;
+}
+details.toggle {
   border-radius: 8px;
   margin: 0.8rem 0;
   box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
+html[data-theme="light"] details.toggle summary,
+html:not([data-theme]) details.toggle summary { color: #4338ca; }
+html[data-theme="dark"] details.toggle summary  { color: #a5b4fc; }
 details.toggle summary {
   font-weight: 600;
   font-size: 0.92rem;
-  color: #4338ca;
   padding: 0.7rem 1rem;
   cursor: pointer;
   user-select: none;
 }
+html[data-theme="light"] details.toggle summary::marker,
+html:not([data-theme]) details.toggle summary::marker { color: #6366f1; }
+html[data-theme="dark"] details.toggle summary::marker  { color: #818cf8; }
 
-details.toggle summary::marker { color: #6366f1; }
-
-details.toggle[open] summary {
+html[data-theme="light"] details.toggle[open] summary,
+html:not([data-theme]) details.toggle[open] summary {
   border-bottom: 1px solid #e2e8f0;
-  margin-bottom: 0.5rem;
 }
+html[data-theme="dark"] details.toggle[open] summary {
+  border-bottom: 1px solid #334155;
+}
+details.toggle[open] summary { margin-bottom: 0.5rem; }
 
 details.toggle > *:not(summary) {
   padding: 0 1rem 0.8rem 1rem;
 }
 
-/* ── Formula summary tables ─────────────────────────────────── */
-table.formula-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1rem 0;
-  font-size: 0.95rem;
-}
-
-table.formula-table th {
-  background: #3a86ff;
-  color: white;
-  padding: 0.5rem 0.8rem;
-  text-align: left;
-  font-weight: 600;
-}
-
-table.formula-table td {
-  padding: 0.45rem 0.8rem;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-table.formula-table tr:nth-child(even) td {
-  background: #f8fafc;
-}
-
-/* General table improvements */
+/* ── Tables ─────────────────────────────────────────────────── */
 table {
   border-collapse: collapse;
   width: 100%;
@@ -204,24 +259,34 @@ table {
   font-size: 0.95rem;
 }
 
-table th {
+html[data-theme="light"] table th,
+html:not([data-theme]) table th {
   background: #1e3a5f;
   color: #ffffff;
+}
+html[data-theme="dark"] table th {
+  background: #1e3a5f;
+  color: #e2e8f0;
+}
+table th {
   padding: 0.5rem 0.8rem;
   text-align: left;
 }
 
-table td {
-  padding: 0.4rem 0.8rem;
-  border-bottom: 1px solid #e5e7eb;
-}
+html[data-theme="light"] table td,
+html:not([data-theme]) table td { border-bottom: 1px solid #e5e7eb; }
+html[data-theme="dark"] table td  { border-bottom: 1px solid #334155; }
+table td { padding: 0.4rem 0.8rem; }
 
-table tr:hover td {
-  background: #f0f7ff;
-}
+html[data-theme="light"] table tr:hover td,
+html:not([data-theme]) table tr:hover td { background: #f0f7ff; }
+html[data-theme="dark"] table tr:hover td  { background: #1e2d3d; }
 
 /* ── Section dividers ───────────────────────────────────────── */
-hr { border: none; border-top: 2px solid #e2e8f0; margin: 2rem 0; }
+html[data-theme="light"] hr,
+html:not([data-theme]) hr { border-top: 2px solid #e2e8f0; }
+html[data-theme="dark"] hr  { border-top: 2px solid #334155; }
+hr { border: none; margin: 2rem 0; }
 
 /* ── Code blocks ────────────────────────────────────────────── */
 pre, code {
@@ -229,21 +294,25 @@ pre, code {
   font-size: 0.88em;
   border-radius: 5px;
 }
+html[data-theme="light"] div.highlight,
+html:not([data-theme]) div.highlight { border: 1px solid #e5e7eb; }
+html[data-theme="dark"] div.highlight  { border: 1px solid #334155; }
+div.highlight { border-radius: 8px; }
 
-div.highlight {
-  border-radius: 8px;
-  border: 1px solid #e5e7eb;
-}
+/* ── Sidebar navigation ─────────────────────────────────────── */
+.bd-sidebar-primary { font-size: 0.9rem; }
 
-/* ── Sidebar navigation improvements ───────────────────────── */
-.bd-sidebar-primary {
-  font-size: 0.9rem;
-}
-
-.bd-sidebar-primary .nav-link.active {
+html[data-theme="light"] .bd-sidebar-primary .nav-link.active,
+html:not([data-theme]) .bd-sidebar-primary .nav-link.active {
   font-weight: 700;
   color: #3a86ff;
   background: #eef4ff;
+  border-radius: 4px;
+}
+html[data-theme="dark"] .bd-sidebar-primary .nav-link.active {
+  font-weight: 700;
+  color: #93c5fd;
+  background: #1e2d4a;
   border-radius: 4px;
 }
 
@@ -252,24 +321,22 @@ div.highlight {
   background: linear-gradient(135deg, #0d1b2a 0%, #1e3a5f 100%);
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
-
 .navbar-brand, .navbar-nav .nav-link {
   color: #e2e8f0 !important;
 }
 
-/* ── Chapter landing section cards ─────────────────────────── */
+/* ── Cards ──────────────────────────────────────────────────── */
 .sd-card {
   border-radius: 10px !important;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
-
 .sd-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.12) !important;
 }
 
-/* ── Print friendliness ─────────────────────────────────────── */
+/* ── Print ──────────────────────────────────────────────────── */
 @media print {
   .bd-sidebar-primary, .bd-header, .bd-footer { display: none; }
   .bd-article-container { max-width: 100%; }
@@ -282,5 +349,4 @@ div.highlight {
 @media (max-width: 768px) {
   h1 { font-size: 1.6rem; }
   h2 { font-size: 1.3rem; }
-  .admonition { padding: 0.8rem; }
 }

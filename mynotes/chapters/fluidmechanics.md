@@ -584,7 +584,7 @@ Let's check each parameter and convert it if necessary.
 Density ($\rho$): Given as $1.0 \, \text{g/cm}^3$, already in CGS units.
 Velocity ($\nu$): Given as $100 \, \text{cm/s}$, already in CGS units.
 Diameter ($D$): Given as $1.0 \, \text{m}$, convert to cm: $D = 1.0 \, \text{m} \times \frac{100 \, \text{cm}}{1 \, \text{m}} = 100 \, \text{cm}$.
-Viscosity ($\mu$): Given as $1.0 \, \text{centipoise (cP)}$. The base unit in CGS is the poise, where 1 poise = 1 g/(cm$\cdot$s), so $\mu = 1.0 \, \text{cP} = 0.01 \, \text{poise} = 0.01 \, \frac{\text{g}}{\text{cm}\cdot\text{s}}$.
+Viscosity ($\mu$): Given as $1.0 \, \text{centipoise (cP)}$. The base unit in CGS is the poise, where 1 poise = 1 g/(cm·s), so $\mu = 1.0 \, \text{cP} = 0.01 \, \text{poise} = 0.01 \, \frac{\text{g}}{\text{cm}\cdot\text{s}}$.
 
 **Step 3: Calculate the Reynolds Number:**
 Substitute the consistent CGS values into the formula. First, verify that units cancel correctly:
@@ -743,7 +743,7 @@ $$
 
 - **Altitude:** $z_2 = 40,000 \, \text{ft} \times \frac{0.3048 \, \text{m}}{1 \, \text{ft}} = 12,192$ m.
 - **Sea Level (Point 1):** $z_1 = 0$ m, $P_1 = 101.33$ kPa = 101,330 Pa, $T_1 = T_0 = 15^\circ\text{C} = 288.15$ K.
-- **Constants:** $g = 9.807$ m/s$^2$. Gas constant for air, $R = 286.9$ J/(kg$\cdot$K).
+- **Constants:** $g = 9.807$ m/s$^2$. Gas constant for air, $R = 286.9$ J/(kg·K).
 - **Model 1 Data:** Specific weight of air at sea level, $\gamma = 12.014$ N/m$^3$.
 - **Model 3 Data:** Standard atmospheric temperature lapse rate, $\beta = 0.00650$ K/m.
 
@@ -778,7 +778,7 @@ The result of a negative absolute pressure is **physically impossible**. This de
 ```
 
 ```{dropdown} Solution: Model 2 Compressible Isothermal Fluid
-This model accounts for the fact that density changes with pressure, but assumes the temperature remains constant at its sea-level value of 15$^\circ$C.
+This model accounts for the fact that density changes with pressure, but assumes the temperature remains constant at its sea-level value of 15°C.
 
 **Isothermal Compressible Formula**
 
@@ -805,7 +805,7 @@ P_2 = (101.33 \, \text{kPa}) \cdot \exp(-1.446) = (101.33) \cdot (0.2355) = \tex
 $$
 
 **Analysis of Model 2**
-This result is physically realistic—a positive pressure that is much lower than sea-level pressure. However, it is still significantly different from the true value. This is because the atmosphere is not isothermal; it gets much colder at high altitudes. Assuming a constant warm temperature underestimates the density of the air aloft, which in turn underestimates the weight of the air column and results in a predicted pressure that is too high.
+This result is physically realistic: a positive pressure that is much lower than sea-level pressure. However, it is still significantly different from the true value. This is because the atmosphere is not isothermal; it gets much colder at high altitudes. Assuming a constant warm temperature underestimates the density of the air aloft, which in turn underestimates the weight of the air column and results in a predicted pressure that is too high.
 
 ```
 
@@ -849,7 +849,7 @@ P_2 = (101.33) \cdot (0.1842) = \textbf{18.67 kPa}
 $$
 
 **Analysis of Model 3**
-This result is extremely close to the standard tabulated value of 18.7 kPa. This demonstrates that using a more realistic physical model—one that accounts for both compressibility and the actual temperature profile of the atmosphere.
+This result is extremely close to the standard tabulated value of 18.7 kPa. This demonstrates that using a more realistic physical model, one that accounts for both compressibility and the actual temperature profile of the atmosphere.
 
 ```
 
@@ -874,7 +874,7 @@ A common and practical problem in fluid mechanics is determining the power requi
 ### Example: Pumping Water for a Ski Resort
 
 ```{prf:example} Pumping Water for Snow Making
-**Question:** A ski resort needs to pump water at 10$^\circ$C from a reservoir at an elevation of 6500 ft to a snow-making machine at 7300 ft. The water flows through 1000 ft of 2-inch diameter commercial steel pipe at a rate of 0.25 ft$^3$/s. The pressure required at the inlet of the snow machine is 20 psi (gauge). The piping system includes a sharp-edged entrance, a fully open gate valve, and two standard 90$^\circ$ elbows. Determine the horsepower that must be delivered to the water by the pump.
+**Question:** A ski resort needs to pump water at 10°C from a reservoir at an elevation of 6500 ft to a snow-making machine at 7300 ft. The water flows through 1000 ft of 2-inch diameter commercial steel pipe at a rate of 0.25 ft$^3$/s. The pressure required at the inlet of the snow machine is 20 psi (gauge). The piping system includes a sharp-edged entrance, a fully open gate valve, and two standard 90$^\circ$ elbows. Determine the horsepower that must be delivered to the water by the pump.
 
 ```
 
@@ -1250,7 +1250,7 @@ $$
 
 ```
 
-This important result tells us that the pressure exerted by a fluid column depends only on its density ($\rho$), height ($h$), and gravity ($g$)—not on the shape of the container or the total amount of fluid. The term $\rho g$ is also known as the **specific weight**, $\gamma$. So, the equation is often written as $P = \gamma h$.
+This important result tells us that the pressure exerted by a fluid column depends only on its density ($\rho$), height ($h$), and gravity ($g$) - not on the shape of the container or the total amount of fluid. The term $\rho g$ is also known as the **specific weight**, $\gamma$. So, the equation is often written as $P = \gamma h$.
 
 ```{note}
 **The Fundamental Rule of Manometry**
@@ -1430,7 +1430,7 @@ $$
 
 
 - $\tau$: **Shear Stress** - This is the force per unit area that acts *parallel* (tangential) to a surface. Imagine spreading honey on toast; the force you apply with the knife parallel to the bread creates a shear stress in the honey. Its units are Pascals (Pa) or Newtons per square meter (N/m$^2$).
-- $\mu$: **Dynamic Viscosity** - This is a fluid property that measures its intrinsic resistance to flow. Honey has a high viscosity; water has a low viscosity. Its units are Pascal-seconds (Pa$\cdot$s).
+- $\mu$: **Dynamic Viscosity** - This is a fluid property that measures its intrinsic resistance to flow. Honey has a high viscosity; water has a low viscosity. Its units are Pascal-seconds (Pa·s).
 - $\frac{du}{dy}$: **Velocity Gradient** (or Rate of Shearing Strain) - This term describes how quickly the fluid velocity changes as you move away from a surface. A steep gradient means the velocity changes rapidly over a short distance. Its units are inverse seconds (s$^{-1}$).
 
 ```
@@ -1608,7 +1608,7 @@ $$\tau = \frac{0.1 \, \text{N}}{0.0004712 \, \text{m}^2} = 212.2 \, \text{N/m}^2
 
 $$
 
-\frac{du}{dy} \approx \frac{\Delta u}{\Delta y} = \frac{0.1 \, \text{m/s}}{0.001 \, \text{m}} = \textbf{100 s \textsuperscript{-1}}
+\frac{du}{dy} \approx \frac{\Delta u}{\Delta y} = \frac{0.1 \, \text{m/s}}{0.001 \, \text{m}} = \textbf{100 s ⁻¹}
 
 $$
 
@@ -1624,7 +1624,7 @@ $$
 $$
 
 **Step 5: Interpret the Result:**
-The standard SI unit for viscosity is the Pascal-second (Pa$\cdot$s). A more common unit in practice is the centipoise (cP), where 1 Pa$\cdot$s = 1000 cP.
+The standard SI unit for viscosity is the Pascal-second (Pa·s). A more common unit in practice is the centipoise (cP), where 1 Pa·s = 1000 cP.
 
 $$
 
@@ -1640,7 +1640,7 @@ For context, the viscosity of water at room temperature is about 1 cP, olive oil
 
 ## PE Exam Practice Problems
 
-```{prf:example} Practice Problem 1 — Pump Sizing
+```{prf:example} Practice Problem 1: Pump Sizing
 
 Water ($\rho = 1000$ kg/m³, $\mu = 0.001$ Pa·s) is pumped at 0.05 m³/s from a lower reservoir (elevation 0 m) to an upper tank (elevation 25 m) through 200 m of commercial steel pipe with inner diameter $D = 0.10$ m. The Darcy friction factor is $f = 0.018$.
 
@@ -1676,7 +1676,7 @@ $$\dot{W}_{shaft} = \frac{\dot{W}_{fluid}}{\eta} = \frac{48{,}750}{0.80} = \math
 
 ---
 
-```{prf:example} Practice Problem 2 — Reynolds Number and Flow Regime
+```{prf:example} Practice Problem 2: Reynolds Number and Flow Regime
 
 Crude oil ($\rho = 870$ kg/m³, $\mu = 0.025$ Pa·s) flows through a 6-inch (0.152 m) pipeline at a volumetric flow rate of 0.08 m³/s.
 
@@ -1699,15 +1699,15 @@ Flow is **turbulent** ($Re \gg 4000$). Use turbulent friction factor correlation
 
 $$\Delta P = \frac{128 \mu L Q}{\pi D^4} = \frac{128 \times 0.025 \times 500 \times 0.08}{\pi \times (0.152)^4} = \frac{128}{8.39\times10^{-4}} \approx 38{,}500 \text{ Pa}$$
 
-This result is **not physically valid** here — Hagen-Poiseuille assumes laminar flow ($Re < 2100$), but $Re = 23{,}350$. The actual turbulent pressure drop would be several times higher and must use the Darcy-Weisbach equation with a turbulent friction factor.
+This result is **not physically valid** here - Hagen-Poiseuille assumes laminar flow ($Re < 2100$), but $Re = 23{,}350$. The actual turbulent pressure drop would be several times higher and must use the Darcy-Weisbach equation with a turbulent friction factor.
 ```
 
 ```{caution}
-**PE Exam Traps — Fluid Mechanics**
+**PE Exam Traps: Fluid Mechanics**
 
-- **Darcy vs. Fanning friction factor:** The Darcy (Moody) friction factor $f_D = 4f_{Fanning}$. The Darcy-Weisbach equation uses $f_D$; many textbooks and the Churchill correlation give $f_F$. Always confirm which form a given $f$ value is for — using $f_F$ in place of $f_D$ underestimates friction loss by 4×.
+- **Darcy vs. Fanning friction factor:** The Darcy (Moody) friction factor $f_D = 4f_{Fanning}$. The Darcy-Weisbach equation uses $f_D$; many textbooks and the Churchill correlation give $f_F$. Always confirm which form a given $f$ value is for - using $f_F$ in place of $f_D$ underestimates friction loss by 4×.
 - **MEB sign convention:** $\dot{W}_s/\dot{m}$ is positive when a pump adds energy to the fluid; it's negative for a turbine that extracts energy. Getting this backwards gives pump power instead of turbine power or vice versa.
 - **Bernoulli applies only to streamlines without friction or shaft work.** If a pump is present, or the problem mentions a pressure drop, use the full MEB. Bernoulli applied across a pump gives zero work, which is wrong.
 - **Velocity at open reservoir surface:** At a large open reservoir, the surface velocity is approximately zero ($u \approx 0$). Using the pipe velocity at this point is a common mistake that adds a phantom kinetic energy term.
-- **Hagen-Poiseuille is laminar only ($Re < 2100$).** Never apply it to turbulent flow — it will dramatically underpredict pressure drop. Always check Reynolds number first.
+- **Hagen-Poiseuille is laminar only ($Re < 2100$).** Never apply it to turbulent flow - it will dramatically underpredict pressure drop. Always check Reynolds number first.
 ```

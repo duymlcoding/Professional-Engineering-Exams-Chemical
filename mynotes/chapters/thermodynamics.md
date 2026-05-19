@@ -166,9 +166,6 @@ $$
 
 V = \frac{(8.314)(773.15)}{17.0} = 378.2 \text{ cm}^3\text{/mol}
 
-$$
-
-$$
 
 v_{calc} = 378.2 \times \frac{1}{18.015} \times \frac{1}{1000} \times \frac{1}{10^6} = 0.0210 \text{ m}^3\text{/kg}
 
@@ -294,9 +291,6 @@ $$
 
 H = U + PV \quad \text{(Equation 2)}
 
-$$
-
-$$
 
 \Delta H = \Delta U + \Delta(PV) \quad \text{(Equation 3)}
 
@@ -321,9 +315,6 @@ $$
 
 H_{initial} = H_{final}
 
-$$
-
-$$
 
 m_{initial} \cdot \hat{H}_{liquid, 40^\circ\text{C}} = m_{ice} \cdot \hat{H}_{ice, 0^\circ\text{C}} + m_{vapor} \cdot \hat{H}_{vapor}
 
@@ -351,21 +342,12 @@ $$
 
 168 = -334 + 334x + 2537x
 
-$$
-
-$$
 
 168 + 334 = (334 + 2537)x
 
-$$
-
-$$
 
 502 = 2871x
 
-$$
-
-$$
 
 x = \frac{502}{2871} = 0.175
 
@@ -388,9 +370,9 @@ $$
 
 **Given Data:**
 - Heat of formation of NH$_3$ at $25^\circ\text{C}$: $\Delta H_{f, 25^\circ\text{C}} = -45.9$ kJ/mol
-- $C_{P, N_2} = 29$ J/(mol$\cdot$K)
-- $C_{P, H_2} = 29$ J/(mol$\cdot$K)
-- $C_{P, NH_3} = 35.7$ J/(mol$\cdot$K)
+- $C_{P, N_2} = 29$ J/(mol·K)
+- $C_{P, H_2} = 29$ J/(mol·K)
+- $C_{P, NH_3} = 35.7$ J/(mol·K)
 ```
 
 ```{dropdown} Solution Steps
@@ -413,9 +395,6 @@ $$
 
 \Delta H_{rxn, 25^\circ\text{C}} = [2 \cdot \Delta H_{f, NH_3}] - [1 \cdot \Delta H_{f, N_2} + 3 \cdot \Delta H_{f, H_2}]
 
-$$
-
-$$
 
 \Delta H_{rxn, 25^\circ\text{C}} = [2 \cdot (-45.9)] - [0 + 0] = -91.8 \text{ kJ}
 
@@ -428,9 +407,6 @@ $$
 
 \Delta H_1 = [(1 \text{ mol} \cdot 29 \text{ J/(mol$\cdot$K)}) + (3 \text{ mol} \cdot 29 \text{ J/(mol$\cdot$K)})] \cdot (-150 \text{ K})
 
-$$
-
-$$
 
 \Delta H_1 = (116 \text{ J/K}) \cdot (-150 \text{ K}) = -17,400 \text{ J} = -17.4 \text{ kJ}
 
@@ -443,9 +419,6 @@ $$
 
 \Delta H_2 = (2 \text{ mol} \cdot 35.7 \text{ J/(mol$\cdot$K)}) \cdot (150 \text{ K})
 
-$$
-
-$$
 
 \Delta H_2 = (71.4 \text{ J/K}) \cdot (150 \text{ K}) = 10,710 \text{ J} = +10.71 \text{ kJ}
 
@@ -499,11 +472,11 @@ The heat of reaction at $175^\circ\text{C}$ is **-98.49 kJ**, making the reactio
 ```{admonition} Term Definitions
 :class: tip
 **Critical Sign Conventions:**
-- Heat **added** to system: $Q$ $>$ $0$ (positive)
-- Heat **removed** from system: $Q$ $<$ $0$ (negative)
+- Heat **added** to system: $Q > 0$ (positive)
+- Heat **removed** from system: $Q < 0$ (negative)
 - Adiabatic process: $Q = 0$ (no heat transfer)
-- Work done **on** system (compression): $W$ $>$ $0$ (positive)
-- Work done **by** system (expansion): $W$ $<$ $0$ (negative)
+- Work done **on** system (compression): $W > 0$ (positive)
+- Work done **by** system (expansion): $W < 0$ (negative)
 - Reversible process: $P_{gas} = P_{ext}$ (system always in equilibrium)
 ```
 
@@ -549,15 +522,9 @@ $$
 
 C_P = C_V + R \quad \text{(Equation 5)}
 
-$$
-
-$$
 
 \Delta U = C_V \Delta T \quad \text{(Equation 6)}
 
-$$
-
-$$
 
 \Delta H = C_P \Delta T \quad \text{(Equation 7)}
 
@@ -582,15 +549,9 @@ $$
 
 W_{EC} = 0 \quad \text{(no volume change)}
 
-$$
-
-$$
 
 \Delta U = Q_v \quad \text{(Equation 8)}
 
-$$
-
-$$
 
 Q_v = C_V \Delta T \quad \text{(Equation 9)}
 
@@ -602,15 +563,9 @@ $$
 
 W_{EC} = -P\Delta V \quad \text{(Equation 10)}
 
-$$
-
-$$
 
 Q_p = \Delta H = \Delta U + P\Delta V \quad \text{(Equation 11)}
 
-$$
-
-$$
 
 Q_p = C_P \Delta T \quad \text{(Equation 12)}
 
@@ -669,9 +624,6 @@ $$
 
 \int_{T_1}^{T_2} \frac{C_V}{T} dT = -\int_{V_1}^{V_2} \frac{nR}{V} dV
 
-$$
-
-$$
 
 C_V \ln\left(\frac{T_2}{T_1}\right) = -nR \ln\left(\frac{V_2}{V_1}\right)
 
@@ -701,9 +653,6 @@ $$
 
 C_V \ln\left(\frac{T_2}{T_1}\right) = -nR \ln\left(\frac{T_2}{T_1}\right) - nR \ln\left(\frac{P_1}{P_2}\right)
 
-$$
-
-$$
 
 (C_V + nR) \ln\left(\frac{T_2}{T_1}\right) = nR \ln\left(\frac{P_2}{P_1}\right)
 
@@ -716,9 +665,6 @@ $$
 
 C_P \ln\left(\frac{T_2}{T_1}\right) = nR \ln\left(\frac{P_2}{P_1}\right)
 
-$$
-
-$$
 
 \ln\left(\frac{T_2}{T_1}\right) = \frac{nR}{C_P} \ln\left(\frac{P_2}{P_1}\right)
 
@@ -741,7 +687,7 @@ $$
 
 $$
 
-**Physical Interpretation:** This relationship shows that for adiabatic compression ($P_2$ $>$ $P_1$), the temperature must increase ($T_2$ $>$ $T_1$). The exponent $R/C_P$ is always positive and less than 1 for real gases, making this relationship physically meaningful.
+**Physical Interpretation:** This relationship shows that for adiabatic compression ($P_2 > P_1$), the temperature must increase ($T_2 > T_1$). The exponent $R/C_P$ is always positive and less than 1 for real gases, making this relationship physically meaningful.
 ```
 
 ### Examples for Closed Systems
@@ -795,9 +741,6 @@ $$
 
 \int_{T_1}^{T_2} \frac{C_V}{T} dT = -\int_{V_1}^{V_2} \frac{R}{V} dV
 
-$$
-
-$$
 
 C_V \ln\left(\frac{T_2}{T_1}\right) = -R \ln\left(\frac{V_2}{V_1}\right)
 
@@ -827,9 +770,6 @@ $$
 
 T_2 = T_1 \left(\frac{V_1}{V_2}\right)^{0.4} = 300 \text{ K} \cdot \left(\frac{10}{1}\right)^{0.4}
 
-$$
-
-$$
 
 T_2 = 300 \text{ K} \cdot (10)^{0.4} = 300 \text{ K} \cdot 2.51 = 753 \text{ K}
 
@@ -852,9 +792,6 @@ $$
 
 P_2 = P_1 \left(\frac{V_1}{V_2}\right) \left(\frac{T_2}{T_1}\right) = 1 \text{ bar} \cdot \left(\frac{10}{1}\right) \cdot \left(\frac{753}{300}\right)
 
-$$
-
-$$
 
 P_2 = 1 \cdot 10 \cdot 2.51 = 25.1 \text{ bar}
 
@@ -870,7 +807,7 @@ If this compression were irreversible, more work would be required to reach the 
 ```
 
 ```{prf:example} Constant Pressure vs. Constant Volume Heating
-Two containers at 350 K and 0.5 MPa each contain 1.0 mol of ideal gas with $C_P = 31$ J/(mol$\cdot$K).
+Two containers at 350 K and 0.5 MPa each contain 1.0 mol of ideal gas with $C_P = 31$ J/(mol·K).
 - **Container A:** Constant pressure piston-cylinder
 - **Container B:** Fixed volume container
 
@@ -887,7 +824,7 @@ Q_p = \Delta H = nC_P\Delta T = nC_P(T_2 - T_1)
 
 $$
 
-Given: $Q_p = 8.5$ kJ = 8500 J, $n = 1.0$ mol, $C_P = 31$ J/(mol$\cdot$K), $T_1 = 350$ K
+Given: $Q_p = 8.5$ kJ = 8500 J, $n = 1.0$ mol, $C_P = 31$ J/(mol·K), $T_1 = 350$ K
 
 **Step 2: Solve for Final Temperature (Container A)**
 
@@ -895,15 +832,9 @@ $$
 
 8500 \text{ J} = (1.0 \text{ mol}) \cdot (31 \text{ J/(mol$\cdot$K)}) \cdot (T_2 - 350 \text{ K})
 
-$$
-
-$$
 
 T_2 - 350 = \frac{8500}{31} = 274 \text{ K}
 
-$$
-
-$$
 
 T_2 = 350 + 274 = \textbf{624 K}
 
@@ -934,15 +865,9 @@ $$
 
 8500 \text{ J} = (1.0 \text{ mol}) \cdot (22.686 \text{ J/(mol$\cdot$K)}) \cdot (T_2 - 350 \text{ K})
 
-$$
-
-$$
 
 T_2 - 350 = \frac{8500}{22.686} = 375 \text{ K}
 
-$$
-
-$$
 
 T_2 = 350 + 375 = \textbf{725 K}
 
@@ -955,9 +880,6 @@ $$
 
 \frac{P_1}{T_1} = \frac{P_2}{T_2}
 
-$$
-
-$$
 
 P_2 = P_1 \left(\frac{T_2}{T_1}\right) = 0.5 \text{ MPa} \cdot \left(\frac{725}{350}\right) = \textbf{1.04 MPa}
 
@@ -1124,7 +1046,7 @@ The temperature increases from $450^\circ\text{C}$ to $600^\circ\text{C}$ becaus
 ```{prf:example} Adiabatic Semi-Batch Reactor
 An adiabatic reactor initially contains 100 mol of product B at $50^\circ\text{C}$. Reactant A is fed at $90^\circ\text{C}$ at 15 mol/hr. The exothermic reaction A $\rightarrow$ B is very fast. Find reactor temperature after 6 hours.
 
-**Given Data:** $\Delta H_{rxn} = -20$ kJ/mol, $C_{P,A} = 60$ J/(mol$\cdot$K), $C_{P,B} = 70$ J/(mol$\cdot$K)
+**Given Data:** $\Delta H_{rxn} = -20$ kJ/mol, $C_{P,A} = 60$ J/(mol·K), $C_{P,B} = 70$ J/(mol·K)
 ```
 
 ```{dropdown} Solution Steps
@@ -1144,9 +1066,6 @@ $$
 
 \int_{initial}^{final} d(N_B H_B) = \int_{0}^{6} \dot{N}_{A,in} H_{A,in} dt
 
-$$
-
-$$
 
 (N_B H_B)_{final} - (N_B H_B)_{initial} = (\dot{N}_{A,in} \cdot t) \cdot H_{A,in}
 
@@ -1205,15 +1124,9 @@ $$
 
 (190)(70)(T_f - 25) = (90)(20000) + (100)(70)(25) + (90)(60)(65)
 
-$$
-
-$$
 
 13300(T_f - 25) = 1,800,000 + 175,000 + 351,000
 
-$$
-
-$$
 
 13300(T_f - 25) = 2,326,000
 
@@ -1225,9 +1138,6 @@ $$
 
 T_f - 25 = \frac{2,326,000}{13300} = 174.9
 
-$$
-
-$$
 
 T_f = 174.9 + 25 = \textbf{199.9}^{\circ}\text{C}
 
@@ -1411,15 +1321,9 @@ $$
 
 C_P = C_V + R \quad \text{(Equation 3)}
 
-$$
-
-$$
 
 \Delta H = C_P \Delta T \quad \text{(Equation 4)}
 
-$$
-
-$$
 
 \Delta U = C_V \Delta T \quad \text{(Equation 5)}
 
@@ -1451,8 +1355,8 @@ This makes enthalpy the natural energy term for streams crossing system boundari
 
 **Process Classification:**
 - **Reversible process:** $\Delta S_{total} = 0$ (theoretical limit)
-- **Irreversible process:** $\Delta S_{total}$ $>$ $0$ (all real processes)
-- **Impossible process:** $\Delta S_{total}$ $<$ $0$ (violates Second Law)
+- **Irreversible process:** $\Delta S_{total} > 0$ (all real processes)
+- **Impossible process:** $\Delta S_{total} < 0$ (violates Second Law)
 ```
 
 ```{admonition} Term Definitions
@@ -1501,9 +1405,6 @@ $$
 
 \Delta S = C_P \ln\left(\frac{T_2}{T_1}\right) - R \ln\left(\frac{P_2}{P_1}\right) \quad \text{(Equation 10)}
 
-$$
-
-$$
 
 \Delta S = C_V \ln\left(\frac{T_2}{T_1}\right) + R \ln\left(\frac{V_2}{V_1}\right) \quad \text{(Equation 11)}
 
@@ -1773,7 +1674,7 @@ Assume surface temperature leads to film temperature: $T_f = 320$ K
 
 Look up air properties at 320 K:
 - Kinematic viscosity: $\nu = 1.7 \times 10^{-6}$ m$^2$/s (note: this appears to be an error in reference material)
-- Thermal conductivity: $k_f = 0.0269$ W/(m$\cdot$K)
+- Thermal conductivity: $k_f = 0.0269$ W/(m·K)
 - Prandtl number: $Pr = 0.706$
 
 **Step 2: Calculate Reynolds Number**
@@ -1784,7 +1685,7 @@ Re_L = \frac{U_{\infty} L}{\nu} = \frac{(5 \text{ m/s})(0.5 \text{ m})}{1.7 \tim
 
 $$
 
-Since $Re_L$ $>$ $5 \times 10^5$, flow would typically be classified as turbulent.
+Since $Re_L > 5 \times 10^5$, flow would typically be classified as turbulent.
 
 **Step 3: Apply Nusselt Number Correlation**
 Following reference material (noting inconsistency), using laminar correlation:
@@ -1793,9 +1694,6 @@ $$
 
 Nu_L = 0.664 Re_L^{1/2} Pr^{1/3}
 
-$$
-
-$$
 
 Nu_L = 0.664 (1.47 \times 10^6)^{1/2} (0.706)^{1/3} \approx 717
 
@@ -1828,7 +1726,7 @@ Film temperature: $T_f = \frac{T_s + T_{\infty}}{2} = \frac{250 + 27}{2} = 138.5
 
 **Step 3: Air Properties at 412 K**
 Look up properties:
-- Thermal conductivity: $k_f = 0.0346$ W/(m$\cdot$K)
+- Thermal conductivity: $k_f = 0.0346$ W/(m·K)
 - Kinematic viscosity: $\nu = 27.85 \times 10^{-6}$ m$^2$/s
 - Prandtl number: $Pr = 0.69$
 
@@ -1843,7 +1741,7 @@ Re_L = \frac{U_{\infty} L}{\nu} = \frac{(11.11)(0.05)}{27.85 \times 10^{-6}} = 1
 
 $$
 
-Since $Re_L$ $<$ $5 \times 10^5$, flow is laminar.
+Since $Re_L < 5 \times 10^5$, flow is laminar.
 
 **Step 5: Calculate Nusselt Number**
 For laminar flow over flat plate:
@@ -1869,9 +1767,6 @@ $$
 
 T_s = T_{\infty} + \frac{q'}{2\bar{h}L} = 27 + \frac{1200}{2(57.4)(0.05)}
 
-$$
-
-$$
 
 T_s = 27 + \frac{1200}{5.74} = 27 + 209 = \mathbf{236^\circ\text{C}}
 
@@ -1883,7 +1778,7 @@ $$
 **Key Heat Transfer Problem-Solving Strategy:**
 - For unknown surface temperatures, use iterative approach
 - Film temperature determines fluid properties: $T_f = (T_s + T_{\infty})/2$
-- Reynolds number determines flow regime: laminar if $Re_L$ $<$ $5 \times 10^5$
+- Reynolds number determines flow regime: laminar if $Re_L < 5 \times 10^5$
 - Select appropriate Nusselt correlation based on geometry and flow regime
 - Check convergence between guessed and calculated temperatures
 - For fins and extended surfaces, account for heat transfer from all surfaces
@@ -2052,16 +1947,10 @@ The process is possible if the total entropy change of the universe (the three r
 
   \frac{Q_{H,eng}}{T_H} + \frac{Q_{C,eng}}{T_C} = 0
 
-  $$
   
-  $$
-
   \frac{200 \text{ kJ}}{400 \text{ K}} + \frac{Q_{C,eng}}{300 \text{ K}} = 0
 
-  $$
   
-  $$
-
   Q_{C,eng} = -300 \left(\frac{200}{400}\right) = -150 \text{ kJ}
 
   $$
@@ -2072,16 +1961,10 @@ The process is possible if the total entropy change of the universe (the three r
 
   Q_{H,eng} + Q_{C,eng} + W_{eng} = 0
 
-  $$
   
-  $$
-
   200 - 150 + W_{eng} = 0
 
-  $$
   
-  $$
-
   W_{eng} = -50 \text{ kJ} \quad \text{(Work output)}
 
   $$
@@ -2094,16 +1977,10 @@ The process is possible if the total entropy change of the universe (the three r
 
   Q_{C,pump} + Q_{H,pump} + W_{pump} = 0
 
-  $$
   
-  $$
-
   Q_{C,pump} - 75 + 50 = 0
 
-  $$
   
-  $$
-
   Q_{C,pump} = +25 \text{ kJ}
 
   $$
@@ -2141,9 +2018,6 @@ $$
 
 \Delta S_{total} = \Delta S_{400K} + \Delta S_{300K} + \Delta S_{500K}
 
-$$
-
-$$
 
 \Delta S_{total} = -0.50 + 0.417 + 0.15 = \textbf{+0.067 kJ/K}
 
@@ -2242,15 +2116,9 @@ $$
 
 S_4 = (1-x_4)S_{liquid} + x_4 S_{vapor}
 
-$$
-
-$$
 
 6.7266 = (1-x_4)(0.7549) + x_4(8.0085)
 
-$$
-
-$$
 
 5.9717 = 7.2536 x_4 \implies x_4 \approx 0.823
 
@@ -2308,9 +2176,6 @@ $$
 
 W_{net} = W_{turbine} + W_{pump} = -1221.2 + 8.1 = -1213.1 \text{ kJ/kg}
 
-$$
-
-$$
 
 \eta = \frac{|W_{net}|}{Q_H} = \frac{|-1213.1|}{3165.5} = 0.383 \approx \textbf{38.3\%}
 
@@ -2394,9 +2259,6 @@ $$
 
 W_{net} = W_{turbine} + W_{pump} = -1113.1 + 2.0 = -1111.1 \text{ kJ/kg}
 
-$$
-
-$$
 
 \eta = \frac{|W_{net}|}{Q_H} = \frac{|-1111.1|}{3275.9} = 0.339 \approx \textbf{33.9\%}
 
@@ -2711,8 +2573,8 @@ $$
 $$
 
 **Key insights:**
-- An irreversible process generates entropy: $\Delta S$ $>$ 0
-- Less efficient turbine B is more irreversible: $\Delta S_B$ $>$ $\Delta S_A$ $>$ 0
+- An irreversible process generates entropy: $\Delta S > 0$
+- Less efficient turbine B is more irreversible: $\Delta S_B > \Delta S_A > 0$
 - The temperature term $C_P \ln(T_2/T_1)$ is identical for both turbines
 - To achieve larger $\Delta S$ (Turbine B), the pressure term must be more positive
 - This requires $\ln(P_2/P_1)$ to be more negative, meaning smaller $P_2/P_1$ ratio
@@ -2743,9 +2605,6 @@ $$
 
 T_2 = T_1 \left(\frac{P_2}{P_1}\right)^{(\gamma-1)/\gamma} = (298 \text{ K}) \left(\frac{7.0 \text{ bar}}{2.0 \text{ bar}}\right)^{(1.50-1)/1.50}
 
-$$
-
-$$
 
 T_2 = 298 \cdot (3.5)^{1/3} \approx 298 \cdot (1.518) \approx \textbf{452 K}
 
@@ -2776,15 +2635,9 @@ $$
 
 4620 \text{ J/mol} = \left(25 \frac{\text{J}}{\text{mol·K}}\right) \cdot (T_{2,irrev} - 298 \text{ K})
 
-$$
-
-$$
 
 T_{2,irrev} - 298 = \frac{4620}{25} = 184.8
 
-$$
-
-$$
 
 T_{2,irrev} = 298 + 184.8 = \textbf{482.8 K}
 
@@ -2796,7 +2649,7 @@ $$
 
 ## PE Exam Practice Problems
 
-```{prf:example} Practice Problem 1 — Carnot vs. Rankine Efficiency
+```{prf:example} Practice Problem 1: Carnot vs. Rankine Efficiency
 
 A steam power plant operates with steam entering the turbine at 500°C and 6 MPa, and condensing at 40°C. The isentropic efficiency of the turbine is 85% and the pump is ideal.
 
@@ -2838,12 +2691,12 @@ $$q_{in} = h_1 - (h_f + w_p) = 3423 - (167.5 + 6) = 3249.5 \text{ kJ/kg}$$
 
 $$\eta = \frac{w_{turbine} - w_{pump}}{q_{in}} = \frac{(3423-2274) - 6}{3249.5} = \frac{1143}{3249.5} = 0.352 = \mathbf{35.2\%}$$
 
-The actual efficiency is only 59% of the Carnot limit — irreversibilities in the turbine and the non-Carnot cycle path account for the gap.
+The actual efficiency is only 59% of the Carnot limit - irreversibilities in the turbine and the non-Carnot cycle path account for the gap.
 ```
 
 ---
 
-```{prf:example} Practice Problem 2 — Adiabatic Compression
+```{prf:example} Practice Problem 2: Adiabatic Compression
 
 Air ($C_p = 29.1$ J/mol·K, $\gamma = 1.40$) is compressed adiabatically and reversibly from 1 atm, 25°C to 10 atm.
 
@@ -2871,15 +2724,15 @@ $$C_v = C_p - R = 29.1 - 8.314 = 20.79 \text{ J/mol·K}$$
 $$W = C_v(T_2 - T_1) = 20.79(575-298) = \mathbf{5759 \text{ J/mol}} \approx 5.76 \text{ kJ/mol}$$
 
 Alternatively using $\Delta H = C_p\Delta T$ and $W_s = \Delta H$ for an open system:
-$W_s = 29.1(575-298) = 8071$ J/mol — this is the shaft work for a continuous compressor.
+$W_s = 29.1(575-298) = 8071$ J/mol - this is the shaft work for a continuous compressor.
 ```
 
 ```{caution}
-**PE Exam Traps — Thermodynamics**
+**PE Exam Traps: Thermodynamics**
 
 - **Temperature must be in Kelvin.** The Carnot efficiency formula, adiabatic process relations, entropy calculations, and the ideal gas law all require absolute temperature. Plugging in °C is the most common single error on PE thermo problems.
 - **Closed vs. open system First Law.** For a closed system: $\Delta U = Q - W$ (work = $\int P\,dV$). For an open steady-state system: $\Delta H = Q - W_s$ (shaft work only). Using $\Delta U$ when you have a turbine or compressor (open system) gives the wrong answer.
-- **Isentropic efficiency direction.** For a turbine: $\eta_T = w_{actual}/w_{isentropic} < 1$ (actual work is less than ideal). For a compressor: $\eta_C = w_{isentropic}/w_{actual} < 1$ (ideal work is less than actual). These are NOT symmetric — mixing them up swaps the numerator and denominator.
-- **$\Delta H$ vs. $\Delta U$ for ideal gas:** Both hold $\Delta H = C_p\Delta T$ and $\Delta U = C_v\Delta T$ for any process — but $W = Q - \Delta U$ for closed systems (use $C_v$) and $W_s = \Delta H - Q$ for open systems (use $C_p$). The trap is using $C_p$ in a closed-system piston work problem.
+- **Isentropic efficiency direction.** For a turbine: $\eta_T = w_{actual}/w_{isentropic} < 1$ (actual work is less than ideal). For a compressor: $\eta_C = w_{isentropic}/w_{actual} < 1$ (ideal work is less than actual). These are NOT symmetric - mixing them up swaps the numerator and denominator.
+- **$\Delta H$ vs. $\Delta U$ for ideal gas:** Both hold $\Delta H = C_p\Delta T$ and $\Delta U = C_v\Delta T$ for any process - but $W = Q - \Delta U$ for closed systems (use $C_v$) and $W_s = \Delta H - Q$ for open systems (use $C_p$). The trap is using $C_p$ in a closed-system piston work problem.
 - **COP vs. efficiency:** COP for a heat pump can be greater than 1 (it moves heat, not just converts it). A COP of 4 means 4 kJ of heat delivered per 1 kJ of work input. Never call a COP > 1 "impossible."
 ```

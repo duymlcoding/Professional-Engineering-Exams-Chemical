@@ -405,11 +405,11 @@ Need 2 more pieces of information to solve!
 ```
 
 ```{caution}
-**PE Exam Traps — Material Balances**
+**PE Exam Traps: Material Balances**
 
-- **Over-counting equations:** The overall balance is NOT independent of component balances — it's the sum of all of them. Using all N components plus the overall gives N, not N+1, independent equations.
+- **Over-counting equations:** The overall balance is NOT independent of component balances - it's the sum of all of them. Using all N components plus the overall gives N, not N+1, independent equations.
 - **Mole vs. mass basis:** Mixing streams with different molecular weights? Convert to a consistent basis (all moles or all mass) before writing balances. Mixing mole fractions and mass fractions in one equation is a common error.
-- **Recycle hides inerts:** An inert in a fresh feed will build up indefinitely without a purge stream. If the problem has an inert and no purge, re-read it — one must be implied.
+- **Recycle hides inerts:** An inert in a fresh feed will build up indefinitely without a purge stream. If the problem has an inert and no purge, re-read it - one must be implied.
 - **Fractional conversion ≠ mole fraction in product:** Conversion refers to the fraction of the *reactant fed* that reacts, not the product concentration.
 ```
 
@@ -1328,7 +1328,7 @@ Contains: 30 mol/h CO, 60 mol/h $H_2$, 10 mol/h $N_2$
 
 $N_2$ is inert - only enters in fresh feed, only leaves in purge:
 
-$(\text{$N_2$ In}) = (\text{$N_2$ Out})$
+$(N_2 \text{ In}) = (N_2 \text{ Out})$
 
 $10 = \dot{n}_{purge} \times y_{N_2,purge} = \dot{n}_{purge} \times 0.25$
 
@@ -1673,9 +1673,9 @@ Use Excel Solver or similar to solve 17 linear equations.
 ```
 
 ```{caution}
-**PE Exam Traps — Combustion Calculations**
+**PE Exam Traps: Combustion Calculations**
 
-- **Excess air vs. excess oxygen:** Always compute theoretical O₂ first, then convert to air using 21 mol% O₂. Applying the excess percentage directly to O₂ moles is correct; applying it to air gives the same answer — but mixing these up when air composition is unusual (problem gives 20% O₂) is a trap.
+- **Excess air vs. excess oxygen:** Always compute theoretical O₂ first, then convert to air using 21 mol% O₂. Applying the excess percentage directly to O₂ moles is correct; applying it to air gives the same answer - but mixing these up when air composition is unusual (problem gives 20% O₂) is a trap.
 - **Incomplete combustion products:** If the problem says "incomplete combustion" or gives a CO:CO₂ ratio, do NOT assume all C → CO₂. Use an atomic C balance instead.
 - **Water phase in flue gas:** At stack conditions, water is typically vapor. Don't use liquid water properties in a combustion gas composition calculation.
 ```
@@ -2039,11 +2039,11 @@ The negative sign confirms heat is being removed from the system.
 ```
 
 ```{caution}
-**PE Exam Traps — Energy Balances**
+**PE Exam Traps: Energy Balances**
 
-- **Sign convention:** $\dot{Q} > 0$ means heat **added to** the system. If steam exits a heat exchanger cooler than it entered, $\dot{Q}$ for the steam side is **negative** — the steam is the hot fluid losing energy.
-- **Steam tables vs. $c_p \Delta T$:** For water and steam, always prefer steam tables over $c_p \Delta T$ — $c_p$ for steam varies significantly with temperature and pressure. Only use $c_p \Delta T$ when steam tables are unavailable or for ideal gas approximations.
-- **Two-phase region:** If $\hat{h}_f < \hat{h}_{out} < \hat{h}_g$, the outlet is a wet mixture — don't report a temperature as if it's superheated. Report the saturation temperature plus the quality $x$.
+- **Sign convention:** $\dot{Q} > 0$ means heat **added to** the system. If steam exits a heat exchanger cooler than it entered, $\dot{Q}$ for the steam side is **negative** - the steam is the hot fluid losing energy.
+- **Steam tables vs. $c_p \Delta T$:** For water and steam, always prefer steam tables over $c_p \Delta T$ - $c_p$ for steam varies significantly with temperature and pressure. Only use $c_p \Delta T$ when steam tables are unavailable or for ideal gas approximations.
+- **Two-phase region:** If $\hat{h}_f < \hat{h}_{out} < \hat{h}_g$, the outlet is a wet mixture - don't report a temperature as if it's superheated. Report the saturation temperature plus the quality $x$.
 - **Sensible + latent sequencing:** When cooling a superheated gas through condensation to a subcooled liquid, you must use **three separate steps**: (1) sensible cool to dew point, (2) condense at constant T, (3) sensible cool liquid. Applying a single average $c_p$ across the phase transition gives a wrong answer.
 ```
 
@@ -2421,7 +2421,7 @@ The following problems are written in the style of NCEES PE exam questions. Try 
 
 ---
 
-```{prf:example} Practice Problem 1 — Flash Drum with Recycle (Material Balance)
+```{prf:example} Practice Problem 1: Flash Drum with Recycle (Material Balance)
 
 A process feed of 500 kg/h containing 30 wt% toluene and 70 wt% benzene enters a flash drum. The overhead vapor is 80 wt% benzene and is completely condensed. Half of the condensate is returned to the drum as reflux; the other half is withdrawn as overhead product. The bottoms liquid from the drum is 15 wt% benzene.
 
@@ -2440,7 +2440,7 @@ Let:
 - Vapor overhead: $y_{benz} = 0.80$, so toluene fraction = 0.20
 - Bottoms: $x_{benz} = 0.15$, toluene fraction = 0.85
 
-Note: the reflux is internal to the drum — it does NOT cross the overall system boundary. So the overall balance only involves F, D, and B.
+Note: the reflux is internal to the drum - it does NOT cross the overall system boundary. So the overall balance only involves F, D, and B.
 
 **Step 2: Overall mass balance**
 
@@ -2469,7 +2469,7 @@ $$B = 500 - 423.1 = 76.9 \text{ kg/h}$$
 
 ---
 
-```{prf:example} Practice Problem 2 — Reactor with Purge (Material + Energy)
+```{prf:example} Practice Problem 2: Reactor with Purge (Material + Energy)
 
 Ethylene oxide ($\text{C}_2\text{H}_4\text{O}$) is produced by partial oxidation of ethylene over a silver catalyst:
 
@@ -2512,7 +2512,7 @@ $$\dot{Q} = -2362.5 + (-9922.5) = -12{,}285 \text{ kJ/h}$$
 
 Convert to kW: $\dot{Q} = \frac{-12{,}285}{3600} = -3.41$ kW
 
-**(b) Heat removed: $\mathbf{3.41}$ kW** (negative sign confirms heat must be removed — exothermic reactions)
+**(b) Heat removed: $\mathbf{3.41}$ kW** (negative sign confirms heat must be removed - exothermic reactions)
 
 **Key insight:** Even though the main reaction is only moderately exothermic, the side combustion reaction releases far more heat per mole. Always check the contribution of all reactions when sizing heat removal equipment.
 ```
@@ -2520,7 +2520,7 @@ Convert to kW: $\dot{Q} = \frac{-12{,}285}{3600} = -3.41$ kW
 ---
 
 ```{caution}
-**PE Exam Traps — Reactive Energy Balances**
+**PE Exam Traps: Reactive Energy Balances**
 
 - **Don't forget the side reactions:** If a problem gives two reactions and asks for reactor heat duty, include the heat of reaction for **each** reaction scaled by its own extent. Omitting the combustion side reaction in Example 2 above would underestimate heat removal by 80%.
 - **Reference state consistency:** Standard heats of formation are at 25°C and 1 atm. If reactants enter at 300°C and products leave at 500°C, you must add sensible heat correction terms. The formula is: $\dot{Q} = \xi\Delta\hat{H}_{rxn}^\circ + \sum_{out}\dot{n}_i\hat{h}_i - \sum_{in}\dot{n}_i\hat{h}_i$.

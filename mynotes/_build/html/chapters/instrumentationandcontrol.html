@@ -608,7 +608,7 @@ The same Equation 1 applies for any sign of <span class="math notranslate nohigh
 <div class="proof example admonition" id="instrumentationandcontrol-example-0">
 <p class="admonition-title"><span class="caption-number">Example 158 </span> (Step Response of a Surge Tank)</p>
 <section class="example-content" id="proof-content">
-<p>A surge tank has the first-order transfer function <span class="math notranslate nohighlight">\(H(s)/Q_i(s) = 10/(50 s + 1)\)</span> where <span class="math notranslate nohighlight">\(H\)</span> is liquid level [m] and <span class="math notranslate nohighlight">\(Q_i\)</span> is inlet flow [m<sup>3</sup>/s], so <span class="math notranslate nohighlight">\(K = 10\)</span> m per m<sup>3</sup>/s and <span class="math notranslate nohighlight">\(\tau = 50\)</span> s. At the initial steady state, <span class="math notranslate nohighlight">\(Q_i = 0.40\)</span> m<sup>3</sup>/s and <span class="math notranslate nohighlight">\(H = 3.0\)</span> m. The inlet is suddenly stepped to <span class="math notranslate nohighlight">\(0.41\)</span> m<sup>3</sup>/s. Find:</p>
+<p>A surge tank has the first-order transfer function <span class="math notranslate nohighlight">\(H(s)/Q_i(s) = 10/(50 s + 1)\)</span> where <span class="math notranslate nohighlight">\(H\)</span> is liquid level [m] and <span class="math notranslate nohighlight">\(Q_i\)</span> is inlet flow [m³/s], so <span class="math notranslate nohighlight">\(K = 10\)</span> m per m³/s and <span class="math notranslate nohighlight">\(\tau = 50\)</span> s. At the initial steady state, <span class="math notranslate nohighlight">\(Q_i = 0.40\)</span> m³/s and <span class="math notranslate nohighlight">\(H = 3.0\)</span> m. The inlet is suddenly stepped to <span class="math notranslate nohighlight">\(0.41\)</span> m³/s. Find:</p>
 <ul class="simple">
 <li><p>the level 100 s after the step,</p></li>
 <li><p>the new steady-state level,</p></li>
@@ -654,7 +654,7 @@ H(100) = H + h(100) = 3.000 + 0.0865 = 3.087 \text{m}
 h(\infty) = K M = (10)(0.01) = 0.10 \text{m}  \Longrightarrow  H(\infty) = 3.10 \text{m}
 \]</div>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>(c) Time to reach 63.2% of the ultimate change.</strong> By the landmark property of <span class="math notranslate nohighlight">\(\tau\)</span>,</p></li>
+<li><p class="sd-card-text"><strong>© Time to reach 63.2% of the ultimate change.</strong> By the landmark property of <span class="math notranslate nohighlight">\(\tau\)</span>,</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
@@ -666,7 +666,7 @@ t_{63.2\%} = \tau = 50 \text{s}
 e^{-t/\tau} = 0.368  \Longrightarrow  t/\tau = -\ln(0.368) = 1.0  \Longrightarrow  t = \tau = 50 \text{s} \checkmark
 \]</div>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Cross-check by material balance.</strong> A sustained extra <span class="math notranslate nohighlight">\(0.01\)</span> m<sup>3</sup>/s inflow must, at steady state, be matched by an extra <span class="math notranslate nohighlight">\(0.01\)</span> m<sup>3</sup>/s outflow. If the outlet flow is linear in head, <span class="math notranslate nohighlight">\(Q_o = h/R\)</span>, then <span class="math notranslate nohighlight">\(R = K = 10\)</span> s/m<sup>2</sup>. The extra head needed to drive <span class="math notranslate nohighlight">\(0.01\)</span> extra m<sup>3</sup>/s through resistance <span class="math notranslate nohighlight">\(R\)</span> is <span class="math notranslate nohighlight">\(\Delta h = R \cdot \Delta Q = 10 \times 0.01 = 0.10\)</span> m. ✓ Matches the transfer-function answer exactly.</p></li>
+<li><p class="sd-card-text"><strong>Cross-check by material balance.</strong> A sustained extra <span class="math notranslate nohighlight">\(0.01\)</span> m³/s inflow must, at steady state, be matched by an extra <span class="math notranslate nohighlight">\(0.01\)</span> m³/s outflow. If the outlet flow is linear in head, <span class="math notranslate nohighlight">\(Q_o = h/R\)</span>, then <span class="math notranslate nohighlight">\(R = K = 10\)</span> s/m². The extra head needed to drive <span class="math notranslate nohighlight">\(0.01\)</span> extra m³/s through resistance <span class="math notranslate nohighlight">\(R\)</span> is <span class="math notranslate nohighlight">\(\Delta h = R \cdot \Delta Q = 10 \times 0.01 = 0.10\)</span> m. ✓ Matches the transfer-function answer exactly.</p></li>
 </ul>
 </div>
 </details></section>
@@ -745,9 +745,9 @@ Y(s) = \frac{K e^{-\theta s}}{\tau s + 1} \cdot \frac{M}{s} = e^{-\theta s} \fra
 \]</div>
 <p>The factor <span class="math notranslate nohighlight">\(e^{-\theta s}\)</span> is a pure time-shift operator: when we invert, the time-domain answer is the first-order step response delayed by <span class="math notranslate nohighlight">\(\theta\)</span>. Using Equation 1 of the previous section and the time-shift theorem:</p>
 <div class="math notranslate nohighlight">
-\[
-y(t) = \begin{cases} 0, &amp; t &lt; \theta \ K M (1 - e^{-(t-\theta)/\tau}), &amp; t \geq \theta \end{cases}
-\]</div>
+\[\begin{split}
+y(t) = \begin{cases} 0, &amp; t &lt; \theta \\ K M (1 - e^{-(t-\theta)/\tau}), &amp; t \geq \theta \end{cases}
+\end{split}\]</div>
 <p>Graphically: a flat region from 0 to <span class="math notranslate nohighlight">\(\theta\)</span>, then an exponential rise. Reading <span class="math notranslate nohighlight">\(\theta\)</span> and <span class="math notranslate nohighlight">\(\tau\)</span> from a step-test trace is the central practical task of FOPDT identification.</p>
 </section>
 <section id="method-1-tangent-and-inflection-smith-ziegler-nichols-original">
@@ -1210,7 +1210,7 @@ T/4 = 12  \Longrightarrow  T = 48 \text{s}
 q = C_v \cdot f(\ell) \cdot \sqrt{\frac{\Delta P_v}{G_s}}   \text{(Equation 2)}
 \]</div>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(q\)</span>  -  volumetric flow rate. US customary units: US gpm. Metric: m<sup>3</sup>/h with <span class="math notranslate nohighlight">\(K_v\)</span> instead of <span class="math notranslate nohighlight">\(C_v\)</span> (see conversion below).</p></li>
+<li><p><span class="math notranslate nohighlight">\(q\)</span>  -  volumetric flow rate. US customary units: US gpm. Metric: m³/h with <span class="math notranslate nohighlight">\(K_v\)</span> instead of <span class="math notranslate nohighlight">\(C_v\)</span> (see conversion below).</p></li>
 <li><p><span class="math notranslate nohighlight">\(C_v\)</span>  -  valve flow coefficient. <em>Definition:</em> the volumetric flow of water (specific gravity 1) in US gpm that passes through a fully open valve when the pressure drop across the valve is exactly 1 psi. So <span class="math notranslate nohighlight">\(C_v\)</span> has units of <span class="math notranslate nohighlight">\(\text{gpm}/\sqrt{\text{psi}}\)</span>.</p></li>
 <li><p><span class="math notranslate nohighlight">\(f(\ell)\)</span>  -  the valve characteristic, a dimensionless function of the lift <span class="math notranslate nohighlight">\(\ell\)</span> (fraction open, <span class="math notranslate nohighlight">\(0 \leq \ell \leq 1\)</span>). The three classical forms are presented below.</p></li>
 <li><p><span class="math notranslate nohighlight">\(\Delta P_v\)</span>  -  the pressure drop across the valve <em>only</em> (not the whole system) in psi. This is the single most error-prone variable in valve sizing because students confuse <span class="math notranslate nohighlight">\(\Delta P_v\)</span> with the total system <span class="math notranslate nohighlight">\(\Delta P\)</span>.</p></li>
@@ -1222,12 +1222,12 @@ q = C_v \cdot f(\ell) \cdot \sqrt{\frac{\Delta P_v}{G_s}}   \text{(Equation 2)}
 <p class="admonition-title">Important</p>
 <p><strong>Unit Conversions</strong>
 US: <span class="math notranslate nohighlight">\(C_v\)</span> in gpm/<span class="math notranslate nohighlight">\(\sqrt{\text{psi}}\)</span>, <span class="math notranslate nohighlight">\(q\)</span> in gpm, <span class="math notranslate nohighlight">\(\Delta P_v\)</span> in psi.</p>
-<p>Metric: <span class="math notranslate nohighlight">\(K_v\)</span> in m<sup>3</sup>/h/<span class="math notranslate nohighlight">\(\sqrt{\text{bar}}\)</span>, <span class="math notranslate nohighlight">\(q\)</span> in m<sup>3</sup>/h, <span class="math notranslate nohighlight">\(\Delta P_v\)</span> in bar.</p>
+<p>Metric: <span class="math notranslate nohighlight">\(K_v\)</span> in m³/h/<span class="math notranslate nohighlight">\(\sqrt{\text{bar}}\)</span>, <span class="math notranslate nohighlight">\(q\)</span> in m³/h, <span class="math notranslate nohighlight">\(\Delta P_v\)</span> in bar.</p>
 <div class="math notranslate nohighlight">
 \[
 K_v \approx 0.865 C_v   C_v \approx 1.156 K_v
 \]</div>
-<p>A third coefficient <span class="math notranslate nohighlight">\(A_v\)</span> in SI (m<sup>2</sup>) is sometimes used: <span class="math notranslate nohighlight">\(A_v = 2.4 \times 10^{-5} C_v\)</span>.</p>
+<p>A third coefficient <span class="math notranslate nohighlight">\(A_v\)</span> in SI (m²) is sometimes used: <span class="math notranslate nohighlight">\(A_v = 2.4 \times 10^{-5} C_v\)</span>.</p>
 </div>
 </section>
 <section id="the-three-classical-valve-characteristics">
@@ -1473,7 +1473,7 @@ For a temperature loop heating with steam (FC valve, <span class="math notransla
 <div class="proof example admonition" id="instrumentationandcontrol-example-7">
 <p class="admonition-title"><span class="caption-number">Example 165 </span> (Selecting Fail-Safe Action for Two Valves)</p>
 <section class="example-content" id="proof-content">
-<p><strong>(a)</strong> A control valve regulates cooling water flow to a shell-and-tube exchanger that cools a 220<span class="math notranslate nohighlight">\(^\circ\)</span>C exothermic reactor effluent before downstream separation.</p>
+<p><strong>(a)</strong> A control valve regulates cooling water flow to a shell-and-tube exchanger that cools a 220°C exothermic reactor effluent before downstream separation.</p>
 <p><strong>(b)</strong> A control valve regulates the discharge from a wastewater pH-neutralization tank to a downstream biological treatment plant.</p>
 <p>Select the fail-safe action for each and justify both locally and globally.</p>
 </section>
@@ -1613,7 +1613,7 @@ P_{\text{source}} - P_{\text{sink}} = \Delta P_{\text{piping}}(q) + \Delta P_v(q
 <ul class="simple">
 <li><p><strong>Range:</strong> the low and high values to which the sensor is calibrated (e.g. 50-250 psi or <span class="math notranslate nohighlight">\(-50\)</span> to <span class="math notranslate nohighlight">\(+100^\circ\)</span>C).</p></li>
 <li><p><strong>Zero:</strong> the low end of the range. <em>Not necessarily 0.</em> In the examples above, the zeros are 50 psi and <span class="math notranslate nohighlight">\(-50^\circ\)</span>C respectively.</p></li>
-<li><p><strong>Span:</strong> the difference high <span class="math notranslate nohighlight">\(-\)</span> low. For the examples: 200 psi and 150<span class="math notranslate nohighlight">\(^\circ\)</span>C.</p></li>
+<li><p><strong>Span:</strong> the difference high <span class="math notranslate nohighlight">\(-\)</span> low. For the examples: 200 psi and 150°C.</p></li>
 <li><p><strong>Turndown (rangeability):</strong> the ratio of the highest reliably-readable value to the lowest. A Coriolis flowmeter with turndown 100:1 can read accurately from 1% to 100% of full scale; an orifice plate with turndown 4:1 is only reliable from 25% to 100%.</p></li>
 <li><p><strong>Accuracy:</strong> closeness to true value. Usually quoted as <span class="math notranslate nohighlight">\(\pm\)</span>% of span (e.g. “<span class="math notranslate nohighlight">\(\pm\)</span>0.5% of span”) or <span class="math notranslate nohighlight">\(\pm\)</span>% of reading.</p></li>
 <li><p><strong>Resolution:</strong> smallest detectable change.</p></li>
@@ -1629,10 +1629,10 @@ P_{\text{source}} - P_{\text{sink}} = \Delta P_{\text{piping}}(q) + \Delta P_v(q
 <p><strong>Sensor Catalogue</strong>
 <strong>Temperature:</strong></p>
 <ul class="simple">
-<li><p><em>Thermocouple</em> (T, J, K, E, etc.): junction of two dissimilar metals; voltage proportional to <span class="math notranslate nohighlight">\(T\)</span>. Robust, cheap, wide range, lower accuracy (<span class="math notranslate nohighlight">\(\pm\)</span>1-2<span class="math notranslate nohighlight">\(^\circ\)</span>C).</p></li>
-<li><p><em>RTD (Pt-100, Pt-1000):</em> platinum resistance increases linearly with <span class="math notranslate nohighlight">\(T\)</span>. Accurate (<span class="math notranslate nohighlight">\(\pm\)</span>0.1<span class="math notranslate nohighlight">\(^\circ\)</span>C), slower than TC.</p></li>
+<li><p><em>Thermocouple</em> (T, J, K, E, etc.): junction of two dissimilar metals; voltage proportional to <span class="math notranslate nohighlight">\(T\)</span>. Robust, cheap, wide range, lower accuracy (<span class="math notranslate nohighlight">\(\pm\)</span>1-2°C).</p></li>
+<li><p><em>RTD (Pt-100, Pt-1000):</em> platinum resistance increases linearly with <span class="math notranslate nohighlight">\(T\)</span>. Accurate (<span class="math notranslate nohighlight">\(\pm\)</span>0.1°C), slower than TC.</p></li>
 <li><p><em>Thermistor:</em> semiconductor with strongly nonlinear <span class="math notranslate nohighlight">\(R(T)\)</span>; high sensitivity, narrow useful range (typ. <span class="math notranslate nohighlight">\(-50\)</span> to <span class="math notranslate nohighlight">\(+150^\circ\)</span>C).</p></li>
-<li><p><em>Infrared pyrometer:</em> non-contact, used above 500<span class="math notranslate nohighlight">\(^\circ\)</span>C or where touching is impractical.</p></li>
+<li><p><em>Infrared pyrometer:</em> non-contact, used above 500°C or where touching is impractical.</p></li>
 <li><p><em>Bimetallic thermometer:</em> on-board mechanical readout; no electrical output unless modified.</p></li>
 </ul>
 <p><strong>Pressure:</strong></p>
@@ -1739,7 +1739,7 @@ P = 50 + 0.55(200) = 50 + 110 = 160 \text{psi}
 I = 4 + 16(0.75) = 4 + 12 = 16.0 \text{mA}
 \]</div>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>(c) 75 psi <span class="math notranslate nohighlight">\(\to\)</span> mA.</strong></p></li>
+<li><p class="sd-card-text"><strong>© 75 psi <span class="math notranslate nohighlight">\(\to\)</span> mA.</strong></p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
@@ -1902,7 +1902,7 @@ K_c = \frac{1}{K} \cdot \frac{\tau}{\lambda + \theta},   \tau_I = \tau
 <div class="proof example admonition" id="instrumentationandcontrol-example-10">
 <p class="admonition-title"><span class="caption-number">Example 168 </span> (ZN, Cohen-Coon, and IMC Tuning for the Cooling-Water Loop)</p>
 <section class="example-content" id="proof-content">
-<p>Continuing the previous FOPDT example, <span class="math notranslate nohighlight">\(K = -1.5\)</span> <span class="math notranslate nohighlight">\(^\circ\)</span>F/gpm, <span class="math notranslate nohighlight">\(\tau = 2.14\)</span> min, <span class="math notranslate nohighlight">\(\theta = 5.4\)</span> min. Compute PI tuning by (a) Ziegler-Nichols, (b) Cohen-Coon, (c) IMC with <span class="math notranslate nohighlight">\(\lambda = \tau\)</span>. Compare.</p>
+<p>Continuing the previous FOPDT example, <span class="math notranslate nohighlight">\(K = -1.5\)</span> <span class="math notranslate nohighlight">\(^\circ\)</span>F/gpm, <span class="math notranslate nohighlight">\(\tau = 2.14\)</span> min, <span class="math notranslate nohighlight">\(\theta = 5.4\)</span> min. Compute PI tuning by (a) Ziegler-Nichols, (b) Cohen-Coon, © IMC with <span class="math notranslate nohighlight">\(\lambda = \tau\)</span>. Compare.</p>
 </section>
 </div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -1928,7 +1928,7 @@ K_c &amp;= \frac{1}{1.5} \frac{2.14}{5.4} (0.9 + \frac{5.4}{12 \times 2.14}) = 0
 \end{align}
 \end{split}\]</div>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>(c) IMC PI with <span class="math notranslate nohighlight">\(\lambda = \tau = 2.14\)</span> min.</strong></p></li>
+<li><p class="sd-card-text"><strong>© IMC PI with <span class="math notranslate nohighlight">\(\lambda = \tau = 2.14\)</span> min.</strong></p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split}
