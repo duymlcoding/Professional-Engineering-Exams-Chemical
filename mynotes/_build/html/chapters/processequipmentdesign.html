@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=8c6b312c" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=6a27516b" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=10fda75c" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -337,7 +337,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-heat-exchanger-selection-algorithm">The Heat-Exchanger Selection Algorithm</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-exchanger-sizing-q-u-a-f-delta-t-lm">Heat-Exchanger Sizing: <span class="math notranslate nohighlight">\(Q = U A F \Delta T_{LM\)</span>}</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-exchanger-sizing-q-u-a-f-delta-t-lm">Heat-Exchanger Sizing: <span class="math notranslate nohighlight">\(Q = U A F \Delta T_{LM}\)</span></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivation-of-the-log-mean-temperature-difference">Derivation of the Log-Mean Temperature Difference</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-correction-factor-f-for-non-counter-flow">The Correction Factor <span class="math notranslate nohighlight">\(F\)</span> for Non-Counter-Flow</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-duty-q-from-stream-properties">Heat Duty <span class="math notranslate nohighlight">\(Q\)</span> from Stream Properties</a></li>
@@ -454,7 +454,7 @@ Design the utility flow rate so the utility temperature change <span class="math
 </section>
 <section id="worked-example-sizing-the-cooling-water-flow">
 <h3>Worked Example: Sizing the Cooling-Water Flow<a class="headerlink" href="#worked-example-sizing-the-cooling-water-flow" title="Link to this heading">#</a></h3>
-<div class="proof example admonition" id="example-0">
+<div class="proof example admonition" id="processequipmentdesign-example-0">
 <p class="admonition-title"><span class="caption-number">Example 148 </span> (Cooling-Water Flow for a Process Cooler)</p>
 <section class="example-content" id="proof-content">
 <p>A process stream delivers 250 kW of cooling duty to a heat exchanger. Cooling water enters at 30<span class="math notranslate nohighlight">\(^\circ\)</span>C. (a) What is the required cooling-water mass flow if the design <span class="math notranslate nohighlight">\(\Delta T_{util} = 10^\circ\)</span>C? (b) What is the flow if <span class="math notranslate nohighlight">\(\Delta T_{util}\)</span> is reduced to 3<span class="math notranslate nohighlight">\(^\circ\)</span>C? © Comment on the comparison.</p>
@@ -592,7 +592,7 @@ Plate exchangers achieve very large area in small volume by stacking many thin p
 </section>
 </section>
 <section id="heat-exchanger-sizing-q-u-a-f-delta-t-lm">
-<h2>Heat-Exchanger Sizing: <span class="math notranslate nohighlight">\(Q = U A F \Delta T_{LM\)</span>}<a class="headerlink" href="#heat-exchanger-sizing-q-u-a-f-delta-t-lm" title="Link to this heading">#</a></h2>
+<h2>Heat-Exchanger Sizing: <span class="math notranslate nohighlight">\(Q = U A F \Delta T_{LM}\)</span><a class="headerlink" href="#heat-exchanger-sizing-q-u-a-f-delta-t-lm" title="Link to this heading">#</a></h2>
 <p>Every shell-and-tube sizing problem reduces to five numbers: heat duty <span class="math notranslate nohighlight">\(Q\)</span>, overall coefficient <span class="math notranslate nohighlight">\(U\)</span>, log-mean temperature difference <span class="math notranslate nohighlight">\(\Delta T_{LM}\)</span>, correction factor <span class="math notranslate nohighlight">\(F\)</span>, and required area <span class="math notranslate nohighlight">\(A\)</span>. The PE exam tests all five.</p>
 <section id="derivation-of-the-log-mean-temperature-difference">
 <h3>Derivation of the Log-Mean Temperature Difference<a class="headerlink" href="#derivation-of-the-log-mean-temperature-difference" title="Link to this heading">#</a></h3>
@@ -698,7 +698,7 @@ $<span class="math notranslate nohighlight">\( \frac{1}{U_o} = \frac{1}{h_o} + R
 </section>
 <section id="worked-example-sizing-a-cooling-water-exchanger">
 <h3>Worked Example: Sizing a Cooling-Water Exchanger<a class="headerlink" href="#worked-example-sizing-a-cooling-water-exchanger" title="Link to this heading">#</a></h3>
-<div class="proof example admonition" id="example-1">
+<div class="proof example admonition" id="processequipmentdesign-example-1">
 <p class="admonition-title"><span class="caption-number">Example 149 </span> (Sizing a Counter-Flow Cooler)</p>
 <section class="example-content" id="proof-content">
 <p>A process stream of <span class="math notranslate nohighlight">\(m = 15{,}000\)</span> kg/h, <span class="math notranslate nohighlight">\(c_p = 2.5\)</span> kJ/(kg<span class="math notranslate nohighlight">\(\cdot\)</span>K), must be cooled from 110<span class="math notranslate nohighlight">\(^\circ\)</span>C to 60<span class="math notranslate nohighlight">\(^\circ\)</span>C using cooling water entering at 30<span class="math notranslate nohighlight">\(^\circ\)</span>C and leaving at 45<span class="math notranslate nohighlight">\(^\circ\)</span>C. Counter-flow, <span class="math notranslate nohighlight">\(F = 1\)</span>, estimated <span class="math notranslate nohighlight">\(U = 600\)</span> W/(m<span class="math notranslate nohighlight">\(^2 \cdot\)</span>K). Find <span class="math notranslate nohighlight">\(Q\)</span>, the cooling-water flow, <span class="math notranslate nohighlight">\(\Delta T_{LM}\)</span>, and the heat-transfer area <span class="math notranslate nohighlight">\(A\)</span>.</p>
@@ -725,11 +725,10 @@ $<span class="math notranslate nohighlight">\( A = \frac{Q}{U F \Delta T_{LM}} =
 </details></section>
 <section id="worked-example-co-current-vs-counter-current-lmtd">
 <h3>Worked Example: Co-current vs. Counter-Current LMTD<a class="headerlink" href="#worked-example-co-current-vs-counter-current-lmtd" title="Link to this heading">#</a></h3>
-<div class="proof example admonition" id="example-2">
-<p class="admonition-title"><span class="caption-number">Example 150 </span> (The $\Delta T_{LM)</p>
+<div class="proof example admonition" id="processequipmentdesign-example-2">
+<p class="admonition-title"><span class="caption-number">Example 150 </span> (The <span class="math notranslate nohighlight">\(\Delta T_{LM}\)</span> Penalty of Co-Current Flow)</p>
 <section class="example-content" id="proof-content">
-<p><span class="math notranslate nohighlight">\( Penalty of Co-Current Flow}
-For the same service (process 110\)</span>\to<span class="math notranslate nohighlight">\(60\)</span>^\circ<span class="math notranslate nohighlight">\(C, cooling water 30\)</span>\to<span class="math notranslate nohighlight">\(45\)</span>^\circ<span class="math notranslate nohighlight">\(C), compute \)</span>\Delta T_{LM}$ in (a) counter-flow and (b) co-current flow. By how much does the required area change?</p>
+<p>For the same service (process 110<span class="math notranslate nohighlight">\(\to\)</span>60<span class="math notranslate nohighlight">\(^\circ\)</span>C, cooling water 30<span class="math notranslate nohighlight">\(\to\)</span>45<span class="math notranslate nohighlight">\(^\circ\)</span>C), compute <span class="math notranslate nohighlight">\(\Delta T_{LM}\)</span> in (a) counter-flow and (b) co-current flow. By how much does the required area change?</p>
 </section>
 </div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -748,7 +747,7 @@ The co-current arrangement needs 17% more area for the same service.</p></li>
 </details></section>
 <section id="worked-example-sizing-a-steam-reboiler-latent-heat">
 <h3>Worked Example: Sizing a Steam Reboiler (Latent Heat)<a class="headerlink" href="#worked-example-sizing-a-steam-reboiler-latent-heat" title="Link to this heading">#</a></h3>
-<div class="proof example admonition" id="example-3">
+<div class="proof example admonition" id="processequipmentdesign-example-3">
 <p class="admonition-title"><span class="caption-number">Example 151 </span> (Kettle Reboiler for a Distillation Column)</p>
 <section class="example-content" id="proof-content">
 <p>A distillation column requires 3{,}500 kW of reboil duty. The process side boils at 95<span class="math notranslate nohighlight">\(^\circ\)</span>C; low-pressure steam at 6 barg condenses at 158<span class="math notranslate nohighlight">\(^\circ\)</span>C and is returned as saturated condensate. Latent heat of steam at 158<span class="math notranslate nohighlight">\(^\circ\)</span>C: <span class="math notranslate nohighlight">\(\lambda = 2{,}080\)</span> kJ/kg. Estimated <span class="math notranslate nohighlight">\(U = 2{,}000\)</span> W/m<span class="math notranslate nohighlight">\(^2\)</span>K (steam condensing <span class="math notranslate nohighlight">\(\to\)</span> boiling, with <span class="math notranslate nohighlight">\(\sim\)</span>10% fouling allowance). Size the reboiler.</p>
@@ -817,7 +816,7 @@ A fluid prefers the <em>shell</em> side if it is:</p>
 </section>
 <section id="worked-example-selecting-sides-for-an-oxygen-heating-exchanger">
 <h3>Worked Example: Selecting Sides for an Oxygen-Heating Exchanger<a class="headerlink" href="#worked-example-selecting-sides-for-an-oxygen-heating-exchanger" title="Link to this heading">#</a></h3>
-<div class="proof example admonition" id="example-4">
+<div class="proof example admonition" id="processequipmentdesign-example-4">
 <p class="admonition-title"><span class="caption-number">Example 152 </span> (Tube/Shell Assignment for High-Pressure Steam Heating Oxygen)</p>
 <section class="example-content" id="proof-content">
 <p>An exchanger heats 99%+ pure oxygen gas from 30 to 220<span class="math notranslate nohighlight">\(^\circ\)</span>C using high-pressure saturated steam at 45 barg (<span class="math notranslate nohighlight">\(T_sat \approx 257^\circ\)</span>C, condensing). Oxygen is an active oxidizer at elevated temperature. Steam is benign. Assign tube and shell sides.</p>
@@ -841,7 +840,7 @@ Steam: tube side. Oxygen: shell side.
 </details></section>
 <section id="worked-example-fouling-process-fluid-cooling-water">
 <h3>Worked Example: Fouling Process Fluid + Cooling Water<a class="headerlink" href="#worked-example-fouling-process-fluid-cooling-water" title="Link to this heading">#</a></h3>
-<div class="proof example admonition" id="example-5">
+<div class="proof example admonition" id="processequipmentdesign-example-5">
 <p class="admonition-title"><span class="caption-number">Example 153 </span> (Tube/Shell Assignment for a Fouling Process Cooler)</p>
 <section class="example-content" id="proof-content">
 <p>A heavy gasoil at 200<span class="math notranslate nohighlight">\(^\circ\)</span>C must be cooled to 80<span class="math notranslate nohighlight">\(^\circ\)</span>C using cooling water (clean, treated). The gasoil has a known fouling tendency (asphaltene deposition). Cooling water is at low pressure (<span class="math notranslate nohighlight">\(\sim\)</span>3 barg); gasoil at moderate pressure (<span class="math notranslate nohighlight">\(\sim\)</span>10 barg). Assign sides.</p>
@@ -938,7 +937,7 @@ A pressure vessel’s wall thickness is typically set by hoop stress (ASME Sec. 
 </section>
 <section id="worked-example-moc-for-the-oxygen-heating-exchanger">
 <h3>Worked Example: MOC for the Oxygen-Heating Exchanger<a class="headerlink" href="#worked-example-moc-for-the-oxygen-heating-exchanger" title="Link to this heading">#</a></h3>
-<div class="proof example admonition" id="example-6">
+<div class="proof example admonition" id="processequipmentdesign-example-6">
 <p class="admonition-title"><span class="caption-number">Example 154 </span> (MOC Selection: Steam Heats Pure Oxygen)</p>
 <section class="example-content" id="proof-content">
 <p>For the previous example (steam at 45 barg, 257<span class="math notranslate nohighlight">\(^\circ\)</span>C condensing in the tubes; oxygen at 30 to 220<span class="math notranslate nohighlight">\(^\circ\)</span>C in the shell), select MOC for tubes and shell. Justify with cost and safety considerations.</p>
@@ -957,7 +956,7 @@ A pressure vessel’s wall thickness is typically set by hoop stress (ASME Sec. 
 </details></section>
 <section id="worked-example-moc-for-a-refrigerant-tube-side-process-shell-side">
 <h3>Worked Example: MOC for a Refrigerant Tube-Side, Process Shell-Side<a class="headerlink" href="#worked-example-moc-for-a-refrigerant-tube-side-process-shell-side" title="Link to this heading">#</a></h3>
-<div class="proof example admonition" id="example-7">
+<div class="proof example admonition" id="processequipmentdesign-example-7">
 <p class="admonition-title"><span class="caption-number">Example 155 </span> (MOC for a Refrigerated Process Cooler)</p>
 <section class="example-content" id="proof-content">
 <p>A heat exchanger uses Freon-22 refrigerant at <span class="math notranslate nohighlight">\(-40^\circ\)</span>C (vaporizing tube-side) to cool a non-corrosive hydrocarbon process stream shell-side. Specify MOC.</p>
@@ -1035,7 +1034,7 @@ A vessel under external pressure (vacuum service) fails by <em>buckling</em>, no
 </section>
 <section id="worked-example-wall-thickness-of-a-process-reactor">
 <h3>Worked Example: Wall Thickness of a Process Reactor<a class="headerlink" href="#worked-example-wall-thickness-of-a-process-reactor" title="Link to this heading">#</a></h3>
-<div class="proof example admonition" id="example-8">
+<div class="proof example admonition" id="processequipmentdesign-example-8">
 <p class="admonition-title"><span class="caption-number">Example 156 </span> (Reactor Wall Thickness)</p>
 <section class="example-content" id="proof-content">
 <p>A vertical cylindrical reactor: ID = 60 in (1.524 m), design pressure 250 psig, design temperature 600<span class="math notranslate nohighlight">\(^\circ\)</span>F. MOC: SA-516 Gr. 70 carbon steel. <span class="math notranslate nohighlight">\(S = 17{,}500\)</span> psi at 600<span class="math notranslate nohighlight">\(^\circ\)</span>F (from ASME Sec. II Part D). Fully radiographed butt welds, <span class="math notranslate nohighlight">\(E = 1.0\)</span>. Corrosion allowance 1/8 in. Find the required wall thickness and the nearest commercial plate gauge.</p>
@@ -1160,7 +1159,7 @@ $<span class="math notranslate nohighlight">\( NPSH_A = \frac{P_{abs} - P_{vap}}
 </section>
 <section id="worked-example-npsh-a-for-a-hot-water-pump">
 <h3>Worked Example: NPSH<span class="math notranslate nohighlight">\(_A\)</span> for a Hot-Water Pump<a class="headerlink" href="#worked-example-npsh-a-for-a-hot-water-pump" title="Link to this heading">#</a></h3>
-<div class="proof example admonition" id="example-9">
+<div class="proof example admonition" id="processequipmentdesign-example-9">
 <p class="admonition-title"><span class="caption-number">Example 157 </span> (Hot-Water Pump Cavitation Check)</p>
 <section class="example-content" id="proof-content">
 <p>Water at 90<span class="math notranslate nohighlight">\(^\circ\)</span>C (<span class="math notranslate nohighlight">\(P_{vap} = 70\)</span> kPa, <span class="math notranslate nohighlight">\(\rho = 965\)</span> kg/m<span class="math notranslate nohighlight">\(^3\)</span>) is pumped from an atmospheric tank (<span class="math notranslate nohighlight">\(P_{abs} = 101.3\)</span> kPa). The water surface is 2.0 m above the pump centerline (flooded suction). Suction-line friction loss is 1.5 m of water. The pump’s NPSH<span class="math notranslate nohighlight">\(_R\)</span> at the design flow is 3.0 m. Determine NPSH<span class="math notranslate nohighlight">\(_A\)</span> and assess whether the pump will cavitate.</p>
@@ -1253,7 +1252,7 @@ or read from a Gilliland chart.</p>
 <p><strong>Souders-Brown Diameter</strong>
 The maximum vapor superficial velocity that avoids flooding (entrainment of liquid by upward-moving vapor) is
 $<span class="math notranslate nohighlight">\( U_{\max} = C_{SB} \sqrt{\frac{\rho_L - \rho_V}{\rho_V}} \)</span><span class="math notranslate nohighlight">\(
-where \)</span>C_{SB}<span class="math notranslate nohighlight">\( (Souders-Brown capacity factor, read from Fair's chart) ranges \)</span>0.05<span class="math notranslate nohighlight">\(-\)</span>0.15<span class="math notranslate nohighlight">\( m/s for trayed columns. Design at 70-85% of flood velocity. The column diameter is
+where \)</span>C_{SB}<span class="math notranslate nohighlight">\( (Souders-Brown capacity factor, read from Fair's chart) ranges \)</span>0.05<span class="math notranslate nohighlight">\(-\)</span>0.15<span class="math notranslate nohighlight">\( m/s for trayed columns. Design at 70-85\% of flood velocity. The column diameter is
 \)</span><span class="math notranslate nohighlight">\( D = \sqrt{\frac{4 V}{\pi U_{design}}} \)</span><span class="math notranslate nohighlight">\(
 where \)</span>V$ is the vapor volumetric flow at column operating conditions.</p>
 </div>
@@ -1440,7 +1439,7 @@ Souders-Brown diameter: <span class="math notranslate nohighlight">\(U_{\max} = 
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-heat-exchanger-selection-algorithm">The Heat-Exchanger Selection Algorithm</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-exchanger-sizing-q-u-a-f-delta-t-lm">Heat-Exchanger Sizing: <span class="math notranslate nohighlight">\(Q = U A F \Delta T_{LM\)</span>}</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-exchanger-sizing-q-u-a-f-delta-t-lm">Heat-Exchanger Sizing: <span class="math notranslate nohighlight">\(Q = U A F \Delta T_{LM}\)</span></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivation-of-the-log-mean-temperature-difference">Derivation of the Log-Mean Temperature Difference</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-correction-factor-f-for-non-counter-flow">The Correction Factor <span class="math notranslate nohighlight">\(F\)</span> for Non-Counter-Flow</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-duty-q-from-stream-properties">Heat Duty <span class="math notranslate nohighlight">\(Q\)</span> from Stream Properties</a></li>

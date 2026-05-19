@@ -71,6 +71,8 @@ For *condensing* steam or *evaporating* refrigerant, the temperature is fixed by
 ### Worked Example: Sizing the Cooling-Water Flow
 
 ```{prf:example} Cooling-Water Flow for a Process Cooler
+:label: processequipmentdesign-example-0
+
 A process stream delivers 250 kW of cooling duty to a heat exchanger. Cooling water enters at 30$^\circ$C. (a) What is the required cooling-water mass flow if the design $\Delta T_{util} = 10^\circ$C? (b) What is the flow if $\Delta T_{util}$ is reduced to 3$^\circ$C? (c) Comment on the comparison.
 ```
 
@@ -226,7 +228,7 @@ Both plate styles tend to be expensive on a \$/m$^2$ basis at small areas but ex
 ```
 
 
-## Heat-Exchanger Sizing: $Q = U A F \Delta T_{LM$}
+## Heat-Exchanger Sizing: $Q = U A F \Delta T_{LM}$
 Every shell-and-tube sizing problem reduces to five numbers: heat duty $Q$, overall coefficient $U$, log-mean temperature difference $\Delta T_{LM}$, correction factor $F$, and required area $A$. The PE exam tests all five.
 
 ### Derivation of the Log-Mean Temperature Difference
@@ -356,6 +358,8 @@ The dominant resistance(s) reveal where to invest design effort. For gas-side co
 ### Worked Example: Sizing a Cooling-Water Exchanger
 
 ```{prf:example} Sizing a Counter-Flow Cooler
+:label: processequipmentdesign-example-1
+
 A process stream of $m = 15{,}000$ kg/h, $c_p = 2.5$ kJ/(kg$\cdot$K), must be cooled from 110$^\circ$C to 60$^\circ$C using cooling water entering at 30$^\circ$C and leaving at 45$^\circ$C. Counter-flow, $F = 1$, estimated $U = 600$ W/(m$^2 \cdot$K). Find $Q$, the cooling-water flow, $\Delta T_{LM}$, and the heat-transfer area $A$.
 ```
 
@@ -388,8 +392,9 @@ $$ A = \frac{Q}{U F \Delta T_{LM}} = \frac{520{,}900 W}{(600)(1)(45.3)} = \frac{
 
 ### Worked Example: Co-current vs. Counter-Current LMTD
 
-```{prf:example} The $\Delta T_{LM
-$ Penalty of Co-Current Flow}
+```{prf:example} The $\Delta T_{LM}$ Penalty of Co-Current Flow
+:label: processequipmentdesign-example-2
+
 For the same service (process 110$\to$60$^\circ$C, cooling water 30$\to$45$^\circ$C), compute $\Delta T_{LM}$ in (a) counter-flow and (b) co-current flow. By how much does the required area change?
 ```
 
@@ -404,7 +409,7 @@ $$ \Delta T_{LM} = \frac{80 - 15}{\ln(80/15)} = \frac{65}{\ln(5.333)} = \frac{65
 
 - **Area comparison at constant $Q$ and $U$.**
 $$ \frac{A_{co}}{A_{counter}} = \frac{\Delta T_{LM,counter}}{\Delta T_{LM,co}} = \frac{45.3}{38.8} = 1.17 $$
-The co-current arrangement needs 17% more area for the same service.
+The co-current arrangement needs 17\% more area for the same service.
 
 
 - **The deeper limit.** Co-current flow cannot in principle cool the process below the cooling-water outlet temperature  -  if the process target were 35$^\circ$C and the cooling-water outlet were 45$^\circ$C, the design would be infeasible in co-current and only feasible in counter-flow. **Counter-flow is therefore the default** for any service where the temperature ranges overlap.
@@ -417,7 +422,9 @@ The co-current arrangement needs 17% more area for the same service.
 ### Worked Example: Sizing a Steam Reboiler (Latent Heat)
 
 ```{prf:example} Kettle Reboiler for a Distillation Column
-A distillation column requires 3{,}500 kW of reboil duty. The process side boils at 95$^\circ$C; low-pressure steam at 6 barg condenses at 158$^\circ$C and is returned as saturated condensate. Latent heat of steam at 158$^\circ$C: $\lambda = 2{,}080$ kJ/kg. Estimated $U = 2{,}000$ W/m$^2$K (steam condensing $\to$ boiling, with $\sim$10% fouling allowance). Size the reboiler.
+:label: processequipmentdesign-example-3
+
+A distillation column requires 3{,}500 kW of reboil duty. The process side boils at 95$^\circ$C; low-pressure steam at 6 barg condenses at 158$^\circ$C and is returned as saturated condensate. Latent heat of steam at 158$^\circ$C: $\lambda = 2{,}080$ kJ/kg. Estimated $U = 2{,}000$ W/m$^2$K (steam condensing $\to$ boiling, with $\sim$10\% fouling allowance). Size the reboiler.
 ```
 
 
@@ -504,7 +511,9 @@ A fluid prefers the *shell* side if it is:
 ### Worked Example: Selecting Sides for an Oxygen-Heating Exchanger
 
 ```{prf:example} Tube/Shell Assignment for High-Pressure Steam Heating Oxygen
-An exchanger heats 99%+ pure oxygen gas from 30 to 220$^\circ$C using high-pressure saturated steam at 45 barg ($T_sat \approx 257^\circ$C, condensing). Oxygen is an active oxidizer at elevated temperature. Steam is benign. Assign tube and shell sides.
+:label: processequipmentdesign-example-4
+
+An exchanger heats 99\%+ pure oxygen gas from 30 to 220$^\circ$C using high-pressure saturated steam at 45 barg ($T_sat \approx 257^\circ$C, condensing). Oxygen is an active oxidizer at elevated temperature. Steam is benign. Assign tube and shell sides.
 ```
 
 
@@ -527,6 +536,8 @@ $$
 ### Worked Example: Fouling Process Fluid + Cooling Water
 
 ```{prf:example} Tube/Shell Assignment for a Fouling Process Cooler
+:label: processequipmentdesign-example-5
+
 A heavy gasoil at 200$^\circ$C must be cooled to 80$^\circ$C using cooling water (clean, treated). The gasoil has a known fouling tendency (asphaltene deposition). Cooling water is at low pressure ($\sim$3 barg); gasoil at moderate pressure ($\sim$10 barg). Assign sides.
 ```
 
@@ -583,7 +594,7 @@ The materials selection for a heat exchanger is one of the most consequential co
 
 ```{note}
 **Three-Step MOC Selection**
-- **Temperature limits.** Carbon steel (CS) A516 is good to about 425$^\circ$C continuously and down to roughly $-29^\circ$C (below this, impact testing per ASME is required; switch to low-temp variants A350 LF2 or A203, or to austenitic SS for cryogenic). Above 425$^\circ$C, low-Cr steels (1.25Cr, 2.25Cr) or austenitic SS take over. Below $-100^\circ$C: austenitic 304/304L SS. Below $-195^\circ$C (LNG, air separation): 9% Ni steel or aluminum.
+- **Temperature limits.** Carbon steel (CS) A516 is good to about 425$^\circ$C continuously and down to roughly $-29^\circ$C (below this, impact testing per ASME is required; switch to low-temp variants A350 LF2 or A203, or to austenitic SS for cryogenic). Above 425$^\circ$C, low-Cr steels (1.25Cr, 2.25Cr) or austenitic SS take over. Below $-100^\circ$C: austenitic 304/304L SS. Below $-195^\circ$C (LNG, air separation): 9\% Ni steel or aluminum.
 
 - **Chemical compatibility.** Screen the candidate materials against the actual process chemistry: oxidizers, chlorides, sulfides, acids, bases, hydrogen. Eliminate alloys that fail in this service. This is where corrosion-engineering tables (Hamner's, NACE) become essential.
 
@@ -601,7 +612,7 @@ The materials selection for a heat exchanger is one of the most consequential co
 
 - **304/304L SS**: mildly oxidizing fluids, food, pharma. Avoid above 60$^\circ$C with chlorides ($>$ 50 ppm) due to chloride SCC.
 
-- **316/316L SS**: Mo addition improves pitting resistance. Dilute sulfuric (below $\sim$10%), seawater (cold), most organic acids.
+- **316/316L SS**: Mo addition improves pitting resistance. Dilute sulfuric (below $\sim$10\%), seawater (cold), most organic acids.
 
 - **Copper alloys**: Admiralty brass and 90/10 Cu-Ni for surface condensers in seawater; resists biofouling.
 
@@ -630,13 +641,15 @@ A pressure vessel's wall thickness is typically set by hoop stress (ASME Sec. VI
 
 - The bond is achieved by hot-rolling, explosion welding, or weld overlay.
 
-Cost: typically 60-80% of solid corrosion-resistant construction. Inspection: required more often than solid construction to verify the clad layer is intact and not breached by pitting that has reached the CS substrate.
+Cost: typically 60-80\% of solid corrosion-resistant construction. Inspection: required more often than solid construction to verify the clad layer is intact and not breached by pitting that has reached the CS substrate.
 ```
 
 
 ### Worked Example: MOC for the Oxygen-Heating Exchanger
 
 ```{prf:example} MOC Selection: Steam Heats Pure Oxygen
+:label: processequipmentdesign-example-6
+
 For the previous example (steam at 45 barg, 257$^\circ$C condensing in the tubes; oxygen at 30 to 220$^\circ$C in the shell), select MOC for tubes and shell. Justify with cost and safety considerations.
 ```
 
@@ -657,12 +670,14 @@ For the previous example (steam at 45 barg, 257$^\circ$C condensing in the tubes
 ### Worked Example: MOC for a Refrigerant Tube-Side, Process Shell-Side
 
 ```{prf:example} MOC for a Refrigerated Process Cooler
+:label: processequipmentdesign-example-7
+
 A heat exchanger uses Freon-22 refrigerant at $-40^\circ$C (vaporizing tube-side) to cool a non-corrosive hydrocarbon process stream shell-side. Specify MOC.
 ```
 
 
 ```{dropdown} Solution Steps
-- **Tube MOC (refrigerant-wetted at $-40^\circ$C).** Standard CS is brittle below $-29^\circ$C. Use **A201 low-alloy steel** or a low-temp CS variant qualified by ASME impact testing. Service envelope to $-45^\circ$C. For colder service (e.g. $-60^\circ$C), step up to 304 SS or 9% Ni steel.
+- **Tube MOC (refrigerant-wetted at $-40^\circ$C).** Standard CS is brittle below $-29^\circ$C. Use **A201 low-alloy steel** or a low-temp CS variant qualified by ASME impact testing. Service envelope to $-45^\circ$C. For colder service (e.g. $-60^\circ$C), step up to 304 SS or 9\% Ni steel.
 
 - **Shell MOC (hydrocarbon process side).** The process is non-corrosive at moderate temperature. **Carbon steel** (A516-70) is adequate.
 
@@ -672,11 +687,11 @@ A heat exchanger uses Freon-22 refrigerant at $-40^\circ$C (vaporizing tube-side
 
 ```{note}
 **Exam Tips  -  Heat-Exchanger MOC**
-- Tube and shell MOC can differ; doing so often saves 30-50% of capital. Match each to its wetted fluid.
+- Tube and shell MOC can differ; doing so often saves 30-50\% of capital. Match each to its wetted fluid.
 
 - Pure-oxygen and chlorine service require non-CS construction even at modest temperatures.
 
-- Below $-29^\circ$C, standard CS becomes brittle; switch to A201, 304 SS, or 9% Ni steel depending on minimum temperature.
+- Below $-29^\circ$C, standard CS becomes brittle; switch to A201, 304 SS, or 9\% Ni steel depending on minimum temperature.
 
 - Sour service ($H_2S$): NACE MR0175 governs; typically lower-strength steels and post-weld heat treatment to avoid sulfide stress cracking.
 ```
@@ -719,7 +734,7 @@ Add the **corrosion allowance** $CA$ to $t$ to get the final design thickness. R
 
 
 ```{tip}
-- $P$: design pressure [psig, kPa, or bar]. Set as MAWP + 10% margin, or design pressure + safety-valve setting.
+- $P$: design pressure [psig, kPa, or bar]. Set as MAWP + 10\% margin, or design pressure + safety-valve setting.
 
 - $R$: inside radius of the shell [in or mm].
 
@@ -744,6 +759,8 @@ External-pressure designs are substantially more conservative than equivalent in
 ### Worked Example: Wall Thickness of a Process Reactor
 
 ```{prf:example} Reactor Wall Thickness
+:label: processequipmentdesign-example-8
+
 A vertical cylindrical reactor: ID = 60 in (1.524 m), design pressure 250 psig, design temperature 600$^\circ$F. MOC: SA-516 Gr. 70 carbon steel. $S = 17{,}500$ psi at 600$^\circ$F (from ASME Sec. II Part D). Fully radiographed butt welds, $E = 1.0$. Corrosion allowance 1/8 in. Find the required wall thickness and the nearest commercial plate gauge.
 ```
 
@@ -807,7 +824,7 @@ Pumps move liquid; compressors move gas. The PE exam tests pump-type selection b
 
 ```{note}
 **Five Pump Families**
-- **Centrifugal (radial-flow):** the workhorse. High flow, low-to-moderate head ($< 200$ m), clean fluids, smooth performance curve. Used for $\sim$70% of plant pumps.
+- **Centrifugal (radial-flow):** the workhorse. High flow, low-to-moderate head ($< 200$ m), clean fluids, smooth performance curve. Used for $\sim$70\% of plant pumps.
 
 - **Centrifugal (axial-flow):** very high flow, low head ($< 20$ m). Cooling-tower circulation, flood control.
 
@@ -850,11 +867,11 @@ or, in US units, $P_{hyd}[hp] = Q[gpm] \cdot H[ft] \cdot SG / 3960$.
 
 **Brake power** (the shaft power the motor must deliver):
 $$ P_{brake} = \frac{P_{hyd}}{\eta_{pump}} $$
-Typical pump efficiency: 50-65% for small (< 5 hp) pumps, 70-85% for moderate-size centrifugals.
+Typical pump efficiency: 50-65\% for small (< 5 hp) pumps, 70-85\% for moderate-size centrifugals.
 
 **Motor input power** adds motor losses:
 $$ P_{electric} = \frac{P_{brake}}{\eta_{motor}} $$
-with $\eta_{motor} \approx 90$-95% for modern TEFC induction motors.
+with $\eta_{motor} \approx 90$-95\% for modern TEFC induction motors.
 ```
 
 
@@ -891,6 +908,8 @@ Note that $P_{vap}$ rises strongly with temperature. Hot fluids (water above 70$
 ### Worked Example: NPSH$_A$ for a Hot-Water Pump
 
 ```{prf:example} Hot-Water Pump Cavitation Check
+:label: processequipmentdesign-example-9
+
 Water at 90$^\circ$C ($P_{vap} = 70$ kPa, $\rho = 965$ kg/m$^3$) is pumped from an atmospheric tank ($P_{abs} = 101.3$ kPa). The water surface is 2.0 m above the pump centerline (flooded suction). Suction-line friction loss is 1.5 m of water. The pump's NPSH$_R$ at the design flow is 3.0 m. Determine NPSH$_A$ and assess whether the pump will cavitate.
 ```
 
@@ -997,7 +1016,7 @@ or read from a Gilliland chart.
 **Souders-Brown Diameter**
 The maximum vapor superficial velocity that avoids flooding (entrainment of liquid by upward-moving vapor) is
 $$ U_{\max} = C_{SB} \sqrt{\frac{\rho_L - \rho_V}{\rho_V}} $$
-where $C_{SB}$ (Souders-Brown capacity factor, read from Fair's chart) ranges $0.05$-$0.15$ m/s for trayed columns. Design at 70-85% of flood velocity. The column diameter is
+where $C_{SB}$ (Souders-Brown capacity factor, read from Fair's chart) ranges $0.05$-$0.15$ m/s for trayed columns. Design at 70-85\% of flood velocity. The column diameter is
 $$ D = \sqrt{\frac{4 V}{\pi U_{design}}} $$
 where $V$ is the vapor volumetric flow at column operating conditions.
 ```
@@ -1122,7 +1141,7 @@ Affinity: $Q \propto N$, $H \propto N^2$, $P \propto N^3$.
 **Distillation:**
 Fenske: $N_{\min} = \log[(x_D/(1-x_D))/(x_B/(1-x_B))]/\log\alpha$.
 Operating $R \approx 1.3 R_{\min}$.
-Souders-Brown diameter: $U_{\max} = C_{SB}\sqrt{(\rho_L - \rho_V)/\rho_V}$, design at 70-85% flood.
+Souders-Brown diameter: $U_{\max} = C_{SB}\sqrt{(\rho_L - \rho_V)/\rho_V}$, design at 70-85\% flood.
 
 **Typical $U$ (W/m$^2$K):** gas-gas 10-50, gas-liq 50-400, water-water 800-1500, steam-water 1500-4000.
 ```

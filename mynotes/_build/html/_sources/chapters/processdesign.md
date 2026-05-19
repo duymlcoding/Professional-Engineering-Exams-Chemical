@@ -151,6 +151,8 @@ Examples: `TIC-101` = Temperature Indicating Controller, first one in area 100. 
 ### Worked Example: Reading the Three Diagrams
 
 ```{prf:example} Identifying Information by Diagram Type
+:label: processdesign-example-0
+
 For the ethylene oxide production process, ethylene and oxygen feed a catalytic reactor where the main reaction is
 $$ \mathrm{C_2H_4 + \tfrac{1}{2} O_2 \rightarrow C_2H_4O} $$
 with side reactions producing $\mathrm{CO_2}$ and $\mathrm{H_2O}$. The reactor effluent flashes; unreacted ethylene is recycled; ethylene oxide is purified in a downstream distillation train. Which diagram type would show each of the following? (a) the recycle of unreacted ethylene back to the reactor; (b) the fail-safe action of the cooling-water valve on the reactor jacket; (c) the molar composition of the bottoms stream from the second column; (d) the carbon-steel material specification of the reactor-effluent piping; (e) the overall production rate of ethylene oxide.
@@ -175,6 +177,8 @@ with side reactions producing $\mathrm{CO_2}$ and $\mathrm{H_2O}$. The reactor e
 ### Worked Example: Drawing a BFD from a Word Description
 
 ```{prf:example} Sketching a BFD for a Methanol Plant
+:label: processdesign-example-1
+
 Natural gas is desulfurized, then reformed with steam to produce syngas (CO + H$_2$). The syngas is compressed and reacted catalytically to methanol; unreacted syngas is recycled. Crude methanol is distilled in two columns: a topping column removes light gases, and a refining column separates pure methanol overhead from water bottoms. Draw the BFD.
 ```
 
@@ -299,7 +303,7 @@ $$
 \begin{align}
 
 
-Q &= CP_h (T_h^{in} - T_h^{out})
+Q &= CP_h (T_h^{in} - T_h^{out}) \\
 Q &= CP_c (T_c^{out} - T_c^{in})
 \end{align}
 $$
@@ -312,9 +316,9 @@ $$
 \begin{align}
 
 
-\Delta T_2 - \Delta T_1 &= (T_h^{in} - T_c^{out}) - (T_h^{out} - T_c^{in})
-&= (T_h^{in} - T_h^{out}) - (T_c^{out} - T_c^{in})
-&= \frac{Q}{CP_h} - \frac{Q}{CP_c}
+\Delta T_2 - \Delta T_1 &= (T_h^{in} - T_c^{out}) - (T_h^{out} - T_c^{in}) \\
+&= (T_h^{in} - T_h^{out}) - (T_c^{out} - T_c^{in}) \\
+&= \frac{Q}{CP_h} - \frac{Q}{CP_c} \\
 &= Q \frac{CP_c - CP_h}{CP_h \cdot CP_c}
 \end{align}
 $$
@@ -362,8 +366,9 @@ $$ CP_h \geq CP_c   (below pinch) $$
 ### Worked Example: Full Four-Stream HEN Design
 The transcript walks through this exact problem. We reproduce it with every numerical step.
 
-```{prf:example} Four-Stream HEN with $\Delta T_{\min
-= 10^\circ$C}
+```{prf:example} Four-Stream HEN with $\Delta T_{\min} = 10^\circ$C
+:label: processdesign-example-2
+
 Four streams, $\Delta T_{\min} = 10$ $^\circ$C, MER targets (assumed given from a previous temperature-interval analysis) $Q_{H,\min} = 80$ kW, $Q_{C,\min} = 50$ kW. The pinch is at $T_h^{pinch} = 90^\circ$C, $T_c^{pinch} = 80^\circ$C.
 
 
@@ -507,6 +512,8 @@ The Linnhoff-Mason rule of thumb: the minimum number of units (exchangers + heat
 ### Worked Example: Computing MER Targets from Temperature Intervals
 
 ```{prf:example} Temperature-Interval Method (TIM) for MER
+:label: processdesign-example-3
+
 Two hot streams and two cold streams, $\Delta T_{\min} = 10^\circ$C:
 
 
@@ -676,6 +683,8 @@ On the PE exam, use $C_{bare module} = F_{BM} \cdot C_P$ unless instructed other
 ### Worked Example: CEPCI Escalation
 
 ```{prf:example} Updating a Heat-Exchanger Cost to Current Year
+:label: processdesign-example-4
+
 A floating-head carbon-steel shell-and-tube heat exchanger with $A = 100$ m$^2$ at atmospheric pressure had a calculated purchase cost of \$23{,}000 in the year 2001 (CEPCI = 397). Estimate the current cost when CEPCI = 800.
 ```
 
@@ -696,6 +705,8 @@ $$ C_{P,now} = 23{,}000 \times 2.015 = \$46{,}346 \approx \$46{,}300 $$
 ### Worked Example: Six-Tenths Rule for Pump Scaling
 
 ```{prf:example} Cost of a Larger Pump from a Known Smaller Pump
+:label: processdesign-example-5
+
 A 50 kW centrifugal pump costs \$8{,}500 installed. Estimate the cost of a 150 kW pump of the same type and same year.
 ```
 
@@ -715,6 +726,8 @@ $$ C_2 = C_1 (\frac{P_2}{P_1})^{0.6} = 8500 (\frac{150}{50})^{0.6} = 8500 \times
 ### Worked Example: Full Cost Build-Up
 
 ```{prf:example} Bare-Module Cost of a Stainless-Steel High-Pressure Exchanger
+:label: processdesign-example-6
+
 A 200 m$^2$ floating-head shell-and-tube exchanger is needed in 316 SS service at 20 barg. Using $C_B = \$28{,}000$ (from the Turton correlation at CEPCI 397), $F_M = 2.1$ (316 SS), $F_P = 1.5$ (at 20 barg), $F_L = 1.0$ (20 ft tubes), $F_{BM} = 3.0$, and current CEPCI = 800, compute the installed (bare-module) cost.
 ```
 
@@ -762,43 +775,43 @@ Before tackling capitalized cost, present-worth, NPV, or IRR, you must be fluent
 
 - $n$ = number of compounding periods (years if compounded annually).
 
-The six factors connect $P$, $F$, and $A$ in all directions. The standard notation is $(X/Y, i%, n)$: "find $X$ given $Y$."
+The six factors connect $P$, $F$, and $A$ in all directions. The standard notation is $(X/Y, i\%, n)$: "find $X$ given $Y$."
 ```
 
 
 ### Derivation of the Six Factors
 
 ```{dropdown} Solution Steps
-- **Single-payment compound amount $(F/P, i%, n)$.** A present sum $P$ earning rate $i$ compounded $n$ times has future value
+- **Single-payment compound amount $(F/P, i\%, n)$.** A present sum $P$ earning rate $i$ compounded $n$ times has future value
 $$ F = P (1 + i)^n $$
 Derivation: after one period, $P$ becomes $P + P i = P(1+i)$. After two, $P(1+i)(1+i) = P(1+i)^2$. By induction, after $n$, $P(1+i)^n$.
 
 
-- **Single-payment present worth $(P/F, i%, n)$.** Inverse of the previous:
+- **Single-payment present worth $(P/F, i\%, n)$.** Inverse of the previous:
 $$ P = \frac{F}{(1 + i)^n} $$
 The future sum $F$ is worth less now because money earns interest in between.
 
 
-- **Uniform-series compound amount $(F/A, i%, n)$.** Sum the future values of each of the $n$ end-of-year payments $A$:
+- **Uniform-series compound amount $(F/A, i\%, n)$.** Sum the future values of each of the $n$ end-of-year payments $A$:
 $$ F = A + A(1+i) + A(1+i)^2 + ... + A(1+i)^{n-1} = A \sum_{k=0}^{n-1}(1+i)^k $$
 The geometric series sums to
 $$ F = A \cdot \frac{(1+i)^n - 1}{i} $$
 Note: the last payment (at the end of period $n$) accrues no interest, the first (end of period 1) accrues $n-1$ periods.
 
 
-- **Sinking-fund deposit $(A/F, i%, n)$.** Inverse of the previous:
+- **Sinking-fund deposit $(A/F, i\%, n)$.** Inverse of the previous:
 $$ A = F \cdot \frac{i}{(1+i)^n - 1} $$
 The annual deposit $A$ needed to accumulate a target $F$ at the end of $n$ years.
 ```
 
 
 ```{dropdown} Solution Steps
-- **Capital recovery $(A/P, i%, n)$.** Combine $(F/P)$ and $(A/F)$:
+- **Capital recovery $(A/P, i\%, n)$.** Combine $(F/P)$ and $(A/F)$:
 $$ A = P (1+i)^n \cdot \frac{i}{(1+i)^n - 1} = P \cdot \frac{i (1+i)^n}{(1+i)^n - 1} $$
 The uniform annual payment $A$ that pays off a present principal $P$ in $n$ periods (mortgage-style amortization).
 
 
-- **Uniform-series present worth $(P/A, i%, n)$.** Inverse of capital recovery:
+- **Uniform-series present worth $(P/A, i\%, n)$.** Inverse of capital recovery:
 $$ P = A \cdot \frac{(1+i)^n - 1}{i (1+i)^n} $$
 The present worth of $n$ end-of-year payments of $A$.
 
@@ -830,9 +843,9 @@ If a loan or investment quotes a **nominal** annual rate $r$ with $m$ compoundin
 $$ i_{eff} = (1 + \frac{r}{m})^m - 1 $$
 
 
-- Monthly compounding ($m = 12$) at 12% nominal: $i_{eff} = (1.01)^{12} - 1 = 12.68%$.
+- Monthly compounding ($m = 12$) at 12\% nominal: $i_{eff} = (1.01)^{12} - 1 = 12.68\%$.
 
-- Continuous compounding ($m \to \infty$): $i_{eff} = e^r - 1$. At $r = 12%$, $i_{eff} = e^{0.12} - 1 = 12.75%$.
+- Continuous compounding ($m \to \infty$): $i_{eff} = e^r - 1$. At $r = 12\%$, $i_{eff} = e^{0.12} - 1 = 12.75\%$.
 
 For PE-exam problems, *always use the effective rate per compounding period* when plugging into the six factors, and match $n$ to the number of compounding periods (not just years if compounding $> $ once per year).
 ```
@@ -841,7 +854,9 @@ For PE-exam problems, *always use the effective rate per compounding period* whe
 ### Worked Example: Mixing the Factors
 
 ```{prf:example} Combination Problem: Loan with Balloon Payment
-A piece of equipment is purchased for \$200,000 with a 5-year loan at 8% annual interest. The borrower pays \$20,000 at the end of each year for 5 years, then a single "balloon" payment at the end of year 5 to retire the remaining principal. Find the balloon payment.
+:label: processdesign-example-7
+
+A piece of equipment is purchased for \$200,000 with a 5-year loan at 8\% annual interest. The borrower pays \$20,000 at the end of each year for 5 years, then a single "balloon" payment at the end of year 5 to retire the remaining principal. Find the balloon payment.
 ```
 
 
@@ -918,6 +933,8 @@ If there is a one-time overhaul at year $m < n$ (e.g. year 3 of a 6-year life), 
 This is exactly the transcript example, with all algebra reproduced.
 
 ```{prf:example} Capitalized-Cost Comparison of Two Reactors
+:label: processdesign-example-8
+
 Two reactors are compared:
 
 
@@ -925,7 +942,7 @@ Two reactors are compared:
 
 - **Reactor B:** initial purchase \$15{,}000; annual maintenance \$4{,}000; no salvage; one-time overhaul \$3{,}500 at year 3; life 6 years.
 
-Effective annual interest $i = 8%$. Which reactor is the better long-term investment?
+Effective annual interest $i = 8\%$. Which reactor is the better long-term investment?
 ```
 
 
@@ -973,13 +990,15 @@ $$ K_B = 36{,}270 + \frac{36{,}270}{(1.08)^6 - 1} = 36{,}270 + \frac{36{,}270}{0
 - **Decision.** $K_B < K_A$ by about \$13{,}000. **Reactor B is the better long-term investment.**
 
 
-- **Verification.** Although B has a higher annual cost and overhauls, its 6-year life means fewer replacement events per century compared to A's 4-year life. The 50% longer life-cycle more than compensates for B's larger per-cycle cost and absence of salvage credit. This is the typical pattern  -  longer-life equipment usually wins on capitalized-cost basis, even at higher per-cycle costs, provided $i$ is not extreme.
+- **Verification.** Although B has a higher annual cost and overhauls, its 6-year life means fewer replacement events per century compared to A's 4-year life. The 50\% longer life-cycle more than compensates for B's larger per-cycle cost and absence of salvage credit. This is the typical pattern  -  longer-life equipment usually wins on capitalized-cost basis, even at higher per-cycle costs, provided $i$ is not extreme.
 ```
 
 
 ### Worked Example: Effect of Interest Rate
 
 ```{prf:example} When Does Reactor A Become Preferred?
+:label: processdesign-example-9
+
 Using the same Reactor A and B data, find the interest rate at which the two have equal capitalized cost. Comment on whether realistic interest rates ever favor A.
 ```
 
@@ -987,23 +1006,23 @@ Using the same Reactor A and B data, find the interest rate at which the two hav
 ```{dropdown} Solution Steps
 - **Set up $K_A(i) = K_B(i)$ symbolically.** Both sides depend on $i$ through $(1+i)^4$ and $(1+i)^6$. Numerical root-finding (bisection, Goal Seek) is the practical approach.
 
-- **Try $i = 15%$.**
+- **Try $i = 15\%$.**
 
 
 - $(1.15)^4 = 1.7490$. $(P/A, 15, 4) = (0.7490)/(0.15 \times 1.7490) = 2.855$. $P_{A,maint} = 5{,}710$. $C_{I,A} = 30{,}710$. $C_{R,A} = 27{,}710$. $K_A = 30{,}710 + 27{,}710/0.7490 = 30{,}710 + 37{,}000 = \$67{,}700$.
 
 - $(1.15)^6 = 2.313$. $(P/A, 15, 6) = (1.313)/(0.15 \times 2.313) = 3.784$. $P_{B,maint} = 15{,}140$. $P_{B,ovh} = 3{,}500/1.5209 = 2{,}301$. $C_{I,B} = 32{,}441$. $K_B = 32{,}441 + 32{,}441/1.313 = 32{,}441 + 24{,}710 = \$57{,}150$.
 
-At $i = 15%$, B is still better.
+At $i = 15\%$, B is still better.
 
-- **Try $i = 30%$.**
+- **Try $i = 30\%$.**
 
 
 - $(1.30)^4 = 2.856$. $(P/A) = 1.856/(0.30 \times 2.856) = 2.166$. $P_{A,maint} = 4{,}332$. $C_{I,A} = 29{,}332$. $K_A = 29{,}332 + 26{,}332/1.856 = 29{,}332 + 14{,}190 = \$43{,}520$.
 
 - $(1.30)^6 = 4.827$. $(P/A) = 3.827/(0.30 \times 4.827) = 2.643$. $P_{B,maint} = 10{,}572$. $P_{B,ovh} = 3{,}500/2.197 = 1{,}593$. $C_{I,B} = 27{,}165$. $K_B = 27{,}165 + 27{,}165/3.827 = 27{,}165 + 7{,}099 = \$34{,}264$.
 
-At $i = 30%$, B still wins.
+At $i = 30\%$, B still wins.
 
 - **Interpretation.** At very high interest rates, the perpetual replacement term becomes negligible (the future is heavily discounted), and the comparison reduces to "which is cheaper today." B's lower initial purchase keeps it ahead. For this problem, B wins at all realistic interest rates.
 
@@ -1072,7 +1091,9 @@ Most multi-event cash flows decompose into:
 The transcript's example, redone with every step.
 
 ```{prf:example} Reactor A vs. Reactor B (Same Data as Capitalized-Cost Example) over 12-Year LCM
-Same data: A has 4-year life and salvage \$3{,}000, annual maintenance \$2{,}000, purchase \$25{,}000. B has 6-year life, no salvage, annual maintenance \$4{,}000, overhaul \$3{,}500 at year 3 (so years 3 and 9 over the 12-year horizon), purchase \$15{,}000. $i = 8%$. LCM = 12 years. Compute PW.
+:label: processdesign-example-10
+
+Same data: A has 4-year life and salvage \$3{,}000, annual maintenance \$2{,}000, purchase \$25{,}000. B has 6-year life, no salvage, annual maintenance \$4{,}000, overhaul \$3{,}500 at year 3 (so years 3 and 9 over the 12-year horizon), purchase \$15{,}000. $i = 8\%$. LCM = 12 years. Compute PW.
 ```
 
 
@@ -1224,6 +1245,8 @@ where $p_i$ is the market price of species $i$ in \$/kg.
 The transcript's example, walked through completely.
 
 ```{prf:example} GEP for Two Synthesis Routes to Vinyl Chloride Monomer
+:label: processdesign-example-11
+
 Compare two synthesis routes to vinyl chloride monomer (VCM, $\mathrm{C_2H_3Cl}$, $M = 62.5$):
 
 **Route 1:** Hydrochlorination of acetylene.
@@ -1256,8 +1279,8 @@ $$
 \begin{align}
 
 
-GEP_1 &= (1)(0.75) - (0.416)(1.85) - (0.584)(0.30)
-&= 0.750 - 0.770 - 0.175
+GEP_1 &= (1)(0.75) - (0.416)(1.85) - (0.584)(0.30) \\
+&= 0.750 - 0.770 - 0.175 \\
 &= -\$0.195  per kg VCM \approx -\$0.20/kg
 \end{align}
 $$
@@ -1284,8 +1307,8 @@ $$
 \begin{align}
 
 
-GEP_2 &= (1)(0.75) + (0.584)(0.30) - (0.480)(0.20) - (1.136)(0.25) - (0.256)(0)
-&= 0.750 + 0.175 - 0.096 - 0.284 - 0
+GEP_2 &= (1)(0.75) + (0.584)(0.30) - (0.480)(0.20) - (1.136)(0.25) - (0.256)(0) \\
+&= 0.750 + 0.175 - 0.096 - 0.284 - 0 \\
 &= +\$0.545  per kg VCM
 \end{align}
 $$
@@ -1295,13 +1318,15 @@ $$
 - **Verification.** Modern industrial VCM production is overwhelmingly via the ethylene/EDC oxychlorination route (a close cousin of Route 2), confirming the GEP-based selection in practice.
 
 
-- **What GEP does *not* tell you.** A GEP of \$0.545/kg leaves room for utilities (steam, electricity), labor, depreciation, taxes, and a profit margin. As a rule of thumb, 30-70% of GEP is consumed by these downstream costs, so the bottom-line plant margin is often \$0.10-\$0.35/kg.
+- **What GEP does *not* tell you.** A GEP of \$0.545/kg leaves room for utilities (steam, electricity), labor, depreciation, taxes, and a profit margin. As a rule of thumb, 30-70\% of GEP is consumed by these downstream costs, so the bottom-line plant margin is often \$0.10-\$0.35/kg.
 ```
 
 
 ### Worked Example: GEP with a Negative-Value Byproduct
 
 ```{prf:example} Disposal-Cost Byproduct
+:label: processdesign-example-12
+
 Consider a hypothetical reaction $\mathrm{A + B \rightarrow P + Q}$ where Q is a hazardous waste that costs \$0.40/kg to incinerate (negative value $-$\$0.40/kg). Prices: A \$0.50/kg, B \$0.30/kg, P \$1.00/kg. Stoichiometry on a mass basis: 0.6 kg A and 0.5 kg B produce 1.0 kg P and 0.1 kg Q. Compute GEP.
 ```
 
@@ -1312,13 +1337,13 @@ $$
 \begin{align}
 
 
-GEP &= (1.0)(1.00) + (0.1)(-0.40) - (0.6)(0.50) - (0.5)(0.30)
-&= 1.000 - 0.040 - 0.300 - 0.150
+GEP &= (1.0)(1.00) + (0.1)(-0.40) - (0.6)(0.50) - (0.5)(0.30) \\
+&= 1.000 - 0.040 - 0.300 - 0.150 \\
 &= +\$0.510  per kg P
 \end{align}
 $$
 
-- **Sanity check.** If Q had zero disposal cost instead, GEP would be \$0.550. The disposal of 0.1 kg/kg of waste reduces profit by \$0.04  -  about 8% of margin. If disposal cost rose to \$5/kg (e.g. a regulated waste), the penalty would be 0.1 $\times$ 5 = \$0.50/kg, almost killing the route. Byproduct economics are often the deciding factor in route selection.
+- **Sanity check.** If Q had zero disposal cost instead, GEP would be \$0.550. The disposal of 0.1 kg/kg of waste reduces profit by \$0.04  -  about 8\% of margin. If disposal cost rose to \$5/kg (e.g. a regulated waste), the penalty would be 0.1 $\times$ 5 = \$0.50/kg, almost killing the route. Byproduct economics are often the deciding factor in route selection.
 ```
 
 
@@ -1374,7 +1399,7 @@ where:
 
 - $D_k$ = depreciation charge in year $k$.
 
-- $t$ = effective tax rate (federal + state + local, typically 25-40% in the US).
+- $t$ = effective tax rate (federal + state + local, typically 25-40\% in the US).
 
 The depreciation appears twice: once subtracted to compute taxable income $(S - C - D)$, then added back because it is non-cash. The net effect is that depreciation *shifts cash flow earlier in time*; the total cash over the project life is unchanged, but earlier cash is worth more after discounting  -  so depreciation increases NPV.
 ```
@@ -1388,7 +1413,7 @@ The depreciation appears twice: once subtracted to compute taxable income $(S - 
 
 **MACRS (Modified Accelerated Cost Recovery System):** US tax depreciation. Chemical-plant equipment is typically 5- or 7-year MACRS class. The percentages of $I_0$ depreciated each year (5-year MACRS, half-year convention):
 
-For 7-year MACRS the percentages start at 14.29% in year 1 and finish in year 8 at 4.46%. The point of accelerated depreciation is to bring the tax shield earlier in time, increasing NPV.
+For 7-year MACRS the percentages start at 14.29\% in year 1 and finish in year 8 at 4.46\%. The point of accelerated depreciation is to bring the tax shield earlier in time, increasing NPV.
 ```
 
 
@@ -1396,7 +1421,9 @@ For 7-year MACRS the percentages start at 14.29% in year 1 and finish in year 8 
 This is the transcript's example, with every step.
 
 ```{prf:example} NPV with MACRS Depreciation and Working Capital
-A chemical plant is built 2007-2009 with total depreciable capital \$90M (sunk \$30M per year). Working capital \$40M required at end of 2009. Production begins 2010 at 50% of nameplate; 75% in 2011; 100% thereafter through 2021. At full capacity: sales \$150M/yr, cash production cost \$100M/yr. In ramp-up: 2010 sales \$75M, cost \$55M; 2011 sales \$113M, cost \$78M. MACRS 7-year depreciation. Tax rate 40%. Cost of capital 15%. Compute NPV.
+:label: processdesign-example-13
+
+A chemical plant is built 2007-2009 with total depreciable capital \$90M (sunk \$30M per year). Working capital \$40M required at end of 2009. Production begins 2010 at 50\% of nameplate; 75\% in 2011; 100\% thereafter through 2021. At full capacity: sales \$150M/yr, cash production cost \$100M/yr. In ramp-up: 2010 sales \$75M, cost \$55M; 2011 sales \$113M, cost \$78M. MACRS 7-year depreciation. Tax rate 40\%. Cost of capital 15\%. Compute NPV.
 ```
 
 
@@ -1416,21 +1443,21 @@ A chemical plant is built 2007-2009 with total depreciable capital \$90M (sunk \
 - **MACRS 7-year depreciation schedule of \$90M total.**
 
 
-- 2010 (yr 1): 14.29% $\times$ 90 = \$12.86M
+- 2010 (yr 1): 14.29\% $\times$ 90 = \$12.86M
 
-- 2011 (yr 2): 24.49% $\times$ 90 = \$22.04M
+- 2011 (yr 2): 24.49\% $\times$ 90 = \$22.04M
 
-- 2012 (yr 3): 17.49% = \$15.74M
+- 2012 (yr 3): 17.49\% = \$15.74M
 
-- 2013 (yr 4): 12.49% = \$11.24M
+- 2013 (yr 4): 12.49\% = \$11.24M
 
-- 2014 (yr 5): 8.93% = \$8.04M
+- 2014 (yr 5): 8.93\% = \$8.04M
 
-- 2015 (yr 6): 8.92% = \$8.03M
+- 2015 (yr 6): 8.92\% = \$8.03M
 
-- 2016 (yr 7): 8.93% = \$8.04M
+- 2016 (yr 7): 8.93\% = \$8.04M
 
-- 2017 (yr 8): 4.46% = \$4.01M
+- 2017 (yr 8): 4.46\% = \$4.01M
 
 - 2018-2021: \$0 (depreciation exhausted)
 ```
@@ -1468,7 +1495,7 @@ Formula: $CF_k = (S_k - C_k - D_k)(1 - 0.40) + D_k = 0.6(S_k - C_k) - 0.6 D_k + 
 
 
 ```{dropdown} Solution Steps
-- **Discount each cash flow back to 2007 at $r = 15%$.**
+- **Discount each cash flow back to 2007 at $r = 15\%$.**
 Let the discount factors be $1/(1.15)^k$ where $k$ is years from 2007.
 
 
@@ -1513,7 +1540,7 @@ $$ NPV = 128.71 - 109.02 \approx +\$19.7  M $$
 - **Cumulative discounted cash flow plot.** Tracking the running sum from 2007 onward, the cumulative crosses zero somewhere in 2018  -  this is the **discounted payback period**, $\approx$ 11 years.
 
 
-- **Interpretation.** NPV $> 0$ at 15% cost of capital: the project creates value beyond what could be earned by investing the same \$90M+ at 15%. Accept.
+- **Interpretation.** NPV $> 0$ at 15\% cost of capital: the project creates value beyond what could be earned by investing the same \$90M+ at 15\%. Accept.
 ```
 
 
@@ -1526,30 +1553,32 @@ $$ NPV(r = IRR) = 0 $$
 
 **Computation:** no closed form exists; use a spreadsheet's Goal Seek or Solver to find $r$ such that NPV $= 0$. Alternatively, plot NPV vs. $r$ and read the zero-crossing.
 
-**Interpretation:** IRR is the project's intrinsic earning rate. "If we got this money back as interest from a bank, the equivalent interest rate would be IRR." For the transcript's project, IRR $\approx 18.5%$, so the project beats a 15% hurdle rate by 3.5%  -  modest, but acceptable.
+**Interpretation:** IRR is the project's intrinsic earning rate. "If we got this money back as interest from a bank, the equivalent interest rate would be IRR." For the transcript's project, IRR $\approx 18.5\%$, so the project beats a 15\% hurdle rate by 3.5\%  -  modest, but acceptable.
 ```
 
 
 ### Worked Example: Iterating to Find IRR
 
 ```{prf:example} Quick IRR Bracket for a Three-Year Project
-A project costs \$100K at $t=0$ and returns \$40K, \$50K, \$30K at the ends of years 1, 2, 3. Find IRR (within $\pm$1%).
+:label: processdesign-example-14
+
+A project costs \$100K at $t=0$ and returns \$40K, \$50K, \$30K at the ends of years 1, 2, 3. Find IRR (within $\pm$1\%).
 ```
 
 
 ```{dropdown} Solution Steps
 - **Try $r = 0$.** NPV $= -100 + 40 + 50 + 30 = +20$. Positive.
 
-- **Try $r = 20%$.** NPV $= -100 + 40/1.2 + 50/1.44 + 30/1.728 = -100 + 33.33 + 34.72 + 17.36 = -14.59$. Negative.
+- **Try $r = 20\%$.** NPV $= -100 + 40/1.2 + 50/1.44 + 30/1.728 = -100 + 33.33 + 34.72 + 17.36 = -14.59$. Negative.
 
-- **Bisect: try $r = 10%$.** NPV $= -100 + 40/1.1 + 50/1.21 + 30/1.331 = -100 + 36.36 + 41.32 + 22.54 = +0.22$. Almost zero.
+- **Bisect: try $r = 10\%$.** NPV $= -100 + 40/1.1 + 50/1.21 + 30/1.331 = -100 + 36.36 + 41.32 + 22.54 = +0.22$. Almost zero.
 
-- **Refine: try $r = 11%$.** NPV $= -100 + 40/1.11 + 50/1.2321 + 30/1.3676 = -100 + 36.04 + 40.58 + 21.94 = -1.44$. Negative.
+- **Refine: try $r = 11\%$.** NPV $= -100 + 40/1.11 + 50/1.2321 + 30/1.3676 = -100 + 36.04 + 40.58 + 21.94 = -1.44$. Negative.
 
-- **IRR is between 10% and 11%, closer to 10%. Linear interpolation:**
-$$ IRR \approx 10% + \frac{0.22}{0.22 + 1.44} \times 1% = 10% + 0.13% = 10.13% $$
+- **IRR is between 10\% and 11\%, closer to 10\%. Linear interpolation:**
+$$ IRR \approx 10\% + \frac{0.22}{0.22 + 1.44} \times 1\% = 10\% + 0.13\% = 10.13\% $$
 
-- **Verification.** At 10.13%, NPV is essentially zero  -  check: $-100 + 40/1.1013 + 50/1.2129 + 30/1.3361 = -100 + 36.32 + 41.22 + 22.45 = -0.01$. \checkmark
+- **Verification.** At 10.13\%, NPV is essentially zero  -  check: $-100 + 40/1.1013 + 50/1.2129 + 30/1.3361 = -100 + 36.32 + 41.22 + 22.45 = -0.01$. \checkmark
 ```
 
 
@@ -1557,7 +1586,7 @@ $$ IRR \approx 10% + \frac{0.22}{0.22 + 1.44} \times 1% = 10% + 0.13% = 10.13% $
 
 ```{note}
 **Mutually Exclusive Projects: Use NPV**
-For mutually exclusive projects (you can do only one), **NPV and IRR can rank them differently**. Example: Project A has NPV \$1M and IRR 25%. Project B has NPV \$5M and IRR 15%. If the cost of capital is 10%, both meet the hurdle, but they rank oppositely. The **NPV ranking is correct** because NPV measures absolute value created, while IRR is a rate (which can be misleadingly high for a small project).
+For mutually exclusive projects (you can do only one), **NPV and IRR can rank them differently**. Example: Project A has NPV \$1M and IRR 25\%. Project B has NPV \$5M and IRR 15\%. If the cost of capital is 10\%, both meet the hurdle, but they rank oppositely. The **NPV ranking is correct** because NPV measures absolute value created, while IRR is a rate (which can be misleadingly high for a small project).
 
 For independent projects (you can do all of them up to a budget), either rule works.
 
@@ -1569,7 +1598,7 @@ For non-conventional cash flows (multiple sign changes), IRR can have multiple s
 
 ```{note}
 **Exam Tips  -  NPV and IRR**
-- Cash flow $CF_k = (S_k - C_k - D_k)(1-t) + D_k = 0.6(S_k-C_k) + 0.4 D_k$ at $t = 40%$.
+- Cash flow $CF_k = (S_k - C_k - D_k)(1-t) + D_k = 0.6(S_k-C_k) + 0.4 D_k$ at $t = 40\%$.
 
 - Depreciation is non-cash; add it back.
 
@@ -1579,7 +1608,7 @@ For non-conventional cash flows (multiple sign changes), IRR can have multiple s
 
 - For mutually exclusive projects, NPV beats IRR as the ranking criterion.
 
-- MACRS 5-year: $\{20.00, 32.00, 19.20, 11.52, 11.52, 5.76\}$. MACRS 7-year starts at 14.29%.
+- MACRS 5-year: $\{20.00, 32.00, 19.20, 11.52, 11.52, 5.76\}$. MACRS 7-year starts at 14.29\%.
 ```
 
 

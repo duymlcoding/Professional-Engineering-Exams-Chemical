@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=8c6b312c" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=6a27516b" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=10fda75c" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -520,8 +520,8 @@ $<span class="math notranslate nohighlight">\( Y(s) = \frac{K M}{s} - \frac{K M 
 $$
 \begin{align}</p></li>
 </ul>
-<p class="sd-card-text">y(t) &amp;= L^{-1}{ \frac{K M}{s} } - K M \tau \cdot L^{-1}{ \frac{1}{\tau s + 1} }
-&amp;= K M - K M \tau \cdot \frac{1}{\tau} e^{-t/\tau}
+<p class="sd-card-text">y(t) &amp;= L^{-1}{ \frac{K M}{s} } - K M \tau \cdot L^{-1}{ \frac{1}{\tau s + 1} } \
+&amp;= K M - K M \tau \cdot \frac{1}{\tau} e^{-t/\tau} \
 &amp;= K M - K M e^{-t/\tau}
 \end{align}
 $<span class="math notranslate nohighlight">\(
@@ -558,7 +558,7 @@ The same Equation 1 applies for any sign of <span class="math notranslate nohigh
 </section>
 <section id="worked-example-level-tank-with-linear-outflow">
 <h3>Worked Example: Level Tank with Linear Outflow<a class="headerlink" href="#worked-example-level-tank-with-linear-outflow" title="Link to this heading">#</a></h3>
-<div class="proof example admonition" id="example-0">
+<div class="proof example admonition" id="instrumentationandcontrol-example-0">
 <p class="admonition-title"><span class="caption-number">Example 158 </span> (Step Response of a Surge Tank)</p>
 <section class="example-content" id="proof-content">
 <p>A surge tank has the first-order transfer function <span class="math notranslate nohighlight">\(H(s)/Q_i(s) = 10/(50 s + 1)\)</span> where <span class="math notranslate nohighlight">\(H\)</span> is liquid level [m] and <span class="math notranslate nohighlight">\(Q_i\)</span> is inlet flow [m\textsuperscript{3}/s], so <span class="math notranslate nohighlight">\(K = 10\)</span> m per m\textsuperscript{3}/s and <span class="math notranslate nohighlight">\(\tau = 50\)</span> s. At the initial steady state, <span class="math notranslate nohighlight">\(Q_i = 0.40\)</span> m\textsuperscript{3}/s and <span class="math notranslate nohighlight">\(H = 3.0\)</span> m. The inlet is suddenly stepped to <span class="math notranslate nohighlight">\(0.41\)</span> m\textsuperscript{3}/s. Find:</p>
@@ -585,7 +585,7 @@ A common student error is to read \)</span>h(100) = 0.0865$ m and <em>report it<
 <li><p class="sd-card-text"><strong>(b) Steady-state level (<span class="math notranslate nohighlight">\(t \to \infty\)</span>).</strong> As <span class="math notranslate nohighlight">\(t \to \infty\)</span>, <span class="math notranslate nohighlight">\(e^{-t/\tau} \to 0\)</span>, so
 $<span class="math notranslate nohighlight">\( h(\infty) = K M = (10)(0.01) = 0.10 m  \Longrightarrow  H(\infty) = 3.10 m \)</span>$</p></li>
 <li><p class="sd-card-text"><strong>© Time to reach 63.2% of the ultimate change.</strong> By the landmark property of <span class="math notranslate nohighlight">\(\tau\)</span>,
-$<span class="math notranslate nohighlight">\( t_{63.2%} = \tau = 50 s \)</span><span class="math notranslate nohighlight">\(
+$<span class="math notranslate nohighlight">\( t_{63.2\%} = \tau = 50 s \)</span><span class="math notranslate nohighlight">\(
 Verify by solving \)</span>1 - e^{-t/\tau} = 0.632<span class="math notranslate nohighlight">\(:
 \)</span><span class="math notranslate nohighlight">\( e^{-t/\tau} = 0.368  \Longrightarrow  t/\tau = -\ln(0.368) = 1.0  \Longrightarrow  t = \tau = 50 s \checkmark \)</span>$</p></li>
 <li><p class="sd-card-text"><strong>Cross-check by material balance.</strong> A sustained extra <span class="math notranslate nohighlight">\(0.01\)</span> m\textsuperscript{3}/s inflow must, at steady state, be matched by an extra <span class="math notranslate nohighlight">\(0.01\)</span> m\textsuperscript{3}/s outflow. If the outlet flow is linear in head, <span class="math notranslate nohighlight">\(Q_o = h/R\)</span>, then <span class="math notranslate nohighlight">\(R = K = 10\)</span> s/m\textsuperscript{2}. The extra head needed to drive <span class="math notranslate nohighlight">\(0.01\)</span> extra m\textsuperscript{3}/s through resistance <span class="math notranslate nohighlight">\(R\)</span> is <span class="math notranslate nohighlight">\(\Delta h = R \cdot \Delta Q = 10 \times 0.01 = 0.10\)</span> m. \checkmark Matches the transfer-function answer exactly.</p></li>
@@ -594,7 +594,7 @@ Verify by solving \)</span>1 - e^{-t/\tau} = 0.632<span class="math notranslate 
 </details></section>
 <section id="worked-example-negative-gain-heat-exchanger">
 <h3>Worked Example: Negative-Gain Heat Exchanger<a class="headerlink" href="#worked-example-negative-gain-heat-exchanger" title="Link to this heading">#</a></h3>
-<div class="proof example admonition" id="example-1">
+<div class="proof example admonition" id="instrumentationandcontrol-example-1">
 <p class="admonition-title"><span class="caption-number">Example 159 </span> (Step Response with Negative Gain)</p>
 <section class="example-content" id="proof-content">
 <p>A heat exchanger’s process-outlet temperature is described by <span class="math notranslate nohighlight">\(T(s)/Q_{cw}(s) = -3.0/(8 s + 1)\)</span> where <span class="math notranslate nohighlight">\(T\)</span> is in <span class="math notranslate nohighlight">\(^\circ\)</span>F and <span class="math notranslate nohighlight">\(Q_{cw}\)</span> is cooling-water flow in gpm. At the initial steady state, <span class="math notranslate nohighlight">\(Q_{cw} = 12.0\)</span> gpm and <span class="math notranslate nohighlight">\(T = 175^\circ\)</span>F. The cooling-water flow is stepped to <span class="math notranslate nohighlight">\(14.0\)</span> gpm. Find <span class="math notranslate nohighlight">\(T(t)\)</span> at <span class="math notranslate nohighlight">\(t = 4\)</span> s and at steady state.</p>
@@ -647,8 +647,7 @@ The factor \)</span>e^{-\theta s}<span class="math notranslate nohighlight">\( i
 <p>Subjecting <span class="math notranslate nohighlight">\(G(s)\)</span> to a step input of magnitude <span class="math notranslate nohighlight">\(M\)</span>:
 $<span class="math notranslate nohighlight">\( Y(s) = \frac{K e^{-\theta s}}{\tau s + 1} \cdot \frac{M}{s} = e^{-\theta s} \frac{K M}{s(\tau s + 1)} \)</span><span class="math notranslate nohighlight">\(
 The factor \)</span>e^{-\theta s}<span class="math notranslate nohighlight">\( is a pure time-shift operator: when we invert, the time-domain answer is the first-order step response delayed by \)</span>\theta<span class="math notranslate nohighlight">\(. Using Equation 1 of the previous section and the time-shift theorem:
-\)</span><span class="math notranslate nohighlight">\( y(t) = \begin{cases} 0, | t &lt; \theta
-K M (1 - e^{-(t-\theta)/\tau}), | t \geq \theta \end{cases} \)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\( y(t) = \begin{cases} 0, &amp; t &lt; \theta \ K M (1 - e^{-(t-\theta)/\tau}), &amp; t \geq \theta \end{cases} \)</span><span class="math notranslate nohighlight">\(
 Graphically: a flat region from 0 to \)</span>\theta<span class="math notranslate nohighlight">\(, then an exponential rise. Reading \)</span>\theta<span class="math notranslate nohighlight">\( and \)</span>\tau$ from a step-test trace is the central practical task of FOPDT identification.</p>
 </section>
 <section id="method-1-tangent-and-inflection-smith-ziegler-nichols-original">
@@ -672,18 +671,18 @@ Graphically: a flat region from 0 to \)</span>\theta<span class="math notranslat
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Sundaresan-Krishnaswamy Two-Point Formulas</strong>
-Read off the times <span class="math notranslate nohighlight">\(t_{35.3%}\)</span> and <span class="math notranslate nohighlight">\(t_{85.3%}\)</span> at which the response reaches 35.3% and 85.3% of its ultimate change. Then
+Read off the times <span class="math notranslate nohighlight">\(t_{35.3\%}\)</span> and <span class="math notranslate nohighlight">\(t_{85.3\%}\)</span> at which the response reaches 35.3% and 85.3% of its ultimate change. Then
 $$</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cb3689e4-da12-42cb-a0b0-eb61e2e8472e">
-<span class="eqno">(3)<a class="headerlink" href="#equation-cb3689e4-da12-42cb-a0b0-eb61e2e8472e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-18580b6a-6058-41ef-95f7-a495a1cac429">
+<span class="eqno">(3)<a class="headerlink" href="#equation-18580b6a-6058-41ef-95f7-a495a1cac429" title="Permalink to this equation">#</a></span>\[\begin{align}
 
 
-\theta &amp;= 1.3 t_{35.3%} - 0.29 t_{85.3%}
-\tau   &amp;= 0.67 (t_{85.3%} - t_{35.3%})
+\theta &amp;= 1.3 t_{35.3\%} - 0.29 t_{85.3\%} \\
+\tau   &amp;= 0.67 (t_{85.3\%} - t_{35.3\%}) \\
 K      &amp;= \frac{\Delta y_{ss}}{\Delta x}
 \end{align}\]</div>
 <p>$<span class="math notranslate nohighlight">\(
-The fractions 35.3% and 85.3% are not arbitrary  -  they are chosen so that the two-point fit exactly reproduces \)</span>\tau<span class="math notranslate nohighlight">\( and \)</span>\theta$ for a pure FOPDT process. For higher-order processes, the fit minimizes least-squares error in the dominant pole.</p>
+The fractions 35.3\% and 85.3\% are not arbitrary  -  they are chosen so that the two-point fit exactly reproduces \)</span>\tau<span class="math notranslate nohighlight">\( and \)</span>\theta$ for a pure FOPDT process. For higher-order processes, the fit minimizes least-squares error in the dominant pole.</p>
 </div>
 </section>
 <section id="why-35-3-and-85-3-a-quick-derivation-sketch">
@@ -694,26 +693,26 @@ So
 \)</span><span class="math notranslate nohighlight">\( t_f = \theta + \tau [-\ln(1-f)] \)</span><span class="math notranslate nohighlight">\(
 For two fractions \)</span>f_1<span class="math notranslate nohighlight">\( and \)</span>f_2<span class="math notranslate nohighlight">\(, the two times are
 \)</span>$</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e40c9916-c702-4f4c-a883-3d8eb68ad279">
-<span class="eqno">(4)<a class="headerlink" href="#equation-e40c9916-c702-4f4c-a883-3d8eb68ad279" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-065be21e-636b-4f27-a5f9-9a56f0900a2e">
+<span class="eqno">(4)<a class="headerlink" href="#equation-065be21e-636b-4f27-a5f9-9a56f0900a2e" title="Permalink to this equation">#</a></span>\[\begin{align}
 
-t_{f_1} &amp;= \theta + \tau \cdot a,   a \equiv -\ln(1-f_1)
+t_{f_1} &amp;= \theta + \tau \cdot a,   a \equiv -\ln(1-f_1) \\
 t_{f_2} &amp;= \theta + \tau \cdot b,   b \equiv -\ln(1-f_2)
 \end{align}\]</div>
 <div class="math notranslate nohighlight">
 \[
 Solving for $\tau$ and $\theta$:
 \]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-955ea6c3-13dd-4e1f-b838-898ebc093883">
-<span class="eqno">(5)<a class="headerlink" href="#equation-955ea6c3-13dd-4e1f-b838-898ebc093883" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7b442352-608a-4125-8556-52acbdac439c">
+<span class="eqno">(5)<a class="headerlink" href="#equation-7b442352-608a-4125-8556-52acbdac439c" title="Permalink to this equation">#</a></span>\[\begin{align}
 
-\tau   &amp;= \frac{t_{f_2} - t_{f_1}}{b - a}
+\tau   &amp;= \frac{t_{f_2} - t_{f_1}}{b - a} \\
 \theta &amp;= \frac{a t_{f_2} - b t_{f_1}}{a - b}
 \end{align}\]</div>
 <div class="math notranslate nohighlight">
 \[ \begin{align}\begin{aligned}
 The Sundaresan-Krishnaswamy fractions $f_1 = 0.353, f_2 = 0.853$ give $a = -\ln(0.647) = 0.4357$ and $b = -\ln(0.147) = 1.9173$, so $b - a = 1.4816$ and $1/(b - a) = 0.675 \approx 0.67$, and $b/(b-a) - a/(b-a) \cdot (rearranged) \to$ the textbook constants 1.3 and 0.29. The 0.67 and 1.3/0.29 numbers in the formulas are direct consequences of these two chosen levels.\\### Worked Example: Heat-Exchanger Cooling-Water Step\\```{prf:example} Fitting a FOPDT to a Cooling-Water Step Test
-A heat exchanger's process-outlet temperature is monitored during a step in cooling-water flow. Initial steady state: cooling water $= 8.0$ gpm, outlet $T = 55.0^\circ$F. Step: cooling-water flow stepped to $9.2$ gpm at $t = 0$. New steady state (after sufficient time): $T = 53.2^\circ$F. From the recorded trace, the time at which $T = 54.36^\circ$F (i.e. 35.3% of the change) is 6.3 min, and the time at which $T = 53.5^\circ$F (85.3% of the change) is 9.5 min. Fit a FOPDT model.
+:label: instrumentationandcontrol-example-2\\A heat exchanger's process-outlet temperature is monitored during a step in cooling-water flow. Initial steady state: cooling water $= 8.0$ gpm, outlet $T = 55.0^\circ$F. Step: cooling-water flow stepped to $9.2$ gpm at $t = 0$. New steady state (after sufficient time): $T = 53.2^\circ$F. From the recorded trace, the time at which $T = 54.36^\circ$F (i.e. 35.3\% of the change) is 6.3 min, and the time at which $T = 53.5^\circ$F (85.3\% of the change) is 9.5 min. Fit a FOPDT model.
 ```\\
 ```{dropdown} Solution Steps
 - **Steady-state gain $K$.**
@@ -721,16 +720,16 @@ $$ K = \frac{\Delta y_{ss}}{\Delta x} = \frac{T_{new} - T_{old}}{Q_{cw,new} - Q_
 <p>Negative as expected (more cooling water lowers process outlet temperature).</p>
 <ul class="simple">
 <li><p><strong>Identify the 35.3% and 85.3% target temperatures.</strong></p></li>
-<li><p>35.3% mark: <span class="math notranslate nohighlight">\(T_{35.3%} = 55.0 + 0.353(53.2 - 55.0) = 55.0 + 0.353(-1.8) = 55.0 - 0.635 = 54.365^\circ\)</span>F.</p></li>
-<li><p>85.3% mark: <span class="math notranslate nohighlight">\(T_{85.3%} = 55.0 + 0.853(-1.8) = 55.0 - 1.535 = 53.465^\circ\)</span>F.</p></li>
+<li><p>35.3% mark: <span class="math notranslate nohighlight">\(T_{35.3\%} = 55.0 + 0.353(53.2 - 55.0) = 55.0 + 0.353(-1.8) = 55.0 - 0.635 = 54.365^\circ\)</span>F.</p></li>
+<li><p>85.3% mark: <span class="math notranslate nohighlight">\(T_{85.3\%} = 55.0 + 0.853(-1.8) = 55.0 - 1.535 = 53.465^\circ\)</span>F.</p></li>
 </ul>
-<p>Read from the graph: <span class="math notranslate nohighlight">\(t_{35.3%} = 6.3\)</span> min, <span class="math notranslate nohighlight">\(t_{85.3%} = 9.5\)</span> min.</p>
+<p>Read from the graph: <span class="math notranslate nohighlight">\(t_{35.3\%} = 6.3\)</span> min, <span class="math notranslate nohighlight">\(t_{85.3\%} = 9.5\)</span> min.</p>
 <ul class="simple">
 <li><p><strong>Apply the Sundaresan-Krishnaswamy formulas.</strong>
 $$
 \begin{align}</p></li>
 </ul>
-<p>\theta &amp;= 1.3 (6.3) - 0.29 (9.5) = 8.19 - 2.755 = 5.435 \approx 5.4 min
+<p>\theta &amp;= 1.3 (6.3) - 0.29 (9.5) = 8.19 - 2.755 = 5.435 \approx 5.4 min \
 \tau   &amp;= 0.67 (9.5 - 6.3) = 0.67 (3.2) = 2.144 \approx 2.14 min
 \end{align}
 $$</p>
@@ -753,13 +752,13 @@ This is a dead-time-dominant process ($\theta/\tau &gt; 1$). PI control alone wi
 - **Model Predictive Control (MPC):** explicitly accounts for dead time over a finite horizon.
 
 
-- **Verification by reconstructing one point.** Predict the time at which $T$ reaches 50% of the change:
+- **Verification by reconstructing one point.** Predict the time at which $T$ reaches 50\% of the change:
 $$
 \begin{align}
 
 
-T_{50%} &amp;= 55.0 + 0.5(-1.8) = 54.10^\circ F
-1 - e^{-(t - \theta)/\tau} &amp;= 0.50  \Longrightarrow  t - \theta = \tau \ln(2) = 2.14 (0.693) = 1.485 min
+T_{50\%} &amp;= 55.0 + 0.5(-1.8) = 54.10^\circ F \\
+1 - e^{-(t - \theta)/\tau} &amp;= 0.50  \Longrightarrow  t - \theta = \tau \ln(2) = 2.14 (0.693) = 1.485 min \\
 t &amp;= 5.4 + 1.485 = 6.88 min
 \end{align}
 $$
@@ -769,7 +768,7 @@ Compare to the graphical reading at $T = 54.1^\circ$F. If the graph gives $t \ap
 </section>
 <section id="worked-example-higher-order-process-fit-to-fopdt">
 <h3>Worked Example: Higher-Order Process Fit to FOPDT<a class="headerlink" href="#worked-example-higher-order-process-fit-to-fopdt" title="Link to this heading">#</a></h3>
-<div class="proof example admonition" id="example-2">
+<div class="proof example admonition" id="instrumentationandcontrol-example-3">
 <p class="admonition-title"><span class="caption-number">Example 160 </span> (Two-Lag Process Approximated as FOPDT)</p>
 <section class="example-content" id="proof-content">
 <p>A second-order overdamped process has the true transfer function <span class="math notranslate nohighlight">\(G_{true}(s) = 1/[(5s+1)(s+1)]\)</span> (gain 1, two time constants 5 and 1). A step test of magnitude 1 is run. From the resulting trace, the 35.3% time is 2.6 and the 85.3% time is 8.0 (dimensionless). Fit an apparent FOPDT and comment on the quality.</p>
@@ -783,7 +782,7 @@ Compare to the graphical reading at $T = 54.1^\circ$F. If the graph gives $t \ap
 $$
 \begin{align}</p></li>
 </ul>
-<p class="sd-card-text">\theta_{app} &amp;= 1.3 (2.6) - 0.29 (8.0) = 3.38 - 2.32 = 1.06
+<p class="sd-card-text">\theta_{app} &amp;= 1.3 (2.6) - 0.29 (8.0) = 3.38 - 2.32 = 1.06 \
 \tau_{app}   &amp;= 0.67 (8.0 - 2.6) = 0.67 (5.4) = 3.62
 \end{align}
 $$</p>
@@ -831,12 +830,12 @@ Given <span class="math notranslate nohighlight">\(a y + b y + c y = d x\)</span
 $<span class="math notranslate nohighlight">\( \frac{Y(s)}{X(s)} = \frac{d/c}{(a/c) s^2 + (b/c) s + 1} \)</span><span class="math notranslate nohighlight">\(
 Identify
 \)</span>$</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8893c905-bce5-47ce-98ad-97840c537321">
-<span class="eqno">(6)<a class="headerlink" href="#equation-8893c905-bce5-47ce-98ad-97840c537321" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-0aa929fb-46bc-4b12-864d-386b84a35abb">
+<span class="eqno">(6)<a class="headerlink" href="#equation-0aa929fb-46bc-4b12-864d-386b84a35abb" title="Permalink to this equation">#</a></span>\[\begin{align}
 
 
-K           &amp;= d/c
-\tau^2      &amp;= a/c  \Longrightarrow  \tau = \sqrt{a/c}
+K           &amp;= d/c \\
+\tau^2      &amp;= a/c  \Longrightarrow  \tau = \sqrt{a/c} \\
 2\zeta\tau  &amp;= b/c  \Longrightarrow  \zeta = \frac{b}{2 c \tau} = \frac{b}{2 \sqrt{a c}}
 \end{align}\]</div>
 <p>$<span class="math notranslate nohighlight">\(
@@ -880,7 +879,7 @@ Multiplying through and matching coefficients (standard algebra; details suppres
 $$
 \begin{align}</p></li>
 </ul>
-<p class="sd-card-text">L^{-1}{\frac{s + \alpha}{(s+\alpha)^2 + \omega_d^2}} &amp;= e^{-\alpha t}\cos(\omega_d t)
+<p class="sd-card-text">L^{-1}{\frac{s + \alpha}{(s+\alpha)^2 + \omega_d^2}} &amp;= e^{-\alpha t}\cos(\omega_d t) \
 L^{-1}{\frac{\omega_d}{(s+\alpha)^2 + \omega_d^2}} &amp;= e^{-\alpha t}\sin(\omega_d t)
 \end{align}
 $<span class="math notranslate nohighlight">\(
@@ -908,7 +907,7 @@ $<span class="math notranslate nohighlight">\( DR = OS^{ 2} = \exp (-\frac{2\pi 
 </section>
 <section id="worked-example-determining-the-damping-coefficient-from-an-ode">
 <h3>Worked Example: Determining the Damping Coefficient from an ODE<a class="headerlink" href="#worked-example-determining-the-damping-coefficient-from-an-ode" title="Link to this heading">#</a></h3>
-<div class="proof example admonition" id="example-3">
+<div class="proof example admonition" id="instrumentationandcontrol-example-4">
 <p class="admonition-title"><span class="caption-number">Example 161 </span> (Stability and Oscillation from a Second-Order ODE)</p>
 <section class="example-content" id="proof-content">
 <p>A process is governed by the ODE
@@ -933,8 +932,8 @@ Match against \)</span>\dfrac{K_p}{\tau^2 s^2 + 2\zeta\tau s + 1}<span class="ma
 \)</span>$
 \begin{align}</p></li>
 </ul>
-<p class="sd-card-text">K_p          &amp;= \frac{1}{4}
-\tau^2       &amp;= \frac{1}{4}  \Longrightarrow  \tau = \frac{1}{2}   (positive root)
+<p class="sd-card-text">K_p          &amp;= \frac{1}{4} \
+\tau^2       &amp;= \frac{1}{4}  \Longrightarrow  \tau = \frac{1}{2}   (positive root) \
 2 \zeta \tau &amp;= \frac{K}{4}  \Longrightarrow  \zeta = \frac{K}{8 \tau} = \frac{K}{8 \cdot (1/2)} = \frac{K}{4}
 \end{align}
 $$</p>
@@ -961,10 +960,10 @@ At exactly \)</span>K = 4<span class="math notranslate nohighlight">\(, \)</span
 </details></section>
 <section id="worked-example-quarter-decay-from-a-step-test">
 <h3>Worked Example: Quarter-Decay from a Step Test<a class="headerlink" href="#worked-example-quarter-decay-from-a-step-test" title="Link to this heading">#</a></h3>
-<div class="proof example admonition" id="example-4">
+<div class="proof example admonition" id="instrumentationandcontrol-example-5">
 <p class="admonition-title"><span class="caption-number">Example 162 </span> (Computing <span class="math notranslate nohighlight">\(\zeta\)</span> and <span class="math notranslate nohighlight">\(\tau\)</span> from an Underdamped Step Response)</p>
 <section class="example-content" id="proof-content">
-<p>A pressure-control loop’s underdamped step response shows a first peak that overshoots the new steady state by 50% of the step. The second peak overshoots by <span class="math notranslate nohighlight">\(50% \times 50% = 25%\)</span> of the step (<span class="math notranslate nohighlight">\(DR = 1/4\)</span>). The time between the first peak and the next zero-crossing of the deviation is 12 s. Determine <span class="math notranslate nohighlight">\(\zeta\)</span> and <span class="math notranslate nohighlight">\(\tau\)</span>.</p>
+<p>A pressure-control loop’s underdamped step response shows a first peak that overshoots the new steady state by 50% of the step. The second peak overshoots by <span class="math notranslate nohighlight">\(50\% \times 50\% = 25\%\)</span> of the step (<span class="math notranslate nohighlight">\(DR = 1/4\)</span>). The time between the first peak and the next zero-crossing of the deviation is 12 s. Determine <span class="math notranslate nohighlight">\(\zeta\)</span> and <span class="math notranslate nohighlight">\(\tau\)</span>.</p>
 </section>
 </div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -1067,7 +1066,7 @@ $<span class="math notranslate nohighlight">\( \Delta P_{total} = \Delta P_v(q) 
 </section>
 <section id="worked-example-linear-vs-equal-percentage-lift-calculation">
 <h3>Worked Example: Linear vs. Equal-Percentage Lift Calculation<a class="headerlink" href="#worked-example-linear-vs-equal-percentage-lift-calculation" title="Link to this heading">#</a></h3>
-<div class="proof example admonition" id="example-5">
+<div class="proof example admonition" id="instrumentationandcontrol-example-6">
 <p class="admonition-title"><span class="caption-number">Example 163 </span> (Required Lift for Two Pressure-Drop Scenarios)</p>
 <section class="example-content" id="proof-content">
 <p>A control valve with <span class="math notranslate nohighlight">\(C_v = 110\)</span> gpm/<span class="math notranslate nohighlight">\(\sqrt{psi}\)</span> must pass 200 gpm of water (<span class="math notranslate nohighlight">\(G_s = 1\)</span>). Find the required lift for (a) inherent conditions with constant <span class="math notranslate nohighlight">\(\Delta P_v = 10\)</span> psi, and (b) installed conditions with <span class="math notranslate nohighlight">\(\Delta P_v = 10 - 0.03 q\)</span> psi. Repeat the analysis for an equal-percentage valve with rangeability <span class="math notranslate nohighlight">\(R = 40\)</span>.</p>
@@ -1220,7 +1219,7 @@ For a temperature loop heating with steam (FC valve, <span class="math notransla
 </section>
 <section id="worked-example-two-service-scenarios">
 <h3>Worked Example: Two Service Scenarios<a class="headerlink" href="#worked-example-two-service-scenarios" title="Link to this heading">#</a></h3>
-<div class="proof example admonition" id="example-6">
+<div class="proof example admonition" id="instrumentationandcontrol-example-7">
 <p class="admonition-title"><span class="caption-number">Example 164 </span> (Selecting Fail-Safe Action for Two Valves)</p>
 <section class="example-content" id="proof-content">
 <p><strong>(a)</strong> A control valve regulates cooling water flow to a shell-and-tube exchanger that cools a 220<span class="math notranslate nohighlight">\(^\circ\)</span>C exothermic reactor effluent before downstream separation.</p>
@@ -1292,7 +1291,7 @@ where \)</span>\Delta P_{piping}<span class="math notranslate nohighlight">\( sc
 </section>
 <section id="worked-example-valve-gain-as-a-function-of-lift">
 <h3>Worked Example: Valve Gain as a Function of Lift<a class="headerlink" href="#worked-example-valve-gain-as-a-function-of-lift" title="Link to this heading">#</a></h3>
-<div class="proof example admonition" id="example-7">
+<div class="proof example admonition" id="instrumentationandcontrol-example-8">
 <p class="admonition-title"><span class="caption-number">Example 165 </span> (Comparing <span class="math notranslate nohighlight">\(dq/d\ell\)</span> for Linear and Equal-Pct at Two Operating Points)</p>
 <section class="example-content" id="proof-content">
 <p>For the system in the previous worked example (<span class="math notranslate nohighlight">\(C_v = 110\)</span>, water, design flow 200 gpm), compute the valve gain <span class="math notranslate nohighlight">\(dq/d\ell\)</span> at <span class="math notranslate nohighlight">\(\ell = 0.5\)</span> and <span class="math notranslate nohighlight">\(\ell = 0.9\)</span> for both characteristics. Use the installed pressure-drop relationship <span class="math notranslate nohighlight">\(\Delta P_v = 10 - 0.03 q\)</span>.</p>
@@ -1434,13 +1433,13 @@ where \)</span>\Delta P_{piping}<span class="math notranslate nohighlight">\( sc
 Linear map between measurement and 4-20 mA current:
 $<span class="math notranslate nohighlight">\( I [mA] = 4 + 16 \cdot \frac{measurement - zero}{span} \)</span><span class="math notranslate nohighlight">\(
 \)</span><span class="math notranslate nohighlight">\( measurement = zero + span \cdot \frac{I - 4}{16} \)</span><span class="math notranslate nohighlight">\(
-**Percent of span (%TO):**
-\)</span><span class="math notranslate nohighlight">\( %TO = 100 \cdot \frac{measurement - zero}{span} = \frac{I - 4}{16} \cdot 100 \)</span>$</p>
+**Percent of span (\%TO):**
+\)</span><span class="math notranslate nohighlight">\( \%TO = 100 \cdot \frac{measurement - zero}{span} = \frac{I - 4}{16} \cdot 100 \)</span>$</p>
 </div>
 </section>
 <section id="worked-example-4-20-ma-loop-calibration">
 <h3>Worked Example: 4-20 mA Loop Calibration<a class="headerlink" href="#worked-example-4-20-ma-loop-calibration" title="Link to this heading">#</a></h3>
-<div class="proof example admonition" id="example-8">
+<div class="proof example admonition" id="instrumentationandcontrol-example-9">
 <p class="admonition-title"><span class="caption-number">Example 166 </span> (Reading and Setting Alarms on a 4-20 mA Loop)</p>
 <section class="example-content" id="proof-content">
 <p>A pressure transmitter has range 50-250 psi. The controller’s analog input reads 12.8 mA.</p>
@@ -1456,15 +1455,15 @@ $<span class="math notranslate nohighlight">\( I [mA] = 4 + 16 \cdot \frac{measu
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Range, zero, span.</strong> Range = 50-250 psi. Zero = 50 psi. Span = 250 - 50 = 200 psi.</p></li>
 <li><p class="sd-card-text"><strong>(a) 12.8 mA <span class="math notranslate nohighlight">\(\to\)</span> pressure.</strong>
-$<span class="math notranslate nohighlight">\( %TO = \frac{12.8 - 4}{16} \times 100 = \frac{8.8}{16} \times 100 = 55.0% \)</span><span class="math notranslate nohighlight">\(
+$<span class="math notranslate nohighlight">\( \%TO = \frac{12.8 - 4}{16} \times 100 = \frac{8.8}{16} \times 100 = 55.0\% \)</span><span class="math notranslate nohighlight">\(
 \)</span><span class="math notranslate nohighlight">\( P = 50 + 0.55(200) = 50 + 110 = 160 psi \)</span>$</p></li>
 <li><p class="sd-card-text"><strong>(b) 200 psi <span class="math notranslate nohighlight">\(\to\)</span> mA.</strong>
-$<span class="math notranslate nohighlight">\( %TO = \frac{200 - 50}{200} \times 100 = 75.0% \)</span><span class="math notranslate nohighlight">\(
+$<span class="math notranslate nohighlight">\( \%TO = \frac{200 - 50}{200} \times 100 = 75.0\% \)</span><span class="math notranslate nohighlight">\(
 \)</span><span class="math notranslate nohighlight">\( I = 4 + 16(0.75) = 4 + 12 = 16.0 mA \)</span>$</p></li>
 <li><p class="sd-card-text"><strong>© 75 psi <span class="math notranslate nohighlight">\(\to\)</span> mA.</strong>
-$<span class="math notranslate nohighlight">\( %TO = \frac{75 - 50}{200} \times 100 = 12.5% \)</span><span class="math notranslate nohighlight">\(
+$<span class="math notranslate nohighlight">\( \%TO = \frac{75 - 50}{200} \times 100 = 12.5\% \)</span><span class="math notranslate nohighlight">\(
 \)</span><span class="math notranslate nohighlight">\( I = 4 + 16(0.125) = 4 + 2 = 6.0 mA \)</span>$</p></li>
-<li><p class="sd-card-text"><strong>Verification by midpoint.</strong> Mid-range pressure 150 psi <span class="math notranslate nohighlight">\(\to\)</span> %TO <span class="math notranslate nohighlight">\(= 50%\)</span> <span class="math notranslate nohighlight">\(\to\)</span> <span class="math notranslate nohighlight">\(I = 4 + 8 = 12\)</span> mA. \checkmark Linear calibration confirmed.</p></li>
+<li><p class="sd-card-text"><strong>Verification by midpoint.</strong> Mid-range pressure 150 psi <span class="math notranslate nohighlight">\(\to\)</span> %TO <span class="math notranslate nohighlight">\(= 50\%\)</span> <span class="math notranslate nohighlight">\(\to\)</span> <span class="math notranslate nohighlight">\(I = 4 + 8 = 12\)</span> mA. \checkmark Linear calibration confirmed.</p></li>
 <li><p class="sd-card-text"><strong>Practical note on alarm settings.</strong> A 6 mA low-trip is close to the 4 mA live zero  -  if the loop opens, the controller would also see <span class="math notranslate nohighlight">\(&lt; 6\)</span> mA. Modern DCS systems distinguish “signal within range, low alarm” from “signal failure” by checking for <span class="math notranslate nohighlight">\(I &lt; 3.8\)</span> mA or <span class="math notranslate nohighlight">\(&gt; 20.5\)</span> mA (out-of-range diagnostic).</p></li>
 </ul>
 </div>
@@ -1598,7 +1597,7 @@ $<span class="math notranslate nohighlight">\( K_c = \frac{1}{K} \cdot \frac{\ta
 </section>
 <section id="worked-example-pi-tuning-from-a-fopdt-fit">
 <h3>Worked Example: PI Tuning from a FOPDT Fit<a class="headerlink" href="#worked-example-pi-tuning-from-a-fopdt-fit" title="Link to this heading">#</a></h3>
-<div class="proof example admonition" id="example-9">
+<div class="proof example admonition" id="instrumentationandcontrol-example-10">
 <p class="admonition-title"><span class="caption-number">Example 167 </span> (ZN, Cohen-Coon, and IMC Tuning for the Cooling-Water Loop)</p>
 <section class="example-content" id="proof-content">
 <p>Continuing the previous FOPDT example, <span class="math notranslate nohighlight">\(K = -1.5\)</span> <span class="math notranslate nohighlight">\(^\circ\)</span>F/gpm, <span class="math notranslate nohighlight">\(\tau = 2.14\)</span> min, <span class="math notranslate nohighlight">\(\theta = 5.4\)</span> min. Compute PI tuning by (a) Ziegler-Nichols, (b) Cohen-Coon, © IMC with <span class="math notranslate nohighlight">\(\lambda = \tau\)</span>. Compare.</p>
@@ -1611,7 +1610,7 @@ $<span class="math notranslate nohighlight">\( K_c = \frac{1}{K} \cdot \frac{\ta
 $$
 \begin{align}</p></li>
 </ul>
-<p class="sd-card-text">K_c &amp;= \frac{0.9}{|K|} \frac{\tau}{\theta} = \frac{0.9}{1.5} \frac{2.14}{5.4} = 0.60 \times 0.396 = 0.238 gpm/^\circ F
+<p class="sd-card-text">K_c &amp;= \frac{0.9}{|K|} \frac{\tau}{\theta} = \frac{0.9}{1.5} \frac{2.14}{5.4} = 0.60 \times 0.396 = 0.238 gpm/^\circ F \
 \tau_I &amp;= 3.33 \theta = 3.33 \times 5.4 = 18.0 min
 \end{align}
 $$</p>
@@ -1620,7 +1619,7 @@ $$</p>
 $$
 \begin{align}</p></li>
 </ul>
-<p class="sd-card-text">K_c &amp;= \frac{1}{1.5} \frac{2.14}{5.4} (0.9 + \frac{5.4}{12 \times 2.14}) = 0.667 \times 0.396 \times (0.9 + 0.210) = 0.293 gpm/^\circ F
+<p class="sd-card-text">K_c &amp;= \frac{1}{1.5} \frac{2.14}{5.4} (0.9 + \frac{5.4}{12 \times 2.14}) = 0.667 \times 0.396 \times (0.9 + 0.210) = 0.293 gpm/^\circ F \
 \tau_I &amp;= 5.4 \cdot \frac{30 + 3(2.524)}{9 + 20(2.524)} = 5.4 \cdot \frac{37.57}{59.48} = 5.4 \times 0.632 = 3.41 min
 \end{align}
 $$</p>
@@ -1629,7 +1628,7 @@ $$</p>
 $$
 \begin{align}</p></li>
 </ul>
-<p class="sd-card-text">K_c &amp;= \frac{1}{|K|} \frac{\tau}{\lambda + \theta} = \frac{1}{1.5} \frac{2.14}{2.14 + 5.4} = \frac{1}{1.5} \times 0.284 = 0.189 gpm/^\circ F
+<p class="sd-card-text">K_c &amp;= \frac{1}{|K|} \frac{\tau}{\lambda + \theta} = \frac{1}{1.5} \frac{2.14}{2.14 + 5.4} = \frac{1}{1.5} \times 0.284 = 0.189 gpm/^\circ F \
 \tau_I &amp;= \tau = 2.14 min
 \end{align}
 $$</p>
@@ -1680,7 +1679,7 @@ An alternative to the step-test method: with integral and derivative disabled, i
 </section>
 <section id="worked-example-routh-hurwitz-stability-of-a-pi-loop">
 <h3>Worked Example: Routh-Hurwitz Stability of a PI Loop<a class="headerlink" href="#worked-example-routh-hurwitz-stability-of-a-pi-loop" title="Link to this heading">#</a></h3>
-<div class="proof example admonition" id="example-10">
+<div class="proof example admonition" id="instrumentationandcontrol-example-11">
 <p class="admonition-title"><span class="caption-number">Example 168 </span> (Find the Stability Boundary <span class="math notranslate nohighlight">\(K_c\)</span> for a Simple PI Loop)</p>
 <section class="example-content" id="proof-content">
 <p>A PI controller <span class="math notranslate nohighlight">\(G_c(s) = K_c(1 + 1/(2 s))\)</span> controls a process <span class="math notranslate nohighlight">\(G_p(s) = 1/[(s+1)(s+2)]\)</span> with unit sensor. Find the range of <span class="math notranslate nohighlight">\(K_c\)</span> for closed-loop stability.</p>
@@ -1844,13 +1843,13 @@ $<span class="math notranslate nohighlight">\( \Lambda = G(0) \otimes [G(0)^{-1}
 <p class="admonition-title">Tip</p>
 <p><strong>First-Order Step Response</strong>
 $<span class="math notranslate nohighlight">\( y(t) = K M (1 - e^{-t/\tau}) \)</span><span class="math notranslate nohighlight">\(
-Landmarks: 63.2% at \)</span>\tau<span class="math notranslate nohighlight">\(; 86.5% at \)</span>2\tau<span class="math notranslate nohighlight">\(; 95.0% at \)</span>3\tau<span class="math notranslate nohighlight">\(; 99.3% at \)</span>5\tau<span class="math notranslate nohighlight">\(. Slope at \)</span>t=0<span class="math notranslate nohighlight">\( is \)</span>KM/\tau<span class="math notranslate nohighlight">\(. Add back \)</span>y$ before quoting absolute value.</p>
+Landmarks: 63.2\% at \)</span>\tau<span class="math notranslate nohighlight">\(; 86.5\% at \)</span>2\tau<span class="math notranslate nohighlight">\(; 95.0\% at \)</span>3\tau<span class="math notranslate nohighlight">\(; 99.3\% at \)</span>5\tau<span class="math notranslate nohighlight">\(. Slope at \)</span>t=0<span class="math notranslate nohighlight">\( is \)</span>KM/\tau<span class="math notranslate nohighlight">\(. Add back \)</span>y$ before quoting absolute value.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p><strong>FOPDT and Sundaresan-Krishnaswamy</strong>
 $<span class="math notranslate nohighlight">\( G(s) = \frac{K e^{-\theta s}}{\tau s + 1} \)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\( \theta = 1.3 t_{35.3%} - 0.29 t_{85.3%},   \tau = 0.67(t_{85.3%} - t_{35.3%}),   K = \Delta y_{ss}/\Delta x \)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\( \theta = 1.3 t_{35.3\%} - 0.29 t_{85.3\%},   \tau = 0.67(t_{85.3\%} - t_{35.3\%}),   K = \Delta y_{ss}/\Delta x \)</span><span class="math notranslate nohighlight">\(
 Controllability: \)</span>\theta/\tau &lt; 0.1<span class="math notranslate nohighlight">\( easy; \)</span>0.1<span class="math notranslate nohighlight">\(-\)</span>1<span class="math notranslate nohighlight">\( classical; \)</span>&gt; 1$ requires Smith predictor or feedforward.</p>
 </div>
 <div class="admonition tip">
@@ -1877,7 +1876,7 @@ Cooling water: FO. Steam: FC. Vent: FO. Drain on inventory: FC. Hazardous reagen
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p><strong>4-20 mA Calibration</strong>
-$<span class="math notranslate nohighlight">\( I = 4 + 16 \frac{measurement - zero}{span},   %TO = (I-4)/16 \times 100 \)</span><span class="math notranslate nohighlight">\(
+$<span class="math notranslate nohighlight">\( I = 4 + 16 \frac{measurement - zero}{span},   \%TO = (I-4)/16 \times 100 \)</span><span class="math notranslate nohighlight">\(
 Zero = low end of range; Span = high \)</span>-$ low. Live zero (4 mA) distinguishes broken loop from low reading.</p>
 </div>
 <div class="admonition tip">

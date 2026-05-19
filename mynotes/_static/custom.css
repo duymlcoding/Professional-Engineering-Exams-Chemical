@@ -55,9 +55,10 @@ mjx-container { font-size: 1.08em !important; }
 /* Kill every form of theme icon injection */
 .admonition p.admonition-title svg,
 .admonition p.admonition-title img,
+.admonition p.admonition-title .sd-sphinx-override,
 .admonition p.admonition-title .admonition-icon,
 .admonition p.admonition-title > svg:first-child,
-.admonition p.admonition-title > span:first-child { display: none !important; }
+.admonition p.admonition-title > span.sd-sphinx-override:first-child { display: none !important; }
 .admonition p.admonition-title::before,
 .admonition p.admonition-title::after { content: none !important; }
 

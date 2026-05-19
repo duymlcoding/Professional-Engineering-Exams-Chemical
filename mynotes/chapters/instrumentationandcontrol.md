@@ -131,8 +131,8 @@ $$
 \begin{align}
 
 
-y(t) &= L^{-1}\{ \frac{K M}{s} \} - K M \tau \cdot L^{-1}\{ \frac{1}{\tau s + 1} \}
-&= K M - K M \tau \cdot \frac{1}{\tau} e^{-t/\tau}
+y(t) &= L^{-1}\{ \frac{K M}{s} \} - K M \tau \cdot L^{-1}\{ \frac{1}{\tau s + 1} \} \\
+&= K M - K M \tau \cdot \frac{1}{\tau} e^{-t/\tau} \\
 &= K M - K M e^{-t/\tau}
 \end{align}
 $$
@@ -150,11 +150,11 @@ The exponential approach to the new steady state has five reference points worth
 
 - **At $t = 0$:** $y(0) = K M (1 - 1) = 0$. The output is unchanged from the reference steady state at the instant of the step.
 
-- **At $t = \tau$:** $y(\tau) = K M (1 - e^{-1}) = 0.632 K M$. This is the **63.2% landmark**  -  the time constant equals the time required to reach 63.2% of the eventual change. It is the universal definition by which $\tau$ is read from experimental data.
+- **At $t = \tau$:** $y(\tau) = K M (1 - e^{-1}) = 0.632 K M$. This is the **63.2\% landmark**  -  the time constant equals the time required to reach 63.2\% of the eventual change. It is the universal definition by which $\tau$ is read from experimental data.
 
 - **At $t = 2\tau$:** $y/y(\infty) = 1 - e^{-2} = 0.865$.
 
-- **At $t = 3\tau$:** $y/y(\infty) = 1 - e^{-3} = 0.950$. "Settled to within 5%."
+- **At $t = 3\tau$:** $y/y(\infty) = 1 - e^{-3} = 0.950$. "Settled to within 5\%."
 
 - **At $t = 5\tau$:** $y/y(\infty) = 1 - e^{-5} = 0.993$. Practically at steady state.
 
@@ -180,6 +180,8 @@ The same Equation 1 applies for any sign of $K$. Three cases:
 ### Worked Example: Level Tank with Linear Outflow
 
 ```{prf:example} Step Response of a Surge Tank
+:label: instrumentationandcontrol-example-0
+
 A surge tank has the first-order transfer function $H(s)/Q_i(s) = 10/(50 s + 1)$ where $H$ is liquid level [m] and $Q_i$ is inlet flow [m\textsuperscript{3}/s], so $K = 10$ m per m\textsuperscript{3}/s and $\tau = 50$ s. At the initial steady state, $Q_i = 0.40$ m\textsuperscript{3}/s and $H = 3.0$ m. The inlet is suddenly stepped to $0.41$ m\textsuperscript{3}/s. Find:
 
 
@@ -187,7 +189,7 @@ A surge tank has the first-order transfer function $H(s)/Q_i(s) = 10/(50 s + 1)$
 
 - the new steady-state level,
 
-- the time at which the level reaches 63.2% of its ultimate change.
+- the time at which the level reaches 63.2\% of its ultimate change.
 ```
 
 
@@ -212,8 +214,8 @@ A common student error is to read $h(100) = 0.0865$ m and *report it* as the ans
 $$ h(\infty) = K M = (10)(0.01) = 0.10 m  \Longrightarrow  H(\infty) = 3.10 m $$
 
 
-- **(c) Time to reach 63.2% of the ultimate change.** By the landmark property of $\tau$,
-$$ t_{63.2%} = \tau = 50 s $$
+- **(c) Time to reach 63.2\% of the ultimate change.** By the landmark property of $\tau$,
+$$ t_{63.2\%} = \tau = 50 s $$
 Verify by solving $1 - e^{-t/\tau} = 0.632$:
 $$ e^{-t/\tau} = 0.368  \Longrightarrow  t/\tau = -\ln(0.368) = 1.0  \Longrightarrow  t = \tau = 50 s \checkmark $$
 
@@ -225,6 +227,8 @@ $$ e^{-t/\tau} = 0.368  \Longrightarrow  t/\tau = -\ln(0.368) = 1.0  \Longrighta
 ### Worked Example: Negative-Gain Heat Exchanger
 
 ```{prf:example} Step Response with Negative Gain
+:label: instrumentationandcontrol-example-1
+
 A heat exchanger's process-outlet temperature is described by $T(s)/Q_{cw}(s) = -3.0/(8 s + 1)$ where $T$ is in $^\circ$F and $Q_{cw}$ is cooling-water flow in gpm. At the initial steady state, $Q_{cw} = 12.0$ gpm and $T = 175^\circ$F. The cooling-water flow is stepped to $14.0$ gpm. Find $T(t)$ at $t = 4$ s and at steady state.
 ```
 
@@ -246,7 +250,7 @@ $$ T(4) = 175 + (-2.36) = 172.64^\circ F $$
 - **Steady state:** $t(\infty) = K M = -6.0^\circ$F, so $T(\infty) = 175 - 6.0 = 169.0^\circ$F.
 
 
-- **Verification:** The temperature *decreases* (consistent with negative gain and positive step). At $t = \tau = 8$ s the deviation should be $0.632 \times (-6) = -3.79^\circ$F, giving $T(8) = 171.2^\circ$F. At $t = 5\tau = 40$ s the response is at 99.3%  -  effectively done. The exponential shape is the same; only the asymptotic level is signed.
+- **Verification:** The temperature *decreases* (consistent with negative gain and positive step). At $t = \tau = 8$ s the deviation should be $0.632 \times (-6) = -3.79^\circ$F, giving $T(8) = 171.2^\circ$F. At $t = 5\tau = 40$ s the response is at 99.3\%  -  effectively done. The exponential shape is the same; only the asymptotic level is signed.
 ```
 
 
@@ -283,8 +287,7 @@ The factor $e^{-\theta s}$ is the Laplace-domain representation of a pure delay 
 Subjecting $G(s)$ to a step input of magnitude $M$:
 $$ Y(s) = \frac{K e^{-\theta s}}{\tau s + 1} \cdot \frac{M}{s} = e^{-\theta s} \frac{K M}{s(\tau s + 1)} $$
 The factor $e^{-\theta s}$ is a pure time-shift operator: when we invert, the time-domain answer is the first-order step response delayed by $\theta$. Using Equation 1 of the previous section and the time-shift theorem:
-$$ y(t) = \begin{cases} 0, | t < \theta
-K M (1 - e^{-(t-\theta)/\tau}), | t \geq \theta \end{cases} $$
+$$ y(t) = \begin{cases} 0, & t < \theta \ K M (1 - e^{-(t-\theta)/\tau}), & t \geq \theta \end{cases} $$
 Graphically: a flat region from 0 to $\theta$, then an exponential rise. Reading $\theta$ and $\tau$ from a step-test trace is the central practical task of FOPDT identification.
 
 ### Method 1: Tangent-and-Inflection (Smith / Ziegler-Nichols Original)
@@ -310,21 +313,21 @@ The two-point fit, developed by Sundaresan and Krishnaswamy in the late 1970s, i
 
 ```{important}
 **Sundaresan-Krishnaswamy Two-Point Formulas**
-Read off the times $t_{35.3%}$ and $t_{85.3%}$ at which the response reaches 35.3% and 85.3% of its ultimate change. Then
+Read off the times $t_{35.3\%}$ and $t_{85.3\%}$ at which the response reaches 35.3\% and 85.3\% of its ultimate change. Then
 $$
 \begin{align}
 
 
-\theta &= 1.3 t_{35.3%} - 0.29 t_{85.3%}
-\tau   &= 0.67 (t_{85.3%} - t_{35.3%})
+\theta &= 1.3 t_{35.3\%} - 0.29 t_{85.3\%} \\
+\tau   &= 0.67 (t_{85.3\%} - t_{35.3\%}) \\
 K      &= \frac{\Delta y_{ss}}{\Delta x}
 \end{align}
 $$
-The fractions 35.3% and 85.3% are not arbitrary  -  they are chosen so that the two-point fit exactly reproduces $\tau$ and $\theta$ for a pure FOPDT process. For higher-order processes, the fit minimizes least-squares error in the dominant pole.
+The fractions 35.3\% and 85.3\% are not arbitrary  -  they are chosen so that the two-point fit exactly reproduces $\tau$ and $\theta$ for a pure FOPDT process. For higher-order processes, the fit minimizes least-squares error in the dominant pole.
 ```
 
 
-### Why 35.3% and 85.3%?  -  A Quick Derivation Sketch
+### Why 35.3\% and 85.3\%?  -  A Quick Derivation Sketch
 For a true FOPDT signal, $y(t) = KM(1 - e^{-(t-\theta)/\tau})$ for $t \geq \theta$. The time at which the response reaches a fraction $f$ of the ultimate is
 $$ y/y(\infty) = f  \Longrightarrow  1 - e^{-(t-\theta)/\tau} = f  \Longrightarrow  t - \theta = -\tau \ln(1 - f) $$
 So
@@ -333,7 +336,7 @@ For two fractions $f_1$ and $f_2$, the two times are
 $$
 \begin{align}
 
-t_{f_1} &= \theta + \tau \cdot a,   a \equiv -\ln(1-f_1)
+t_{f_1} &= \theta + \tau \cdot a,   a \equiv -\ln(1-f_1) \\
 t_{f_2} &= \theta + \tau \cdot b,   b \equiv -\ln(1-f_2)
 \end{align}
 $$
@@ -341,7 +344,7 @@ Solving for $\tau$ and $\theta$:
 $$
 \begin{align}
 
-\tau   &= \frac{t_{f_2} - t_{f_1}}{b - a}
+\tau   &= \frac{t_{f_2} - t_{f_1}}{b - a} \\
 \theta &= \frac{a t_{f_2} - b t_{f_1}}{a - b}
 \end{align}
 $$
@@ -350,7 +353,9 @@ The Sundaresan-Krishnaswamy fractions $f_1 = 0.353, f_2 = 0.853$ give $a = -\ln(
 ### Worked Example: Heat-Exchanger Cooling-Water Step
 
 ```{prf:example} Fitting a FOPDT to a Cooling-Water Step Test
-A heat exchanger's process-outlet temperature is monitored during a step in cooling-water flow. Initial steady state: cooling water $= 8.0$ gpm, outlet $T = 55.0^\circ$F. Step: cooling-water flow stepped to $9.2$ gpm at $t = 0$. New steady state (after sufficient time): $T = 53.2^\circ$F. From the recorded trace, the time at which $T = 54.36^\circ$F (i.e. 35.3% of the change) is 6.3 min, and the time at which $T = 53.5^\circ$F (85.3% of the change) is 9.5 min. Fit a FOPDT model.
+:label: instrumentationandcontrol-example-2
+
+A heat exchanger's process-outlet temperature is monitored during a step in cooling-water flow. Initial steady state: cooling water $= 8.0$ gpm, outlet $T = 55.0^\circ$F. Step: cooling-water flow stepped to $9.2$ gpm at $t = 0$. New steady state (after sufficient time): $T = 53.2^\circ$F. From the recorded trace, the time at which $T = 54.36^\circ$F (i.e. 35.3\% of the change) is 6.3 min, and the time at which $T = 53.5^\circ$F (85.3\% of the change) is 9.5 min. Fit a FOPDT model.
 ```
 
 
@@ -360,14 +365,14 @@ $$ K = \frac{\Delta y_{ss}}{\Delta x} = \frac{T_{new} - T_{old}}{Q_{cw,new} - Q_
 Negative as expected (more cooling water lowers process outlet temperature).
 
 
-- **Identify the 35.3% and 85.3% target temperatures.**
+- **Identify the 35.3\% and 85.3\% target temperatures.**
 
 
-- 35.3% mark: $T_{35.3%} = 55.0 + 0.353(53.2 - 55.0) = 55.0 + 0.353(-1.8) = 55.0 - 0.635 = 54.365^\circ$F.
+- 35.3\% mark: $T_{35.3\%} = 55.0 + 0.353(53.2 - 55.0) = 55.0 + 0.353(-1.8) = 55.0 - 0.635 = 54.365^\circ$F.
 
-- 85.3% mark: $T_{85.3%} = 55.0 + 0.853(-1.8) = 55.0 - 1.535 = 53.465^\circ$F.
+- 85.3\% mark: $T_{85.3\%} = 55.0 + 0.853(-1.8) = 55.0 - 1.535 = 53.465^\circ$F.
 
-Read from the graph: $t_{35.3%} = 6.3$ min, $t_{85.3%} = 9.5$ min.
+Read from the graph: $t_{35.3\%} = 6.3$ min, $t_{85.3\%} = 9.5$ min.
 
 
 - **Apply the Sundaresan-Krishnaswamy formulas.**
@@ -375,7 +380,7 @@ $$
 \begin{align}
 
 
-\theta &= 1.3 (6.3) - 0.29 (9.5) = 8.19 - 2.755 = 5.435 \approx 5.4 min
+\theta &= 1.3 (6.3) - 0.29 (9.5) = 8.19 - 2.755 = 5.435 \approx 5.4 min \\
 \tau   &= 0.67 (9.5 - 6.3) = 0.67 (3.2) = 2.144 \approx 2.14 min
 \end{align}
 $$
@@ -399,13 +404,13 @@ This is a dead-time-dominant process ($\theta/\tau > 1$). PI control alone will 
 - **Model Predictive Control (MPC):** explicitly accounts for dead time over a finite horizon.
 
 
-- **Verification by reconstructing one point.** Predict the time at which $T$ reaches 50% of the change:
+- **Verification by reconstructing one point.** Predict the time at which $T$ reaches 50\% of the change:
 $$
 \begin{align}
 
 
-T_{50%} &= 55.0 + 0.5(-1.8) = 54.10^\circ F
-1 - e^{-(t - \theta)/\tau} &= 0.50  \Longrightarrow  t - \theta = \tau \ln(2) = 2.14 (0.693) = 1.485 min
+T_{50\%} &= 55.0 + 0.5(-1.8) = 54.10^\circ F \\
+1 - e^{-(t - \theta)/\tau} &= 0.50  \Longrightarrow  t - \theta = \tau \ln(2) = 2.14 (0.693) = 1.485 min \\
 t &= 5.4 + 1.485 = 6.88 min
 \end{align}
 $$
@@ -416,7 +421,9 @@ Compare to the graphical reading at $T = 54.1^\circ$F. If the graph gives $t \ap
 ### Worked Example: Higher-Order Process Fit to FOPDT
 
 ```{prf:example} Two-Lag Process Approximated as FOPDT
-A second-order overdamped process has the true transfer function $G_{true}(s) = 1/[(5s+1)(s+1)]$ (gain 1, two time constants 5 and 1). A step test of magnitude 1 is run. From the resulting trace, the 35.3% time is 2.6 and the 85.3% time is 8.0 (dimensionless). Fit an apparent FOPDT and comment on the quality.
+:label: instrumentationandcontrol-example-3
+
+A second-order overdamped process has the true transfer function $G_{true}(s) = 1/[(5s+1)(s+1)]$ (gain 1, two time constants 5 and 1). A step test of magnitude 1 is run. From the resulting trace, the 35.3\% time is 2.6 and the 85.3\% time is 8.0 (dimensionless). Fit an apparent FOPDT and comment on the quality.
 ```
 
 
@@ -428,12 +435,12 @@ $$
 \begin{align}
 
 
-\theta_{app} &= 1.3 (2.6) - 0.29 (8.0) = 3.38 - 2.32 = 1.06
+\theta_{app} &= 1.3 (2.6) - 0.29 (8.0) = 3.38 - 2.32 = 1.06 \\
 \tau_{app}   &= 0.67 (8.0 - 2.6) = 0.67 (5.4) = 3.62
 \end{align}
 $$
 
-- **Interpretation:** The dominant true time constant is 5, the secondary is 1. The fit recovers $\tau_{app} = 3.62$ (an underestimate of the dominant pole because the secondary pole hides behind it) and gives a nonzero $\theta_{app} = 1.06$ that mimics the secondary lag with an equivalent dead time. The empirical rule of thumb is $\theta_{app} \approx$ the smaller time constant, $\tau_{app} \approx$ the larger one  -  here $\theta_{app} = 1.06 \approx 1$ \checkmark, and $\tau_{app} = 3.62$ (within $\sim$30% of 5).
+- **Interpretation:** The dominant true time constant is 5, the secondary is 1. The fit recovers $\tau_{app} = 3.62$ (an underestimate of the dominant pole because the secondary pole hides behind it) and gives a nonzero $\theta_{app} = 1.06$ that mimics the secondary lag with an equivalent dead time. The empirical rule of thumb is $\theta_{app} \approx$ the smaller time constant, $\tau_{app} \approx$ the larger one  -  here $\theta_{app} = 1.06 \approx 1$ \checkmark, and $\tau_{app} = 3.62$ (within $\sim$30\% of 5).
 
 - **Engineering takeaway:** FOPDT *fits* a higher-order process. The tuning constants computed from the apparent FOPDT will give acceptable, if not optimal, closed-loop behavior. This is the universal industrial practice.
 ```
@@ -441,7 +448,7 @@ $$
 
 ```{note}
 **Exam Tips  -  FOPDT Identification**
-- The Sundaresan-Krishnaswamy method (35.3% / 85.3%) is the standard. Memorize the formulas $\theta = 1.3 t_{35.3} - 0.29 t_{85.3}$, $\tau = 0.67(t_{85.3} - t_{35.3})$.
+- The Sundaresan-Krishnaswamy method (35.3\% / 85.3\%) is the standard. Memorize the formulas $\theta = 1.3 t_{35.3} - 0.29 t_{85.3}$, $\tau = 0.67(t_{85.3} - t_{35.3})$.
 
 - Always state $K$ *with its sign.* Direct/reverse acting controller selection depends on it.
 
@@ -489,8 +496,8 @@ $$
 \begin{align}
 
 
-K           &= d/c
-\tau^2      &= a/c  \Longrightarrow  \tau = \sqrt{a/c}
+K           &= d/c \\
+\tau^2      &= a/c  \Longrightarrow  \tau = \sqrt{a/c} \\
 2\zeta\tau  &= b/c  \Longrightarrow  \zeta = \frac{b}{2 c \tau} = \frac{b}{2 \sqrt{a c}}
 \end{align}
 $$
@@ -540,7 +547,7 @@ $$
 \begin{align}
 
 
-L^{-1}\{\frac{s + \alpha}{(s+\alpha)^2 + \omega_d^2}\} &= e^{-\alpha t}\cos(\omega_d t)
+L^{-1}\{\frac{s + \alpha}{(s+\alpha)^2 + \omega_d^2}\} &= e^{-\alpha t}\cos(\omega_d t) \\
 L^{-1}\{\frac{\omega_d}{(s+\alpha)^2 + \omega_d^2}\} &= e^{-\alpha t}\sin(\omega_d t)
 \end{align}
 $$
@@ -566,13 +573,15 @@ $$ DR = OS^{ 2} = \exp (-\frac{2\pi \zeta}{\sqrt{1-\zeta^2}}) $$
 
 - **Quarter-decay target (Ziegler-Nichols target):** $DR = 1/4$ corresponds to $\zeta \approx 0.215$.
 
-- **Settling time (within $\pm$2% of final):** $t_s \approx \dfrac{4\tau}{\zeta}$.
+- **Settling time (within $\pm$2\% of final):** $t_s \approx \dfrac{4\tau}{\zeta}$.
 ```
 
 
 ### Worked Example: Determining the Damping Coefficient from an ODE
 
 ```{prf:example} Stability and Oscillation from a Second-Order ODE
+:label: instrumentationandcontrol-example-4
+
 A process is governed by the ODE
 $$ \frac{d^2 y}{dt^2} + K \frac{dy}{dt} + 4 y = x(t) $$
 with $y(0) = y'(0) = 0$. The coefficient $K$ (here a real parameter of the process, not a controller gain) can vary. Determine:
@@ -598,8 +607,8 @@ $$
 \begin{align}
 
 
-K_p          &= \frac{1}{4}
-\tau^2       &= \frac{1}{4}  \Longrightarrow  \tau = \frac{1}{2}   (positive root)
+K_p          &= \frac{1}{4} \\
+\tau^2       &= \frac{1}{4}  \Longrightarrow  \tau = \frac{1}{2}   (positive root) \\
 2 \zeta \tau &= \frac{K}{4}  \Longrightarrow  \zeta = \frac{K}{8 \tau} = \frac{K}{8 \cdot (1/2)} = \frac{K}{4}
 \end{align}
 $$
@@ -635,7 +644,9 @@ At exactly $K = 4$, $\zeta = 1$ (critically damped  -  the boundary).
 ### Worked Example: Quarter-Decay from a Step Test
 
 ```{prf:example} Computing $\zeta$ and $\tau$ from an Underdamped Step Response
-A pressure-control loop's underdamped step response shows a first peak that overshoots the new steady state by 50% of the step. The second peak overshoots by $50% \times 50% = 25%$ of the step ($DR = 1/4$). The time between the first peak and the next zero-crossing of the deviation is 12 s. Determine $\zeta$ and $\tau$.
+:label: instrumentationandcontrol-example-5
+
+A pressure-control loop's underdamped step response shows a first peak that overshoots the new steady state by 50\% of the step. The second peak overshoots by $50\% \times 50\% = 25\%$ of the step ($DR = 1/4$). The time between the first peak and the next zero-crossing of the deviation is 12 s. Determine $\zeta$ and $\tau$.
 ```
 
 
@@ -760,6 +771,8 @@ The crossover $\beta = 0.25$-$0.33$ is often a useful target for new designs.
 ### Worked Example: Linear vs. Equal-Percentage Lift Calculation
 
 ```{prf:example} Required Lift for Two Pressure-Drop Scenarios
+:label: instrumentationandcontrol-example-6
+
 A control valve with $C_v = 110$ gpm/$\sqrt{psi}$ must pass 200 gpm of water ($G_s = 1$). Find the required lift for (a) inherent conditions with constant $\Delta P_v = 10$ psi, and (b) installed conditions with $\Delta P_v = 10 - 0.03 q$ psi. Repeat the analysis for an equal-percentage valve with rangeability $R = 40$.
 ```
 
@@ -777,7 +790,7 @@ $$ \ell_{a,lin} = \frac{200}{110} \sqrt{\frac{1}{10}} = 1.818 \times 0.3162 = 0.
 $$ \Delta P_v(q=200) = 10 - 0.03(200) = 10 - 6 = 4 psi $$
 *Note: less valve pressure drop because the rest of the system is taking 6 psi at this flow.* Then
 $$ \ell_{b,lin} = \frac{200}{110} \sqrt{\frac{1}{4}} = 1.818 \times 0.500 = 0.909 $$
-The installed linear valve is at 91% lift  -  close to fully open. Little upward authority remains.
+The installed linear valve is at 91\% lift  -  close to fully open. Little upward authority remains.
 
 
 - **Equal percentage, (a):** the $f$ value is the same as the linear case (0.575) because $f$ depends only on $q$, $C_v$, $G_s$, $\Delta P_v$. Solve $R^{\ell - 1} = f$:
@@ -804,7 +817,7 @@ $$ \ell = 1 + \frac{\log_{10}(0.909)}{\log_{10}(40)} = 1 + \frac{-0.0414}{1.6021
 - **Engineering interpretation.**
 
 
-- For the linear valve, the lift jumps from 0.575 (inherent) to 0.909 (installed) at the same flow. A real plant operator would see a valve that is 91% open and would conclude there is little room to handle an upset that demands even more flow.
+- For the linear valve, the lift jumps from 0.575 (inherent) to 0.909 (installed) at the same flow. A real plant operator would see a valve that is 91\% open and would conclude there is little room to handle an upset that demands even more flow.
 
 - For the equal-pct valve, both lifts (0.850 and 0.974) are also near full open  -  but importantly, the slope $df/d\ell = f \ln R$ at the high-$f$ end is much steeper than the linear-valve slope, so a small lift change produces a large flow change. This means *this $C_v$ is too large* or the design flow is too high a fraction of the valve's range.
 
@@ -946,6 +959,8 @@ These are heuristics  -  the actual decision is made in a HAZOP study weighing l
 ### Worked Example: Two Service Scenarios
 
 ```{prf:example} Selecting Fail-Safe Action for Two Valves
+:label: instrumentationandcontrol-example-7
+
 **(a)** A control valve regulates cooling water flow to a shell-and-tube exchanger that cools a 220$^\circ$C exothermic reactor effluent before downstream separation.
 
 **(b)** A control valve regulates the discharge from a wastewater pH-neutralization tank to a downstream biological treatment plant.
@@ -1036,6 +1051,8 @@ The fact that the equal-pct installed curve is the straightest of the four is th
 ### Worked Example: Valve Gain as a Function of Lift
 
 ```{prf:example} Comparing $dq/d\ell$ for Linear and Equal-Pct at Two Operating Points
+:label: instrumentationandcontrol-example-8
+
 For the system in the previous worked example ($C_v = 110$, water, design flow 200 gpm), compute the valve gain $dq/d\ell$ at $\ell = 0.5$ and $\ell = 0.9$ for both characteristics. Use the installed pressure-drop relationship $\Delta P_v = 10 - 0.03 q$.
 ```
 
@@ -1114,9 +1131,9 @@ The sensor (or primary element) physically detects the process variable; the tra
 
 - **Span:** the difference high $-$ low. For the examples: 200 psi and 150$^\circ$C.
 
-- **Turndown (rangeability):** the ratio of the highest reliably-readable value to the lowest. A Coriolis flowmeter with turndown 100:1 can read accurately from 1% to 100% of full scale; an orifice plate with turndown 4:1 is only reliable from 25% to 100%.
+- **Turndown (rangeability):** the ratio of the highest reliably-readable value to the lowest. A Coriolis flowmeter with turndown 100:1 can read accurately from 1\% to 100\% of full scale; an orifice plate with turndown 4:1 is only reliable from 25\% to 100\%.
 
-- **Accuracy:** closeness to true value. Usually quoted as $\pm$% of span (e.g. "$\pm$0.5% of span") or $\pm$% of reading.
+- **Accuracy:** closeness to true value. Usually quoted as $\pm$\% of span (e.g. "$\pm$0.5\% of span") or $\pm$\% of reading.
 
 - **Resolution:** smallest detectable change.
 
@@ -1159,9 +1176,9 @@ The sensor (or primary element) physically detects the process variable; the tra
 
 - *Orifice plate:* cheap, ubiquitous, $\sim$\$ vs. Coriolis but high permanent loss; turndown $\sim$4:1.
 
-- *Venturi:* similar idea, lower permanent loss (5-15% of $\Delta P$).
+- *Venturi:* similar idea, lower permanent loss (5-15\% of $\Delta P$).
 
-- *Coriolis:* mass-flow, very accurate ($\pm$0.1%), works on any fluid including slurries, expensive.
+- *Coriolis:* mass-flow, very accurate ($\pm$0.1\%), works on any fluid including slurries, expensive.
 
 - *Magnetic (mag meter):* conductive liquids only; no obstruction; high turndown.
 
@@ -1218,14 +1235,16 @@ The industry-standard transmitter output is a current loop ranging from 4 mA at 
 Linear map between measurement and 4-20 mA current:
 $$ I [mA] = 4 + 16 \cdot \frac{measurement - zero}{span} $$
 $$ measurement = zero + span \cdot \frac{I - 4}{16} $$
-**Percent of span (%TO):**
-$$ %TO = 100 \cdot \frac{measurement - zero}{span} = \frac{I - 4}{16} \cdot 100 $$
+**Percent of span (\%TO):**
+$$ \%TO = 100 \cdot \frac{measurement - zero}{span} = \frac{I - 4}{16} \cdot 100 $$
 ```
 
 
 ### Worked Example: 4-20 mA Loop Calibration
 
 ```{prf:example} Reading and Setting Alarms on a 4-20 mA Loop
+:label: instrumentationandcontrol-example-9
+
 A pressure transmitter has range 50-250 psi. The controller's analog input reads 12.8 mA.
 
 
@@ -1241,21 +1260,21 @@ A pressure transmitter has range 50-250 psi. The controller's analog input reads
 - **Range, zero, span.** Range = 50-250 psi. Zero = 50 psi. Span = 250 - 50 = 200 psi.
 
 - **(a) 12.8 mA $\to$ pressure.**
-$$ %TO = \frac{12.8 - 4}{16} \times 100 = \frac{8.8}{16} \times 100 = 55.0% $$
+$$ \%TO = \frac{12.8 - 4}{16} \times 100 = \frac{8.8}{16} \times 100 = 55.0\% $$
 $$ P = 50 + 0.55(200) = 50 + 110 = 160 psi $$
 
 
 - **(b) 200 psi $\to$ mA.**
-$$ %TO = \frac{200 - 50}{200} \times 100 = 75.0% $$
+$$ \%TO = \frac{200 - 50}{200} \times 100 = 75.0\% $$
 $$ I = 4 + 16(0.75) = 4 + 12 = 16.0 mA $$
 
 
 - **(c) 75 psi $\to$ mA.**
-$$ %TO = \frac{75 - 50}{200} \times 100 = 12.5% $$
+$$ \%TO = \frac{75 - 50}{200} \times 100 = 12.5\% $$
 $$ I = 4 + 16(0.125) = 4 + 2 = 6.0 mA $$
 
 
-- **Verification by midpoint.** Mid-range pressure 150 psi $\to$ %TO $= 50%$ $\to$ $I = 4 + 8 = 12$ mA. \checkmark Linear calibration confirmed.
+- **Verification by midpoint.** Mid-range pressure 150 psi $\to$ \%TO $= 50\%$ $\to$ $I = 4 + 8 = 12$ mA. \checkmark Linear calibration confirmed.
 
 
 - **Practical note on alarm settings.** A 6 mA low-trip is close to the 4 mA live zero  -  if the loop opens, the controller would also see $< 6$ mA. Modern DCS systems distinguish "signal within range, low alarm" from "signal failure" by checking for $I < 3.8$ mA or $> 20.5$ mA (out-of-range diagnostic).
@@ -1268,7 +1287,7 @@ $$ I = 4 + 16(0.125) = 4 + 2 = 6.0 mA $$
 
 - Span = high $-$ low.
 
-- 4 mA = 0% TO = low end of range. 20 mA = 100% TO = high end.
+- 4 mA = 0\% TO = low end of range. 20 mA = 100\% TO = high end.
 
 - Span is what divides the 16 mA of signal range, not the absolute high value.
 
@@ -1321,7 +1340,7 @@ The sensor/transmitter is typically modeled as zero-order (instantaneous, gain o
 
 
 ## PID Controllers  -  Algorithms and Tuning
-The Proportional-Integral-Derivative (PID) controller is responsible for an estimated 90%+ of all single-loop control in the world's chemical plants. The PE exam tests three things: knowing what each mode does, knowing when to use which combination, and being able to apply a tuning rule (typically Ziegler-Nichols or Cohen-Coon) from a FOPDT identification.
+The Proportional-Integral-Derivative (PID) controller is responsible for an estimated 90\%+ of all single-loop control in the world's chemical plants. The PE exam tests three things: knowing what each mode does, knowing when to use which combination, and being able to apply a tuning rule (typically Ziegler-Nichols or Cohen-Coon) from a FOPDT identification.
 
 ### The Ideal Continuous PID Algorithm
 
@@ -1358,7 +1377,7 @@ Two alternative forms: *series* (interacting) PID, and *ISA standard form*. Conv
 ```{tip}
 - **P only:** the simplest and most tolerant; leaves offset proportional to the load. Used on noncritical level loops where some offset is acceptable.
 
-- **PI:** the workhorse. Eliminates offset. Used on virtually all flow, pressure, most level, and most temperature loops. Probably 75% of all industrial loops.
+- **PI:** the workhorse. Eliminates offset. Used on virtually all flow, pressure, most level, and most temperature loops. Probably 75\% of all industrial loops.
 
 - **PID:** adds derivative to PI. Used on slow temperature loops with low noise (large $\tau$). *Never* use on flow loops  -  they are too noisy and the derivative action amplifies the noise dramatically.
 
@@ -1410,6 +1429,8 @@ $\lambda$ is the user's choice. Aggressive: $\lambda \approx \theta$; moderate: 
 ### Worked Example: PI Tuning from a FOPDT Fit
 
 ```{prf:example} ZN, Cohen-Coon, and IMC Tuning for the Cooling-Water Loop
+:label: instrumentationandcontrol-example-10
+
 Continuing the previous FOPDT example, $K = -1.5$ $^\circ$F/gpm, $\tau = 2.14$ min, $\theta = 5.4$ min. Compute PI tuning by (a) Ziegler-Nichols, (b) Cohen-Coon, (c) IMC with $\lambda = \tau$. Compare.
 ```
 
@@ -1420,7 +1441,7 @@ $$
 \begin{align}
 
 
-K_c &= \frac{0.9}{|K|} \frac{\tau}{\theta} = \frac{0.9}{1.5} \frac{2.14}{5.4} = 0.60 \times 0.396 = 0.238 gpm/^\circ F
+K_c &= \frac{0.9}{|K|} \frac{\tau}{\theta} = \frac{0.9}{1.5} \frac{2.14}{5.4} = 0.60 \times 0.396 = 0.238 gpm/^\circ F \\
 \tau_I &= 3.33 \theta = 3.33 \times 5.4 = 18.0 min
 \end{align}
 $$
@@ -1430,7 +1451,7 @@ $$
 \begin{align}
 
 
-K_c &= \frac{1}{1.5} \frac{2.14}{5.4} (0.9 + \frac{5.4}{12 \times 2.14}) = 0.667 \times 0.396 \times (0.9 + 0.210) = 0.293 gpm/^\circ F
+K_c &= \frac{1}{1.5} \frac{2.14}{5.4} (0.9 + \frac{5.4}{12 \times 2.14}) = 0.667 \times 0.396 \times (0.9 + 0.210) = 0.293 gpm/^\circ F \\
 \tau_I &= 5.4 \cdot \frac{30 + 3(2.524)}{9 + 20(2.524)} = 5.4 \cdot \frac{37.57}{59.48} = 5.4 \times 0.632 = 3.41 min
 \end{align}
 $$
@@ -1440,7 +1461,7 @@ $$
 \begin{align}
 
 
-K_c &= \frac{1}{|K|} \frac{\tau}{\lambda + \theta} = \frac{1}{1.5} \frac{2.14}{2.14 + 5.4} = \frac{1}{1.5} \times 0.284 = 0.189 gpm/^\circ F
+K_c &= \frac{1}{|K|} \frac{\tau}{\lambda + \theta} = \frac{1}{1.5} \frac{2.14}{2.14 + 5.4} = \frac{1}{1.5} \times 0.284 = 0.189 gpm/^\circ F \\
 \tau_I &= \tau = 2.14 min
 \end{align}
 $$
@@ -1508,6 +1529,8 @@ All commercial controllers have built-in anti-windup; the engineer must verify i
 ### Worked Example: Routh-Hurwitz Stability of a PI Loop
 
 ```{prf:example} Find the Stability Boundary $K_c$ for a Simple PI Loop
+:label: instrumentationandcontrol-example-11
+
 A PI controller $G_c(s) = K_c(1 + 1/(2 s))$ controls a process $G_p(s) = 1/[(s+1)(s+2)]$ with unit sensor. Find the range of $K_c$ for closed-loop stability.
 ```
 
@@ -1638,7 +1661,7 @@ For a process with severe dead time, the **Smith Predictor** surrounds a standar
 
 The controller effectively sees the no-delay process, so it can be tuned for that process. The predictor structure cancels the dead time in the model. In the limit of a perfect model, the closed loop responds as if the process had no dead time at all.
 
-**Caveat:** the Smith Predictor is exquisitely sensitive to model error. A 10% error in $\theta$ or $\tau$ can destabilize the loop. Use only when the model is good and reliable.
+**Caveat:** the Smith Predictor is exquisitely sensitive to model error. A 10\% error in $\theta$ or $\tau$ can destabilize the loop. Use only when the model is good and reliable.
 ```
 
 
@@ -1700,14 +1723,14 @@ This last section gathers the most exam-relevant formulas and decisions in one p
 ```{tip}
 **First-Order Step Response**
 $$ y(t) = K M (1 - e^{-t/\tau}) $$
-Landmarks: 63.2% at $\tau$; 86.5% at $2\tau$; 95.0% at $3\tau$; 99.3% at $5\tau$. Slope at $t=0$ is $KM/\tau$. Add back $y$ before quoting absolute value.
+Landmarks: 63.2\% at $\tau$; 86.5\% at $2\tau$; 95.0\% at $3\tau$; 99.3\% at $5\tau$. Slope at $t=0$ is $KM/\tau$. Add back $y$ before quoting absolute value.
 ```
 
 
 ```{tip}
 **FOPDT and Sundaresan-Krishnaswamy**
 $$ G(s) = \frac{K e^{-\theta s}}{\tau s + 1} $$
-$$ \theta = 1.3 t_{35.3%} - 0.29 t_{85.3%},   \tau = 0.67(t_{85.3%} - t_{35.3%}),   K = \Delta y_{ss}/\Delta x $$
+$$ \theta = 1.3 t_{35.3\%} - 0.29 t_{85.3\%},   \tau = 0.67(t_{85.3\%} - t_{35.3\%}),   K = \Delta y_{ss}/\Delta x $$
 Controllability: $\theta/\tau < 0.1$ easy; $0.1$-$1$ classical; $> 1$ requires Smith predictor or feedforward.
 ```
 
@@ -1738,7 +1761,7 @@ Cooling water: FO. Steam: FC. Vent: FO. Drain on inventory: FC. Hazardous reagen
 
 ```{tip}
 **4-20 mA Calibration**
-$$ I = 4 + 16 \frac{measurement - zero}{span},   %TO = (I-4)/16 \times 100 $$
+$$ I = 4 + 16 \frac{measurement - zero}{span},   \%TO = (I-4)/16 \times 100 $$
 Zero = low end of range; Span = high $-$ low. Live zero (4 mA) distinguishes broken loop from low reading.
 ```
 
@@ -1756,7 +1779,7 @@ Direct/reverse: keep loop in negative feedback. Match controller sign to process
 
 ```{tip}
 **Mode Selection**
-P: noncritical level. PI: flow, pressure, most level, most temperature (the workhorse, 75%+ of all loops). PID: slow temperature loops with low noise. Never use D on flow.
+P: noncritical level. PI: flow, pressure, most level, most temperature (the workhorse, 75\%+ of all loops). PID: slow temperature loops with low noise. Never use D on flow.
 ```
 
 
