@@ -146,7 +146,7 @@ def protect_math(src):
     # Display math emitted by this converter has delimiters on their own lines.
     # Do not match adjacent inline math like m$^2$$\cdot$K as a $$...$$ block.
     src = re.sub(r'(?ms)^[ \t]*\$\$[ \t]*\n.*?\n[ \t]*\$\$[ \t]*(?=\n|$)', stash, src)
-    src = re.sub(r'\$[^$\n]+\$', stash, src)
+    src = re.sub(r'(?<!\\)\$[^$\n]*(?<!\\)\$', stash, src)
     return src, math_blocks
 
 
@@ -186,6 +186,72 @@ def normalize_display_math_spacing(src):
     return '\n'.join(out)
 
 
+def convert_tabulars(src):
+    """Convert simple LaTeX tabular environments to Markdown tables."""
+    def clean_cell(cell):
+        cell = cell.strip()
+        cell = re.sub(r'\s+', ' ', cell)
+        return cell
+
+    def repl(match):
+        body = match.group(1)
+        body = re.sub(r'\\hline', '', body)
+        raw_rows = re.split(r'\\\\', body)
+        rows = []
+        for raw in raw_rows:
+            raw = raw.strip()
+            if not raw:
+                continue
+            cells = [clean_cell(cell) for cell in raw.split('&')]
+            rows.append(cells)
+
+        if not rows:
+            return ''
+
+        width = max(len(row) for row in rows)
+        rows = [row + [''] * (width - len(row)) for row in rows]
+        header = rows[0]
+        separator = ['---'] * width
+        table_rows = [
+            '| ' + ' | '.join(header) + ' |',
+            '| ' + ' | '.join(separator) + ' |',
+        ]
+        table_rows.extend('| ' + ' | '.join(row) + ' |' for row in rows[1:])
+        return '\n\n' + '\n'.join(table_rows) + '\n\n'
+
+    return re.sub(
+        r'\\begin\{tabular\}\{[^}]+\}(.*?)\\end\{tabular\}',
+        repl,
+        src,
+        flags=re.DOTALL,
+    )
+
+
+def cleanup_text_outside_math(src):
+    """Clean LaTeX text artifacts without touching TeX math syntax."""
+    src, math_stash = protect_math(src)
+    src = re.sub(r'\\textsuperscript\{([^}]*)\}', r'<sup>\1</sup>', src)
+    src = src.replace(r'\checkmark', '✓')
+    src = src.replace('{,}', ',')
+    src = src.replace('(c)', '&#40;c&#41;')
+    src = re.sub(r"\\\^([A-Za-z])", r'\1', src)
+    src = re.sub(r'\\(?=\s|$)', '', src)
+    return restore_math(src, math_stash)
+
+
+def protect_table_separators(src):
+    """Temporarily stash Markdown table separator rows."""
+    separators = {}
+
+    def stash(match):
+        key = f'@@TABLE_SEPARATOR_{len(separators)}@@'
+        separators[key] = match.group(0)
+        return key
+
+    src = re.sub(r'(?m)^\|(?:\s*:?-{3,}:?\s*\|)+\s*$', stash, src)
+    return src, separators
+
+
 def convert_file(tex_path: pathlib.Path, md_path: pathlib.Path, title: str, frontmatter: str):
     src = tex_path.read_text(encoding='utf-8')
 
@@ -194,7 +260,7 @@ def convert_file(tex_path: pathlib.Path, md_path: pathlib.Path, title: str, fron
     src = re.sub(r'\\end\{document\}.*$', '', src, flags=re.DOTALL)
 
     # ── 2. Strip title block (\begin{center}…\end{center} + \hrule) ─────────
-    src = re.sub(r'(?s)\\begin\{center\}.*?\\end\{center\}', '', src)
+    src = re.sub(r'(?s)^\s*\\begin\{center\}.*?\\end\{center\}', '', src, count=1)
     src = re.sub(r'\\hrule\s*', '', src)
     src = re.sub(r'\\vspace\{[^}]+\}', '', src)
 
@@ -324,13 +390,16 @@ def convert_file(tex_path: pathlib.Path, md_path: pathlib.Path, title: str, fron
     src = src.replace(r'\_', '_')
     src = src.replace(r'\#', '#')
     # Convert --- to hyphen (no em-dashes per user preference), then -- to hyphen
+    src, _table_separators = protect_table_separators(src)
     src = src.replace('---', ' - ')
     src = src.replace('--', '-')
+    src = restore_math(src, _table_separators)
     src = src.replace(r'\ldots', '...')
     src = src.replace(r'\dots', '...')
 
     # Non-breaking space ~ → space
     src = re.sub(r'(?<!\\)~', ' ', src)
+    src = cleanup_text_outside_math(src)
 
 
     # Remove \label, \ref, \cite, \footnote etc.
@@ -350,9 +419,6 @@ def convert_file(tex_path: pathlib.Path, md_path: pathlib.Path, title: str, fron
                 'boldsymbol', 'hat', 'bar', 'vec', 'tilde', 'dot', 'ddot',
                 'widehat', 'widetilde', 'overline', 'underbrace', 'overbrace'):
         src = re.sub(r'\\' + cmd + r'\{([^}]+)\}', r'\1', src)
-    # \text{...} inside math — keep content; add space when following \circ to avoid \circX
-    src = re.sub(r'(\\circ)\\text\{([^}]*)\}', r'\1 \2', src)
-    src = re.sub(r'\\text\{([^}]*)\}', r'\1', src)
     # \left and \right — remove command, keep delimiter
     src = re.sub(r'\\(?:left|right)\s*([(\[|\])\.])', r'\1', src)
     src = re.sub(r'\\(?:left|right)\s*\\([{}|])', r'\\\1', src)
@@ -447,14 +513,14 @@ def convert_body(body):
     body = body.replace('--', '-')
     body = body.replace('``', '"')
     body = body.replace("''", '"')
+    body = convert_tabulars(body)
+    body = cleanup_text_outside_math(body)
     # Math commands
     body = strip_nested_braces('boxed', body)
     for cmd in ('mathcal', 'mathbb', 'mathbf', 'mathit', 'mathsf', 'mathtt',
                 'boldsymbol', 'hat', 'bar', 'vec', 'tilde', 'dot', 'ddot',
                 'widehat', 'widetilde', 'overline', 'underbrace'):
         body = re.sub(r'\\' + cmd + r'\{([^}]+)\}', r'\1', body)
-    body = re.sub(r'(\\circ)\\text\{([^}]*)\}', r'\1 \2', body)
-    body = re.sub(r'\\text\{([^}]*)\}', r'\1', body)
     body = re.sub(r'\\(?:left|right)\s*([(\[|\])\.])', r'\1', body)
     body = re.sub(r'\\(?:left|right)\s*\\([{}|])', r'\\\1', body)
     body = re.sub(r'\\[,;!]', ' ', body)

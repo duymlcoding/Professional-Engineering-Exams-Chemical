@@ -39,17 +39,17 @@ On a PFD, only the utility *inlet* stream is labeled with its lowercase code; th
 
 - **rb**  -  refrigerated brine (CaCl$_2$ or MEG solution); inlet $\sim$-45$^\circ$C.
 
-- **lps**  -  low-pressure saturated steam, $\sim$4 barg, $T_sat \approx 140$-160$^\circ$C.
+- **lps**  -  low-pressure saturated steam, $\sim$4 barg, $T_\text{sat} \approx 140$-160$^\circ$C.
 
-- **mps**  -  medium-pressure steam, $\sim$10 barg, $T_sat \approx 180$-200$^\circ$C.
+- **mps**  -  medium-pressure steam, $\sim$10 barg, $T_\text{sat} \approx 180$-200$^\circ$C.
 
-- **hps**  -  high-pressure steam, $\sim$40 barg, $T_sat \approx 250$-270$^\circ$C.
+- **hps**  -  high-pressure steam, $\sim$40 barg, $T_\text{sat} \approx 250$-270$^\circ$C.
 
 - **el**  -  electric resistance heating (220/440/660 V).
 
 - **htm**  -  heat-transfer medium (Dowtherm A, Therminol 66); can reach 350-400$^\circ$C without high pressure.
 
-Cooling tower water is limited at the cold end by the local wet-bulb temperature: a tower can cool water to roughly $T_{wet bulb} + 3^\circ$C in practice. In hot, humid climates this places a floor on what process-stream temperatures cooling water can achieve.
+Cooling tower water is limited at the cold end by the local wet-bulb temperature: a tower can cool water to roughly $T_{\text{wet bulb}} + 3^\circ$C in practice. In hot, humid climates this places a floor on what process-stream temperatures cooling water can achieve.
 ```
 
 
@@ -57,12 +57,12 @@ Cooling tower water is limited at the cold end by the local wet-bulb temperature
 
 ```{note}
 **Why Utility $\Delta T$ Should Be Modest**
-Design the utility flow rate so the utility temperature change $\Delta T_{util}$ falls between roughly 5 and 20$^\circ$C. Both ends of the range are bounded for economic reasons:
+Design the utility flow rate so the utility temperature change $\Delta T_{\text{util}}$ falls between roughly 5 and 20$^\circ$C. Both ends of the range are bounded for economic reasons:
 
 
-- $\Delta T_{util} < 5^\circ$C requires a very large utility mass flow to carry the duty. The cooling-tower or steam-boiler equipment must be oversized to handle this flow, and pumping/blower costs rise.
+- $\Delta T_{\text{util}} < 5^\circ$C requires a very large utility mass flow to carry the duty. The cooling-tower or steam-boiler equipment must be oversized to handle this flow, and pumping/blower costs rise.
 
-- $\Delta T_{util} > 20^\circ$C means the utility supply equipment is being asked to deliver a large enthalpy swing per unit mass. For cooling water this is rarely a problem (the cooling tower can handle a 20$^\circ$C swing), but for steam, the upstream pressure-let-down station becomes constrained, and for refrigerants, more refrigeration compression power is needed.
+- $\Delta T_{\text{util}} > 20^\circ$C means the utility supply equipment is being asked to deliver a large enthalpy swing per unit mass. For cooling water this is rarely a problem (the cooling tower can handle a 20$^\circ$C swing), but for steam, the upstream pressure-let-down station becomes constrained, and for refrigerants, more refrigeration compression power is needed.
 
 For *condensing* steam or *evaporating* refrigerant, the temperature is fixed by saturation; only the flow rate varies. In those cases the rule of thumb is replaced by a target outlet vapor-fraction (condensate is typically returned as subcooled liquid; refrigerant is vaporized to dry saturation or slightly superheated).
 ```
@@ -73,7 +73,7 @@ For *condensing* steam or *evaporating* refrigerant, the temperature is fixed by
 ```{prf:example} Cooling-Water Flow for a Process Cooler
 :label: processequipmentdesign-example-0
 
-A process stream delivers 250 kW of cooling duty to a heat exchanger. Cooling water enters at 30$^\circ$C. (a) What is the required cooling-water mass flow if the design $\Delta T_{util} = 10^\circ$C? (b) What is the flow if $\Delta T_{util}$ is reduced to 3$^\circ$C? (c) Comment on the comparison.
+A process stream delivers 250 kW of cooling duty to a heat exchanger. Cooling water enters at 30$^\circ$C. (a) What is the required cooling-water mass flow if the design $\Delta T_{\text{util}} = 10^\circ$C? (b) What is the flow if $\Delta T_{\text{util}}$ is reduced to 3$^\circ$C? &#40;c&#41; Comment on the comparison.
 ```
 
 
@@ -82,31 +82,31 @@ A process stream delivers 250 kW of cooling duty to a heat exchanger. Cooling wa
 
 
 $$
-Q = m_{cw} c_{p,water} \Delta T_{util}
+Q = m_{\text{cw}} c_{p,\text{water}} \Delta T_{\text{util}}
 $$
 
 
-Using $c_{p,water} = 4.18$ kJ/(kg$\cdot$K).
+Using $c_{p,\text{water}} = 4.18$ kJ/(kg$\cdot$K).
 
-- **(a) At $\Delta T_{util} = 10^\circ$C:**
-
-
-$$
-m_{cw} = \frac{250}{4.18 \times 10} = \frac{250}{41.8} = 5.98  kg/s = 21{,}500  kg/h
-$$
-
-
-- **(b) At $\Delta T_{util} = 3^\circ$C:**
+- **(a) At $\Delta T_{\text{util}} = 10^\circ$C:**
 
 
 $$
-m_{cw} = \frac{250}{4.18 \times 3} = \frac{250}{12.54} = 19.9  kg/s = 71{,}700  kg/h
+m_{\text{cw}} = \frac{250}{4.18 \times 10} = \frac{250}{41.8} = 5.98 \text{ kg/s} = 21{,}500 \text{ kg/h}
 $$
 
 
-- **(c) Comparison.** Reducing $\Delta T_{util}$ from 10 to 3$^\circ$C tripled the required cooling-water flow. The cooling tower, the supply pump, and all piping must be sized 3.3$\times$ larger. The capital and operating cost penalty is significant for what is essentially the same heat duty. This is exactly why the 5-20$^\circ$C rule of thumb exists: it sits in the cost-minimum band where neither the heat-exchanger area (which favors low $\Delta T_util$) nor the utility equipment (which favors moderate-to-large $\Delta T_util$) dominates.
+- **(b) At $\Delta T_{\text{util}} = 3^\circ$C:**
 
-- **Verification.** The two flows differ by a factor of 3.33, which matches the inverse $\Delta T$ ratio 10/3 = 3.33. \checkmark
+
+$$
+m_{\text{cw}} = \frac{250}{4.18 \times 3} = \frac{250}{12.54} = 19.9 \text{ kg/s} = 71{,}700 \text{ kg/h}
+$$
+
+
+- **&#40;c&#41; Comparison.** Reducing $\Delta T_{\text{util}}$ from 10 to 3$^\circ$C tripled the required cooling-water flow. The cooling tower, the supply pump, and all piping must be sized 3.3$\times$ larger. The capital and operating cost penalty is significant for what is essentially the same heat duty. This is exactly why the 5-20$^\circ$C rule of thumb exists: it sits in the cost-minimum band where neither the heat-exchanger area (which favors low $\Delta T_\text{util}$) nor the utility equipment (which favors moderate-to-large $\Delta T_\text{util}$) dominates.
+
+- **Verification.** The two flows differ by a factor of 3.33, which matches the inverse $\Delta T$ ratio 10/3 = 3.33. ✓
 ```
 
 
@@ -121,7 +121,7 @@ Process simulators offer two heat-exchanger block types:
 
 - **Rigorous / two-sided block:** both streams are connected; the block solves the energy balance and the $Q = UA\Delta T_{LM}$ equation simultaneously. The simulator can return "infeasible" if the chosen utility is too cold/hot to drive the required temperature change.
 
-The danger of generic blocks: the simulator will happily heat your stream to 10{,}000$^\circ$C or cool it to near absolute zero if you ask. It assumes a utility of sufficient capacity exists. **Always replace generic blocks with rigorous ones before finalizing a design.** Design reactors and separators first (the process backbone); then size heat exchangers as the last step.
+The danger of generic blocks: the simulator will happily heat your stream to 10,000$^\circ$C or cool it to near absolute zero if you ask. It assumes a utility of sufficient capacity exists. **Always replace generic blocks with rigorous ones before finalizing a design.** Design reactors and separators first (the process backbone); then size heat exchangers as the last step.
 ```
 
 
@@ -196,7 +196,7 @@ Plate exchangers achieve very large area in small volume by stacking many thin p
 
 - **Plate-and-frame (PHE):** a stack of corrugated metal plates separated by elastomeric gaskets and pressed together by a frame. Hot and cold fluids alternate channels. Very high $U$ (5-7 kW/m$^2$$\cdot$K for water-water), area up to $\sim$2500 m$^2$. Easy to expand (add plates). Limits: gasket-bounded temperature ($\sim$180$^\circ$C) and pressure ($\sim$25 barg). Not for fouling or large-particle fluids (narrow channels clog). The standard choice in food, dairy, and pharmaceutical service.
 
-- **Plate-and-fin (brazed aluminum):** aluminum plates with corrugated fin spacers, brazed into a permanent block. Areas to 30{,}000 m$^2$ in one unit. Excellent for cryogenic service (LNG, air separation) where the aluminum thermal conductivity matters. Multi-stream: a single block can handle 3-6 streams simultaneously, enabling high heat integration in a small footprint.
+- **Plate-and-fin (brazed aluminum):** aluminum plates with corrugated fin spacers, brazed into a permanent block. Areas to 30,000 m$^2$ in one unit. Excellent for cryogenic service (LNG, air separation) where the aluminum thermal conductivity matters. Multi-stream: a single block can handle 3-6 streams simultaneously, enabling high heat integration in a small footprint.
 
 Both plate styles tend to be expensive on a \$/m$^2$ basis at small areas but extremely cost-effective at large area where they dominate over shell-and-tube. Both have high pressure drop and are poor choices for viscous, fouling, or corrosive fluids.
 ```
@@ -206,7 +206,7 @@ Both plate styles tend to be expensive on a \$/m$^2$ basis at small areas but ex
 
 ```{note}
 **When Cooling Water Is Not Available**
-**Air-cooled (fin-fan):** a tube bundle with extended-surface (finned) tubes, cooled by motor-driven fans blowing ambient air. No shell  -  the air is in open contact with the fins. Hot fluid always travels tube-side (air is always the cooling medium). Areas to 20{,}000 m$^2$.
+**Air-cooled (fin-fan):** a tube bundle with extended-surface (finned) tubes, cooled by motor-driven fans blowing ambient air. No shell  -  the air is in open contact with the fins. Hot fluid always travels tube-side (air is always the cooling medium). Areas to 20,000 m$^2$.
 
 **Used when** cooling water is scarce (desert plants, offshore platforms), or when the process side is above $\sim$60$^\circ$C and air-cooling is the most economical disposal of low-grade heat. **Limitation:** the cold-side temperature is bounded by the local dry-bulb temperature; air-coolers cannot achieve the lower temperatures that cooling water can in temperate climates.
 ```
@@ -289,11 +289,11 @@ $$
 $$
 
 
-- **Eliminate the heat-capacity-rate term.** From the overall stream balances $Q = m_h c_{p,h}(T_{h,in} - T_{h,out})$ and $Q = m_c c_{p,c}(T_{c,out} - T_{c,in})$,
+- **Eliminate the heat-capacity-rate term.** From the overall stream balances $Q = m_h c_{p,h}(T_{h,\text{in}} - T_{h,\text{out}})$ and $Q = m_c c_{p,c}(T_{c,\text{out}} - T_{c,\text{in}})$,
 
 
 $$
-\frac{1}{m_h c_{p,h}} = \frac{T_{h,in} - T_{h,out}}{Q},   \frac{1}{m_c c_{p,c}} = \frac{T_{c,out} - T_{c,in}}{Q}
+\frac{1}{m_h c_{p,h}} = \frac{T_{h,\text{in}} - T_{h,\text{out}}}{Q},   \frac{1}{m_c c_{p,c}} = \frac{T_{c,\text{out}} - T_{c,\text{in}}}{Q}
 $$
 
 
@@ -301,7 +301,7 @@ Substituting:
 
 
 $$
-\ln (\frac{\Delta T_2}{\Delta T_1}) = -\frac{UA}{Q} [(T_{h,in} - T_{h,out}) - (T_{c,out} - T_{c,in})] = -\frac{UA}{Q} (\Delta T_2 - \Delta T_1)
+\ln (\frac{\Delta T_2}{\Delta T_1}) = -\frac{UA}{Q} [(T_{h,\text{in}} - T_{h,\text{out}}) - (T_{c,\text{out}} - T_{c,\text{in}})] = -\frac{UA}{Q} (\Delta T_2 - \Delta T_1)
 $$
 
 
@@ -329,7 +329,7 @@ Both forms are equivalent (the second is sometimes more intuitive). The final de
 
 
 $$
-Q = U A \Delta T_{LM}    (Equation 1, pure counter-flow)
+Q = U A \Delta T_{LM}    \text{(Equation 1, pure counter-flow)}
 $$
 
 
@@ -339,7 +339,7 @@ $$
 - **Special cases.** If $\Delta T_1 = \Delta T_2$ (balanced counter-flow with $m_h c_{p,h} = m_c c_{p,c}$, or a condenser with constant-T condensation against constant-T evaporation), the formula is indeterminate (0/0). The limit gives $\Delta T_{LM} = \Delta T_1 = \Delta T_2$ (the constant value).
 
 
-- **Verification.** The LMTD reduces to $\Delta T_1$ when $\Delta T_2 = 0$ (after applying L'H\^opital  -  though such a design has zero approach at one end and infinite area). The formula is symmetric in the two ends. \checkmark
+- **Verification.** The LMTD reduces to $\Delta T_1$ when $\Delta T_2 = 0$ (after applying L'Hopital  -  though such a design has zero approach at one end and infinite area). The formula is symmetric in the two ends. ✓
 ```
 
 
@@ -358,7 +358,7 @@ $F$ is a dimensionless function of two ratios:
 
 
 $$
-P = \frac{T_{c,out} - T_{c,in}}{T_{h,in} - T_{c,in}},   R = \frac{T_{h,in} - T_{h,out}}{T_{c,out} - T_{c,in}} = \frac{(mc_p)_c}{(mc_p)_h}
+P = \frac{T_{c,\text{out}} - T_{c,\text{in}}}{T_{h,\text{in}} - T_{c,\text{in}}},   R = \frac{T_{h,\text{in}} - T_{h,\text{out}}}{T_{c,\text{out}} - T_{c,\text{in}}} = \frac{(mc_p)_c}{(mc_p)_h}
 $$
 
 
@@ -439,7 +439,7 @@ The overall coefficient referenced to the outside area of the tubes is
 
 
 $$
-\frac{1}{U_o} = \frac{1}{h_o} + R_{f,o} + \frac{x A_o/A_{mean}}{k_{wall}} + \frac{A_o}{A_i} R_{f,i} + \frac{A_o}{A_i h_i}
+\frac{1}{U_o} = \frac{1}{h_o} + R_{f,o} + \frac{x A_o/A_{\text{mean}}}{k_{\text{wall}}} + \frac{A_o}{A_i} R_{f,i} + \frac{A_o}{A_i h_i}
 $$
 
 
@@ -447,7 +447,7 @@ $$
 
 - $R_{f,o}, R_{f,i}$: fouling factors (TEMA tables: $\sim$1.7$\times 10^{-4}$ m$^2$K/W for clean water; up to 10$\times 10^{-4}$ for fouling hydrocarbons).
 
-- $x$: tube wall thickness; $k_{wall}$: thermal conductivity of wall.
+- $x$: tube wall thickness; $k_{\text{wall}}$: thermal conductivity of wall.
 
 - $A_o/A_i$: area-ratio (outside/inside) to reference all resistances to the outside surface.
 
@@ -469,7 +469,7 @@ A process stream of $m = 15{,}000$ kg/h, $c_p = 2.5$ kJ/(kg$\cdot$K), must be co
 
 
 $$
-Q = m c_p \Delta T = (\frac{15{,}000}{3600})(2.5)(110 - 60) = (4.167)(2.5)(50) = 520.9  kW
+Q = m c_p \Delta T = (\frac{15{,}000}{3600})(2.5)(110 - 60) = (4.167)(2.5)(50) = 520.9 \text{ kW}
 $$
 
 
@@ -477,7 +477,7 @@ $$
 
 
 $$
-m_{cw} = \frac{Q}{c_{p,water} \Delta T_{cw}} = \frac{520.9}{(4.18)(15)} = \frac{520.9}{62.7} = 8.31  kg/s = 29{,}900  kg/h
+m_{\text{cw}} = \frac{Q}{c_{p,\text{water}} \Delta T_{\text{cw}}} = \frac{520.9}{(4.18)(15)} = \frac{520.9}{62.7} = 8.31 \text{ kg/s} = 29{,}900 \text{ kg/h}
 $$
 
 
@@ -485,7 +485,7 @@ $$
 
 
 $$
-\Delta T_{LM} = \frac{\Delta T_2 - \Delta T_1}{\ln(\Delta T_2/\Delta T_1)} = \frac{65 - 30}{\ln(65/30)} = \frac{35}{\ln(2.167)} = \frac{35}{0.7732} = 45.3^\circ C
+\Delta T_{LM} = \frac{\Delta T_2 - \Delta T_1}{\ln(\Delta T_2/\Delta T_1)} = \frac{65 - 30}{\ln(65/30)} = \frac{35}{\ln(2.167)} = \frac{35}{0.7732} = 45.3^\circ\text{C}
 $$
 
 
@@ -493,18 +493,18 @@ $$
 
 
 $$
-A = \frac{Q}{U F \Delta T_{LM}} = \frac{520{,}900 W}{(600)(1)(45.3)} = \frac{520{,}900}{27{,}180} = 19.2  m^2
+A = \frac{Q}{U F \Delta T_{LM}} = \frac{520{,}900 \text{W}}{(600)(1)(45.3)} = \frac{520{,}900}{27{,}180} = 19.2 \text{ m}^2
 $$
 
 
 - **Verification  -  four cross-checks.**
 
 
-- Approach: both $\Delta T$ ends ($65^\circ$C and $30^\circ$C) exceed $\Delta T_{\min} = 10^\circ$C. \checkmark
+- Approach: both $\Delta T$ ends ($65^\circ$C and $30^\circ$C) exceed $\Delta T_{\min} = 10^\circ$C. ✓
 
-- Utility $\Delta T = 15^\circ$C is in the 5-20 band. \checkmark
+- Utility $\Delta T = 15^\circ$C is in the 5-20 band. ✓
 
-- $U = 600$ W/m$^2$K is plausible for a light-hydrocarbon-to-water service. \checkmark
+- $U = 600$ W/m$^2$K is plausible for a light-hydrocarbon-to-water service. ✓
 
 - 19.2 m$^2$ is small  -  a double-pipe or compact plate-and-frame would work; a 6-inch shell-and-tube with $\sim$50 tubes of 4-foot length is the closest standard shell-and-tube size.
 ```
@@ -527,7 +527,7 @@ For the same service (process 110$\to$60$^\circ$C, cooling water 30$\to$45$^\cir
 
 
 $$
-\Delta T_{LM} = \frac{80 - 15}{\ln(80/15)} = \frac{65}{\ln(5.333)} = \frac{65}{1.6740} = 38.8^\circ C
+\Delta T_{LM} = \frac{80 - 15}{\ln(80/15)} = \frac{65}{\ln(5.333)} = \frac{65}{1.6740} = 38.8^\circ\text{C}
 $$
 
 
@@ -535,7 +535,7 @@ $$
 
 
 $$
-\frac{A_{co}}{A_{counter}} = \frac{\Delta T_{LM,counter}}{\Delta T_{LM,co}} = \frac{45.3}{38.8} = 1.17
+\frac{A_{\text{co}}}{A_{\text{counter}}} = \frac{\Delta T_{LM,\text{counter}}}{\Delta T_{LM,\text{co}}} = \frac{45.3}{38.8} = 1.17
 $$
 
 
@@ -545,7 +545,7 @@ The co-current arrangement needs 17\% more area for the same service.
 - **The deeper limit.** Co-current flow cannot in principle cool the process below the cooling-water outlet temperature  -  if the process target were 35$^\circ$C and the cooling-water outlet were 45$^\circ$C, the design would be infeasible in co-current and only feasible in counter-flow. **Counter-flow is therefore the default** for any service where the temperature ranges overlap.
 
 
-- **Verification.** Co-current and counter-current give the same $\Delta T_{LM}$ if and only if the temperature ranges of the two streams do not overlap (one stream is entirely above the other in temperature). The overlap here is significant (process 60-110$^\circ$C, water 30-45$^\circ$C), so counter-flow's advantage is correspondingly large. \checkmark
+- **Verification.** Co-current and counter-current give the same $\Delta T_{LM}$ if and only if the temperature ranges of the two streams do not overlap (one stream is entirely above the other in temperature). The overlap here is significant (process 60-110$^\circ$C, water 30-45$^\circ$C), so counter-flow's advantage is correspondingly large. ✓
 ```
 
 
@@ -554,7 +554,7 @@ The co-current arrangement needs 17\% more area for the same service.
 ```{prf:example} Kettle Reboiler for a Distillation Column
 :label: processequipmentdesign-example-3
 
-A distillation column requires 3{,}500 kW of reboil duty. The process side boils at 95$^\circ$C; low-pressure steam at 6 barg condenses at 158$^\circ$C and is returned as saturated condensate. Latent heat of steam at 158$^\circ$C: $\lambda = 2{,}080$ kJ/kg. Estimated $U = 2{,}000$ W/m$^2$K (steam condensing $\to$ boiling, with $\sim$10\% fouling allowance). Size the reboiler.
+A distillation column requires 3,500 kW of reboil duty. The process side boils at 95$^\circ$C; low-pressure steam at 6 barg condenses at 158$^\circ$C and is returned as saturated condensate. Latent heat of steam at 158$^\circ$C: $\lambda = 2{,}080$ kJ/kg. Estimated $U = 2{,}000$ W/m$^2$K (steam condensing $\to$ boiling, with $\sim$10\% fouling allowance). Size the reboiler.
 ```
 
 
@@ -563,7 +563,7 @@ A distillation column requires 3{,}500 kW of reboil duty. The process side boils
 
 
 $$
-m_{steam} = \frac{Q}{\lambda} = \frac{3{,}500 kW}{2{,}080 kJ/kg} = 1.683 kg/s = 6{,}060 kg/h
+m_{\text{steam}} = \frac{Q}{\lambda} = \frac{3{,}500 \text{kW}}{2{,}080 \text{kJ/kg}} = 1.683 \text{kg/s} = 6{,}060 \text{kg/h}
 $$
 
 
@@ -571,7 +571,7 @@ $$
 
 
 $$
-\Delta T_{LM} = 63^\circ C,   F = 1 (no multi-pass correction needed)
+\Delta T_{LM} = 63^\circ\text{C},   F = 1 \text{(no multi-pass correction needed)}
 $$
 
 
@@ -579,11 +579,11 @@ $$
 
 
 $$
-A = \frac{Q}{U \cdot \Delta T_{LM}} = \frac{3{,}500{,}000 W}{(2{,}000)(63)} = \frac{3{,}500{,}000}{126{,}000} = 27.8 m^2
+A = \frac{Q}{U \cdot \Delta T_{LM}} = \frac{3{,}500{,}000 \text{W}}{(2{,}000)(63)} = \frac{3{,}500{,}000}{126{,}000} = 27.8 \text{m}^2
 $$
 
 
-- **Verification.** A 28 m$^2$ kettle reboiler is moderate-size, well within shell-and-tube range. The 63$^\circ$C driving force is comfortable. Steam flow 6{,}060 kg/h corresponds to roughly 1 ton/h  -  a small-to-medium distillation column.
+- **Verification.** A 28 m$^2$ kettle reboiler is moderate-size, well within shell-and-tube range. The 63$^\circ$C driving force is comfortable. Steam flow 6,060 kg/h corresponds to roughly 1 ton/h  -  a small-to-medium distillation column.
 
 
 - **Design notes.**
@@ -655,7 +655,7 @@ A fluid prefers the *shell* side if it is:
 ```{prf:example} Tube/Shell Assignment for High-Pressure Steam Heating Oxygen
 :label: processequipmentdesign-example-4
 
-An exchanger heats 99\%+ pure oxygen gas from 30 to 220$^\circ$C using high-pressure saturated steam at 45 barg ($T_sat \approx 257^\circ$C, condensing). Oxygen is an active oxidizer at elevated temperature. Steam is benign. Assign tube and shell sides.
+An exchanger heats 99\%+ pure oxygen gas from 30 to 220$^\circ$C using high-pressure saturated steam at 45 barg ($T_\text{sat} \approx 257^\circ$C, condensing). Oxygen is an active oxidizer at elevated temperature. Steam is benign. Assign tube and shell sides.
 ```
 
 
@@ -664,7 +664,7 @@ An exchanger heats 99\%+ pure oxygen gas from 30 to 220$^\circ$C using high-pres
 
 
 $$
-Steam: tube side. Oxygen: shell side.
+\text{Steam: tube side. Oxygen: shell side.}
 $$
 
 
@@ -690,7 +690,7 @@ A heavy gasoil at 200$^\circ$C must be cooled to 80$^\circ$C using cooling water
 
 
 $$
-Gasoil: tube side. Cooling water: shell side.
+\text{Gasoil: tube side. Cooling water: shell side.}
 $$
 
 
@@ -700,7 +700,7 @@ $$
 
 - **Cleaning plan.** Specify a removable bundle (floating-head shell-and-tube) and schedule periodic hydroblast cleaning of the tube ID. If the bundle were U-tube (cheaper), the tube-side U-bends could not be cleaned  -  a wrong choice given known fouling.
 
-- **Verification.** The combination "floating-head + fouling fluid tube-side + clean shell-side fluid" is the textbook fouling-service configuration. \checkmark
+- **Verification.** The combination "floating-head + fouling fluid tube-side + clean shell-side fluid" is the textbook fouling-service configuration. ✓
 ```
 
 
@@ -936,7 +936,7 @@ The hoop equation governs. (If $P/SE > 0.385$, use the thick-wall Lam\'e equatio
 
 
 $$
-t_{pressure} = \frac{P R}{S E - 0.6 P} = \frac{(250)(30)}{(17{,}500)(1.0) - 0.6(250)} = \frac{7{,}500}{17{,}500 - 150} = \frac{7{,}500}{17{,}350} = 0.432 in
+t_{\text{pressure}} = \frac{P R}{S E - 0.6 P} = \frac{(250)(30)}{(17{,}500)(1.0) - 0.6(250)} = \frac{7{,}500}{17{,}500 - 150} = \frac{7{,}500}{17{,}350} = 0.432 \text{in}
 $$
 
 
@@ -944,7 +944,7 @@ $$
 
 
 $$
-t_{total} = t_{pressure} + CA = 0.432 + 0.125 = 0.557 in
+t_{\text{total}} = t_{\text{pressure}} + CA = 0.432 + 0.125 = 0.557 \text{in}
 $$
 
 
@@ -954,7 +954,7 @@ $$
 
 
 $$
-\sigma_h = \frac{P R}{t - CA} = \frac{(250)(30)}{0.5625 - 0.125} = \frac{7{,}500}{0.4375} = 17{,}143 psi < S = 17{,}500 psi  \checkmark
+\sigma_h = \frac{P R}{t - CA} = \frac{(250)(30)}{0.5625 - 0.125} = \frac{7{,}500}{0.4375} = 17{,}143 \text{psi} < S = 17{,}500 \text{psi}  \checkmark
 $$
 
 
@@ -1049,17 +1049,17 @@ At a given desired flow and head, only certain $N_s$ ranges can be achieved at h
 
 
 $$
-P_{hyd} = m g H = \rho g Q H  [SI: W]
+P_{\text{hyd}} = m g H = \rho g Q H  \text{[SI: W]}
 $$
 
 
-or, in US units, $P_{hyd}[hp] = Q[gpm] \cdot H[ft] \cdot SG / 3960$.
+or, in US units, $P_{\text{hyd}}\text{[hp]} = Q\text{[gpm]} \cdot H\text{[ft]} \cdot \text{SG} / 3960$.
 
 **Brake power** (the shaft power the motor must deliver):
 
 
 $$
-P_{brake} = \frac{P_{hyd}}{\eta_{pump}}
+P_{\text{brake}} = \frac{P_{\text{hyd}}}{\eta_{\text{pump}}}
 $$
 
 
@@ -1069,11 +1069,11 @@ Typical pump efficiency: 50-65\% for small (< 5 hp) pumps, 70-85\% for moderate-
 
 
 $$
-P_{electric} = \frac{P_{brake}}{\eta_{motor}}
+P_{\text{electric}} = \frac{P_{\text{brake}}}{\eta_{\text{motor}}}
 $$
 
 
-with $\eta_{motor} \approx 90$-95\% for modern TEFC induction motors.
+with $\eta_{\text{motor}} \approx 90$-95\% for modern TEFC induction motors.
 ```
 
 
@@ -1087,7 +1087,7 @@ To prevent cavitation, the **available NPSH** (NPSH$_A$) at the pump suction mus
 
 
 $$
-NPSH_A \geq NPSH_R + 0.6 m
+\text{NPSH}_A \geq \text{NPSH}_R + 0.6 \text{m}
 $$
 
 
@@ -1099,13 +1099,13 @@ $$
 
 
 $$
-NPSH_A = \frac{P_{abs} - P_{vap}}{\rho g} + z_s - h_{f,s}
+\text{NPSH}_A = \frac{P_{\text{abs}} - P_{\text{vap}}}{\rho g} + z_s - h_{f,s}
 $$
 
 
-- $P_{abs}$: absolute pressure at the liquid surface of the source vessel (atmospheric + any gas pressure).
+- $P_{\text{abs}}$: absolute pressure at the liquid surface of the source vessel (atmospheric + any gas pressure).
 
-- $P_{vap}$: vapor pressure of the fluid at operating temperature.
+- $P_{\text{vap}}$: vapor pressure of the fluid at operating temperature.
 
 - $\rho$: fluid density at operating temperature.
 
@@ -1113,7 +1113,7 @@ $$
 
 - $h_{f,s}$: friction head loss in the suction piping (positive value subtracted; never use a negative friction loss).
 
-Note that $P_{vap}$ rises strongly with temperature. Hot fluids (water above 70$^\circ$C, hydrocarbons near their bubble point) are at maximum cavitation risk.
+Note that $P_{\text{vap}}$ rises strongly with temperature. Hot fluids (water above 70$^\circ$C, hydrocarbons near their bubble point) are at maximum cavitation risk.
 ```
 
 
@@ -1122,7 +1122,7 @@ Note that $P_{vap}$ rises strongly with temperature. Hot fluids (water above 70$
 ```{prf:example} Hot-Water Pump Cavitation Check
 :label: processequipmentdesign-example-9
 
-Water at 90$^\circ$C ($P_{vap} = 70$ kPa, $\rho = 965$ kg/m$^3$) is pumped from an atmospheric tank ($P_{abs} = 101.3$ kPa). The water surface is 2.0 m above the pump centerline (flooded suction). Suction-line friction loss is 1.5 m of water. The pump's NPSH$_R$ at the design flow is 3.0 m. Determine NPSH$_A$ and assess whether the pump will cavitate.
+Water at 90$^\circ$C ($P_{\text{vap}} = 70$ kPa, $\rho = 965$ kg/m$^3$) is pumped from an atmospheric tank ($P_{\text{abs}} = 101.3$ kPa). The water surface is 2.0 m above the pump centerline (flooded suction). Suction-line friction loss is 1.5 m of water. The pump's NPSH$_R$ at the design flow is 3.0 m. Determine NPSH$_A$ and assess whether the pump will cavitate.
 ```
 
 
@@ -1131,7 +1131,7 @@ Water at 90$^\circ$C ($P_{vap} = 70$ kPa, $\rho = 965$ kg/m$^3$) is pumped from 
 
 
 $$
-\frac{P_{abs} - P_{vap}}{\rho g} = \frac{(101.3 - 70.0) \times 10^3 Pa}{965 \times 9.81 Pa/m} = \frac{31{,}300}{9{,}467} = 3.31 m
+\frac{P_{\text{abs}} - P_{\text{vap}}}{\rho g} = \frac{(101.3 - 70.0) \times 10^3 \text{Pa}}{965 \times 9.81 \text{Pa/m}} = \frac{31{,}300}{9{,}467} = 3.31 \text{m}
 $$
 
 
@@ -1139,7 +1139,7 @@ $$
 
 
 $$
-NPSH_A = 3.31 + 2.0 - 1.5 = 3.81 m
+\text{NPSH}_A = 3.31 + 2.0 - 1.5 = 3.81 \text{m}
 $$
 
 
@@ -1147,30 +1147,30 @@ $$
 
 
 $$
-Margin = NPSH_A - NPSH_R = 3.81 - 3.0 = 0.81 m > 0.6 m  \checkmark
+\text{Margin} = \text{NPSH}_A - \text{NPSH}_R = 3.81 - 3.0 = 0.81 \text{m} > 0.6 \text{m}  \checkmark
 $$
 
 
 The pump will operate safely without cavitation at the design point.
 
 
-- **Sensitivity check: what if water is heated to 100$^\circ$C?** $P_{vap}$ rises to 101.3 kPa (boiling at atmospheric), so the pressure head term collapses:
+- **Sensitivity check: what if water is heated to 100$^\circ$C?** $P_{\text{vap}}$ rises to 101.3 kPa (boiling at atmospheric), so the pressure head term collapses:
 
 
 $$
-\frac{P_{abs} - P_{vap}}{\rho g} = \frac{101.3 - 101.3}{...} = 0
+\frac{P_{\text{abs}} - P_{\text{vap}}}{\rho g} = \frac{101.3 - 101.3}{...} = 0
 $$
 
 
 $$
-NPSH_A = 0 + 2.0 - 1.5 = 0.5 m \ll 3.0 m
+\text{NPSH}_A = 0 + 2.0 - 1.5 = 0.5 \text{m} \ll 3.0 \text{m}
 $$
 
 
 The pump would cavitate immediately. The design has very little thermal headroom  -  a process upset that heats the water by another 10$^\circ$C destroys NPSH$_A$. The fix is to raise the source tank (more $z_s$) or lower the operating temperature.
 
 
-- **Verification.** Hot-water service is the classic cavitation risk: $P_{vap}$ rises rapidly with $T$ in the boiling region. The 90$^\circ$C operating point is at the edge of acceptability; a safer design would either use a flooded-suction configuration with more elevation or a deaerated, cooler feed.
+- **Verification.** Hot-water service is the classic cavitation risk: $P_{\text{vap}}$ rises rapidly with $T$ in the boiling region. The 90$^\circ$C operating point is at the edge of acceptability; a safer design would either use a flooded-suction configuration with more elevation or a deaerated, cooler feed.
 ```
 
 
@@ -1209,7 +1209,7 @@ For compressors, the polytropic or isentropic head equation governs (analog of p
 
 
 $$
-H_{poly} = \frac{Z R T_1}{M} \frac{k}{k-1} [(\frac{P_2}{P_1})^{(k-1)/k} - 1] / \eta_p
+H_{\text{poly}} = \frac{Z R T_1}{M} \frac{k}{k-1} [(\frac{P_2}{P_1})^{(k-1)/k} - 1] / \eta_p
 $$
 
 
@@ -1235,17 +1235,17 @@ Distillation columns are sized in two stages: number of theoretical stages (Fens
 
 ```{important}
 **Fenske-Underwood-Gilliland (FUG) Shortcut**
-The FUG method estimates $N_{stages}$ in three stages:
+The FUG method estimates $N_{\text{stages}}$ in three stages:
 
 **Fenske (minimum stages at total reflux):**
 
 
 $$
-N_{\min} = \frac{\log [\dfrac{x_D/(1 - x_D)}{x_B/(1 - x_B)}]}{\log \alpha_{avg}}
+N_{\min} = \frac{\log [\dfrac{x_D/(1 - x_D)}{x_B/(1 - x_B)}]}{\log \alpha_{\text{avg}}}
 $$
 
 
-where $x_D, x_B$ are distillate and bottoms compositions of the light key and $\alpha_{avg}$ is the average relative volatility (geometric mean of $\alpha$ at top and bottom).
+where $x_D, x_B$ are distillate and bottoms compositions of the light key and $\alpha_{\text{avg}}$ is the average relative volatility (geometric mean of $\alpha$ at top and bottom).
 
 **Underwood (minimum reflux):** solve
 
@@ -1291,7 +1291,7 @@ where $C_{SB}$ (Souders-Brown capacity factor, read from Fair's chart) ranges $0
 
 
 $$
-D = \sqrt{\frac{4 V}{\pi U_{design}}}
+D = \sqrt{\frac{4 V}{\pi U_{\text{design}}}}
 $$
 
 
@@ -1302,13 +1302,13 @@ where $V$ is the vapor volumetric flow at column operating conditions.
 ### Tray vs. Packed
 
 ```{note}
-- **Trays** (sieve, valve, bubble cap): preferred for $D > 0.6$ m, fouling fluids, wide turndown (5:1 valve trays, 3:1 sieve), easy maintenance and cleaning. Tray spacing typically 0.6 m, so column height $\approx 0.6 \cdot N_{actual trays}$.
+- **Trays** (sieve, valve, bubble cap): preferred for $D > 0.6$ m, fouling fluids, wide turndown (5:1 valve trays, 3:1 sieve), easy maintenance and cleaning. Tray spacing typically 0.6 m, so column height $\approx 0.6 \cdot N_{\text{actual trays}}$.
 
 - **Random packing** (Pall rings, IMTP): lower pressure drop than trays, smaller diameter columns, vacuum service.
 
 - **Structured packing** (Mellapak, Flexipac): highest efficiency (lowest HETP), very low $\Delta P$/stage, but limited turndown. Standard in cryogenic air separation, high-purity service.
 
-HETP (Height Equivalent to a Theoretical Plate): structured 0.3-0.5 m; random 0.5-1.0 m. So column height $\approx HETP \cdot N_{theoretical}$ for packing.
+HETP (Height Equivalent to a Theoretical Plate): structured 0.3-0.5 m; random 0.5-1.0 m. So column height $\approx \text{HETP} \cdot N_{\text{theoretical}}$ for packing.
 ```
 
 
@@ -1403,7 +1403,7 @@ $\Delta T_{LM} = (\Delta T_1 - \Delta T_2)/\ln(\Delta T_1/\Delta T_2)$.
 $Q = mc_p\Delta T$ (sensible); $Q = m\lambda$ (latent).
 $F$ from TEMA charts, target $\geq 0.8$.
 
-**Utility duty:** $m_{util} = Q/(c_p \Delta T_{util})$; target $\Delta T_{util} = 5$-$20^\circ$C.
+**Utility duty:** $m_{\text{util}} = Q/(c_p \Delta T_{\text{util}})$; target $\Delta T_{\text{util}} = 5$-$20^\circ$C.
 
 **Pressure vessel (ASME Sec. VIII Div. 1):**
 Hoop: $t = PR/(SE - 0.6P)$; longitudinal $t = PR/(2SE + 0.4P)$.
@@ -1411,7 +1411,7 @@ Add corrosion allowance; round to standard gauge.
 Thin-wall valid if $P/SE < 0.385$.
 
 **Pump:**
-$P_{hyd} = \rho g Q H$; $P_{brake} = P_{hyd}/\eta$.
+$P_{\text{hyd}} = \rho g Q H$; $P_{\text{brake}} = P_{\text{hyd}}/\eta$.
 NPSH$_A = (P_{abs} - P_{vap})/(\rho g) + z_s - h_{f,s}$; require $\geq$ NPSH$_R$ + 0.6 m.
 Affinity: $Q \propto N$, $H \propto N^2$, $P \propto N^3$.
 

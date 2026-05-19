@@ -206,7 +206,7 @@ $$
 Factoring the common $K M$:
 
 $$
-y(t) = K M ( 1 - e^{-t/\tau} )    (Equation 1)
+y(t) = K M ( 1 - e^{-t/\tau} )    \text{(Equation 1)}
 $$
 
 ```
@@ -253,7 +253,7 @@ The same Equation 1 applies for any sign of $K$. Three cases:
 ```{prf:example} Step Response of a Surge Tank
 :label: instrumentationandcontrol-example-0
 
-A surge tank has the first-order transfer function $H(s)/Q_i(s) = 10/(50 s + 1)$ where $H$ is liquid level [m] and $Q_i$ is inlet flow [m\textsuperscript{3}/s], so $K = 10$ m per m\textsuperscript{3}/s and $\tau = 50$ s. At the initial steady state, $Q_i = 0.40$ m\textsuperscript{3}/s and $H = 3.0$ m. The inlet is suddenly stepped to $0.41$ m\textsuperscript{3}/s. Find:
+A surge tank has the first-order transfer function $H(s)/Q_i(s) = 10/(50 s + 1)$ where $H$ is liquid level [m] and $Q_i$ is inlet flow [m<sup>3</sup>/s], so $K = 10$ m per m<sup>3</sup>/s and $\tau = 50$ s. At the initial steady state, $Q_i = 0.40$ m<sup>3</sup>/s and $H = 3.0$ m. The inlet is suddenly stepped to $0.41$ m<sup>3</sup>/s. Find:
 
 
 - the level 100 s after the step,
@@ -269,7 +269,7 @@ A surge tank has the first-order transfer function $H(s)/Q_i(s) = 10/(50 s + 1)$
 
 
 $$
-q_i(t) = Q_i(t) - Q_i = 0.41 - 0.40 = 0.01 m^3/s for  t > 0
+q_i(t) = Q_i(t) - Q_i = 0.41 - 0.40 = 0.01 \text{m}^3/\text{s for } t > 0
 $$
 
 
@@ -280,7 +280,7 @@ so the step magnitude is $M = 0.01$. The output deviation is $h(t) = H(t) - 3.0$
 
 
 $$
-h(t) = K M ( 1 - e^{-t/\tau} ) = (10)(0.01)(1 - e^{-t/50}) = 0.10(1 - e^{-t/50}) m
+h(t) = K M ( 1 - e^{-t/\tau} ) = (10)(0.01)(1 - e^{-t/50}) = 0.10(1 - e^{-t/50}) \text{m}
 $$
 
 
@@ -288,7 +288,7 @@ $$
 
 
 $$
-h(100) = 0.10 (1 - 0.1353) = 0.10 (0.8647) = 0.0865 m
+h(100) = 0.10 (1 - 0.1353) = 0.10 (0.8647) = 0.0865 \text{m}
 $$
 
 
@@ -296,7 +296,7 @@ Convert back to absolute level:
 
 
 $$
-H(100) = H + h(100) = 3.000 + 0.0865 = 3.087 m
+H(100) = H + h(100) = 3.000 + 0.0865 = 3.087 \text{m}
 $$
 
 
@@ -307,15 +307,15 @@ A common student error is to read $h(100) = 0.0865$ m and *report it* as the ans
 
 
 $$
-h(\infty) = K M = (10)(0.01) = 0.10 m  \Longrightarrow  H(\infty) = 3.10 m
+h(\infty) = K M = (10)(0.01) = 0.10 \text{m}  \Longrightarrow  H(\infty) = 3.10 \text{m}
 $$
 
 
-- **(c) Time to reach 63.2\% of the ultimate change.** By the landmark property of $\tau$,
+- **&#40;c&#41; Time to reach 63.2\% of the ultimate change.** By the landmark property of $\tau$,
 
 
 $$
-t_{63.2\%} = \tau = 50 s
+t_{63.2\%} = \tau = 50 \text{s}
 $$
 
 
@@ -323,11 +323,11 @@ Verify by solving $1 - e^{-t/\tau} = 0.632$:
 
 
 $$
-e^{-t/\tau} = 0.368  \Longrightarrow  t/\tau = -\ln(0.368) = 1.0  \Longrightarrow  t = \tau = 50 s \checkmark
+e^{-t/\tau} = 0.368  \Longrightarrow  t/\tau = -\ln(0.368) = 1.0  \Longrightarrow  t = \tau = 50 \text{s} \checkmark
 $$
 
 
-- **Cross-check by material balance.** A sustained extra $0.01$ m\textsuperscript{3}/s inflow must, at steady state, be matched by an extra $0.01$ m\textsuperscript{3}/s outflow. If the outlet flow is linear in head, $Q_o = h/R$, then $R = K = 10$ s/m\textsuperscript{2}. The extra head needed to drive $0.01$ extra m\textsuperscript{3}/s through resistance $R$ is $\Delta h = R \cdot \Delta Q = 10 \times 0.01 = 0.10$ m. \checkmark Matches the transfer-function answer exactly.
+- **Cross-check by material balance.** A sustained extra $0.01$ m<sup>3</sup>/s inflow must, at steady state, be matched by an extra $0.01$ m<sup>3</sup>/s outflow. If the outlet flow is linear in head, $Q_o = h/R$, then $R = K = 10$ s/m<sup>2</sup>. The extra head needed to drive $0.01$ extra m<sup>3</sup>/s through resistance $R$ is $\Delta h = R \cdot \Delta Q = 10 \times 0.01 = 0.10$ m. ✓ Matches the transfer-function answer exactly.
 ```
 
 
@@ -348,7 +348,7 @@ A heat exchanger's process-outlet temperature is described by $T(s)/Q_{cw}(s) = 
 
 
 $$
-t(t) = K M (1 - e^{-t/\tau}) = (-3.0)(2.0)(1 - e^{-t/8}) = -6.0(1 - e^{-t/8}) ^\circ F
+t(t) = K M (1 - e^{-t/\tau}) = (-3.0)(2.0)(1 - e^{-t/8}) = -6.0(1 - e^{-t/8}) ^\circ\text{F}
 $$
 
 
@@ -356,7 +356,7 @@ $$
 
 
 $$
-t(4) = -6.0 (1 - 0.6065) = -6.0 (0.3935) = -2.36^\circ F
+t(4) = -6.0 (1 - 0.6065) = -6.0 (0.3935) = -2.36^\circ\text{F}
 $$
 
 
@@ -364,7 +364,7 @@ Absolute temperature:
 
 
 $$
-T(4) = 175 + (-2.36) = 172.64^\circ F
+T(4) = 175 + (-2.36) = 172.64^\circ\text{F}
 $$
 
 
@@ -441,7 +441,7 @@ Graphically: a flat region from 0 to $\theta$, then an exponential rise. Reading
 
 - The tangent's intersection with the baseline gives $\theta$ (apparent dead time).
 
-- The tangent's intersection with the asymptote gives $t_{intercept} = \theta + \tau$. So $\tau = t_{intercept} - \theta$.
+- The tangent's intersection with the asymptote gives $t_{\text{intercept}} = \theta + \tau$. So $\tau = t_{\text{intercept}} - \theta$.
 
 This is fast on a graph but sensitive to where the eye places the tangent. We will not use it for numerical work; it is included because the original Ziegler-Nichols tuning rules were derived assuming this construction.
 ```
@@ -507,7 +507,7 @@ $$
 $$
 
 
-The Sundaresan-Krishnaswamy fractions $f_1 = 0.353, f_2 = 0.853$ give $a = -\ln(0.647) = 0.4357$ and $b = -\ln(0.147) = 1.9173$, so $b - a = 1.4816$ and $1/(b - a) = 0.675 \approx 0.67$, and $b/(b-a) - a/(b-a) \cdot (rearranged) \to$ the textbook constants 1.3 and 0.29. The 0.67 and 1.3/0.29 numbers in the formulas are direct consequences of these two chosen levels.
+The Sundaresan-Krishnaswamy fractions $f_1 = 0.353, f_2 = 0.853$ give $a = -\ln(0.647) = 0.4357$ and $b = -\ln(0.147) = 1.9173$, so $b - a = 1.4816$ and $1/(b - a) = 0.675 \approx 0.67$, and $b/(b-a) - a/(b-a) \cdot (\text{rearranged}) \to$ the textbook constants 1.3 and 0.29. The 0.67 and 1.3/0.29 numbers in the formulas are direct consequences of these two chosen levels.
 
 ### Worked Example: Heat-Exchanger Cooling-Water Step
 
@@ -523,7 +523,7 @@ A heat exchanger's process-outlet temperature is monitored during a step in cool
 
 
 $$
-K = \frac{\Delta y_{ss}}{\Delta x} = \frac{T_{new} - T_{old}}{Q_{cw,new} - Q_{cw,old}} = \frac{53.2 - 55.0}{9.2 - 8.0} = \frac{-1.8}{1.2} = -1.5 \frac{^\circ F}{gpm}
+K = \frac{\Delta y_{ss}}{\Delta x} = \frac{T_{\text{new}} - T_{\text{old}}}{Q_{cw,\text{new}} - Q_{cw,\text{old}}} = \frac{53.2 - 55.0}{9.2 - 8.0} = \frac{-1.8}{1.2} = -1.5 \frac{^\circ\text{F}}{\text{gpm}}
 $$
 
 
@@ -545,8 +545,8 @@ Read from the graph: $t_{35.3\%} = 6.3$ min, $t_{85.3\%} = 9.5$ min.
 
 $$
 \begin{align}
-\theta &= 1.3 (6.3) - 0.29 (9.5) = 8.19 - 2.755 = 5.435 \approx 5.4 min \\
-\tau   &= 0.67 (9.5 - 6.3) = 0.67 (3.2) = 2.144 \approx 2.14 min
+\theta &= 1.3 (6.3) - 0.29 (9.5) = 8.19 - 2.755 = 5.435 \approx 5.4 \text{min} \\
+\tau   &= 0.67 (9.5 - 6.3) = 0.67 (3.2) = 2.144 \approx 2.14 \text{min}
 \end{align}
 $$
 
@@ -554,7 +554,7 @@ $$
 - **Write the fitted FOPDT model.**
 
 $$
-G(s) = \frac{-1.5 e^{-5.4 s}}{2.14 s + 1}  \frac{^\circ F}{gpm}   (\theta, \tau  in min)
+G(s) = \frac{-1.5 e^{-5.4 s}}{2.14 s + 1}  \frac{^\circ\text{F}}{\text{gpm}}   (\theta, \tau \text{ in min})
 $$
 
 ```
@@ -584,9 +584,9 @@ This is a dead-time-dominant process ($\theta/\tau > 1$). PI control alone will 
 
 $$
 \begin{align}
-T_{50\%} &= 55.0 + 0.5(-1.8) = 54.10^\circ F \\
-1 - e^{-(t - \theta)/\tau} &= 0.50  \Longrightarrow  t - \theta = \tau \ln(2) = 2.14 (0.693) = 1.485 min \\
-t &= 5.4 + 1.485 = 6.88 min
+T_{50\%} &= 55.0 + 0.5(-1.8) = 54.10^\circ\text{F} \\
+1 - e^{-(t - \theta)/\tau} &= 0.50  \Longrightarrow  t - \theta = \tau \ln(2) = 2.14 (0.693) = 1.485 \text{min} \\
+t &= 5.4 + 1.485 = 6.88 \text{min}
 \end{align}
 $$
 
@@ -600,25 +600,25 @@ Compare to the graphical reading at $T = 54.1^\circ$F. If the graph gives $t \ap
 ```{prf:example} Two-Lag Process Approximated as FOPDT
 :label: instrumentationandcontrol-example-3
 
-A second-order overdamped process has the true transfer function $G_{true}(s) = 1/[(5s+1)(s+1)]$ (gain 1, two time constants 5 and 1). A step test of magnitude 1 is run. From the resulting trace, the 35.3\% time is 2.6 and the 85.3\% time is 8.0 (dimensionless). Fit an apparent FOPDT and comment on the quality.
+A second-order overdamped process has the true transfer function $G_{\text{true}}(s) = 1/[(5s+1)(s+1)]$ (gain 1, two time constants 5 and 1). A step test of magnitude 1 is run. From the resulting trace, the 35.3\% time is 2.6 and the 85.3\% time is 8.0 (dimensionless). Fit an apparent FOPDT and comment on the quality.
 ```
 
 
 ```{dropdown} Solution Steps
-- **Gain:** since $\lim_{s\to 0} G_{true}(s) = 1$, $K = 1$ as expected.
+- **Gain:** since $\lim_{s\to 0} G_{\text{true}}(s) = 1$, $K = 1$ as expected.
 
 - **Apparent FOPDT parameters:**
 
 
 $$
 \begin{align}
-\theta_{app} &= 1.3 (2.6) - 0.29 (8.0) = 3.38 - 2.32 = 1.06 \\
-\tau_{app}   &= 0.67 (8.0 - 2.6) = 0.67 (5.4) = 3.62
+\theta_{\text{app}} &= 1.3 (2.6) - 0.29 (8.0) = 3.38 - 2.32 = 1.06 \\
+\tau_{\text{app}}   &= 0.67 (8.0 - 2.6) = 0.67 (5.4) = 3.62
 \end{align}
 $$
 
 
-- **Interpretation:** The dominant true time constant is 5, the secondary is 1. The fit recovers $\tau_{app} = 3.62$ (an underestimate of the dominant pole because the secondary pole hides behind it) and gives a nonzero $\theta_{app} = 1.06$ that mimics the secondary lag with an equivalent dead time. The empirical rule of thumb is $\theta_{app} \approx$ the smaller time constant, $\tau_{app} \approx$ the larger one  -  here $\theta_{app} = 1.06 \approx 1$ \checkmark, and $\tau_{app} = 3.62$ (within $\sim$30\% of 5).
+- **Interpretation:** The dominant true time constant is 5, the secondary is 1. The fit recovers $\tau_{\text{app}} = 3.62$ (an underestimate of the dominant pole because the secondary pole hides behind it) and gives a nonzero $\theta_{\text{app}} = 1.06$ that mimics the secondary lag with an equivalent dead time. The empirical rule of thumb is $\theta_{\text{app}} \approx$ the smaller time constant, $\tau_{\text{app}} \approx$ the larger one  -  here $\theta_{\text{app}} = 1.06 \approx 1$ ✓, and $\tau_{\text{app}} = 3.62$ (within $\sim$30\% of 5).
 
 - **Engineering takeaway:** FOPDT *fits* a higher-order process. The tuning constants computed from the apparent FOPDT will give acceptable, if not optimal, closed-loop behavior. This is the universal industrial practice.
 ```
@@ -866,7 +866,7 @@ Match against $\dfrac{K_p}{\tau^2 s^2 + 2\zeta\tau s + 1}$:
 $$
 \begin{align}
 K_p          &= \frac{1}{4} \\
-\tau^2       &= \frac{1}{4}  \Longrightarrow  \tau = \frac{1}{2}   (positive root) \\
+\tau^2       &= \frac{1}{4}  \Longrightarrow  \tau = \frac{1}{2}   (\text{positive root}) \\
 2 \zeta \tau &= \frac{K}{4}  \Longrightarrow  \zeta = \frac{K}{8 \tau} = \frac{K}{8 \cdot (1/2)} = \frac{K}{4}
 \end{align}
 $$
@@ -888,12 +888,12 @@ $$
 
 
 $$
--4 < K < 4    oscillatory (any decay direction)
+-4 < K < 4    \text{oscillatory (any decay direction)}
 $$
 
 
 $$
-0 < K < 4    stable, decaying oscillation
+0 < K < 4    \text{stable, decaying oscillation}
 $$
 
 
@@ -915,7 +915,7 @@ At exactly $K = 4$, $\zeta = 1$ (critically damped  -  the boundary).
 
 - $K = 4$: $\zeta = 1$, critically damped. Fastest non-oscillatory response. Boundary between (a) and (b).
 
-- $K = 8$: $\zeta = 2$, heavily overdamped. Two real poles at $s = -\alpha \pm \sqrt{\alpha^2 - \omega_n^2}$ with $\alpha = \zeta/\tau = 4$; the slow pole dominates with effective $\tau_{slow} = 1/(s_{slow})$.
+- $K = 8$: $\zeta = 2$, heavily overdamped. Two real poles at $s = -\alpha \pm \sqrt{\alpha^2 - \omega_n^2}$ with $\alpha = \zeta/\tau = 4$; the slow pole dominates with effective $\tau_{\text{slow}} = 1/(s_{\text{slow}})$.
 
 - $K = -2$: $\zeta = -0.5$, unstable underdamped. Oscillations grow exponentially. Physically, the closed-loop process is unstable.
 ```
@@ -944,14 +944,14 @@ $$
 $$
 
 
-Squaring: $\zeta^2/(1-\zeta^2) = 0.0487$, so $\zeta^2 = 0.0487(1-\zeta^2)$, i.e. $\zeta^2(1+0.0487) = 0.0487$, giving $\zeta^2 = 0.0464$, $\zeta = 0.215$. \checkmark The well-known "$\zeta \approx 0.215$ for quarter-decay" result.
+Squaring: $\zeta^2/(1-\zeta^2) = 0.0487$, so $\zeta^2 = 0.0487(1-\zeta^2)$, i.e. $\zeta^2(1+0.0487) = 0.0487$, giving $\zeta^2 = 0.0464$, $\zeta = 0.215$. ✓ The well-known "$\zeta \approx 0.215$ for quarter-decay" result.
 
 
 - **Get $\tau$ from the period.** The time from one peak to the next zero crossing is a quarter-period:
 
 
 $$
-T/4 = 12  \Longrightarrow  T = 48 s
+T/4 = 12  \Longrightarrow  T = 48 \text{s}
 $$
 
 
@@ -959,11 +959,11 @@ Solve $T = 2\pi\tau/\sqrt{1-\zeta^2}$ for $\tau$:
 
 
 $$
-\tau = \frac{T \sqrt{1-\zeta^2}}{2\pi} = \frac{48 \sqrt{1-0.0464}}{2\pi} = \frac{48 \times 0.9766}{6.283} = 7.46 s
+\tau = \frac{T \sqrt{1-\zeta^2}}{2\pi} = \frac{48 \sqrt{1-0.0464}}{2\pi} = \frac{48 \times 0.9766}{6.283} = 7.46 \text{s}
 $$
 
 
-- **Verification.** $\omega_d = \sqrt{1-\zeta^2}/\tau = 0.9766/7.46 = 0.131$ rad/s. Damped period $T = 2\pi/\omega_d = 48$ s. \checkmark
+- **Verification.** $\omega_d = \sqrt{1-\zeta^2}/\tau = 0.9766/7.46 = 0.131$ rad/s. Damped period $T = 2\pi/\omega_d = 48$ s. ✓
 ```
 
 
@@ -991,13 +991,13 @@ For an incompressible liquid (constant density), the volumetric flow rate throug
 
 
 $$
-q = C_v \cdot f(\ell) \cdot \sqrt{\frac{\Delta P_v}{G_s}}   (Equation 2)
+q = C_v \cdot f(\ell) \cdot \sqrt{\frac{\Delta P_v}{G_s}}   \text{(Equation 2)}
 $$
 
 
-- $q$  -  volumetric flow rate. US customary units: US gpm. Metric: m\textsuperscript{3}/h with $K_v$ instead of $C_v$ (see conversion below).
+- $q$  -  volumetric flow rate. US customary units: US gpm. Metric: m<sup>3</sup>/h with $K_v$ instead of $C_v$ (see conversion below).
 
-- $C_v$  -  valve flow coefficient. *Definition:* the volumetric flow of water (specific gravity 1) in US gpm that passes through a fully open valve when the pressure drop across the valve is exactly 1 psi. So $C_v$ has units of $gpm/\sqrt{psi}$.
+- $C_v$  -  valve flow coefficient. *Definition:* the volumetric flow of water (specific gravity 1) in US gpm that passes through a fully open valve when the pressure drop across the valve is exactly 1 psi. So $C_v$ has units of $\text{gpm}/\sqrt{\text{psi}}$.
 
 - $f(\ell)$  -  the valve characteristic, a dimensionless function of the lift $\ell$ (fraction open, $0 \leq \ell \leq 1$). The three classical forms are presented below.
 
@@ -1011,9 +1011,9 @@ Limitations: Equation 2 is valid for incompressible liquids only. For gases, the
 
 ```{important}
 **Unit Conversions**
-US: $C_v$ in gpm/$\sqrt{psi}$, $q$ in gpm, $\Delta P_v$ in psi.
+US: $C_v$ in gpm/$\sqrt{\text{psi}}$, $q$ in gpm, $\Delta P_v$ in psi.
 
-Metric: $K_v$ in m\textsuperscript{3}/h/$\sqrt{bar}$, $q$ in m\textsuperscript{3}/h, $\Delta P_v$ in bar.
+Metric: $K_v$ in m<sup>3</sup>/h/$\sqrt{\text{bar}}$, $q$ in m<sup>3</sup>/h, $\Delta P_v$ in bar.
 
 
 $$
@@ -1021,7 +1021,7 @@ K_v \approx 0.865 C_v   C_v \approx 1.156 K_v
 $$
 
 
-A third coefficient $A_v$ in SI (m\textsuperscript{2}) is sometimes used: $A_v = 2.4 \times 10^{-5} C_v$.
+A third coefficient $A_v$ in SI (m<sup>2</sup>) is sometimes used: $A_v = 2.4 \times 10^{-5} C_v$.
 ```
 
 
@@ -1050,16 +1050,16 @@ On a real plant, the control valve is in series with a long run of piping, fitti
 
 
 $$
-\Delta P_{total} = \Delta P_v(q) + \Delta P_{piping}(q)
+\Delta P_{\text{total}} = \Delta P_v(q) + \Delta P_{\text{piping}}(q)
 $$
 
 
-$\Delta P_{piping}$ grows roughly as $q^2$ (Darcy-Weisbach friction). As $q$ increases, $\Delta P_{piping}$ rises and $\Delta P_v = \Delta P_{total} - \Delta P_{piping}$ falls. Therefore:
+$\Delta P_{\text{piping}}$ grows roughly as $q^2$ (Darcy-Weisbach friction). As $q$ increases, $\Delta P_{\text{piping}}$ rises and $\Delta P_v = \Delta P_{\text{total}} - \Delta P_{\text{piping}}$ falls. Therefore:
 
 
-- At low $q$ (valve mostly throttled), $\Delta P_v \approx \Delta P_{total}$.
+- At low $q$ (valve mostly throttled), $\Delta P_v \approx \Delta P_{\text{total}}$.
 
-- At high $q$ (valve wide open), $\Delta P_v$ may be only a small fraction of $\Delta P_{total}$.
+- At high $q$ (valve wide open), $\Delta P_v$ may be only a small fraction of $\Delta P_{\text{total}}$.
 
 This shifts the apparent $f$-versus-$\ell$ relationship. The *installed* characteristic is what you actually get when the valve is in service; the *inherent* characteristic is what the manufacturer's catalogue tells you.
 ```
@@ -1073,7 +1073,7 @@ This shifts the apparent $f$-versus-$\ell$ relationship. The *installed* charact
 
 This is the *reason* equal-percentage is the dominant industrial choice: it gives a more constant loop gain over the operating range when the valve is in a system with significant fixed piping.
 
-**Design rule of thumb (Hutchinson):** Let $\beta = \Delta P_v / \Delta P_{total}$ at maximum design flow.
+**Design rule of thumb (Hutchinson):** Let $\beta = \Delta P_v / \Delta P_{\text{total}}$ at maximum design flow.
 
 
 - $\beta > 0.5$ (valve takes the majority of system $\Delta P$): use **linear**.
@@ -1089,7 +1089,7 @@ The crossover $\beta = 0.25$-$0.33$ is often a useful target for new designs.
 ```{prf:example} Required Lift for Two Pressure-Drop Scenarios
 :label: instrumentationandcontrol-example-6
 
-A control valve with $C_v = 110$ gpm/$\sqrt{psi}$ must pass 200 gpm of water ($G_s = 1$). Find the required lift for (a) inherent conditions with constant $\Delta P_v = 10$ psi, and (b) installed conditions with $\Delta P_v = 10 - 0.03 q$ psi. Repeat the analysis for an equal-percentage valve with rangeability $R = 40$.
+A control valve with $C_v = 110$ gpm/$\sqrt{\text{psi}}$ must pass 200 gpm of water ($G_s = 1$). Find the required lift for (a) inherent conditions with constant $\Delta P_v = 10$ psi, and (b) installed conditions with $\Delta P_v = 10 - 0.03 q$ psi. Repeat the analysis for an equal-percentage valve with rangeability $R = 40$.
 ```
 
 
@@ -1106,7 +1106,7 @@ $$
 
 
 $$
-\ell_{a,lin} = \frac{200}{110} \sqrt{\frac{1}{10}} = 1.818 \times 0.3162 = 0.575
+\ell_{a,\text{lin}} = \frac{200}{110} \sqrt{\frac{1}{10}} = 1.818 \times 0.3162 = 0.575
 $$
 
 
@@ -1114,7 +1114,7 @@ $$
 
 
 $$
-\Delta P_v(q=200) = 10 - 0.03(200) = 10 - 6 = 4 psi
+\Delta P_v(q=200) = 10 - 0.03(200) = 10 - 6 = 4 \text{psi}
 $$
 
 
@@ -1122,7 +1122,7 @@ $$
 
 
 $$
-\ell_{b,lin} = \frac{200}{110} \sqrt{\frac{1}{4}} = 1.818 \times 0.500 = 0.909
+\ell_{b,\text{lin}} = \frac{200}{110} \sqrt{\frac{1}{4}} = 1.818 \times 0.500 = 0.909
 $$
 
 
@@ -1171,7 +1171,7 @@ $$
 - **Designer's response:** pick a valve with a smaller $C_v$ so that at design flow the lift falls in the recommended 0.30-0.75 range (some references say 0.20-0.80). Re-do the calculation. The valve must have enough $C_v$ to pass the maximum required flow ($\sim$1.2-2.0 $\times$ design) at $\ell \approx 0.9$, and not so much $C_v$ that the minimum required flow drives the valve below $\ell = 0.1$ (poor controllability near the seat).
 
 
-- **Verification of the equal-pct algebra.** Direct check: with $R = 40$ and $\ell = 0.850$, $f = 40^{0.850 - 1} = 40^{-0.15} = e^{-0.15 \ln 40} = e^{-0.5527} = 0.575$. \checkmark
+- **Verification of the equal-pct algebra.** Direct check: with $R = 40$ and $\ell = 0.850$, $f = 40^{0.850 - 1} = 40^{-0.15} = e^{-0.15 \ln 40} = e^{-0.5527} = 0.575$. ✓
 ```
 
 
@@ -1183,7 +1183,7 @@ The **valve gain** $K_v(\ell) \equiv dq/d\ell$ is the local sensitivity of the f
 
 
 $$
-K_{loop} = K_p \cdot K_c \cdot K_s \cdot K_v
+K_{\text{loop}} = K_p \cdot K_c \cdot K_s \cdot K_v
 $$
 
 
@@ -1201,11 +1201,11 @@ The ISA-defined choked-flow limit:
 
 
 $$
-\Delta P_{choked} = F_L^2 (P_1 - F_F P_v)
+\Delta P_{\text{choked}} = F_L^2 (P_1 - F_F P_v)
 $$
 
 
-where $F_L$ is the liquid-recovery factor (typical 0.6-0.9), $F_F$ is the liquid critical-pressure ratio factor $\approx 0.96 - 0.28\sqrt{P_v/P_c}$. If $\Delta P_v < \Delta P_{choked}$ flow scales with $\sqrt{\Delta P_v}$ (Equation 2); if $\Delta P_v > \Delta P_{choked}$ flow saturates at $C_v\sqrt{\Delta P_{choked}/G_s}$.
+where $F_L$ is the liquid-recovery factor (typical 0.6-0.9), $F_F$ is the liquid critical-pressure ratio factor $\approx 0.96 - 0.28\sqrt{P_v/P_c}$. If $\Delta P_v < \Delta P_{\text{choked}}$ flow scales with $\sqrt{\Delta P_v}$ (Equation 2); if $\Delta P_v > \Delta P_{\text{choked}}$ flow saturates at $C_v\sqrt{\Delta P_{\text{choked}}/G_s}$.
 
 Cavitation is destructive  -  the imploding bubbles erode trim. If predicted in service, specify anti-cavitation trim (multistage, drilled, or path-trim valves).
 ```
@@ -1219,11 +1219,11 @@ For a compressible gas with upstream pressure $P_1$, downstream pressure $P_2$, 
 
 
 $$
-q_{std} = 1360 C_v F_p P_1 Y \sqrt{\frac{x}{M T_1 Z}}
+q_{\text{std}} = 1360 C_v F_p P_1 Y \sqrt{\frac{x}{M T_1 Z}}
 $$
 
 
-where $q_{std}$ is in scfh, $P_1$ in psia, $T_1$ in $^\circ$R, $M$ is molecular weight, $Z$ is compressibility, $x = (P_1 - P_2)/P_1$ is the pressure-ratio drop, and $Y$ is the expansion factor
+where $q_{\text{std}}$ is in scfh, $P_1$ in psia, $T_1$ in $^\circ$R, $M$ is molecular weight, $Z$ is compressibility, $x = (P_1 - P_2)/P_1$ is the pressure-ratio drop, and $Y$ is the expansion factor
 
 
 $$
@@ -1239,7 +1239,7 @@ with $F_k = k/1.40$ and $x_T$ a valve-style modifier (0.6-0.8 typical).
 
 ```{note}
 **Exam Tips  -  Control-Valve Sizing**
-- Memorize the liquid sizing equation and its US units (gpm, psi, gpm/$\sqrt{psi}$). The conversion to metric $K_v$ ($0.865 C_v$) is testable.
+- Memorize the liquid sizing equation and its US units (gpm, psi, gpm/$\sqrt{\text{psi}}$). The conversion to metric $K_v$ ($0.865 C_v$) is testable.
 
 - $\Delta P_v$ is the drop *across the valve* alone, never the total system $\Delta P$.
 
@@ -1393,15 +1393,15 @@ We touched on inherent vs. installed in the control-valve section; this section 
 ### Setup: A Valve in a System
 
 ```{note}
-Imagine a pipe segment from a fixed-pressure source $P_{source}$ to a fixed-pressure sink $P_{sink}$. In series: piping + fittings + a control valve. The system mechanical-energy balance is
+Imagine a pipe segment from a fixed-pressure source $P_{\text{source}}$ to a fixed-pressure sink $P_{\text{sink}}$. In series: piping + fittings + a control valve. The system mechanical-energy balance is
 
 
 $$
-P_{source} - P_{sink} = \Delta P_{piping}(q) + \Delta P_v(q)
+P_{\text{source}} - P_{\text{sink}} = \Delta P_{\text{piping}}(q) + \Delta P_v(q)
 $$
 
 
-where $\Delta P_{piping}$ scales roughly as $f \cdot L_e \cdot \rho v^2/(2D)$, i.e. approximately quadratically in $q$. The valve drop is whatever is left over.
+where $\Delta P_{\text{piping}}$ scales roughly as $f \cdot L_e \cdot \rho v^2/(2D)$, i.e. approximately quadratically in $q$. The valve drop is whatever is left over.
 ```
 
 
@@ -1411,14 +1411,14 @@ where $\Delta P_{piping}$ scales roughly as $f \cdot L_e \cdot \rho v^2/(2D)$, i
 
 - **Piping dominates ($\beta \to 0$):** the piping takes nearly all the system $\Delta P$. The valve sees only a tiny $\Delta P_v$ at high flow. The installed characteristic is heavily distorted from the inherent one. Choose equal percentage.
 
-where $\beta = \Delta P_v / \Delta P_{total}$ at design flow.
+where $\beta = \Delta P_v / \Delta P_{\text{total}}$ at design flow.
 ```
 
 
 ### Graphical Interpretation: Four Curves on One Plot
 On a standard "flow vs. lift" plot, four curves can be drawn for a given valve and system:
 
-- Linear inherent: straight line from (0, 0) to (1, $q_{\max}^{inh}$).
+- Linear inherent: straight line from (0, 0) to (1, $q_{\max}^{\text{inh}}$).
 - Linear installed: concave-down curve  -  starts steep, flattens at high lift.
 - Equal-pct inherent: convex-up curve  -  starts flat, steepens at high lift.
 - Equal-pct installed: nearly straight line in the middle range, the curvatures partially cancel.
@@ -1481,7 +1481,7 @@ Gain near $\ell = 0.9$: large (because $f$ is large and equal-pct has $df/d\ell 
 
 - Linear $\to$ nonlinear (concave-down) when installed; equal-pct $\to$ more linear.
 
-- The choice between linear and equal-pct hinges on $\beta = \Delta P_v/\Delta P_{total}$ at design flow. Above $\sim$0.5: linear OK. Below: equal-pct.
+- The choice between linear and equal-pct hinges on $\beta = \Delta P_v/\Delta P_{\text{total}}$ at design flow. Above $\sim$0.5: linear OK. Below: equal-pct.
 
 - Aim for design lift between 0.3 and 0.75 with the valve sized so it doesn't bottom out near the seat at low flow or saturate near full open at high flow.
 ```
@@ -1613,12 +1613,12 @@ Linear map between measurement and 4-20 mA current:
 
 
 $$
-I [mA] = 4 + 16 \cdot \frac{measurement - zero}{span}
+I [\text{mA}] = 4 + 16 \cdot \frac{\text{measurement} - \text{zero}}{\text{span}}
 $$
 
 
 $$
-measurement = zero + span \cdot \frac{I - 4}{16}
+\text{measurement} = \text{zero} + \text{span} \cdot \frac{I - 4}{16}
 $$
 
 
@@ -1626,7 +1626,7 @@ $$
 
 
 $$
-\%TO = 100 \cdot \frac{measurement - zero}{span} = \frac{I - 4}{16} \cdot 100
+\%\text{TO} = 100 \cdot \frac{\text{measurement} - \text{zero}}{\text{span}} = \frac{I - 4}{16} \cdot 100
 $$
 
 
@@ -1656,12 +1656,12 @@ A pressure transmitter has range 50-250 psi. The controller's analog input reads
 
 
 $$
-\%TO = \frac{12.8 - 4}{16} \times 100 = \frac{8.8}{16} \times 100 = 55.0\%
+\%\text{TO} = \frac{12.8 - 4}{16} \times 100 = \frac{8.8}{16} \times 100 = 55.0\%
 $$
 
 
 $$
-P = 50 + 0.55(200) = 50 + 110 = 160 psi
+P = 50 + 0.55(200) = 50 + 110 = 160 \text{psi}
 $$
 
 
@@ -1669,29 +1669,29 @@ $$
 
 
 $$
-\%TO = \frac{200 - 50}{200} \times 100 = 75.0\%
+\%\text{TO} = \frac{200 - 50}{200} \times 100 = 75.0\%
 $$
 
 
 $$
-I = 4 + 16(0.75) = 4 + 12 = 16.0 mA
+I = 4 + 16(0.75) = 4 + 12 = 16.0 \text{mA}
 $$
 
 
-- **(c) 75 psi $\to$ mA.**
+- **&#40;c&#41; 75 psi $\to$ mA.**
 
 
 $$
-\%TO = \frac{75 - 50}{200} \times 100 = 12.5\%
+\%\text{TO} = \frac{75 - 50}{200} \times 100 = 12.5\%
 $$
 
 
 $$
-I = 4 + 16(0.125) = 4 + 2 = 6.0 mA
+I = 4 + 16(0.125) = 4 + 2 = 6.0 \text{mA}
 $$
 
 
-- **Verification by midpoint.** Mid-range pressure 150 psi $\to$ \%TO $= 50\%$ $\to$ $I = 4 + 8 = 12$ mA. \checkmark Linear calibration confirmed.
+- **Verification by midpoint.** Mid-range pressure 150 psi $\to$ \%TO $= 50\%$ $\to$ $I = 4 + 8 = 12$ mA. ✓ Linear calibration confirmed.
 
 
 - **Practical note on alarm settings.** A 6 mA low-trip is close to the 4 mA live zero  -  if the loop opens, the controller would also see $< 6$ mA. Modern DCS systems distinguish "signal within range, low alarm" from "signal failure" by checking for $I < 3.8$ mA or $> 20.5$ mA (out-of-range diagnostic).
@@ -1746,12 +1746,12 @@ For a unit-feedback loop with forward path $G(s) = G_c G_v G_p$ and feedback pat
 
 
 $$
-Setpoint response:   \frac{Y(s)}{R(s)} = \frac{G_c G_v G_p}{1 + G_c G_v G_p G_m}
+\text{Setpoint response:}   \frac{Y(s)}{R(s)} = \frac{G_c G_v G_p}{1 + G_c G_v G_p G_m}
 $$
 
 
 $$
-Load response:   \frac{Y(s)}{D(s)} = \frac{G_d}{1 + G_c G_v G_p G_m}
+\text{Load response:}   \frac{Y(s)}{D(s)} = \frac{G_d}{1 + G_c G_v G_p G_m}
 $$
 
 
@@ -1776,7 +1776,7 @@ The most common form is the *parallel* or *textbook* form:
 
 
 $$
-u(t) = u_{bias} + K_c e(t) + \frac{K_c}{\tau_I}\int_0^t e(\tau) d\tau + K_c \tau_D \frac{de(t)}{dt}
+u(t) = u_{\text{bias}} + K_c e(t) + \frac{K_c}{\tau_I}\int_0^t e(\tau) d\tau + K_c \tau_D \frac{de(t)}{dt}
 $$
 
 
@@ -1803,7 +1803,7 @@ Two alternative forms: *series* (interacting) PID, and *ISA standard form*. Conv
 
 ```{note}
 **What Each Mode Does**
-- **Proportional ($K_c$):** reacts to the *current* error. Cannot, by itself, eliminate steady-state offset  -  a sustained nonzero $u_{bias}$ requires a sustained nonzero $e$.
+- **Proportional ($K_c$):** reacts to the *current* error. Cannot, by itself, eliminate steady-state offset  -  a sustained nonzero $u_{\text{bias}}$ requires a sustained nonzero $e$.
 
 - **Integral ($\tau_I$):** reacts to the *accumulated* error. Drives steady-state offset to zero. Adds phase lag (slows the loop) and can cause windup if the manipulated variable saturates.
 
@@ -1876,7 +1876,7 @@ $\lambda$ is the user's choice. Aggressive: $\lambda \approx \theta$; moderate: 
 ```{prf:example} ZN, Cohen-Coon, and IMC Tuning for the Cooling-Water Loop
 :label: instrumentationandcontrol-example-10
 
-Continuing the previous FOPDT example, $K = -1.5$ $^\circ$F/gpm, $\tau = 2.14$ min, $\theta = 5.4$ min. Compute PI tuning by (a) Ziegler-Nichols, (b) Cohen-Coon, (c) IMC with $\lambda = \tau$. Compare.
+Continuing the previous FOPDT example, $K = -1.5$ $^\circ$F/gpm, $\tau = 2.14$ min, $\theta = 5.4$ min. Compute PI tuning by (a) Ziegler-Nichols, (b) Cohen-Coon, &#40;c&#41; IMC with $\lambda = \tau$. Compare.
 ```
 
 
@@ -1886,8 +1886,8 @@ Continuing the previous FOPDT example, $K = -1.5$ $^\circ$F/gpm, $\tau = 2.14$ m
 
 $$
 \begin{align}
-K_c &= \frac{0.9}{|K|} \frac{\tau}{\theta} = \frac{0.9}{1.5} \frac{2.14}{5.4} = 0.60 \times 0.396 = 0.238 gpm/^\circ F \\
-\tau_I &= 3.33 \theta = 3.33 \times 5.4 = 18.0 min
+K_c &= \frac{0.9}{|K|} \frac{\tau}{\theta} = \frac{0.9}{1.5} \frac{2.14}{5.4} = 0.60 \times 0.396 = 0.238 \text{gpm}/^\circ\text{F} \\
+\tau_I &= 3.33 \theta = 3.33 \times 5.4 = 18.0 \text{min}
 \end{align}
 $$
 
@@ -1897,19 +1897,19 @@ $$
 
 $$
 \begin{align}
-K_c &= \frac{1}{1.5} \frac{2.14}{5.4} (0.9 + \frac{5.4}{12 \times 2.14}) = 0.667 \times 0.396 \times (0.9 + 0.210) = 0.293 gpm/^\circ F \\
-\tau_I &= 5.4 \cdot \frac{30 + 3(2.524)}{9 + 20(2.524)} = 5.4 \cdot \frac{37.57}{59.48} = 5.4 \times 0.632 = 3.41 min
+K_c &= \frac{1}{1.5} \frac{2.14}{5.4} (0.9 + \frac{5.4}{12 \times 2.14}) = 0.667 \times 0.396 \times (0.9 + 0.210) = 0.293 \text{gpm}/^\circ\text{F} \\
+\tau_I &= 5.4 \cdot \frac{30 + 3(2.524)}{9 + 20(2.524)} = 5.4 \cdot \frac{37.57}{59.48} = 5.4 \times 0.632 = 3.41 \text{min}
 \end{align}
 $$
 
 
-- **(c) IMC PI with $\lambda = \tau = 2.14$ min.**
+- **&#40;c&#41; IMC PI with $\lambda = \tau = 2.14$ min.**
 
 
 $$
 \begin{align}
-K_c &= \frac{1}{|K|} \frac{\tau}{\lambda + \theta} = \frac{1}{1.5} \frac{2.14}{2.14 + 5.4} = \frac{1}{1.5} \times 0.284 = 0.189 gpm/^\circ F \\
-\tau_I &= \tau = 2.14 min
+K_c &= \frac{1}{|K|} \frac{\tau}{\lambda + \theta} = \frac{1}{1.5} \frac{2.14}{2.14 + 5.4} = \frac{1}{1.5} \times 0.284 = 0.189 \text{gpm}/^\circ\text{F} \\
+\tau_I &= \tau = 2.14 \text{min}
 \end{align}
 $$
 
@@ -1991,7 +1991,7 @@ G_{OL}(s) = G_c G_p = K_c \frac{1}{(s+1)(s+2)}\cdot \frac{2s + 1}{2s} = \frac{K_
 $$
 
 
-- **Characteristic equation:** $1 + G_{OL} = 0$, i.e.\
+- **Characteristic equation:** $1 + G_{OL} = 0$, i.e.
 
 
 $$
@@ -2008,6 +2008,14 @@ $$
 
 
 - **Routh array** for $a_3 s^3 + a_2 s^2 + a_1 s + a_0$ with $a_3 = 2$, $a_2 = 6$, $a_1 = 4 + 2 K_c$, $a_0 = K_c$:
+
+
+| $s^3$ | $2$ | $4 + 2 K_c$ |
+| --- | --- | --- |
+| $s^2$ | $6$ | $K_c$ |
+| $s^1$ | $b_1$ | 0 |
+| $s^0$ | $K_c$ |  |
+
 
 where $b_1 = [6(4 + 2 K_c) - 2 K_c]/6 = [24 + 12 K_c - 2 K_c]/6 = (24 + 10 K_c)/6$.
 ```
@@ -2029,7 +2037,7 @@ Combining: stability iff $K_c > 0$.
 - **Ultimate gain.** As $K_c \to \infty$, all entries stay positive; the loop is stable for any positive $K_c$. (The process by itself is overdamped and has plenty of phase margin; PI control with the chosen $\tau_I = 2$ does not destabilize it.) For a process with more lag (e.g. three first-order in series), there would be a finite $K_u$ at which the loop oscillates.
 
 
-- **Verification.** At $K_c = 0$ (open loop), the characteristic equation is $2s(s+1)(s+2) = 0$, with poles 0, $-1$, $-2$. The pole at the origin is marginal (open-loop integrator). Adding any $K_c > 0$ moves the marginal pole into the left half-plane. \checkmark
+- **Verification.** At $K_c = 0$ (open loop), the characteristic equation is $2s(s+1)(s+2) = 0$, with poles 0, $-1$, $-2$. The pole at the origin is marginal (open-loop integrator). Adding any $K_c > 0$ moves the marginal pole into the left half-plane. ✓
 ```
 
 
@@ -2115,7 +2123,7 @@ where $G_d$ is the disturbance-to-output transfer function and $G_p$ is the mani
 
 
 $$
-Air setpoint = R \times Fuel flow
+\text{Air setpoint} = R \times \text{Fuel flow}
 $$
 
 
@@ -2148,7 +2156,7 @@ When a process has multiple controlled and manipulated variables (e.g. a distill
 
 
 $$
-\Lambda = G(0) \otimes [G(0)^{-1}]^T   (Hadamard product of G and the transpose of its inverse, evaluated at s=0)
+\Lambda = G(0) \otimes [G(0)^{-1}]^T   \text{(Hadamard product of }G\text{ and the transpose of its inverse, evaluated at }s=0\text{)}
 $$
 
 
@@ -2235,7 +2243,7 @@ Controllability: $\theta/\tau < 0.1$ easy; $0.1$-$1$ classical; $> 1$ requires S
 
 
 $$
-\zeta = \frac{b}{2\sqrt{ac}},   \tau = \sqrt{a/c}   (for ay+by+cy = dx)
+\zeta = \frac{b}{2\sqrt{ac}},   \tau = \sqrt{a/c}   \text{(for }ay+by+cy = dx\text{)}
 $$
 
 
@@ -2255,12 +2263,12 @@ $$
 
 
 $$
-q = C_v f(\ell) \sqrt{\Delta P_v / G_s}   (liquid, gpm, psi, gpm/\sqrt{psi})
+q = C_v f(\ell) \sqrt{\Delta P_v / G_s}   (\text{liquid, gpm, psi, gpm}/\sqrt{\text{psi}})
 $$
 
 
 Linear $f = \ell$; Equal-pct $f = R^{\ell-1}$; Quick-opening $f = \sqrt{\ell}$.
-$\beta = \Delta P_v/\Delta P_{total}$: $\beta > 0.5$ linear; $\beta < 0.5$ equal-pct.
+$\beta = \Delta P_v/\Delta P_{\text{total}}$: $\beta > 0.5$ linear; $\beta < 0.5$ equal-pct.
 $K_v$ (metric) $\approx 0.865 C_v$. Target lift $0.3$-$0.75$ at design.
 ```
 
@@ -2277,7 +2285,7 @@ Cooling water: FO. Steam: FC. Vent: FO. Drain on inventory: FC. Hazardous reagen
 
 
 $$
-I = 4 + 16 \frac{measurement - zero}{span},   \%TO = (I-4)/16 \times 100
+I = 4 + 16 \frac{\text{measurement} - \text{zero}}{\text{span}},   \%TO = (I-4)/16 \times 100
 $$
 
 

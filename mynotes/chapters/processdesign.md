@@ -161,7 +161,7 @@ $$
 $$
 
 
-with side reactions producing $\mathrm{CO_2}$ and $\mathrm{H_2O}$. The reactor effluent flashes; unreacted ethylene is recycled; ethylene oxide is purified in a downstream distillation train. Which diagram type would show each of the following? (a) the recycle of unreacted ethylene back to the reactor; (b) the fail-safe action of the cooling-water valve on the reactor jacket; (c) the molar composition of the bottoms stream from the second column; (d) the carbon-steel material specification of the reactor-effluent piping; (e) the overall production rate of ethylene oxide.
+with side reactions producing $\mathrm{CO_2}$ and $\mathrm{H_2O}$. The reactor effluent flashes; unreacted ethylene is recycled; ethylene oxide is purified in a downstream distillation train. Which diagram type would show each of the following? (a) the recycle of unreacted ethylene back to the reactor; (b) the fail-safe action of the cooling-water valve on the reactor jacket; &#40;c&#41; the molar composition of the bottoms stream from the second column; (d) the carbon-steel material specification of the reactor-effluent piping; (e) the overall production rate of ethylene oxide.
 ```
 
 
@@ -170,7 +170,7 @@ with side reactions producing $\mathrm{CO_2}$ and $\mathrm{H_2O}$. The reactor e
 
 - **(b) Fail-safe action.** Fail-open or fail-closed is a construction-level specification governed by the actuator spring and the loss-of-air strategy. It appears **only on the P&ID**.
 
-- **(c) Stream composition.** Quantitative composition lives in the **PFD stream table**. The BFD shows only total mass flows by stream; the P&ID does not typically repeat composition data because its purpose is mechanical/instrumented detail, not material balance.
+- **&#40;c&#41; Stream composition.** Quantitative composition lives in the **PFD stream table**. The BFD shows only total mass flows by stream; the P&ID does not typically repeat composition data because its purpose is mechanical/instrumented detail, not material balance.
 
 - **(d) Pipe material spec.** A pipe material code (e.g. `A106-B-CS-3"` or `A312-TP316L-SS-2"`) is part of the line list that accompanies the **P&ID**. It does not appear on the BFD or PFD.
 
@@ -216,7 +216,7 @@ Natural gas is desulfurized, then reformed with steam to produce syngas (CO + H$
 
 - **Caption, reactions, figure number.** "Figure 1. Block Flow Diagram of a steam-reforming methanol plant." List the three reactions: (i) $\mathrm{CH_4 + H_2O \rightarrow CO + 3 H_2}$ (steam reforming), (ii) $\mathrm{CO + 2H_2 \rightarrow CH_3OH}$ (methanol synthesis), (iii) $\mathrm{CO_2 + 3H_2 \rightarrow CH_3OH + H_2O}$ (CO$_2$ pathway).
 
-- **Verification.** Count of blocks: 6 (within the typical 4-12 range for a single-product plant). Inlet streams: 2 (natural gas, steam). Outlet streams: 3 (purge, methanol, water). Recycle: 1. All material balances close. \checkmark
+- **Verification.** Count of blocks: 6 (within the typical 4-12 range for a single-product plant). Inlet streams: 2 (natural gas, steam). Outlet streams: 3 (purge, methanol, water). Recycle: 1. All material balances close. ✓
 ```
 
 
@@ -276,7 +276,7 @@ Construct two curves on a $T$ vs. $H$ (enthalpy) plot:
 
 - **Cold composite curve**: similarly for all cold streams.
 
-Slide the cold curve horizontally until the minimum vertical separation between the two equals exactly $\Delta T_{\min}$. That minimum-separation point is the **pinch**. The overlap of the two curves between $T_{pinch}^{cold}$ and the lowest cold-stream target gives the **maximum recoverable heat**; the leftover, unmatched cold-side enthalpy is $Q_{H,\min}$ (minimum hot utility); the unmatched hot-side enthalpy is $Q_{C,\min}$ (minimum cold utility).
+Slide the cold curve horizontally until the minimum vertical separation between the two equals exactly $\Delta T_{\min}$. That minimum-separation point is the **pinch**. The overlap of the two curves between $T_{\text{pinch}}^{\text{cold}}$ and the lowest cold-stream target gives the **maximum recoverable heat**; the leftover, unmatched cold-side enthalpy is $Q_{H,\min}$ (minimum hot utility); the unmatched hot-side enthalpy is $Q_{C,\min}$ (minimum cold utility).
 ```
 
 
@@ -299,11 +299,11 @@ A third rule: *no heat may be transferred across the pinch*. Doing so adds 1 uni
 This derivation is exactly what the transcript walks through; we will reproduce it line by line.
 
 ```{dropdown} Solution Steps
-- **Geometry of a counter-flow exchanger at the pinch.** Designate inlet temperatures $T_h^{in}, T_c^{in}$ and outlet temperatures $T_h^{out}, T_c^{out}$. Define
+- **Geometry of a counter-flow exchanger at the pinch.** Designate inlet temperatures $T_h^{\text{in}}, T_c^{\text{in}}$ and outlet temperatures $T_h^{\text{out}}, T_c^{\text{out}}$. Define
 
 
 $$
-\Delta T_1 \equiv T_h^{out} - T_c^{in},   \Delta T_2 \equiv T_h^{in} - T_c^{out}
+\Delta T_1 \equiv T_h^{\text{out}} - T_c^{\text{in}},   \Delta T_2 \equiv T_h^{\text{in}} - T_c^{\text{out}}
 $$
 
 
@@ -315,8 +315,8 @@ so $\Delta T_1$ is at the "cold end" and $\Delta T_2$ is at the "hot end" of the
 
 $$
 \begin{align}
-Q &= CP_h (T_h^{in} - T_h^{out}) \\
-Q &= CP_c (T_c^{out} - T_c^{in})
+Q &= CP_h (T_h^{\text{in}} - T_h^{\text{out}}) \\
+Q &= CP_c (T_c^{\text{out}} - T_c^{\text{in}})
 \end{align}
 $$
 
@@ -324,7 +324,7 @@ $$
 Rearrange the second:
 
 $$
-T_c^{out} - T_c^{in} = \frac{Q}{CP_c},   T_h^{in} - T_h^{out} = \frac{Q}{CP_h}
+T_c^{\text{out}} - T_c^{\text{in}} = \frac{Q}{CP_c},   T_h^{\text{in}} - T_h^{\text{out}} = \frac{Q}{CP_h}
 $$
 
 - **Subtract one equation from the other to relate $\Delta T_2 - \Delta T_1$.**
@@ -332,8 +332,8 @@ $$
 
 $$
 \begin{align}
-\Delta T_2 - \Delta T_1 &= (T_h^{in} - T_c^{out}) - (T_h^{out} - T_c^{in}) \\
-&= (T_h^{in} - T_h^{out}) - (T_c^{out} - T_c^{in}) \\
+\Delta T_2 - \Delta T_1 &= (T_h^{\text{in}} - T_c^{\text{out}}) - (T_h^{\text{out}} - T_c^{\text{in}}) \\
+&= (T_h^{\text{in}} - T_h^{\text{out}}) - (T_c^{\text{out}} - T_c^{\text{in}}) \\
 &= \frac{Q}{CP_h} - \frac{Q}{CP_c} \\
 &= Q \frac{CP_c - CP_h}{CP_h \cdot CP_c}
 \end{align}
@@ -347,7 +347,7 @@ $$
 
 
 $$
-Q \frac{CP_c - CP_h}{CP_h CP_c} \geq 0  \Longrightarrow  CP_c \geq CP_h   (above pinch)
+Q \frac{CP_c - CP_h}{CP_h CP_c} \geq 0  \Longrightarrow  CP_c \geq CP_h   \text{(above pinch)}
 $$
 
 
@@ -355,7 +355,7 @@ $$
 
 
 $$
-CP_h \geq CP_c   (below pinch)
+CP_h \geq CP_c   \text{(below pinch)}
 $$
 
 
@@ -396,15 +396,14 @@ The transcript walks through this exact problem. We reproduce it with every nume
 ```{prf:example} Four-Stream HEN with $\Delta T_{\min} = 10^\circ$C
 :label: processdesign-example-2
 
-Four streams, $\Delta T_{\min} = 10$ $^\circ$C, MER targets (assumed given from a previous temperature-interval analysis) $Q_{H,\min} = 80$ kW, $Q_{C,\min} = 50$ kW. The pinch is at $T_h^{pinch} = 90^\circ$C, $T_c^{pinch} = 80^\circ$C.
+Four streams, $\Delta T_{\min} = 10$ $^\circ$C, MER targets (assumed given from a previous temperature-interval analysis) $Q_{H,\min} = 80$ kW, $Q_{C,\min} = 50$ kW. The pinch is at $T_h^{\text{pinch}} = 90^\circ$C, $T_c^{\text{pinch}} = 80^\circ$C.
 
-
-Stream | $T_s$ ($^\circ$C) | $T_t$ ($^\circ$C) | CP (kW/$^\circ$C) | Type
-H1 | 180 | 60 | 3 | Hot
-H2 | 150 | 30 | 2 | Hot
-C1 | 30 | 135 | 2 | Cold
-C2 | 80 | 140 | 5 | Cold (above pinch only)
-
+| Stream | $T_s$ ($^\circ$C) | $T_t$ ($^\circ$C) | CP (kW/$^\circ$C) | Type |
+| --- | --- | --- | --- | --- |
+| H1 | 180 | 60 | 3 | Hot |
+| H2 | 150 | 30 | 2 | Hot |
+| C1 | 30 | 135 | 2 | Cold |
+| C2 | 80 | 140 | 5 | Cold (above pinch only) |
 
 Design the above-pinch *and* below-pinch portions of the network.
 ```
@@ -437,7 +436,7 @@ Therefore the only feasible pinch pairing is **H1-C2** and **H2-C1**.
 
 
 $$
-Q_{H1-C2} = CP_{H1} (T_{H1}^{in} - T_{H1}^{out}) = 3 \times (180 - 90) = 270 kW
+Q_{H1\text{-}C2} = CP_{H1} (T_{H1}^{\text{in}} - T_{H1}^{\text{out}}) = 3 \times (180 - 90) = 270 \text{kW}
 $$
 
 
@@ -445,7 +444,7 @@ Check the cold-side response: C2 enters at 80$^\circ$C with $CP = 5$. After rece
 
 
 $$
-T_{C2}^{out} = 80 + \frac{270}{5} = 134^\circ C
+T_{C2}^{\text{out}} = 80 + \frac{270}{5} = 134^\circ\text{C}
 $$
 
 
@@ -456,12 +455,12 @@ Required final temperature of C2 is 140$^\circ$C, so 6$^\circ$C ($= 30$ kW addit
 
 
 $$
-Q_{H2-C1, max possible from hot} = 2 \times (150 - 90) = 120 kW
+Q_{H2\text{-}C1, \text{max possible from hot}} = 2 \times (150 - 90) = 120 \text{kW}
 $$
 
 
 $$
-Q_{C1, required} = 2 \times (135 - 80) = 110 kW
+Q_{C1, \text{required}} = 2 \times (135 - 80) = 110 \text{kW}
 $$
 
 
@@ -469,7 +468,7 @@ Cold-side is the binding constraint: take $Q = 110$ kW. C1 reaches its target 13
 
 
 $$
-T_{H2}^{out} = 150 - \frac{110}{2} = 95^\circ C
+T_{H2}^{\text{out}} = 150 - \frac{110}{2} = 95^\circ\text{C}
 $$
 
 
@@ -514,12 +513,12 @@ Hot utility used above the pinch: **30 kW.**
 
 
 $$
-Q_{H1, available below} = 3 \times (90 - 60) = 90 kW
+Q_{H1, \text{available below}} = 3 \times (90 - 60) = 90 \text{kW}
 $$
 
 
 $$
-Q_{C1, below} = 2 \times (80 - 30) = 100 kW
+Q_{C1, \text{below}} = 2 \times (80 - 30) = 100 \text{kW}
 $$
 
 
@@ -527,7 +526,7 @@ Hot-side is binding (H1 has only 90 kW available). Take $Q = 90$ kW. H1 reaches 
 
 
 $$
-T_{C1}^{out} = 30 + \frac{90}{2} = 75^\circ C
+T_{C1}^{\text{out}} = 30 + \frac{90}{2} = 75^\circ\text{C}
 $$
 
 
@@ -587,13 +586,12 @@ The Linnhoff-Mason rule of thumb: the minimum number of units (exchangers + heat
 
 Two hot streams and two cold streams, $\Delta T_{\min} = 10^\circ$C:
 
-
-Stream | $T_s$ | $T_t$ | $CP$
-H1 | 175 | 45 | 10
-H2 | 125 | 65 | 40
-C1 | 20 | 155 | 20
-C2 | 40 | 112 | 15
-
+| Stream | $T_s$ | $T_t$ | $CP$ |
+| --- | --- | --- | --- |
+| H1 | 175 | 45 | 10 |
+| H2 | 125 | 65 | 40 |
+| C1 | 20 | 155 | 20 |
+| C2 | 40 | 112 | 15 |
 
 Compute $Q_{H,\min}$, $Q_{C,\min}$, and the pinch temperatures.
 ```
@@ -616,7 +614,7 @@ Compute $Q_{H,\min}$, $Q_{C,\min}$, and the pinch temperatures.
 $\{170, 160, 120, 117, 60, 45, 40, 25\}$
 
 
-- **For each interval, sum $CP_{hot} - CP_{cold}$ for streams present in that interval.** A positive value means surplus heat (more hot capacity than cold); negative means deficit.
+- **For each interval, sum $CP_{\text{hot}} - CP_{\text{cold}}$ for streams present in that interval.** A positive value means surplus heat (more hot capacity than cold); negative means deficit.
 
 
 - 170-160: only H1 present (cold C1 doesn't reach here). Net $CP = +10$. $\Delta T = 10$. Surplus $= +100$ kW.
@@ -662,16 +660,16 @@ $\{170, 160, 120, 117, 60, 45, 40, 25\}$
 
 
 $$
-\sum (CP \cdot \Delta T)_{hot} = 10(175-45) + 40(125-65) = 1300 + 2400 = 3700 kW (total hot duty)
+\sum (CP \cdot \Delta T)_{\text{hot}} = 10(175-45) + 40(125-65) = 1300 + 2400 = 3700\text{ kW (total hot duty)}
 $$
 
 
 $$
-\sum (CP \cdot \Delta T)_{cold} = 20(155-20) + 15(112-40) = 2700 + 1080 = 3780 kW (total cold duty)
+\sum (CP \cdot \Delta T)_{\text{cold}} = 20(155-20) + 15(112-40) = 2700 + 1080 = 3780\text{ kW (total cold duty)}
 $$
 
 
-Difference: $3780 - 3700 = 80$ kW (net deficit of hot, i.e. more cold needs heat than hot provides). Net hot utility minus net cold utility from the cascade: $300 - 220 = 80$ kW. \checkmark The balance closes.
+Difference: $3780 - 3700 = 80$ kW (net deficit of hot, i.e. more cold needs heat than hot provides). Net hot utility minus net cold utility from the cascade: $300 - 220 = 80$ kW. ✓ The balance closes.
 ```
 
 
@@ -697,7 +695,7 @@ The installed purchase cost of a piece of equipment, $C_P$, is built from a **ba
 
 
 $$
-C_P = C_B \cdot F_M \cdot F_P \cdot F_L \cdot \frac{CEPCI_{now}}{CEPCI_{base}}
+C_P = C_B \cdot F_M \cdot F_P \cdot F_L \cdot \frac{\text{CEPCI}_{\text{now}}}{\text{CEPCI}_{\text{base}}}
 $$
 
 
@@ -779,9 +777,9 @@ The purchase cost $C_P$ is only a fraction of the installed cost. To get to the 
 
 - **Bare-module factor** $F_{BM}$ (Guthrie/Ulrich): includes direct field labor, foundations, piping, instrumentation, electrical. Typical $F_{BM} = 3.0$ for a CS shell-and-tube exchanger; lower for skid-mounted equipment.
 
-- **Lang factor**: a single multiplier for the entire plant. $L = 3.10$ for solid plants, 3.63 for solid-fluid plants, 4.74 for fluid plants (Peters | Timmerhaus). $C_{TCI} = L \cdot \sum C_P$.
+- **Lang factor**: a single multiplier for the entire plant. $L = 3.10$ for solid plants, 3.63 for solid-fluid plants, 4.74 for fluid plants (Peters | Timmerhaus). $C_{\text{TCI}} = L \cdot \sum C_P$.
 
-On the PE exam, use $C_{bare module} = F_{BM} \cdot C_P$ unless instructed otherwise.
+On the PE exam, use $C_{\text{bare module}} = F_{BM} \cdot C_P$ unless instructed otherwise.
 ```
 
 
@@ -790,7 +788,7 @@ On the PE exam, use $C_{bare module} = F_{BM} \cdot C_P$ unless instructed other
 ```{prf:example} Updating a Heat-Exchanger Cost to Current Year
 :label: processdesign-example-4
 
-A floating-head carbon-steel shell-and-tube heat exchanger with $A = 100$ m$^2$ at atmospheric pressure had a calculated purchase cost of \$23{,}000 in the year 2001 (CEPCI = 397). Estimate the current cost when CEPCI = 800.
+A floating-head carbon-steel shell-and-tube heat exchanger with $A = 100$ m$^2$ at atmospheric pressure had a calculated purchase cost of \$23,000 in the year 2001 (CEPCI = 397). Estimate the current cost when CEPCI = 800.
 ```
 
 
@@ -801,7 +799,7 @@ A floating-head carbon-steel shell-and-tube heat exchanger with $A = 100$ m$^2$ 
 
 
 $$
-C_{P,now} = C_{P,base} \cdot \frac{CEPCI_{now}}{CEPCI_{base}} = 23{,}000 \cdot \frac{800}{397}
+C_{P,\text{now}} = C_{P,\text{base}} \cdot \frac{\text{CEPCI}_{\text{now}}}{\text{CEPCI}_{\text{base}}} = 23{,}000 \cdot \frac{800}{397}
 $$
 
 
@@ -809,7 +807,7 @@ $$
 
 
 $$
-C_{P,now} = 23{,}000 \times 2.015 = \$46{,}346 \approx \$46{,}300
+C_{P,\text{now}} = 23{,}000 \times 2.015 = \$46{,}346 \approx \$46{,}300
 $$
 
 
@@ -822,7 +820,7 @@ $$
 ```{prf:example} Cost of a Larger Pump from a Known Smaller Pump
 :label: processdesign-example-5
 
-A 50 kW centrifugal pump costs \$8{,}500 installed. Estimate the cost of a 150 kW pump of the same type and same year.
+A 50 kW centrifugal pump costs \$8,500 installed. Estimate the cost of a 150 kW pump of the same type and same year.
 ```
 
 
@@ -837,9 +835,9 @@ $$
 
 - **Compute $3^{0.6}$.** $\log_{10}(3) = 0.4771$, so $0.6 \times 0.4771 = 0.2863$, $10^{0.2863} = 1.933$.
 
-- $C_2 = 8500 \times 1.933 = \$16{,}430 \approx \$16{,}400$.
+- $C_2 = 8500 \times 1.933 = \$16,430 \approx \$16,400$.
 
-- **Verification.** Tripling the size more than doubles but less than triples the cost  -  exactly the spirit of the six-tenths rule. A doubled-size pump would cost $\$8500 \times 2^{0.6} = \$8500 \times 1.516 = \$12{,}900$.
+- **Verification.** Tripling the size more than doubles but less than triples the cost  -  exactly the spirit of the six-tenths rule. A doubled-size pump would cost $\$8500 \times 2^{0.6} = \$8500 \times 1.516 = \$12,900$.
 ```
 
 
@@ -848,7 +846,7 @@ $$
 ```{prf:example} Bare-Module Cost of a Stainless-Steel High-Pressure Exchanger
 :label: processdesign-example-6
 
-A 200 m$^2$ floating-head shell-and-tube exchanger is needed in 316 SS service at 20 barg. Using $C_B = \$28{,}000$ (from the Turton correlation at CEPCI 397), $F_M = 2.1$ (316 SS), $F_P = 1.5$ (at 20 barg), $F_L = 1.0$ (20 ft tubes), $F_{BM} = 3.0$, and current CEPCI = 800, compute the installed (bare-module) cost.
+A 200 m$^2$ floating-head shell-and-tube exchanger is needed in 316 SS service at 20 barg. Using $C_B = \$28,000$ (from the Turton correlation at CEPCI 397), $F_M = 2.1$ (316 SS), $F_P = 1.5$ (at 20 barg), $F_L = 1.0$ (20 ft tubes), $F_{BM} = 3.0$, and current CEPCI = 800, compute the installed (bare-module) cost.
 ```
 
 
@@ -865,7 +863,7 @@ $$
 
 
 $$
-C_{P, now} = 88{,}200 \times \frac{800}{397} = 88{,}200 \times 2.015 = \$177{,}700
+C_{P, \text{now}} = 88{,}200 \times \frac{800}{397} = 88{,}200 \times 2.015 = \$177{,}700
 $$
 
 
@@ -873,11 +871,11 @@ $$
 
 
 $$
-C_{BM} = F_{BM} \cdot C_{P, now} = 3.0 \times 177{,}700 = \$533{,}000
+C_{\text{BM}} = F_{BM} \cdot C_{P, \text{now}} = 3.0 \times 177{,}700 = \$533{,}000
 $$
 
 
-- **Verification.** Sanity: a CS base of \$28{,}000 grew to a 316 SS, 20 barg, installed cost of \$533{,}000  -  a 19$\times$ multiplier. The breakdown: 3$\times$ from $F_{BM}$, 2$\times$ from CEPCI, 2.1$\times$ from material, 1.5$\times$ from pressure. Product: $3 \times 2 \times 2.1 \times 1.5 \approx 19$. \checkmark
+- **Verification.** Sanity: a CS base of \$28,000 grew to a 316 SS, 20 barg, installed cost of \$533,000  -  a 19$\times$ multiplier. The breakdown: 3$\times$ from $F_{BM}$, 2$\times$ from CEPCI, 2.1$\times$ from material, 1.5$\times$ from pressure. Product: $3 \times 2 \times 2.1 \times 1.5 \approx 19$. ✓
 ```
 
 
@@ -906,7 +904,7 @@ Before tackling capitalized cost, present-worth, NPV, or IRR, you must be fluent
 
 - $A$ = a uniform **Annual** payment, paid at the end of each period from period 1 to period $n$ (end-of-year convention).
 
-- $i$ = effective interest rate *per period* (decimal). If the interest is compounded annually, $i$ equals the nominal annual rate $r$. If compounded $m$ times per year at nominal $r$, the effective annual rate is $i_{eff} = (1 + r/m)^m - 1$.
+- $i$ = effective interest rate *per period* (decimal). If the interest is compounded annually, $i$ equals the nominal annual rate $r$. If compounded $m$ times per year at nominal $r$, the effective annual rate is $i_{\text{eff}} = (1 + r/m)^m - 1$.
 
 - $n$ = number of compounding periods (years if compounded annually).
 
@@ -1020,13 +1018,13 @@ If a loan or investment quotes a **nominal** annual rate $r$ with $m$ compoundin
 
 
 $$
-i_{eff} = (1 + \frac{r}{m})^m - 1
+i_{\text{eff}} = (1 + \frac{r}{m})^m - 1
 $$
 
 
-- Monthly compounding ($m = 12$) at 12\% nominal: $i_{eff} = (1.01)^{12} - 1 = 12.68\%$.
+- Monthly compounding ($m = 12$) at 12\% nominal: $i_{\text{eff}} = (1.01)^{12} - 1 = 12.68\%$.
 
-- Continuous compounding ($m \to \infty$): $i_{eff} = e^r - 1$. At $r = 12\%$, $i_{eff} = e^{0.12} - 1 = 12.75\%$.
+- Continuous compounding ($m \to \infty$): $i_{\text{eff}} = e^r - 1$. At $r = 12\%$, $i_{\text{eff}} = e^{0.12} - 1 = 12.75\%$.
 
 For PE-exam problems, *always use the effective rate per compounding period* when plugging into the six factors, and match $n$ to the number of compounding periods (not just years if compounding $> $ once per year).
 ```
@@ -1070,17 +1068,17 @@ $$
 
 
 $$
-PW_{annuity} = 20{,}000 \cdot \frac{1.08^5 - 1}{0.08 \times 1.08^5} = 20{,}000 \times 3.993 = \$79{,}860
+\text{PW}_{\text{annuity}} = 20{,}000 \cdot \frac{1.08^5 - 1}{0.08 \times 1.08^5} = 20{,}000 \times 3.993 = \$79{,}860
 $$
 
 
 $$
-PW_{balloon} = 176{,}540 / 1.08^5 = 176{,}540 / 1.4693 = \$120{,}140
+\text{PW}_{\text{balloon}} = 176{,}540 / 1.08^5 = 176{,}540 / 1.4693 = \$120{,}140
 $$
 
 
 $$
-PW_{total} = 79{,}860 + 120{,}140 = \$200{,}000  \checkmark
+\text{PW}_{\text{total}} = 79{,}860 + 120{,}140 = \$200{,}000  \checkmark
 $$
 
 
@@ -1109,7 +1107,7 @@ A **perpetuity** is an infinite series of identical cash flows. The present wort
 
 
 $$
-P_{perp} = \frac{A}{i}
+P_{\text{perp}} = \frac{A}{i}
 $$
 
 
@@ -1130,7 +1128,7 @@ The present worth of a single replacement at time $n$ is $C_R / (1+i)^n$. The pr
 
 
 $$
-P_{rep} = \frac{C_R}{(1+i)^n} + \frac{C_R}{(1+i)^{2n}} + ... = \frac{C_R / (1+i)^n}{1 - 1/(1+i)^n} = \frac{C_R}{(1+i)^n - 1}
+P_{\text{rep}} = \frac{C_R}{(1+i)^n} + \frac{C_R}{(1+i)^{2n}} + ... = \frac{C_R / (1+i)^n}{1 - 1/(1+i)^n} = \frac{C_R}{(1+i)^n - 1}
 $$
 
 
@@ -1138,7 +1136,7 @@ So
 
 
 $$
-K = C_I + \frac{C_R}{(1+i)^n - 1}    (Equation 1, capitalized cost)
+K = C_I + \frac{C_R}{(1+i)^n - 1}    \text{(Equation 1, capitalized cost)}
 $$
 
 
@@ -1149,17 +1147,17 @@ $$
 
 ```{note}
 **Capitalizing Annual Operating Costs Into $C_I$**
-If there is an annual operating/maintenance cost $A_{op}$ paid every year forever, its present worth is
+If there is an annual operating/maintenance cost $A_{\text{op}}$ paid every year forever, its present worth is
 
 
 $$
-P_{op} = \frac{A_{op}}{i}   (perpetuity)
+P_{\text{op}} = \frac{A_{\text{op}}}{i}   (\text{perpetuity})
 $$
 
 
 Add this perpetuity present worth to $C_I$ before applying Equation 1. Some texts instead add the annual cost *only over the life of the first unit* (using $(P/A, i, n)$) and then capitalize the replacement series; this is mathematically equivalent provided the annual cost is carried in each replacement's $C_R$ as well.
 
-If there is a one-time overhaul at year $m < n$ (e.g. year 3 of a 6-year life), include it as a single-payment present worth $C_{ovh}/(1+i)^m$ added to $C_I$, and include the overhaul in every replacement cycle by adding it to $C_R$ at the same fractional time.
+If there is a one-time overhaul at year $m < n$ (e.g. year 3 of a 6-year life), include it as a single-payment present worth $C_{\text{ovh}}/(1+i)^m$ added to $C_I$, and include the overhaul in every replacement cycle by adding it to $C_R$ at the same fractional time.
 ```
 
 
@@ -1172,9 +1170,9 @@ This is exactly the transcript example, with all algebra reproduced.
 Two reactors are compared:
 
 
-- **Reactor A:** initial purchase \$25{,}000; annual maintenance \$2{,}000; salvage value \$3{,}000 at end of life; life 4 years.
+- **Reactor A:** initial purchase \$25,000; annual maintenance \$2,000; salvage value \$3,000 at end of life; life 4 years.
 
-- **Reactor B:** initial purchase \$15{,}000; annual maintenance \$4{,}000; no salvage; one-time overhaul \$3{,}500 at year 3; life 6 years.
+- **Reactor B:** initial purchase \$15,000; annual maintenance \$4,000; no salvage; one-time overhaul \$3,500 at year 3; life 6 years.
 
 Effective annual interest $i = 8\%$. Which reactor is the better long-term investment?
 ```
@@ -1185,7 +1183,7 @@ Effective annual interest $i = 8\%$. Which reactor is the better long-term inves
 
 
 $$
-P_{A,maint} = 2{,}000 \cdot \frac{(1.08)^4 - 1}{0.08 \cdot (1.08)^4}
+P_{A,\text{maint}} = 2{,}000 \cdot \frac{(1.08)^4 - 1}{0.08 \cdot (1.08)^4}
 $$
 
 
@@ -1193,7 +1191,7 @@ Compute $(1.08)^4$: $1.08^2 = 1.1664$, $1.08^4 = 1.1664^2 = 1.3605$. So $[1.3605
 
 
 $$
-P_{A,maint} = 2{,}000 \times 3.312 = \$6{,}624
+P_{A,\text{maint}} = 2{,}000 \times 3.312 = \$6{,}624
 $$
 
 
@@ -1229,7 +1227,7 @@ $$
 
 
 $$
-P_{B,maint} = 4{,}000 \cdot \frac{(1.08)^6 - 1}{0.08 \cdot (1.08)^6}
+P_{B,\text{maint}} = 4{,}000 \cdot \frac{(1.08)^6 - 1}{0.08 \cdot (1.08)^6}
 $$
 
 
@@ -1237,7 +1235,7 @@ Compute $(1.08)^6$: $1.08^3 = 1.2597$, $1.08^6 = 1.2597^2 = 1.5869$. So $[1.5869
 
 
 $$
-P_{B,maint} = 4{,}000 \times 4.623 = \$18{,}492
+P_{B,\text{maint}} = 4{,}000 \times 4.623 = \$18{,}492
 $$
 
 
@@ -1245,7 +1243,7 @@ $$
 
 
 $$
-P_{B,ovh} = \frac{3{,}500}{(1.08)^3} = \frac{3{,}500}{1.2597} = \$2{,}778
+P_{B,\text{ovh}} = \frac{3{,}500}{(1.08)^3} = \frac{3{,}500}{1.2597} = \$2{,}778
 $$
 
 
@@ -1273,7 +1271,7 @@ K_B = 36{,}270 + \frac{36{,}270}{(1.08)^6 - 1} = 36{,}270 + \frac{36{,}270}{0.58
 $$
 
 
-- **Decision.** $K_B < K_A$ by about \$13{,}000. **Reactor B is the better long-term investment.**
+- **Decision.** $K_B < K_A$ by about \$13,000. **Reactor B is the better long-term investment.**
 
 
 - **Verification.** Although B has a higher annual cost and overhauls, its 6-year life means fewer replacement events per century compared to A's 4-year life. The 50\% longer life-cycle more than compensates for B's larger per-cycle cost and absence of salvage credit. This is the typical pattern  -  longer-life equipment usually wins on capitalized-cost basis, even at higher per-cycle costs, provided $i$ is not extreme.
@@ -1295,18 +1293,18 @@ Using the same Reactor A and B data, find the interest rate at which the two hav
 - **Try $i = 15\%$.**
 
 
-- $(1.15)^4 = 1.7490$. $(P/A, 15, 4) = (0.7490)/(0.15 \times 1.7490) = 2.855$. $P_{A,maint} = 5{,}710$. $C_{I,A} = 30{,}710$. $C_{R,A} = 27{,}710$. $K_A = 30{,}710 + 27{,}710/0.7490 = 30{,}710 + 37{,}000 = \$67{,}700$.
+- $(1.15)^4 = 1.7490$. $(P/A, 15, 4) = (0.7490)/(0.15 \times 1.7490) = 2.855$. $P_{A,\text{maint}} = 5{,}710$. $C_{I,A} = 30{,}710$. $C_{R,A} = 27{,}710$. $K_A = 30,710 + 27,710/0.7490 = 30,710 + 37,000 = \$67,700$.
 
-- $(1.15)^6 = 2.313$. $(P/A, 15, 6) = (1.313)/(0.15 \times 2.313) = 3.784$. $P_{B,maint} = 15{,}140$. $P_{B,ovh} = 3{,}500/1.5209 = 2{,}301$. $C_{I,B} = 32{,}441$. $K_B = 32{,}441 + 32{,}441/1.313 = 32{,}441 + 24{,}710 = \$57{,}150$.
+- $(1.15)^6 = 2.313$. $(P/A, 15, 6) = (1.313)/(0.15 \times 2.313) = 3.784$. $P_{B,\text{maint}} = 15{,}140$. $P_{B,\text{ovh}} = 3{,}500/1.5209 = 2{,}301$. $C_{I,B} = 32{,}441$. $K_B = 32,441 + 32,441/1.313 = 32,441 + 24,710 = \$57,150$.
 
 At $i = 15\%$, B is still better.
 
 - **Try $i = 30\%$.**
 
 
-- $(1.30)^4 = 2.856$. $(P/A) = 1.856/(0.30 \times 2.856) = 2.166$. $P_{A,maint} = 4{,}332$. $C_{I,A} = 29{,}332$. $K_A = 29{,}332 + 26{,}332/1.856 = 29{,}332 + 14{,}190 = \$43{,}520$.
+- $(1.30)^4 = 2.856$. $(P/A) = 1.856/(0.30 \times 2.856) = 2.166$. $P_{A,\text{maint}} = 4{,}332$. $C_{I,A} = 29{,}332$. $K_A = 29,332 + 26,332/1.856 = 29,332 + 14,190 = \$43,520$.
 
-- $(1.30)^6 = 4.827$. $(P/A) = 3.827/(0.30 \times 4.827) = 2.643$. $P_{B,maint} = 10{,}572$. $P_{B,ovh} = 3{,}500/2.197 = 1{,}593$. $C_{I,B} = 27{,}165$. $K_B = 27{,}165 + 27{,}165/3.827 = 27{,}165 + 7{,}099 = \$34{,}264$.
+- $(1.30)^6 = 4.827$. $(P/A) = 3.827/(0.30 \times 4.827) = 2.643$. $P_{B,\text{maint}} = 10{,}572$. $P_{B,\text{ovh}} = 3{,}500/2.197 = 1{,}593$. $C_{I,B} = 27{,}165$. $K_B = 27,165 + 27,165/3.827 = 27,165 + 7,099 = \$34,264$.
 
 At $i = 30\%$, B still wins.
 
@@ -1322,7 +1320,7 @@ At $i = 30\%$, B still wins.
 
 - Always capitalize annual costs into $C_I$ first, then apply Equation 1. Failing to do this is the single most common error.
 
-- For perpetuity, $P_{perp} = A/i$. For a finite annuity, $(P/A, i, n)$.
+- For perpetuity, $P_{\text{perp}} = A/i$. For a finite annuity, $(P/A, i, n)$.
 
 - The denominator of the replacement term is $(1+i)^n - 1$  -  not $(1+i)^n$. Memorize.
 ```
@@ -1352,11 +1350,11 @@ End-of-year convention: all flows are placed at the end of the period in which t
 
 
 $$
-PW = \sum_{k=0}^{n} \frac{CF_k}{(1+i)^k}
+\text{PW} = \sum_{k=0}^{n} \frac{CF_k}{(1+i)^k}
 $$
 
 
-where $CF_k$ is the signed cash flow at the end of year $k$. The result $PW$ is signed: negative means net cost, positive means net benefit. Among competing alternatives, the one with the smallest absolute net cost (i.e. the least negative or most positive PW) is preferred.
+where $CF_k$ is the signed cash flow at the end of year $k$. The result $\text{PW}$ is signed: negative means net cost, positive means net benefit. Among competing alternatives, the one with the smallest absolute net cost (i.e. the least negative or most positive PW) is preferred.
 ```
 
 
@@ -1385,7 +1383,7 @@ The transcript's example, redone with every step.
 ```{prf:example} Reactor A vs. Reactor B (Same Data as Capitalized-Cost Example) over 12-Year LCM
 :label: processdesign-example-10
 
-Same data: A has 4-year life and salvage \$3{,}000, annual maintenance \$2{,}000, purchase \$25{,}000. B has 6-year life, no salvage, annual maintenance \$4{,}000, overhaul \$3{,}500 at year 3 (so years 3 and 9 over the 12-year horizon), purchase \$15{,}000. $i = 8\%$. LCM = 12 years. Compute PW.
+Same data: A has 4-year life and salvage \$3,000, annual maintenance \$2,000, purchase \$25,000. B has 6-year life, no salvage, annual maintenance \$4,000, overhaul \$3,500 at year 3 (so years 3 and 9 over the 12-year horizon), purchase \$15,000. $i = 8\%$. LCM = 12 years. Compute PW.
 ```
 
 
@@ -1412,7 +1410,7 @@ Same data: A has 4-year life and salvage \$3{,}000, annual maintenance \$2{,}000
 
 
 $$
-PW_{maint} = -2{,}000 \cdot (P/A, 8, 12)
+\text{PW}_{\text{maint}} = -2{,}000 \cdot (P/A, 8, 12)
 $$
 
 
@@ -1420,7 +1418,7 @@ Compute $(P/A, 8, 12) = [(1.08)^{12} - 1]/[0.08 \cdot (1.08)^{12}]$. $(1.08)^{12
 
 
 $$
-PW_{maint} = -2{,}000 \times 7.536 = -\$15{,}072
+\text{PW}_{\text{maint}} = -2{,}000 \times 7.536 = -\$15{,}072
 $$
 
 
@@ -1444,7 +1442,7 @@ $$
 
 
 $$
-PW_A = -25{,}000 - 15{,}072 - 16{,}170 - 11{,}887 + 1{,}191 = -\$66{,}938 \approx -\$67{,}000
+\text{PW}_A = -25{,}000 - 15{,}072 - 16{,}170 - 11{,}887 + 1{,}191 = -\$66{,}938 \approx -\$67{,}000
 $$
 
 
@@ -1472,7 +1470,7 @@ $$
 
 
 $$
-PW_{maint} = -4{,}000 \times (P/A, 8, 12) = -4{,}000 \times 7.536 = -\$30{,}144
+\text{PW}_{\text{maint}} = -4{,}000 \times (P/A, 8, 12) = -4{,}000 \times 7.536 = -\$30{,}144
 $$
 
 
@@ -1487,20 +1485,20 @@ $$
 - **PW of B's overhauls (years 3 and 9).**
 
 
-- Year 3: $-3{,}500/(1.08)^3 = -3{,}500/1.2597 = -\$2{,}778$.
+- Year 3: $-3,500/(1.08)^3 = -3,500/1.2597 = -\$2,778$.
 
-- Year 9: $-3{,}500/(1.08)^9 = -3{,}500/1.9990 = -\$1{,}751$.
+- Year 9: $-3,500/(1.08)^9 = -3,500/1.9990 = -\$1,751$.
 
 
 - **Total PW for B.**
 
 
 $$
-PW_B = -15{,}000 - 30{,}144 - 9{,}454 - 2{,}778 - 1{,}751 = -\$59{,}127 \approx -\$59{,}100
+\text{PW}_B = -15{,}000 - 30{,}144 - 9{,}454 - 2{,}778 - 1{,}751 = -\$59{,}127 \approx -\$59{,}100
 $$
 
 
-- **Decision.** $|PW_B| < |PW_A|$ (cost \$59{,}100 vs. \$67{,}000); **Reactor B is cheaper in present-worth terms by \$7{,}800**.
+- **Decision.** $|\text{PW}_B| < |\text{PW}_A|$ (cost \$59,100 vs. \$67,000); **Reactor B is cheaper in present-worth terms by \$7,800**.
 
 
 - **Cross-check.** The capitalized-cost analysis (previous section) also chose B. Two independent methods agreeing is the strongest verification.
@@ -1514,18 +1512,18 @@ A third comparison method, equivalent to PW but expressed as a uniform annual co
 
 
 $$
-AE = PW \cdot (A/P, i, n)
+\text{AE} = \text{PW} \cdot (A/P, i, n)
 $$
 
 
 For the same Reactor A vs. B problem:
 
 
-- AE$_A$ = $-66{,}938 \cdot (A/P, 8, 12)$. $(A/P) = 1/(P/A) = 1/7.536 = 0.1327$. AE$_A = -66{,}938 \times 0.1327 = -\$8{,}884$/yr.
+- AE$_A$ = $-66{,}938 \cdot (A/P, 8, 12)$. $(A/P) = 1/(P/A) = 1/7.536 = 0.1327$. AE$_A = -66,938 \times 0.1327 = -\$8,884$/yr.
 
-- AE$_B$ = $-59{,}127 \times 0.1327 = -\$7{,}847$/yr.
+- AE$_B$ = $-59,127 \times 0.1327 = -\$7,847$/yr.
 
-B is cheaper by about \$1{,}000/yr. AE is preferred when stakeholders think in annual budget terms.
+B is cheaper by about \$1,000/yr. AE is preferred when stakeholders think in annual budget terms.
 ```
 
 
@@ -1552,7 +1550,7 @@ Choose the desired product as the basis: 1 kg of product. Compute the mass of ea
 
 
 $$
-mass of species  i  per kg product = \frac{|\nu_i| M_i}{|\nu_P| M_P}
+\text{mass of species } i \text{ per kg product} = \frac{|\nu_i| M_i}{|\nu_P| M_P}
 $$
 
 
@@ -1566,7 +1564,7 @@ where $\nu_i$ is the stoichiometric coefficient of species $i$ (negative for rea
 
 
 $$
-GEP = \sum_{products} \frac{|\nu_i| M_i}{|\nu_P| M_P} p_i  -  \sum_{reactants} \frac{|\nu_j| M_j}{|\nu_P| M_P} p_j
+\text{GEP} = \sum_{\text{products}} \frac{|\nu_i| M_i}{|\nu_P| M_P} p_i  -  \sum_{\text{reactants}} \frac{|\nu_j| M_j}{|\nu_P| M_P} p_j
 $$
 
 
@@ -1641,9 +1639,9 @@ $$
 
 $$
 \begin{align}
-GEP_1 &= (1)(0.75) - (0.416)(1.85) - (0.584)(0.30) \\
+\text{GEP}_1 &= (1)(0.75) - (0.416)(1.85) - (0.584)(0.30) \\
 &= 0.750 - 0.770 - 0.175 \\
-&= -\$0.195  per kg VCM \approx -\$0.20/kg
+&= -\$0.195 \text{ per kg VCM} \approx -\$0.20\text{/kg}
 \end{align}
 $$
 
@@ -1671,9 +1669,9 @@ $$
 
 $$
 \begin{align}
-GEP_2 &= (1)(0.75) + (0.584)(0.30) - (0.480)(0.20) - (1.136)(0.25) - (0.256)(0) \\
+\text{GEP}_2 &= (1)(0.75) + (0.584)(0.30) - (0.480)(0.20) - (1.136)(0.25) - (0.256)(0) \\
 &= 0.750 + 0.175 - 0.096 - 0.284 - 0 \\
-&= +\$0.545  per kg VCM
+&= +\$0.545 \text{ per kg VCM}
 \end{align}
 $$
 
@@ -1703,9 +1701,9 @@ Consider a hypothetical reaction $\mathrm{A + B \rightarrow P + Q}$ where Q is a
 
 $$
 \begin{align}
-GEP &= (1.0)(1.00) + (0.1)(-0.40) - (0.6)(0.50) - (0.5)(0.30) \\
+\text{GEP} &= (1.0)(1.00) + (0.1)(-0.40) - (0.6)(0.50) - (0.5)(0.30) \\
 &= 1.000 - 0.040 - 0.300 - 0.150 \\
-&= +\$0.510  per kg P
+&= +\$0.510 \text{ per kg P}
 \end{align}
 $$
 
@@ -1736,7 +1734,7 @@ The Net Present Value (NPV) and Internal Rate of Return (IRR) are the two headli
 
 
 $$
-NPV = -I_0 + \sum_{k=1}^{n} \frac{CF_k}{(1+r)^k} + \frac{S_n + WC}{(1+r)^n}
+\text{NPV} = -I_0 + \sum_{k=1}^{n} \frac{CF_k}{(1+r)^k} + \frac{S_n + WC}{(1+r)^n}
 $$
 
 
@@ -1788,9 +1786,20 @@ The depreciation appears twice: once subtracted to compute taxable income $(S - 
 
 ```{note}
 **Straight-Line vs. MACRS**
-**Straight-line depreciation:** the simplest. $D_k = (I_0 - S_n)/n_{depreciable}$ for each year of the depreciable life. Often used for book purposes.
+**Straight-line depreciation:** the simplest. $D_k = (I_0 - S_n)/n_{\text{depreciable}}$ for each year of the depreciable life. Often used for book purposes.
 
 **MACRS (Modified Accelerated Cost Recovery System):** US tax depreciation. Chemical-plant equipment is typically 5- or 7-year MACRS class. The percentages of $I_0$ depreciated each year (5-year MACRS, half-year convention):
+
+
+| Year | \% of $I_0$ |
+| --- | --- |
+| 1 | 20.00 |
+| 2 | 32.00 |
+| 3 | 19.20 |
+| 4 | 11.52 |
+| 5 | 11.52 |
+| 6 | 5.76 |
+
 
 For 7-year MACRS the percentages start at 14.29\% in year 1 and finish in year 8 at 4.46\%. The point of accelerated depreciation is to bring the tax shield earlier in time, increasing NPV.
 ```
@@ -1915,7 +1924,7 @@ Sum of negatives: $-30 - 26.09 - 52.93 = -109.02$.
 
 
 $$
-NPV = 128.71 - 109.02 \approx +\$19.7  M
+\text{NPV} = 128.71 - 109.02 \approx +\$19.7 \text{ M}
 $$
 
 
@@ -1936,7 +1945,7 @@ The **Internal Rate of Return** (also called Investor's Rate of Return) is the d
 
 
 $$
-NPV(r = IRR) = 0
+\text{NPV}(r = \text{IRR}) = 0
 $$
 
 
@@ -1970,11 +1979,11 @@ A project costs \$100K at $t=0$ and returns \$40K, \$50K, \$30K at the ends of y
 
 
 $$
-IRR \approx 10\% + \frac{0.22}{0.22 + 1.44} \times 1\% = 10\% + 0.13\% = 10.13\%
+\text{IRR} \approx 10\% + \frac{0.22}{0.22 + 1.44} \times 1\% = 10\% + 0.13\% = 10.13\%
 $$
 
 
-- **Verification.** At 10.13\%, NPV is essentially zero  -  check: $-100 + 40/1.1013 + 50/1.2129 + 30/1.3361 = -100 + 36.32 + 41.22 + 22.45 = -0.01$. \checkmark
+- **Verification.** At 10.13\%, NPV is essentially zero  -  check: $-100 + 40/1.1013 + 50/1.2129 + 30/1.3361 = -100 + 36.32 + 41.22 + 22.45 = -0.01$. ✓
 ```
 
 
@@ -2028,7 +2037,7 @@ For non-conventional cash flows (multiple sign changes), IRR can have multiple s
 
 ```{note}
 **Common PE-Exam Mistakes**
-- Mixing nominal and effective rates. $i_{eff} = (1 + r/m)^m - 1$ always.
+- Mixing nominal and effective rates. $i_{\text{eff}} = (1 + r/m)^m - 1$ always.
 
 - PW comparisons over different lifetimes without using LCM.
 
@@ -2051,14 +2060,14 @@ For non-conventional cash flows (multiple sign changes), IRR can have multiple s
 ```{tip}
 **One-Page Formula Reference**
 **Time value:**
-$F = P(1+i)^n$, $P = F/(1+i)^n$, $P_{perp} = A/i$.
+$F = P(1+i)^n$, $P = F/(1+i)^n$, $P_{\text{perp}} = A/i$.
 $(P/A, i, n) = [(1+i)^n - 1]/[i(1+i)^n]$.
 $(A/P) = 1/(P/A)$.
-$i_{eff} = (1+r/m)^m - 1$.
+$i_{\text{eff}} = (1+r/m)^m - 1$.
 
 **Capitalized cost:** $K = C_I + C_R/[(1+i)^n - 1]$.
 
-**Cost escalation:** $C_2 = C_1 \cdot (CEPCI_2/CEPCI_1)$. Six-tenths rule: $C_2 = C_1 (S_2/S_1)^{0.6}$.
+**Cost escalation:** $C_2 = C_1 \cdot (\text{CEPCI}_2/\text{CEPCI}_1)$. Six-tenths rule: $C_2 = C_1 (S_2/S_1)^{0.6}$.
 
 **Bare-module:** $C_{BM} = F_{BM} \cdot C_P$.
 
@@ -2072,6 +2081,6 @@ No cold utility above pinch; no hot utility below; no heat across.
 
 **NPV / IRR:**
 $CF_k = (S_k - C_k - D_k)(1-t) + D_k$.
-$NPV = -I_0 + \sum CF_k/(1+r)^k + (S_n + WC)/(1+r)^n$.
+$\text{NPV} = -I_0 + \sum CF_k/(1+r)^k + (S_n + WC)/(1+r)^n$.
 IRR: $r$ where NPV $= 0$.
 ```
