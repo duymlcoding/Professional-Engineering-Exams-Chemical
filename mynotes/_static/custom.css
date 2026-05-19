@@ -39,18 +39,33 @@ mjx-container { font-size: 1.08em !important; }
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
+
+/* Hide the theme's default SVG icon injected before the title —
+   we rely solely on the colored left border to distinguish types */
+.admonition p.admonition-title .admonition-icon,
+.admonition p.admonition-title svg,
+.admonition p.admonition-title img {
+  display: none !important;
+}
+
+/* Remove any ::before pseudo-content the theme injects */
+.admonition p.admonition-title::before { content: none !important; }
 
 /* Important / Key Formula → deep blue */
 .admonition.important {
   background: #eef4ff;
   border-left-color: #3a86ff;
 }
-.admonition.important > .admonition-title {
+.admonition.important > p.admonition-title {
   color: #1d4ed8;
-}
-.admonition.important > .admonition-title::before {
-  content: "⚡ ";
+  background: #dbeafe;
+  margin: -1rem -1.2rem 0.75rem -1.2rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px 6px 0 0;
 }
 
 /* Note / Key Concept → teal-green */
@@ -58,11 +73,12 @@ mjx-container { font-size: 1.08em !important; }
   background: #f0fdf4;
   border-left-color: #22c55e;
 }
-.admonition.note > .admonition-title {
+.admonition.note > p.admonition-title {
   color: #15803d;
-}
-.admonition.note > .admonition-title::before {
-  content: "💡 ";
+  background: #dcfce7;
+  margin: -1rem -1.2rem 0.75rem -1.2rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px 6px 0 0;
 }
 
 /* Tip / Term Definitions → amber */
@@ -70,11 +86,12 @@ mjx-container { font-size: 1.08em !important; }
   background: #fffbeb;
   border-left-color: #f59e0b;
 }
-.admonition.tip > .admonition-title {
-  color: #b45309;
-}
-.admonition.tip > .admonition-title::before {
-  content: "📖 ";
+.admonition.tip > p.admonition-title {
+  color: #92400e;
+  background: #fef3c7;
+  margin: -1rem -1.2rem 0.75rem -1.2rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px 6px 0 0;
 }
 
 /* Warning → orange-red */
@@ -82,23 +99,25 @@ mjx-container { font-size: 1.08em !important; }
   background: #fff7ed;
   border-left-color: #f97316;
 }
-.admonition.warning > .admonition-title {
-  color: #c2410c;
-}
-.admonition.warning > .admonition-title::before {
-  content: "⚠️ ";
+.admonition.warning > p.admonition-title {
+  color: #9a3412;
+  background: #ffedd5;
+  margin: -1rem -1.2rem 0.75rem -1.2rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px 6px 0 0;
 }
 
-/* Caution / Common Mistakes → red */
+/* Caution / PE Exam Traps → red */
 .admonition.caution {
   background: #fff1f2;
   border-left-color: #ef4444;
 }
-.admonition.caution > .admonition-title {
-  color: #b91c1c;
-}
-.admonition.caution > .admonition-title::before {
-  content: "🚫 ";
+.admonition.caution > p.admonition-title {
+  color: #991b1b;
+  background: #fee2e2;
+  margin: -1rem -1.2rem 0.75rem -1.2rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px 6px 0 0;
 }
 
 /* ── prf:example boxes → orange card ───────────────────────── */

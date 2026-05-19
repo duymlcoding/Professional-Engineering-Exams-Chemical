@@ -35,7 +35,7 @@ A **system** is a specific region of space we are interested in (e.g., a reactor
 | Sensible heat | $\dot{Q}_s = \dot{m} c_p \Delta T$ | Temp change, no phase change |
 | Latent heat | $\dot{Q}_L = \dot{n} \Delta H_{phase}$ | Phase change |
 | Reactive energy balance | $\dot{Q} = \dot{\xi}\Delta\hat{H}_{rxn}^\circ + \sum_{out}\dot{n}_i\hat{h}_i - \sum_{in}\dot{n}_i\hat{h}_i$ | Reactors |
-| $\Delta H^\circ_{rxn}$ | $\sum_{prod}|\nu_i|\Delta\hat{H}_{f,i}^\circ - \sum_{react}|\nu_i|\Delta\hat{H}_{f,i}^\circ$ | Standard state |
+| $\Delta H^\circ_{rxn}$ | $\sum_{prod}\nu_i\Delta\hat{H}_{f,i}^\circ - \sum_{react}\nu_i\Delta\hat{H}_{f,i}^\circ$ | Standard state |
 
 ---
 
