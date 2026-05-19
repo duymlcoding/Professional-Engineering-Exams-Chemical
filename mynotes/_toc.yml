@@ -23,3 +23,15 @@ chapters:
 
   - file: chapters/chemicalandphaseequilibria
     title: "Chemical and Phase Equilibria"
+
+  - file: chapters/processdesign
+    title: "Process Design"
+
+  - file: chapters/processequipmentdesign
+    title: "Process Equipment Design"
+
+  - file: chapters/instrumentationandcontrol
+    title: "Instrumentation & Process Control"
+
+  - file: chapters/materialsofconstruction
+    title: "Materials of Construction"
