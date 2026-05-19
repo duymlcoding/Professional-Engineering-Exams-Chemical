@@ -20,10 +20,6 @@ h3 { font-size: 1.2rem;  font-weight: 600; margin-top: 1.5rem; }
 h4 { font-size: 1.05rem; font-weight: 600; }
 
 /* ── Light mode overrides ───────────────────────────────────── */
-html[data-theme="light"] body,
-html:not([data-theme]) body {
-  color: #1a1a2e;
-}
 html[data-theme="light"] h1,
 html:not([data-theme]) h1,
 html[data-theme="light"] h2,
@@ -36,7 +32,6 @@ html[data-theme="light"] h4,
 html:not([data-theme]) h4 { color: #374151; }
 
 /* ── Dark mode overrides ────────────────────────────────────── */
-html[data-theme="dark"] body  { color: #e2e8f0; }
 html[data-theme="dark"] h1,
 html[data-theme="dark"] h2,
 html[data-theme="dark"] h3,
@@ -177,13 +172,11 @@ html:not([data-theme]) .prf-prf-example {
   background: #fff8f0;
   border: 1.5px solid #fb923c;
   border-left: 5px solid #ea580c;
-  color: #1a1a2e;
 }
 html[data-theme="dark"] .prf-prf-example {
   background: #2a1500;
   border: 1.5px solid #c2410c;
   border-left: 5px solid #ea580c;
-  color: #e2e8f0;
 }
 .prf-prf-example {
   border-radius: 8px;
