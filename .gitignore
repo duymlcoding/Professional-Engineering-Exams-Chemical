@@ -55,5 +55,11 @@ Thumbs.db
 # LaTeX source files (not for public distribution)
 source/
 
+# Build/conversion scripts (internal use only)
+convert_tex.py
+update_styling.sh
+ds_*.py
+HANDOFF.md
+
 # Python virtual environment
 .venv/
