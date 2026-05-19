@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Chemical Equilibria &#8212; PE Chemical Engineering Exam Study Guide</title>
+    <title>Chemical and Phase Equilibria &#8212; PE Chemical Engineering Exam Study Guide</title>
   
   
   
@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=8c6b312c" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=efcdb63b" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5d1cebc" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -167,7 +167,7 @@
 <li class="toctree-l1"><a class="reference internal" href="heattransfer.html">Heat Transfer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="masstransfer.html">Mass Transfer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chemicalreactionengineering.html">Chemical Reaction Engineering</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Chemical Equilibria</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Chemical and Phase Equilibria</a></li>
 
 
 </ul>
@@ -305,7 +305,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Chemical Equilibria</h1>
+    <h1>Chemical and Phase Equilibria</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -315,7 +315,8 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Chemical Equilibria</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Chemical and Phase Equilibria</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-reference-key-equations">Quick Reference: Key Equations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gas-phase-chemical-equilibrium">Gas-Phase Chemical Equilibrium</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gibbs-free-energy-of-reaction">Gibbs Free Energy of Reaction</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-thermodynamic-equilibrium-constant-k-a">The Thermodynamic Equilibrium Constant (<span class="math notranslate nohighlight">\(K_a\)</span>)</a></li>
@@ -404,6 +405,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-solubility-diagrams-for-material-balances">Using Solubility Diagrams for Material Balances</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-exam-practice-problems">PE Exam Practice Problems</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-behavior-near-the-critical-point">Phase Behavior Near the Critical Point</a></li>
 </ul>
 </li>
@@ -419,9 +421,80 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="chemical-equilibria">
-<h1>Chemical Equilibria<a class="headerlink" href="#chemical-equilibria" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="chemical-and-phase-equilibria">
+<h1>Chemical and Phase Equilibria<a class="headerlink" href="#chemical-and-phase-equilibria" title="Link to this heading">#</a></h1>
+<section id="quick-reference-key-equations">
+<h2>Quick Reference: Key Equations<a class="headerlink" href="#quick-reference-key-equations" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Topic</p></th>
+<th class="head"><p>Formula</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Standard <span class="math notranslate nohighlight">\(\Delta G^\circ\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\Delta G^\circ_T = \sum_i \nu_i \Delta G^\circ_{f,i}\)</span></p></td>
+<td><p>Products minus reactants</p></td>
+</tr>
+<tr class="row-odd"><td><p>Equilibrium constant</p></td>
+<td><p><span class="math notranslate nohighlight">\(K_a = \exp(-\Delta G^\circ/RT)\)</span></p></td>
+<td><p>Thermodynamic <span class="math notranslate nohighlight">\(K\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(K_y\)</span> (ideal gas)</p></td>
+<td><p><span class="math notranslate nohighlight">\(K_a = K_y \cdot P^{\sum\nu_i}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(K_y = \prod y_i^{\nu_i}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Van’t Hoff</p></td>
+<td><p><span class="math notranslate nohighlight">\(d\ln K/dT = \Delta H^\circ_{rxn}/RT^2\)</span></p></td>
+<td><p>Temperature effect on <span class="math notranslate nohighlight">\(K\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Raoult’s Law</p></td>
+<td><p><span class="math notranslate nohighlight">\(y_i P = x_i P_i^{sat}\)</span></p></td>
+<td><p>Ideal VLE</p></td>
+</tr>
+<tr class="row-odd"><td><p>Modified Raoult’s</p></td>
+<td><p><span class="math notranslate nohighlight">\(y_i P = \gamma_i x_i P_i^{sat}\)</span></p></td>
+<td><p>Non-ideal liquid</p></td>
+</tr>
+<tr class="row-even"><td><p>Antoine equation</p></td>
+<td><p><span class="math notranslate nohighlight">\(\log_{10}P^{sat} = A - B/(T+C)\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(P\)</span> in mmHg or bar</p></td>
+</tr>
+<tr class="row-odd"><td><p>Henry’s Law</p></td>
+<td><p><span class="math notranslate nohighlight">\(p_A = H_A\,x_A\)</span></p></td>
+<td><p>Dilute solutions</p></td>
+</tr>
+<tr class="row-even"><td><p>Bubble point</p></td>
+<td><p><span class="math notranslate nohighlight">\(\sum x_i K_i = 1\)</span>, <span class="math notranslate nohighlight">\(K_i = P_i^{sat}/P\)</span></p></td>
+<td><p>Find <span class="math notranslate nohighlight">\(T\)</span> or <span class="math notranslate nohighlight">\(P\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Dew point</p></td>
+<td><p><span class="math notranslate nohighlight">\(\sum y_i/K_i = 1\)</span></p></td>
+<td><p>Find <span class="math notranslate nohighlight">\(T\)</span> or <span class="math notranslate nohighlight">\(P\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Flash (Rachford-Rice)</p></td>
+<td><p><span class="math notranslate nohighlight">\(\sum_i (z_i(K_i-1))/(1+\psi(K_i-1)) = 0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\psi=V/F\)</span>, vapor fraction</p></td>
+</tr>
+<tr class="row-odd"><td><p>Clausius-Clapeyron</p></td>
+<td><p><span class="math notranslate nohighlight">\(\ln(P_2/P_1) = (\Delta H_{vap}/R)(1/T_1 - 1/T_2)\)</span></p></td>
+<td><p>Approx. for vapor pressure</p></td>
+</tr>
+<tr class="row-even"><td><p>Activity coefficient</p></td>
+<td><p><span class="math notranslate nohighlight">\(\ln\gamma_i\)</span> from Margules, van Laar, or NRTL</p></td>
+<td><p>Non-ideal liquid</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fugacity (liquid)</p></td>
+<td><p><span class="math notranslate nohighlight">\(f_i^L = \gamma_i x_i P_i^{sat}\)</span></p></td>
+<td><p>Modified Raoult basis</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
 <p>This study guide covers the principles of chemical equilibrium for gas-phase reactions. These calculations determine the final state of a system, representing the maximum possible conversion. It is important to note that equilibrium does not predict the reaction kinetics, which is the speed at which the reaction reaches equilibrium.</p>
+</section>
 <section id="gas-phase-chemical-equilibrium">
 <h2>Gas-Phase Chemical Equilibrium<a class="headerlink" href="#gas-phase-chemical-equilibrium" title="Link to this heading">#</a></h2>
 <p>This section introduces the key thermodynamic equations used to describe and calculate chemical equilibrium for gas-phase reactions.</p>
@@ -524,7 +597,7 @@
 <section id="example-problems">
 <h3>Example Problems<a class="headerlink" href="#example-problems" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-0">
-<p class="admonition-title"><span class="caption-number">Example 99 </span> (Methanol Reforming for Hydrogen Production)</p>
+<p class="admonition-title"><span class="caption-number">Example 109 </span> (Methanol Reforming for Hydrogen Production)</p>
 <section class="example-content" id="proof-content">
 <p>Hydrogen for a fuel cell can be formed by the reaction:</p>
 <div class="math notranslate nohighlight">
@@ -637,7 +710,7 @@
 <p class="sd-card-text">The equilibrium conversion is <strong>92.3%</strong>.</p>
 </div>
 </details><div class="proof example admonition" id="example-1">
-<p class="admonition-title"><span class="caption-number">Example 100 </span> (Dehydrogenation of Butene)</p>
+<p class="admonition-title"><span class="caption-number">Example 110 </span> (Dehydrogenation of Butene)</p>
 <section class="example-content" id="proof-content">
 <p>The catalytic reaction <span class="math notranslate nohighlight">\(\text{C}_4\text{H}_8\text{(g)} \rightleftharpoons \text{C}_4\text{H}_6\text{(g)} + \text{H}_2\text{(g)}\)</span> takes place at <span class="math notranslate nohighlight">\(900^\circ\text{C}\)</span> and 1.0 bar. The feed contains steam and <span class="math notranslate nohighlight">\(\text{C}_4\text{H}_8\)</span> in a 10:1 ratio. At this temperature, <span class="math notranslate nohighlight">\(K_a = 0.329\)</span>.</p>
 <p>What is the equilibrium conversion with steam present? Does equilibrium conversion increase or decrease if steam is not fed to the system? Explain why.</p>
@@ -771,7 +844,7 @@
 <section id="id1">
 <h3>Example Problems<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-2">
-<p class="admonition-title"><span class="caption-number">Example 101 </span> (Adiabatic Equilibrium Temperature and Conversion)</p>
+<p class="admonition-title"><span class="caption-number">Example 111 </span> (Adiabatic Equilibrium Temperature and Conversion)</p>
 <section class="example-content" id="proof-content">
 <p>For the reversible, liquid-phase reaction, A <span class="math notranslate nohighlight">\(\leftrightarrow\)</span> B, determine the adiabatic equilibrium temperature and conversion when pure A is fed to the reactor at 300 K.</p>
 <ul class="simple">
@@ -804,7 +877,7 @@
 </ul>
 </div>
 </details><div class="proof example admonition" id="example-3">
-<p class="admonition-title"><span class="caption-number">Example 102 </span> (Heat Duty for an Isothermal Reactor)</p>
+<p class="admonition-title"><span class="caption-number">Example 112 </span> (Heat Duty for an Isothermal Reactor)</p>
 <section class="example-content" id="proof-content">
 <p>100 mol/h of <span class="math notranslate nohighlight">\(\text{N}_2\)</span> and 300 mol/h of <span class="math notranslate nohighlight">\(\text{H}_2\)</span> are fed to an isothermal reactor at <span class="math notranslate nohighlight">\(350^\circ\text{C}\)</span> to carry out the ammonia synthesis reaction:</p>
 <div class="math notranslate nohighlight">
@@ -951,7 +1024,7 @@
 <section id="id2">
 <h3>Example Problems<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-4">
-<p class="admonition-title"><span class="caption-number">Example 103 </span> (Water-Gas Shift Reaction)</p>
+<p class="admonition-title"><span class="caption-number">Example 113 </span> (Water-Gas Shift Reaction)</p>
 <section class="example-content" id="proof-content">
 <p>Calculate the equilibrium composition at 750 K and 1 bar for the water-gas shift reaction for a feed of 2 mol/s CO and 2 mol/s H<span class="math notranslate nohighlight">\(_{2}\)</span>O. Use both the extent of reaction method and Gibbs minimization with temperature-dependent data.</p>
 <div class="math notranslate nohighlight">
@@ -1010,7 +1083,7 @@
 <p class="sd-card-text">Moles H<span class="math notranslate nohighlight">\(_{2}\)</span> = Moles CO<span class="math notranslate nohighlight">\(_{2}\)</span> = <span class="math notranslate nohighlight">\(\xi = \mathbf{1.422}\)</span> mol.</p>
 </div>
 </details><div class="proof example admonition" id="example-5">
-<p class="admonition-title"><span class="caption-number">Example 104 </span> (Methane Steam Reforming (Multiple Reactions))</p>
+<p class="admonition-title"><span class="caption-number">Example 114 </span> (Methane Steam Reforming (Multiple Reactions))</p>
 <section class="example-content" id="proof-content">
 <p>Calculate the equilibrium composition at 950 K and 3.0 bar for a feed of 1.0 mol/s CH<span class="math notranslate nohighlight">\(_{4}\)</span> and 1.0 mol/s H<span class="math notranslate nohighlight">\(_{2}\)</span>O. The possible products are CO, CO<span class="math notranslate nohighlight">\(_{2}\)</span>, and H<span class="math notranslate nohighlight">\(_{2}\)</span>. Use the Gibbs minimization method.</p>
 </section>
@@ -1293,7 +1366,7 @@
 <section id="id3">
 <h2>Example Problems<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
 <div class="proof example admonition" id="example-6">
-<p class="admonition-title"><span class="caption-number">Example 105 </span> (Bubble Temperature Calculation)</p>
+<p class="admonition-title"><span class="caption-number">Example 115 </span> (Bubble Temperature Calculation)</p>
 <section class="example-content" id="proof-content">
 <p>Calculate the bubble temperature at 85 kPa for an ideal binary liquid solution with a composition of <span class="math notranslate nohighlight">\(x_1 = 0.40\)</span>. The saturation pressures are given by the following Antoine equations, where T is in <span class="math notranslate nohighlight">\(^\circ\)</span>C and P is in kPa:</p>
 <div class="math notranslate nohighlight">
@@ -1327,7 +1400,7 @@
 <p class="sd-card-text"><strong>Bubble Temperature: <span class="math notranslate nohighlight">\(T = 84.4^\circ\)</span>C</strong></p>
 </div>
 </details><div class="proof example admonition" id="example-7">
-<p class="admonition-title"><span class="caption-number">Example 106 </span> (Isothermal Flash Calculation)</p>
+<p class="admonition-title"><span class="caption-number">Example 116 </span> (Isothermal Flash Calculation)</p>
 <section class="example-content" id="proof-content">
 <p>A fixed-volume tank initially contains 1.0 mol of pure component A as a vapor at 1.9 bar. The saturation pressure of A at the tank temperature is <span class="math notranslate nohighlight">\(P_A^{sat} = 2.0\)</span> bar. Then, 1.0 mol of liquid component B, with a saturation pressure of <span class="math notranslate nohighlight">\(P_B^{sat} = 1.0\)</span> bar, is added to the tank. After the system reaches equilibrium at the same temperature, the final pressure is 1.44 bar. Assuming ideal behavior, determine the phases present, their compositions, and the number of moles of each phase.</p>
 </section>
@@ -1464,7 +1537,7 @@
 <section id="example-problem">
 <h3>Example Problem<a class="headerlink" href="#example-problem" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-8">
-<p class="admonition-title"><span class="caption-number">Example 107 </span> (Single-Stage Stripping Process)</p>
+<p class="admonition-title"><span class="caption-number">Example 117 </span> (Single-Stage Stripping Process)</p>
 <section class="example-content" id="proof-content">
 <p>A stream of dry air at 5 bar and 20<span class="math notranslate nohighlight">\(^\circ\)</span>C is used to strip a volatile organic compound (VOC) from a wastewater stream. The process occurs in a single equilibrium stage. The Henry’s constant for the VOC in water at this temperature is 2.5 bar. The inlet water contains the VOC at a mole fraction of 0.0005. What flow rate of air (in moles per mole of water) is needed to remove 95% of the VOC from the water?</p>
 </section>
@@ -1667,7 +1740,7 @@ Removal efficiency: 95%</p>
 <section id="id4">
 <h3>Example Problems<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-9">
-<p class="admonition-title"><span class="caption-number">Example 108 </span> (Melting Point of Ice under Pressure)</p>
+<p class="admonition-title"><span class="caption-number">Example 118 </span> (Melting Point of Ice under Pressure)</p>
 <section class="example-content" id="proof-content">
 <p>The molar heat of fusion of ice is 335 J/g. The densities of liquid water and ice at 0<span class="math notranslate nohighlight">\(^\circ\)</span>C are 1.00 g/cm<span class="math notranslate nohighlight">\(^3\)</span> and 0.915 g/cm<span class="math notranslate nohighlight">\(^3\)</span>, respectively. Calculate the melting temperature of ice when the system pressure is 110 MPa.</p>
 </section>
@@ -1729,7 +1802,7 @@ Removal efficiency: 95%</p>
 \[T_2 = 0.96998 \times 273.15 = 264.95 \text{ K}\]</div>
 </div>
 </details><div class="proof example admonition" id="example-10">
-<p class="admonition-title"><span class="caption-number">Example 109 </span> (Estimate <span class="math notranslate nohighlight">\(\Delta H_{vap}\)</span> from the Antoine Equation)</p>
+<p class="admonition-title"><span class="caption-number">Example 119 </span> (Estimate <span class="math notranslate nohighlight">\(\Delta H_{vap}\)</span> from the Antoine Equation)</p>
 <section class="example-content" id="proof-content">
 <p>Given the Antoine equation for benzene, <span class="math notranslate nohighlight">\(\log_{10}P^{sat} = 6.90 - 1211/(220.8 + T)\)</span>, where <span class="math notranslate nohighlight">\(P^{sat}\)</span> is in torr and <span class="math notranslate nohighlight">\(T\)</span> is in <span class="math notranslate nohighlight">\(^\circ\)</span>C, estimate the heat of vaporization of benzene at 60<span class="math notranslate nohighlight">\(^\circ\)</span>C.</p>
 </section>
@@ -1847,7 +1920,7 @@ Removal efficiency: 95%</p>
 <section id="id5">
 <h3>Example Problems<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-11">
-<p class="admonition-title"><span class="caption-number">Example 110 </span> (Bubble Pressure using the Margules Equation)</p>
+<p class="admonition-title"><span class="caption-number">Example 120 </span> (Bubble Pressure using the Margules Equation)</p>
 <section class="example-content" id="proof-content">
 <p>A vapor-phase mixture containing 30 mol% component 1 and 70 mol% component 2 is compressed at a fixed temperature until it is completely liquefied. The saturation pressures are <span class="math notranslate nohighlight">\(P_1^{sat} = 0.82\)</span> bar and <span class="math notranslate nohighlight">\(P_2^{sat} = 1.93\)</span> bar. Experimental data shows that the bubble pressure of a 50:50 mixture of these components is 1.08 bar.</p>
 <ul class="simple">
@@ -1918,7 +1991,7 @@ Removal efficiency: 95%</p>
 <p class="sd-card-text">As predicted, the ideal pressure (1.60 bar) is significantly higher than the real pressure (1.39 bar).</p>
 </div>
 </details><div class="proof example admonition" id="example-12">
-<p class="admonition-title"><span class="caption-number">Example 111 </span> (Bubble Temperature using the Van Laar Equation)</p>
+<p class="admonition-title"><span class="caption-number">Example 121 </span> (Bubble Temperature using the Van Laar Equation)</p>
 <section class="example-content" id="proof-content">
 <p>Calculate the bubble temperature and the equilibrium vapor composition for a binary system with a liquid mole fraction of <span class="math notranslate nohighlight">\(x_1 = 0.40\)</span> at a total pressure of 70 kPa. The system is non-ideal and is described by the two-parameter Van Laar model with <span class="math notranslate nohighlight">\(A_{12}=1.2\)</span> and <span class="math notranslate nohighlight">\(A_{21}=0.8\)</span>. The saturation pressures are given by the Antoine equations (T in <span class="math notranslate nohighlight">\(^\circ\)</span>C, P in kPa):</p>
 <div class="math notranslate nohighlight">
@@ -2014,7 +2087,7 @@ Removal efficiency: 95%</p>
 <section id="conceptual-examples-of-fugacity">
 <h2>Conceptual Examples of Fugacity<a class="headerlink" href="#conceptual-examples-of-fugacity" title="Link to this heading">#</a></h2>
 <div class="proof example admonition" id="example-13">
-<p class="admonition-title"><span class="caption-number">Example 112 </span> (Fugacity in a Binary VLE System)</p>
+<p class="admonition-title"><span class="caption-number">Example 122 </span> (Fugacity in a Binary VLE System)</p>
 <section class="example-content" id="proof-content">
 <p>A binary liquid mixture containing 70 mol% component A and 30 mol% component B is in equilibrium with its vapor. The partial pressures in the vapor phase are measured to be <span class="math notranslate nohighlight">\(P_A = 0.2\)</span> bar and <span class="math notranslate nohighlight">\(P_B = 0.8\)</span> bar. Which component has the higher fugacity in the liquid phase?</p>
 </section>
@@ -2040,7 +2113,7 @@ Removal efficiency: 95%</p>
 <p class="sd-card-text"><strong>Conclusion</strong>: Component B has the higher fugacity in the liquid (<span class="math notranslate nohighlight">\(\hat{f}_B^L &gt; \hat{f}_A^L\)</span>), even though it is the minority component by mole fraction (<span class="math notranslate nohighlight">\(x_B &lt; x_A\)</span>). This indicates component B is much more volatile than component A.</p>
 </div>
 </details><div class="proof example admonition" id="example-14">
-<p class="admonition-title"><span class="caption-number">Example 113 </span> (Fugacity of Salt in Water)</p>
+<p class="admonition-title"><span class="caption-number">Example 123 </span> (Fugacity of Salt in Water)</p>
 <section class="example-content" id="proof-content">
 <p>Sufficient NaCl is added to water at 25<span class="math notranslate nohighlight">\(^\circ\)</span>C so that a saturated solution is formed, with solid salt crystals present at the bottom. Does the water or the salt have a higher fugacity in the liquid solution?</p>
 </section>
@@ -2152,7 +2225,7 @@ The Gibbs Phase Rule determines the number of independent intensive variables th
 <section id="id6">
 <h3>Example Problems<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-15">
-<p class="admonition-title"><span class="caption-number">Example 114 </span> (Three-Phase Mass Balance)</p>
+<p class="admonition-title"><span class="caption-number">Example 124 </span> (Three-Phase Mass Balance)</p>
 <section class="example-content" id="proof-content">
 <p>One mole of a liquid mixture containing 25 mol% component A and 75 mol% component B is heated at constant pressure. When 0.05 moles of vapor have formed, the system is found to be at the three-phase equilibrium temperature. At this temperature, the compositions of the coexisting phases are:</p>
 <ul class="simple">
@@ -2231,7 +2304,7 @@ b) <span class="math notranslate nohighlight">\(0.27 L_\alpha + 0.83 L_\beta = 0
 </ul>
 </div>
 </details><div class="proof example admonition" id="example-16">
-<p class="admonition-title"><span class="caption-number">Example 115 </span> (Effect of Cooling from a Three-Phase State)</p>
+<p class="admonition-title"><span class="caption-number">Example 125 </span> (Effect of Cooling from a Three-Phase State)</p>
 <section class="example-content" id="proof-content">
 <p>A cyclohexane-water system is at equilibrium at 50<span class="math notranslate nohighlight">\(^\circ\)</span>C and a fixed pressure. The system contains three phases: a vapor phase, a water-rich liquid phase, and a cyclohexane-rich liquid phase. If the temperature is now decreased to 45<span class="math notranslate nohighlight">\(^\circ\)</span>C while keeping the pressure constant, what change will occur in the system?</p>
 </section>
@@ -2304,7 +2377,7 @@ b) <span class="math notranslate nohighlight">\(0.27 L_\alpha + 0.83 L_\beta = 0
 <section id="id7">
 <h3>Example Problems<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-17">
-<p class="admonition-title"><span class="caption-number">Example 116 </span> (Condensation of an Immiscible System)</p>
+<p class="admonition-title"><span class="caption-number">Example 126 </span> (Condensation of an Immiscible System)</p>
 <section class="example-content" id="proof-content">
 <p>A gas mixture containing 75 mol% component A and 25 mol% component B is compressed isothermally. At a total pressure of 1.6 bar, liquid A begins to condense. As the pressure is increased further, liquid B begins to condense at a total pressure of 2.4 bar. What are the saturation pressures of pure A and pure B at this temperature?</p>
 </section>
@@ -2333,7 +2406,7 @@ b) <span class="math notranslate nohighlight">\(0.27 L_\alpha + 0.83 L_\beta = 0
 \[P_B = P_B^{sat} \implies P_B^{sat} = 1.2 \, \text{bar}\]</div>
 </div>
 </details><div class="proof example admonition" id="example-18">
-<p class="admonition-title"><span class="caption-number">Example 117 </span> (Identifying Phases in an Immiscible System)</p>
+<p class="admonition-title"><span class="caption-number">Example 127 </span> (Identifying Phases in an Immiscible System)</p>
 <section class="example-content" id="proof-content">
 <p>A closed system contains 6 mol of component A and 4 mol of component B. The system is at equilibrium at 100<span class="math notranslate nohighlight">\(^\circ\)</span>C and a total pressure of 2.0 atm. A and B are completely immiscible in the liquid phase. Their saturation pressures at 100<span class="math notranslate nohighlight">\(^\circ\)</span>C are known to be <span class="math notranslate nohighlight">\(P_A^{sat} = 2.0\)</span> atm and <span class="math notranslate nohighlight">\(P_B^{sat} = 0.5\)</span> atm. Determine the phases present at equilibrium.</p>
 </section>
@@ -2517,7 +2590,7 @@ b) <span class="math notranslate nohighlight">\(0.27 L_\alpha + 0.83 L_\beta = 0
 <section id="id8">
 <h3>Example Problems<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-19">
-<p class="admonition-title"><span class="caption-number">Example 118 </span> (Flash with Known Vaporized Fraction)</p>
+<p class="admonition-title"><span class="caption-number">Example 128 </span> (Flash with Known Vaporized Fraction)</p>
 <section class="example-content" id="proof-content">
 <p>A 50/50 molar liquid mixture of benzene(1) and toluene(2) is flashed to a drum operating at 1.4 bar. At the resulting equilibrium temperature, it is known that 25% of the feed vaporizes. The saturation pressure of benzene at this temperature is <span class="math notranslate nohighlight">\(P_1^{sat} = 2.0\)</span> bar. Assuming an ideal solution, what is the composition of the vapor leaving the drum?</p>
 </section>
@@ -2546,7 +2619,7 @@ Goal: Find the vapor composition, <span class="math notranslate nohighlight">\(y
 <p class="sd-card-text">The vapor composition is approximately <strong>64.5% benzene</strong> (<span class="math notranslate nohighlight">\(y_1 = 0.645\)</span>) and 35.5% toluene.</p>
 </div>
 </details><div class="proof example admonition" id="example-20">
-<p class="admonition-title"><span class="caption-number">Example 119 </span> (Isothermal Flash Calculation)</p>
+<p class="admonition-title"><span class="caption-number">Example 129 </span> (Isothermal Flash Calculation)</p>
 <section class="example-content" id="proof-content">
 <p>A liquid feed containing 60 mol% component 1 and 40 mol% component 2 is flashed to an outlet condition of 150<span class="math notranslate nohighlight">\(^\circ\)</span>C and 1210 kPa. The system behaves as an ideal solution. The saturation pressures (in kPa) are given by the Antoine equations, where T is in <span class="math notranslate nohighlight">\(^\circ\)</span>C:</p>
 <div class="math notranslate nohighlight">
@@ -2643,7 +2716,7 @@ Goal: Find the vapor composition, <span class="math notranslate nohighlight">\(y
 \[x_{NaCl} = \frac{40}{40 + 100} = \frac{40}{140} \approx 0.286\]</div>
 </div>
 <div class="proof example admonition" id="example-21">
-<p class="admonition-title"><span class="caption-number">Example 120 </span> (Crystallizer Material Balance)</p>
+<p class="admonition-title"><span class="caption-number">Example 130 </span> (Crystallizer Material Balance)</p>
 <section class="example-content" id="proof-content">
 <p>A saturated aqueous solution of potassium dichromate (K<span class="math notranslate nohighlight">\(_2\)</span>Cr<span class="math notranslate nohighlight">\(_2\)</span>O<span class="math notranslate nohighlight">\(_7\)</span>) at 60<span class="math notranslate nohighlight">\(^\circ\)</span>C is fed to a crystallizer that operates at 20<span class="math notranslate nohighlight">\(^\circ\)</span>C. The outlet slurry is filtered, yielding 200 kg of solid K<span class="math notranslate nohighlight">\(_2\)</span>Cr<span class="math notranslate nohighlight">\(_2\)</span>O<span class="math notranslate nohighlight">\(_7\)</span> crystals and 400 kg of saturated solution at 20<span class="math notranslate nohighlight">\(^\circ\)</span>C. How much water was evaporated in the crystallizer?</p>
 </section>
@@ -2709,6 +2782,86 @@ c) Saturated solution (<span class="math notranslate nohighlight">\(m_{sol} = 40
 <p class="sd-card-text">Approximately <strong>282 kg</strong> of water must be evaporated in the crystallizer.</p>
 </div>
 </details></section>
+</section>
+<hr class="docutils" />
+<section id="pe-exam-practice-problems">
+<h2>PE Exam Practice Problems<a class="headerlink" href="#pe-exam-practice-problems" title="Link to this heading">#</a></h2>
+<div class="proof example admonition" id="example-22">
+<p class="admonition-title"><span class="caption-number">Example 131 </span> (Practice Problem 1 — Bubble Point Calculation (Raoult’s Law))</p>
+<section class="example-content" id="proof-content">
+<p>A liquid mixture of 30 mol% benzene (1) and 70 mol% toluene (2) is at 1 atm total pressure. Use Raoult’s Law to find the bubble point temperature and vapor composition.</p>
+<p>Antoine constants (<span class="math notranslate nohighlight">\(\log_{10} P^{sat}\)</span> in mmHg, <span class="math notranslate nohighlight">\(T\)</span> in °C):</p>
+<ul class="simple">
+<li><p>Benzene: <span class="math notranslate nohighlight">\(A = 6.905\)</span>, <span class="math notranslate nohighlight">\(B = 1211\)</span>, <span class="math notranslate nohighlight">\(C = 220.8\)</span></p></li>
+<li><p>Toluene: <span class="math notranslate nohighlight">\(A = 6.953\)</span>, <span class="math notranslate nohighlight">\(B = 1344\)</span>, <span class="math notranslate nohighlight">\(C = 219.5\)</span></p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(P_{total} = 760\)</span> mmHg.</p>
+</section>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Step 1: Bubble point condition</strong></p>
+<p class="sd-card-text">At bubble point, the first vapor bubble forms. The condition is:</p>
+<div class="math notranslate nohighlight">
+\[\sum x_i K_i = 1 \quad \text{where} \quad K_i = P_i^{sat}(T)/P\]</div>
+<p class="sd-card-text"><strong>Step 2: Iterate on temperature</strong></p>
+<p class="sd-card-text">Try <span class="math notranslate nohighlight">\(T = 95°C\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[P_1^{sat} = 10^{6.905 - 1211/(95+220.8)} = 10^{6.905 - 3.835} = 10^{3.070} = 1175 \text{ mmHg}\]</div>
+<div class="math notranslate nohighlight">
+\[P_2^{sat} = 10^{6.953 - 1344/(95+219.5)} = 10^{6.953 - 4.275} = 10^{2.678} = 476 \text{ mmHg}\]</div>
+<div class="math notranslate nohighlight">
+\[\sum x_i P_i^{sat}/P = (0.30 \times 1175 + 0.70 \times 476)/760 = (352.5 + 333.2)/760 = 685.7/760 = 0.902 &lt; 1\]</div>
+<p class="sd-card-text">Temperature too low. Try <span class="math notranslate nohighlight">\(T = 100°C\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[P_1^{sat} = 10^{6.905 - 1211/320.8} = 10^{3.130} = 1349 \text{ mmHg}\]</div>
+<div class="math notranslate nohighlight">
+\[P_2^{sat} = 10^{6.953 - 1344/319.5} = 10^{2.742} = 552 \text{ mmHg}\]</div>
+<div class="math notranslate nohighlight">
+\[\sum x_i K_i = (0.30 \times 1349 + 0.70 \times 552)/760 = (404.7 + 386.4)/760 = 1.041 &gt; 1\]</div>
+<p class="sd-card-text">Interpolating: <span class="math notranslate nohighlight">\(T_{bubble} \approx 95 + 5 \times (1 - 0.902)/(1.041 - 0.902) \approx 95 + 3.5 = \mathbf{98.5°C}\)</span></p>
+<p class="sd-card-text"><strong>Step 3: Vapor composition at bubble point</strong> (use <span class="math notranslate nohighlight">\(T \approx 98.5°C\)</span>, <span class="math notranslate nohighlight">\(K_i = P_i^{sat}/P\)</span>)</p>
+<div class="math notranslate nohighlight">
+\[y_1 = x_1 K_1 = 0.30 \times (1349/760) \approx 0.532 \quad y_2 = 0.468\]</div>
+</div>
+</details><hr class="docutils" />
+<div class="proof example admonition" id="example-23">
+<p class="admonition-title"><span class="caption-number">Example 132 </span> (Practice Problem 2 — Chemical Equilibrium: <span class="math notranslate nohighlight">\(K\)</span> and Conversion)</p>
+<section class="example-content" id="proof-content">
+<p>The gas-phase reaction <span class="math notranslate nohighlight">\(\text{N}_2\text{O}_4(g) \rightleftharpoons 2\,\text{NO}_2(g)\)</span> has <span class="math notranslate nohighlight">\(\Delta G^\circ_{298} = +4.7\)</span> kJ/mol and <span class="math notranslate nohighlight">\(\Delta H^\circ_{rxn} = +57.2\)</span> kJ/mol.</p>
+<p><strong>(a)</strong> What is <span class="math notranslate nohighlight">\(K_a\)</span> at 298 K?</p>
+<p><strong>(b)</strong> Is equilibrium conversion higher or lower at 400 K? Calculate <span class="math notranslate nohighlight">\(K_a\)</span> at 400 K.</p>
+<p><strong>©</strong> Does increasing total pressure favor products or reactants?</p>
+</section>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Part (a): <span class="math notranslate nohighlight">\(K_a\)</span> at 298 K</strong></p>
+<div class="math notranslate nohighlight">
+\[K_a = \exp\!\left(-\frac{\Delta G^\circ}{RT}\right) = \exp\!\left(-\frac{4700}{8.314 \times 298}\right) = \exp(-1.897) = \mathbf{0.150}\]</div>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(K_a &lt; 1\)</span> means reactants are favored at 298 K.</p>
+<p class="sd-card-text"><strong>Part (b): <span class="math notranslate nohighlight">\(K_a\)</span> at 400 K (Van’t Hoff)</strong></p>
+<div class="math notranslate nohighlight">
+\[\ln\frac{K_2}{K_1} = \frac{\Delta H^\circ}{R}\left(\frac{1}{T_1} - \frac{1}{T_2}\right) = \frac{57200}{8.314}\left(\frac{1}{298} - \frac{1}{400}\right)\]</div>
+<div class="math notranslate nohighlight">
+\[= 6880 \times (3.356\times10^{-3} - 2.500\times10^{-3}) = 6880 \times 8.56\times10^{-4} = 5.89\]</div>
+<div class="math notranslate nohighlight">
+\[K_2 = 0.150 \times e^{5.89} = 0.150 \times 361.7 = \mathbf{54.3}\]</div>
+<p class="sd-card-text">At 400 K, <span class="math notranslate nohighlight">\(K_a = 54.3 \gg 1\)</span> — products (NO₂) are strongly favored. Higher temperature <strong>increases</strong> conversion for this endothermic reaction.</p>
+<p class="sd-card-text"><strong>Part ©: Pressure effect</strong></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\sum\nu_i = 2 - 1 = +1\)</span> (reaction increases moles). Higher total pressure shifts equilibrium <strong>toward reactants</strong> (Le Châtelier’s principle — the system compresses by favoring fewer moles). Increasing pressure <strong>decreases</strong> NO₂ yield.</p>
+</div>
+</details><div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p><strong>PE Exam Traps — Chemical and Phase Equilibria</strong></p>
+<ul class="simple">
+<li><p><strong><span class="math notranslate nohighlight">\(K_a\)</span> is dimensionless but <span class="math notranslate nohighlight">\(K_y\)</span> is not.</strong> The thermodynamic equilibrium constant <span class="math notranslate nohighlight">\(K_a = K_y \cdot P^{\sum\nu_i}\)</span> (with <span class="math notranslate nohighlight">\(P\)</span> in bar). If <span class="math notranslate nohighlight">\(\sum\nu_i \neq 0\)</span>, changing pressure changes <span class="math notranslate nohighlight">\(K_y\)</span> even though <span class="math notranslate nohighlight">\(K_a\)</span> is fixed by temperature alone. Forgetting the pressure factor in gas-phase equilibrium is extremely common.</p></li>
+<li><p><strong>Van’t Hoff direction:</strong> For exothermic reactions (<span class="math notranslate nohighlight">\(\Delta H^\circ &lt; 0\)</span>), increasing <span class="math notranslate nohighlight">\(T\)</span> decreases <span class="math notranslate nohighlight">\(K\)</span>. For endothermic (<span class="math notranslate nohighlight">\(\Delta H^\circ &gt; 0\)</span>), increasing <span class="math notranslate nohighlight">\(T\)</span> increases <span class="math notranslate nohighlight">\(K\)</span>. Le Châtelier’s principle and Van’t Hoff must be consistent — always check the sign of <span class="math notranslate nohighlight">\(\Delta H^\circ\)</span> before stating whether higher <span class="math notranslate nohighlight">\(T\)</span> helps or hurts yield.</p></li>
+<li><p><strong>Bubble vs. dew point:</strong> At the <strong>bubble point</strong>, you know the liquid composition (<span class="math notranslate nohighlight">\(x_i\)</span>) and the condition <span class="math notranslate nohighlight">\(\sum x_i K_i = 1\)</span>. At the <strong>dew point</strong>, you know the vapor composition (<span class="math notranslate nohighlight">\(y_i\)</span>) and the condition <span class="math notranslate nohighlight">\(\sum y_i/K_i = 1\)</span>. Mixing these up inverts the problem entirely.</p></li>
+<li><p><strong>Raoult’s Law requires ideal liquid AND ideal vapor.</strong> If activity coefficients are given (<span class="math notranslate nohighlight">\(\gamma_i \neq 1\)</span>), use modified Raoult’s: <span class="math notranslate nohighlight">\(y_i P = \gamma_i x_i P_i^{sat}\)</span>. Neglecting <span class="math notranslate nohighlight">\(\gamma_i\)</span> when it’s provided leads to wrong bubble/dew point temperatures.</p></li>
+<li><p><strong>Flash calculation: <span class="math notranslate nohighlight">\(\psi\)</span> is the vapor fraction, not liquid fraction.</strong> In the Rachford-Rice equation, <span class="math notranslate nohighlight">\(\psi = V/F\)</span> varies between 0 (all liquid, bubble point) and 1 (all vapor, dew point). If your answer gives <span class="math notranslate nohighlight">\(\psi\)</span> outside <span class="math notranslate nohighlight">\([0,1]\)</span>, the feed is either entirely liquid or entirely vapor at those conditions — not a two-phase flash.</p></li>
+</ul>
+</div>
 </section>
 <section id="phase-behavior-near-the-critical-point">
 <h2>Phase Behavior Near the Critical Point<a class="headerlink" href="#phase-behavior-near-the-critical-point" title="Link to this heading">#</a></h2>
@@ -2793,7 +2946,8 @@ The transition into and out of the supercritical state involves unique and obser
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Chemical Equilibria</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Chemical and Phase Equilibria</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-reference-key-equations">Quick Reference: Key Equations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gas-phase-chemical-equilibrium">Gas-Phase Chemical Equilibrium</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gibbs-free-energy-of-reaction">Gibbs Free Energy of Reaction</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-thermodynamic-equilibrium-constant-k-a">The Thermodynamic Equilibrium Constant (<span class="math notranslate nohighlight">\(K_a\)</span>)</a></li>
@@ -2882,6 +3036,7 @@ The transition into and out of the supercritical state involves unique and obser
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-solubility-diagrams-for-material-balances">Using Solubility Diagrams for Material Balances</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-exam-practice-problems">PE Exam Practice Problems</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-behavior-near-the-critical-point">Phase Behavior Near the Critical Point</a></li>
 </ul>
 </li>

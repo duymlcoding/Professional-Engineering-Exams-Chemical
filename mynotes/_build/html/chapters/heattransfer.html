@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=8c6b312c" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=efcdb63b" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5d1cebc" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -168,7 +168,7 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Heat Transfer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="masstransfer.html">Mass Transfer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chemicalreactionengineering.html">Chemical Reaction Engineering</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chemicalandphaseequilibria.html">Chemical Equilibria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chemicalandphaseequilibria.html">Chemical and Phase Equilibria</a></li>
 
 
 </ul>
@@ -316,6 +316,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-reference-key-equations">Quick Reference: Key Equations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-heat-transfer">Introduction to Heat Transfer</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-three-modes-of-heat-transfer">The Three Modes of Heat Transfer</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sign-conventions-and-units">Sign Conventions and Units</a></li>
@@ -461,6 +462,7 @@
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-exam-practice-problems">PE Exam Practice Problems</a></li>
 </ul>
             </nav>
         </div>
@@ -474,7 +476,86 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="complete-heat-transfer-fundamentals">
 <h1>Complete Heat Transfer Fundamentals<a class="headerlink" href="#complete-heat-transfer-fundamentals" title="Link to this heading">#</a></h1>
+<section id="quick-reference-key-equations">
+<h2>Quick Reference: Key Equations<a class="headerlink" href="#quick-reference-key-equations" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Topic</p></th>
+<th class="head"><p>Formula</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Fourier’s Law (1D)</p></td>
+<td><p><span class="math notranslate nohighlight">\(q = -kA\,dT/dx\)</span></p></td>
+<td><p>Conduction</p></td>
+</tr>
+<tr class="row-odd"><td><p>Plane wall resistance</p></td>
+<td><p><span class="math notranslate nohighlight">\(R_{cond} = L/(kA)\)</span></p></td>
+<td><p>Thermal resistance</p></td>
+</tr>
+<tr class="row-even"><td><p>Cylindrical wall</p></td>
+<td><p><span class="math notranslate nohighlight">\(q = 2\pi k L\,(T_1-T_2)/\ln(r_2/r_1)\)</span></p></td>
+<td><p>Hollow cylinder</p></td>
+</tr>
+<tr class="row-odd"><td><p>Newton’s Law of Cooling</p></td>
+<td><p><span class="math notranslate nohighlight">\(q = h A (T_s - T_\infty)\)</span></p></td>
+<td><p>Convection</p></td>
+</tr>
+<tr class="row-even"><td><p>Convective resistance</p></td>
+<td><p><span class="math notranslate nohighlight">\(R_{conv} = 1/(hA)\)</span></p></td>
+<td><p>Series with conduction</p></td>
+</tr>
+<tr class="row-odd"><td><p>Overall HTC</p></td>
+<td><p><span class="math notranslate nohighlight">\(1/UA = \sum R_{total}\)</span></p></td>
+<td><p>Series resistances</p></td>
+</tr>
+<tr class="row-even"><td><p>Radiation</p></td>
+<td><p><span class="math notranslate nohighlight">\(q = \varepsilon\sigma A(T_s^4 - T_{surr}^4)\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T\)</span> in K; <span class="math notranslate nohighlight">\(\sigma=5.67\times10^{-8}\)</span> W/m²·K⁴</p></td>
+</tr>
+<tr class="row-odd"><td><p>Nusselt number</p></td>
+<td><p><span class="math notranslate nohighlight">\(Nu = hL/k\)</span></p></td>
+<td><p>Dimensionless <span class="math notranslate nohighlight">\(h\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Prandtl number</p></td>
+<td><p><span class="math notranslate nohighlight">\(Pr = \mu C_p/k = \nu/\alpha\)</span></p></td>
+<td><p>Fluid property</p></td>
+</tr>
+<tr class="row-odd"><td><p>Reynolds number</p></td>
+<td><p><span class="math notranslate nohighlight">\(Re = \rho u L/\mu\)</span></p></td>
+<td><p>Flow regime</p></td>
+</tr>
+<tr class="row-even"><td><p>Dittus-Boelter</p></td>
+<td><p><span class="math notranslate nohighlight">\(Nu = 0.023\,Re^{0.8}Pr^n\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(n=0.4\)</span> heating, <span class="math notranslate nohighlight">\(0.3\)</span> cooling</p></td>
+</tr>
+<tr class="row-odd"><td><p>LMTD</p></td>
+<td><p><span class="math notranslate nohighlight">\(\Delta T_{lm} = (\Delta T_1 - \Delta T_2)/\ln(\Delta T_1/\Delta T_2)\)</span></p></td>
+<td><p>Heat exchangers</p></td>
+</tr>
+<tr class="row-even"><td><p>LMTD design eq.</p></td>
+<td><p><span class="math notranslate nohighlight">\(q = UA\,F\,\Delta T_{lm}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(F\)</span> = correction factor</p></td>
+</tr>
+<tr class="row-odd"><td><p>NTU</p></td>
+<td><p><span class="math notranslate nohighlight">\(NTU = UA/C_{min}\)</span></p></td>
+<td><p>Effectiveness method</p></td>
+</tr>
+<tr class="row-even"><td><p>Effectiveness</p></td>
+<td><p><span class="math notranslate nohighlight">\(\varepsilon = q/q_{max}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(q_{max} = C_{min}(T_{h,in}-T_{c,in})\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Clausius-Clapeyron</p></td>
+<td><p><span class="math notranslate nohighlight">\(\ln(P_2/P_1) = (\Delta H_{vap}/R)(1/T_1 - 1/T_2)\)</span></p></td>
+<td><p>Phase change</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
 <p>This comprehensive guide covers the fundamental principles of heat transfer including conduction, convection, and radiation, along with practical applications to heat exchangers and psychrometric processes. The material is designed for engineering students preparing for professional engineering examinations and practitioners needing a thorough reference.</p>
+</section>
 <section id="introduction-to-heat-transfer">
 <h2>Introduction to Heat Transfer<a class="headerlink" href="#introduction-to-heat-transfer" title="Link to this heading">#</a></h2>
 <p>Heat transfer is the science of thermal energy transport driven by temperature differences. Understanding heat transfer is essential for designing and analyzing thermal systems ranging from simple insulated pipes to complex heat exchangers and industrial processes.</p>
@@ -697,7 +778,7 @@
 <div class="math notranslate nohighlight">
 \[q = \frac{T_{s1} - T_{sn}}{R_{total}} = \frac{T_{s1} - T_{sn}}{\sum_{i} \frac{L_i}{k_i A}}\]</div>
 <div class="proof example admonition" id="ex-composite-wall">
-<p class="admonition-title"><span class="caption-number">Example 58 </span> (Three-Layer Composite Wall)</p>
+<p class="admonition-title"><span class="caption-number">Example 62 </span> (Three-Layer Composite Wall)</p>
 <section class="example-content" id="proof-content">
 <p>A furnace wall consists of three layers:</p>
 <ul class="simple">
@@ -731,7 +812,7 @@
 \[\frac{d^2T}{dx^2} + \frac{\dot{q}}{k} = 0\]</div>
 <p>The solution (with symmetric boundary conditions) yields a parabolic temperature profile rather than linear.</p>
 <div class="proof example admonition" id="ex-pipe-heat-generation">
-<p class="admonition-title"><span class="caption-number">Example 59 </span> (Volumetric Heat Generation in a Pipe Wall)</p>
+<p class="admonition-title"><span class="caption-number">Example 63 </span> (Volumetric Heat Generation in a Pipe Wall)</p>
 <section class="example-content" id="proof-content">
 <p>Water is heated as it flows through a thick-walled pipe. Determine the uniform volumetric heat generation rate (<span class="math notranslate nohighlight">\(\dot{q}\)</span>) within the pipe wall required to achieve a specific temperature rise in the water.</p>
 <p><strong>Given:</strong></p>
@@ -1022,7 +1103,7 @@
 <div class="math notranslate nohighlight">
 \[q_{total} = \bar{h}_L A (T_s - T_{\infty})\]</div>
 <div class="proof example admonition" id="ex-average-h">
-<p class="admonition-title"><span class="caption-number">Example 60 </span> (Calculating Average Coefficient from Local Coefficient)</p>
+<p class="admonition-title"><span class="caption-number">Example 64 </span> (Calculating Average Coefficient from Local Coefficient)</p>
 <section class="example-content" id="proof-content">
 <p>The local heat transfer coefficient for flow over a 1-meter long flat plate is given by:</p>
 <div class="math notranslate nohighlight">
@@ -1061,7 +1142,7 @@
 <div class="math notranslate nohighlight">
 \[U = \left( \frac{1}{h_1} + \sum_{i=1}^n \frac{L_i}{k_i} + \frac{1}{h_2} \right)^{-1}\]</div>
 <div class="proof example admonition" id="ex-overall-u">
-<p class="admonition-title"><span class="caption-number">Example 61 </span> (Overall U for a Composite Wall)</p>
+<p class="admonition-title"><span class="caption-number">Example 65 </span> (Overall U for a Composite Wall)</p>
 <section class="example-content" id="proof-content">
 <p>A wall consists of three material layers:</p>
 <ul class="simple">
@@ -1261,7 +1342,7 @@
 <p>This allows complex geometries to be analyzed by combining simpler ones.</p>
 </section>
 </div><div class="proof example admonition" id="ex-hemisphere-view-factors">
-<p class="admonition-title"><span class="caption-number">Example 62 </span> (View Factors for Hemispherical Duct)</p>
+<p class="admonition-title"><span class="caption-number">Example 66 </span> (View Factors for Hemispherical Duct)</p>
 <section class="example-content" id="proof-content">
 <p>Consider a long duct whose cross-section is a hemisphere. Let Surface 1 be the flat floor and Surface 2 be the curved ceiling. The hemisphere has radius <span class="math notranslate nohighlight">\(r\)</span> and length <span class="math notranslate nohighlight">\(L\)</span>. Determine the view factors <span class="math notranslate nohighlight">\(F_{12}\)</span>, <span class="math notranslate nohighlight">\(F_{21}\)</span>, and <span class="math notranslate nohighlight">\(F_{22}\)</span>.</p>
 <p><strong>Solution:</strong></p>
@@ -1436,7 +1517,7 @@
 </ul>
 </div>
 <div class="proof example admonition" id="ex-parallel-flow-hx">
-<p class="admonition-title"><span class="caption-number">Example 63 </span> (Sizing a Parallel-Flow Heat Exchanger)</p>
+<p class="admonition-title"><span class="caption-number">Example 67 </span> (Sizing a Parallel-Flow Heat Exchanger)</p>
 <section class="example-content" id="proof-content">
 <p>Hot oil is cooled in a parallel-flow concentric tube heat exchanger using water.</p>
 <p><strong>Given:</strong></p>
@@ -1479,7 +1560,7 @@
 <p><strong>Practical Note:</strong> This is quite long for a double-pipe exchanger. In practice, a more compact design (shell-and-tube or plate) would likely be preferred.</p>
 </section>
 </div><div class="proof example admonition" id="ex-hx-mass-flow">
-<p class="admonition-title"><span class="caption-number">Example 64 </span> (Heat Exchanger Mass Flow Rate Calculation)</p>
+<p class="admonition-title"><span class="caption-number">Example 68 </span> (Heat Exchanger Mass Flow Rate Calculation)</p>
 <section class="example-content" id="proof-content">
 <p>Lubricating oil is cooled by water in a counter-current concentric tube heat exchanger.</p>
 <p><strong>Given:</strong></p>
@@ -1584,7 +1665,7 @@
 <li><p>Using rating rather than design approach</p></li>
 </ul>
 <div class="proof example admonition" id="ex-ntu-method">
-<p class="admonition-title"><span class="caption-number">Example 65 </span> (NTU Method: Finding Overall Heat Transfer Coefficient)</p>
+<p class="admonition-title"><span class="caption-number">Example 69 </span> (NTU Method: Finding Overall Heat Transfer Coefficient)</p>
 <section class="example-content" id="proof-content">
 <p>A thin-walled, counter-flow, concentric tube heat exchanger uses hot gases to heat pressurized water.</p>
 <p><strong>Given:</strong></p>
@@ -1688,7 +1769,7 @@
 <p>In adiabatic humidification (evaporative cooling), water evaporates into an air stream with no external heat added. The energy for evaporation comes from the air itself, causing the air temperature to drop while its humidity increases.</p>
 <p><strong>Key principle:</strong> Adiabatic humidification follows a line of <strong>constant wet-bulb temperature</strong> on the psychrometric chart.</p>
 <div class="proof example admonition" id="ex-psychrometric">
-<p class="admonition-title"><span class="caption-number">Example 66 </span> (Adiabatic Spray Chamber)</p>
+<p class="admonition-title"><span class="caption-number">Example 70 </span> (Adiabatic Spray Chamber)</p>
 <section class="example-content" id="proof-content">
 <p>Humid air at 40°C and 20% relative humidity enters an adiabatic spray chamber at 100 m³/hr. The air is humidified by evaporating liquid water and leaves at 50% RH. Determine the outlet temperature and the rate of water evaporation.</p>
 <p><strong>Solution:</strong></p>
@@ -1768,7 +1849,7 @@
 <li><p>Determine <span class="math notranslate nohighlight">\(\Delta H_v\)</span> from the slope</p></li>
 </ol>
 <div class="proof example admonition" id="ex-heat-vaporization">
-<p class="admonition-title"><span class="caption-number">Example 67 </span> (Heat of Vaporization of Benzene)</p>
+<p class="admonition-title"><span class="caption-number">Example 71 </span> (Heat of Vaporization of Benzene)</p>
 <section class="example-content" id="proof-content">
 <p>Estimate the heat of vaporization of benzene at 60°C using:</p>
 <p>Antoine equation for benzene:</p>
@@ -2009,7 +2090,7 @@
 <section id="example-a-1-conduction-through-cylindrical-pipe">
 <h3>Example A.1: Conduction Through Cylindrical Pipe<a class="headerlink" href="#example-a-1-conduction-through-cylindrical-pipe" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="ex-cylindrical-pipe">
-<p class="admonition-title"><span class="caption-number">Example 68 </span> (Insulated Steam Pipe)</p>
+<p class="admonition-title"><span class="caption-number">Example 72 </span> (Insulated Steam Pipe)</p>
 <section class="example-content" id="proof-content">
 <p>Steam at 200°C flows through a steel pipe with inner diameter <span class="math notranslate nohighlight">\(D_i = 0.10\)</span> m and outer diameter <span class="math notranslate nohighlight">\(D_o = 0.12\)</span> m. The pipe is insulated with a 0.05 m thick layer of insulation. The convection coefficient inside the pipe is <span class="math notranslate nohighlight">\(h_i = 500\)</span> W/m²·K, and outside the insulation is <span class="math notranslate nohighlight">\(h_o = 10\)</span> W/m²·K. The ambient air temperature is 25°C.</p>
 <p>Properties:</p>
@@ -2063,7 +2144,7 @@
 <section id="example-a-2-natural-convection-from-heated-plate">
 <h3>Example A.2: Natural Convection from Heated Plate<a class="headerlink" href="#example-a-2-natural-convection-from-heated-plate" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="ex-natural-convection">
-<p class="admonition-title"><span class="caption-number">Example 69 </span> (Vertical Heated Plate)</p>
+<p class="admonition-title"><span class="caption-number">Example 73 </span> (Vertical Heated Plate)</p>
 <section class="example-content" id="proof-content">
 <p>A vertical plate measuring 0.5 m high by 0.3 m wide is maintained at a uniform temperature of 80°C in air at 20°C. Estimate the heat transfer rate by natural convection.</p>
 <p>Air properties at film temperature <span class="math notranslate nohighlight">\(T_f = (80 + 20)/2 = 50°C = 323\)</span> K:</p>
@@ -2102,7 +2183,7 @@
 <section id="example-a-3-radiation-exchange-in-an-enclosure">
 <h3>Example A.3: Radiation Exchange in an Enclosure<a class="headerlink" href="#example-a-3-radiation-exchange-in-an-enclosure" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="ex-radiation-enclosure">
-<p class="admonition-title"><span class="caption-number">Example 70 </span> (Two-Surface Radiation Exchange)</p>
+<p class="admonition-title"><span class="caption-number">Example 74 </span> (Two-Surface Radiation Exchange)</p>
 <section class="example-content" id="proof-content">
 <p>Two large parallel plates are separated by a small distance. Plate 1 has <span class="math notranslate nohighlight">\(T_1 = 600\)</span> K, <span class="math notranslate nohighlight">\(\epsilon_1 = 0.7\)</span>, and area <span class="math notranslate nohighlight">\(A_1 = 2\)</span> m². Plate 2 has <span class="math notranslate nohighlight">\(T_2 = 400\)</span> K and <span class="math notranslate nohighlight">\(\epsilon_2 = 0.5\)</span>. Calculate the net radiation heat transfer from Plate 1 to Plate 2.</p>
 <p><strong>Solution:</strong></p>
@@ -2151,7 +2232,7 @@
 <section id="example-a-4-combined-modes-heat-transfer">
 <h3>Example A.4: Combined Modes Heat Transfer<a class="headerlink" href="#example-a-4-combined-modes-heat-transfer" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="ex-combined-modes">
-<p class="admonition-title"><span class="caption-number">Example 71 </span> (Fin with Convection and Radiation)</p>
+<p class="admonition-title"><span class="caption-number">Example 75 </span> (Fin with Convection and Radiation)</p>
 <section class="example-content" id="proof-content">
 <p>A thin aluminum fin (thickness 2 mm, height 50 mm) extends from a wall at 100°C into air at 20°C. The fin has emissivity <span class="math notranslate nohighlight">\(\epsilon = 0.9\)</span>. Estimate the heat transfer from the fin considering both convection and radiation.</p>
 <p>Assume:</p>
@@ -2414,11 +2495,84 @@
 <div class="math notranslate nohighlight">
 \[Ra = Gr \cdot Pr = \frac{g \beta (T_s - T_{\infty}) L^3}{\nu \alpha}\]</div>
 <p>Combined parameter for natural convection.</p>
-<hr class="docutils" />
+</section>
+</section>
+</section>
+<section id="pe-exam-practice-problems">
+<h2>PE Exam Practice Problems<a class="headerlink" href="#pe-exam-practice-problems" title="Link to this heading">#</a></h2>
+<div class="proof example admonition" id="example-29">
+<p class="admonition-title"><span class="caption-number">Example 76 </span> (Practice Problem 1 — Composite Wall with Convection)</p>
+<section class="example-content" id="proof-content">
+<p>A furnace wall consists of three layers in series:</p>
+<ul class="simple">
+<li><p>Refractory brick: <span class="math notranslate nohighlight">\(k_1 = 1.2\)</span> W/m·K, <span class="math notranslate nohighlight">\(L_1 = 0.20\)</span> m</p></li>
+<li><p>Insulating firebrick: <span class="math notranslate nohighlight">\(k_2 = 0.15\)</span> W/m·K, <span class="math notranslate nohighlight">\(L_2 = 0.10\)</span> m</p></li>
+<li><p>Steel shell: <span class="math notranslate nohighlight">\(k_3 = 50\)</span> W/m·K, <span class="math notranslate nohighlight">\(L_3 = 0.01\)</span> m</p></li>
+</ul>
+<p>The inner surface is exposed to flue gas at <span class="math notranslate nohighlight">\(T_{hot} = 900°C\)</span> with convection coefficient <span class="math notranslate nohighlight">\(h_i = 30\)</span> W/m²·K. The outer steel surface is cooled by air at <span class="math notranslate nohighlight">\(T_{cold} = 25°C\)</span> with <span class="math notranslate nohighlight">\(h_o = 10\)</span> W/m²·K.</p>
+<p><strong>(a)</strong> What is the total thermal resistance per unit area (m²·K/W)?</p>
+<p><strong>(b)</strong> What is the steady-state heat flux (W/m²)?</p>
+</section>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Step 1: Individual thermal resistances per unit area</strong> <span class="math notranslate nohighlight">\(R'' = L/k\)</span> or <span class="math notranslate nohighlight">\(1/h\)</span></p>
+<div class="math notranslate nohighlight">
+\[R''_{conv,i} = 1/h_i = 1/30 = 0.0333 \text{ m}^2\text{·K/W}\]</div>
+<div class="math notranslate nohighlight">
+\[R''_1 = L_1/k_1 = 0.20/1.2 = 0.1667 \text{ m}^2\text{·K/W}\]</div>
+<div class="math notranslate nohighlight">
+\[R''_2 = L_2/k_2 = 0.10/0.15 = 0.6667 \text{ m}^2\text{·K/W}\]</div>
+<div class="math notranslate nohighlight">
+\[R''_3 = L_3/k_3 = 0.01/50 = 0.0002 \text{ m}^2\text{·K/W}\]</div>
+<div class="math notranslate nohighlight">
+\[R''_{conv,o} = 1/h_o = 1/10 = 0.1000 \text{ m}^2\text{·K/W}\]</div>
+<p class="sd-card-text"><strong>Step 2: Total resistance (series)</strong></p>
+<div class="math notranslate nohighlight">
+\[R''_{total} = 0.0333 + 0.1667 + 0.6667 + 0.0002 + 0.1000 = \mathbf{0.967 \text{ m}^2\text{·K/W}}\]</div>
+<p class="sd-card-text"><strong>Step 3: Heat flux</strong></p>
+<div class="math notranslate nohighlight">
+\[q'' = \frac{\Delta T}{R''_{total}} = \frac{900 - 25}{0.967} = \mathbf{905 \text{ W/m}^2}\]</div>
+<p class="sd-card-text"><strong>Key observation:</strong> The insulating firebrick (<span class="math notranslate nohighlight">\(R'' = 0.667\)</span>) dominates — it accounts for 69% of the total resistance. The steel shell is negligible (0.02%). This is typical: metals conduct very well and rarely limit heat transfer in industrial walls.</p>
+</div>
+</details><hr class="docutils" />
+<div class="proof example admonition" id="example-30">
+<p class="admonition-title"><span class="caption-number">Example 77 </span> (Practice Problem 2 — Shell-and-Tube Heat Exchanger (LMTD))</p>
+<section class="example-content" id="proof-content">
+<p>A counterflow shell-and-tube heat exchanger heats 2.0 kg/s of water from 20°C to 70°C using hot oil (<span class="math notranslate nohighlight">\(C_p = 2.0\)</span> kJ/kg·K) entering at 120°C. The overall heat transfer coefficient is <span class="math notranslate nohighlight">\(U = 350\)</span> W/m²·K.</p>
+<p><strong>(a)</strong> What is the required heat duty (kW)?</p>
+<p><strong>(b)</strong> If the oil exits at 80°C, what heat exchange area is required?</p>
+</section>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Part (a): Heat duty</strong></p>
+<div class="math notranslate nohighlight">
+\[\dot{Q} = \dot{m}_{water} C_{p,water} \Delta T_{water} = 2.0 \times 4.184 \times (70-20) = \mathbf{418.4 \text{ kW}}\]</div>
+<p class="sd-card-text"><strong>Part (b): LMTD and area</strong></p>
+<p class="sd-card-text">Counterflow configuration: hot oil 120°C → 80°C; cold water 70°C ← 20°C</p>
+<div class="math notranslate nohighlight">
+\[\Delta T_1 = T_{h,in} - T_{c,out} = 120 - 70 = 50°\text{C}\]</div>
+<div class="math notranslate nohighlight">
+\[\Delta T_2 = T_{h,out} - T_{c,in} = 80 - 20 = 60°\text{C}\]</div>
+<div class="math notranslate nohighlight">
+\[\Delta T_{lm} = \frac{\Delta T_1 - \Delta T_2}{\ln(\Delta T_1/\Delta T_2)} = \frac{50 - 60}{\ln(50/60)} = \frac{-10}{\ln(0.833)} = \frac{-10}{-0.1823} = \mathbf{54.9°\text{C}}\]</div>
+<div class="math notranslate nohighlight">
+\[A = \frac{\dot{Q}}{U\,\Delta T_{lm}} = \frac{418{,}400}{350 \times 54.9} = \frac{418{,}400}{19{,}215} = \mathbf{21.8 \text{ m}^2}\]</div>
+</div>
+</details><div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p><strong>PE Exam Traps — Heat Transfer</strong></p>
+<ul class="simple">
+<li><p><strong>LMTD <span class="math notranslate nohighlight">\(\Delta T\)</span> assignment in counterflow vs. parallel flow:</strong> In counterflow, <span class="math notranslate nohighlight">\(\Delta T_1\)</span> is hot-in minus cold-OUT and <span class="math notranslate nohighlight">\(\Delta T_2\)</span> is hot-out minus cold-IN. Swapping these (using the parallel-flow convention) gives a wrong (smaller) LMTD and an overestimated area. Draw the temperature profiles first.</p></li>
+<li><p><strong>Radiation requires absolute temperature (K⁴).</strong> Stefan-Boltzmann is <span class="math notranslate nohighlight">\(q = \varepsilon\sigma A(T_s^4 - T_{surr}^4)\)</span>, where <span class="math notranslate nohighlight">\(T\)</span> is in Kelvin. Using Celsius gives an answer off by orders of magnitude. 273 K vs. 0°C barely matters for <span class="math notranslate nohighlight">\(\Delta T\)</span> in conduction/convection — but <span class="math notranslate nohighlight">\(T^4\)</span> makes it critical for radiation.</p></li>
+<li><p><strong>Thermal resistance is additive only in series.</strong> Parallel resistances add as <span class="math notranslate nohighlight">\(1/R_{total} = 1/R_1 + 1/R_2\)</span>. A composite wall with different paths (fin + bare wall) is a parallel network, not series. Treating parallel paths as series dramatically overestimates resistance.</p></li>
+<li><p><strong>Dittus-Boelter exponent:</strong> <span class="math notranslate nohighlight">\(n = 0.4\)</span> when the fluid is being <strong>heated</strong> (fluid is cooler than the wall); <span class="math notranslate nohighlight">\(n = 0.3\)</span> when the fluid is being <strong>cooled</strong>. This affects Nu by ~10-15% and is frequently tested.</p></li>
+<li><p><strong>NTU method required for unknown exit temperatures:</strong> If both outlet temperatures are unknown (e.g., “find exit temperatures given UA and inlet conditions”), use NTU-effectiveness, not LMTD. LMTD requires knowing all four temperatures.</p></li>
+</ul>
+</div>
 <p><strong>End of Document</strong></p>
 <p><em>This comprehensive guide provides the fundamental knowledge needed for analyzing and designing heat transfer systems. Regular practice with diverse problems will build proficiency in applying these principles to real engineering challenges.</em></p>
-</section>
-</section>
 </section>
 </section>
 
@@ -2488,6 +2642,7 @@
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-reference-key-equations">Quick Reference: Key Equations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-heat-transfer">Introduction to Heat Transfer</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-three-modes-of-heat-transfer">The Three Modes of Heat Transfer</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sign-conventions-and-units">Sign Conventions and Units</a></li>
@@ -2633,6 +2788,7 @@
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-exam-practice-problems">PE Exam Practice Problems</a></li>
 </ul>
   </nav></div>
 

@@ -6,6 +6,26 @@ title: Fluid Mechanics Study Guide
 
 # Fluid Mechanics
 
+## Quick Reference: Key Equations
+
+| Topic | Formula | Notes |
+|-------|---------|-------|
+| Mech. energy balance | $\frac{\Delta P}{\rho} + \frac{\Delta u^2}{2} + g\Delta z + \hat{F} = \frac{\dot{W}_s}{\dot{m}}$ | Real fluid |
+| Bernoulli (ideal) | $\frac{P}{\rho} + \frac{u^2}{2} + gz = \text{const}$ | No friction, no shaft work |
+| Reynolds number | $Re = \frac{\rho u D}{\mu} = \frac{u D}{\nu}$ | Laminar $<2100$, Turbulent $>4000$ |
+| Darcy-Weisbach | $\hat{F} = f \frac{L}{D} \frac{u^2}{2}$ | $f$ = Darcy friction factor |
+| Hagen-Poiseuille | $\Delta P = \frac{128 \mu L Q}{\pi D^4}$ | Laminar flow only |
+| Continuity | $\dot{m} = \rho_1 A_1 u_1 = \rho_2 A_2 u_2$ | Steady state |
+| Hydrostatic pressure | $\Delta P = \rho g \Delta z$ | Incompressible fluid |
+| Pump power | $\dot{W}_p = \dot{m}\,g\,\Delta z + \dot{m}\,\hat{F} + \dot{m}\,\Delta P/\rho$ | From MEB |
+| Pump efficiency | $\eta = \dot{W}_{fluid}/\dot{W}_{shaft}$ | Always $<1$ |
+| Venturi / orifice | $u_2 = \sqrt{\frac{2(P_1-P_2)/\rho}{1-(A_2/A_1)^2}}$ | From Bernoulli + continuity |
+| Manometer | $P_1 - P_2 = (\rho_{fluid} - \rho_{ref})g\Delta h$ | U-tube |
+| Newtonian shear | $\tau = \mu\,\frac{du}{dy}$ | $\mu$ = dynamic viscosity |
+| Kinematic viscosity | $\nu = \mu/\rho$ | [m²/s] |
+
+---
+
 ## Mechanical Energy Balance
 
 The Mechanical Energy Balance is a fundamental tool in fluid dynamics, derived from the first law of thermodynamics. It is used to analyze systems where mechanical forms of energy are of primary interest, such as in pipe flow, pumps, and turbines.
@@ -1614,4 +1634,80 @@ $$
 
 For context, the viscosity of water at room temperature is about 1 cP, olive oil is about 80 cP, and honey is around 2,000-10,000 cP. The mysterious fluid has a viscosity similar to that of honey or a thick syrup.
 
+```
+
+---
+
+## PE Exam Practice Problems
+
+```{prf:example} Practice Problem 1 — Pump Sizing
+
+Water ($\rho = 1000$ kg/m³, $\mu = 0.001$ Pa·s) is pumped at 0.05 m³/s from a lower reservoir (elevation 0 m) to an upper tank (elevation 25 m) through 200 m of commercial steel pipe with inner diameter $D = 0.10$ m. The Darcy friction factor is $f = 0.018$.
+
+**(a)** What is the fluid velocity in the pipe?
+
+**(b)** What is the frictional head loss (J/kg)?
+
+**(c)** What is the required pump shaft power (kW), assuming 80% pump efficiency?
+```
+
+```{dropdown} Solution
+
+**Step 1: Flow velocity**
+
+$$u = \frac{Q}{A} = \frac{0.05}{\pi(0.10)^2/4} = \frac{0.05}{7.854\times10^{-3}} = 6.37 \text{ m/s}$$
+
+**Step 2: Frictional loss (Darcy-Weisbach)**
+
+$$\hat{F} = f\frac{L}{D}\frac{u^2}{2} = 0.018 \times \frac{200}{0.10} \times \frac{(6.37)^2}{2} = 0.018 \times 2000 \times 20.29 = \mathbf{730 \text{ J/kg}}$$
+
+**Step 3: Mechanical energy balance** (both reservoir surfaces: $u \approx 0$, $P = P_{atm}$)
+
+$$\frac{\dot{W}_s}{\dot{m}} = g\Delta z + \hat{F} = 9.81 \times 25 + 730 = 245 + 730 = \mathbf{975 \text{ J/kg}}$$
+
+**Step 4: Shaft power**
+
+$$\dot{m} = \rho Q = 1000 \times 0.05 = 50 \text{ kg/s}$$
+
+$$\dot{W}_{fluid} = 975 \times 50 = 48{,}750 \text{ W}$$
+
+$$\dot{W}_{shaft} = \frac{\dot{W}_{fluid}}{\eta} = \frac{48{,}750}{0.80} = \mathbf{60.9 \text{ kW}}$$
+```
+
+---
+
+```{prf:example} Practice Problem 2 — Reynolds Number and Flow Regime
+
+Crude oil ($\rho = 870$ kg/m³, $\mu = 0.025$ Pa·s) flows through a 6-inch (0.152 m) pipeline at a volumetric flow rate of 0.08 m³/s.
+
+**(a)** What is the Reynolds number? Is flow laminar or turbulent?
+
+**(b)** If the flow were laminar, what would the pressure drop be over 500 m using Hagen-Poiseuille? Is laminar flow physically consistent here?
+```
+
+```{dropdown} Solution
+
+**Part (a): Reynolds number**
+
+$$u = Q/A = 0.08 / (\pi \times 0.152^2/4) = 0.08/0.01815 = 4.41 \text{ m/s}$$
+
+$$Re = \frac{\rho u D}{\mu} = \frac{870 \times 4.41 \times 0.152}{0.025} = \frac{583.7}{0.025} = \mathbf{23{,}350}$$
+
+Flow is **turbulent** ($Re \gg 4000$). Use turbulent friction factor correlations (Moody chart), not Hagen-Poiseuille.
+
+**Part (b): Hagen-Poiseuille check**
+
+$$\Delta P = \frac{128 \mu L Q}{\pi D^4} = \frac{128 \times 0.025 \times 500 \times 0.08}{\pi \times (0.152)^4} = \frac{128}{8.39\times10^{-4}} \approx 38{,}500 \text{ Pa}$$
+
+This result is **not physically valid** here — Hagen-Poiseuille assumes laminar flow ($Re < 2100$), but $Re = 23{,}350$. The actual turbulent pressure drop would be several times higher and must use the Darcy-Weisbach equation with a turbulent friction factor.
+```
+
+```{caution}
+**PE Exam Traps — Fluid Mechanics**
+
+- **Darcy vs. Fanning friction factor:** The Darcy (Moody) friction factor $f_D = 4f_{Fanning}$. The Darcy-Weisbach equation uses $f_D$; many textbooks and the Churchill correlation give $f_F$. Always confirm which form a given $f$ value is for — using $f_F$ in place of $f_D$ underestimates friction loss by 4×.
+- **MEB sign convention:** $\dot{W}_s/\dot{m}$ is positive when a pump adds energy to the fluid; it's negative for a turbine that extracts energy. Getting this backwards gives pump power instead of turbine power or vice versa.
+- **Bernoulli applies only to streamlines without friction or shaft work.** If a pump is present, or the problem mentions a pressure drop, use the full MEB. Bernoulli applied across a pump gives zero work, which is wrong.
+- **Velocity at open reservoir surface:** At a large open reservoir, the surface velocity is approximately zero ($u \approx 0$). Using the pipe velocity at this point is a common mistake that adds a phantom kinetic energy term.
+- **Hagen-Poiseuille is laminar only ($Re < 2100$).** Never apply it to turbulent flow — it will dramatically underpredict pressure drop. Always check Reynolds number first.
 ```

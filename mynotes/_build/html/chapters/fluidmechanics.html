@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=8c6b312c" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=efcdb63b" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5d1cebc" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -168,7 +168,7 @@
 <li class="toctree-l1"><a class="reference internal" href="heattransfer.html">Heat Transfer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="masstransfer.html">Mass Transfer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chemicalreactionengineering.html">Chemical Reaction Engineering</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chemicalandphaseequilibria.html">Chemical Equilibria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chemicalandphaseequilibria.html">Chemical and Phase Equilibria</a></li>
 
 
 </ul>
@@ -316,6 +316,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-reference-key-equations">Quick Reference: Key Equations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mechanical-energy-balance">Mechanical Energy Balance</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fundamental-equations">Fundamental Equations</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivation-from-the-first-law-of-thermodynamics">Derivation from the First Law of Thermodynamics</a></li>
@@ -365,6 +366,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-determining-viscosity-experimentally">Example: Determining Viscosity Experimentally</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-exam-practice-problems">PE Exam Practice Problems</a></li>
 </ul>
             </nav>
         </div>
@@ -378,6 +380,73 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="fluid-mechanics">
 <h1>Fluid Mechanics<a class="headerlink" href="#fluid-mechanics" title="Link to this heading">#</a></h1>
+<section id="quick-reference-key-equations">
+<h2>Quick Reference: Key Equations<a class="headerlink" href="#quick-reference-key-equations" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Topic</p></th>
+<th class="head"><p>Formula</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Mech. energy balance</p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{\Delta P}{\rho} + \frac{\Delta u^2}{2} + g\Delta z + \hat{F} = \frac{\dot{W}_s}{\dot{m}}\)</span></p></td>
+<td><p>Real fluid</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bernoulli (ideal)</p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{P}{\rho} + \frac{u^2}{2} + gz = \text{const}\)</span></p></td>
+<td><p>No friction, no shaft work</p></td>
+</tr>
+<tr class="row-even"><td><p>Reynolds number</p></td>
+<td><p><span class="math notranslate nohighlight">\(Re = \frac{\rho u D}{\mu} = \frac{u D}{\nu}\)</span></p></td>
+<td><p>Laminar <span class="math notranslate nohighlight">\(&lt;2100\)</span>, Turbulent <span class="math notranslate nohighlight">\(&gt;4000\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Darcy-Weisbach</p></td>
+<td><p><span class="math notranslate nohighlight">\(\hat{F} = f \frac{L}{D} \frac{u^2}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(f\)</span> = Darcy friction factor</p></td>
+</tr>
+<tr class="row-even"><td><p>Hagen-Poiseuille</p></td>
+<td><p><span class="math notranslate nohighlight">\(\Delta P = \frac{128 \mu L Q}{\pi D^4}\)</span></p></td>
+<td><p>Laminar flow only</p></td>
+</tr>
+<tr class="row-odd"><td><p>Continuity</p></td>
+<td><p><span class="math notranslate nohighlight">\(\dot{m} = \rho_1 A_1 u_1 = \rho_2 A_2 u_2\)</span></p></td>
+<td><p>Steady state</p></td>
+</tr>
+<tr class="row-even"><td><p>Hydrostatic pressure</p></td>
+<td><p><span class="math notranslate nohighlight">\(\Delta P = \rho g \Delta z\)</span></p></td>
+<td><p>Incompressible fluid</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pump power</p></td>
+<td><p><span class="math notranslate nohighlight">\(\dot{W}_p = \dot{m}\,g\,\Delta z + \dot{m}\,\hat{F} + \dot{m}\,\Delta P/\rho\)</span></p></td>
+<td><p>From MEB</p></td>
+</tr>
+<tr class="row-even"><td><p>Pump efficiency</p></td>
+<td><p><span class="math notranslate nohighlight">\(\eta = \dot{W}_{fluid}/\dot{W}_{shaft}\)</span></p></td>
+<td><p>Always <span class="math notranslate nohighlight">\(&lt;1\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Venturi / orifice</p></td>
+<td><p><span class="math notranslate nohighlight">\(u_2 = \sqrt{\frac{2(P_1-P_2)/\rho}{1-(A_2/A_1)^2}}\)</span></p></td>
+<td><p>From Bernoulli + continuity</p></td>
+</tr>
+<tr class="row-even"><td><p>Manometer</p></td>
+<td><p><span class="math notranslate nohighlight">\(P_1 - P_2 = (\rho_{fluid} - \rho_{ref})g\Delta h\)</span></p></td>
+<td><p>U-tube</p></td>
+</tr>
+<tr class="row-odd"><td><p>Newtonian shear</p></td>
+<td><p><span class="math notranslate nohighlight">\(\tau = \mu\,\frac{du}{dy}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\mu\)</span> = dynamic viscosity</p></td>
+</tr>
+<tr class="row-even"><td><p>Kinematic viscosity</p></td>
+<td><p><span class="math notranslate nohighlight">\(\nu = \mu/\rho\)</span></p></td>
+<td><p>[m²/s]</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
 <section id="mechanical-energy-balance">
 <h2>Mechanical Energy Balance<a class="headerlink" href="#mechanical-energy-balance" title="Link to this heading">#</a></h2>
 <p>The Mechanical Energy Balance is a fundamental tool in fluid dynamics, derived from the first law of thermodynamics. It is used to analyze systems where mechanical forms of energy are of primary interest, such as in pipe flow, pumps, and turbines.</p>
@@ -445,7 +514,7 @@ This is a simplified form for a system with no shaft work (<span class="math not
 <section id="example-flow-from-a-coffee-urn">
 <h3>Example: Flow from a Coffee Urn<a class="headerlink" href="#example-flow-from-a-coffee-urn" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-0">
-<p class="admonition-title"><span class="caption-number">Example 46 </span> (Flow from Coffee Urn)</p>
+<p class="admonition-title"><span class="caption-number">Example 48 </span> (Flow from Coffee Urn)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> A 60-cm tall coffee urn is filled to the top. It dispenses coffee through a 0.7-cm diameter nozzle that is 12 cm above the table surface. How long does it take to pour a 200-mL cup of coffee?</p>
 </section>
@@ -478,7 +547,7 @@ For a 200 mL cup (<span class="math notranslate nohighlight">\(2 \times 10^{-4} 
 <section id="example-vertical-water-jet">
 <h3>Example: Vertical Water Jet<a class="headerlink" href="#example-vertical-water-jet" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-1">
-<p class="admonition-title"><span class="caption-number">Example 47 </span> (Vertical Water Jet)</p>
+<p class="admonition-title"><span class="caption-number">Example 49 </span> (Vertical Water Jet)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> Water flows through a 2.5-cm ID pipe at 115 L/min and 0.15-bar gauge pressure. It vents vertically 1.0 m above the pipe. How high will the water shoot from the vent? Assume no frictional losses.</p>
 </section>
@@ -591,7 +660,7 @@ Now we plug the forces and the acceleration term back into Newton’s law:</p>
 <section id="applications-of-the-bernoulli-equation">
 <h3>Applications of the Bernoulli Equation<a class="headerlink" href="#applications-of-the-bernoulli-equation" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-2">
-<p class="admonition-title"><span class="caption-number">Example 48 </span> (Air Flow Through Pipe and Nozzle)</p>
+<p class="admonition-title"><span class="caption-number">Example 50 </span> (Air Flow Through Pipe and Nozzle)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> Air flows steadily through a horizontal pipe of 10 cm diameter. It exits into the atmosphere through an 8 cm diameter nozzle. The gauge pressure in the pipe is 800 Pa. Assuming air is incompressible with a density of 1.23 kg/m<span class="math notranslate nohighlight">\(^3\)</span>, what is the velocity of the air at the exit?</p>
 </section>
@@ -639,7 +708,7 @@ Now we substitute the expression for <span class="math notranslate nohighlight">
 Is it valid to treat air as incompressible? The rule of thumb is that this assumption is reasonable if the fluid’s velocity is less than 30% of the speed of sound (Mach number <span class="math notranslate nohighlight">\(&lt; 0.3\)</span>). The speed of sound in air is about 343 m/s. Here, <span class="math notranslate nohighlight">\(M \approx 47/343 \approx 0.14\)</span>, which is well below 0.3. The assumption is justified.</p>
 </div>
 </details><div class="proof example admonition" id="example-3">
-<p class="admonition-title"><span class="caption-number">Example 49 </span> (Flow from Coffee Urn (Torricelli’s Law))</p>
+<p class="admonition-title"><span class="caption-number">Example 51 </span> (Flow from Coffee Urn (Torricelli’s Law))</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> A 60-cm tall coffee urn is filled to the top. It dispenses coffee through a 0.7-cm diameter nozzle that is 12 cm above the table surface. How long does it take to pour a 200-mL cup of coffee?</p>
 </section>
@@ -669,7 +738,7 @@ Find the volumetric flow rate through the nozzle. Converting the exit velocity t
 <p class="sd-card-text">The time required is approximately <strong>1.7 seconds</strong>.</p>
 </div>
 </details><div class="proof example admonition" id="example-4">
-<p class="admonition-title"><span class="caption-number">Example 50 </span> (Pitot Tube on Plane)</p>
+<p class="admonition-title"><span class="caption-number">Example 52 </span> (Pitot Tube on Plane)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> A pitot-static tube is placed on the nose of a plane traveling 100 m/s at an elevation of 4000 m. What is the pressure difference measured by the device? Assume the density of air is 0.8194 kg/m<span class="math notranslate nohighlight">\(^3\)</span> at this elevation.</p>
 </section>
@@ -745,7 +814,7 @@ The Reynolds number represents the ratio of <strong>inertial forces</strong> to 
 <section id="example-calculating-the-reynolds-number">
 <h3>Example: Calculating the Reynolds Number<a class="headerlink" href="#example-calculating-the-reynolds-number" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-5">
-<p class="admonition-title"><span class="caption-number">Example 51 </span> (Calculating Reynolds Number for Water Flow)</p>
+<p class="admonition-title"><span class="caption-number">Example 53 </span> (Calculating Reynolds Number for Water Flow)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> Water flows through a large pipe with a diameter of 1.0 meter at a velocity of 100 cm/s. The density of water is 1.0 g/cm<span class="math notranslate nohighlight">\(^3\)</span> and its viscosity is 1.0 centipoise (cP). Calculate the Reynolds number and determine the flow regime.</p>
 </section>
@@ -893,7 +962,7 @@ To solve for pressure directly, we exponentiate both sides:</p>
 <section id="example-pressure-calculation-at-high-altitude">
 <h3>Example: Pressure Calculation at High Altitude<a class="headerlink" href="#example-pressure-calculation-at-high-altitude" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-6">
-<p class="admonition-title"><span class="caption-number">Example 52 </span> (Air Pressure at 40,000 Feet)</p>
+<p class="admonition-title"><span class="caption-number">Example 54 </span> (Air Pressure at 40,000 Feet)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> Calculate the air pressure at an altitude of 40,000 feet above sea level using three different physical models: (1) incompressible, (2) compressible isothermal, and (3) compressible non-isothermal. Compare the results to the standard atmospheric value of 18.7 kPa.</p>
 </section>
@@ -976,7 +1045,7 @@ This result is extremely close to the standard tabulated value of 18.7 kPa. This
 <section id="example-pumping-water-for-a-ski-resort">
 <h3>Example: Pumping Water for a Ski Resort<a class="headerlink" href="#example-pumping-water-for-a-ski-resort" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-7">
-<p class="admonition-title"><span class="caption-number">Example 53 </span> (Pumping Water for Snow Making)</p>
+<p class="admonition-title"><span class="caption-number">Example 55 </span> (Pumping Water for Snow Making)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> A ski resort needs to pump water at 10<span class="math notranslate nohighlight">\(^\circ\)</span>C from a reservoir at an elevation of 6500 ft to a snow-making machine at 7300 ft. The water flows through 1000 ft of 2-inch diameter commercial steel pipe at a rate of 0.25 ft<span class="math notranslate nohighlight">\(^3\)</span>/s. The pressure required at the inlet of the snow machine is 20 psi (gauge). The piping system includes a sharp-edged entrance, a fully open gate valve, and two standard 90<span class="math notranslate nohighlight">\(^\circ\)</span> elbows. Determine the horsepower that must be delivered to the water by the pump.</p>
 </section>
@@ -1099,7 +1168,7 @@ A classic application of the Bernoulli equation is analyzing flow through a cons
 <section id="example-velocity-in-a-constriction-venturi-effect">
 <h3>Example: Velocity in a Constriction (Venturi Effect)<a class="headerlink" href="#example-velocity-in-a-constriction-venturi-effect" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-8">
-<p class="admonition-title"><span class="caption-number">Example 54 </span> (Velocity in a Constriction (Venturi Effect))</p>
+<p class="admonition-title"><span class="caption-number">Example 56 </span> (Velocity in a Constriction (Venturi Effect))</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> Air with a density of 1.0 kg/m<span class="math notranslate nohighlight">\(^3\)</span> flows steadily and incompressibly through a horizontal constriction. The pressure at the wide entrance (point 1) is 10 kPa greater than the pressure at the narrow throat (point 2). The cross-sectional area at the entrance is five times the area at the throat (<span class="math notranslate nohighlight">\(A_1 = 5A_2\)</span>). What is the air speed at the throat (<span class="math notranslate nohighlight">\(\nu_2\)</span>)?</p>
 </section>
@@ -1258,7 +1327,7 @@ $<span class="math notranslate nohighlight">\(P_A - P_B = \gamma_2 h_2 + \gamma_
 <section id="example-hydrostatic-balance-in-an-inclined-manometer">
 <h3>Example: Hydrostatic Balance in an Inclined Manometer<a class="headerlink" href="#example-hydrostatic-balance-in-an-inclined-manometer" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-9">
-<p class="admonition-title"><span class="caption-number">Example 55 </span> (Hydrostatic Balance in an Inclined Manometer)</p>
+<p class="admonition-title"><span class="caption-number">Example 57 </span> (Hydrostatic Balance in an Inclined Manometer)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> An inclined manometer contains water, oil (SG=0.85), and mercury (SG=13.6). The left vertical tube has an inner diameter (ID) of 2 cm, and the inclined right tube has an ID of 1 cm. Initially, the system is at equilibrium. Then, the pressure <span class="math notranslate nohighlight">\(P_1\)</span> is increased by 50 mm of mercury. What is the change in the reading along the inclined scale (<span class="math notranslate nohighlight">\(y\)</span>)? The angle of inclination is 30<span class="math notranslate nohighlight">\(^\circ\)</span>.</p>
 </section>
@@ -1364,7 +1433,7 @@ Many important fluids do not follow this simple linear relationship. Their “ap
 <section id="example-film-flow-down-an-inclined-surface">
 <h3>Example: Film Flow Down an Inclined Surface<a class="headerlink" href="#example-film-flow-down-an-inclined-surface" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-10">
-<p class="admonition-title"><span class="caption-number">Example 56 </span> (Film Flow Down an Inclined Surface)</p>
+<p class="admonition-title"><span class="caption-number">Example 58 </span> (Film Flow Down an Inclined Surface)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> Crude oil with a specific gravity of 0.85 flows steadily in a thin film down a wide surface inclined 30<span class="math notranslate nohighlight">\(^\circ\)</span> below the horizontal. The film has a thickness of 0.125 inches. The velocity profile is given by the equation:</p>
 <div class="math notranslate nohighlight">
@@ -1417,7 +1486,7 @@ $<span class="math notranslate nohighlight">\(\rho = 0.85 \cdot (1.94 \, \text{s
 <section id="example-determining-viscosity-experimentally">
 <h3>Example: Determining Viscosity Experimentally<a class="headerlink" href="#example-determining-viscosity-experimentally" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-11">
-<p class="admonition-title"><span class="caption-number">Example 57 </span> (Determining Viscosity Experimentally)</p>
+<p class="admonition-title"><span class="caption-number">Example 59 </span> (Determining Viscosity Experimentally)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> A toothpick is placed concentrically inside a 5 mm diameter straw full of a mysterious fluid. There is a 1 mm gap between the toothpick and the straw on all sides. A length of 50 mm of the toothpick is submerged in the fluid. When a constant force of 0.1 N is used to pull the toothpick out, it moves at a constant velocity of 0.1 m/s. What is the viscosity of the fluid? Assume the fluid is Newtonian and the velocity profile in the narrow gap is linear.</p>
 </section>
@@ -1467,6 +1536,71 @@ The standard SI unit for viscosity is the Pascal-second (Pa<span class="math not
 <p class="sd-card-text">For context, the viscosity of water at room temperature is about 1 cP, olive oil is about 80 cP, and honey is around 2,000-10,000 cP. The mysterious fluid has a viscosity similar to that of honey or a thick syrup.</p>
 </div>
 </details></section>
+</section>
+<hr class="docutils" />
+<section id="pe-exam-practice-problems">
+<h2>PE Exam Practice Problems<a class="headerlink" href="#pe-exam-practice-problems" title="Link to this heading">#</a></h2>
+<div class="proof example admonition" id="example-12">
+<p class="admonition-title"><span class="caption-number">Example 60 </span> (Practice Problem 1 — Pump Sizing)</p>
+<section class="example-content" id="proof-content">
+<p>Water (<span class="math notranslate nohighlight">\(\rho = 1000\)</span> kg/m³, <span class="math notranslate nohighlight">\(\mu = 0.001\)</span> Pa·s) is pumped at 0.05 m³/s from a lower reservoir (elevation 0 m) to an upper tank (elevation 25 m) through 200 m of commercial steel pipe with inner diameter <span class="math notranslate nohighlight">\(D = 0.10\)</span> m. The Darcy friction factor is <span class="math notranslate nohighlight">\(f = 0.018\)</span>.</p>
+<p><strong>(a)</strong> What is the fluid velocity in the pipe?</p>
+<p><strong>(b)</strong> What is the frictional head loss (J/kg)?</p>
+<p><strong>©</strong> What is the required pump shaft power (kW), assuming 80% pump efficiency?</p>
+</section>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Step 1: Flow velocity</strong></p>
+<div class="math notranslate nohighlight">
+\[u = \frac{Q}{A} = \frac{0.05}{\pi(0.10)^2/4} = \frac{0.05}{7.854\times10^{-3}} = 6.37 \text{ m/s}\]</div>
+<p class="sd-card-text"><strong>Step 2: Frictional loss (Darcy-Weisbach)</strong></p>
+<div class="math notranslate nohighlight">
+\[\hat{F} = f\frac{L}{D}\frac{u^2}{2} = 0.018 \times \frac{200}{0.10} \times \frac{(6.37)^2}{2} = 0.018 \times 2000 \times 20.29 = \mathbf{730 \text{ J/kg}}\]</div>
+<p class="sd-card-text"><strong>Step 3: Mechanical energy balance</strong> (both reservoir surfaces: <span class="math notranslate nohighlight">\(u \approx 0\)</span>, <span class="math notranslate nohighlight">\(P = P_{atm}\)</span>)</p>
+<div class="math notranslate nohighlight">
+\[\frac{\dot{W}_s}{\dot{m}} = g\Delta z + \hat{F} = 9.81 \times 25 + 730 = 245 + 730 = \mathbf{975 \text{ J/kg}}\]</div>
+<p class="sd-card-text"><strong>Step 4: Shaft power</strong></p>
+<div class="math notranslate nohighlight">
+\[\dot{m} = \rho Q = 1000 \times 0.05 = 50 \text{ kg/s}\]</div>
+<div class="math notranslate nohighlight">
+\[\dot{W}_{fluid} = 975 \times 50 = 48{,}750 \text{ W}\]</div>
+<div class="math notranslate nohighlight">
+\[\dot{W}_{shaft} = \frac{\dot{W}_{fluid}}{\eta} = \frac{48{,}750}{0.80} = \mathbf{60.9 \text{ kW}}\]</div>
+</div>
+</details><hr class="docutils" />
+<div class="proof example admonition" id="example-13">
+<p class="admonition-title"><span class="caption-number">Example 61 </span> (Practice Problem 2 — Reynolds Number and Flow Regime)</p>
+<section class="example-content" id="proof-content">
+<p>Crude oil (<span class="math notranslate nohighlight">\(\rho = 870\)</span> kg/m³, <span class="math notranslate nohighlight">\(\mu = 0.025\)</span> Pa·s) flows through a 6-inch (0.152 m) pipeline at a volumetric flow rate of 0.08 m³/s.</p>
+<p><strong>(a)</strong> What is the Reynolds number? Is flow laminar or turbulent?</p>
+<p><strong>(b)</strong> If the flow were laminar, what would the pressure drop be over 500 m using Hagen-Poiseuille? Is laminar flow physically consistent here?</p>
+</section>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Part (a): Reynolds number</strong></p>
+<div class="math notranslate nohighlight">
+\[u = Q/A = 0.08 / (\pi \times 0.152^2/4) = 0.08/0.01815 = 4.41 \text{ m/s}\]</div>
+<div class="math notranslate nohighlight">
+\[Re = \frac{\rho u D}{\mu} = \frac{870 \times 4.41 \times 0.152}{0.025} = \frac{583.7}{0.025} = \mathbf{23{,}350}\]</div>
+<p class="sd-card-text">Flow is <strong>turbulent</strong> (<span class="math notranslate nohighlight">\(Re \gg 4000\)</span>). Use turbulent friction factor correlations (Moody chart), not Hagen-Poiseuille.</p>
+<p class="sd-card-text"><strong>Part (b): Hagen-Poiseuille check</strong></p>
+<div class="math notranslate nohighlight">
+\[\Delta P = \frac{128 \mu L Q}{\pi D^4} = \frac{128 \times 0.025 \times 500 \times 0.08}{\pi \times (0.152)^4} = \frac{128}{8.39\times10^{-4}} \approx 38{,}500 \text{ Pa}\]</div>
+<p class="sd-card-text">This result is <strong>not physically valid</strong> here — Hagen-Poiseuille assumes laminar flow (<span class="math notranslate nohighlight">\(Re &lt; 2100\)</span>), but <span class="math notranslate nohighlight">\(Re = 23{,}350\)</span>. The actual turbulent pressure drop would be several times higher and must use the Darcy-Weisbach equation with a turbulent friction factor.</p>
+</div>
+</details><div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p><strong>PE Exam Traps — Fluid Mechanics</strong></p>
+<ul class="simple">
+<li><p><strong>Darcy vs. Fanning friction factor:</strong> The Darcy (Moody) friction factor <span class="math notranslate nohighlight">\(f_D = 4f_{Fanning}\)</span>. The Darcy-Weisbach equation uses <span class="math notranslate nohighlight">\(f_D\)</span>; many textbooks and the Churchill correlation give <span class="math notranslate nohighlight">\(f_F\)</span>. Always confirm which form a given <span class="math notranslate nohighlight">\(f\)</span> value is for — using <span class="math notranslate nohighlight">\(f_F\)</span> in place of <span class="math notranslate nohighlight">\(f_D\)</span> underestimates friction loss by 4×.</p></li>
+<li><p><strong>MEB sign convention:</strong> <span class="math notranslate nohighlight">\(\dot{W}_s/\dot{m}\)</span> is positive when a pump adds energy to the fluid; it’s negative for a turbine that extracts energy. Getting this backwards gives pump power instead of turbine power or vice versa.</p></li>
+<li><p><strong>Bernoulli applies only to streamlines without friction or shaft work.</strong> If a pump is present, or the problem mentions a pressure drop, use the full MEB. Bernoulli applied across a pump gives zero work, which is wrong.</p></li>
+<li><p><strong>Velocity at open reservoir surface:</strong> At a large open reservoir, the surface velocity is approximately zero (<span class="math notranslate nohighlight">\(u \approx 0\)</span>). Using the pipe velocity at this point is a common mistake that adds a phantom kinetic energy term.</p></li>
+<li><p><strong>Hagen-Poiseuille is laminar only (<span class="math notranslate nohighlight">\(Re &lt; 2100\)</span>).</strong> Never apply it to turbulent flow — it will dramatically underpredict pressure drop. Always check Reynolds number first.</p></li>
+</ul>
+</div>
 </section>
 </section>
 
@@ -1536,6 +1670,7 @@ The standard SI unit for viscosity is the Pascal-second (Pa<span class="math not
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-reference-key-equations">Quick Reference: Key Equations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mechanical-energy-balance">Mechanical Energy Balance</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fundamental-equations">Fundamental Equations</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivation-from-the-first-law-of-thermodynamics">Derivation from the First Law of Thermodynamics</a></li>
@@ -1585,6 +1720,7 @@ The standard SI unit for viscosity is the Pascal-second (Pa<span class="math not
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-determining-viscosity-experimentally">Example: Determining Viscosity Experimentally</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-exam-practice-problems">PE Exam Practice Problems</a></li>
 </ul>
   </nav></div>
 

@@ -6,6 +6,27 @@ date: "2025"
 
 # Chemical Reaction Engineering
 
+## Quick Reference: Key Equations
+
+| Topic | Formula | Notes |
+|-------|---------|-------|
+| 1st-order integrated | $[A] = [A]_0 e^{-kt}$ | Batch, 1st order |
+| 2nd-order integrated | $1/[A] = 1/[A]_0 + kt$ | Batch, 2nd order |
+| Half-life (1st order) | $t_{1/2} = \ln 2/k = 0.693/k$ | Independent of $[A]_0$ |
+| Half-life (2nd order) | $t_{1/2} = 1/(k[A]_0)$ | Depends on $[A]_0$ |
+| Arrhenius | $k = A\,e^{-E_a/RT}$ | $T$ in K |
+| Batch reactor | $t = C_{A0}\int_0^X dX/(-r_A)$ | Design equation |
+| CSTR design | $V = F_{A0}\,X/(-r_A)$ | Evaluated at exit |
+| PFR design | $V = F_{A0}\int_0^X dX/(-r_A)$ | Integrated over $X$ |
+| Space time | $\tau = V/v_0 = C_{A0}/(-r_A)$ | CSTR at SS |
+| Levenspiel plot | Rectangular area ($\approx$ CSTR) vs. integral ($\approx$ PFR) | Graphical sizing |
+| Adiabatic $T$ rise | $T = T_0 + (-\Delta H_{rxn}/\rho C_p)(C_{A0} X)$ | Adiabatic batch/PFR |
+| Energy balance (CSTR) | $\dot{Q} - \dot{W}_s = F_{A0}[\Delta H_{rxn}X + \sum\Theta_i C_{p,i}(T-T_0)]$ | General |
+| Selectivity | $S_{D/U} = r_D/r_U$ | Point selectivity |
+| Yield | $Y = $ moles desired product / moles fed to reactor | Overall |
+
+---
+
 ## First-Order Reaction Kinetics
 
 First-order reactions are chemical reactions where the rate of reaction is directly proportional to the concentration of only one of the reactants. Understanding their behavior is crucial for reactor design and analysis.
@@ -2252,4 +2273,86 @@ $$
 $$
 
 Since the rate of heat addition from the steam jacket is greater than the rate of heat consumption by the reaction at the inlet, the numerator in the energy balance is positive. Therefore, $\frac{dT}{dV}$ is positive, and the temperature will **increase** immediately downstream from the inlet.
+```
+
+---
+
+## PE Exam Practice Problems
+
+```{prf:example} Practice Problem 1 — CSTR vs. PFR Sizing
+
+The liquid-phase reaction $A \rightarrow B$ follows second-order kinetics: $-r_A = k C_A^2$ with $k = 0.5$ L/mol·min.
+
+Feed: $C_{A0} = 2$ mol/L, volumetric flow rate $v_0 = 10$ L/min. Desired conversion: $X = 0.80$.
+
+**(a)** What volume CSTR is required?
+
+**(b)** What volume PFR is required?
+
+**(c)** Which is smaller, and why?
+```
+
+```{dropdown} Solution
+
+**Part (a): CSTR volume**
+
+Exit concentration: $C_A = C_{A0}(1-X) = 2(1-0.8) = 0.4$ mol/L
+
+Exit rate: $-r_A = k C_A^2 = 0.5 \times (0.4)^2 = 0.08$ mol/L·min
+
+$$V_{CSTR} = \frac{F_{A0}\,X}{-r_A\big|_{exit}} = \frac{v_0 C_{A0} X}{-r_A} = \frac{10 \times 2 \times 0.80}{0.08} = \mathbf{200 \text{ L}}$$
+
+**Part (b): PFR volume**
+
+$$V_{PFR} = F_{A0}\int_0^{0.8}\frac{dX}{-r_A} = v_0 C_{A0}\int_0^{0.8}\frac{dX}{k\,C_{A0}^2(1-X)^2}$$
+
+$$= \frac{v_0}{k\,C_{A0}}\int_0^{0.8}\frac{dX}{(1-X)^2} = \frac{10}{0.5 \times 2}\left[\frac{1}{1-X}\right]_0^{0.8} = 10\left[\frac{1}{0.2} - 1\right] = 10 \times 4 = \mathbf{40 \text{ L}}$$
+
+**Part (c): Comparison**
+
+$V_{PFR} = 40$ L is **5× smaller** than $V_{CSTR} = 200$ L.
+
+For positive-order reactions, the PFR is always more efficient because it operates at higher concentrations throughout (higher rate), while the CSTR operates entirely at the low exit concentration (lowest rate). For second-order kinetics, this difference is especially pronounced.
+```
+
+---
+
+```{prf:example} Practice Problem 2 — Arrhenius: Finding $E_a$ from Two Temperature Data Points
+
+A first-order reaction has rate constants $k_1 = 0.012$ min⁻¹ at 300 K and $k_2 = 0.135$ min⁻¹ at 350 K.
+
+**(a)** What is the activation energy $E_a$ (kJ/mol)?
+
+**(b)** What is the rate constant at 325 K?
+```
+
+```{dropdown} Solution
+
+**Part (a): Activation energy**
+
+Taking the ratio of Arrhenius at two temperatures:
+
+$$\ln\frac{k_2}{k_1} = \frac{E_a}{R}\left(\frac{1}{T_1} - \frac{1}{T_2}\right)$$
+
+$$\ln\frac{0.135}{0.012} = \ln(11.25) = 2.420$$
+
+$$\frac{1}{T_1} - \frac{1}{T_2} = \frac{1}{300} - \frac{1}{350} = 3.333\times10^{-3} - 2.857\times10^{-3} = 4.762\times10^{-4} \text{ K}^{-1}$$
+
+$$E_a = \frac{R \ln(k_2/k_1)}{1/T_1 - 1/T_2} = \frac{8.314 \times 2.420}{4.762\times10^{-4}} = \mathbf{42{,}250 \text{ J/mol} \approx 42.3 \text{ kJ/mol}}$$
+
+**Part (b): Rate constant at 325 K**
+
+$$\ln\frac{k_{325}}{k_1} = \frac{E_a}{R}\left(\frac{1}{300} - \frac{1}{325}\right) = \frac{42{,}250}{8.314}\left(2.564\times10^{-4}\right) = 5083 \times 2.564\times10^{-4} = 1.303$$
+
+$$k_{325} = 0.012 \times e^{1.303} = 0.012 \times 3.681 = \mathbf{0.0442 \text{ min}^{-1}}$$
+```
+
+```{caution}
+**PE Exam Traps — Chemical Reaction Engineering**
+
+- **CSTR uses exit conditions, PFR integrates.** The CSTR design equation evaluates $-r_A$ at the **exit** (lowest) concentration. Evaluating $-r_A$ at the feed concentration for a CSTR gives a dramatically undersized reactor. The PFR integrates from feed to exit concentration, naturally accounting for the changing rate.
+- **Levenspiel plot area interpretation:** For a CSTR, volume = rectangle with width $X$ and height $F_{A0}/(-r_A)_{exit}$. For a PFR, volume = area under the $F_{A0}/(-r_A)$ curve from 0 to $X$. For a rate that increases with conversion (autocatalytic or unusual kinetics), a CSTR first + PFR second can be more efficient than PFR alone.
+- **Arrhenius $T$ must be in Kelvin.** $E_a/(RT)$ requires absolute temperature. Using °C gives a nonsensical exponent. Also, the pre-exponential $A$ has the same units as $k$ (s⁻¹ for first-order, L/mol·s for second-order) — its units are often omitted but are essential for dimensional consistency.
+- **Conversion $X$ is fraction reacted, not fraction remaining.** $C_A = C_{A0}(1-X)$, so at $X = 0.9$, only 10% of A remains. Writing $C_A = C_{A0}\,X$ is wrong and a very common slip.
+- **Space time $\tau = V/v_0$ is not residence time for gas-phase reactions** with changing mole number, because the volumetric flow rate $v$ changes with conversion. Use $\tau = C_{A0}\int_0^X dX/(-r_A)$ consistently.
 ```

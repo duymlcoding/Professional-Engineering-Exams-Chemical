@@ -6,6 +6,30 @@ date: "2025"
 
 # Basic Thermodynamics
 
+## Quick Reference: Key Equations
+
+| Topic | Formula | Notes |
+|-------|---------|-------|
+| Ideal gas law | $PV_t = nRT$ | $T$ in K; $R = 8.314$ J/mol·K |
+| Molar volume | $PV = RT$ | $V = V_t/n$ |
+| Ideal gas $\Delta H$ | $\Delta H = C_p \Delta T$ | Any process, ideal gas |
+| Ideal gas $\Delta U$ | $\Delta U = C_v \Delta T$ | Any process, ideal gas |
+| $C_p - C_v$ | $C_p = C_v + R$ | Ideal gas only |
+| First Law (closed) | $\Delta U = Q - W$ | $W = \int P\,dV$ |
+| First Law (open, SS) | $\Delta H = Q - W_s$ | per unit mass |
+| Adiabatic reversible | $TV^{\gamma-1} = \text{const}$, $TP^{(1-\gamma)/\gamma} = \text{const}$ | $\gamma = C_p/C_v$ |
+| Entropy change (ideal gas) | $\Delta S = nC_v\ln(T_2/T_1) + nR\ln(V_2/V_1)$ | Closed system |
+| Entropy change (ideal gas) | $\Delta S = nC_p\ln(T_2/T_1) - nR\ln(P_2/P_1)$ | Alternate form |
+| Carnot efficiency | $\eta = 1 - T_C/T_H$ | $T$ in K |
+| COP (refrigerator) | $\text{COP} = T_C/(T_H - T_C)$ | Carnot limit |
+| COP (heat pump) | $\text{COP} = T_H/(T_H - T_C)$ | Carnot limit |
+| Rankine efficiency | $\eta = (W_{turbine} - W_{pump})/Q_{boiler}$ | Steam power cycle |
+| Turbine isentropic eff. | $\eta_T = (h_1 - h_2)/(h_1 - h_{2s})$ | Actual vs. isentropic |
+| Compressor isentropic eff. | $\eta_C = (h_{2s} - h_1)/(h_2 - h_1)$ | Isentropic vs. actual |
+| van der Waals | $(P + a/V^2)(V-b) = RT$ | Real gas |
+
+---
+
 ## Ideal Gas Law
 
 ```{note}
@@ -2766,4 +2790,96 @@ T_{2,irrev} = 298 + 184.8 = \textbf{482.8 K}
 
 $$
 
+```
+
+---
+
+## PE Exam Practice Problems
+
+```{prf:example} Practice Problem 1 — Carnot vs. Rankine Efficiency
+
+A steam power plant operates with steam entering the turbine at 500°C and 6 MPa, and condensing at 40°C. The isentropic efficiency of the turbine is 85% and the pump is ideal.
+
+From steam tables:
+- Turbine inlet (500°C, 6 MPa): $h_1 = 3423$ kJ/kg, $s_1 = 6.882$ kJ/kg·K
+- Saturated liquid at 40°C: $h_f = 167.5$ kJ/kg, $h_{fg} = 2319$ kJ/kg, $s_f = 0.573$ kJ/kg·K, $s_{fg} = 7.686$ kJ/kg·K
+- Pump work (ideal): $w_p = v_f\,\Delta P \approx 6$ kJ/kg
+
+**(a)** What is the maximum (Carnot) thermal efficiency between these temperature limits?
+
+**(b)** What is the actual cycle thermal efficiency?
+```
+
+```{dropdown} Solution
+
+**Part (a): Carnot efficiency**
+
+$$\eta_{Carnot} = 1 - \frac{T_C}{T_H} = 1 - \frac{(40+273)}{(500+273)} = 1 - \frac{313}{773} = 0.595 = \mathbf{59.5\%}$$
+
+**Part (b): Actual Rankine efficiency**
+
+**Step 1: Isentropic turbine exit state**
+
+For isentropic expansion to 40°C: $s_{2s} = s_1 = 6.882$ kJ/kg·K
+
+Quality: $x_s = (s_{2s} - s_f)/s_{fg} = (6.882 - 0.573)/7.686 = 0.821$
+
+$h_{2s} = h_f + x_s\,h_{fg} = 167.5 + 0.821 \times 2319 = 2071$ kJ/kg
+
+**Step 2: Actual turbine exit enthalpy**
+
+$$h_2 = h_1 - \eta_T(h_1 - h_{2s}) = 3423 - 0.85(3423-2071) = 3423 - 1149 = 2274 \text{ kJ/kg}$$
+
+**Step 3: Boiler heat input**
+
+$$q_{in} = h_1 - (h_f + w_p) = 3423 - (167.5 + 6) = 3249.5 \text{ kJ/kg}$$
+
+**Step 4: Cycle efficiency**
+
+$$\eta = \frac{w_{turbine} - w_{pump}}{q_{in}} = \frac{(3423-2274) - 6}{3249.5} = \frac{1143}{3249.5} = 0.352 = \mathbf{35.2\%}$$
+
+The actual efficiency is only 59% of the Carnot limit — irreversibilities in the turbine and the non-Carnot cycle path account for the gap.
+```
+
+---
+
+```{prf:example} Practice Problem 2 — Adiabatic Compression
+
+Air ($C_p = 29.1$ J/mol·K, $\gamma = 1.40$) is compressed adiabatically and reversibly from 1 atm, 25°C to 10 atm.
+
+**(a)** What is the final temperature?
+
+**(b)** What is the work required per mole of air?
+```
+
+```{dropdown} Solution
+
+**Part (a): Exit temperature (adiabatic reversible)**
+
+For an ideal gas undergoing isentropic compression:
+
+$$\frac{T_2}{T_1} = \left(\frac{P_2}{P_1}\right)^{(\gamma-1)/\gamma} = \left(\frac{10}{1}\right)^{0.40/1.40} = 10^{0.2857} = 1.931$$
+
+$$T_2 = 298 \times 1.931 = \mathbf{575\text{ K}} \approx 302°\text{C}$$
+
+**Part (b): Work per mole**
+
+For an ideal gas adiabatic process, $Q=0$, so $W = \Delta U = C_v\Delta T$:
+
+$$C_v = C_p - R = 29.1 - 8.314 = 20.79 \text{ J/mol·K}$$
+
+$$W = C_v(T_2 - T_1) = 20.79(575-298) = \mathbf{5759 \text{ J/mol}} \approx 5.76 \text{ kJ/mol}$$
+
+Alternatively using $\Delta H = C_p\Delta T$ and $W_s = \Delta H$ for an open system:
+$W_s = 29.1(575-298) = 8071$ J/mol — this is the shaft work for a continuous compressor.
+```
+
+```{caution}
+**PE Exam Traps — Thermodynamics**
+
+- **Temperature must be in Kelvin.** The Carnot efficiency formula, adiabatic process relations, entropy calculations, and the ideal gas law all require absolute temperature. Plugging in °C is the most common single error on PE thermo problems.
+- **Closed vs. open system First Law.** For a closed system: $\Delta U = Q - W$ (work = $\int P\,dV$). For an open steady-state system: $\Delta H = Q - W_s$ (shaft work only). Using $\Delta U$ when you have a turbine or compressor (open system) gives the wrong answer.
+- **Isentropic efficiency direction.** For a turbine: $\eta_T = w_{actual}/w_{isentropic} < 1$ (actual work is less than ideal). For a compressor: $\eta_C = w_{isentropic}/w_{actual} < 1$ (ideal work is less than actual). These are NOT symmetric — mixing them up swaps the numerator and denominator.
+- **$\Delta H$ vs. $\Delta U$ for ideal gas:** Both hold $\Delta H = C_p\Delta T$ and $\Delta U = C_v\Delta T$ for any process — but $W = Q - \Delta U$ for closed systems (use $C_v$) and $W_s = \Delta H - Q$ for open systems (use $C_p$). The trap is using $C_p$ in a closed-system piston work problem.
+- **COP vs. efficiency:** COP for a heat pump can be greater than 1 (it moves heat, not just converts it). A COP of 4 means 4 kJ of heat delivered per 1 kJ of work input. Never call a COP > 1 "impossible."
 ```

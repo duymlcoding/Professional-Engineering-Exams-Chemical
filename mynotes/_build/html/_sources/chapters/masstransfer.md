@@ -6,6 +6,27 @@ title: Mass Transfer Study Guide
 
 # Mass Transfer
 
+## Quick Reference: Key Equations
+
+| Topic | Formula | Notes |
+|-------|---------|-------|
+| Fick's First Law | $J_A = -D_{AB}\,dC_A/dz$ | Steady-state molar flux [mol/m²·s] |
+| Fick's Second Law | $\partial C_A/\partial t = D_{AB}\,\partial^2 C_A/\partial x^2$ | Unsteady diffusion |
+| Error function soln. | $(C_A - C_{A0})/(C_{As}-C_{A0}) = 1 - \text{erf}(x/2\sqrt{D_{AB}t})$ | Semi-infinite solid |
+| Mass transfer coeff. | $N_A = k_c(C_{As} - C_{A\infty})$ | Convective MT |
+| Sherwood number | $Sh = k_c L/D_{AB}$ | Dimensionless $k_c$ |
+| Schmidt number | $Sc = \mu/(\rho D_{AB}) = \nu/D_{AB}$ | Fluid property |
+| Colburn analogy | $j_D = j_H$ | MT–HT analogy |
+| Distillation: OB | $y = (L/V)x + (D/V)x_D$ | Above feed (rectifying) |
+| Distillation: OB | $y = (L'/V')x - (B/V')x_B$ | Below feed (stripping) |
+| Reflux ratio | $R = L/D$ | $L$ = liquid down, $D$ = distillate |
+| Min. reflux (Fenske) | $R_{min}$ from pinch point on McCabe-Thiele | At infinite stages |
+| Henry's Law | $p_A = H\,x_A$ | Dilute gas absorption |
+| Absorption factor | $A = L/(mG)$ | $m$ = Henry slope; $A>1$ for feasible absorption |
+| Rayleigh equation | $\ln(F/W) = \int_{x_W}^{x_F} dx/(y^*-x)$ | Batch distillation |
+
+---
+
 ## Diffusion into a Solid
 
 Diffusion is the net movement of a substance from a region of higher concentration to a region of lower concentration, driven by the random motion of particles. When this process occurs over time, it is known as **unsteady-state diffusion**, and it is crucial for many materials science and chemical engineering processes, such as hardening steel or doping semiconductors.
@@ -1215,4 +1236,86 @@ Is it valid to assume the total flow rates are constant? Let's check the two eff
 **Final Answer Summary**
 To achieve 95\% removal of the organic compound, approximately **38 moles of air are needed per mole of water**. The high ratio of air to water is required because the organic is not highly volatile out of water.
 
+```
+
+---
+
+## PE Exam Practice Problems
+
+```{prf:example} Practice Problem 1 — McCabe-Thiele Minimum Reflux
+
+A distillation column separates a binary mixture of benzene (more volatile) and toluene. The feed is 40 mol% benzene, saturated liquid ($q = 1$). The distillate specification is $x_D = 0.95$ mol fraction benzene and the bottoms specification is $x_B = 0.05$.
+
+The equilibrium data at the feed composition gives $y^* = 0.62$ when $x = 0.40$.
+
+**(a)** What is the minimum reflux ratio $R_{min}$?
+
+**(b)** At an operating reflux ratio $R = 1.5\,R_{min}$, what is the slope of the rectifying operating line?
+```
+
+```{dropdown} Solution
+
+**Part (a): Minimum reflux**
+
+At minimum reflux, the rectifying operating line passes through the pinch point $(x_q, y_q^*)$. For a saturated liquid feed ($q=1$), the $q$-line is vertical at $x = x_F = 0.40$, so the pinch point is $(0.40,\, 0.62)$.
+
+The rectifying operating line at minimum reflux passes through $(x_D, x_D) = (0.95, 0.95)$ and $(0.40, 0.62)$:
+
+$$\text{slope} = \frac{L}{V} = \frac{y_D - y_q}{x_D - x_q} = \frac{0.95 - 0.62}{0.95 - 0.40} = \frac{0.33}{0.55} = 0.600$$
+
+Since $L/V = R/(R+1)$:
+
+$$R_{min} = \frac{L/V}{1 - L/V} = \frac{0.600}{0.400} = \mathbf{1.50}$$
+
+**Part (b): Operating reflux slope**
+
+$$R = 1.5 \times 1.50 = 2.25$$
+
+$$\frac{L}{V} = \frac{R}{R+1} = \frac{2.25}{3.25} = \mathbf{0.692}$$
+
+The rectifying operating line: $y = 0.692\,x + (1-0.692) \times x_D = 0.692\,x + 0.308 \times 0.95 = 0.692\,x + 0.293$
+```
+
+---
+
+```{prf:example} Practice Problem 2 — Unsteady Diffusion (Fick's Law)
+
+A large slab of rubber initially contains no solvent ($C_{A0} = 0$). One surface is suddenly exposed to a solvent vapor maintaining $C_{As} = 0.8$ kg/m³ at the surface. The diffusivity of solvent in rubber is $D_{AB} = 8 \times 10^{-12}$ m²/s.
+
+How long (in hours) does it take for the solvent concentration at a depth of 2 mm to reach 0.20 kg/m³?
+```
+
+```{dropdown} Solution
+
+**Step 1: Calculate the concentration ratio**
+
+$$\frac{C_A - C_{A0}}{C_{As} - C_{A0}} = \frac{0.20 - 0}{0.80 - 0} = 0.25$$
+
+**Step 2: Relate to error function**
+
+$$0.25 = 1 - \text{erf}\!\left(\frac{x}{2\sqrt{D_{AB}t}}\right) \implies \text{erf}\!\left(\frac{x}{2\sqrt{D_{AB}t}}\right) = 0.75$$
+
+**Step 3: Find the error function argument**
+
+From erf tables: $\text{erf}(0.814) \approx 0.75$, so:
+
+$$\frac{x}{2\sqrt{D_{AB}t}} = 0.814$$
+
+**Step 4: Solve for $t$**
+
+$$\sqrt{D_{AB}t} = \frac{x}{2 \times 0.814} = \frac{0.002}{1.628} = 1.229 \times 10^{-3} \text{ m}$$
+
+$$D_{AB}t = (1.229\times10^{-3})^2 = 1.510\times10^{-6} \text{ m}^2$$
+
+$$t = \frac{1.510\times10^{-6}}{8\times10^{-12}} = 188{,}750 \text{ s} = \mathbf{52.4 \text{ hours}}$$
+```
+
+```{caution}
+**PE Exam Traps — Mass Transfer**
+
+- **Mole fraction vs. mole ratio in absorption:** Operating and equilibrium lines on an absorption diagram are often plotted in mole ratio ($Y = y/(1-y)$) coordinates for concentrated systems. Using mole fractions when mole ratios are required makes the operating line curved instead of straight — the stage count will be wrong.
+- **Absorption vs. stripping — which phase is which:** In absorption, the solute transfers from gas to liquid (gas is stripped, liquid is loaded). In stripping, it goes liquid → gas. The operating line is above the equilibrium curve for absorption, below for stripping. Drawing these backwards is a common diagram error.
+- **Minimum reflux pinch point location:** For a saturated liquid feed ($q=1$), the pinch is at the intersection of the $q$-line (vertical at $x_F$) with the equilibrium curve. For a partially vaporized feed ($0 < q < 1$), the $q$-line has a negative slope — the pinch point shifts. Don't assume the pinch is always at the feed tray composition.
+- **Error function argument:** The argument of erf is $x/(2\sqrt{Dt})$, not $x/\sqrt{Dt}$ (missing the factor of 2 is extremely common). If you get an erf argument greater than ~2.5, recheck — erf saturates at 1.0 for large arguments.
+- **Fick's First vs. Second Law:** First Law ($J = -D\,dC/dz$) is for steady-state. Second Law ($\partial C/\partial t = D\,\partial^2C/\partial x^2$) is for unsteady. Using a steady-state flux equation to analyze a time-varying concentration profile gives nonsense.
 ```

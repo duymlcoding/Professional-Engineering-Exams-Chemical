@@ -6,6 +6,29 @@ date: "2024"
 
 # Complete Heat Transfer Fundamentals
 
+## Quick Reference: Key Equations
+
+| Topic | Formula | Notes |
+|-------|---------|-------|
+| Fourier's Law (1D) | $q = -kA\,dT/dx$ | Conduction |
+| Plane wall resistance | $R_{cond} = L/(kA)$ | Thermal resistance |
+| Cylindrical wall | $q = 2\pi k L\,(T_1-T_2)/\ln(r_2/r_1)$ | Hollow cylinder |
+| Newton's Law of Cooling | $q = h A (T_s - T_\infty)$ | Convection |
+| Convective resistance | $R_{conv} = 1/(hA)$ | Series with conduction |
+| Overall HTC | $1/UA = \sum R_{total}$ | Series resistances |
+| Radiation | $q = \varepsilon\sigma A(T_s^4 - T_{surr}^4)$ | $T$ in K; $\sigma=5.67\times10^{-8}$ W/m²·K⁴ |
+| Nusselt number | $Nu = hL/k$ | Dimensionless $h$ |
+| Prandtl number | $Pr = \mu C_p/k = \nu/\alpha$ | Fluid property |
+| Reynolds number | $Re = \rho u L/\mu$ | Flow regime |
+| Dittus-Boelter | $Nu = 0.023\,Re^{0.8}Pr^n$ | $n=0.4$ heating, $0.3$ cooling |
+| LMTD | $\Delta T_{lm} = (\Delta T_1 - \Delta T_2)/\ln(\Delta T_1/\Delta T_2)$ | Heat exchangers |
+| LMTD design eq. | $q = UA\,F\,\Delta T_{lm}$ | $F$ = correction factor |
+| NTU | $NTU = UA/C_{min}$ | Effectiveness method |
+| Effectiveness | $\varepsilon = q/q_{max}$ | $q_{max} = C_{min}(T_{h,in}-T_{c,in})$ |
+| Clausius-Clapeyron | $\ln(P_2/P_1) = (\Delta H_{vap}/R)(1/T_1 - 1/T_2)$ | Phase change |
+
+---
+
 This comprehensive guide covers the fundamental principles of heat transfer including conduction, convection, and radiation, along with practical applications to heat exchangers and psychrometric processes. The material is designed for engineering students preparing for professional engineering examinations and practitioners needing a thorough reference.
 
 ## Introduction to Heat Transfer
@@ -2886,7 +2909,82 @@ $$
 
 Combined parameter for natural convection.
 
+
+## PE Exam Practice Problems
+
+```{prf:example} Practice Problem 1 — Composite Wall with Convection
+
+A furnace wall consists of three layers in series:
+- Refractory brick: $k_1 = 1.2$ W/m·K, $L_1 = 0.20$ m
+- Insulating firebrick: $k_2 = 0.15$ W/m·K, $L_2 = 0.10$ m
+- Steel shell: $k_3 = 50$ W/m·K, $L_3 = 0.01$ m
+
+The inner surface is exposed to flue gas at $T_{hot} = 900°C$ with convection coefficient $h_i = 30$ W/m²·K. The outer steel surface is cooled by air at $T_{cold} = 25°C$ with $h_o = 10$ W/m²·K.
+
+**(a)** What is the total thermal resistance per unit area (m²·K/W)?
+
+**(b)** What is the steady-state heat flux (W/m²)?
+```
+
+```{dropdown} Solution
+
+**Step 1: Individual thermal resistances per unit area** $R'' = L/k$ or $1/h$
+
+$$R''_{conv,i} = 1/h_i = 1/30 = 0.0333 \text{ m}^2\text{·K/W}$$
+$$R''_1 = L_1/k_1 = 0.20/1.2 = 0.1667 \text{ m}^2\text{·K/W}$$
+$$R''_2 = L_2/k_2 = 0.10/0.15 = 0.6667 \text{ m}^2\text{·K/W}$$
+$$R''_3 = L_3/k_3 = 0.01/50 = 0.0002 \text{ m}^2\text{·K/W}$$
+$$R''_{conv,o} = 1/h_o = 1/10 = 0.1000 \text{ m}^2\text{·K/W}$$
+
+**Step 2: Total resistance (series)**
+
+$$R''_{total} = 0.0333 + 0.1667 + 0.6667 + 0.0002 + 0.1000 = \mathbf{0.967 \text{ m}^2\text{·K/W}}$$
+
+**Step 3: Heat flux**
+
+$$q'' = \frac{\Delta T}{R''_{total}} = \frac{900 - 25}{0.967} = \mathbf{905 \text{ W/m}^2}$$
+
+**Key observation:** The insulating firebrick ($R'' = 0.667$) dominates — it accounts for 69% of the total resistance. The steel shell is negligible (0.02%). This is typical: metals conduct very well and rarely limit heat transfer in industrial walls.
+```
+
 ---
+
+```{prf:example} Practice Problem 2 — Shell-and-Tube Heat Exchanger (LMTD)
+
+A counterflow shell-and-tube heat exchanger heats 2.0 kg/s of water from 20°C to 70°C using hot oil ($C_p = 2.0$ kJ/kg·K) entering at 120°C. The overall heat transfer coefficient is $U = 350$ W/m²·K.
+
+**(a)** What is the required heat duty (kW)?
+
+**(b)** If the oil exits at 80°C, what heat exchange area is required?
+```
+
+```{dropdown} Solution
+
+**Part (a): Heat duty**
+
+$$\dot{Q} = \dot{m}_{water} C_{p,water} \Delta T_{water} = 2.0 \times 4.184 \times (70-20) = \mathbf{418.4 \text{ kW}}$$
+
+**Part (b): LMTD and area**
+
+Counterflow configuration: hot oil 120°C → 80°C; cold water 70°C ← 20°C
+
+$$\Delta T_1 = T_{h,in} - T_{c,out} = 120 - 70 = 50°\text{C}$$
+$$\Delta T_2 = T_{h,out} - T_{c,in} = 80 - 20 = 60°\text{C}$$
+
+$$\Delta T_{lm} = \frac{\Delta T_1 - \Delta T_2}{\ln(\Delta T_1/\Delta T_2)} = \frac{50 - 60}{\ln(50/60)} = \frac{-10}{\ln(0.833)} = \frac{-10}{-0.1823} = \mathbf{54.9°\text{C}}$$
+
+$$A = \frac{\dot{Q}}{U\,\Delta T_{lm}} = \frac{418{,}400}{350 \times 54.9} = \frac{418{,}400}{19{,}215} = \mathbf{21.8 \text{ m}^2}$$
+```
+
+```{caution}
+**PE Exam Traps — Heat Transfer**
+
+- **LMTD $\Delta T$ assignment in counterflow vs. parallel flow:** In counterflow, $\Delta T_1$ is hot-in minus cold-OUT and $\Delta T_2$ is hot-out minus cold-IN. Swapping these (using the parallel-flow convention) gives a wrong (smaller) LMTD and an overestimated area. Draw the temperature profiles first.
+- **Radiation requires absolute temperature (K⁴).** Stefan-Boltzmann is $q = \varepsilon\sigma A(T_s^4 - T_{surr}^4)$, where $T$ is in Kelvin. Using Celsius gives an answer off by orders of magnitude. 273 K vs. 0°C barely matters for $\Delta T$ in conduction/convection — but $T^4$ makes it critical for radiation.
+- **Thermal resistance is additive only in series.** Parallel resistances add as $1/R_{total} = 1/R_1 + 1/R_2$. A composite wall with different paths (fin + bare wall) is a parallel network, not series. Treating parallel paths as series dramatically overestimates resistance.
+- **Dittus-Boelter exponent:** $n = 0.4$ when the fluid is being **heated** (fluid is cooler than the wall); $n = 0.3$ when the fluid is being **cooled**. This affects Nu by ~10-15% and is frequently tested.
+- **NTU method required for unknown exit temperatures:** If both outlet temperatures are unknown (e.g., "find exit temperatures given UA and inlet conditions"), use NTU-effectiveness, not LMTD. LMTD requires knowing all four temperatures.
+```
 
 **End of Document**
 

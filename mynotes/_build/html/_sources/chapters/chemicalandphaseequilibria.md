@@ -4,7 +4,28 @@ author: "PE Study Guide"
 date: "2025"
 ---
 
-# Chemical Equilibria
+# Chemical and Phase Equilibria
+
+## Quick Reference: Key Equations
+
+| Topic | Formula | Notes |
+|-------|---------|-------|
+| Standard $\Delta G^\circ$ | $\Delta G^\circ_T = \sum_i \nu_i \Delta G^\circ_{f,i}$ | Products minus reactants |
+| Equilibrium constant | $K_a = \exp(-\Delta G^\circ/RT)$ | Thermodynamic $K$ |
+| $K_y$ (ideal gas) | $K_a = K_y \cdot P^{\sum\nu_i}$ | $K_y = \prod y_i^{\nu_i}$ |
+| Van't Hoff | $d\ln K/dT = \Delta H^\circ_{rxn}/RT^2$ | Temperature effect on $K$ |
+| Raoult's Law | $y_i P = x_i P_i^{sat}$ | Ideal VLE |
+| Modified Raoult's | $y_i P = \gamma_i x_i P_i^{sat}$ | Non-ideal liquid |
+| Antoine equation | $\log_{10}P^{sat} = A - B/(T+C)$ | $P$ in mmHg or bar |
+| Henry's Law | $p_A = H_A\,x_A$ | Dilute solutions |
+| Bubble point | $\sum x_i K_i = 1$, $K_i = P_i^{sat}/P$ | Find $T$ or $P$ |
+| Dew point | $\sum y_i/K_i = 1$ | Find $T$ or $P$ |
+| Flash (Rachford-Rice) | $\sum_i (z_i(K_i-1))/(1+\psi(K_i-1)) = 0$ | $\psi=V/F$, vapor fraction |
+| Clausius-Clapeyron | $\ln(P_2/P_1) = (\Delta H_{vap}/R)(1/T_1 - 1/T_2)$ | Approx. for vapor pressure |
+| Activity coefficient | $\ln\gamma_i$ from Margules, van Laar, or NRTL | Non-ideal liquid |
+| Fugacity (liquid) | $f_i^L = \gamma_i x_i P_i^{sat}$ | Modified Raoult basis |
+
+---
 
 This study guide covers the principles of chemical equilibrium for gas-phase reactions. These calculations determine the final state of a system, representing the maximum possible conversion. It is important to note that equilibrium does not predict the reaction kinetics, which is the speed at which the reaction reaches equilibrium.
 
@@ -3177,6 +3198,100 @@ $$
 **Step 5: Final Answer**
 
 Approximately **282 kg** of water must be evaporated in the crystallizer.
+```
+
+---
+
+## PE Exam Practice Problems
+
+```{prf:example} Practice Problem 1 — Bubble Point Calculation (Raoult's Law)
+
+A liquid mixture of 30 mol% benzene (1) and 70 mol% toluene (2) is at 1 atm total pressure. Use Raoult's Law to find the bubble point temperature and vapor composition.
+
+Antoine constants ($\log_{10} P^{sat}$ in mmHg, $T$ in °C):
+- Benzene: $A = 6.905$, $B = 1211$, $C = 220.8$
+- Toluene: $A = 6.953$, $B = 1344$, $C = 219.5$
+
+$P_{total} = 760$ mmHg.
+```
+
+```{dropdown} Solution
+
+**Step 1: Bubble point condition**
+
+At bubble point, the first vapor bubble forms. The condition is:
+
+$$\sum x_i K_i = 1 \quad \text{where} \quad K_i = P_i^{sat}(T)/P$$
+
+**Step 2: Iterate on temperature**
+
+Try $T = 95°C$:
+
+$$P_1^{sat} = 10^{6.905 - 1211/(95+220.8)} = 10^{6.905 - 3.835} = 10^{3.070} = 1175 \text{ mmHg}$$
+
+$$P_2^{sat} = 10^{6.953 - 1344/(95+219.5)} = 10^{6.953 - 4.275} = 10^{2.678} = 476 \text{ mmHg}$$
+
+$$\sum x_i P_i^{sat}/P = (0.30 \times 1175 + 0.70 \times 476)/760 = (352.5 + 333.2)/760 = 685.7/760 = 0.902 < 1$$
+
+Temperature too low. Try $T = 100°C$:
+
+$$P_1^{sat} = 10^{6.905 - 1211/320.8} = 10^{3.130} = 1349 \text{ mmHg}$$
+
+$$P_2^{sat} = 10^{6.953 - 1344/319.5} = 10^{2.742} = 552 \text{ mmHg}$$
+
+$$\sum x_i K_i = (0.30 \times 1349 + 0.70 \times 552)/760 = (404.7 + 386.4)/760 = 1.041 > 1$$
+
+Interpolating: $T_{bubble} \approx 95 + 5 \times (1 - 0.902)/(1.041 - 0.902) \approx 95 + 3.5 = \mathbf{98.5°C}$
+
+**Step 3: Vapor composition at bubble point** (use $T \approx 98.5°C$, $K_i = P_i^{sat}/P$)
+
+$$y_1 = x_1 K_1 = 0.30 \times (1349/760) \approx 0.532 \quad y_2 = 0.468$$
+```
+
+---
+
+```{prf:example} Practice Problem 2 — Chemical Equilibrium: $K$ and Conversion
+
+The gas-phase reaction $\text{N}_2\text{O}_4(g) \rightleftharpoons 2\,\text{NO}_2(g)$ has $\Delta G^\circ_{298} = +4.7$ kJ/mol and $\Delta H^\circ_{rxn} = +57.2$ kJ/mol.
+
+**(a)** What is $K_a$ at 298 K?
+
+**(b)** Is equilibrium conversion higher or lower at 400 K? Calculate $K_a$ at 400 K.
+
+**(c)** Does increasing total pressure favor products or reactants?
+```
+
+```{dropdown} Solution
+
+**Part (a): $K_a$ at 298 K**
+
+$$K_a = \exp\!\left(-\frac{\Delta G^\circ}{RT}\right) = \exp\!\left(-\frac{4700}{8.314 \times 298}\right) = \exp(-1.897) = \mathbf{0.150}$$
+
+$K_a < 1$ means reactants are favored at 298 K.
+
+**Part (b): $K_a$ at 400 K (Van't Hoff)**
+
+$$\ln\frac{K_2}{K_1} = \frac{\Delta H^\circ}{R}\left(\frac{1}{T_1} - \frac{1}{T_2}\right) = \frac{57200}{8.314}\left(\frac{1}{298} - \frac{1}{400}\right)$$
+
+$$= 6880 \times (3.356\times10^{-3} - 2.500\times10^{-3}) = 6880 \times 8.56\times10^{-4} = 5.89$$
+
+$$K_2 = 0.150 \times e^{5.89} = 0.150 \times 361.7 = \mathbf{54.3}$$
+
+At 400 K, $K_a = 54.3 \gg 1$ — products (NO₂) are strongly favored. Higher temperature **increases** conversion for this endothermic reaction.
+
+**Part (c): Pressure effect**
+
+$\sum\nu_i = 2 - 1 = +1$ (reaction increases moles). Higher total pressure shifts equilibrium **toward reactants** (Le Châtelier's principle — the system compresses by favoring fewer moles). Increasing pressure **decreases** NO₂ yield.
+```
+
+```{caution}
+**PE Exam Traps — Chemical and Phase Equilibria**
+
+- **$K_a$ is dimensionless but $K_y$ is not.** The thermodynamic equilibrium constant $K_a = K_y \cdot P^{\sum\nu_i}$ (with $P$ in bar). If $\sum\nu_i \neq 0$, changing pressure changes $K_y$ even though $K_a$ is fixed by temperature alone. Forgetting the pressure factor in gas-phase equilibrium is extremely common.
+- **Van't Hoff direction:** For exothermic reactions ($\Delta H^\circ < 0$), increasing $T$ decreases $K$. For endothermic ($\Delta H^\circ > 0$), increasing $T$ increases $K$. Le Châtelier's principle and Van't Hoff must be consistent — always check the sign of $\Delta H^\circ$ before stating whether higher $T$ helps or hurts yield.
+- **Bubble vs. dew point:** At the **bubble point**, you know the liquid composition ($x_i$) and the condition $\sum x_i K_i = 1$. At the **dew point**, you know the vapor composition ($y_i$) and the condition $\sum y_i/K_i = 1$. Mixing these up inverts the problem entirely.
+- **Raoult's Law requires ideal liquid AND ideal vapor.** If activity coefficients are given ($\gamma_i \neq 1$), use modified Raoult's: $y_i P = \gamma_i x_i P_i^{sat}$. Neglecting $\gamma_i$ when it's provided leads to wrong bubble/dew point temperatures.
+- **Flash calculation: $\psi$ is the vapor fraction, not liquid fraction.** In the Rachford-Rice equation, $\psi = V/F$ varies between 0 (all liquid, bubble point) and 1 (all vapor, dew point). If your answer gives $\psi$ outside $[0,1]$, the feed is either entirely liquid or entirely vapor at those conditions — not a two-phase flash.
 ```
 
 ## Phase Behavior Near the Critical Point

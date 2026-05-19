@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=8c6b312c" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=efcdb63b" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5d1cebc" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -168,7 +168,7 @@
 <li class="toctree-l1"><a class="reference internal" href="heattransfer.html">Heat Transfer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="masstransfer.html">Mass Transfer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chemicalreactionengineering.html">Chemical Reaction Engineering</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chemicalandphaseequilibria.html">Chemical Equilibria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chemicalandphaseequilibria.html">Chemical and Phase Equilibria</a></li>
 
 
 </ul>
@@ -317,6 +317,7 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Basic Thermodynamics</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-reference-key-equations">Quick Reference: Key Equations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ideal-gas-law">Ideal Gas Law</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#essential-equations">Essential Equations</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#worked-examples">Worked Examples</a></li>
@@ -376,6 +377,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Example Problems</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-exam-practice-problems">PE Exam Practice Problems</a></li>
 </ul>
 </li>
 </ul>
@@ -392,6 +394,89 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="basic-thermodynamics">
 <h1>Basic Thermodynamics<a class="headerlink" href="#basic-thermodynamics" title="Link to this heading">#</a></h1>
+<section id="quick-reference-key-equations">
+<h2>Quick Reference: Key Equations<a class="headerlink" href="#quick-reference-key-equations" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Topic</p></th>
+<th class="head"><p>Formula</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Ideal gas law</p></td>
+<td><p><span class="math notranslate nohighlight">\(PV_t = nRT\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T\)</span> in K; <span class="math notranslate nohighlight">\(R = 8.314\)</span> J/mol·K</p></td>
+</tr>
+<tr class="row-odd"><td><p>Molar volume</p></td>
+<td><p><span class="math notranslate nohighlight">\(PV = RT\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(V = V_t/n\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Ideal gas <span class="math notranslate nohighlight">\(\Delta H\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\Delta H = C_p \Delta T\)</span></p></td>
+<td><p>Any process, ideal gas</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ideal gas <span class="math notranslate nohighlight">\(\Delta U\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\Delta U = C_v \Delta T\)</span></p></td>
+<td><p>Any process, ideal gas</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(C_p - C_v\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(C_p = C_v + R\)</span></p></td>
+<td><p>Ideal gas only</p></td>
+</tr>
+<tr class="row-odd"><td><p>First Law (closed)</p></td>
+<td><p><span class="math notranslate nohighlight">\(\Delta U = Q - W\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(W = \int P\,dV\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>First Law (open, SS)</p></td>
+<td><p><span class="math notranslate nohighlight">\(\Delta H = Q - W_s\)</span></p></td>
+<td><p>per unit mass</p></td>
+</tr>
+<tr class="row-odd"><td><p>Adiabatic reversible</p></td>
+<td><p><span class="math notranslate nohighlight">\(TV^{\gamma-1} = \text{const}\)</span>, <span class="math notranslate nohighlight">\(TP^{(1-\gamma)/\gamma} = \text{const}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\gamma = C_p/C_v\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Entropy change (ideal gas)</p></td>
+<td><p><span class="math notranslate nohighlight">\(\Delta S = nC_v\ln(T_2/T_1) + nR\ln(V_2/V_1)\)</span></p></td>
+<td><p>Closed system</p></td>
+</tr>
+<tr class="row-odd"><td><p>Entropy change (ideal gas)</p></td>
+<td><p><span class="math notranslate nohighlight">\(\Delta S = nC_p\ln(T_2/T_1) - nR\ln(P_2/P_1)\)</span></p></td>
+<td><p>Alternate form</p></td>
+</tr>
+<tr class="row-even"><td><p>Carnot efficiency</p></td>
+<td><p><span class="math notranslate nohighlight">\(\eta = 1 - T_C/T_H\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T\)</span> in K</p></td>
+</tr>
+<tr class="row-odd"><td><p>COP (refrigerator)</p></td>
+<td><p><span class="math notranslate nohighlight">\(\text{COP} = T_C/(T_H - T_C)\)</span></p></td>
+<td><p>Carnot limit</p></td>
+</tr>
+<tr class="row-even"><td><p>COP (heat pump)</p></td>
+<td><p><span class="math notranslate nohighlight">\(\text{COP} = T_H/(T_H - T_C)\)</span></p></td>
+<td><p>Carnot limit</p></td>
+</tr>
+<tr class="row-odd"><td><p>Rankine efficiency</p></td>
+<td><p><span class="math notranslate nohighlight">\(\eta = (W_{turbine} - W_{pump})/Q_{boiler}\)</span></p></td>
+<td><p>Steam power cycle</p></td>
+</tr>
+<tr class="row-even"><td><p>Turbine isentropic eff.</p></td>
+<td><p><span class="math notranslate nohighlight">\(\eta_T = (h_1 - h_2)/(h_1 - h_{2s})\)</span></p></td>
+<td><p>Actual vs. isentropic</p></td>
+</tr>
+<tr class="row-odd"><td><p>Compressor isentropic eff.</p></td>
+<td><p><span class="math notranslate nohighlight">\(\eta_C = (h_{2s} - h_1)/(h_2 - h_1)\)</span></p></td>
+<td><p>Isentropic vs. actual</p></td>
+</tr>
+<tr class="row-even"><td><p>van der Waals</p></td>
+<td><p><span class="math notranslate nohighlight">\((P + a/V^2)(V-b) = RT\)</span></p></td>
+<td><p>Real gas</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
 <section id="ideal-gas-law">
 <h2>Ideal Gas Law<a class="headerlink" href="#ideal-gas-law" title="Link to this heading">#</a></h2>
 <div class="admonition note">
@@ -2125,6 +2210,82 @@ The First Law still applies: <span class="math notranslate nohighlight">\(W_{irr
 </div>
 </details></section>
 </section>
+<hr class="docutils" />
+<section id="pe-exam-practice-problems">
+<h2>PE Exam Practice Problems<a class="headerlink" href="#pe-exam-practice-problems" title="Link to this heading">#</a></h2>
+<div class="proof example admonition" id="example-23">
+<p class="admonition-title"><span class="caption-number">Example 46 </span> (Practice Problem 1 — Carnot vs. Rankine Efficiency)</p>
+<section class="example-content" id="proof-content">
+<p>A steam power plant operates with steam entering the turbine at 500°C and 6 MPa, and condensing at 40°C. The isentropic efficiency of the turbine is 85% and the pump is ideal.</p>
+<p>From steam tables:</p>
+<ul class="simple">
+<li><p>Turbine inlet (500°C, 6 MPa): <span class="math notranslate nohighlight">\(h_1 = 3423\)</span> kJ/kg, <span class="math notranslate nohighlight">\(s_1 = 6.882\)</span> kJ/kg·K</p></li>
+<li><p>Saturated liquid at 40°C: <span class="math notranslate nohighlight">\(h_f = 167.5\)</span> kJ/kg, <span class="math notranslate nohighlight">\(h_{fg} = 2319\)</span> kJ/kg, <span class="math notranslate nohighlight">\(s_f = 0.573\)</span> kJ/kg·K, <span class="math notranslate nohighlight">\(s_{fg} = 7.686\)</span> kJ/kg·K</p></li>
+<li><p>Pump work (ideal): <span class="math notranslate nohighlight">\(w_p = v_f\,\Delta P \approx 6\)</span> kJ/kg</p></li>
+</ul>
+<p><strong>(a)</strong> What is the maximum (Carnot) thermal efficiency between these temperature limits?</p>
+<p><strong>(b)</strong> What is the actual cycle thermal efficiency?</p>
+</section>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Part (a): Carnot efficiency</strong></p>
+<div class="math notranslate nohighlight">
+\[\eta_{Carnot} = 1 - \frac{T_C}{T_H} = 1 - \frac{(40+273)}{(500+273)} = 1 - \frac{313}{773} = 0.595 = \mathbf{59.5\%}\]</div>
+<p class="sd-card-text"><strong>Part (b): Actual Rankine efficiency</strong></p>
+<p class="sd-card-text"><strong>Step 1: Isentropic turbine exit state</strong></p>
+<p class="sd-card-text">For isentropic expansion to 40°C: <span class="math notranslate nohighlight">\(s_{2s} = s_1 = 6.882\)</span> kJ/kg·K</p>
+<p class="sd-card-text">Quality: <span class="math notranslate nohighlight">\(x_s = (s_{2s} - s_f)/s_{fg} = (6.882 - 0.573)/7.686 = 0.821\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(h_{2s} = h_f + x_s\,h_{fg} = 167.5 + 0.821 \times 2319 = 2071\)</span> kJ/kg</p>
+<p class="sd-card-text"><strong>Step 2: Actual turbine exit enthalpy</strong></p>
+<div class="math notranslate nohighlight">
+\[h_2 = h_1 - \eta_T(h_1 - h_{2s}) = 3423 - 0.85(3423-2071) = 3423 - 1149 = 2274 \text{ kJ/kg}\]</div>
+<p class="sd-card-text"><strong>Step 3: Boiler heat input</strong></p>
+<div class="math notranslate nohighlight">
+\[q_{in} = h_1 - (h_f + w_p) = 3423 - (167.5 + 6) = 3249.5 \text{ kJ/kg}\]</div>
+<p class="sd-card-text"><strong>Step 4: Cycle efficiency</strong></p>
+<div class="math notranslate nohighlight">
+\[\eta = \frac{w_{turbine} - w_{pump}}{q_{in}} = \frac{(3423-2274) - 6}{3249.5} = \frac{1143}{3249.5} = 0.352 = \mathbf{35.2\%}\]</div>
+<p class="sd-card-text">The actual efficiency is only 59% of the Carnot limit — irreversibilities in the turbine and the non-Carnot cycle path account for the gap.</p>
+</div>
+</details><hr class="docutils" />
+<div class="proof example admonition" id="example-24">
+<p class="admonition-title"><span class="caption-number">Example 47 </span> (Practice Problem 2 — Adiabatic Compression)</p>
+<section class="example-content" id="proof-content">
+<p>Air (<span class="math notranslate nohighlight">\(C_p = 29.1\)</span> J/mol·K, <span class="math notranslate nohighlight">\(\gamma = 1.40\)</span>) is compressed adiabatically and reversibly from 1 atm, 25°C to 10 atm.</p>
+<p><strong>(a)</strong> What is the final temperature?</p>
+<p><strong>(b)</strong> What is the work required per mole of air?</p>
+</section>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Part (a): Exit temperature (adiabatic reversible)</strong></p>
+<p class="sd-card-text">For an ideal gas undergoing isentropic compression:</p>
+<div class="math notranslate nohighlight">
+\[\frac{T_2}{T_1} = \left(\frac{P_2}{P_1}\right)^{(\gamma-1)/\gamma} = \left(\frac{10}{1}\right)^{0.40/1.40} = 10^{0.2857} = 1.931\]</div>
+<div class="math notranslate nohighlight">
+\[T_2 = 298 \times 1.931 = \mathbf{575\text{ K}} \approx 302°\text{C}\]</div>
+<p class="sd-card-text"><strong>Part (b): Work per mole</strong></p>
+<p class="sd-card-text">For an ideal gas adiabatic process, <span class="math notranslate nohighlight">\(Q=0\)</span>, so <span class="math notranslate nohighlight">\(W = \Delta U = C_v\Delta T\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[C_v = C_p - R = 29.1 - 8.314 = 20.79 \text{ J/mol·K}\]</div>
+<div class="math notranslate nohighlight">
+\[W = C_v(T_2 - T_1) = 20.79(575-298) = \mathbf{5759 \text{ J/mol}} \approx 5.76 \text{ kJ/mol}\]</div>
+<p class="sd-card-text">Alternatively using <span class="math notranslate nohighlight">\(\Delta H = C_p\Delta T\)</span> and <span class="math notranslate nohighlight">\(W_s = \Delta H\)</span> for an open system:
+<span class="math notranslate nohighlight">\(W_s = 29.1(575-298) = 8071\)</span> J/mol — this is the shaft work for a continuous compressor.</p>
+</div>
+</details><div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p><strong>PE Exam Traps — Thermodynamics</strong></p>
+<ul class="simple">
+<li><p><strong>Temperature must be in Kelvin.</strong> The Carnot efficiency formula, adiabatic process relations, entropy calculations, and the ideal gas law all require absolute temperature. Plugging in °C is the most common single error on PE thermo problems.</p></li>
+<li><p><strong>Closed vs. open system First Law.</strong> For a closed system: <span class="math notranslate nohighlight">\(\Delta U = Q - W\)</span> (work = <span class="math notranslate nohighlight">\(\int P\,dV\)</span>). For an open steady-state system: <span class="math notranslate nohighlight">\(\Delta H = Q - W_s\)</span> (shaft work only). Using <span class="math notranslate nohighlight">\(\Delta U\)</span> when you have a turbine or compressor (open system) gives the wrong answer.</p></li>
+<li><p><strong>Isentropic efficiency direction.</strong> For a turbine: <span class="math notranslate nohighlight">\(\eta_T = w_{actual}/w_{isentropic} &lt; 1\)</span> (actual work is less than ideal). For a compressor: <span class="math notranslate nohighlight">\(\eta_C = w_{isentropic}/w_{actual} &lt; 1\)</span> (ideal work is less than actual). These are NOT symmetric — mixing them up swaps the numerator and denominator.</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(\Delta H\)</span> vs. <span class="math notranslate nohighlight">\(\Delta U\)</span> for ideal gas:</strong> Both hold <span class="math notranslate nohighlight">\(\Delta H = C_p\Delta T\)</span> and <span class="math notranslate nohighlight">\(\Delta U = C_v\Delta T\)</span> for any process — but <span class="math notranslate nohighlight">\(W = Q - \Delta U\)</span> for closed systems (use <span class="math notranslate nohighlight">\(C_v\)</span>) and <span class="math notranslate nohighlight">\(W_s = \Delta H - Q\)</span> for open systems (use <span class="math notranslate nohighlight">\(C_p\)</span>). The trap is using <span class="math notranslate nohighlight">\(C_p\)</span> in a closed-system piston work problem.</p></li>
+<li><p><strong>COP vs. efficiency:</strong> COP for a heat pump can be greater than 1 (it moves heat, not just converts it). A COP of 4 means 4 kJ of heat delivered per 1 kJ of work input. Never call a COP &gt; 1 “impossible.”</p></li>
+</ul>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -2194,6 +2355,7 @@ The First Law still applies: <span class="math notranslate nohighlight">\(W_{irr
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Basic Thermodynamics</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-reference-key-equations">Quick Reference: Key Equations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ideal-gas-law">Ideal Gas Law</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#essential-equations">Essential Equations</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#worked-examples">Worked Examples</a></li>
@@ -2253,6 +2415,7 @@ The First Law still applies: <span class="math notranslate nohighlight">\(W_{irr
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Example Problems</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-exam-practice-problems">PE Exam Practice Problems</a></li>
 </ul>
 </li>
 </ul>
