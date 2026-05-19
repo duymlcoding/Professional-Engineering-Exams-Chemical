@@ -151,7 +151,7 @@ $$
 A_0 = \pi(\frac{d_0}{2})^2 = \pi(\frac{9.6 \times 10^{-3}}{2})^2 = \pi (4.8 \times 10^{-3})^2
 $$
 
-    Step the algebra: $(4.8 \times 10^{-3})^2 = 23.04 \times 10^{-6} = 2.304 \times 10^{-5}$ m$^2$.
+Step the algebra: $(4.8 \times 10^{-3})^2 = 23.04 \times 10^{-6} = 2.304 \times 10^{-5}$ m$^2$.
 
 $$
 A_0 = \pi \times 2.304 \times 10^{-5} = 7.238 \times 10^{-5} m^2
@@ -163,7 +163,7 @@ $$
 \sigma = \frac{F}{A_0} = \frac{18{,}000 N}{7.238 \times 10^{-5} m^2} = 2.488 \times 10^{8} Pa = 248.8 MPa \approx 249 MPa
 $$
 
-    Quick double-check via the mm$^2$ shortcut: $A_0 [mm^2] = \pi (4.8)^2 = 72.38$ mm$^2$. $\sigma = 18{,}000/72.38 = 248.7$ MPa. \checkmark Same answer.
+Quick double-check via the mm$^2$ shortcut: $A_0 [mm^2] = \pi (4.8)^2 = 72.38$ mm$^2$. $\sigma = 18{,}000/72.38 = 248.7$ MPa. \checkmark Same answer.
 
 
 - **Engineering strain.**
@@ -172,7 +172,7 @@ $$
 \varepsilon = \frac{L_i - L_0}{L_0} = \frac{401.5 - 400.0}{400.0} = \frac{1.5}{400.0} = 0.00375
 $$
 
-    Dimensionless. Often expressed as 0.375%.
+Dimensionless. Often expressed as 0.375%.
 
 
 - **Elastic-region check.** The applied stress 249 MPa is just below the yield strength 250 MPa  -  the specimen is at the very edge of elastic behavior. Any small additional load would induce permanent (plastic) deformation. A safety factor for design (typically $\sigma_{design} = \sigma_y / N$ with $N = 2$-$4$) would have flagged this load level long before yield. The strain $\varepsilon = 0.00375$ is also consistent with elastic behavior in steel ($\varepsilon_y \approx \sigma_y / E = 250/207000 \approx 0.0012$ in pure elastic; here at 0.00375 the specimen has crossed slightly into the plastic regime if we trust the 250 MPa yield estimate). The numbers sit on the boundary.
@@ -394,7 +394,7 @@ $$
 E = \frac{\sigma}{\varepsilon} = \frac{200 MPa}{0.001} = 200{,}000 MPa = 200 GPa
 $$
 
-    Consistent with typical steel.
+Consistent with typical steel.
 
 - **Yield strain (elastic limit).**
 
@@ -408,7 +408,7 @@ $$
 U_r = \frac{\sigma_y^2}{2E} = \frac{(415)^2}{2 \times 200{,}000} = \frac{172{,}225}{400{,}000} = 0.431 MPa = 0.431 MJ/m^3
 $$
 
-    Recall that MPa = MJ/m$^3$ when interpreting strain-energy density.
+Recall that MPa = MJ/m$^3$ when interpreting strain-energy density.
 
 
 - **Modulus of toughness (approximate, triangle + rectangle).** A reasonable approximation treats the curve as an elastic triangle plus a plastic rectangle from $\sigma_y$ to $\sigma_u$ over the plastic strain range. Use the mean stress $(\sigma_y + \sigma_u)/2 = (415 + 500)/2 = 457.5$ MPa across plastic strain $\varepsilon_p \approx 0.18 - 0.002 = 0.178$.
@@ -417,7 +417,7 @@ $$
 U_T \approx U_r + 457.5 \times 0.178 = 0.43 + 81.4 = 81.8 MJ/m^3
 $$
 
-    Toughness is dominated by the plastic-region area; resilience is a tiny fraction. This is why ductile materials are so much tougher than brittle ones  -  the plastic region is where energy is absorbed.
+Toughness is dominated by the plastic-region area; resilience is a tiny fraction. This is why ductile materials are so much tougher than brittle ones  -  the plastic region is where energy is absorbed.
 
 
 - **Elastic strain at fracture.**
@@ -436,7 +436,7 @@ $$
 \varepsilon_{p,frac} = \varepsilon_f - \varepsilon_{e,frac} = 0.18 - 0.00190 = 0.178 = 17.8%
 $$
 
-    The specimen's permanent elongation if recovered just before fracture would be 17.8%. This is the value typically quoted as "% elongation at fracture" on a material data sheet.
+The specimen's permanent elongation if recovered just before fracture would be 17.8%. This is the value typically quoted as "% elongation at fracture" on a material data sheet.
 
 - **Ductility interpretation.** 17.8% elongation places this material firmly in the ductile-metal category. Brittle materials fail at $\varepsilon_f < 1%$; ductile metals are typically 10-40%; very ductile (annealed copper, pure aluminum) can reach 50-60%.
 
@@ -550,7 +550,7 @@ $$
 \sigma_h = \frac{PR}{t} = \frac{P \times 300}{10} = 30 P,   \sigma_\ell = \frac{PR}{2t} = 15 P,   \sigma_r \approx 0
 $$
 
-    (with $P$ in MPa and $\sigma$ in MPa). So $\sigma_1 = 30P, \sigma_2 = 15P, \sigma_3 = 0$.
+(with $P$ in MPa and $\sigma$ in MPa). So $\sigma_1 = 30P, \sigma_2 = 15P, \sigma_3 = 0$.
 
 
 - **(a) Tresca criterion.**
@@ -675,7 +675,7 @@ $$
 
 - Steel: 450 MPa $>$ 312. Pass.
 
-    Survivors: brass and steel.
+Survivors: brass and steel.
 
 
 - **Apply Filter 2: elongation under load $< 0.9$ mm.** Use $\Delta L = \sigma L_0/E$.
@@ -684,7 +684,6 @@ $$
 - Brass: $\Delta L = (312)(380)/(100{,}000) = 1.186$ mm $> 0.9$. **Reject.**
 
 - Steel: $\Delta L = (312)(380)/(207{,}000) = 0.573$ mm $< 0.9$. Pass.
-
 
 
 - **Selection.** Steel is the only candidate satisfying both constraints. Specify mild carbon steel for the rod.
@@ -717,7 +716,7 @@ $$
 m = \rho A L_0 \geq \rho L_0 \cdot \frac{F L_0}{E \Delta L_{\max}} = \frac{F L_0^2}{\Delta L_{\max}} \frac{\rho}{E}
 $$
 
-    Everything inside the second-to-last fraction is a design constant. The only material-dependent factor is $\rho/E$. **Minimum mass** corresponds to **minimum $\rho/E$**, or equivalently **maximum $E/\rho$**.
+Everything inside the second-to-last fraction is a design constant. The only material-dependent factor is $\rho/E$. **Minimum mass** corresponds to **minimum $\rho/E$**, or equivalently **maximum $E/\rho$**.
 
 
 - **The material index.** $M = E/\rho$ is the **Ashby material index** for "stiffness-limited tensile rod at minimum mass." Tabulated $E/\rho$ ratios:
@@ -731,7 +730,7 @@ $$
 
 - CFRP (carbon-fiber composite, along fiber): $\sim$70.
 
-    Notice that steel, aluminum, and titanium have nearly the same $E/\rho$  -  for stiffness-limited tensile rods at minimum mass, the choice between them is a wash on this criterion. CFRP wins decisively.
+Notice that steel, aluminum, and titanium have nearly the same $E/\rho$  -  for stiffness-limited tensile rods at minimum mass, the choice between them is a wash on this criterion. CFRP wins decisively.
 
 
 - **Verification.** For *strength*-limited tensile design at minimum mass, the same derivation with $\sigma_y$ instead of $E$ gives $M = \sigma_y/\rho$ ("specific strength"), where the rankings differ from the stiffness case  -  high-strength steels and titanium become attractive.
@@ -766,7 +765,7 @@ $$
 \sigma_y = \sigma_0 + k_y \cdot d^{-1/2}
 $$
 
-    where $d$ is the average grain diameter, $\sigma_0$ is the lattice-friction stress, and $k_y$ is the Hall-Petch coefficient (material-specific). Doubling the grain size raises $\sigma_y$ by a factor of $\sqrt{2}$.
+where $d$ is the average grain diameter, $\sigma_0$ is the lattice-friction stress, and $k_y$ is the Hall-Petch coefficient (material-specific). Doubling the grain size raises $\sigma_y$ by a factor of $\sqrt{2}$.
 
 - **Solid-solution strengthening.** Foreign atoms (substitutional or interstitial) in the lattice produce local distortions that impede dislocations. Carbon in iron, nickel in copper, zinc in copper (brass). Yield strength rises roughly as the square root of solute concentration.
 
@@ -893,7 +892,7 @@ $$
 t_r = 10^{-1.24} = 0.058 hours = 3.5 minutes
 $$
 
-    The tube ruptures in about 3.5 minutes. *Not* the design life  -  the LMP curve was either misread or the chosen stress/temperature combination is well outside the design envelope.
+The tube ruptures in about 3.5 minutes. *Not* the design life  -  the LMP curve was either misread or the chosen stress/temperature combination is well outside the design envelope.
 
 
 - **Lesson on LMP interpretation.** A reformer tube designed for 100{,}000-hour life at 900$^\circ$C requires
@@ -902,7 +901,7 @@ $$
 LMP_{design} = 1173 \times (20 + \log 100{,}000) = 1173 \times 25 = 29{,}325
 $$
 
-    Reading the material's master curve at LMP = 29{,}325 gives the maximum allowable design stress  -  typically 5-10 MPa for 100{,}000-hour life on Inconel 800H or HK-40 alloy. The 25 MPa in this example exceeds the allowable, hence the very short life.
+Reading the material's master curve at LMP = 29{,}325 gives the maximum allowable design stress  -  typically 5-10 MPa for 100{,}000-hour life on Inconel 800H or HK-40 alloy. The 25 MPa in this example exceeds the allowable, hence the very short life.
 
 
 - **Verification.** LMP is sensitive: a 100$^\circ$C temperature reduction (from 1173 to 1073 K) at constant LMP raises $t_r$ by $10^{(22000/1073 - 22000/1173)} = 10^{1.73} \approx 54\times$. Conversely, a 100$^\circ$C overtemperature reduces life by the same factor. This Arrhenius sensitivity is why creep-limited equipment is so unforgiving of process upsets.
@@ -1008,7 +1007,7 @@ $$
 \mathrm{O_2 + 2 H_2O + 4 e^- \rightarrow 4 OH^-}
 $$
 
-    In acid:
+In acid:
 
 $$
 \mathrm{2H^+ + 2e^- \rightarrow H_2}
@@ -1146,7 +1145,7 @@ $$
 Loss_{20 yr} = 1.41 mpy \times 20 yr = 28 mils = 0.71 mm
 $$
 
-    This must be added as a corrosion allowance on top of the pressure-design wall thickness. Standard CA values: 1/16 in (1.6 mm), 1/8 in (3.2 mm), 1/4 in (6.4 mm). The 20-year loss (0.7 mm) easily fits inside a 1/16-in CA.
+This must be added as a corrosion allowance on top of the pressure-design wall thickness. Standard CA values: 1/16 in (1.6 mm), 1/8 in (3.2 mm), 1/4 in (6.4 mm). The 20-year loss (0.7 mm) easily fits inside a 1/16-in CA.
 
 
 - **Important caveats.**
@@ -1157,7 +1156,6 @@ $$
 - *Uniform-corrosion rule fails for localized attack.* If the coupon shows pitting, crevice corrosion, or intergranular attack, the uniform-rate calculation grossly underestimates the failure risk. Always inspect the coupon visually for localized damage.
 
 - *Sensitization risk.* 304 SS in the 425-870$^\circ$C range can sensitize (chromium carbide precipitation at grain boundaries), drastically increasing intergranular corrosion. Use 304L or stabilized 321/347 grades if welding will occur near these temperatures.
-
 
 
 - **Verification.** The corrosion rate is well below the acceptable threshold, and the projected wall loss fits comfortably inside a standard corrosion allowance. *Subject to the caveats*, 304 SS is acceptable for the service.
@@ -1212,7 +1210,7 @@ $$
 PREN = %Cr + 3.3 \times %Mo + 16 \times %N
 $$
 
-    304: PREN $\approx 19$. 316: $\approx 25$. 2205: $\approx 35$. SAF 2507 super-duplex: $\approx 42$. Higher PREN = better pitting resistance.
+304: PREN $\approx 19$. 316: $\approx 25$. 2205: $\approx 35$. SAF 2507 super-duplex: $\approx 42$. Higher PREN = better pitting resistance.
 ```
 
 
@@ -1584,9 +1582,9 @@ Select the wall material and the corrosion allowance. Compute the required wall 
 ```{dropdown} Solution Steps
 - **Apply the materials-selection algorithm.**
 
-    **Step 1.1  -  Temperature.** 200$^\circ$C design (90$^\circ$C process); within CS continuous-service envelope ($< 425^\circ$C).
+**Step 1.1  -  Temperature.** 200$^\circ$C design (90$^\circ$C process); within CS continuous-service envelope ($< 425^\circ$C).
 
-    **Step 1.2  -  Chemistry screening.**
+**Step 1.2  -  Chemistry screening.**
 
 
 - Dilute HCl: carbon steel attacked rapidly  -  reject CS.
@@ -1602,9 +1600,9 @@ Select the wall material and the corrosion allowance. Compute the required wall 
 - Titanium Gr 2: rapidly attacked by reducing HCl  -  reject.
 
 
-    **Step 1.3  -  Cost.** Hastelloy C-276 solid plate is very expensive (15-20$\times$ CS). **Cladded construction** (CS base + 3 mm C-276 cladding on the process side) cuts cost to $\sim$7-10$\times$ CS while preserving the C-276 corrosion resistance.
+**Step 1.3  -  Cost.** Hastelloy C-276 solid plate is very expensive (15-20$\times$ CS). **Cladded construction** (CS base + 3 mm C-276 cladding on the process side) cuts cost to $\sim$7-10$\times$ CS while preserving the C-276 corrosion resistance.
 
-    **Selection: Hastelloy C-276 clad on A516-70 CS plate.**
+**Selection: Hastelloy C-276 clad on A516-70 CS plate.**
 
 
 - **Corrosion allowance.** The clad layer is the corrosion barrier; the CS substrate is structural. A 3 mm clad gives a corrosion allowance of 3 mm specifically on the clad layer. If C-276 corrodes at $< 2$ mpy (0.05 mm/yr) in this service, the 3 mm clad lasts $> 60$ years  -  comfortably beyond the 20-year requirement. **Inspection schedule:** verify clad integrity every 5 years via UT or visual entry.
@@ -1614,15 +1612,15 @@ Select the wall material and the corrosion allowance. Compute the required wall 
 ```{dropdown} Solution Steps
 - **Wall thickness from ASME Sec. VIII Div. 1.** The structural CS substrate must withstand the design pressure. At 200$^\circ$C, A516-70 has $S = 19{,}800$ psi (from ASME Sec. II Part D table; the room-temp value 25{,}000 psi is reduced at elevated temp).
 
-    Convert design pressure: 12 barg $= 174$ psig. ID $= 3$ m $= 118$ in, so $R = 59$ in.
+Convert design pressure: 12 barg $= 174$ psig. ID $= 3$ m $= 118$ in, so $R = 59$ in.
 
-    Check thin-wall: $P/(SE)$ with $E = 1.0$ (fully radiographed weld assumed):
+Check thin-wall: $P/(SE)$ with $E = 1.0$ (fully radiographed weld assumed):
 
 $$
 \frac{174}{19{,}800 \times 1.0} = 0.0088 \ll 0.385  \checkmark
 $$
 
-    Hoop equation governs:
+Hoop equation governs:
 
 $$
 t_{pressure} = \frac{P R}{S E - 0.6 P} = \frac{(174)(59)}{(19{,}800)(1.0) - (0.6)(174)} = \frac{10{,}266}{19{,}696} = 0.521 in
@@ -1634,7 +1632,7 @@ $$
 t_{total} = t_{pressure} + t_{clad} = 0.521 + 0.118 = 0.639 in (clad = 3  mm = 0.118  in)
 $$
 
-    Some codes also require a corrosion allowance on the structural CS substrate in case the clad fails locally; conservative practice adds 1/16 in (0.0625 in) for this:
+Some codes also require a corrosion allowance on the structural CS substrate in case the clad fails locally; conservative practice adds 1/16 in (0.0625 in) for this:
 
 $$
 t_{final} = 0.521 + 0.0625 + 0.118 = 0.702 in
@@ -1649,7 +1647,7 @@ $$
 \sigma_h = \frac{PR}{t_{struct}} = \frac{(174)(59)}{0.5695} = 18{,}030 psi < S = 19{,}800 psi \checkmark
 $$
 
-    The selection satisfies all constraints: pressure (Sec. VIII), corrosion (Hastelloy in dilute oxidizing HCl), cost (cladded construction saves $\sim$60% over solid C-276), and service life (60+ years on the clad layer for a 20-year requirement).
+The selection satisfies all constraints: pressure (Sec. VIII), corrosion (Hastelloy in dilute oxidizing HCl), cost (cladded construction saves $\sim$60% over solid C-276), and service life (60+ years on the clad layer for a 20-year requirement).
 ```
 
 

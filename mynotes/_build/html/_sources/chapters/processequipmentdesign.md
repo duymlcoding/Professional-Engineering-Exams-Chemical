@@ -82,15 +82,15 @@ $$
 Q = m_{cw} c_{p,water} \Delta T_{util}
 $$
 
-    Using $c_{p,water} = 4.18$ kJ/(kg$\cdot$K).
+Using $c_{p,water} = 4.18$ kJ/(kg$\cdot$K).
 
-- **(a) At $\Delta T_{util** = 10^\circ$C:}
+- **(a) At $\Delta T_{util} = 10^\circ$C:**
 
 $$
 m_{cw} = \frac{250}{4.18 \times 10} = \frac{250}{41.8} = 5.98  kg/s = 21{,}500  kg/h
 $$
 
-- **(b) At $\Delta T_{util** = 3^\circ$C:}
+- **(b) At $\Delta T_{util} = 3^\circ$C:**
 
 $$
 m_{cw} = \frac{250}{4.18 \times 3} = \frac{250}{12.54} = 19.9  kg/s = 71{,}700  kg/h
@@ -218,7 +218,7 @@ Both plate styles tend to be expensive on a \$/m$^2$ basis at small areas but ex
 
 - **Filter by temperature/pressure limits.** Plate-and-frame caps at $\sim$180$^\circ$C, 25 barg. Plate-and-fin caps at moderate pressures, very low T good. Shell-and-tube can handle 600+ barg and -200 to +600$^\circ$C with appropriate metallurgy.
 
-- **Filter by $\Delta T_{LM**$.} Above $\sim$100$^\circ$C in shell-and-tube, switch from fixed-tubesheet to floating-head or U-tube to accommodate differential thermal expansion.
+- **Filter by $\Delta T_{LM}$.** Above $\sim$100$^\circ$C in shell-and-tube, switch from fixed-tubesheet to floating-head or U-tube to accommodate differential thermal expansion.
 
 - **Compare lifetime cost** (capital + utility + maintenance + cleaning) of the survivors and pick the cheapest.
 ```
@@ -249,7 +249,7 @@ $$
 dQ = U dA (T_h - T_c) = U dA \Delta T(x)
 $$
 
-    Simultaneously, the hot fluid loses energy at the rate $dQ = -m_h c_{p,h} dT_h$ (its temperature drops) and the cold fluid gains energy at the rate $dQ = -m_c c_{p,c} dT_c$ (its temperature rises, but $dT_c < 0$ in the direction of hot flow because cold flows the opposite way).
+Simultaneously, the hot fluid loses energy at the rate $dQ = -m_h c_{p,h} dT_h$ (its temperature drops) and the cold fluid gains energy at the rate $dQ = -m_c c_{p,c} dT_c$ (its temperature rises, but $dT_c < 0$ in the direction of hot flow because cold flows the opposite way).
 
 
 - **Express $d(\Delta T)$ in terms of $dQ$.** Subtract the two stream balances:
@@ -258,7 +258,7 @@ $$
 d(\Delta T) = dT_h - dT_c = -(\frac{1}{m_h c_{p,h}} - \frac{1}{m_c c_{p,c}}) dQ
 $$
 
-    Note that for counter-flow with $m_h c_{p,h} = m_c c_{p,c}$, $d(\Delta T) = 0$ and the temperature difference is constant along the exchanger  -  the classic "balanced counter-flow" result.
+Note that for counter-flow with $m_h c_{p,h} = m_c c_{p,c}$, $d(\Delta T) = 0$ and the temperature difference is constant along the exchanger  -  the classic "balanced counter-flow" result.
 
 
 - **Eliminate $dQ$ using the rate equation.** Substitute $dQ = U dA \Delta T$:
@@ -267,7 +267,7 @@ $$
 \frac{d(\Delta T)}{\Delta T} = -U(\frac{1}{m_h c_{p,h}} - \frac{1}{m_c c_{p,c}}) dA
 $$
 
-    The right side is a constant in $A$. Integrate from end 1 (one end of the exchanger, where $\Delta T = \Delta T_1$) to end 2 (the other end, $\Delta T_2$):
+The right side is a constant in $A$. Integrate from end 1 (one end of the exchanger, where $\Delta T = \Delta T_1$) to end 2 (the other end, $\Delta T_2$):
 
 $$
 \ln (\frac{\Delta T_2}{\Delta T_1}) = -U A (\frac{1}{m_h c_{p,h}} - \frac{1}{m_c c_{p,c}})
@@ -279,7 +279,7 @@ $$
 \frac{1}{m_h c_{p,h}} = \frac{T_{h,in} - T_{h,out}}{Q},   \frac{1}{m_c c_{p,c}} = \frac{T_{c,out} - T_{c,in}}{Q}
 $$
 
-    Substituting:
+Substituting:
 
 $$
 \ln (\frac{\Delta T_2}{\Delta T_1}) = -\frac{UA}{Q} [(T_{h,in} - T_{h,out}) - (T_{c,out} - T_{c,in})] = -\frac{UA}{Q} (\Delta T_2 - \Delta T_1)
@@ -295,13 +295,13 @@ $$
 Q = U A \frac{\Delta T_2 - \Delta T_1}{\ln(\Delta T_2/\Delta T_1)}
 $$
 
-    Define the **log-mean temperature difference**:
+Define the **log-mean temperature difference**:
 
 $$
 \Delta T_{LM} = \frac{\Delta T_2 - \Delta T_1}{\ln(\Delta T_2/\Delta T_1)} = \frac{\Delta T_1 - \Delta T_2}{\ln(\Delta T_1/\Delta T_2)}
 $$
 
-    Both forms are equivalent (the second is sometimes more intuitive). The final design equation is
+Both forms are equivalent (the second is sometimes more intuitive). The final design equation is
 
 $$
 Q = U A \Delta T_{LM}    (Equation 1, pure counter-flow)
@@ -437,7 +437,7 @@ $$
 m_{cw} = \frac{Q}{c_{p,water} \Delta T_{cw}} = \frac{520.9}{(4.18)(15)} = \frac{520.9}{62.7} = 8.31  kg/s = 29{,}900  kg/h
 $$
 
-- **$\Delta T_{LM**$ for counter-flow.} End 1 (cold end): process exits at 60$^\circ$C, cooling water enters at 30$^\circ$C, so $\Delta T_1 = 60 - 30 = 30^\circ$C. End 2 (hot end): process enters at 110$^\circ$C, cooling water exits at 45$^\circ$C, so $\Delta T_2 = 110 - 45 = 65^\circ$C.
+- **$\Delta T_{LM}$ for counter-flow.** End 1 (cold end): process exits at 60$^\circ$C, cooling water enters at 30$^\circ$C, so $\Delta T_1 = 60 - 30 = 30^\circ$C. End 2 (hot end): process enters at 110$^\circ$C, cooling water exits at 45$^\circ$C, so $\Delta T_2 = 110 - 45 = 65^\circ$C.
 
 $$
 \Delta T_{LM} = \frac{\Delta T_2 - \Delta T_1}{\ln(\Delta T_2/\Delta T_1)} = \frac{65 - 30}{\ln(65/30)} = \frac{35}{\ln(2.167)} = \frac{35}{0.7732} = 45.3^\circ C
@@ -486,7 +486,7 @@ $$
 \frac{A_{co}}{A_{counter}} = \frac{\Delta T_{LM,counter}}{\Delta T_{LM,co}} = \frac{45.3}{38.8} = 1.17
 $$
 
-    The co-current arrangement needs 17% more area for the same service.
+The co-current arrangement needs 17% more area for the same service.
 
 
 - **The deeper limit.** Co-current flow cannot in principle cool the process below the cooling-water outlet temperature  -  if the process target were 35$^\circ$C and the cooling-water outlet were 45$^\circ$C, the design would be infeasible in co-current and only feasible in counter-flow. **Counter-flow is therefore the default** for any service where the temperature ranges overlap.
@@ -510,7 +510,7 @@ $$
 m_{steam} = \frac{Q}{\lambda} = \frac{3{,}500 kW}{2{,}080 kJ/kg} = 1.683 kg/s = 6{,}060 kg/h
 $$
 
-- **$\Delta T_{LM**$ for two isothermal streams.} Both sides are at constant temperature (condensing steam at 158$^\circ$C, boiling process at 95$^\circ$C), so $\Delta T_1 = \Delta T_2 = 158 - 95 = 63^\circ$C. The LMTD degenerates to this constant:
+- **$\Delta T_{LM}$ for two isothermal streams.** Both sides are at constant temperature (condensing steam at 158$^\circ$C, boiling process at 95$^\circ$C), so $\Delta T_1 = \Delta T_2 = 158 - 95 = 63^\circ$C. The LMTD degenerates to this constant:
 
 $$
 \Delta T_{LM} = 63^\circ C,   F = 1 (no multi-pass correction needed)
@@ -849,7 +849,7 @@ $$
 \frac{P}{SE} = \frac{250}{17{,}500 \times 1.0} = 0.0143 \ll 0.385  \checkmark
 $$
 
-    The hoop equation governs. (If $P/SE > 0.385$, use the thick-wall Lam\'e equations from Sec. VIII Div. 1 Appendix 1-1.)
+The hoop equation governs. (If $P/SE > 0.385$, use the thick-wall Lam\'e equations from Sec. VIII Div. 1 Appendix 1-1.)
 
 - **Compute pressure-design thickness from the hoop equation.** $R = 30$ in.
 
@@ -871,7 +871,7 @@ $$
 \sigma_h = \frac{P R}{t - CA} = \frac{(250)(30)}{0.5625 - 0.125} = \frac{7{,}500}{0.4375} = 17{,}143 psi < S = 17{,}500 psi  \checkmark
 $$
 
-    The actual stress is just below the allowable  -  a tight but acceptable design. If a manufacturing tolerance reduces the wall thickness slightly, the stress could approach $S$, which is why the standard practice is to specify the next gauge up rather than the calculated minimum.
+The actual stress is just below the allowable  -  a tight but acceptable design. If a manufacturing tolerance reduces the wall thickness slightly, the stress could approach $S$, which is why the standard practice is to specify the next gauge up rather than the calculated minimum.
 ```
 
 
@@ -1044,7 +1044,7 @@ $$
 Margin = NPSH_A - NPSH_R = 3.81 - 3.0 = 0.81 m > 0.6 m  \checkmark
 $$
 
-    The pump will operate safely without cavitation at the design point.
+The pump will operate safely without cavitation at the design point.
 
 
 - **Sensitivity check: what if water is heated to 100$^\circ$C?** $P_{vap}$ rises to 101.3 kPa (boiling at atmospheric), so the pressure head term collapses:
@@ -1057,7 +1057,7 @@ $$
 NPSH_A = 0 + 2.0 - 1.5 = 0.5 m \ll 3.0 m
 $$
 
-    The pump would cavitate immediately. The design has very little thermal headroom  -  a process upset that heats the water by another 10$^\circ$C destroys NPSH$_A$. The fix is to raise the source tank (more $z_s$) or lower the operating temperature.
+The pump would cavitate immediately. The design has very little thermal headroom  -  a process upset that heats the water by another 10$^\circ$C destroys NPSH$_A$. The fix is to raise the source tank (more $z_s$) or lower the operating temperature.
 
 
 - **Verification.** Hot-water service is the classic cavitation risk: $P_{vap}$ rises rapidly with $T$ in the boiling region. The 90$^\circ$C operating point is at the edge of acceptability; a safer design would either use a flooded-suction configuration with more elevation or a deaerated, cooler feed.

@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=8c6b312c" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5d1cebc" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=810ad7a6" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -471,7 +471,7 @@ y(t) \equiv Y(t) - Y,   x(t) \equiv X(t) - X
 <li><p>The initial condition at the reference steady state is identically zero (<span class="math notranslate nohighlight">\(y(0)=0\)</span>, <span class="math notranslate nohighlight">\(y'(0)=0\)</span>, …), which kills every initial-condition term in the Laplace derivative theorem.</p></li>
 <li><p>Process transfer functions <span class="math notranslate nohighlight">\(G(s) = Y(s)/X(s)\)</span> are written without bias terms, exactly as <span class="math notranslate nohighlight">\(\dfrac{K}{\tau s + 1}\)</span> or <span class="math notranslate nohighlight">\(\dfrac{K e^{-\theta s}}{\tau s + 1}\)</span>.</p></li>
 </ul>
-<p>After solving for the deviation <span class="math notranslate nohighlight">\(y(t)\)</span>, the actual process value at any time is <span class="math notranslate nohighlight">\(Y(t) = Y + y(t)\)</span>. *Forgetting to add <span class="math notranslate nohighlight">\(Y*\)</span> back is the single most common error in first-order step-response problems.</p>
+<p>After solving for the deviation <span class="math notranslate nohighlight">\(y(t)\)</span>, the actual process value at any time is <span class="math notranslate nohighlight">\(Y(t) = Y + y(t)\)</span>. <em>Forgetting to add <span class="math notranslate nohighlight">\(Y\)</span> back is the single most common error in first-order step-response problems.</em></p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -535,9 +535,7 @@ X(s) = L\{M u(t)\} = \frac{M}{s}
 \[
 Y(s) = \frac{K}{\tau s + 1} \cdot \frac{M}{s} = \frac{K M}{s(\tau s + 1)}
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>This is the equation we must invert to obtain $y(t)$.
-</pre></div>
-</div>
+<p class="sd-card-text">This is the equation we must invert to obtain <span class="math notranslate nohighlight">\(y(t)\)</span>.</p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Partial-fraction decomposition.</strong> Write</p></li>
 </ul>
@@ -545,20 +543,17 @@ Y(s) = \frac{K}{\tau s + 1} \cdot \frac{M}{s} = \frac{K M}{s(\tau s + 1)}
 \[
 \frac{K M}{s(\tau s + 1)} = \frac{A}{s} + \frac{B}{\tau s + 1}
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Multiply both sides by the common denominator $s(\tau s + 1)$:
-</pre></div>
-</div>
+<p class="sd-card-text">Multiply both sides by the common denominator <span class="math notranslate nohighlight">\(s(\tau s + 1)\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
 K M = A(\tau s + 1) + B s = (\tau A + B) s + A
 \]</div>
-<ul>
+<ul class="simple">
 <li><p class="sd-card-text"><strong>Match coefficients.</strong> The left side is <span class="math notranslate nohighlight">\(KM\)</span>, a constant, so coefficient of <span class="math notranslate nohighlight">\(s^1\)</span> must vanish and coefficient of <span class="math notranslate nohighlight">\(s^0\)</span> must equal <span class="math notranslate nohighlight">\(KM\)</span>:</p></li>
 <li><p class="sd-card-text"><span class="math notranslate nohighlight">\(s^0\)</span> (constants): <span class="math notranslate nohighlight">\(A = K M\)</span>.</p></li>
-<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(s^1\)</span>: <span class="math notranslate nohighlight">\(\tau A + B = 0  \Longrightarrow  B = -\tau A = -K M \tau\)</span>.</p>
-<p class="sd-card-text">Therefore</p>
-</li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(s^1\)</span>: <span class="math notranslate nohighlight">\(\tau A + B = 0  \Longrightarrow  B = -\tau A = -K M \tau\)</span>.</p></li>
 </ul>
+<p class="sd-card-text">Therefore</p>
 <div class="math notranslate nohighlight">
 \[
 Y(s) = \frac{K M}{s} - \frac{K M \tau}{\tau s + 1}
@@ -568,19 +563,17 @@ Y(s) = \frac{K M}{s} - \frac{K M \tau}{\tau s + 1}
 </ul>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-bb24d91a-9775-4dc5-96c9-29c28a3271a2">
-<span class="eqno">(6)<a class="headerlink" href="#equation-bb24d91a-9775-4dc5-96c9-29c28a3271a2" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-40804a40-1deb-49ec-8f5a-0da840cb66fc">
+<span class="eqno">(6)<a class="headerlink" href="#equation-40804a40-1deb-49ec-8f5a-0da840cb66fc" title="Permalink to this equation">#</a></span>\[\begin{align}
 
 
-    y(t) &amp;= L^{-1}\{ \frac{K M}{s} \} - K M \tau \cdot L^{-1}\{ \frac{1}{\tau s + 1} \}
+y(t) &amp;= L^{-1}\{ \frac{K M}{s} \} - K M \tau \cdot L^{-1}\{ \frac{1}{\tau s + 1} \}
 &amp;= K M - K M \tau \cdot \frac{1}{\tau} e^{-t/\tau}
 &amp;= K M - K M e^{-t/\tau}
-    \end{align}\]</div>
+\end{align}\]</div>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Factoring the common $K M$:
-</pre></div>
-</div>
+<p class="sd-card-text">Factoring the common <span class="math notranslate nohighlight">\(K M\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
 y(t) = K M ( 1 - e^{-t/\tau} )    (Equation 1)
@@ -636,9 +629,7 @@ The same Equation 1 applies for any sign of <span class="math notranslate nohigh
 \[
 q_i(t) = Q_i(t) - Q_i = 0.41 - 0.40 = 0.01 m^3/s for  t &gt; 0
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>so the step magnitude is $M = 0.01$. The output deviation is $h(t) = H(t) - 3.0$, with $h(0) = 0$.
-</pre></div>
-</div>
+<p class="sd-card-text">so the step magnitude is <span class="math notranslate nohighlight">\(M = 0.01\)</span>. The output deviation is <span class="math notranslate nohighlight">\(h(t) = H(t) - 3.0\)</span>, with <span class="math notranslate nohighlight">\(h(0) = 0\)</span>.</p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Apply Equation 1 with <span class="math notranslate nohighlight">\(K = 10\)</span>, <span class="math notranslate nohighlight">\(\tau = 50\)</span>, <span class="math notranslate nohighlight">\(M = 0.01\)</span>:</strong></p></li>
 </ul>
@@ -653,16 +644,12 @@ h(t) = K M ( 1 - e^{-t/\tau} ) = (10)(0.01)(1 - e^{-t/50}) = 0.10(1 - e^{-t/50})
 \[
 h(100) = 0.10 (1 - 0.1353) = 0.10 (0.8647) = 0.0865 m
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Convert back to absolute level:
-</pre></div>
-</div>
+<p class="sd-card-text">Convert back to absolute level:</p>
 <div class="math notranslate nohighlight">
 \[
 H(100) = H + h(100) = 3.000 + 0.0865 = 3.087 m
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>A common student error is to read $h(100) = 0.0865$ m and *report it* as the answer; the absolute level is what an instrument actually shows.
-</pre></div>
-</div>
+<p class="sd-card-text">A common student error is to read <span class="math notranslate nohighlight">\(h(100) = 0.0865\)</span> m and <em>report it</em> as the answer; the absolute level is what an instrument actually shows.</p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>(b) Steady-state level (<span class="math notranslate nohighlight">\(t \to \infty\)</span>).</strong> As <span class="math notranslate nohighlight">\(t \to \infty\)</span>, <span class="math notranslate nohighlight">\(e^{-t/\tau} \to 0\)</span>, so</p></li>
 </ul>
@@ -677,9 +664,7 @@ h(\infty) = K M = (10)(0.01) = 0.10 m  \Longrightarrow  H(\infty) = 3.10 m
 \[
 t_{63.2%} = \tau = 50 s
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Verify by solving $1 - e^{-t/\tau} = 0.632$:
-</pre></div>
-</div>
+<p class="sd-card-text">Verify by solving <span class="math notranslate nohighlight">\(1 - e^{-t/\tau} = 0.632\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
 e^{-t/\tau} = 0.368  \Longrightarrow  t/\tau = -\ln(0.368) = 1.0  \Longrightarrow  t = \tau = 50 s \checkmark
@@ -714,9 +699,7 @@ t(t) = K M (1 - e^{-t/\tau}) = (-3.0)(2.0)(1 - e^{-t/8}) = -6.0(1 - e^{-t/8}) ^\
 \[
 t(4) = -6.0 (1 - 0.6065) = -6.0 (0.3935) = -2.36^\circ F
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Absolute temperature:
-</pre></div>
-</div>
+<p class="sd-card-text">Absolute temperature:</p>
 <div class="math notranslate nohighlight">
 \[
 T(4) = 175 + (-2.36) = 172.64^\circ F
@@ -796,8 +779,8 @@ K M (1 - e^{-(t-\theta)/\tau}), | t \geq \theta \end{cases}
 Read off the times <span class="math notranslate nohighlight">\(t_{35.3%}\)</span> and <span class="math notranslate nohighlight">\(t_{85.3%}\)</span> at which the response reaches 35.3% and 85.3% of its ultimate change. Then</p>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-44c0ee26-a82f-4ac6-b93a-61ef2848a639">
-<span class="eqno">(7)<a class="headerlink" href="#equation-44c0ee26-a82f-4ac6-b93a-61ef2848a639" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-656d2677-ac04-4316-bda2-779ccc3f39f4">
+<span class="eqno">(7)<a class="headerlink" href="#equation-656d2677-ac04-4316-bda2-779ccc3f39f4" title="Permalink to this equation">#</a></span>\[\begin{align}
 
 
 \theta &amp;= 1.3 t_{35.3%} - 0.29 t_{85.3%}
@@ -854,26 +837,25 @@ t_{f_2} &amp;= \theta + \tau \cdot b,   b \equiv -\ln(1-f_2)
 \[
 K = \frac{\Delta y_{ss}}{\Delta x} = \frac{T_{new} - T_{old}}{Q_{cw,new} - Q_{cw,old}} = \frac{53.2 - 55.0}{9.2 - 8.0} = \frac{-1.8}{1.2} = -1.5 \frac{^\circ F}{gpm}
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Negative as expected (more cooling water lowers process outlet temperature).
-</pre></div>
-</div>
-<ul>
+<p class="sd-card-text">Negative as expected (more cooling water lowers process outlet temperature).</p>
+<ul class="simple">
 <li><p class="sd-card-text"><strong>Identify the 35.3% and 85.3% target temperatures.</strong></p></li>
 <li><p class="sd-card-text">35.3% mark: <span class="math notranslate nohighlight">\(T_{35.3%} = 55.0 + 0.353(53.2 - 55.0) = 55.0 + 0.353(-1.8) = 55.0 - 0.635 = 54.365^\circ\)</span>F.</p></li>
-<li><p class="sd-card-text">85.3% mark: <span class="math notranslate nohighlight">\(T_{85.3%} = 55.0 + 0.853(-1.8) = 55.0 - 1.535 = 53.465^\circ\)</span>F.</p>
+<li><p class="sd-card-text">85.3% mark: <span class="math notranslate nohighlight">\(T_{85.3%} = 55.0 + 0.853(-1.8) = 55.0 - 1.535 = 53.465^\circ\)</span>F.</p></li>
+</ul>
 <p class="sd-card-text">Read from the graph: <span class="math notranslate nohighlight">\(t_{35.3%} = 6.3\)</span> min, <span class="math notranslate nohighlight">\(t_{85.3%} = 9.5\)</span> min.</p>
-</li>
+<ul class="simple">
 <li><p class="sd-card-text"><strong>Apply the Sundaresan-Krishnaswamy formulas.</strong></p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-99bf57f8-f9cb-4ed4-826f-d7b0893cce5e">
-<span class="eqno">(8)<a class="headerlink" href="#equation-99bf57f8-f9cb-4ed4-826f-d7b0893cce5e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-bbb02fd5-caf8-4acc-bde3-6c70027270c3">
+<span class="eqno">(8)<a class="headerlink" href="#equation-bbb02fd5-caf8-4acc-bde3-6c70027270c3" title="Permalink to this equation">#</a></span>\[\begin{align}
 
 
-    \theta &amp;= 1.3 (6.3) - 0.29 (9.5) = 8.19 - 2.755 = 5.435 \approx 5.4 min
+\theta &amp;= 1.3 (6.3) - 0.29 (9.5) = 8.19 - 2.755 = 5.435 \approx 5.4 min
 \tau   &amp;= 0.67 (9.5 - 6.3) = 0.67 (3.2) = 2.144 \approx 2.14 min
-    \end{align}\]</div>
+\end{align}\]</div>
 <div class="math notranslate nohighlight">
 \[\]</div>
 <ul class="simple">
@@ -894,9 +876,7 @@ G(s) = \frac{-1.5 e^{-5.4 s}}{2.14 s + 1}  \frac{^\circ F}{gpm}   (\theta, \tau 
 \[
 \frac{\theta}{\tau} = \frac{5.4}{2.14} = 2.52
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>This is a dead-time-dominant process ($\theta/\tau &gt; 1$). PI control alone will be sluggish  -  the controller cannot see any effect of its own action for $\theta = 5.4$ min after the action. Strategies for dead-time-dominant processes:
-</pre></div>
-</div>
+<p class="sd-card-text">This is a dead-time-dominant process (<span class="math notranslate nohighlight">\(\theta/\tau &gt; 1\)</span>). PI control alone will be sluggish  -  the controller cannot see any effect of its own action for <span class="math notranslate nohighlight">\(\theta = 5.4\)</span> min after the action. Strategies for dead-time-dominant processes:</p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Smith Predictor:</strong> a model-based scheme that effectively cancels the dead time inside the loop, allowing the controller to be tuned as if for a pure first-order process.</p></li>
 <li><p class="sd-card-text"><strong>Feedforward control:</strong> measure the disturbance and counter-act before it propagates through the dead time.</p></li>
@@ -905,19 +885,17 @@ G(s) = \frac{-1.5 e^{-5.4 s}}{2.14 s + 1}  \frac{^\circ F}{gpm}   (\theta, \tau 
 </ul>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-ab185f0f-b7a2-42e0-98f0-99b1bafe3eea">
-<span class="eqno">(9)<a class="headerlink" href="#equation-ab185f0f-b7a2-42e0-98f0-99b1bafe3eea" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-52749d87-3fa1-45b6-aacd-a55eabf7a521">
+<span class="eqno">(9)<a class="headerlink" href="#equation-52749d87-3fa1-45b6-aacd-a55eabf7a521" title="Permalink to this equation">#</a></span>\[\begin{align}
 
 
-    T_{50%} &amp;= 55.0 + 0.5(-1.8) = 54.10^\circ F
+T_{50%} &amp;= 55.0 + 0.5(-1.8) = 54.10^\circ F
 1 - e^{-(t - \theta)/\tau} &amp;= 0.50  \Longrightarrow  t - \theta = \tau \ln(2) = 2.14 (0.693) = 1.485 min
 t &amp;= 5.4 + 1.485 = 6.88 min
-    \end{align}\]</div>
+\end{align}\]</div>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Compare to the graphical reading at $T = 54.1^\circ$F. If the graph gives $t \approx 7$ min, the fit is consistent.
-</pre></div>
-</div>
+<p class="sd-card-text">Compare to the graphical reading at <span class="math notranslate nohighlight">\(T = 54.1^\circ\)</span>F. If the graph gives <span class="math notranslate nohighlight">\(t \approx 7\)</span> min, the fit is consistent.</p>
 </div>
 </details></section>
 <section id="worked-example-higher-order-process-fit-to-fopdt">
@@ -936,13 +914,13 @@ t &amp;= 5.4 + 1.485 = 6.88 min
 </ul>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-3509875e-595c-4d38-b31a-2bac8eab2b8a">
-<span class="eqno">(10)<a class="headerlink" href="#equation-3509875e-595c-4d38-b31a-2bac8eab2b8a" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-bc4d998b-910e-4ac1-be8c-9087c357120e">
+<span class="eqno">(10)<a class="headerlink" href="#equation-bc4d998b-910e-4ac1-be8c-9087c357120e" title="Permalink to this equation">#</a></span>\[\begin{align}
 
 
-    \theta_{app} &amp;= 1.3 (2.6) - 0.29 (8.0) = 3.38 - 2.32 = 1.06
+\theta_{app} &amp;= 1.3 (2.6) - 0.29 (8.0) = 3.38 - 2.32 = 1.06
 \tau_{app}   &amp;= 0.67 (8.0 - 2.6) = 0.67 (5.4) = 3.62
-    \end{align}\]</div>
+\end{align}\]</div>
 <div class="math notranslate nohighlight">
 \[\]</div>
 <ul class="simple">
@@ -996,8 +974,8 @@ Given <span class="math notranslate nohighlight">\(a y + b y + c y = d x\)</span
 <p>Identify</p>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-1b3840a7-fbeb-4a43-9b51-68a4146af5c6">
-<span class="eqno">(11)<a class="headerlink" href="#equation-1b3840a7-fbeb-4a43-9b51-68a4146af5c6" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c11366ce-5e57-4dd2-9eef-6988b2cf66f3">
+<span class="eqno">(11)<a class="headerlink" href="#equation-c11366ce-5e57-4dd2-9eef-6988b2cf66f3" title="Permalink to this equation">#</a></span>\[\begin{align}
 
 
 K           &amp;= d/c
@@ -1044,16 +1022,12 @@ Y(s) = \frac{K}{\tau^2 s^2 + 2\zeta\tau s + 1} \cdot \frac{M}{s} = \frac{K M}{s 
 \[
 s = \frac{-2\zeta\tau \pm \sqrt{4\zeta^2\tau^2 - 4\tau^2}}{2\tau^2} = \frac{-\zeta \pm \sqrt{\zeta^2 - 1}}{\tau}
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>For $\zeta &lt; 1$ the discriminant is negative; write $\sqrt{\zeta^2 - 1} = j\sqrt{1 - \zeta^2}$:
-</pre></div>
-</div>
+<p class="sd-card-text">For <span class="math notranslate nohighlight">\(\zeta &lt; 1\)</span> the discriminant is negative; write <span class="math notranslate nohighlight">\(\sqrt{\zeta^2 - 1} = j\sqrt{1 - \zeta^2}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
 s = -\frac{\zeta}{\tau} \pm j \frac{\sqrt{1 - \zeta^2}}{\tau}
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Define the damped frequency $\omega_d = \sqrt{1-\zeta^2}/\tau$ and the decay rate $\alpha = \zeta/\tau$. The poles are $s = -\alpha \pm j \omega_d$.
-</pre></div>
-</div>
+<p class="sd-card-text">Define the damped frequency <span class="math notranslate nohighlight">\(\omega_d = \sqrt{1-\zeta^2}/\tau\)</span> and the decay rate <span class="math notranslate nohighlight">\(\alpha = \zeta/\tau\)</span>. The poles are <span class="math notranslate nohighlight">\(s = -\alpha \pm j \omega_d\)</span>.</p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Partial-fraction decomposition.</strong> Write</p></li>
 </ul>
@@ -1061,9 +1035,7 @@ s = -\frac{\zeta}{\tau} \pm j \frac{\sqrt{1 - \zeta^2}}{\tau}
 \[
 Y(s) = \frac{KM}{\tau^2} \frac{1}{s (s+\alpha-j\omega_d)(s+\alpha+j\omega_d)} = \frac{A}{s} + \frac{B s + C}{(s+\alpha)^2 + \omega_d^2}
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Multiplying through and matching coefficients (standard algebra; details suppressed for compactness) gives
-</pre></div>
-</div>
+<p class="sd-card-text">Multiplying through and matching coefficients (standard algebra; details suppressed for compactness) gives</p>
 <div class="math notranslate nohighlight">
 \[
 A = K M,   B = -K M,   C = -2 \alpha K M
@@ -1073,25 +1045,21 @@ A = K M,   B = -K M,   C = -2 \alpha K M
 </ul>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-a4731578-e7bc-45a3-83d4-c3b451792e72">
-<span class="eqno">(12)<a class="headerlink" href="#equation-a4731578-e7bc-45a3-83d4-c3b451792e72" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a15b6ce0-0314-456a-8e81-447ced99a4dc">
+<span class="eqno">(12)<a class="headerlink" href="#equation-a15b6ce0-0314-456a-8e81-447ced99a4dc" title="Permalink to this equation">#</a></span>\[\begin{align}
 
 
-    L^{-1}\{\frac{s + \alpha}{(s+\alpha)^2 + \omega_d^2}\} &amp;= e^{-\alpha t}\cos(\omega_d t)
+L^{-1}\{\frac{s + \alpha}{(s+\alpha)^2 + \omega_d^2}\} &amp;= e^{-\alpha t}\cos(\omega_d t)
 L^{-1}\{\frac{\omega_d}{(s+\alpha)^2 + \omega_d^2}\} &amp;= e^{-\alpha t}\sin(\omega_d t)
-    \end{align}\]</div>
+\end{align}\]</div>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>After algebraic recombination,
-</pre></div>
-</div>
+<p class="sd-card-text">After algebraic recombination,</p>
 <div class="math notranslate nohighlight">
 \[
 y(t) = K M [ 1 - \frac{1}{\sqrt{1-\zeta^2}} e^{-\zeta t/\tau}\sin (\frac{\sqrt{1-\zeta^2}}{\tau} t + \phi)]    (0 &lt; \zeta &lt; 1)
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>where the phase $\phi = \tan^{-1} (\sqrt{1-\zeta^2}/\zeta) = \cos^{-1}(\zeta)$.
-</pre></div>
-</div>
+<p class="sd-card-text">where the phase <span class="math notranslate nohighlight">\(\phi = \tan^{-1} (\sqrt{1-\zeta^2}/\zeta) = \cos^{-1}(\zeta)\)</span>.</p>
 </div>
 </details></section>
 <section id="performance-metrics-of-the-underdamped-response">
@@ -1147,9 +1115,7 @@ DR = OS^{ 2} = \exp (-\frac{2\pi \zeta}{\sqrt{1-\zeta^2}})
 \[
 s^2 Y + K s Y + 4 Y = X
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Factor out $Y$:
-</pre></div>
-</div>
+<p class="sd-card-text">Factor out <span class="math notranslate nohighlight">\(Y\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
 Y (s^2 + K s + 4) = X  \Longrightarrow  \frac{Y(s)}{X(s)} = \frac{1}{s^2 + K s + 4}
@@ -1161,19 +1127,17 @@ Y (s^2 + K s + 4) = X  \Longrightarrow  \frac{Y(s)}{X(s)} = \frac{1}{s^2 + K s +
 \[
 \frac{Y(s)}{X(s)} = \frac{1/4}{\tfrac{1}{4} s^2 + \tfrac{K}{4} s + 1}
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Match against $\dfrac{K_p}{\tau^2 s^2 + 2\zeta\tau s + 1}$:
-</pre></div>
-</div>
+<p class="sd-card-text">Match against <span class="math notranslate nohighlight">\(\dfrac{K_p}{\tau^2 s^2 + 2\zeta\tau s + 1}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-1a67de8b-29e8-41ac-9f0d-d41f076a369a">
-<span class="eqno">(13)<a class="headerlink" href="#equation-1a67de8b-29e8-41ac-9f0d-d41f076a369a" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d24848c8-7741-49db-ae59-376e2e662c1d">
+<span class="eqno">(13)<a class="headerlink" href="#equation-d24848c8-7741-49db-ae59-376e2e662c1d" title="Permalink to this equation">#</a></span>\[\begin{align}
 
 
-    K_p          &amp;= \frac{1}{4}
+K_p          &amp;= \frac{1}{4}
 \tau^2       &amp;= \frac{1}{4}  \Longrightarrow  \tau = \frac{1}{2}   (positive root)
 2 \zeta \tau &amp;= \frac{K}{4}  \Longrightarrow  \zeta = \frac{K}{8 \tau} = \frac{K}{8 \cdot (1/2)} = \frac{K}{4}
-    \end{align}\]</div>
+\end{align}\]</div>
 <div class="math notranslate nohighlight">
 \[\]</div>
 </div>
@@ -1187,9 +1151,7 @@ Y (s^2 + K s + 4) = X  \Longrightarrow  \frac{Y(s)}{X(s)} = \frac{1}{s^2 + K s +
 \[
 |\frac{K}{4}| &lt; 1  \Longrightarrow  -4 &lt; K &lt; 4
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>*However,* $\zeta &lt; 0$ ($K &lt; 0$) gives unstable, growing oscillations. The transcript&#39;s stated answer is the full range $-4 &lt; K &lt; 4$ (oscillatory in form), but for a stable, decaying oscillation you need $0 &lt; K &lt; 4$. The PE-exam convention is to state the full range and then comment on stability separately, so:
-</pre></div>
-</div>
+<p class="sd-card-text"><em>However,</em> <span class="math notranslate nohighlight">\(\zeta &lt; 0\)</span> (<span class="math notranslate nohighlight">\(K &lt; 0\)</span>) gives unstable, growing oscillations. The transcript’s stated answer is the full range <span class="math notranslate nohighlight">\(-4 &lt; K &lt; 4\)</span> (oscillatory in form), but for a stable, decaying oscillation you need <span class="math notranslate nohighlight">\(0 &lt; K &lt; 4\)</span>. The PE-exam convention is to state the full range and then comment on stability separately, so:</p>
 <div class="math notranslate nohighlight">
 \[
 -4 &lt; K &lt; 4    oscillatory (any decay direction)
@@ -1205,9 +1167,7 @@ Y (s^2 + K s + 4) = X  \Longrightarrow  \frac{Y(s)}{X(s)} = \frac{1}{s^2 + K s +
 \[
 \frac{K}{4} \geq 1  \Longrightarrow   K \geq 4
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>At exactly $K = 4$, $\zeta = 1$ (critically damped  -  the boundary).
-</pre></div>
-</div>
+<p class="sd-card-text">At exactly <span class="math notranslate nohighlight">\(K = 4\)</span>, <span class="math notranslate nohighlight">\(\zeta = 1\)</span> (critically damped  -  the boundary).</p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Verification by limit cases.</strong></p></li>
 <li><p class="sd-card-text"><span class="math notranslate nohighlight">\(K = 0\)</span>: <span class="math notranslate nohighlight">\(\zeta = 0\)</span>, undamped. Sustained oscillation at <span class="math notranslate nohighlight">\(\omega_n = 1/\tau = 2\)</span> rad/s, period <span class="math notranslate nohighlight">\(T_0 = 2\pi/\omega_n = \pi\)</span> s. Consistent with the boundary of oscillatory behavior.</p></li>
@@ -1238,9 +1198,7 @@ DR = e^{-2\pi\zeta/\sqrt{1-\zeta^2}} = 0.25  \Longrightarrow  -\frac{2\pi\zeta}{
 \[
 \frac{\zeta}{\sqrt{1-\zeta^2}} = \frac{1.386}{2\pi} = 0.2206
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Squaring: $\zeta^2/(1-\zeta^2) = 0.0487$, so $\zeta^2 = 0.0487(1-\zeta^2)$, i.e. $\zeta^2(1+0.0487) = 0.0487$, giving $\zeta^2 = 0.0464$, $\zeta = 0.215$. \checkmark The well-known &quot;$\zeta \approx 0.215$ for quarter-decay&quot; result.
-</pre></div>
-</div>
+<p class="sd-card-text">Squaring: <span class="math notranslate nohighlight">\(\zeta^2/(1-\zeta^2) = 0.0487\)</span>, so <span class="math notranslate nohighlight">\(\zeta^2 = 0.0487(1-\zeta^2)\)</span>, i.e. <span class="math notranslate nohighlight">\(\zeta^2(1+0.0487) = 0.0487\)</span>, giving <span class="math notranslate nohighlight">\(\zeta^2 = 0.0464\)</span>, <span class="math notranslate nohighlight">\(\zeta = 0.215\)</span>. \checkmark The well-known “<span class="math notranslate nohighlight">\(\zeta \approx 0.215\)</span> for quarter-decay” result.</p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Get <span class="math notranslate nohighlight">\(\tau\)</span> from the period.</strong> The time from one peak to the next zero crossing is a quarter-period:</p></li>
 </ul>
@@ -1248,9 +1206,7 @@ DR = e^{-2\pi\zeta/\sqrt{1-\zeta^2}} = 0.25  \Longrightarrow  -\frac{2\pi\zeta}{
 \[
 T/4 = 12  \Longrightarrow  T = 48 s
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Solve $T = 2\pi\tau/\sqrt{1-\zeta^2}$ for $\tau$:
-</pre></div>
-</div>
+<p class="sd-card-text">Solve <span class="math notranslate nohighlight">\(T = 2\pi\tau/\sqrt{1-\zeta^2}\)</span> for <span class="math notranslate nohighlight">\(\tau\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
 \tau = \frac{T \sqrt{1-\zeta^2}}{2\pi} = \frac{48 \sqrt{1-0.0464}}{2\pi} = \frac{48 \times 0.9766}{6.283} = 7.46 s
@@ -1383,16 +1339,12 @@ f(\ell) = \frac{q}{C_v} \sqrt{\frac{G_s}{\Delta P_v}}
 \[
 \Delta P_v(q=200) = 10 - 0.03(200) = 10 - 6 = 4 psi
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>*Note: less valve pressure drop because the rest of the system is taking 6 psi at this flow.* Then
-</pre></div>
-</div>
+<p class="sd-card-text"><em>Note: less valve pressure drop because the rest of the system is taking 6 psi at this flow.</em> Then</p>
 <div class="math notranslate nohighlight">
 \[
 \ell_{b,lin} = \frac{200}{110} \sqrt{\frac{1}{4}} = 1.818 \times 0.500 = 0.909
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The installed linear valve is at 91% lift  -  close to fully open. Little upward authority remains.
-</pre></div>
-</div>
+<p class="sd-card-text">The installed linear valve is at 91% lift  -  close to fully open. Little upward authority remains.</p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Equal percentage, (a):</strong> the <span class="math notranslate nohighlight">\(f\)</span> value is the same as the linear case (0.575) because <span class="math notranslate nohighlight">\(f\)</span> depends only on <span class="math notranslate nohighlight">\(q\)</span>, <span class="math notranslate nohighlight">\(C_v\)</span>, <span class="math notranslate nohighlight">\(G_s\)</span>, <span class="math notranslate nohighlight">\(\Delta P_v\)</span>. Solve <span class="math notranslate nohighlight">\(R^{\ell - 1} = f\)</span>:</p></li>
 </ul>
@@ -1559,7 +1511,7 @@ For a temperature loop heating with steam (FC valve, <span class="math notransla
 </div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<ul>
+<ul class="simple">
 <li><p class="sd-card-text"><strong>(a) Cooling-water valve.</strong></p></li>
 <li><p class="sd-card-text"><em>Loss-of-air scenario A1: valve fails closed.</em> Cooling water stops. Reactor effluent enters the exchanger hot and exits hotter. Heat exchanger tubes may exceed their design temperature; if the process fluid has organic peroxide or other thermal-decomposition risk, runaway can ensue. Downstream: hot process fluid reaching a low-temperature-rated distillation column tray, a fired heater knockout drum, or a polishing tank could vaporize, pressurize, or boil. <strong>Unacceptable.</strong></p></li>
 <li><p class="sd-card-text"><em>Loss-of-air scenario A2: valve fails open.</em> Cooling water flows at maximum. Worst case: process fluid is cooled below its design lower limit (possible freeze-up of high-pour-point streams, viscosity rise, or undesirable phase change). Generally tolerable for a short time; the reactor’s protective interlocks have time to intervene.</p></li>
@@ -1571,10 +1523,9 @@ For a temperature loop heating with steam (FC valve, <span class="math notransla
 <li><p class="sd-card-text"><strong>The general lesson:</strong> “fail safe” does not mean “fail in the direction of the normal operating point.” It means “fail in the direction of lower consequence,” which is determined by what can go wrong downstream, not by what is comfortable now. HAZOP studies systematically test each control valve against each possible failure scenario; the fail-safe decision is one of the outputs of HAZOP.</p></li>
 <li><p class="sd-card-text"><strong>Verification consistency check.</strong> Note that in both examples the fail-safe state moves the process toward the lower-consequence direction:</p></li>
 <li><p class="sd-card-text">(a) Default to cooling = always erring on the side of cooler-and-safer.</p></li>
-<li><p class="sd-card-text">(b) Default to containment = always erring on the side of not-releasing-anything-bad.</p>
-<p class="sd-card-text">Memorize the heuristic “protect people first, equipment second, product third.”</p>
-</li>
+<li><p class="sd-card-text">(b) Default to containment = always erring on the side of not-releasing-anything-bad.</p></li>
 </ul>
+<p class="sd-card-text">Memorize the heuristic “protect people first, equipment second, product third.”</p>
 </div>
 </details><div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1615,12 +1566,12 @@ P_{source} - P_{sink} = \Delta P_{piping}(q) + \Delta P_v(q)
 <section id="graphical-interpretation-four-curves-on-one-plot">
 <h3>Graphical Interpretation: Four Curves on One Plot<a class="headerlink" href="#graphical-interpretation-four-curves-on-one-plot" title="Link to this heading">#</a></h3>
 <p>On a standard “flow vs. lift” plot, four curves can be drawn for a given valve and system:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- Linear inherent: straight line from (0, 0) to (1, $q_{\max}^{inh}$).
-- Linear installed: concave-down curve  -  starts steep, flattens at high lift.
-- Equal-pct inherent: convex-up curve  -  starts flat, steepens at high lift.
-- Equal-pct installed: nearly straight line in the middle range, the curvatures partially cancel.
-</pre></div>
-</div>
+<ul class="simple">
+<li><p>Linear inherent: straight line from (0, 0) to (1, <span class="math notranslate nohighlight">\(q_{\max}^{inh}\)</span>).</p></li>
+<li><p>Linear installed: concave-down curve  -  starts steep, flattens at high lift.</p></li>
+<li><p>Equal-pct inherent: convex-up curve  -  starts flat, steepens at high lift.</p></li>
+<li><p>Equal-pct installed: nearly straight line in the middle range, the curvatures partially cancel.</p></li>
+</ul>
 <p>The fact that the equal-pct installed curve is the straightest of the four is the central practical reason equal-pct dominates industry use.</p>
 </section>
 <section id="worked-example-valve-gain-as-a-function-of-lift">
@@ -1633,27 +1584,31 @@ P_{source} - P_{sink} = \Delta P_{piping}(q) + \Delta P_v(q)
 </div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<ul>
+<ul class="simple">
 <li><p class="sd-card-text"><strong>Setup.</strong> For each characteristic and lift, solve <span class="math notranslate nohighlight">\(q = C_v f(\ell) \sqrt{(10 - 0.03 q)/1}\)</span> implicitly for <span class="math notranslate nohighlight">\(q\)</span>, then approximate <span class="math notranslate nohighlight">\(dq/d\ell \approx [q(\ell + 0.01) - q(\ell - 0.01)]/0.02\)</span>.</p></li>
 <li><p class="sd-card-text"><strong>Linear, <span class="math notranslate nohighlight">\(\ell = 0.5\)</span>.</strong> <span class="math notranslate nohighlight">\(q = 55 \sqrt{10 - 0.03 q}\)</span>. Iterate:</p></li>
 <li><p class="sd-card-text">Guess <span class="math notranslate nohighlight">\(q = 150\)</span>: RHS <span class="math notranslate nohighlight">\(= 55\sqrt{10 - 4.5} = 55\sqrt{5.5} = 55(2.345) = 129\)</span>. Lower.</p></li>
 <li><p class="sd-card-text">Try <span class="math notranslate nohighlight">\(q = 130\)</span>: RHS <span class="math notranslate nohighlight">\(= 55\sqrt{10 - 3.9} = 55\sqrt{6.1} = 55(2.470) = 136\)</span>.</p></li>
 <li><p class="sd-card-text">Try <span class="math notranslate nohighlight">\(q = 136\)</span>: RHS <span class="math notranslate nohighlight">\(= 55\sqrt{10 - 4.08} = 55\sqrt{5.92} = 55(2.433) = 134\)</span>.</p></li>
-<li><p class="sd-card-text">Converged at <span class="math notranslate nohighlight">\(q \approx 135\)</span>.</p>
+<li><p class="sd-card-text">Converged at <span class="math notranslate nohighlight">\(q \approx 135\)</span>.</p></li>
+</ul>
 <p class="sd-card-text">Repeat for <span class="math notranslate nohighlight">\(\ell = 0.51, 0.49\)</span> to get gain <span class="math notranslate nohighlight">\(\approx 270\)</span> gpm/lift.</p>
-</li>
+<ul class="simple">
 <li><p class="sd-card-text"><strong>Linear, <span class="math notranslate nohighlight">\(\ell = 0.9\)</span>.</strong> <span class="math notranslate nohighlight">\(q = 99 \sqrt{10 - 0.03 q}\)</span>. Iterate:</p></li>
-<li><p class="sd-card-text">Guess <span class="math notranslate nohighlight">\(q = 200\)</span>: RHS <span class="math notranslate nohighlight">\(= 99\sqrt{4} = 198\)</span>. Converged.</p>
+<li><p class="sd-card-text">Guess <span class="math notranslate nohighlight">\(q = 200\)</span>: RHS <span class="math notranslate nohighlight">\(= 99\sqrt{4} = 198\)</span>. Converged.</p></li>
+</ul>
 <p class="sd-card-text">Compute gain near <span class="math notranslate nohighlight">\(\ell = 0.9\)</span>: <span class="math notranslate nohighlight">\(\approx 130\)</span> gpm/lift (much smaller).</p>
-</li>
+<ul class="simple">
 <li><p class="sd-card-text"><strong>Equal-pct, <span class="math notranslate nohighlight">\(\ell = 0.5\)</span>, <span class="math notranslate nohighlight">\(R = 40\)</span>.</strong> <span class="math notranslate nohighlight">\(f = 40^{-0.5} = 1/\sqrt{40} = 0.158\)</span>. Then <span class="math notranslate nohighlight">\(q = 110(0.158)\sqrt{10 - 0.03 q}\)</span>:</p></li>
-<li><p class="sd-card-text">Iterate around <span class="math notranslate nohighlight">\(q = 55\)</span>: <span class="math notranslate nohighlight">\(q = 17.4\sqrt{10 - 1.65} = 17.4\sqrt{8.35} = 17.4(2.89) = 50.3\)</span>. Iterate to convergence <span class="math notranslate nohighlight">\(\approx 51\)</span>.</p>
+<li><p class="sd-card-text">Iterate around <span class="math notranslate nohighlight">\(q = 55\)</span>: <span class="math notranslate nohighlight">\(q = 17.4\sqrt{10 - 1.65} = 17.4\sqrt{8.35} = 17.4(2.89) = 50.3\)</span>. Iterate to convergence <span class="math notranslate nohighlight">\(\approx 51\)</span>.</p></li>
+</ul>
 <p class="sd-card-text">Gain near <span class="math notranslate nohighlight">\(\ell = 0.5\)</span>: small (because <span class="math notranslate nohighlight">\(f\)</span> is small).</p>
-</li>
+<ul class="simple">
 <li><p class="sd-card-text"><strong>Equal-pct, <span class="math notranslate nohighlight">\(\ell = 0.9\)</span>.</strong> <span class="math notranslate nohighlight">\(f = 40^{-0.1} = 0.692\)</span>. <span class="math notranslate nohighlight">\(q = 110(0.692)\sqrt{10 - 0.03 q} = 76.1\sqrt{...}\)</span>:</p></li>
-<li><p class="sd-card-text">Iterate around <span class="math notranslate nohighlight">\(q = 180\)</span>: <span class="math notranslate nohighlight">\(76.1\sqrt{10 - 5.4} = 76.1\sqrt{4.6} = 163\)</span>. Try <span class="math notranslate nohighlight">\(q = 165\)</span>: <span class="math notranslate nohighlight">\(76.1\sqrt{5.05} = 171\)</span>. Converged at <span class="math notranslate nohighlight">\(\approx 170\)</span>.</p>
+<li><p class="sd-card-text">Iterate around <span class="math notranslate nohighlight">\(q = 180\)</span>: <span class="math notranslate nohighlight">\(76.1\sqrt{10 - 5.4} = 76.1\sqrt{4.6} = 163\)</span>. Try <span class="math notranslate nohighlight">\(q = 165\)</span>: <span class="math notranslate nohighlight">\(76.1\sqrt{5.05} = 171\)</span>. Converged at <span class="math notranslate nohighlight">\(\approx 170\)</span>.</p></li>
+</ul>
 <p class="sd-card-text">Gain near <span class="math notranslate nohighlight">\(\ell = 0.9\)</span>: large (because <span class="math notranslate nohighlight">\(f\)</span> is large and equal-pct has <span class="math notranslate nohighlight">\(df/d\ell = f \ln R\)</span>).</p>
-</li>
+<ul class="simple">
 <li><p class="sd-card-text"><strong>Comparison.</strong> The linear valve’s gain <em>drops</em> from 270 to 130 across the operating range  -  the loop becomes sluggish at high flow. The equal-pct valve’s gain <em>rises</em> across the same range  -  but the multiplication by the falling process gain (which usually decreases with throughput) tends to cancel, giving more constant loop gain overall. This is the algebraic statement of the heuristic that equal-pct is preferred in installed conditions.</p></li>
 </ul>
 </div>
@@ -1988,13 +1943,13 @@ K_c = \frac{1}{K} \cdot \frac{\tau}{\lambda + \theta},   \tau_I = \tau
 </ul>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-d21f1bb8-7fb8-41cb-974e-4917b0db3692">
-<span class="eqno">(14)<a class="headerlink" href="#equation-d21f1bb8-7fb8-41cb-974e-4917b0db3692" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9a443196-e2da-44cf-9ea6-148f37624740">
+<span class="eqno">(14)<a class="headerlink" href="#equation-9a443196-e2da-44cf-9ea6-148f37624740" title="Permalink to this equation">#</a></span>\[\begin{align}
 
 
-    K_c &amp;= \frac{0.9}{|K|} \frac{\tau}{\theta} = \frac{0.9}{1.5} \frac{2.14}{5.4} = 0.60 \times 0.396 = 0.238 gpm/^\circ F
+K_c &amp;= \frac{0.9}{|K|} \frac{\tau}{\theta} = \frac{0.9}{1.5} \frac{2.14}{5.4} = 0.60 \times 0.396 = 0.238 gpm/^\circ F
 \tau_I &amp;= 3.33 \theta = 3.33 \times 5.4 = 18.0 min
-    \end{align}\]</div>
+\end{align}\]</div>
 <div class="math notranslate nohighlight">
 \[\]</div>
 <ul class="simple">
@@ -2002,13 +1957,13 @@ K_c = \frac{1}{K} \cdot \frac{\tau}{\lambda + \theta},   \tau_I = \tau
 </ul>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-cdc70f59-1466-423f-95a4-09f7d7716c2a">
-<span class="eqno">(15)<a class="headerlink" href="#equation-cdc70f59-1466-423f-95a4-09f7d7716c2a" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e68b15ff-959f-4b86-92d8-7c30529e3b77">
+<span class="eqno">(15)<a class="headerlink" href="#equation-e68b15ff-959f-4b86-92d8-7c30529e3b77" title="Permalink to this equation">#</a></span>\[\begin{align}
 
 
-    K_c &amp;= \frac{1}{1.5} \frac{2.14}{5.4} (0.9 + \frac{5.4}{12 \times 2.14}) = 0.667 \times 0.396 \times (0.9 + 0.210) = 0.293 gpm/^\circ F
+K_c &amp;= \frac{1}{1.5} \frac{2.14}{5.4} (0.9 + \frac{5.4}{12 \times 2.14}) = 0.667 \times 0.396 \times (0.9 + 0.210) = 0.293 gpm/^\circ F
 \tau_I &amp;= 5.4 \cdot \frac{30 + 3(2.524)}{9 + 20(2.524)} = 5.4 \cdot \frac{37.57}{59.48} = 5.4 \times 0.632 = 3.41 min
-    \end{align}\]</div>
+\end{align}\]</div>
 <div class="math notranslate nohighlight">
 \[\]</div>
 <ul class="simple">
@@ -2016,23 +1971,24 @@ K_c = \frac{1}{K} \cdot \frac{\tau}{\lambda + \theta},   \tau_I = \tau
 </ul>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-5c5e1f8d-c0e5-42b9-a42a-92127772e4f6">
-<span class="eqno">(16)<a class="headerlink" href="#equation-5c5e1f8d-c0e5-42b9-a42a-92127772e4f6" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-68002f02-5b8c-4c4c-9d58-1ae02941820a">
+<span class="eqno">(16)<a class="headerlink" href="#equation-68002f02-5b8c-4c4c-9d58-1ae02941820a" title="Permalink to this equation">#</a></span>\[\begin{align}
 
 
-    K_c &amp;= \frac{1}{|K|} \frac{\tau}{\lambda + \theta} = \frac{1}{1.5} \frac{2.14}{2.14 + 5.4} = \frac{1}{1.5} \times 0.284 = 0.189 gpm/^\circ F
+K_c &amp;= \frac{1}{|K|} \frac{\tau}{\lambda + \theta} = \frac{1}{1.5} \frac{2.14}{2.14 + 5.4} = \frac{1}{1.5} \times 0.284 = 0.189 gpm/^\circ F
 \tau_I &amp;= \tau = 2.14 min
-    \end{align}\]</div>
+\end{align}\]</div>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<ul>
+<ul class="simple">
 <li><p class="sd-card-text"><strong>Controller action sign.</strong> <span class="math notranslate nohighlight">\(K &lt; 0\)</span> for this process, so the controller is <strong>direct-acting</strong> (controller output rises when measurement rises) to maintain negative feedback. The magnitudes <span class="math notranslate nohighlight">\(K_c\)</span> from each method are entered into the controller and the direct/reverse switch is set to “direct.”</p></li>
 <li><p class="sd-card-text"><strong>Comparison.</strong></p></li>
 <li><p class="sd-card-text">ZN gives moderate <span class="math notranslate nohighlight">\(K_c\)</span> and slow integral; will produce overshoot.</p></li>
 <li><p class="sd-card-text">Cohen-Coon gives somewhat larger <span class="math notranslate nohighlight">\(K_c\)</span> and much faster integral; will respond faster but with more overshoot. CC is the recommended choice for dead-time-dominant processes (<span class="math notranslate nohighlight">\(\theta/\tau &gt; 0.3\)</span>).</p></li>
-<li><p class="sd-card-text">IMC gives the smallest <span class="math notranslate nohighlight">\(K_c\)</span> and a very fast integral (<span class="math notranslate nohighlight">\(\tau_I = \tau\)</span>); produces a smooth, no-overshoot response at the cost of speed.</p>
+<li><p class="sd-card-text">IMC gives the smallest <span class="math notranslate nohighlight">\(K_c\)</span> and a very fast integral (<span class="math notranslate nohighlight">\(\tau_I = \tau\)</span>); produces a smooth, no-overshoot response at the cost of speed.</p></li>
+</ul>
 <p class="sd-card-text">For a process this delay-dominant, none of these will be snappy  -  consider Smith predictor for dramatically better performance.</p>
-</li>
+<ul class="simple">
 <li><p class="sd-card-text"><strong>Sanity check.</strong> The dimensionless loop gain at the chosen <span class="math notranslate nohighlight">\(K_c\)</span> is <span class="math notranslate nohighlight">\(|K_c \cdot K| \approx\)</span> 0.36 (ZN), 0.44 (CC), 0.28 (IMC). All are well below 1.0, so the loop is comfortably stable. ZN’s value (0.36) is closest to the quarter-decay target gain, consistent with its more aggressive tuning intent.</p></li>
 </ul>
 </div>
@@ -2093,29 +2049,27 @@ G_{OL}(s) = G_c G_p = K_c \frac{1}{(s+1)(s+2)}\cdot \frac{2s + 1}{2s} = \frac{K_
 \[
 2 s (s+1)(s+2) + K_c (2s + 1) = 0
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Expand:
-</pre></div>
-</div>
+<p class="sd-card-text">Expand:</p>
 <div class="math notranslate nohighlight">
 \[
 2 s (s^2 + 3s + 2) + 2 K_c s + K_c = 2 s^3 + 6 s^2 + 4 s + 2 K_c s + K_c = 2 s^3 + 6 s^2 + (4 + 2 K_c) s + K_c = 0
 \]</div>
-<ul>
-<li><p class="sd-card-text"><strong>Routh array</strong> for <span class="math notranslate nohighlight">\(a_3 s^3 + a_2 s^2 + a_1 s + a_0\)</span> with <span class="math notranslate nohighlight">\(a_3 = 2\)</span>, <span class="math notranslate nohighlight">\(a_2 = 6\)</span>, <span class="math notranslate nohighlight">\(a_1 = 4 + 2 K_c\)</span>, <span class="math notranslate nohighlight">\(a_0 = K_c\)</span>:</p>
-<p class="sd-card-text">where <span class="math notranslate nohighlight">\(b_1 = [6(4 + 2 K_c) - 2 K_c]/6 = [24 + 12 K_c - 2 K_c]/6 = (24 + 10 K_c)/6\)</span>.</p>
-</li>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Routh array</strong> for <span class="math notranslate nohighlight">\(a_3 s^3 + a_2 s^2 + a_1 s + a_0\)</span> with <span class="math notranslate nohighlight">\(a_3 = 2\)</span>, <span class="math notranslate nohighlight">\(a_2 = 6\)</span>, <span class="math notranslate nohighlight">\(a_1 = 4 + 2 K_c\)</span>, <span class="math notranslate nohighlight">\(a_0 = K_c\)</span>:</p></li>
 </ul>
+<p class="sd-card-text">where <span class="math notranslate nohighlight">\(b_1 = [6(4 + 2 K_c) - 2 K_c]/6 = [24 + 12 K_c - 2 K_c]/6 = (24 + 10 K_c)/6\)</span>.</p>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<ul>
+<ul class="simple">
 <li><p class="sd-card-text"><strong>Stability requires all first-column entries positive:</strong></p></li>
 <li><p class="sd-card-text"><span class="math notranslate nohighlight">\(6 &gt; 0\)</span>: always.</p></li>
 <li><p class="sd-card-text"><span class="math notranslate nohighlight">\(b_1 &gt; 0\)</span>: <span class="math notranslate nohighlight">\(24 + 10 K_c &gt; 0 \Rightarrow K_c &gt; -2.4\)</span>.</p></li>
-<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(K_c &gt; 0\)</span>.</p>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(K_c &gt; 0\)</span>.</p></li>
+</ul>
 <p class="sd-card-text">Combining: stability iff <span class="math notranslate nohighlight">\(K_c &gt; 0\)</span>.</p>
-</li>
+<ul class="simple">
 <li><p class="sd-card-text"><strong>Ultimate gain.</strong> As <span class="math notranslate nohighlight">\(K_c \to \infty\)</span>, all entries stay positive; the loop is stable for any positive <span class="math notranslate nohighlight">\(K_c\)</span>. (The process by itself is overdamped and has plenty of phase margin; PI control with the chosen <span class="math notranslate nohighlight">\(\tau_I = 2\)</span> does not destabilize it.) For a process with more lag (e.g. three first-order in series), there would be a finite <span class="math notranslate nohighlight">\(K_u\)</span> at which the loop oscillates.</p></li>
 <li><p class="sd-card-text"><strong>Verification.</strong> At <span class="math notranslate nohighlight">\(K_c = 0\)</span> (open loop), the characteristic equation is <span class="math notranslate nohighlight">\(2s(s+1)(s+2) = 0\)</span>, with poles 0, <span class="math notranslate nohighlight">\(-1\)</span>, <span class="math notranslate nohighlight">\(-2\)</span>. The pole at the origin is marginal (open-loop integrator). Adding any <span class="math notranslate nohighlight">\(K_c &gt; 0\)</span> moves the marginal pole into the left half-plane. \checkmark</p></li>
 </ul>

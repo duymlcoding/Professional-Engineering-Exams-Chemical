@@ -72,7 +72,7 @@ where lower-case denotes deviation and upper-case denotes absolute value. Two co
 
 - Process transfer functions $G(s) = Y(s)/X(s)$ are written without bias terms, exactly as $\dfrac{K}{\tau s + 1}$ or $\dfrac{K e^{-\theta s}}{\tau s + 1}$.
 
-After solving for the deviation $y(t)$, the actual process value at any time is $Y(t) = Y + y(t)$. *Forgetting to add $Y*$ back is the single most common error in first-order step-response problems.
+After solving for the deviation $y(t)$, the actual process value at any time is $Y(t) = Y + y(t)$. *Forgetting to add $Y$ back is the single most common error in first-order step-response problems.*
 ```
 
 
@@ -140,7 +140,7 @@ $$
 Y(s) = \frac{K}{\tau s + 1} \cdot \frac{M}{s} = \frac{K M}{s(\tau s + 1)}
 $$
 
-    This is the equation we must invert to obtain $y(t)$.
+This is the equation we must invert to obtain $y(t)$.
 
 
 - **Partial-fraction decomposition.** Write
@@ -149,7 +149,7 @@ $$
 \frac{K M}{s(\tau s + 1)} = \frac{A}{s} + \frac{B}{\tau s + 1}
 $$
 
-    Multiply both sides by the common denominator $s(\tau s + 1)$:
+Multiply both sides by the common denominator $s(\tau s + 1)$:
 
 $$
 K M = A(\tau s + 1) + B s = (\tau A + B) s + A
@@ -162,7 +162,7 @@ $$
 
 - $s^1$: $\tau A + B = 0  \Longrightarrow  B = -\tau A = -K M \tau$.
 
-    Therefore
+Therefore
 
 $$
 Y(s) = \frac{K M}{s} - \frac{K M \tau}{\tau s + 1}
@@ -177,16 +177,16 @@ $$
 \begin{align}
 
 
-    y(t) &= L^{-1}\{ \frac{K M}{s} \} - K M \tau \cdot L^{-1}\{ \frac{1}{\tau s + 1} \}
+y(t) &= L^{-1}\{ \frac{K M}{s} \} - K M \tau \cdot L^{-1}\{ \frac{1}{\tau s + 1} \}
 &= K M - K M \tau \cdot \frac{1}{\tau} e^{-t/\tau}
 &= K M - K M e^{-t/\tau}
-    \end{align}
+\end{align}
 
 $$
 
 $$
 
-    Factoring the common $K M$:
+Factoring the common $K M$:
 
 $$
 y(t) = K M ( 1 - e^{-t/\tau} )    (Equation 1)
@@ -252,7 +252,7 @@ $$
 q_i(t) = Q_i(t) - Q_i = 0.41 - 0.40 = 0.01 m^3/s for  t > 0
 $$
 
-    so the step magnitude is $M = 0.01$. The output deviation is $h(t) = H(t) - 3.0$, with $h(0) = 0$.
+so the step magnitude is $M = 0.01$. The output deviation is $h(t) = H(t) - 3.0$, with $h(0) = 0$.
 
 
 - **Apply Equation 1 with $K = 10$, $\tau = 50$, $M = 0.01$:**
@@ -267,13 +267,13 @@ $$
 h(100) = 0.10 (1 - 0.1353) = 0.10 (0.8647) = 0.0865 m
 $$
 
-    Convert back to absolute level:
+Convert back to absolute level:
 
 $$
 H(100) = H + h(100) = 3.000 + 0.0865 = 3.087 m
 $$
 
-    A common student error is to read $h(100) = 0.0865$ m and *report it* as the answer; the absolute level is what an instrument actually shows.
+A common student error is to read $h(100) = 0.0865$ m and *report it* as the answer; the absolute level is what an instrument actually shows.
 
 
 - **(b) Steady-state level ($t \to \infty$).** As $t \to \infty$, $e^{-t/\tau} \to 0$, so
@@ -288,7 +288,7 @@ $$
 t_{63.2%} = \tau = 50 s
 $$
 
-    Verify by solving $1 - e^{-t/\tau} = 0.632$:
+Verify by solving $1 - e^{-t/\tau} = 0.632$:
 
 $$
 e^{-t/\tau} = 0.368  \Longrightarrow  t/\tau = -\ln(0.368) = 1.0  \Longrightarrow  t = \tau = 50 s \checkmark
@@ -321,7 +321,7 @@ $$
 t(4) = -6.0 (1 - 0.6065) = -6.0 (0.3935) = -2.36^\circ F
 $$
 
-    Absolute temperature:
+Absolute temperature:
 
 $$
 T(4) = 175 + (-2.36) = 172.64^\circ F
@@ -477,7 +477,7 @@ $$
 K = \frac{\Delta y_{ss}}{\Delta x} = \frac{T_{new} - T_{old}}{Q_{cw,new} - Q_{cw,old}} = \frac{53.2 - 55.0}{9.2 - 8.0} = \frac{-1.8}{1.2} = -1.5 \frac{^\circ F}{gpm}
 $$
 
-    Negative as expected (more cooling water lowers process outlet temperature).
+Negative as expected (more cooling water lowers process outlet temperature).
 
 
 - **Identify the 35.3% and 85.3% target temperatures.**
@@ -487,7 +487,7 @@ $$
 
 - 85.3% mark: $T_{85.3%} = 55.0 + 0.853(-1.8) = 55.0 - 1.535 = 53.465^\circ$F.
 
-    Read from the graph: $t_{35.3%} = 6.3$ min, $t_{85.3%} = 9.5$ min.
+Read from the graph: $t_{35.3%} = 6.3$ min, $t_{85.3%} = 9.5$ min.
 
 
 - **Apply the Sundaresan-Krishnaswamy formulas.**
@@ -499,9 +499,9 @@ $$
 \begin{align}
 
 
-    \theta &= 1.3 (6.3) - 0.29 (9.5) = 8.19 - 2.755 = 5.435 \approx 5.4 min
+\theta &= 1.3 (6.3) - 0.29 (9.5) = 8.19 - 2.755 = 5.435 \approx 5.4 min
 \tau   &= 0.67 (9.5 - 6.3) = 0.67 (3.2) = 2.144 \approx 2.14 min
-    \end{align}
+\end{align}
 
 $$
 
@@ -523,7 +523,7 @@ $$
 \frac{\theta}{\tau} = \frac{5.4}{2.14} = 2.52
 $$
 
-    This is a dead-time-dominant process ($\theta/\tau > 1$). PI control alone will be sluggish  -  the controller cannot see any effect of its own action for $\theta = 5.4$ min after the action. Strategies for dead-time-dominant processes:
+This is a dead-time-dominant process ($\theta/\tau > 1$). PI control alone will be sluggish  -  the controller cannot see any effect of its own action for $\theta = 5.4$ min after the action. Strategies for dead-time-dominant processes:
 
 
 - **Smith Predictor:** a model-based scheme that effectively cancels the dead time inside the loop, allowing the controller to be tuned as if for a pure first-order process.
@@ -531,7 +531,6 @@ $$
 - **Feedforward control:** measure the disturbance and counter-act before it propagates through the dead time.
 
 - **Model Predictive Control (MPC):** explicitly accounts for dead time over a finite horizon.
-
 
 
 - **Verification by reconstructing one point.** Predict the time at which $T$ reaches 50% of the change:
@@ -543,16 +542,16 @@ $$
 \begin{align}
 
 
-    T_{50%} &= 55.0 + 0.5(-1.8) = 54.10^\circ F
+T_{50%} &= 55.0 + 0.5(-1.8) = 54.10^\circ F
 1 - e^{-(t - \theta)/\tau} &= 0.50  \Longrightarrow  t - \theta = \tau \ln(2) = 2.14 (0.693) = 1.485 min
 t &= 5.4 + 1.485 = 6.88 min
-    \end{align}
+\end{align}
 
 $$
 
 $$
 
-    Compare to the graphical reading at $T = 54.1^\circ$F. If the graph gives $t \approx 7$ min, the fit is consistent.
+Compare to the graphical reading at $T = 54.1^\circ$F. If the graph gives $t \approx 7$ min, the fit is consistent.
 ```
 
 
@@ -575,9 +574,9 @@ $$
 \begin{align}
 
 
-    \theta_{app} &= 1.3 (2.6) - 0.29 (8.0) = 3.38 - 2.32 = 1.06
+\theta_{app} &= 1.3 (2.6) - 0.29 (8.0) = 3.38 - 2.32 = 1.06
 \tau_{app}   &= 0.67 (8.0 - 2.6) = 0.67 (5.4) = 3.62
-    \end{align}
+\end{align}
 
 $$
 
@@ -699,13 +698,13 @@ $$
 s = \frac{-2\zeta\tau \pm \sqrt{4\zeta^2\tau^2 - 4\tau^2}}{2\tau^2} = \frac{-\zeta \pm \sqrt{\zeta^2 - 1}}{\tau}
 $$
 
-    For $\zeta < 1$ the discriminant is negative; write $\sqrt{\zeta^2 - 1} = j\sqrt{1 - \zeta^2}$:
+For $\zeta < 1$ the discriminant is negative; write $\sqrt{\zeta^2 - 1} = j\sqrt{1 - \zeta^2}$:
 
 $$
 s = -\frac{\zeta}{\tau} \pm j \frac{\sqrt{1 - \zeta^2}}{\tau}
 $$
 
-    Define the damped frequency $\omega_d = \sqrt{1-\zeta^2}/\tau$ and the decay rate $\alpha = \zeta/\tau$. The poles are $s = -\alpha \pm j \omega_d$.
+Define the damped frequency $\omega_d = \sqrt{1-\zeta^2}/\tau$ and the decay rate $\alpha = \zeta/\tau$. The poles are $s = -\alpha \pm j \omega_d$.
 
 - **Partial-fraction decomposition.** Write
 
@@ -713,7 +712,7 @@ $$
 Y(s) = \frac{KM}{\tau^2} \frac{1}{s (s+\alpha-j\omega_d)(s+\alpha+j\omega_d)} = \frac{A}{s} + \frac{B s + C}{(s+\alpha)^2 + \omega_d^2}
 $$
 
-    Multiplying through and matching coefficients (standard algebra; details suppressed for compactness) gives
+Multiplying through and matching coefficients (standard algebra; details suppressed for compactness) gives
 
 $$
 A = K M,   B = -K M,   C = -2 \alpha K M
@@ -728,21 +727,21 @@ $$
 \begin{align}
 
 
-    L^{-1}\{\frac{s + \alpha}{(s+\alpha)^2 + \omega_d^2}\} &= e^{-\alpha t}\cos(\omega_d t)
+L^{-1}\{\frac{s + \alpha}{(s+\alpha)^2 + \omega_d^2}\} &= e^{-\alpha t}\cos(\omega_d t)
 L^{-1}\{\frac{\omega_d}{(s+\alpha)^2 + \omega_d^2}\} &= e^{-\alpha t}\sin(\omega_d t)
-    \end{align}
+\end{align}
 
 $$
 
 $$
 
-    After algebraic recombination,
+After algebraic recombination,
 
 $$
 y(t) = K M [ 1 - \frac{1}{\sqrt{1-\zeta^2}} e^{-\zeta t/\tau}\sin (\frac{\sqrt{1-\zeta^2}}{\tau} t + \phi)]    (0 < \zeta < 1)
 $$
 
-    where the phase $\phi = \tan^{-1} (\sqrt{1-\zeta^2}/\zeta) = \cos^{-1}(\zeta)$.
+where the phase $\phi = \tan^{-1} (\sqrt{1-\zeta^2}/\zeta) = \cos^{-1}(\zeta)$.
 ```
 
 
@@ -797,7 +796,7 @@ $$
 s^2 Y + K s Y + 4 Y = X
 $$
 
-    Factor out $Y$:
+Factor out $Y$:
 
 $$
 Y (s^2 + K s + 4) = X  \Longrightarrow  \frac{Y(s)}{X(s)} = \frac{1}{s^2 + K s + 4}
@@ -809,7 +808,7 @@ $$
 \frac{Y(s)}{X(s)} = \frac{1/4}{\tfrac{1}{4} s^2 + \tfrac{K}{4} s + 1}
 $$
 
-    Match against $\dfrac{K_p}{\tau^2 s^2 + 2\zeta\tau s + 1}$:
+Match against $\dfrac{K_p}{\tau^2 s^2 + 2\zeta\tau s + 1}$:
 
 $$
 
@@ -818,10 +817,10 @@ $$
 \begin{align}
 
 
-    K_p          &= \frac{1}{4}
+K_p          &= \frac{1}{4}
 \tau^2       &= \frac{1}{4}  \Longrightarrow  \tau = \frac{1}{2}   (positive root)
 2 \zeta \tau &= \frac{K}{4}  \Longrightarrow  \zeta = \frac{K}{8 \tau} = \frac{K}{8 \cdot (1/2)} = \frac{K}{4}
-    \end{align}
+\end{align}
 
 $$
 
@@ -837,7 +836,7 @@ $$
 |\frac{K}{4}| < 1  \Longrightarrow  -4 < K < 4
 $$
 
-    *However,* $\zeta < 0$ ($K < 0$) gives unstable, growing oscillations. The transcript's stated answer is the full range $-4 < K < 4$ (oscillatory in form), but for a stable, decaying oscillation you need $0 < K < 4$. The PE-exam convention is to state the full range and then comment on stability separately, so:
+*However,* $\zeta < 0$ ($K < 0$) gives unstable, growing oscillations. The transcript's stated answer is the full range $-4 < K < 4$ (oscillatory in form), but for a stable, decaying oscillation you need $0 < K < 4$. The PE-exam convention is to state the full range and then comment on stability separately, so:
 
 $$
 -4 < K < 4    oscillatory (any decay direction)
@@ -853,7 +852,7 @@ $$
 \frac{K}{4} \geq 1  \Longrightarrow   K \geq 4
 $$
 
-    At exactly $K = 4$, $\zeta = 1$ (critically damped  -  the boundary).
+At exactly $K = 4$, $\zeta = 1$ (critically damped  -  the boundary).
 
 
 - **Verification by limit cases.**
@@ -887,7 +886,7 @@ $$
 \frac{\zeta}{\sqrt{1-\zeta^2}} = \frac{1.386}{2\pi} = 0.2206
 $$
 
-    Squaring: $\zeta^2/(1-\zeta^2) = 0.0487$, so $\zeta^2 = 0.0487(1-\zeta^2)$, i.e. $\zeta^2(1+0.0487) = 0.0487$, giving $\zeta^2 = 0.0464$, $\zeta = 0.215$. \checkmark The well-known "$\zeta \approx 0.215$ for quarter-decay" result.
+Squaring: $\zeta^2/(1-\zeta^2) = 0.0487$, so $\zeta^2 = 0.0487(1-\zeta^2)$, i.e. $\zeta^2(1+0.0487) = 0.0487$, giving $\zeta^2 = 0.0464$, $\zeta = 0.215$. \checkmark The well-known "$\zeta \approx 0.215$ for quarter-decay" result.
 
 
 - **Get $\tau$ from the period.** The time from one peak to the next zero crossing is a quarter-period:
@@ -896,7 +895,7 @@ $$
 T/4 = 12  \Longrightarrow  T = 48 s
 $$
 
-    Solve $T = 2\pi\tau/\sqrt{1-\zeta^2}$ for $\tau$:
+Solve $T = 2\pi\tau/\sqrt{1-\zeta^2}$ for $\tau$:
 
 $$
 \tau = \frac{T \sqrt{1-\zeta^2}}{2\pi} = \frac{48 \sqrt{1-0.0464}}{2\pi} = \frac{48 \times 0.9766}{6.283} = 7.46 s
@@ -1043,13 +1042,13 @@ $$
 \Delta P_v(q=200) = 10 - 0.03(200) = 10 - 6 = 4 psi
 $$
 
-    *Note: less valve pressure drop because the rest of the system is taking 6 psi at this flow.* Then
+*Note: less valve pressure drop because the rest of the system is taking 6 psi at this flow.* Then
 
 $$
 \ell_{b,lin} = \frac{200}{110} \sqrt{\frac{1}{4}} = 1.818 \times 0.500 = 0.909
 $$
 
-    The installed linear valve is at 91% lift  -  close to fully open. Little upward authority remains.
+The installed linear valve is at 91% lift  -  close to fully open. Little upward authority remains.
 
 
 - **Equal percentage, (a):** the $f$ value is the same as the linear case (0.575) because $f$ depends only on $q$, $C_v$, $G_s$, $\Delta P_v$. Solve $R^{\ell - 1} = f$:
@@ -1080,7 +1079,6 @@ $$
 - Equal-pct installed: $\ell = 0.974$
 
 
-
 - **Engineering interpretation.**
 
 
@@ -1089,7 +1087,6 @@ $$
 - For the equal-pct valve, both lifts (0.850 and 0.974) are also near full open  -  but importantly, the slope $df/d\ell = f \ln R$ at the high-$f$ end is much steeper than the linear-valve slope, so a small lift change produces a large flow change. This means *this $C_v$ is too large* or the design flow is too high a fraction of the valve's range.
 
 - **Designer's response:** pick a valve with a smaller $C_v$ so that at design flow the lift falls in the recommended 0.30-0.75 range (some references say 0.20-0.80). Re-do the calculation. The valve must have enough $C_v$ to pass the maximum required flow ($\sim$1.2-2.0 $\times$ design) at $\ell \approx 0.9$, and not so much $C_v$ that the minimum required flow drives the valve below $\ell = 0.1$ (poor controllability near the seat).
-
 
 
 - **Verification of the equal-pct algebra.** Direct check: with $R = 40$ and $\ell = 0.850$, $f = 40^{0.850 - 1} = 40^{-0.15} = e^{-0.15 \ln 40} = e^{-0.5527} = 0.575$. \checkmark
@@ -1262,7 +1259,6 @@ Select the fail-safe action for each and justify both locally and globally.
 - **Selection: Fail-Open (ATC).** Keep coolant flowing on power loss.
 
 
-
 - **(b) Wastewater discharge valve.**
 
 
@@ -1271,7 +1267,6 @@ Select the fail-safe action for each and justify both locally and globally.
 - *Scenario B2: valve fails open.* Wastewater of possibly off-spec pH (the neutralization control loop is also lost during a power outage) flows continuously to the bio-treatment plant. The biological organisms can be killed by a pH shock or by a slug of toxic substance; the bio-plant takes days to repopulate. Regulatory permit violation is likely.
 
 - **Selection: Fail-Closed (ATO).** Contain the wastewater until controls are restored.
-
 
 
 - **The general lesson:** "fail safe" does not mean "fail in the direction of the normal operating point." It means "fail in the direction of lower consequence," which is determined by what can go wrong downstream, not by what is comfortable now. HAZOP studies systematically test each control valve against each possible failure scenario; the fail-safe decision is one of the outputs of HAZOP.
@@ -1284,7 +1279,7 @@ Select the fail-safe action for each and justify both locally and globally.
 
 - (b) Default to containment = always erring on the side of not-releasing-anything-bad.
 
-    Memorize the heuristic "protect people first, equipment second, product third."
+Memorize the heuristic "protect people first, equipment second, product third."
 ```
 
 
@@ -1329,10 +1324,10 @@ where $\beta = \Delta P_v / \Delta P_{total}$ at design flow.
 ### Graphical Interpretation: Four Curves on One Plot
 On a standard "flow vs. lift" plot, four curves can be drawn for a given valve and system:
 
-    - Linear inherent: straight line from (0, 0) to (1, $q_{\max}^{inh}$).
-    - Linear installed: concave-down curve  -  starts steep, flattens at high lift.
-    - Equal-pct inherent: convex-up curve  -  starts flat, steepens at high lift.
-    - Equal-pct installed: nearly straight line in the middle range, the curvatures partially cancel.
+- Linear inherent: straight line from (0, 0) to (1, $q_{\max}^{inh}$).
+- Linear installed: concave-down curve  -  starts steep, flattens at high lift.
+- Equal-pct inherent: convex-up curve  -  starts flat, steepens at high lift.
+- Equal-pct installed: nearly straight line in the middle range, the curvatures partially cancel.
 
 The fact that the equal-pct installed curve is the straightest of the four is the central practical reason equal-pct dominates industry use.
 
@@ -1357,28 +1352,28 @@ For the system in the previous worked example ($C_v = 110$, water, design flow 2
 
 - Converged at $q \approx 135$.
 
-    Repeat for $\ell = 0.51, 0.49$ to get gain $\approx 270$ gpm/lift.
+Repeat for $\ell = 0.51, 0.49$ to get gain $\approx 270$ gpm/lift.
 
 - **Linear, $\ell = 0.9$.** $q = 99 \sqrt{10 - 0.03 q}$. Iterate:
 
 
 - Guess $q = 200$: RHS $= 99\sqrt{4} = 198$. Converged.
 
-    Compute gain near $\ell = 0.9$: $\approx 130$ gpm/lift (much smaller).
+Compute gain near $\ell = 0.9$: $\approx 130$ gpm/lift (much smaller).
 
 - **Equal-pct, $\ell = 0.5$, $R = 40$.** $f = 40^{-0.5} = 1/\sqrt{40} = 0.158$. Then $q = 110(0.158)\sqrt{10 - 0.03 q}$:
 
 
 - Iterate around $q = 55$: $q = 17.4\sqrt{10 - 1.65} = 17.4\sqrt{8.35} = 17.4(2.89) = 50.3$. Iterate to convergence $\approx 51$.
 
-    Gain near $\ell = 0.5$: small (because $f$ is small).
+Gain near $\ell = 0.5$: small (because $f$ is small).
 
 - **Equal-pct, $\ell = 0.9$.** $f = 40^{-0.1} = 0.692$. $q = 110(0.692)\sqrt{10 - 0.03 q} = 76.1\sqrt{...}$:
 
 
 - Iterate around $q = 180$: $76.1\sqrt{10 - 5.4} = 76.1\sqrt{4.6} = 163$. Try $q = 165$: $76.1\sqrt{5.05} = 171$. Converged at $\approx 170$.
 
-    Gain near $\ell = 0.9$: large (because $f$ is large and equal-pct has $df/d\ell = f \ln R$).
+Gain near $\ell = 0.9$: large (because $f$ is large and equal-pct has $df/d\ell = f \ln R$).
 
 - **Comparison.** The linear valve's gain *drops* from 270 to 130 across the operating range  -  the loop becomes sluggish at high flow. The equal-pct valve's gain *rises* across the same range  -  but the multiplication by the falling process gain (which usually decreases with throughput) tends to cancel, giving more constant loop gain overall. This is the algebraic statement of the heuristic that equal-pct is preferred in installed conditions.
 ```
@@ -1772,9 +1767,9 @@ $$
 \begin{align}
 
 
-    K_c &= \frac{0.9}{|K|} \frac{\tau}{\theta} = \frac{0.9}{1.5} \frac{2.14}{5.4} = 0.60 \times 0.396 = 0.238 gpm/^\circ F
+K_c &= \frac{0.9}{|K|} \frac{\tau}{\theta} = \frac{0.9}{1.5} \frac{2.14}{5.4} = 0.60 \times 0.396 = 0.238 gpm/^\circ F
 \tau_I &= 3.33 \theta = 3.33 \times 5.4 = 18.0 min
-    \end{align}
+\end{align}
 
 $$
 
@@ -1789,9 +1784,9 @@ $$
 \begin{align}
 
 
-    K_c &= \frac{1}{1.5} \frac{2.14}{5.4} (0.9 + \frac{5.4}{12 \times 2.14}) = 0.667 \times 0.396 \times (0.9 + 0.210) = 0.293 gpm/^\circ F
+K_c &= \frac{1}{1.5} \frac{2.14}{5.4} (0.9 + \frac{5.4}{12 \times 2.14}) = 0.667 \times 0.396 \times (0.9 + 0.210) = 0.293 gpm/^\circ F
 \tau_I &= 5.4 \cdot \frac{30 + 3(2.524)}{9 + 20(2.524)} = 5.4 \cdot \frac{37.57}{59.48} = 5.4 \times 0.632 = 3.41 min
-    \end{align}
+\end{align}
 
 $$
 
@@ -1806,9 +1801,9 @@ $$
 \begin{align}
 
 
-    K_c &= \frac{1}{|K|} \frac{\tau}{\lambda + \theta} = \frac{1}{1.5} \frac{2.14}{2.14 + 5.4} = \frac{1}{1.5} \times 0.284 = 0.189 gpm/^\circ F
+K_c &= \frac{1}{|K|} \frac{\tau}{\lambda + \theta} = \frac{1}{1.5} \frac{2.14}{2.14 + 5.4} = \frac{1}{1.5} \times 0.284 = 0.189 gpm/^\circ F
 \tau_I &= \tau = 2.14 min
-    \end{align}
+\end{align}
 
 $$
 
@@ -1826,7 +1821,7 @@ $$
 
 - IMC gives the smallest $K_c$ and a very fast integral ($\tau_I = \tau$); produces a smooth, no-overshoot response at the cost of speed.
 
-    For a process this delay-dominant, none of these will be snappy  -  consider Smith predictor for dramatically better performance.
+For a process this delay-dominant, none of these will be snappy  -  consider Smith predictor for dramatically better performance.
 
 
 - **Sanity check.** The dimensionless loop gain at the chosen $K_c$ is $|K_c \cdot K| \approx$ 0.36 (ZN), 0.44 (CC), 0.28 (IMC). All are well below 1.0, so the loop is comfortably stable. ZN's value (0.36) is closest to the quarter-decay target gain, consistent with its more aggressive tuning intent.
@@ -1893,7 +1888,7 @@ $$
 2 s (s+1)(s+2) + K_c (2s + 1) = 0
 $$
 
-    Expand:
+Expand:
 
 $$
 2 s (s^2 + 3s + 2) + 2 K_c s + K_c = 2 s^3 + 6 s^2 + 4 s + 2 K_c s + K_c = 2 s^3 + 6 s^2 + (4 + 2 K_c) s + K_c = 0
@@ -1901,7 +1896,7 @@ $$
 
 - **Routh array** for $a_3 s^3 + a_2 s^2 + a_1 s + a_0$ with $a_3 = 2$, $a_2 = 6$, $a_1 = 4 + 2 K_c$, $a_0 = K_c$:
 
-    where $b_1 = [6(4 + 2 K_c) - 2 K_c]/6 = [24 + 12 K_c - 2 K_c]/6 = (24 + 10 K_c)/6$.
+where $b_1 = [6(4 + 2 K_c) - 2 K_c]/6 = [24 + 12 K_c - 2 K_c]/6 = (24 + 10 K_c)/6$.
 ```
 
 
@@ -1915,7 +1910,7 @@ $$
 
 - $K_c > 0$.
 
-    Combining: stability iff $K_c > 0$.
+Combining: stability iff $K_c > 0$.
 
 
 - **Ultimate gain.** As $K_c \to \infty$, all entries stay positive; the loop is stable for any positive $K_c$. (The process by itself is overdamped and has plenty of phase margin; PI control with the chosen $\tau_I = 2$ does not destabilize it.) For a process with more lag (e.g. three first-order in series), there would be a finite $K_u$ at which the loop oscillates.

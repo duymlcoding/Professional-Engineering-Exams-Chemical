@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=8c6b312c" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5d1cebc" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=810ad7a6" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -469,18 +469,16 @@ Design the utility flow rate so the utility temperature change <span class="math
 \[
 Q = m_{cw} c_{p,water} \Delta T_{util}
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Using $c_{p,water} = 4.18$ kJ/(kg$\cdot$K).
-</pre></div>
-</div>
+<p class="sd-card-text">Using <span class="math notranslate nohighlight">\(c_{p,water} = 4.18\)</span> kJ/(kg<span class="math notranslate nohighlight">\(\cdot\)</span>K).</p>
 <ul class="simple">
-<li><p class="sd-card-text">**(a) At <span class="math notranslate nohighlight">\(\Delta T_{util** = 10^\circ\)</span>C:}</p></li>
+<li><p class="sd-card-text"><strong>(a) At <span class="math notranslate nohighlight">\(\Delta T_{util} = 10^\circ\)</span>C:</strong></p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
 m_{cw} = \frac{250}{4.18 \times 10} = \frac{250}{41.8} = 5.98  kg/s = 21{,}500  kg/h
 \]</div>
 <ul class="simple">
-<li><p class="sd-card-text">**(b) At <span class="math notranslate nohighlight">\(\Delta T_{util** = 3^\circ\)</span>C:}</p></li>
+<li><p class="sd-card-text"><strong>(b) At <span class="math notranslate nohighlight">\(\Delta T_{util} = 3^\circ\)</span>C:</strong></p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
@@ -592,7 +590,7 @@ Plate exchangers achieve very large area in small volume by stacking many thin p
 <li><p><strong>Filter by phase change.</strong> Boiling shell-side <span class="math notranslate nohighlight">\(\to\)</span> kettle reboiler. Submerged heating <span class="math notranslate nohighlight">\(\to\)</span> bayonet. Cryogenic multistream <span class="math notranslate nohighlight">\(\to\)</span> plate-and-fin.</p></li>
 <li><p><strong>Filter by viscosity, fouling, corrosivity.</strong> Viscous or slurry <span class="math notranslate nohighlight">\(\to\)</span> scraped-wall or spiral-plate. Highly fouling <span class="math notranslate nohighlight">\(\to\)</span> shell-and-tube (mechanically cleanable). Cleanable plate <span class="math notranslate nohighlight">\(\to\)</span> gasketed plate-and-frame.</p></li>
 <li><p><strong>Filter by temperature/pressure limits.</strong> Plate-and-frame caps at <span class="math notranslate nohighlight">\(\sim\)</span>180<span class="math notranslate nohighlight">\(^\circ\)</span>C, 25 barg. Plate-and-fin caps at moderate pressures, very low T good. Shell-and-tube can handle 600+ barg and -200 to +600<span class="math notranslate nohighlight">\(^\circ\)</span>C with appropriate metallurgy.</p></li>
-<li><p>**Filter by <span class="math notranslate nohighlight">\(\Delta T_{LM**\)</span>.} Above <span class="math notranslate nohighlight">\(\sim\)</span>100<span class="math notranslate nohighlight">\(^\circ\)</span>C in shell-and-tube, switch from fixed-tubesheet to floating-head or U-tube to accommodate differential thermal expansion.</p></li>
+<li><p><strong>Filter by <span class="math notranslate nohighlight">\(\Delta T_{LM}\)</span>.</strong> Above <span class="math notranslate nohighlight">\(\sim\)</span>100<span class="math notranslate nohighlight">\(^\circ\)</span>C in shell-and-tube, switch from fixed-tubesheet to floating-head or U-tube to accommodate differential thermal expansion.</p></li>
 <li><p><strong>Compare lifetime cost</strong> (capital + utility + maintenance + cleaning) of the survivors and pick the cheapest.</p></li>
 </ul>
 </div>
@@ -624,9 +622,7 @@ Plate exchangers achieve very large area in small volume by stacking many thin p
 \[
 dQ = U dA (T_h - T_c) = U dA \Delta T(x)
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Simultaneously, the hot fluid loses energy at the rate $dQ = -m_h c_{p,h} dT_h$ (its temperature drops) and the cold fluid gains energy at the rate $dQ = -m_c c_{p,c} dT_c$ (its temperature rises, but $dT_c &lt; 0$ in the direction of hot flow because cold flows the opposite way).
-</pre></div>
-</div>
+<p class="sd-card-text">Simultaneously, the hot fluid loses energy at the rate <span class="math notranslate nohighlight">\(dQ = -m_h c_{p,h} dT_h\)</span> (its temperature drops) and the cold fluid gains energy at the rate <span class="math notranslate nohighlight">\(dQ = -m_c c_{p,c} dT_c\)</span> (its temperature rises, but <span class="math notranslate nohighlight">\(dT_c &lt; 0\)</span> in the direction of hot flow because cold flows the opposite way).</p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Express <span class="math notranslate nohighlight">\(d(\Delta T)\)</span> in terms of <span class="math notranslate nohighlight">\(dQ\)</span>.</strong> Subtract the two stream balances:</p></li>
 </ul>
@@ -634,9 +630,7 @@ dQ = U dA (T_h - T_c) = U dA \Delta T(x)
 \[
 d(\Delta T) = dT_h - dT_c = -(\frac{1}{m_h c_{p,h}} - \frac{1}{m_c c_{p,c}}) dQ
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Note that for counter-flow with $m_h c_{p,h} = m_c c_{p,c}$, $d(\Delta T) = 0$ and the temperature difference is constant along the exchanger  -  the classic &quot;balanced counter-flow&quot; result.
-</pre></div>
-</div>
+<p class="sd-card-text">Note that for counter-flow with <span class="math notranslate nohighlight">\(m_h c_{p,h} = m_c c_{p,c}\)</span>, <span class="math notranslate nohighlight">\(d(\Delta T) = 0\)</span> and the temperature difference is constant along the exchanger  -  the classic “balanced counter-flow” result.</p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Eliminate <span class="math notranslate nohighlight">\(dQ\)</span> using the rate equation.</strong> Substitute <span class="math notranslate nohighlight">\(dQ = U dA \Delta T\)</span>:</p></li>
 </ul>
@@ -644,9 +638,7 @@ d(\Delta T) = dT_h - dT_c = -(\frac{1}{m_h c_{p,h}} - \frac{1}{m_c c_{p,c}}) dQ
 \[
 \frac{d(\Delta T)}{\Delta T} = -U(\frac{1}{m_h c_{p,h}} - \frac{1}{m_c c_{p,c}}) dA
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The right side is a constant in $A$. Integrate from end 1 (one end of the exchanger, where $\Delta T = \Delta T_1$) to end 2 (the other end, $\Delta T_2$):
-</pre></div>
-</div>
+<p class="sd-card-text">The right side is a constant in <span class="math notranslate nohighlight">\(A\)</span>. Integrate from end 1 (one end of the exchanger, where <span class="math notranslate nohighlight">\(\Delta T = \Delta T_1\)</span>) to end 2 (the other end, <span class="math notranslate nohighlight">\(\Delta T_2\)</span>):</p>
 <div class="math notranslate nohighlight">
 \[
 \ln (\frac{\Delta T_2}{\Delta T_1}) = -U A (\frac{1}{m_h c_{p,h}} - \frac{1}{m_c c_{p,c}})
@@ -658,9 +650,7 @@ d(\Delta T) = dT_h - dT_c = -(\frac{1}{m_h c_{p,h}} - \frac{1}{m_c c_{p,c}}) dQ
 \[
 \frac{1}{m_h c_{p,h}} = \frac{T_{h,in} - T_{h,out}}{Q},   \frac{1}{m_c c_{p,c}} = \frac{T_{c,out} - T_{c,in}}{Q}
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Substituting:
-</pre></div>
-</div>
+<p class="sd-card-text">Substituting:</p>
 <div class="math notranslate nohighlight">
 \[
 \ln (\frac{\Delta T_2}{\Delta T_1}) = -\frac{UA}{Q} [(T_{h,in} - T_{h,out}) - (T_{c,out} - T_{c,in})] = -\frac{UA}{Q} (\Delta T_2 - \Delta T_1)
@@ -676,16 +666,12 @@ d(\Delta T) = dT_h - dT_c = -(\frac{1}{m_h c_{p,h}} - \frac{1}{m_c c_{p,c}}) dQ
 \[
 Q = U A \frac{\Delta T_2 - \Delta T_1}{\ln(\Delta T_2/\Delta T_1)}
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Define the **log-mean temperature difference**:
-</pre></div>
-</div>
+<p class="sd-card-text">Define the <strong>log-mean temperature difference</strong>:</p>
 <div class="math notranslate nohighlight">
 \[
 \Delta T_{LM} = \frac{\Delta T_2 - \Delta T_1}{\ln(\Delta T_2/\Delta T_1)} = \frac{\Delta T_1 - \Delta T_2}{\ln(\Delta T_1/\Delta T_2)}
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Both forms are equivalent (the second is sometimes more intuitive). The final design equation is
-</pre></div>
-</div>
+<p class="sd-card-text">Both forms are equivalent (the second is sometimes more intuitive). The final design equation is</p>
 <div class="math notranslate nohighlight">
 \[
 Q = U A \Delta T_{LM}    (Equation 1, pure counter-flow)
@@ -803,7 +789,7 @@ Q = m c_p \Delta T = (\frac{15{,}000}{3600})(2.5)(110 - 60) = (4.167)(2.5)(50) =
 m_{cw} = \frac{Q}{c_{p,water} \Delta T_{cw}} = \frac{520.9}{(4.18)(15)} = \frac{520.9}{62.7} = 8.31  kg/s = 29{,}900  kg/h
 \]</div>
 <ul class="simple">
-<li><p class="sd-card-text">**<span class="math notranslate nohighlight">\(\Delta T_{LM**\)</span> for counter-flow.} End 1 (cold end): process exits at 60<span class="math notranslate nohighlight">\(^\circ\)</span>C, cooling water enters at 30<span class="math notranslate nohighlight">\(^\circ\)</span>C, so <span class="math notranslate nohighlight">\(\Delta T_1 = 60 - 30 = 30^\circ\)</span>C. End 2 (hot end): process enters at 110<span class="math notranslate nohighlight">\(^\circ\)</span>C, cooling water exits at 45<span class="math notranslate nohighlight">\(^\circ\)</span>C, so <span class="math notranslate nohighlight">\(\Delta T_2 = 110 - 45 = 65^\circ\)</span>C.</p></li>
+<li><p class="sd-card-text"><strong><span class="math notranslate nohighlight">\(\Delta T_{LM}\)</span> for counter-flow.</strong> End 1 (cold end): process exits at 60<span class="math notranslate nohighlight">\(^\circ\)</span>C, cooling water enters at 30<span class="math notranslate nohighlight">\(^\circ\)</span>C, so <span class="math notranslate nohighlight">\(\Delta T_1 = 60 - 30 = 30^\circ\)</span>C. End 2 (hot end): process enters at 110<span class="math notranslate nohighlight">\(^\circ\)</span>C, cooling water exits at 45<span class="math notranslate nohighlight">\(^\circ\)</span>C, so <span class="math notranslate nohighlight">\(\Delta T_2 = 110 - 45 = 65^\circ\)</span>C.</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
@@ -851,9 +837,7 @@ For the same service (process 110\)</span>\to<span class="math notranslate nohig
 \[
 \frac{A_{co}}{A_{counter}} = \frac{\Delta T_{LM,counter}}{\Delta T_{LM,co}} = \frac{45.3}{38.8} = 1.17
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The co-current arrangement needs 17% more area for the same service.
-</pre></div>
-</div>
+<p class="sd-card-text">The co-current arrangement needs 17% more area for the same service.</p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>The deeper limit.</strong> Co-current flow cannot in principle cool the process below the cooling-water outlet temperature  -  if the process target were 35<span class="math notranslate nohighlight">\(^\circ\)</span>C and the cooling-water outlet were 45<span class="math notranslate nohighlight">\(^\circ\)</span>C, the design would be infeasible in co-current and only feasible in counter-flow. <strong>Counter-flow is therefore the default</strong> for any service where the temperature ranges overlap.</p></li>
 <li><p class="sd-card-text"><strong>Verification.</strong> Co-current and counter-current give the same <span class="math notranslate nohighlight">\(\Delta T_{LM}\)</span> if and only if the temperature ranges of the two streams do not overlap (one stream is entirely above the other in temperature). The overlap here is significant (process 60-110<span class="math notranslate nohighlight">\(^\circ\)</span>C, water 30-45<span class="math notranslate nohighlight">\(^\circ\)</span>C), so counter-flow’s advantage is correspondingly large. \checkmark</p></li>
@@ -878,7 +862,7 @@ For the same service (process 110\)</span>\to<span class="math notranslate nohig
 m_{steam} = \frac{Q}{\lambda} = \frac{3{,}500 kW}{2{,}080 kJ/kg} = 1.683 kg/s = 6{,}060 kg/h
 \]</div>
 <ul class="simple">
-<li><p class="sd-card-text">**<span class="math notranslate nohighlight">\(\Delta T_{LM**\)</span> for two isothermal streams.} Both sides are at constant temperature (condensing steam at 158<span class="math notranslate nohighlight">\(^\circ\)</span>C, boiling process at 95<span class="math notranslate nohighlight">\(^\circ\)</span>C), so <span class="math notranslate nohighlight">\(\Delta T_1 = \Delta T_2 = 158 - 95 = 63^\circ\)</span>C. The LMTD degenerates to this constant:</p></li>
+<li><p class="sd-card-text"><strong><span class="math notranslate nohighlight">\(\Delta T_{LM}\)</span> for two isothermal streams.</strong> Both sides are at constant temperature (condensing steam at 158<span class="math notranslate nohighlight">\(^\circ\)</span>C, boiling process at 95<span class="math notranslate nohighlight">\(^\circ\)</span>C), so <span class="math notranslate nohighlight">\(\Delta T_1 = \Delta T_2 = 158 - 95 = 63^\circ\)</span>C. The LMTD degenerates to this constant:</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
@@ -1185,9 +1169,7 @@ A vessel under external pressure (vacuum service) fails by <em>buckling</em>, no
 \[
 \frac{P}{SE} = \frac{250}{17{,}500 \times 1.0} = 0.0143 \ll 0.385  \checkmark
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The hoop equation governs. (If $P/SE &gt; 0.385$, use the thick-wall Lam\&#39;e equations from Sec. VIII Div. 1 Appendix 1-1.)
-</pre></div>
-</div>
+<p class="sd-card-text">The hoop equation governs. (If <span class="math notranslate nohighlight">\(P/SE &gt; 0.385\)</span>, use the thick-wall Lam’e equations from Sec. VIII Div. 1 Appendix 1-1.)</p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Compute pressure-design thickness from the hoop equation.</strong> <span class="math notranslate nohighlight">\(R = 30\)</span> in.</p></li>
 </ul>
@@ -1210,9 +1192,7 @@ t_{total} = t_{pressure} + CA = 0.432 + 0.125 = 0.557 in
 \[
 \sigma_h = \frac{P R}{t - CA} = \frac{(250)(30)}{0.5625 - 0.125} = \frac{7{,}500}{0.4375} = 17{,}143 psi &lt; S = 17{,}500 psi  \checkmark
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The actual stress is just below the allowable  -  a tight but acceptable design. If a manufacturing tolerance reduces the wall thickness slightly, the stress could approach $S$, which is why the standard practice is to specify the next gauge up rather than the calculated minimum.
-</pre></div>
-</div>
+<p class="sd-card-text">The actual stress is just below the allowable  -  a tight but acceptable design. If a manufacturing tolerance reduces the wall thickness slightly, the stress could approach <span class="math notranslate nohighlight">\(S\)</span>, which is why the standard practice is to specify the next gauge up rather than the calculated minimum.</p>
 </div>
 </details></section>
 <section id="heads-and-closures">
@@ -1364,9 +1344,7 @@ NPSH_A = 3.31 + 2.0 - 1.5 = 3.81 m
 \[
 Margin = NPSH_A - NPSH_R = 3.81 - 3.0 = 0.81 m &gt; 0.6 m  \checkmark
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The pump will operate safely without cavitation at the design point.
-</pre></div>
-</div>
+<p class="sd-card-text">The pump will operate safely without cavitation at the design point.</p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Sensitivity check: what if water is heated to 100<span class="math notranslate nohighlight">\(^\circ\)</span>C?</strong> <span class="math notranslate nohighlight">\(P_{vap}\)</span> rises to 101.3 kPa (boiling at atmospheric), so the pressure head term collapses:</p></li>
 </ul>
@@ -1378,9 +1356,7 @@ Margin = NPSH_A - NPSH_R = 3.81 - 3.0 = 0.81 m &gt; 0.6 m  \checkmark
 \[
 NPSH_A = 0 + 2.0 - 1.5 = 0.5 m \ll 3.0 m
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The pump would cavitate immediately. The design has very little thermal headroom  -  a process upset that heats the water by another 10$^\circ$C destroys NPSH$_A$. The fix is to raise the source tank (more $z_s$) or lower the operating temperature.
-</pre></div>
-</div>
+<p class="sd-card-text">The pump would cavitate immediately. The design has very little thermal headroom  -  a process upset that heats the water by another 10<span class="math notranslate nohighlight">\(^\circ\)</span>C destroys NPSH<span class="math notranslate nohighlight">\(_A\)</span>. The fix is to raise the source tank (more <span class="math notranslate nohighlight">\(z_s\)</span>) or lower the operating temperature.</p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Verification.</strong> Hot-water service is the classic cavitation risk: <span class="math notranslate nohighlight">\(P_{vap}\)</span> rises rapidly with <span class="math notranslate nohighlight">\(T\)</span> in the boiling region. The 90<span class="math notranslate nohighlight">\(^\circ\)</span>C operating point is at the edge of acceptability; a safer design would either use a flooded-suction configuration with more elevation or a deaerated, cooler feed.</p></li>
 </ul>

@@ -299,7 +299,7 @@ $$
 \Delta T_1 \equiv T_h^{out} - T_c^{in},   \Delta T_2 \equiv T_h^{in} - T_c^{out}
 $$
 
-    so $\Delta T_1$ is at the "cold end" and $\Delta T_2$ is at the "hot end" of the exchanger.
+so $\Delta T_1$ is at the "cold end" and $\Delta T_2$ is at the "hot end" of the exchanger.
 
 
 - **Energy balances.** For each stream, $Q$ is the duty exchanged:
@@ -311,15 +311,15 @@ $$
 \begin{align}
 
 
-    Q &= CP_h (T_h^{in} - T_h^{out})
+Q &= CP_h (T_h^{in} - T_h^{out})
 Q &= CP_c (T_c^{out} - T_c^{in})
-    \end{align}
+\end{align}
 
 $$
 
 $$
 
-    Rearrange the second:
+Rearrange the second:
 
 $$
 T_c^{out} - T_c^{in} = \frac{Q}{CP_c},   T_h^{in} - T_h^{out} = \frac{Q}{CP_h}
@@ -334,17 +334,17 @@ $$
 \begin{align}
 
 
-    \Delta T_2 - \Delta T_1 &= (T_h^{in} - T_c^{out}) - (T_h^{out} - T_c^{in})
+\Delta T_2 - \Delta T_1 &= (T_h^{in} - T_c^{out}) - (T_h^{out} - T_c^{in})
 &= (T_h^{in} - T_h^{out}) - (T_c^{out} - T_c^{in})
 &= \frac{Q}{CP_h} - \frac{Q}{CP_c}
 &= Q \frac{CP_c - CP_h}{CP_h \cdot CP_c}
-    \end{align}
+\end{align}
 
 $$
 
 $$
 
-- **Apply the pinch constraint $\Delta T \geq \Delta T_{\min**$ on each side.}
+- **Apply the pinch constraint $\Delta T \geq \Delta T_{\min}$ on each side.**
 
 
 - **Above the pinch:** the exchanger's hot end is the pinch, so $\Delta T_2 = \Delta T_{\min}$. Then $\Delta T_1 = \Delta T_{\min} + Q (CP_c - CP_h)/(CP_h CP_c)$. For feasibility we need $\Delta T_1 \geq \Delta T_{\min}$, which requires the extra term to be non-negative:
@@ -422,7 +422,6 @@ Design the above-pinch *and* below-pinch portions of the network.
 - C2: $80 \to 140^\circ$C, $CP = 5$. Required duty $= 5 \times 60 = 300$ kW.
 
 
-
 - **Apply CP rule above pinch ($CP_c \geq CP_h$).**
 
 
@@ -430,7 +429,7 @@ Design the above-pinch *and* below-pinch portions of the network.
 
 - H2 ($CP = 2$): both C1 ($CP = 2$) and C2 ($CP = 5$) qualify (the rule is $\geq$, so $CP_c = CP_h$ is acceptable).
 
-    Therefore the only feasible pinch pairing is **H1-C2** and **H2-C1**.
+Therefore the only feasible pinch pairing is **H1-C2** and **H2-C1**.
 
 
 - **Match H1-C2 and maximize duty.**
@@ -439,13 +438,13 @@ $$
 Q_{H1-C2} = CP_{H1} (T_{H1}^{in} - T_{H1}^{out}) = 3 \times (180 - 90) = 270 kW
 $$
 
-    Check the cold-side response: C2 enters at 80$^\circ$C with $CP = 5$. After receiving 270 kW it would exit at
+Check the cold-side response: C2 enters at 80$^\circ$C with $CP = 5$. After receiving 270 kW it would exit at
 
 $$
 T_{C2}^{out} = 80 + \frac{270}{5} = 134^\circ C
 $$
 
-    Required final temperature of C2 is 140$^\circ$C, so 6$^\circ$C ($= 30$ kW additional duty) still must be supplied. H1 is fully "ticked off" (cooled to its pinch temperature).
+Required final temperature of C2 is 140$^\circ$C, so 6$^\circ$C ($= 30$ kW additional duty) still must be supplied. H1 is fully "ticked off" (cooled to its pinch temperature).
 
 
 - **Match H2-C1 and maximize duty.**
@@ -458,13 +457,13 @@ $$
 Q_{C1, required} = 2 \times (135 - 80) = 110 kW
 $$
 
-    Cold-side is the binding constraint: take $Q = 110$ kW. C1 reaches its target 135$^\circ$C; H2 cools to
+Cold-side is the binding constraint: take $Q = 110$ kW. C1 reaches its target 135$^\circ$C; H2 cools to
 
 $$
 T_{H2}^{out} = 150 - \frac{110}{2} = 95^\circ C
 $$
 
-    H2 stops at 95$^\circ$C, which is 5$^\circ$C above the pinch. The remaining 5 $\times$ 2 = 10 kW of cooling cannot be done above the pinch (no cold utility allowed), so this residual is carried over to the below-pinch sub-problem.
+H2 stops at 95$^\circ$C, which is 5$^\circ$C above the pinch. The remaining 5 $\times$ 2 = 10 kW of cooling cannot be done above the pinch (no cold utility allowed), so this residual is carried over to the below-pinch sub-problem.
 
 
 - **Hot-utility tally above the pinch.**
@@ -476,7 +475,7 @@ $$
 
 - H1 is fully ticked off; H2 has 10 kW residual going below.
 
-    Hot utility used above the pinch: **30 kW.**
+Hot utility used above the pinch: **30 kW.**
 ```
 
 
@@ -493,14 +492,12 @@ $$
 - C2: not present below the pinch (its source temperature is 80$^\circ$C = pinch).
 
 
-
 - **Apply CP rule below pinch ($CP_h \geq CP_c$).**
 
 
 - C1 ($CP = 2$) needs a hot stream with $CP \geq 2$. Both H1 ($CP = 3$) and H2 ($CP = 2$) qualify.
 
 - Choose H1-C1 first (larger $CP$ margin gives more design flexibility).
-
 
 
 - **Match H1-C1 below pinch and maximize.**
@@ -513,21 +510,21 @@ $$
 Q_{C1, below} = 2 \times (80 - 30) = 100 kW
 $$
 
-    Hot-side is binding (H1 has only 90 kW available). Take $Q = 90$ kW. H1 reaches its target 60$^\circ$C; C1 only heats to
+Hot-side is binding (H1 has only 90 kW available). Take $Q = 90$ kW. H1 reaches its target 60$^\circ$C; C1 only heats to
 
 $$
 T_{C1}^{out} = 30 + \frac{90}{2} = 75^\circ C
 $$
 
-    C1 still needs 5$^\circ$C of heating, $= 2 \times 5 = 10$ kW, which we attempt from H2.
+C1 still needs 5$^\circ$C of heating, $= 2 \times 5 = 10$ kW, which we attempt from H2.
 
 
 - **Match H2-C1 (residual) below pinch.**
-    H2 (carrying its 5$^\circ$C above-pinch residual but here treating it as entering the below-pinch zone at 90$^\circ$C with $CP = 2$ and need to cool to 30$^\circ$C, duty 120 kW available) can heat C1 from 75 to 80$^\circ$C: duty $= 2 \times 5 = 10$ kW. H2 cools by $10/2 = 5^\circ$C, leaving it at $90 - 5 = 85^\circ$C still needing to fall to 30$^\circ$C.
+H2 (carrying its 5$^\circ$C above-pinch residual but here treating it as entering the below-pinch zone at 90$^\circ$C with $CP = 2$ and need to cool to 30$^\circ$C, duty 120 kW available) can heat C1 from 75 to 80$^\circ$C: duty $= 2 \times 5 = 10$ kW. H2 cools by $10/2 = 5^\circ$C, leaving it at $90 - 5 = 85^\circ$C still needing to fall to 30$^\circ$C.
 
 
 - **Cold-utility consumption below pinch.**
-    Remaining duty to cool H2 to its target: $2 \times (85 - 30) = 110$ kW. Wait  -  the MER target says we should need only 50 kW of cold utility, not 110. Let me re-examine the network. With the segments accounted as in the transcript:
+Remaining duty to cool H2 to its target: $2 \times (85 - 30) = 110$ kW. Wait  -  the MER target says we should need only 50 kW of cold utility, not 110. Let me re-examine the network. With the segments accounted as in the transcript:
 
 
 - H1 fully cooled to 60$^\circ$C using C1 (90 kW absorbed).
@@ -536,7 +533,7 @@ $$
 
 - H2 then needs to drop from 80 to 30$^\circ$C $= 50^\circ$C $\times$ $CP = 2$ $= $ **100 kW** of additional cold utility.
 
-    Total cold utility: 10 + 100 = 110 kW. The discrepancy with the transcript's value of 50 kW indicates one of two things: either the transcript's MER targets were computed for a slightly different problem (the original lecture used different stream data), or the network is non-optimal as drawn. The pedagogical point holds: the network design is constructed match-by-match, ticking off streams, and the residual goes to utilities.
+Total cold utility: 10 + 100 = 110 kW. The discrepancy with the transcript's value of 50 kW indicates one of two things: either the transcript's MER targets were computed for a slightly different problem (the original lecture used different stream data), or the network is non-optimal as drawn. The pedagogical point holds: the network design is constructed match-by-match, ticking off streams, and the residual goes to utilities.
 
 
 - **Verification by MER target.** For exam problems, the MER targets are normally given. Match the network's utility consumption to the targets; if they agree, the network is optimal. If they differ, you need additional stream splits or a different pairing strategy.
@@ -586,7 +583,7 @@ Compute $Q_{H,\min}$, $Q_{C,\min}$, and the pinch temperatures.
 
 
 ```{dropdown} Solution Steps
-- **Shift cold-stream temperatures up by $\Delta T_{\min**/2$ and hot-stream temperatures down by $\Delta T_{\min}/2 = 5^\circ$C} to align them in a single "interval temperature" axis:
+- **Shift cold-stream temperatures up by $\Delta T_{\min}/2$ and hot-stream temperatures down by $\Delta T_{\min}/2 = 5^\circ$C** to align them in a single "interval temperature" axis:
 
 
 - H1 (shifted): $170 \to 40$.
@@ -598,12 +595,11 @@ Compute $Q_{H,\min}$, $Q_{C,\min}$, and the pinch temperatures.
 - C2: $45 \to 117$.
 
 
-
 - **List unique interval temperatures in descending order.**
-    $\{170, 160, 120, 117, 60, 45, 40, 25\}$
+$\{170, 160, 120, 117, 60, 45, 40, 25\}$
 
 
-- **For each interval, sum $CP_{hot** - CP_{cold}$ for streams present in that interval.} A positive value means surplus heat (more hot capacity than cold); negative means deficit.
+- **For each interval, sum $CP_{hot} - CP_{cold}$ for streams present in that interval.** A positive value means surplus heat (more hot capacity than cold); negative means deficit.
 
 
 - 170-160: only H1 present (cold C1 doesn't reach here). Net $CP = +10$. $\Delta T = 10$. Surplus $= +100$ kW.
@@ -619,7 +615,6 @@ Compute $Q_{H,\min}$, $Q_{C,\min}$, and the pinch temperatures.
 - 45-40: H1 + C1 (H2 done, C2 done? C2 ends at 45 shifted). Need to check: C2 shifted target was 117, source 45. So C2 is in 45-117 only. At 45-40: only H1 and C1. Net $CP = 10 - 20 = -10$. $\Delta T = 5$. Deficit $= -50$ kW.
 
 - 40-25: only C1 present. Net $CP = -20$. $\Delta T = 15$. Deficit $= -300$ kW.
-
 
 
 - **Cascade the surpluses from top to bottom.** Start with 0 at the top, add each interval's signed amount:
@@ -646,7 +641,6 @@ Compute $Q_{H,\min}$, $Q_{C,\min}$, and the pinch temperatures.
 - **Pinch** is where the corrected cascade first reaches zero. That happened at the bottom of the 160-120 interval, i.e. at *interval* temperature 120$^\circ$C. Converting back: hot pinch $= 120 + 5 = 125^\circ$C, cold pinch $= 120 - 5 = 115^\circ$C.
 
 
-
 - **Verification by overall energy balance.**
 
 $$
@@ -657,7 +651,7 @@ $$
 \sum (CP \cdot \Delta T)_{cold} = 20(155-20) + 15(112-40) = 2700 + 1080 = 3780 kW (total cold duty)
 $$
 
-    Difference: $3780 - 3700 = 80$ kW (net deficit of hot, i.e. more cold needs heat than hot provides). Net hot utility minus net cold utility from the cascade: $300 - 220 = 80$ kW. \checkmark The balance closes.
+Difference: $3780 - 3700 = 80$ kW (net deficit of hot, i.e. more cold needs heat than hot provides). Net hot utility minus net cold utility from the cascade: $300 - 220 = 80$ kW. \checkmark The balance closes.
 ```
 
 
@@ -803,7 +797,7 @@ $$
 C_2 = C_1 (\frac{P_2}{P_1})^{0.6} = 8500 (\frac{150}{50})^{0.6} = 8500 \times 3^{0.6}
 $$
 
-- **Compute $3^{0.6**$.} $\log_{10}(3) = 0.4771$, so $0.6 \times 0.4771 = 0.2863$, $10^{0.2863} = 1.933$.
+- **Compute $3^{0.6}$.** $\log_{10}(3) = 0.4771$, so $0.6 \times 0.4771 = 0.2863$, $10^{0.2863} = 1.933$.
 
 - $C_2 = 8500 \times 1.933 = \$16{,}430 \approx \$16{,}400$.
 
@@ -883,7 +877,7 @@ $$
 F = P (1 + i)^n
 $$
 
-    Derivation: after one period, $P$ becomes $P + P i = P(1+i)$. After two, $P(1+i)(1+i) = P(1+i)^2$. By induction, after $n$, $P(1+i)^n$.
+Derivation: after one period, $P$ becomes $P + P i = P(1+i)$. After two, $P(1+i)(1+i) = P(1+i)^2$. By induction, after $n$, $P(1+i)^n$.
 
 
 - **Single-payment present worth $(P/F, i%, n)$.** Inverse of the previous:
@@ -892,7 +886,7 @@ $$
 P = \frac{F}{(1 + i)^n}
 $$
 
-    The future sum $F$ is worth less now because money earns interest in between.
+The future sum $F$ is worth less now because money earns interest in between.
 
 
 - **Uniform-series compound amount $(F/A, i%, n)$.** Sum the future values of each of the $n$ end-of-year payments $A$:
@@ -901,13 +895,13 @@ $$
 F = A + A(1+i) + A(1+i)^2 + ... + A(1+i)^{n-1} = A \sum_{k=0}^{n-1}(1+i)^k
 $$
 
-    The geometric series sums to
+The geometric series sums to
 
 $$
 F = A \cdot \frac{(1+i)^n - 1}{i}
 $$
 
-    Note: the last payment (at the end of period $n$) accrues no interest, the first (end of period 1) accrues $n-1$ periods.
+Note: the last payment (at the end of period $n$) accrues no interest, the first (end of period 1) accrues $n-1$ periods.
 
 
 - **Sinking-fund deposit $(A/F, i%, n)$.** Inverse of the previous:
@@ -916,7 +910,7 @@ $$
 A = F \cdot \frac{i}{(1+i)^n - 1}
 $$
 
-    The annual deposit $A$ needed to accumulate a target $F$ at the end of $n$ years.
+The annual deposit $A$ needed to accumulate a target $F$ at the end of $n$ years.
 ```
 
 
@@ -927,7 +921,7 @@ $$
 A = P (1+i)^n \cdot \frac{i}{(1+i)^n - 1} = P \cdot \frac{i (1+i)^n}{(1+i)^n - 1}
 $$
 
-    The uniform annual payment $A$ that pays off a present principal $P$ in $n$ periods (mortgage-style amortization).
+The uniform annual payment $A$ that pays off a present principal $P$ in $n$ periods (mortgage-style amortization).
 
 
 - **Uniform-series present worth $(P/A, i%, n)$.** Inverse of capital recovery:
@@ -936,7 +930,7 @@ $$
 P = A \cdot \frac{(1+i)^n - 1}{i (1+i)^n}
 $$
 
-    The present worth of $n$ end-of-year payments of $A$.
+The present worth of $n$ end-of-year payments of $A$.
 
 
 - **Special case  -  perpetuity ($n \to \infty$):** $P/A \to 1/i$, so $P = A/i$. The present worth of an infinite uniform series is simply the annual payment divided by the rate. This is the foundation of capitalized-cost analysis below.
@@ -1109,13 +1103,13 @@ $$
 P_{A,maint} = 2{,}000 \cdot \frac{(1.08)^4 - 1}{0.08 \cdot (1.08)^4}
 $$
 
-    Compute $(1.08)^4$: $1.08^2 = 1.1664$, $1.08^4 = 1.1664^2 = 1.3605$. So $[1.3605 - 1]/[0.08 \times 1.3605] = 0.3605/0.10884 = 3.312$.
+Compute $(1.08)^4$: $1.08^2 = 1.1664$, $1.08^4 = 1.1664^2 = 1.3605$. So $[1.3605 - 1]/[0.08 \times 1.3605] = 0.3605/0.10884 = 3.312$.
 
 $$
 P_{A,maint} = 2{,}000 \times 3.312 = \$6{,}624
 $$
 
-    Total "initial cost" for Reactor A:
+Total "initial cost" for Reactor A:
 
 $$
 C_{I,A} = 25{,}000 + 6{,}624 = \$31{,}624
@@ -1143,7 +1137,7 @@ $$
 P_{B,maint} = 4{,}000 \cdot \frac{(1.08)^6 - 1}{0.08 \cdot (1.08)^6}
 $$
 
-    Compute $(1.08)^6$: $1.08^3 = 1.2597$, $1.08^6 = 1.2597^2 = 1.5869$. So $[1.5869 - 1]/[0.08 \times 1.5869] = 0.5869/0.12695 = 4.623$.
+Compute $(1.08)^6$: $1.08^3 = 1.2597$, $1.08^6 = 1.2597^2 = 1.5869$. So $[1.5869 - 1]/[0.08 \times 1.5869] = 0.5869/0.12695 = 4.623$.
 
 $$
 P_{B,maint} = 4{,}000 \times 4.623 = \$18{,}492
@@ -1197,7 +1191,7 @@ Using the same Reactor A and B data, find the interest rate at which the two hav
 
 - $(1.15)^6 = 2.313$. $(P/A, 15, 6) = (1.313)/(0.15 \times 2.313) = 3.784$. $P_{B,maint} = 15{,}140$. $P_{B,ovh} = 3{,}500/1.5209 = 2{,}301$. $C_{I,B} = 32{,}441$. $K_B = 32{,}441 + 32{,}441/1.313 = 32{,}441 + 24{,}710 = \$57{,}150$.
 
-    At $i = 15%$, B is still better.
+At $i = 15%$, B is still better.
 
 - **Try $i = 30%$.**
 
@@ -1206,7 +1200,7 @@ Using the same Reactor A and B data, find the interest rate at which the two hav
 
 - $(1.30)^6 = 4.827$. $(P/A) = 3.827/(0.30 \times 4.827) = 2.643$. $P_{B,maint} = 10{,}572$. $P_{B,ovh} = 3{,}500/2.197 = 1{,}593$. $C_{I,B} = 27{,}165$. $K_B = 27{,}165 + 27{,}165/3.827 = 27{,}165 + 7{,}099 = \$34{,}264$.
 
-    At $i = 30%$, B still wins.
+At $i = 30%$, B still wins.
 
 - **Interpretation.** At very high interest rates, the perpetual replacement term becomes negligible (the future is heavily discounted), and the comparison reduces to "which is cheaper today." B's lower initial purchase keeps it ahead. For this problem, B wins at all realistic interest rates.
 
@@ -1302,20 +1296,19 @@ Same data: A has 4-year life and salvage \$3{,}000, annual maintenance \$2{,}000
 - Year 12: $+3{,}000$ salvage (end of third cycle; no further replacement needed because the horizon ends).
 
 
-
 - **PW of A's annual maintenance (years 1-12).**
 
 $$
 PW_{maint} = -2{,}000 \cdot (P/A, 8, 12)
 $$
 
-    Compute $(P/A, 8, 12) = [(1.08)^{12} - 1]/[0.08 \cdot (1.08)^{12}]$. $(1.08)^{12}$: $(1.08)^4 = 1.3605$, $(1.08)^8 = 1.8509$, $(1.08)^{12} = 1.3605 \times 1.8509 = 2.518$. So $(P/A) = 1.518/(0.08 \times 2.518) = 1.518/0.2014 = 7.536$.
+Compute $(P/A, 8, 12) = [(1.08)^{12} - 1]/[0.08 \cdot (1.08)^{12}]$. $(1.08)^{12}$: $(1.08)^4 = 1.3605$, $(1.08)^8 = 1.8509$, $(1.08)^{12} = 1.3605 \times 1.8509 = 2.518$. So $(P/A) = 1.518/(0.08 \times 2.518) = 1.518/0.2014 = 7.536$.
 
 $$
 PW_{maint} = -2{,}000 \times 7.536 = -\$15{,}072
 $$
 
-- **PW of A's replacements (net $-22{,**000$ at years 4 and 8).}
+- **PW of A's replacements (net $-22{,}000$ at years 4 and 8).**
 
 
 - Year 4: $-22{,}000/(1.08)^4 = -22{,}000/1.3605 = -16{,}170$.
@@ -1323,8 +1316,7 @@ $$
 - Year 8: $-22{,}000/(1.08)^8 = -22{,}000/1.8509 = -11{,}887$.
 
 
-
-- **PW of A's final-year salvage ($+3{,**000$ at year 12).}
+- **PW of A's final-year salvage ($+3{,}000$ at year 12).**
 
 $$
 +3{,}000/(1.08)^{12} = 3{,}000/2.518 = +\$1{,}191
@@ -1356,7 +1348,6 @@ $$
 - Year 12: end of horizon (no more replacement).
 
 
-
 - **PW of B's annual maintenance.**
 
 $$
@@ -1377,14 +1368,13 @@ $$
 - Year 9: $-3{,}500/(1.08)^9 = -3{,}500/1.9990 = -\$1{,}751$.
 
 
-
 - **Total PW for B.**
 
 $$
 PW_B = -15{,}000 - 30{,}144 - 9{,}454 - 2{,}778 - 1{,}751 = -\$59{,}127 \approx -\$59{,}100
 $$
 
-- **Decision.** $|PW_B| < |PW_A|$ (cost \$59{,}100 vs. \$67{,}000); **Reactor B is cheaper in present-worth terms by \$7{,**800}.
+- **Decision.** $|PW_B| < |PW_A|$ (cost \$59{,}100 vs. \$67{,}000); **Reactor B is cheaper in present-worth terms by \$7{,}800**.
 
 
 - **Cross-check.** The capitalized-cost analysis (previous section) also chose B. Two independent methods agreeing is the strongest verification.
@@ -1505,7 +1495,7 @@ $$
 
 - HCl: $\nu = 1$, $M = 36.5$; mass $= 36.5/62.5 = 0.584$ kg/kg VCM.
 
-    **GEP$_1$:**
+**GEP$_1$:**
 
 $$
 
@@ -1514,16 +1504,16 @@ $$
 \begin{align}
 
 
-    GEP_1 &= (1)(0.75) - (0.416)(1.85) - (0.584)(0.30)
+GEP_1 &= (1)(0.75) - (0.416)(1.85) - (0.584)(0.30)
 &= 0.750 - 0.770 - 0.175
 &= -\$0.195  per kg VCM \approx -\$0.20/kg
-    \end{align}
+\end{align}
 
 $$
 
 $$
 
-    **Route 1 is a money loser on raw materials alone. Reject.**
+**Route 1 is a money loser on raw materials alone. Reject.**
 ```
 
 
@@ -1541,7 +1531,7 @@ $$
 
 - HCl byproduct: $36.5/62.5 = 0.584$ kg/kg VCM (\$0.30/kg credit).
 
-    **GEP$_2$:**
+**GEP$_2$:**
 
 $$
 
@@ -1550,22 +1540,22 @@ $$
 \begin{align}
 
 
-    GEP_2 &= (1)(0.75) + (0.584)(0.30) - (0.480)(0.20) - (1.136)(0.25) - (0.256)(0)
+GEP_2 &= (1)(0.75) + (0.584)(0.30) - (0.480)(0.20) - (1.136)(0.25) - (0.256)(0)
 &= 0.750 + 0.175 - 0.096 - 0.284 - 0
 &= +\$0.545  per kg VCM
-    \end{align}
+\end{align}
 
 $$
 
 $$
 
-    **Route 2 is profitable on a raw-material basis; proceeds to the next stage of design.**
+**Route 2 is profitable on a raw-material basis; proceeds to the next stage of design.**
 
 
 - **Verification.** Modern industrial VCM production is overwhelmingly via the ethylene/EDC oxychlorination route (a close cousin of Route 2), confirming the GEP-based selection in practice.
 
 
-- **What GEP does *not** tell you.* A GEP of \$0.545/kg leaves room for utilities (steam, electricity), labor, depreciation, taxes, and a profit margin. As a rule of thumb, 30-70% of GEP is consumed by these downstream costs, so the bottom-line plant margin is often \$0.10-\$0.35/kg.
+- **What GEP does *not* tell you.** A GEP of \$0.545/kg leaves room for utilities (steam, electricity), labor, depreciation, taxes, and a profit margin. As a rule of thumb, 30-70% of GEP is consumed by these downstream costs, so the bottom-line plant margin is often \$0.10-\$0.35/kg.
 ```
 
 
@@ -1586,10 +1576,10 @@ $$
 \begin{align}
 
 
-    GEP &= (1.0)(1.00) + (0.1)(-0.40) - (0.6)(0.50) - (0.5)(0.30)
+GEP &= (1.0)(1.00) + (0.1)(-0.40) - (0.6)(0.50) - (0.5)(0.30)
 &= 1.000 - 0.040 - 0.300 - 0.150
 &= +\$0.510  per kg P
-    \end{align}
+\end{align}
 
 $$
 
@@ -1698,7 +1688,6 @@ A chemical plant is built 2007-2009 with total depreciable capital \$90M (sunk \
 - 2010 onward: operating cash flows per the formula in step 3 below.
 
 
-
 - **MACRS 7-year depreciation schedule of \$90M total.**
 
 
@@ -1724,8 +1713,7 @@ A chemical plant is built 2007-2009 with total depreciable capital \$90M (sunk \
 
 ```{dropdown} Solution Steps
 - **Compute operating cash flow year by year.**
-    Formula: $CF_k = (S_k - C_k - D_k)(1 - 0.40) + D_k = 0.6(S_k - C_k) - 0.6 D_k + D_k = 0.6(S_k - C_k) + 0.4 D_k$.
-
+Formula: $CF_k = (S_k - C_k - D_k)(1 - 0.40) + D_k = 0.6(S_k - C_k) - 0.6 D_k + D_k = 0.6(S_k - C_k) + 0.4 D_k$.
 
 
 - 2010: $S = 75$, $C = 55$, $D = 12.86$. $CF = 0.6(20) + 0.4(12.86) = 12 + 5.14 = 17.14$.
@@ -1756,7 +1744,7 @@ A chemical plant is built 2007-2009 with total depreciable capital \$90M (sunk \
 
 ```{dropdown} Solution Steps
 - **Discount each cash flow back to 2007 at $r = 15%$.**
-    Let the discount factors be $1/(1.15)^k$ where $k$ is years from 2007.
+Let the discount factors be $1/(1.15)^k$ where $k$ is years from 2007.
 
 
 - 2007 ($k=0$): $-30$ / 1 = $-30$.
@@ -1790,16 +1778,15 @@ A chemical plant is built 2007-2009 with total depreciable capital \$90M (sunk \
 - 2021 ($k=14$): $70.00/7.0757 = 9.89$.
 
 
-
 - **Sum to get NPV.**
-    Sum of positives: $11.27 + 17.05 + 18.05 + 14.91 + 12.49 + 10.86 + 9.44 + 7.81 + 6.45 + 5.61 + 4.88 + 9.89 = 128.71$.
-    Sum of negatives: $-30 - 26.09 - 52.93 = -109.02$.
+Sum of positives: $11.27 + 17.05 + 18.05 + 14.91 + 12.49 + 10.86 + 9.44 + 7.81 + 6.45 + 5.61 + 4.88 + 9.89 = 128.71$.
+Sum of negatives: $-30 - 26.09 - 52.93 = -109.02$.
 
 $$
 NPV = 128.71 - 109.02 \approx +\$19.7  M
 $$
 
-    (The transcript's quoted NPV is +\$21.4M; small differences arise from the exact MACRS percentages used and from rounding. The signed result and order of magnitude match.)
+(The transcript's quoted NPV is +\$21.4M; small differences arise from the exact MACRS percentages used and from rounding. The signed result and order of magnitude match.)
 
 
 - **Cumulative discounted cash flow plot.** Tracking the running sum from 2007 onward, the cumulative crosses zero somewhere in 2018  -  this is the **discounted payback period**, $\approx$ 11 years.

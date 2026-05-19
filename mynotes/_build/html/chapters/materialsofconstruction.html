@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=8c6b312c" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5d1cebc" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=810ad7a6" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -520,8 +520,8 @@ The numbers populating the materials handbooks come from a standardized tensile 
 <p>For tensile or compressive uniaxial loading:</p>
 <div class="math notranslate nohighlight">
 \[\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-505fc59b-8476-40c9-914e-67e0846e677c">
-<span class="eqno">(17)<a class="headerlink" href="#equation-505fc59b-8476-40c9-914e-67e0846e677c" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-b34bc2ff-dfed-4611-a3e2-b127359eab01">
+<span class="eqno">(17)<a class="headerlink" href="#equation-b34bc2ff-dfed-4611-a3e2-b127359eab01" title="Permalink to this equation">#</a></span>\[\begin{align}
 
 
 \sigma &amp;= \frac{F}{A_0} = \frac{F}{\pi (d_0/2)^2}  (round cross-section)
@@ -551,9 +551,7 @@ The numbers populating the materials handbooks come from a standardized tensile 
 \[
 A_0 = \pi(\frac{d_0}{2})^2 = \pi(\frac{9.6 \times 10^{-3}}{2})^2 = \pi (4.8 \times 10^{-3})^2
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Step the algebra: $(4.8 \times 10^{-3})^2 = 23.04 \times 10^{-6} = 2.304 \times 10^{-5}$ m$^2$.
-</pre></div>
-</div>
+<p class="sd-card-text">Step the algebra: <span class="math notranslate nohighlight">\((4.8 \times 10^{-3})^2 = 23.04 \times 10^{-6} = 2.304 \times 10^{-5}\)</span> m<span class="math notranslate nohighlight">\(^2\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[
 A_0 = \pi \times 2.304 \times 10^{-5} = 7.238 \times 10^{-5} m^2
@@ -565,9 +563,7 @@ A_0 = \pi \times 2.304 \times 10^{-5} = 7.238 \times 10^{-5} m^2
 \[
 \sigma = \frac{F}{A_0} = \frac{18{,}000 N}{7.238 \times 10^{-5} m^2} = 2.488 \times 10^{8} Pa = 248.8 MPa \approx 249 MPa
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Quick double-check via the mm$^2$ shortcut: $A_0 [mm^2] = \pi (4.8)^2 = 72.38$ mm$^2$. $\sigma = 18{,}000/72.38 = 248.7$ MPa. \checkmark Same answer.
-</pre></div>
-</div>
+<p class="sd-card-text">Quick double-check via the mm<span class="math notranslate nohighlight">\(^2\)</span> shortcut: <span class="math notranslate nohighlight">\(A_0 [mm^2] = \pi (4.8)^2 = 72.38\)</span> mm<span class="math notranslate nohighlight">\(^2\)</span>. <span class="math notranslate nohighlight">\(\sigma = 18{,}000/72.38 = 248.7\)</span> MPa. \checkmark Same answer.</p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Engineering strain.</strong></p></li>
 </ul>
@@ -575,9 +571,7 @@ A_0 = \pi \times 2.304 \times 10^{-5} = 7.238 \times 10^{-5} m^2
 \[
 \varepsilon = \frac{L_i - L_0}{L_0} = \frac{401.5 - 400.0}{400.0} = \frac{1.5}{400.0} = 0.00375
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Dimensionless. Often expressed as 0.375%.
-</pre></div>
-</div>
+<p class="sd-card-text">Dimensionless. Often expressed as 0.375%.</p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Elastic-region check.</strong> The applied stress 249 MPa is just below the yield strength 250 MPa  -  the specimen is at the very edge of elastic behavior. Any small additional load would induce permanent (plastic) deformation. A safety factor for design (typically <span class="math notranslate nohighlight">\(\sigma_{design} = \sigma_y / N\)</span> with <span class="math notranslate nohighlight">\(N = 2\)</span>-<span class="math notranslate nohighlight">\(4\)</span>) would have flagged this load level long before yield. The strain <span class="math notranslate nohighlight">\(\varepsilon = 0.00375\)</span> is also consistent with elastic behavior in steel (<span class="math notranslate nohighlight">\(\varepsilon_y \approx \sigma_y / E = 250/207000 \approx 0.0012\)</span> in pure elastic; here at 0.00375 the specimen has crossed slightly into the plastic regime if we trust the 250 MPa yield estimate). The numbers sit on the boundary.</p></li>
 <li><p class="sd-card-text"><strong>Verification.</strong> 249 MPa is a plausible value for a moderately-loaded steel specimen. The strain <span class="math notranslate nohighlight">\(3.75 \times 10^{-3}\)</span> is small (typical of elastic-region tensile tests); a strain in the percent range would indicate plastic deformation. The fact that <span class="math notranslate nohighlight">\(\varepsilon &lt; 0.01\)</span> supports the conclusion that the specimen is still near its elastic limit.</p></li>
@@ -775,9 +769,7 @@ U_r = \int_0^{\varepsilon_y} \sigma d\varepsilon = \frac{1}{2}\sigma_y \varepsil
 \[
 E = \frac{\sigma}{\varepsilon} = \frac{200 MPa}{0.001} = 200{,}000 MPa = 200 GPa
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Consistent with typical steel.
-</pre></div>
-</div>
+<p class="sd-card-text">Consistent with typical steel.</p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Yield strain (elastic limit).</strong></p></li>
 </ul>
@@ -792,9 +784,7 @@ E = \frac{\sigma}{\varepsilon} = \frac{200 MPa}{0.001} = 200{,}000 MPa = 200 GPa
 \[
 U_r = \frac{\sigma_y^2}{2E} = \frac{(415)^2}{2 \times 200{,}000} = \frac{172{,}225}{400{,}000} = 0.431 MPa = 0.431 MJ/m^3
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Recall that MPa = MJ/m$^3$ when interpreting strain-energy density.
-</pre></div>
-</div>
+<p class="sd-card-text">Recall that MPa = MJ/m<span class="math notranslate nohighlight">\(^3\)</span> when interpreting strain-energy density.</p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Modulus of toughness (approximate, triangle + rectangle).</strong> A reasonable approximation treats the curve as an elastic triangle plus a plastic rectangle from <span class="math notranslate nohighlight">\(\sigma_y\)</span> to <span class="math notranslate nohighlight">\(\sigma_u\)</span> over the plastic strain range. Use the mean stress <span class="math notranslate nohighlight">\((\sigma_y + \sigma_u)/2 = (415 + 500)/2 = 457.5\)</span> MPa across plastic strain <span class="math notranslate nohighlight">\(\varepsilon_p \approx 0.18 - 0.002 = 0.178\)</span>.</p></li>
 </ul>
@@ -802,9 +792,7 @@ U_r = \frac{\sigma_y^2}{2E} = \frac{(415)^2}{2 \times 200{,}000} = \frac{172{,}2
 \[
 U_T \approx U_r + 457.5 \times 0.178 = 0.43 + 81.4 = 81.8 MJ/m^3
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Toughness is dominated by the plastic-region area; resilience is a tiny fraction. This is why ductile materials are so much tougher than brittle ones  -  the plastic region is where energy is absorbed.
-</pre></div>
-</div>
+<p class="sd-card-text">Toughness is dominated by the plastic-region area; resilience is a tiny fraction. This is why ductile materials are so much tougher than brittle ones  -  the plastic region is where energy is absorbed.</p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Elastic strain at fracture.</strong></p></li>
 </ul>
@@ -823,9 +811,7 @@ U_T \approx U_r + 457.5 \times 0.178 = 0.43 + 81.4 = 81.8 MJ/m^3
 \[
 \varepsilon_{p,frac} = \varepsilon_f - \varepsilon_{e,frac} = 0.18 - 0.00190 = 0.178 = 17.8%
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The specimen&#39;s permanent elongation if recovered just before fracture would be 17.8%. This is the value typically quoted as &quot;% elongation at fracture&quot; on a material data sheet.
-</pre></div>
-</div>
+<p class="sd-card-text">The specimen’s permanent elongation if recovered just before fracture would be 17.8%. This is the value typically quoted as “% elongation at fracture” on a material data sheet.</p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Ductility interpretation.</strong> 17.8% elongation places this material firmly in the ductile-metal category. Brittle materials fail at <span class="math notranslate nohighlight">\(\varepsilon_f &lt; 1%\)</span>; ductile metals are typically 10-40%; very ductile (annealed copper, pure aluminum) can reach 50-60%.</p></li>
 <li><p class="sd-card-text"><strong>Verification.</strong> The UTS (500 MPa) exceeds the fracture stress (380 MPa)  -  consistent with engineering-stress-curve behavior past necking. The yield strain <span class="math notranslate nohighlight">\(2.1 \times 10^{-3}\)</span> matches the textbook value for steel (<span class="math notranslate nohighlight">\(\sim\)</span>0.2%). The strain-energy interpretation (MPa = MJ/m<span class="math notranslate nohighlight">\(^3\)</span>) is dimensionally sound: Pa <span class="math notranslate nohighlight">\(\times\)</span> m/m = J/m<span class="math notranslate nohighlight">\(^3\)</span>.</p></li>
@@ -926,9 +912,7 @@ Yield occurs when the equivalent (von Mises) stress reaches the uniaxial yield s
 \[
 \sigma_h = \frac{PR}{t} = \frac{P \times 300}{10} = 30 P,   \sigma_\ell = \frac{PR}{2t} = 15 P,   \sigma_r \approx 0
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>(with $P$ in MPa and $\sigma$ in MPa). So $\sigma_1 = 30P, \sigma_2 = 15P, \sigma_3 = 0$.
-</pre></div>
-</div>
+<p class="sd-card-text">(with <span class="math notranslate nohighlight">\(P\)</span> in MPa and <span class="math notranslate nohighlight">\(\sigma\)</span> in MPa). So <span class="math notranslate nohighlight">\(\sigma_1 = 30P, \sigma_2 = 15P, \sigma_3 = 0\)</span>.</p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>(a) Tresca criterion.</strong></p></li>
 </ul>
@@ -1031,14 +1015,15 @@ A_0 = \pi(d/2)^2 = \pi(0.005)^2 = 7.854 \times 10^{-5} m^2 = 78.54 mm^2
 \[
 \sigma = \frac{F}{A_0} = \frac{24{,}500 N}{78.54 mm^2} = 312 MPa
 \]</div>
-<ul>
+<ul class="simple">
 <li><p class="sd-card-text"><strong>Apply Filter 1: yield strength <span class="math notranslate nohighlight">\(&gt; \)</span> applied stress (312 MPa).</strong></p></li>
 <li><p class="sd-card-text">Aluminum 1100: 35 MPa <span class="math notranslate nohighlight">\(&lt; \)</span> 312. <strong>Reject.</strong></p></li>
 <li><p class="sd-card-text">Copper (annealed): 70 MPa <span class="math notranslate nohighlight">\(&lt;\)</span> 312. <strong>Reject.</strong></p></li>
 <li><p class="sd-card-text">Brass: 345 MPa <span class="math notranslate nohighlight">\(&gt;\)</span> 312. Pass.</p></li>
-<li><p class="sd-card-text">Steel: 450 MPa <span class="math notranslate nohighlight">\(&gt;\)</span> 312. Pass.</p>
+<li><p class="sd-card-text">Steel: 450 MPa <span class="math notranslate nohighlight">\(&gt;\)</span> 312. Pass.</p></li>
+</ul>
 <p class="sd-card-text">Survivors: brass and steel.</p>
-</li>
+<ul class="simple">
 <li><p class="sd-card-text"><strong>Apply Filter 2: elongation under load <span class="math notranslate nohighlight">\(&lt; 0.9\)</span> mm.</strong> Use <span class="math notranslate nohighlight">\(\Delta L = \sigma L_0/E\)</span>.</p></li>
 <li><p class="sd-card-text">Brass: <span class="math notranslate nohighlight">\(\Delta L = (312)(380)/(100{,}000) = 1.186\)</span> mm <span class="math notranslate nohighlight">\(&gt; 0.9\)</span>. <strong>Reject.</strong></p></li>
 <li><p class="sd-card-text">Steel: <span class="math notranslate nohighlight">\(\Delta L = (312)(380)/(207{,}000) = 0.573\)</span> mm <span class="math notranslate nohighlight">\(&lt; 0.9\)</span>. Pass.</p></li>
@@ -1072,17 +1057,16 @@ A_0 = \pi(d/2)^2 = \pi(0.005)^2 = 7.854 \times 10^{-5} m^2 = 78.54 mm^2
 \[
 m = \rho A L_0 \geq \rho L_0 \cdot \frac{F L_0}{E \Delta L_{\max}} = \frac{F L_0^2}{\Delta L_{\max}} \frac{\rho}{E}
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Everything inside the second-to-last fraction is a design constant. The only material-dependent factor is $\rho/E$. **Minimum mass** corresponds to **minimum $\rho/E$**, or equivalently **maximum $E/\rho$**.
-</pre></div>
-</div>
-<ul>
+<p class="sd-card-text">Everything inside the second-to-last fraction is a design constant. The only material-dependent factor is <span class="math notranslate nohighlight">\(\rho/E\)</span>. <strong>Minimum mass</strong> corresponds to <strong>minimum <span class="math notranslate nohighlight">\(\rho/E\)</span></strong>, or equivalently <strong>maximum <span class="math notranslate nohighlight">\(E/\rho\)</span></strong>.</p>
+<ul class="simple">
 <li><p class="sd-card-text"><strong>The material index.</strong> <span class="math notranslate nohighlight">\(M = E/\rho\)</span> is the <strong>Ashby material index</strong> for “stiffness-limited tensile rod at minimum mass.” Tabulated <span class="math notranslate nohighlight">\(E/\rho\)</span> ratios:</p></li>
 <li><p class="sd-card-text">Steel: <span class="math notranslate nohighlight">\(E/\rho = 207/7.85 \approx 26\)</span> GPa<span class="math notranslate nohighlight">\(\cdot\)</span>cm<span class="math notranslate nohighlight">\(^3\)</span>/g.</p></li>
 <li><p class="sd-card-text">Aluminum 6061: <span class="math notranslate nohighlight">\(70/2.7 \approx 26\)</span>.</p></li>
 <li><p class="sd-card-text">Titanium: <span class="math notranslate nohighlight">\(114/4.5 \approx 25\)</span>.</p></li>
-<li><p class="sd-card-text">CFRP (carbon-fiber composite, along fiber): <span class="math notranslate nohighlight">\(\sim\)</span>70.</p>
+<li><p class="sd-card-text">CFRP (carbon-fiber composite, along fiber): <span class="math notranslate nohighlight">\(\sim\)</span>70.</p></li>
+</ul>
 <p class="sd-card-text">Notice that steel, aluminum, and titanium have nearly the same <span class="math notranslate nohighlight">\(E/\rho\)</span>  -  for stiffness-limited tensile rods at minimum mass, the choice between them is a wash on this criterion. CFRP wins decisively.</p>
-</li>
+<ul class="simple">
 <li><p class="sd-card-text"><strong>Verification.</strong> For <em>strength</em>-limited tensile design at minimum mass, the same derivation with <span class="math notranslate nohighlight">\(\sigma_y\)</span> instead of <span class="math notranslate nohighlight">\(E\)</span> gives <span class="math notranslate nohighlight">\(M = \sigma_y/\rho\)</span> (“specific strength”), where the rankings differ from the stiffness case  -  high-strength steels and titanium become attractive.</p></li>
 <li><p class="sd-card-text"><strong>Pedagogical note.</strong> The Ashby approach generalizes the two-filter selection to multi-criteria optimization: tabulate the relevant material index for each constraint, plot materials on <span class="math notranslate nohighlight">\(E\)</span>-<span class="math notranslate nohighlight">\(\rho\)</span> or <span class="math notranslate nohighlight">\(\sigma_y\)</span>-<span class="math notranslate nohighlight">\(\rho\)</span> charts, and identify a Pareto-optimal subset. The PE exam doesn’t test the formalism but does test the spirit: strength and stiffness drive different decisions.</p></li>
 </ul>
@@ -1114,9 +1098,7 @@ m = \rho A L_0 \geq \rho L_0 \cdot \frac{F L_0}{E \Delta L_{\max}} = \frac{F L_0
 \[
 \sigma_y = \sigma_0 + k_y \cdot d^{-1/2}
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>where $d$ is the average grain diameter, $\sigma_0$ is the lattice-friction stress, and $k_y$ is the Hall-Petch coefficient (material-specific). Doubling the grain size raises $\sigma_y$ by a factor of $\sqrt{2}$.
-</pre></div>
-</div>
+<p>where <span class="math notranslate nohighlight">\(d\)</span> is the average grain diameter, <span class="math notranslate nohighlight">\(\sigma_0\)</span> is the lattice-friction stress, and <span class="math notranslate nohighlight">\(k_y\)</span> is the Hall-Petch coefficient (material-specific). Doubling the grain size raises <span class="math notranslate nohighlight">\(\sigma_y\)</span> by a factor of <span class="math notranslate nohighlight">\(\sqrt{2}\)</span>.</p>
 <ul class="simple">
 <li><p><strong>Solid-solution strengthening.</strong> Foreign atoms (substitutional or interstitial) in the lattice produce local distortions that impede dislocations. Carbon in iron, nickel in copper, zinc in copper (brass). Yield strength rises roughly as the square root of solute concentration.</p></li>
 <li><p><strong>Strain-hardening (cold work).</strong> Plastic deformation introduces new dislocations; the dislocation density rises and they tangle, impeding further motion. The yield strength after cold work approximately equals the stress at which the cold work was applied. Cold-rolled, drawn, or forged products show elevated <span class="math notranslate nohighlight">\(\sigma_y\)</span> vs. annealed.</p></li>
@@ -1231,9 +1213,7 @@ LMP = T(C + \log t_r)  \Longrightarrow  \log t_r = \frac{LMP}{T} - C
 \[
 t_r = 10^{-1.24} = 0.058 hours = 3.5 minutes
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The tube ruptures in about 3.5 minutes. *Not* the design life  -  the LMP curve was either misread or the chosen stress/temperature combination is well outside the design envelope.
-</pre></div>
-</div>
+<p class="sd-card-text">The tube ruptures in about 3.5 minutes. <em>Not</em> the design life  -  the LMP curve was either misread or the chosen stress/temperature combination is well outside the design envelope.</p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Lesson on LMP interpretation.</strong> A reformer tube designed for 100{,}000-hour life at 900<span class="math notranslate nohighlight">\(^\circ\)</span>C requires</p></li>
 </ul>
@@ -1241,9 +1221,7 @@ t_r = 10^{-1.24} = 0.058 hours = 3.5 minutes
 \[
 LMP_{design} = 1173 \times (20 + \log 100{,}000) = 1173 \times 25 = 29{,}325
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Reading the material&#39;s master curve at LMP = 29{,}325 gives the maximum allowable design stress  -  typically 5-10 MPa for 100{,}000-hour life on Inconel 800H or HK-40 alloy. The 25 MPa in this example exceeds the allowable, hence the very short life.
-</pre></div>
-</div>
+<p class="sd-card-text">Reading the material’s master curve at LMP = 29{,}325 gives the maximum allowable design stress  -  typically 5-10 MPa for 100{,}000-hour life on Inconel 800H or HK-40 alloy. The 25 MPa in this example exceeds the allowable, hence the very short life.</p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Verification.</strong> LMP is sensitive: a 100<span class="math notranslate nohighlight">\(^\circ\)</span>C temperature reduction (from 1173 to 1073 K) at constant LMP raises <span class="math notranslate nohighlight">\(t_r\)</span> by <span class="math notranslate nohighlight">\(10^{(22000/1073 - 22000/1173)} = 10^{1.73} \approx 54\times\)</span>. Conversely, a 100<span class="math notranslate nohighlight">\(^\circ\)</span>C overtemperature reduces life by the same factor. This Arrhenius sensitivity is why creep-limited equipment is so unforgiving of process upsets.</p></li>
 </ul>
@@ -1338,9 +1316,7 @@ Aqueous corrosion of a metal is a redox process consisting of two coupled half-r
 \[
 \mathrm{O_2 + 2 H_2O + 4 e^- \rightarrow 4 OH^-}
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>In acid:
-</pre></div>
-</div>
+<p>In acid:</p>
 <div class="math notranslate nohighlight">
 \[
 \mathrm{2H^+ + 2e^- \rightarrow H_2}
@@ -1456,9 +1432,7 @@ CR = \frac{534 W}{\rho A t} = \frac{534 \times 120}{7.9 \times 8 \times 720} = \
 \[
 Loss_{20 yr} = 1.41 mpy \times 20 yr = 28 mils = 0.71 mm
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>This must be added as a corrosion allowance on top of the pressure-design wall thickness. Standard CA values: 1/16 in (1.6 mm), 1/8 in (3.2 mm), 1/4 in (6.4 mm). The 20-year loss (0.7 mm) easily fits inside a 1/16-in CA.
-</pre></div>
-</div>
+<p class="sd-card-text">This must be added as a corrosion allowance on top of the pressure-design wall thickness. Standard CA values: 1/16 in (1.6 mm), 1/8 in (3.2 mm), 1/4 in (6.4 mm). The 20-year loss (0.7 mm) easily fits inside a 1/16-in CA.</p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Important caveats.</strong></p></li>
 <li><p class="sd-card-text"><em>Concentration and temperature matter strongly.</em> For 304 SS in H<span class="math notranslate nohighlight">\(_2\)</span>SO<span class="math notranslate nohighlight">\(_4\)</span>, the corrosion rate rises sharply above <span class="math notranslate nohighlight">\(\sim\)</span>50<span class="math notranslate nohighlight">\(^\circ\)</span>C or at concentrations above <span class="math notranslate nohighlight">\(\sim\)</span>80 wt%. The 1.41 mpy assumes the coupon-test conditions match the design conditions.</p></li>
@@ -1508,9 +1482,7 @@ Loss_{20 yr} = 1.41 mpy \times 20 yr = 28 mils = 0.71 mm
 \[
 PREN = %Cr + 3.3 \times %Mo + 16 \times %N
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>304: PREN $\approx 19$. 316: $\approx 25$. 2205: $\approx 35$. SAF 2507 super-duplex: $\approx 42$. Higher PREN = better pitting resistance.
-</pre></div>
-</div>
+<p>304: PREN <span class="math notranslate nohighlight">\(\approx 19\)</span>. 316: <span class="math notranslate nohighlight">\(\approx 25\)</span>. 2205: <span class="math notranslate nohighlight">\(\approx 35\)</span>. SAF 2507 super-duplex: <span class="math notranslate nohighlight">\(\approx 42\)</span>. Higher PREN = better pitting resistance.</p>
 </div>
 </section>
 <section id="crevice-corrosion">
@@ -1805,39 +1777,38 @@ ASME Sec. VIII Div. 1 Table UCS-56 mandates PWHT when wall thickness exceeds mat
 </div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<ul>
-<li><p class="sd-card-text"><strong>Apply the materials-selection algorithm.</strong></p>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Apply the materials-selection algorithm.</strong></p></li>
+</ul>
 <p class="sd-card-text"><strong>Step 1.1  -  Temperature.</strong> 200<span class="math notranslate nohighlight">\(^\circ\)</span>C design (90<span class="math notranslate nohighlight">\(^\circ\)</span>C process); within CS continuous-service envelope (<span class="math notranslate nohighlight">\(&lt; 425^\circ\)</span>C).</p>
 <p class="sd-card-text"><strong>Step 1.2  -  Chemistry screening.</strong></p>
-</li>
+<ul class="simple">
 <li><p class="sd-card-text">Dilute HCl: carbon steel attacked rapidly  -  reject CS.</p></li>
 <li><p class="sd-card-text">304 SS: HCl is reducing-acid service; the chloride content drives both general corrosion and pitting  -  reject 304 SS.</p></li>
 <li><p class="sd-card-text">316 SS: better than 304 but the trace H<span class="math notranslate nohighlight">\(_2\)</span>O<span class="math notranslate nohighlight">\(_2\)</span> creates oxidizing-acid conditions that can still cause pitting. Marginal at best  -  reject as the primary material.</p></li>
 <li><p class="sd-card-text">Hastelloy C-276: handles hot HCl with oxidizing contaminants; routine FGD service. <em>Candidate.</em></p></li>
 <li><p class="sd-card-text">Glass-lined CS: handles dilute HCl below 70<span class="math notranslate nohighlight">\(^\circ\)</span>C without issues; at 90<span class="math notranslate nohighlight">\(^\circ\)</span>C marginal; thermal-shock risk in a stirred reactor. Possible but not preferred.</p></li>
-<li><p class="sd-card-text">Titanium Gr 2: rapidly attacked by reducing HCl  -  reject.</p>
+<li><p class="sd-card-text">Titanium Gr 2: rapidly attacked by reducing HCl  -  reject.</p></li>
+</ul>
 <p class="sd-card-text"><strong>Step 1.3  -  Cost.</strong> Hastelloy C-276 solid plate is very expensive (15-20<span class="math notranslate nohighlight">\(\times\)</span> CS). <strong>Cladded construction</strong> (CS base + 3 mm C-276 cladding on the process side) cuts cost to <span class="math notranslate nohighlight">\(\sim\)</span>7-10<span class="math notranslate nohighlight">\(\times\)</span> CS while preserving the C-276 corrosion resistance.</p>
 <p class="sd-card-text"><strong>Selection: Hastelloy C-276 clad on A516-70 CS plate.</strong></p>
-</li>
+<ul class="simple">
 <li><p class="sd-card-text"><strong>Corrosion allowance.</strong> The clad layer is the corrosion barrier; the CS substrate is structural. A 3 mm clad gives a corrosion allowance of 3 mm specifically on the clad layer. If C-276 corrodes at <span class="math notranslate nohighlight">\(&lt; 2\)</span> mpy (0.05 mm/yr) in this service, the 3 mm clad lasts <span class="math notranslate nohighlight">\(&gt; 60\)</span> years  -  comfortably beyond the 20-year requirement. <strong>Inspection schedule:</strong> verify clad integrity every 5 years via UT or visual entry.</p></li>
 </ul>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<ul>
-<li><p class="sd-card-text"><strong>Wall thickness from ASME Sec. VIII Div. 1.</strong> The structural CS substrate must withstand the design pressure. At 200<span class="math notranslate nohighlight">\(^\circ\)</span>C, A516-70 has <span class="math notranslate nohighlight">\(S = 19{,}800\)</span> psi (from ASME Sec. II Part D table; the room-temp value 25{,}000 psi is reduced at elevated temp).</p>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Wall thickness from ASME Sec. VIII Div. 1.</strong> The structural CS substrate must withstand the design pressure. At 200<span class="math notranslate nohighlight">\(^\circ\)</span>C, A516-70 has <span class="math notranslate nohighlight">\(S = 19{,}800\)</span> psi (from ASME Sec. II Part D table; the room-temp value 25{,}000 psi is reduced at elevated temp).</p></li>
+</ul>
 <p class="sd-card-text">Convert design pressure: 12 barg <span class="math notranslate nohighlight">\(= 174\)</span> psig. ID <span class="math notranslate nohighlight">\(= 3\)</span> m <span class="math notranslate nohighlight">\(= 118\)</span> in, so <span class="math notranslate nohighlight">\(R = 59\)</span> in.</p>
 <p class="sd-card-text">Check thin-wall: <span class="math notranslate nohighlight">\(P/(SE)\)</span> with <span class="math notranslate nohighlight">\(E = 1.0\)</span> (fully radiographed weld assumed):</p>
-</li>
-</ul>
 <div class="math notranslate nohighlight">
 \[
 \frac{174}{19{,}800 \times 1.0} = 0.0088 \ll 0.385  \checkmark
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Hoop equation governs:
-</pre></div>
-</div>
+<p class="sd-card-text">Hoop equation governs:</p>
 <div class="math notranslate nohighlight">
 \[
 t_{pressure} = \frac{P R}{S E - 0.6 P} = \frac{(174)(59)}{(19{,}800)(1.0) - (0.6)(174)} = \frac{10{,}266}{19{,}696} = 0.521 in
@@ -1849,9 +1820,7 @@ t_{pressure} = \frac{P R}{S E - 0.6 P} = \frac{(174)(59)}{(19{,}800)(1.0) - (0.6
 \[
 t_{total} = t_{pressure} + t_{clad} = 0.521 + 0.118 = 0.639 in (clad = 3  mm = 0.118  in)
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Some codes also require a corrosion allowance on the structural CS substrate in case the clad fails locally; conservative practice adds 1/16 in (0.0625 in) for this:
-</pre></div>
-</div>
+<p class="sd-card-text">Some codes also require a corrosion allowance on the structural CS substrate in case the clad fails locally; conservative practice adds 1/16 in (0.0625 in) for this:</p>
 <div class="math notranslate nohighlight">
 \[
 t_{final} = 0.521 + 0.0625 + 0.118 = 0.702 in
@@ -1864,9 +1833,7 @@ t_{final} = 0.521 + 0.0625 + 0.118 = 0.702 in
 \[
 \sigma_h = \frac{PR}{t_{struct}} = \frac{(174)(59)}{0.5695} = 18{,}030 psi &lt; S = 19{,}800 psi \checkmark
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The selection satisfies all constraints: pressure (Sec. VIII), corrosion (Hastelloy in dilute oxidizing HCl), cost (cladded construction saves $\sim$60% over solid C-276), and service life (60+ years on the clad layer for a 20-year requirement).
-</pre></div>
-</div>
+<p class="sd-card-text">The selection satisfies all constraints: pressure (Sec. VIII), corrosion (Hastelloy in dilute oxidizing HCl), cost (cladded construction saves <span class="math notranslate nohighlight">\(\sim\)</span>60% over solid C-276), and service life (60+ years on the clad layer for a 20-year requirement).</p>
 </div>
 </details><div class="admonition note">
 <p class="admonition-title">Note</p>
