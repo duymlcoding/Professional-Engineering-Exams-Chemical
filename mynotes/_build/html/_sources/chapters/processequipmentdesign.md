@@ -79,14 +79,30 @@ A process stream delivers 250 kW of cooling duty to a heat exchanger. Cooling wa
 
 ```{dropdown} Solution Steps
 - **Heat-capacity flow equation.** For a sensible-heat (no phase change) utility,
-$$ Q = m_{cw} c_{p,water} \Delta T_{util} $$
+
+
+$$
+Q = m_{cw} c_{p,water} \Delta T_{util}
+$$
+
+
 Using $c_{p,water} = 4.18$ kJ/(kg$\cdot$K).
 
 - **(a) At $\Delta T_{util} = 10^\circ$C:**
-$$ m_{cw} = \frac{250}{4.18 \times 10} = \frac{250}{41.8} = 5.98  kg/s = 21{,}500  kg/h $$
+
+
+$$
+m_{cw} = \frac{250}{4.18 \times 10} = \frac{250}{41.8} = 5.98  kg/s = 21{,}500  kg/h
+$$
+
 
 - **(b) At $\Delta T_{util} = 3^\circ$C:**
-$$ m_{cw} = \frac{250}{4.18 \times 3} = \frac{250}{12.54} = 19.9  kg/s = 71{,}700  kg/h $$
+
+
+$$
+m_{cw} = \frac{250}{4.18 \times 3} = \frac{250}{12.54} = 19.9  kg/s = 71{,}700  kg/h
+$$
+
 
 - **(c) Comparison.** Reducing $\Delta T_{util}$ from 10 to 3$^\circ$C tripled the required cooling-water flow. The cooling tower, the supply pump, and all piping must be sized 3.3$\times$ larger. The capital and operating cost penalty is significant for what is essentially the same heat duty. This is exactly why the 5-20$^\circ$C rule of thumb exists: it sits in the cost-minimum band where neither the heat-exchanger area (which favors low $\Delta T_util$) nor the utility equipment (which favors moderate-to-large $\Delta T_util$) dominates.
 
@@ -236,35 +252,85 @@ The starting point is the differential energy balance on a counter-flow heat exc
 
 ```{dropdown} Solution Steps
 - **Differential energy balance on a strip $dA$ of exchanger area.** The local hot-side and cold-side temperatures vary along the length. For a counter-flow exchanger with both streams flowing in opposite directions:
-$$ dQ = U dA (T_h - T_c) = U dA \Delta T(x) $$
+
+
+$$
+dQ = U dA (T_h - T_c) = U dA \Delta T(x)
+$$
+
+
 Simultaneously, the hot fluid loses energy at the rate $dQ = -m_h c_{p,h} dT_h$ (its temperature drops) and the cold fluid gains energy at the rate $dQ = -m_c c_{p,c} dT_c$ (its temperature rises, but $dT_c < 0$ in the direction of hot flow because cold flows the opposite way).
 
 
 - **Express $d(\Delta T)$ in terms of $dQ$.** Subtract the two stream balances:
-$$ d(\Delta T) = dT_h - dT_c = -(\frac{1}{m_h c_{p,h}} - \frac{1}{m_c c_{p,c}}) dQ $$
+
+
+$$
+d(\Delta T) = dT_h - dT_c = -(\frac{1}{m_h c_{p,h}} - \frac{1}{m_c c_{p,c}}) dQ
+$$
+
+
 Note that for counter-flow with $m_h c_{p,h} = m_c c_{p,c}$, $d(\Delta T) = 0$ and the temperature difference is constant along the exchanger  -  the classic "balanced counter-flow" result.
 
 
 - **Eliminate $dQ$ using the rate equation.** Substitute $dQ = U dA \Delta T$:
-$$ \frac{d(\Delta T)}{\Delta T} = -U(\frac{1}{m_h c_{p,h}} - \frac{1}{m_c c_{p,c}}) dA $$
+
+
+$$
+\frac{d(\Delta T)}{\Delta T} = -U(\frac{1}{m_h c_{p,h}} - \frac{1}{m_c c_{p,c}}) dA
+$$
+
+
 The right side is a constant in $A$. Integrate from end 1 (one end of the exchanger, where $\Delta T = \Delta T_1$) to end 2 (the other end, $\Delta T_2$):
-$$ \ln (\frac{\Delta T_2}{\Delta T_1}) = -U A (\frac{1}{m_h c_{p,h}} - \frac{1}{m_c c_{p,c}}) $$
+
+
+$$
+\ln (\frac{\Delta T_2}{\Delta T_1}) = -U A (\frac{1}{m_h c_{p,h}} - \frac{1}{m_c c_{p,c}})
+$$
 
 
 - **Eliminate the heat-capacity-rate term.** From the overall stream balances $Q = m_h c_{p,h}(T_{h,in} - T_{h,out})$ and $Q = m_c c_{p,c}(T_{c,out} - T_{c,in})$,
-$$ \frac{1}{m_h c_{p,h}} = \frac{T_{h,in} - T_{h,out}}{Q},   \frac{1}{m_c c_{p,c}} = \frac{T_{c,out} - T_{c,in}}{Q} $$
+
+
+$$
+\frac{1}{m_h c_{p,h}} = \frac{T_{h,in} - T_{h,out}}{Q},   \frac{1}{m_c c_{p,c}} = \frac{T_{c,out} - T_{c,in}}{Q}
+$$
+
+
 Substituting:
-$$ \ln (\frac{\Delta T_2}{\Delta T_1}) = -\frac{UA}{Q} [(T_{h,in} - T_{h,out}) - (T_{c,out} - T_{c,in})] = -\frac{UA}{Q} (\Delta T_2 - \Delta T_1) $$
+
+
+$$
+\ln (\frac{\Delta T_2}{\Delta T_1}) = -\frac{UA}{Q} [(T_{h,in} - T_{h,out}) - (T_{c,out} - T_{c,in})] = -\frac{UA}{Q} (\Delta T_2 - \Delta T_1)
+$$
+
+
 ```
 
 
 ```{dropdown} Solution Steps
 - **Rearrange to the canonical LMTD form.** Solving for $Q$:
-$$ Q = U A \frac{\Delta T_2 - \Delta T_1}{\ln(\Delta T_2/\Delta T_1)} $$
+
+
+$$
+Q = U A \frac{\Delta T_2 - \Delta T_1}{\ln(\Delta T_2/\Delta T_1)}
+$$
+
+
 Define the **log-mean temperature difference**:
-$$  \Delta T_{LM} = \frac{\Delta T_2 - \Delta T_1}{\ln(\Delta T_2/\Delta T_1)} = \frac{\Delta T_1 - \Delta T_2}{\ln(\Delta T_1/\Delta T_2)}  $$
+
+
+$$
+\Delta T_{LM} = \frac{\Delta T_2 - \Delta T_1}{\ln(\Delta T_2/\Delta T_1)} = \frac{\Delta T_1 - \Delta T_2}{\ln(\Delta T_1/\Delta T_2)}
+$$
+
+
 Both forms are equivalent (the second is sometimes more intuitive). The final design equation is
-$$  Q = U A \Delta T_{LM}    (Equation 1, pure counter-flow) $$
+
+
+$$
+Q = U A \Delta T_{LM}    (Equation 1, pure counter-flow)
+$$
 
 
 - **Why the log-mean and not the arithmetic mean?** The $\Delta T$ varies exponentially along the exchanger length, not linearly. The arithmetic mean $\Delta T = (\Delta T_1 + \Delta T_2)/2$ overestimates the driving force when $\Delta T_1 \neq \Delta T_2$. The two means coincide as $\Delta T_1 \to \Delta T_2$.
@@ -281,9 +347,21 @@ $$  Q = U A \Delta T_{LM}    (Equation 1, pure counter-flow) $$
 
 ```{note}
 Pure counter-flow gives the maximum $\Delta T_{LM}$. Real shell-and-tube exchangers have multi-pass tube arrangements (1-2, 2-4, etc., shell-tube passes) that mix counter-flow with cross-flow regions, reducing the effective driving force. The correction factor $F$ adjusts for this:
-$$ Q = U A F \Delta T_{LM} $$
+
+
+$$
+Q = U A F \Delta T_{LM}
+$$
+
+
 $F$ is a dimensionless function of two ratios:
-$$ P = \frac{T_{c,out} - T_{c,in}}{T_{h,in} - T_{c,in}},   R = \frac{T_{h,in} - T_{h,out}}{T_{c,out} - T_{c,in}} = \frac{(mc_p)_c}{(mc_p)_h} $$
+
+
+$$
+P = \frac{T_{c,out} - T_{c,in}}{T_{h,in} - T_{c,in}},   R = \frac{T_{h,in} - T_{h,out}}{T_{c,out} - T_{c,in}} = \frac{(mc_p)_c}{(mc_p)_h}
+$$
+
+
 Look up $F$ from a chart specific to the exchanger configuration (TEMA charts in Perry's). Typical values are 0.75 to 0.95. **Rule:** $F \geq 0.8$ is acceptable; below 0.8 the design is too compromised  -  add a shell pass in series, or use a different configuration.
 
 For pure counter-flow, $F = 1$.
@@ -295,15 +373,33 @@ For pure counter-flow, $F = 1$.
 ```{important}
 **Two Cases for Computing $Q$**
 **Sensible heat (no phase change):**
-$$ Q = m c_p \Delta T $$
+
+
+$$
+Q = m c_p \Delta T
+$$
+
+
 where $\Delta T$ is the temperature change of the stream of interest. Use the stream that does not change phase; if both streams are sensible, either gives the same $Q$ by overall energy balance.
 
 **Latent heat (phase change at constant $T$):**
-$$ Q = m \lambda $$
+
+
+$$
+Q = m \lambda
+$$
+
+
 where $\lambda$ is the latent heat of vaporization (or condensation) at the saturation temperature.
 
 **Combined (partial phase change):** integrate over the phase fractions, typically as
-$$ Q = m_L c_{p,L} \Delta T_L + m_v \lambda + m_v c_{p,v} \Delta T_v $$
+
+
+$$
+Q = m_L c_{p,L} \Delta T_L + m_v \lambda + m_v c_{p,v} \Delta T_v
+$$
+
+
 for cooling that takes a stream from superheated vapor to subcooled liquid.
 ```
 
@@ -340,7 +436,11 @@ A computed $U$ falling outside its plausible band signals a calculation error or
 ```{important}
 **The Resistance-in-Series Method**
 The overall coefficient referenced to the outside area of the tubes is
-$$ \frac{1}{U_o} = \frac{1}{h_o} + R_{f,o} + \frac{x A_o/A_{mean}}{k_{wall}} + \frac{A_o}{A_i} R_{f,i} + \frac{A_o}{A_i h_i} $$
+
+
+$$
+\frac{1}{U_o} = \frac{1}{h_o} + R_{f,o} + \frac{x A_o/A_{mean}}{k_{wall}} + \frac{A_o}{A_i} R_{f,i} + \frac{A_o}{A_i h_i}
+$$
 
 
 - $h_o, h_i$: outside and inside film heat-transfer coefficients (from Nusselt correlations: Dittus-Boelter for turbulent in-tube, Bell-Delaware for shell-side).
@@ -366,16 +466,36 @@ A process stream of $m = 15{,}000$ kg/h, $c_p = 2.5$ kJ/(kg$\cdot$K), must be co
 
 ```{dropdown} Solution Steps
 - **Heat duty from the process side.**
-$$ Q = m c_p \Delta T = (\frac{15{,}000}{3600})(2.5)(110 - 60) = (4.167)(2.5)(50) = 520.9  kW $$
+
+
+$$
+Q = m c_p \Delta T = (\frac{15{,}000}{3600})(2.5)(110 - 60) = (4.167)(2.5)(50) = 520.9  kW
+$$
+
 
 - **Cooling-water flow rate from energy balance.** The same $Q$ is absorbed by the cooling water.
-$$ m_{cw} = \frac{Q}{c_{p,water} \Delta T_{cw}} = \frac{520.9}{(4.18)(15)} = \frac{520.9}{62.7} = 8.31  kg/s = 29{,}900  kg/h $$
+
+
+$$
+m_{cw} = \frac{Q}{c_{p,water} \Delta T_{cw}} = \frac{520.9}{(4.18)(15)} = \frac{520.9}{62.7} = 8.31  kg/s = 29{,}900  kg/h
+$$
+
 
 - **$\Delta T_{LM}$ for counter-flow.** End 1 (cold end): process exits at 60$^\circ$C, cooling water enters at 30$^\circ$C, so $\Delta T_1 = 60 - 30 = 30^\circ$C. End 2 (hot end): process enters at 110$^\circ$C, cooling water exits at 45$^\circ$C, so $\Delta T_2 = 110 - 45 = 65^\circ$C.
-$$ \Delta T_{LM} = \frac{\Delta T_2 - \Delta T_1}{\ln(\Delta T_2/\Delta T_1)} = \frac{65 - 30}{\ln(65/30)} = \frac{35}{\ln(2.167)} = \frac{35}{0.7732} = 45.3^\circ C $$
+
+
+$$
+\Delta T_{LM} = \frac{\Delta T_2 - \Delta T_1}{\ln(\Delta T_2/\Delta T_1)} = \frac{65 - 30}{\ln(65/30)} = \frac{35}{\ln(2.167)} = \frac{35}{0.7732} = 45.3^\circ C
+$$
+
 
 - **Required heat-transfer area.**
-$$ A = \frac{Q}{U F \Delta T_{LM}} = \frac{520{,}900 W}{(600)(1)(45.3)} = \frac{520{,}900}{27{,}180} = 19.2  m^2 $$
+
+
+$$
+A = \frac{Q}{U F \Delta T_{LM}} = \frac{520{,}900 W}{(600)(1)(45.3)} = \frac{520{,}900}{27{,}180} = 19.2  m^2
+$$
+
 
 - **Verification  -  four cross-checks.**
 
@@ -404,11 +524,21 @@ For the same service (process 110$\to$60$^\circ$C, cooling water 30$\to$45$^\cir
 
 
 - **Co-current flow.** Both streams enter at the same end and exit at the same end. End 1 (entrance): $\Delta T_1 = 110 - 30 = 80^\circ$C. End 2 (exit): $\Delta T_2 = 60 - 45 = 15^\circ$C.
-$$ \Delta T_{LM} = \frac{80 - 15}{\ln(80/15)} = \frac{65}{\ln(5.333)} = \frac{65}{1.6740} = 38.8^\circ C $$
+
+
+$$
+\Delta T_{LM} = \frac{80 - 15}{\ln(80/15)} = \frac{65}{\ln(5.333)} = \frac{65}{1.6740} = 38.8^\circ C
+$$
 
 
 - **Area comparison at constant $Q$ and $U$.**
-$$ \frac{A_{co}}{A_{counter}} = \frac{\Delta T_{LM,counter}}{\Delta T_{LM,co}} = \frac{45.3}{38.8} = 1.17 $$
+
+
+$$
+\frac{A_{co}}{A_{counter}} = \frac{\Delta T_{LM,counter}}{\Delta T_{LM,co}} = \frac{45.3}{38.8} = 1.17
+$$
+
+
 The co-current arrangement needs 17\% more area for the same service.
 
 
@@ -430,15 +560,27 @@ A distillation column requires 3{,}500 kW of reboil duty. The process side boils
 
 ```{dropdown} Solution Steps
 - **Steam flow required.**
-$$ m_{steam} = \frac{Q}{\lambda} = \frac{3{,}500 kW}{2{,}080 kJ/kg} = 1.683 kg/s = 6{,}060 kg/h $$
+
+
+$$
+m_{steam} = \frac{Q}{\lambda} = \frac{3{,}500 kW}{2{,}080 kJ/kg} = 1.683 kg/s = 6{,}060 kg/h
+$$
 
 
 - **$\Delta T_{LM}$ for two isothermal streams.** Both sides are at constant temperature (condensing steam at 158$^\circ$C, boiling process at 95$^\circ$C), so $\Delta T_1 = \Delta T_2 = 158 - 95 = 63^\circ$C. The LMTD degenerates to this constant:
-$$ \Delta T_{LM} = 63^\circ C,   F = 1 (no multi-pass correction needed) $$
+
+
+$$
+\Delta T_{LM} = 63^\circ C,   F = 1 (no multi-pass correction needed)
+$$
 
 
 - **Required area.**
-$$ A = \frac{Q}{U \cdot \Delta T_{LM}} = \frac{3{,}500{,}000 W}{(2{,}000)(63)} = \frac{3{,}500{,}000}{126{,}000} = 27.8 m^2 $$
+
+
+$$
+A = \frac{Q}{U \cdot \Delta T_{LM}} = \frac{3{,}500{,}000 W}{(2{,}000)(63)} = \frac{3{,}500{,}000}{126{,}000} = 27.8 m^2
+$$
 
 
 - **Verification.** A 28 m$^2$ kettle reboiler is moderate-size, well within shell-and-tube range. The 63$^\circ$C driving force is comfortable. Steam flow 6{,}060 kg/h corresponds to roughly 1 ton/h  -  a small-to-medium distillation column.
@@ -520,6 +662,7 @@ An exchanger heats 99\%+ pure oxygen gas from 30 to 220$^\circ$C using high-pres
 ```{dropdown} Solution Steps
 - **Apply the pressure criterion.** The two streams' pressures differ by a factor of 45 (steam at 45 barg vs. oxygen at $\sim$1-5 barg). The high-pressure stream goes *tube side* where small-diameter tubes tolerate the pressure cheaply.
 
+
 $$
 Steam: tube side. Oxygen: shell side.
 $$
@@ -544,6 +687,7 @@ A heavy gasoil at 200$^\circ$C must be cooled to 80$^\circ$C using cooling water
 
 ```{dropdown} Solution Steps
 - **Apply the fouling criterion.** Fouling fluid goes tube-side for mechanical-cleaning access.
+
 
 $$
 Gasoil: tube side. Cooling water: shell side.
@@ -724,9 +868,21 @@ The "thin-wall" assumption requires $t/R < 0.1$ (or equivalently $P/SE < 0.385$)
 For a cylindrical shell under internal pressure, the minimum required wall thickness is the larger of the hoop and longitudinal results:
 
 **Hoop (governs when $P/SE < 0.385$):**
-$$ t = \frac{P R}{S E - 0.6 P} $$
+
+
+$$
+t = \frac{P R}{S E - 0.6 P}
+$$
+
+
 **Longitudinal:**
-$$ t = \frac{P R}{2 S E + 0.4 P} $$
+
+
+$$
+t = \frac{P R}{2 S E + 0.4 P}
+$$
+
+
 The $-0.6P$ and $+0.4P$ correction terms account for the finite-thickness curvature effect that the simple thin-shell equation ignores; they keep the ASME formula accurate at moderate $P/S$.
 
 Add the **corrosion allowance** $CA$ to $t$ to get the final design thickness. Round up to the next standard plate gauge.
@@ -767,19 +923,41 @@ A vertical cylindrical reactor: ID = 60 in (1.524 m), design pressure 250 psig, 
 
 ```{dropdown} Solution Steps
 - **Check the thin-wall assumption.**
-$$ \frac{P}{SE} = \frac{250}{17{,}500 \times 1.0} = 0.0143 \ll 0.385  \checkmark $$
+
+
+$$
+\frac{P}{SE} = \frac{250}{17{,}500 \times 1.0} = 0.0143 \ll 0.385  \checkmark
+$$
+
+
 The hoop equation governs. (If $P/SE > 0.385$, use the thick-wall Lam\'e equations from Sec. VIII Div. 1 Appendix 1-1.)
 
 - **Compute pressure-design thickness from the hoop equation.** $R = 30$ in.
-$$ t_{pressure} = \frac{P R}{S E - 0.6 P} = \frac{(250)(30)}{(17{,}500)(1.0) - 0.6(250)} = \frac{7{,}500}{17{,}500 - 150} = \frac{7{,}500}{17{,}350} = 0.432 in $$
+
+
+$$
+t_{pressure} = \frac{P R}{S E - 0.6 P} = \frac{(250)(30)}{(17{,}500)(1.0) - 0.6(250)} = \frac{7{,}500}{17{,}500 - 150} = \frac{7{,}500}{17{,}350} = 0.432 in
+$$
+
 
 - **Add corrosion allowance.**
-$$ t_{total} = t_{pressure} + CA = 0.432 + 0.125 = 0.557 in $$
+
+
+$$
+t_{total} = t_{pressure} + CA = 0.432 + 0.125 = 0.557 in
+$$
+
 
 - **Round up to a standard plate gauge.** Standard plate increments: 3/8, 7/16, 1/2, 9/16, 5/8, 11/16, 3/4 in. The next size above 0.557 is **9/16 in = 0.5625 in**. Specify 9/16-in plate.
 
 - **Verification  -  check hoop stress at the chosen wall.**
-$$ \sigma_h = \frac{P R}{t - CA} = \frac{(250)(30)}{0.5625 - 0.125} = \frac{7{,}500}{0.4375} = 17{,}143 psi < S = 17{,}500 psi  \checkmark $$
+
+
+$$
+\sigma_h = \frac{P R}{t - CA} = \frac{(250)(30)}{0.5625 - 0.125} = \frac{7{,}500}{0.4375} = 17{,}143 psi < S = 17{,}500 psi  \checkmark
+$$
+
+
 The actual stress is just below the allowable  -  a tight but acceptable design. If a manufacturing tolerance reduces the wall thickness slightly, the stress could approach $S$, which is why the standard practice is to specify the next gauge up rather than the calculated minimum.
 ```
 
@@ -843,7 +1021,13 @@ The selection map plots flow (x-axis, log scale) vs. head (y-axis, log scale) wi
 ```{important}
 **Specific Speed**
 For a centrifugal pump, the specific speed is
-$$ N_s = \frac{N\sqrt{Q}}{H^{3/4}} $$
+
+
+$$
+N_s = \frac{N\sqrt{Q}}{H^{3/4}}
+$$
+
+
 with $N$ in rpm, $Q$ in gpm, $H$ in feet (US units). Specific speed is a similarity-law parameter that classifies impeller types:
 
 
@@ -862,15 +1046,33 @@ At a given desired flow and head, only certain $N_s$ ranges can be achieved at h
 ```{important}
 **Pump Power**
 **Hydraulic power** (the useful power delivered to the fluid):
-$$ P_{hyd} = m g H = \rho g Q H  [SI: W] $$
+
+
+$$
+P_{hyd} = m g H = \rho g Q H  [SI: W]
+$$
+
+
 or, in US units, $P_{hyd}[hp] = Q[gpm] \cdot H[ft] \cdot SG / 3960$.
 
 **Brake power** (the shaft power the motor must deliver):
-$$ P_{brake} = \frac{P_{hyd}}{\eta_{pump}} $$
+
+
+$$
+P_{brake} = \frac{P_{hyd}}{\eta_{pump}}
+$$
+
+
 Typical pump efficiency: 50-65\% for small (< 5 hp) pumps, 70-85\% for moderate-size centrifugals.
 
 **Motor input power** adds motor losses:
-$$ P_{electric} = \frac{P_{brake}}{\eta_{motor}} $$
+
+
+$$
+P_{electric} = \frac{P_{brake}}{\eta_{motor}}
+$$
+
+
 with $\eta_{motor} \approx 90$-95\% for modern TEFC induction motors.
 ```
 
@@ -882,13 +1084,23 @@ with $\eta_{motor} \approx 90$-95\% for modern TEFC induction motors.
 Cavitation occurs in a centrifugal pump when the local fluid pressure at the impeller eye falls below the fluid vapor pressure. Vapor bubbles form, then collapse violently as the fluid moves to a higher-pressure region of the impeller. The collapse erodes the impeller and creates noise, vibration, and (in extreme cases) loss of head.
 
 To prevent cavitation, the **available NPSH** (NPSH$_A$) at the pump suction must exceed the **required NPSH** (NPSH$_R$, a pump characteristic from the manufacturer curve), with a safety margin of at least 0.6 m (2 ft):
-$$ NPSH_A \geq NPSH_R + 0.6 m $$
+
+
+$$
+NPSH_A \geq NPSH_R + 0.6 m
+$$
+
+
 ```
 
 
 ```{important}
 **Computing NPSH$_A$**
-$$ NPSH_A = \frac{P_{abs} - P_{vap}}{\rho g} + z_s - h_{f,s} $$
+
+
+$$
+NPSH_A = \frac{P_{abs} - P_{vap}}{\rho g} + z_s - h_{f,s}
+$$
 
 
 - $P_{abs}$: absolute pressure at the liquid surface of the source vessel (atmospheric + any gas pressure).
@@ -916,21 +1128,45 @@ Water at 90$^\circ$C ($P_{vap} = 70$ kPa, $\rho = 965$ kg/m$^3$) is pumped from 
 
 ```{dropdown} Solution Steps
 - **Pressure head term (convert kPa to m of water).**
-$$ \frac{P_{abs} - P_{vap}}{\rho g} = \frac{(101.3 - 70.0) \times 10^3 Pa}{965 \times 9.81 Pa/m} = \frac{31{,}300}{9{,}467} = 3.31 m $$
+
+
+$$
+\frac{P_{abs} - P_{vap}}{\rho g} = \frac{(101.3 - 70.0) \times 10^3 Pa}{965 \times 9.81 Pa/m} = \frac{31{,}300}{9{,}467} = 3.31 m
+$$
 
 
 - **Add static head, subtract friction.**
-$$ NPSH_A = 3.31 + 2.0 - 1.5 = 3.81 m $$
+
+
+$$
+NPSH_A = 3.31 + 2.0 - 1.5 = 3.81 m
+$$
 
 
 - **Compare to NPSH$_R$ with safety margin.**
-$$ Margin = NPSH_A - NPSH_R = 3.81 - 3.0 = 0.81 m > 0.6 m  \checkmark $$
+
+
+$$
+Margin = NPSH_A - NPSH_R = 3.81 - 3.0 = 0.81 m > 0.6 m  \checkmark
+$$
+
+
 The pump will operate safely without cavitation at the design point.
 
 
 - **Sensitivity check: what if water is heated to 100$^\circ$C?** $P_{vap}$ rises to 101.3 kPa (boiling at atmospheric), so the pressure head term collapses:
-$$ \frac{P_{abs} - P_{vap}}{\rho g} = \frac{101.3 - 101.3}{...} = 0 $$
-$$ NPSH_A = 0 + 2.0 - 1.5 = 0.5 m \ll 3.0 m $$
+
+
+$$
+\frac{P_{abs} - P_{vap}}{\rho g} = \frac{101.3 - 101.3}{...} = 0
+$$
+
+
+$$
+NPSH_A = 0 + 2.0 - 1.5 = 0.5 m \ll 3.0 m
+$$
+
+
 The pump would cavitate immediately. The design has very little thermal headroom  -  a process upset that heats the water by another 10$^\circ$C destroys NPSH$_A$. The fix is to raise the source tank (more $z_s$) or lower the operating temperature.
 
 
@@ -970,7 +1206,13 @@ where $N$ is rotational speed and $D$ is impeller diameter. The affinity laws ar
 - **Rotary screw / lobe:** oil-flooded; moderate flow, modest pressure ($< 10$ bar). Refrigeration and instrument air.
 
 For compressors, the polytropic or isentropic head equation governs (analog of pump $H$):
-$$ H_{poly} = \frac{Z R T_1}{M} \frac{k}{k-1} [(\frac{P_2}{P_1})^{(k-1)/k} - 1] / \eta_p $$
+
+
+$$
+H_{poly} = \frac{Z R T_1}{M} \frac{k}{k-1} [(\frac{P_2}{P_1})^{(k-1)/k} - 1] / \eta_p
+$$
+
+
 ```
 
 
@@ -996,16 +1238,39 @@ Distillation columns are sized in two stages: number of theoretical stages (Fens
 The FUG method estimates $N_{stages}$ in three stages:
 
 **Fenske (minimum stages at total reflux):**
-$$ N_{\min} = \frac{\log [\dfrac{x_D/(1 - x_D)}{x_B/(1 - x_B)}]}{\log \alpha_{avg}} $$
+
+
+$$
+N_{\min} = \frac{\log [\dfrac{x_D/(1 - x_D)}{x_B/(1 - x_B)}]}{\log \alpha_{avg}}
+$$
+
+
 where $x_D, x_B$ are distillate and bottoms compositions of the light key and $\alpha_{avg}$ is the average relative volatility (geometric mean of $\alpha$ at top and bottom).
 
 **Underwood (minimum reflux):** solve
-$$ \sum_i \frac{\alpha_i z_i}{\alpha_i - \theta} = 1 - q $$
+
+
+$$
+\sum_i \frac{\alpha_i z_i}{\alpha_i - \theta} = 1 - q
+$$
+
+
 for $\theta$ (a root between the light- and heavy-key $\alpha$'s), then
-$$ R_{\min} + 1 = \sum_i \frac{\alpha_i x_{D,i}}{\alpha_i - \theta} $$
+
+
+$$
+R_{\min} + 1 = \sum_i \frac{\alpha_i x_{D,i}}{\alpha_i - \theta}
+$$
+
 
 **Gilliland correlation** (actual stages from $N_{\min}$ and the chosen $R$, typically $R = 1.2$-1.5$R_{\min}$):
-$$ \frac{N - N_{\min}}{N + 1} = 1 - \exp [\frac{1 + 54.4 X}{11 + 117.2 X} \frac{X - 1}{X^{0.5}}],   X = \frac{R - R_{\min}}{R + 1} $$
+
+
+$$
+\frac{N - N_{\min}}{N + 1} = 1 - \exp [\frac{1 + 54.4 X}{11 + 117.2 X} \frac{X - 1}{X^{0.5}}],   X = \frac{R - R_{\min}}{R + 1}
+$$
+
+
 or read from a Gilliland chart.
 ```
 
@@ -1015,9 +1280,21 @@ or read from a Gilliland chart.
 ```{important}
 **Souders-Brown Diameter**
 The maximum vapor superficial velocity that avoids flooding (entrainment of liquid by upward-moving vapor) is
-$$ U_{\max} = C_{SB} \sqrt{\frac{\rho_L - \rho_V}{\rho_V}} $$
+
+
+$$
+U_{\max} = C_{SB} \sqrt{\frac{\rho_L - \rho_V}{\rho_V}}
+$$
+
+
 where $C_{SB}$ (Souders-Brown capacity factor, read from Fair's chart) ranges $0.05$-$0.15$ m/s for trayed columns. Design at 70-85\% of flood velocity. The column diameter is
-$$ D = \sqrt{\frac{4 V}{\pi U_{design}}} $$
+
+
+$$
+D = \sqrt{\frac{4 V}{\pi U_{design}}}
+$$
+
+
 where $V$ is the vapor volumetric flow at column operating conditions.
 ```
 

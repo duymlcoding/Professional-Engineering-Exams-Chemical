@@ -157,6 +157,35 @@ def restore_math(src, math_blocks):
     return src
 
 
+def normalize_display_math_spacing(src):
+    """Ensure $$ display blocks are separated from prose for MyST parsing."""
+    out = []
+    in_display = False
+    lines = src.splitlines()
+
+    for i, line in enumerate(lines):
+        if line.strip() != '$$':
+            if in_display and not line.strip() and out and out[-1].strip() == '$$':
+                continue
+            out.append(line)
+            continue
+
+        if not in_display:
+            if out and out[-1].strip():
+                out.append('')
+            out.append('$$')
+            in_display = True
+        else:
+            while out and not out[-1].strip():
+                out.pop()
+            out.append('$$')
+            in_display = False
+            if i + 1 < len(lines) and lines[i + 1].strip():
+                out.append('')
+
+    return '\n'.join(out)
+
+
 def convert_file(tex_path: pathlib.Path, md_path: pathlib.Path, title: str, frontmatter: str):
     src = tex_path.read_text(encoding='utf-8')
 
@@ -229,22 +258,22 @@ def convert_file(tex_path: pathlib.Path, md_path: pathlib.Path, title: str, fron
     # ── 6. Math environments ─────────────────────────────────────────────────
     # standalone $$...$$ FIRST (before align/equation, to avoid double-wrapping)
     # Only match when content is non-empty and on one line
-    src = re.sub(r'(?m)^\s*\$\$(\S[^\n]*?)\$\$\s*$',
-                 lambda m: '\n$$\n' + m.group(1).strip() + '\n$$\n',
+    src = re.sub(r'(?m)^\s*\$\$\s*(\S[^\n]*?)\s*\$\$\s*$',
+                 lambda m: '\n\n$$\n' + m.group(1).strip() + '\n$$\n\n',
                  src)
     # Strip $$ wrappers already surrounding \begin{align} (from LaTeX $$..align..$$ style)
     src = re.sub(r'\$\$\s*\n(\\begin\{align\*?\}.*?\\end\{align\*?\})\s*\n\s*\$\$',
                  r'\1', src, flags=re.DOTALL)
     # align* / align → $$\begin{align}...\end{align}$$
     src = re.sub(r'\\begin\{align\*?\}(.*?)\\end\{align\*?\}',
-                 lambda m: '$$\n\\begin{align}\n' + m.group(1) + '\\end{align}\n$$',
+                 lambda m: '\n\n$$\n\\begin{align}\n' + m.group(1).strip() + '\n\\end{align}\n$$\n\n',
                  src, flags=re.DOTALL)
     src = re.sub(r'\\begin\{equation\*?\}(.*?)\\end\{equation\*?\}',
-                 lambda m: '$$\n' + m.group(1).strip() + '\n$$',
+                 lambda m: '\n\n$$\n' + m.group(1).strip() + '\n$$\n\n',
                  src, flags=re.DOTALL)
     # \[...\] displaymath
     src = re.sub(r'\\\[(.*?)\\\]',
-                 lambda m: '\n$$\n' + m.group(1).strip() + '\n$$\n',
+                 lambda m: '\n\n$$\n' + m.group(1).strip() + '\n$$\n\n',
                  src, flags=re.DOTALL)
 
     # ── 7. Lists ─────────────────────────────────────────────────────────────
@@ -346,6 +375,7 @@ def convert_file(tex_path: pathlib.Path, md_path: pathlib.Path, title: str, fron
     src = re.sub(r'(?m)^[ \t]+(?=[^\s])', '', src)
     src = re.sub(r'\n{4,}', '\n\n\n', src)
     src = re.sub(r'[ \t]+\n', '\n', src)
+    src = normalize_display_math_spacing(src)
     src = src.strip()
 
     # ── 14. Write output ─────────────────────────────────────────────────────
@@ -398,16 +428,16 @@ def convert_body(body):
     body = re.sub(r'\\end\{enumerate\}', '', body)
     # Math environments
     body = re.sub(r'\\\[(.*?)\\\]',
-                  lambda m: '\n$$\n' + m.group(1).strip() + '\n$$\n',
+                  lambda m: '\n\n$$\n' + m.group(1).strip() + '\n$$\n\n',
                   body, flags=re.DOTALL)
     body = re.sub(r'\$\$\s*\n(\\begin\{align\*?\}.*?\\end\{align\*?\})\s*\n\s*\$\$',
                   r'\1', body, flags=re.DOTALL)
     body = re.sub(r'\\begin\{align\*?\}(.*?)\\end\{align\*?\}',
-                  lambda m: '$$\n\\begin{align}\n' + m.group(1) + '\\end{align}\n$$',
+                  lambda m: '\n\n$$\n\\begin{align}\n' + m.group(1).strip() + '\n\\end{align}\n$$\n\n',
                   body, flags=re.DOTALL)
     # standalone $$...$$ inside box (non-empty content only)
-    body = re.sub(r'(?m)^\s*\$\$(\S[^\n]*?)\$\$\s*$',
-                  lambda m: '\n$$\n' + m.group(1).strip() + '\n$$\n',
+    body = re.sub(r'(?m)^\s*\$\$\s*(\S[^\n]*?)\s*\$\$\s*$',
+                  lambda m: '\n\n$$\n' + m.group(1).strip() + '\n$$\n\n',
                   body)
     # Special chars
     body = body.replace(r'\&', '&')
@@ -437,6 +467,7 @@ def convert_body(body):
     body = re.sub(r'\n{3,}', '\n\n', body)
     # Dedent: remove leading spaces from all lines to prevent Markdown code blocks
     body = re.sub(r'(?m)^[ \t]+', '', body)
+    body = normalize_display_math_spacing(body)
     return body.strip()
 
 

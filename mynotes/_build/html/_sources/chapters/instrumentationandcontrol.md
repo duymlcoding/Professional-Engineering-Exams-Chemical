@@ -12,7 +12,13 @@ Process-control analysis lives in the Laplace domain. Almost every theorem in th
 ```{note}
 **Definition of the Laplace Transform**
 For a time-domain signal $f(t)$ defined for $t \geq 0$, the Laplace transform is
-$$ F(s) = L\{f(t)\} = \int_0^{\infty} f(t) e^{-s t} dt $$
+
+
+$$
+F(s) = L\{f(t)\} = \int_0^{\infty} f(t) e^{-s t} dt
+$$
+
+
 The variable $s$ is complex. The transform converts differentiation into multiplication, integration into division, and convolution into a product  -  which is why every linear ODE becomes a linear algebraic equation in the $s$-domain.
 ```
 
@@ -56,7 +62,13 @@ The variable $s$ is complex. The transform converts differentiation into multipl
 ```{note}
 **Deviation Variables  -  Why We Always Use Them**
 Throughout this chapter, every variable is a **deviation** from a reference steady state:
-$$ y(t) \equiv Y(t) - Y,   x(t) \equiv X(t) - X $$
+
+
+$$
+y(t) \equiv Y(t) - Y,   x(t) \equiv X(t) - X
+$$
+
+
 where lower-case denotes deviation and upper-case denotes absolute value. Two consequences:
 
 
@@ -73,11 +85,23 @@ After solving for the deviation $y(t)$, the actual process value at any time is 
 Inverting a rational $F(s) = N(s)/D(s)$ requires decomposing it into a sum of simple fractions whose inverse transforms appear in our table. Two methods will appear throughout this chapter:
 
 **(a) Generic partial fractions** (good for any polynomial denominator):
-$$ \frac{N(s)}{(s - a)(s - b)} = \frac{A}{s - a} + \frac{B}{s - b} $$
+
+
+$$
+\frac{N(s)}{(s - a)(s - b)} = \frac{A}{s - a} + \frac{B}{s - b}
+$$
+
+
 Multiply through by the LCD, expand, and match coefficients of each power of $s$.
 
 **(b) Heaviside cover-up** (faster for distinct linear factors): the residue at $s = a$ is
-$$ A = [ (s - a) F(s) ]_{s = a} $$
+
+
+$$
+A = [ (s - a) F(s) ]_{s = a}
+$$
+
+
 We will use partial fractions in deriving the first-order step response and the cover-up technique in deriving the FOPDT step response.
 ```
 
@@ -89,10 +113,26 @@ A first-order linear process is the workhorse model of process control. A liquid
 
 ```{note}
 A **first-order process** is one whose time-domain dynamics are described by the linear, constant-coefficient ODE (in deviation variables)
-$$ \tau \frac{dy(t)}{dt} + y(t) = K x(t) $$
+
+
+$$
+\tau \frac{dy(t)}{dt} + y(t) = K x(t)
+$$
+
+
 where $x$ is the input deviation, $y$ is the output deviation, $K$ is the steady-state gain, and $\tau$ is the time constant. Taking the Laplace transform (with $y(0) = 0$) gives
-$$ \tau s Y(s) + Y(s) = K X(s) $$
-$$  \frac{Y(s)}{X(s)} = G(s) = \frac{K}{\tau s + 1}  $$
+
+
+$$
+\tau s Y(s) + Y(s) = K X(s)
+$$
+
+
+$$
+\frac{Y(s)}{X(s)} = G(s) = \frac{K}{\tau s + 1}
+$$
+
+
 This rational function is the *transfer function* of the process in *standard form*  -  denominator polynomial normalized so the constant term is unity.
 ```
 
@@ -102,17 +142,38 @@ We will follow the transcript exactly: a generic transfer function $G(s) = K/(\t
 
 ```{dropdown} Solution Steps
 - **Transform the input.** The step of magnitude $M$ is $x(t) = M u(t)$, whose Laplace transform is
-$$ X(s) = L\{M u(t)\} = \frac{M}{s} $$
+
+
+$$
+X(s) = L\{M u(t)\} = \frac{M}{s}
+$$
+
 
 - **Form the output transform.** Substitute into $Y(s) = G(s) X(s)$:
-$$ Y(s) = \frac{K}{\tau s + 1} \cdot \frac{M}{s} = \frac{K M}{s(\tau s + 1)} $$
+
+
+$$
+Y(s) = \frac{K}{\tau s + 1} \cdot \frac{M}{s} = \frac{K M}{s(\tau s + 1)}
+$$
+
+
 This is the equation we must invert to obtain $y(t)$.
 
 
 - **Partial-fraction decomposition.** Write
-$$ \frac{K M}{s(\tau s + 1)} = \frac{A}{s} + \frac{B}{\tau s + 1} $$
+
+
+$$
+\frac{K M}{s(\tau s + 1)} = \frac{A}{s} + \frac{B}{\tau s + 1}
+$$
+
+
 Multiply both sides by the common denominator $s(\tau s + 1)$:
-$$ K M = A(\tau s + 1) + B s = (\tau A + B) s + A $$
+
+
+$$
+K M = A(\tau s + 1) + B s = (\tau A + B) s + A
+$$
 
 
 - **Match coefficients.** The left side is $KM$, a constant, so coefficient of $s^1$ must vanish and coefficient of $s^0$ must equal $KM$:
@@ -123,21 +184,31 @@ $$ K M = A(\tau s + 1) + B s = (\tau A + B) s + A $$
 - $s^1$: $\tau A + B = 0  \Longrightarrow  B = -\tau A = -K M \tau$.
 
 Therefore
-$$ Y(s) = \frac{K M}{s} - \frac{K M \tau}{\tau s + 1} $$
+
+
+$$
+Y(s) = \frac{K M}{s} - \frac{K M \tau}{\tau s + 1}
+$$
 
 
 - **Invert term by term.** Use $L^{-1}\{1/s\} = 1$ and $L^{-1}\{1/(\tau s + 1)\} = (1/\tau) e^{-t/\tau}$:
+
+
 $$
 \begin{align}
-
-
 y(t) &= L^{-1}\{ \frac{K M}{s} \} - K M \tau \cdot L^{-1}\{ \frac{1}{\tau s + 1} \} \\
 &= K M - K M \tau \cdot \frac{1}{\tau} e^{-t/\tau} \\
 &= K M - K M e^{-t/\tau}
 \end{align}
 $$
+
+
 Factoring the common $K M$:
-$$  y(t) = K M ( 1 - e^{-t/\tau} )    (Equation 1) $$
+
+$$
+y(t) = K M ( 1 - e^{-t/\tau} )    (Equation 1)
+$$
+
 ```
 
 
@@ -195,29 +266,65 @@ A surge tank has the first-order transfer function $H(s)/Q_i(s) = 10/(50 s + 1)$
 
 ```{dropdown} Solution Steps
 - **Switch to deviation variables.** The input deviation is
-$$ q_i(t) = Q_i(t) - Q_i = 0.41 - 0.40 = 0.01 m^3/s for  t > 0 $$
+
+
+$$
+q_i(t) = Q_i(t) - Q_i = 0.41 - 0.40 = 0.01 m^3/s for  t > 0
+$$
+
+
 so the step magnitude is $M = 0.01$. The output deviation is $h(t) = H(t) - 3.0$, with $h(0) = 0$.
 
 
 - **Apply Equation 1 with $K = 10$, $\tau = 50$, $M = 0.01$:**
-$$ h(t) = K M ( 1 - e^{-t/\tau} ) = (10)(0.01)(1 - e^{-t/50}) = 0.10(1 - e^{-t/50}) m $$
+
+
+$$
+h(t) = K M ( 1 - e^{-t/\tau} ) = (10)(0.01)(1 - e^{-t/50}) = 0.10(1 - e^{-t/50}) m
+$$
 
 
 - **(a) Evaluate at $t = 100$ s.** Note $100/50 = 2$, so $e^{-100/50} = e^{-2} = 0.1353$.
-$$ h(100) = 0.10 (1 - 0.1353) = 0.10 (0.8647) = 0.0865 m $$
+
+
+$$
+h(100) = 0.10 (1 - 0.1353) = 0.10 (0.8647) = 0.0865 m
+$$
+
+
 Convert back to absolute level:
-$$ H(100) = H + h(100) = 3.000 + 0.0865 = 3.087 m $$
+
+
+$$
+H(100) = H + h(100) = 3.000 + 0.0865 = 3.087 m
+$$
+
+
 A common student error is to read $h(100) = 0.0865$ m and *report it* as the answer; the absolute level is what an instrument actually shows.
 
 
 - **(b) Steady-state level ($t \to \infty$).** As $t \to \infty$, $e^{-t/\tau} \to 0$, so
-$$ h(\infty) = K M = (10)(0.01) = 0.10 m  \Longrightarrow  H(\infty) = 3.10 m $$
+
+
+$$
+h(\infty) = K M = (10)(0.01) = 0.10 m  \Longrightarrow  H(\infty) = 3.10 m
+$$
 
 
 - **(c) Time to reach 63.2\% of the ultimate change.** By the landmark property of $\tau$,
-$$ t_{63.2\%} = \tau = 50 s $$
+
+
+$$
+t_{63.2\%} = \tau = 50 s
+$$
+
+
 Verify by solving $1 - e^{-t/\tau} = 0.632$:
-$$ e^{-t/\tau} = 0.368  \Longrightarrow  t/\tau = -\ln(0.368) = 1.0  \Longrightarrow  t = \tau = 50 s \checkmark $$
+
+
+$$
+e^{-t/\tau} = 0.368  \Longrightarrow  t/\tau = -\ln(0.368) = 1.0  \Longrightarrow  t = \tau = 50 s \checkmark
+$$
 
 
 - **Cross-check by material balance.** A sustained extra $0.01$ m\textsuperscript{3}/s inflow must, at steady state, be matched by an extra $0.01$ m\textsuperscript{3}/s outflow. If the outlet flow is linear in head, $Q_o = h/R$, then $R = K = 10$ s/m\textsuperscript{2}. The extra head needed to drive $0.01$ extra m\textsuperscript{3}/s through resistance $R$ is $\Delta h = R \cdot \Delta Q = 10 \times 0.01 = 0.10$ m. \checkmark Matches the transfer-function answer exactly.
@@ -238,13 +345,27 @@ A heat exchanger's process-outlet temperature is described by $T(s)/Q_{cw}(s) = 
 
 
 - **Apply Equation 1:**
-$$ t(t) = K M (1 - e^{-t/\tau}) = (-3.0)(2.0)(1 - e^{-t/8}) = -6.0(1 - e^{-t/8}) ^\circ F $$
+
+
+$$
+t(t) = K M (1 - e^{-t/\tau}) = (-3.0)(2.0)(1 - e^{-t/8}) = -6.0(1 - e^{-t/8}) ^\circ F
+$$
 
 
 - **Evaluate at $t = 4$ s.** $e^{-4/8} = e^{-0.5} = 0.6065$.
-$$ t(4) = -6.0 (1 - 0.6065) = -6.0 (0.3935) = -2.36^\circ F $$
+
+
+$$
+t(4) = -6.0 (1 - 0.6065) = -6.0 (0.3935) = -2.36^\circ F
+$$
+
+
 Absolute temperature:
-$$ T(4) = 175 + (-2.36) = 172.64^\circ F $$
+
+
+$$
+T(4) = 175 + (-2.36) = 172.64^\circ F
+$$
 
 
 - **Steady state:** $t(\infty) = K M = -6.0^\circ$F, so $T(\infty) = 175 - 6.0 = 169.0^\circ$F.
@@ -273,7 +394,13 @@ Real industrial processes almost always show a measurable delay between the mome
 
 ```{note}
 The First-Order Plus Dead Time (FOPDT) transfer function in standard form is
-$$ G(s) = \frac{K e^{-\theta s}}{\tau s + 1} $$
+
+
+$$
+G(s) = \frac{K e^{-\theta s}}{\tau s + 1}
+$$
+
+
 The factor $e^{-\theta s}$ is the Laplace-domain representation of a pure delay of $\theta$ time units. Three parameters: the steady-state gain $K$, the dominant time constant $\tau$, and the dead time $\theta$. Two reasons we love this model:
 
 
@@ -285,9 +412,21 @@ The factor $e^{-\theta s}$ is the Laplace-domain representation of a pure delay 
 
 ### The FOPDT Step Response
 Subjecting $G(s)$ to a step input of magnitude $M$:
-$$ Y(s) = \frac{K e^{-\theta s}}{\tau s + 1} \cdot \frac{M}{s} = e^{-\theta s} \frac{K M}{s(\tau s + 1)} $$
+
+
+$$
+Y(s) = \frac{K e^{-\theta s}}{\tau s + 1} \cdot \frac{M}{s} = e^{-\theta s} \frac{K M}{s(\tau s + 1)}
+$$
+
+
 The factor $e^{-\theta s}$ is a pure time-shift operator: when we invert, the time-domain answer is the first-order step response delayed by $\theta$. Using Equation 1 of the previous section and the time-shift theorem:
-$$ y(t) = \begin{cases} 0, & t < \theta \ K M (1 - e^{-(t-\theta)/\tau}), & t \geq \theta \end{cases} $$
+
+
+$$
+y(t) = \begin{cases} 0, & t < \theta \ K M (1 - e^{-(t-\theta)/\tau}), & t \geq \theta \end{cases}
+$$
+
+
 Graphically: a flat region from 0 to $\theta$, then an exponential rise. Reading $\theta$ and $\tau$ from a step-test trace is the central practical task of FOPDT identification.
 
 ### Method 1: Tangent-and-Inflection (Smith / Ziegler-Nichols Original)
@@ -314,40 +453,60 @@ The two-point fit, developed by Sundaresan and Krishnaswamy in the late 1970s, i
 ```{important}
 **Sundaresan-Krishnaswamy Two-Point Formulas**
 Read off the times $t_{35.3\%}$ and $t_{85.3\%}$ at which the response reaches 35.3\% and 85.3\% of its ultimate change. Then
+
+
 $$
 \begin{align}
-
-
 \theta &= 1.3 t_{35.3\%} - 0.29 t_{85.3\%} \\
 \tau   &= 0.67 (t_{85.3\%} - t_{35.3\%}) \\
 K      &= \frac{\Delta y_{ss}}{\Delta x}
 \end{align}
 $$
+
+
 The fractions 35.3\% and 85.3\% are not arbitrary  -  they are chosen so that the two-point fit exactly reproduces $\tau$ and $\theta$ for a pure FOPDT process. For higher-order processes, the fit minimizes least-squares error in the dominant pole.
 ```
 
 
 ### Why 35.3\% and 85.3\%?  -  A Quick Derivation Sketch
 For a true FOPDT signal, $y(t) = KM(1 - e^{-(t-\theta)/\tau})$ for $t \geq \theta$. The time at which the response reaches a fraction $f$ of the ultimate is
-$$ y/y(\infty) = f  \Longrightarrow  1 - e^{-(t-\theta)/\tau} = f  \Longrightarrow  t - \theta = -\tau \ln(1 - f) $$
+
+
+$$
+y/y(\infty) = f  \Longrightarrow  1 - e^{-(t-\theta)/\tau} = f  \Longrightarrow  t - \theta = -\tau \ln(1 - f)
+$$
+
+
 So
-$$ t_f = \theta + \tau [-\ln(1-f)] $$
+
+
+$$
+t_f = \theta + \tau [-\ln(1-f)]
+$$
+
+
 For two fractions $f_1$ and $f_2$, the two times are
+
+
 $$
 \begin{align}
-
 t_{f_1} &= \theta + \tau \cdot a,   a \equiv -\ln(1-f_1) \\
 t_{f_2} &= \theta + \tau \cdot b,   b \equiv -\ln(1-f_2)
 \end{align}
 $$
+
+
 Solving for $\tau$ and $\theta$:
+
+
 $$
 \begin{align}
-
 \tau   &= \frac{t_{f_2} - t_{f_1}}{b - a} \\
 \theta &= \frac{a t_{f_2} - b t_{f_1}}{a - b}
 \end{align}
 $$
+
+
 The Sundaresan-Krishnaswamy fractions $f_1 = 0.353, f_2 = 0.853$ give $a = -\ln(0.647) = 0.4357$ and $b = -\ln(0.147) = 1.9173$, so $b - a = 1.4816$ and $1/(b - a) = 0.675 \approx 0.67$, and $b/(b-a) - a/(b-a) \cdot (rearranged) \to$ the textbook constants 1.3 and 0.29. The 0.67 and 1.3/0.29 numbers in the formulas are direct consequences of these two chosen levels.
 
 ### Worked Example: Heat-Exchanger Cooling-Water Step
@@ -361,7 +520,13 @@ A heat exchanger's process-outlet temperature is monitored during a step in cool
 
 ```{dropdown} Solution Steps
 - **Steady-state gain $K$.**
-$$ K = \frac{\Delta y_{ss}}{\Delta x} = \frac{T_{new} - T_{old}}{Q_{cw,new} - Q_{cw,old}} = \frac{53.2 - 55.0}{9.2 - 8.0} = \frac{-1.8}{1.2} = -1.5 \frac{^\circ F}{gpm} $$
+
+
+$$
+K = \frac{\Delta y_{ss}}{\Delta x} = \frac{T_{new} - T_{old}}{Q_{cw,new} - Q_{cw,old}} = \frac{53.2 - 55.0}{9.2 - 8.0} = \frac{-1.8}{1.2} = -1.5 \frac{^\circ F}{gpm}
+$$
+
+
 Negative as expected (more cooling water lowers process outlet temperature).
 
 
@@ -376,10 +541,10 @@ Read from the graph: $t_{35.3\%} = 6.3$ min, $t_{85.3\%} = 9.5$ min.
 
 
 - **Apply the Sundaresan-Krishnaswamy formulas.**
+
+
 $$
 \begin{align}
-
-
 \theta &= 1.3 (6.3) - 0.29 (9.5) = 8.19 - 2.755 = 5.435 \approx 5.4 min \\
 \tau   &= 0.67 (9.5 - 6.3) = 0.67 (3.2) = 2.144 \approx 2.14 min
 \end{align}
@@ -387,13 +552,23 @@ $$
 
 
 - **Write the fitted FOPDT model.**
-$$ G(s) = \frac{-1.5 e^{-5.4 s}}{2.14 s + 1}  \frac{^\circ F}{gpm}   (\theta, \tau  in min) $$
+
+$$
+G(s) = \frac{-1.5 e^{-5.4 s}}{2.14 s + 1}  \frac{^\circ F}{gpm}   (\theta, \tau  in min)
+$$
+
 ```
 
 
 ```{dropdown} Solution Steps
 - **Controllability check.**
-$$ \frac{\theta}{\tau} = \frac{5.4}{2.14} = 2.52 $$
+
+
+$$
+\frac{\theta}{\tau} = \frac{5.4}{2.14} = 2.52
+$$
+
+
 This is a dead-time-dominant process ($\theta/\tau > 1$). PI control alone will be sluggish  -  the controller cannot see any effect of its own action for $\theta = 5.4$ min after the action. Strategies for dead-time-dominant processes:
 
 
@@ -405,15 +580,17 @@ This is a dead-time-dominant process ($\theta/\tau > 1$). PI control alone will 
 
 
 - **Verification by reconstructing one point.** Predict the time at which $T$ reaches 50\% of the change:
+
+
 $$
 \begin{align}
-
-
 T_{50\%} &= 55.0 + 0.5(-1.8) = 54.10^\circ F \\
 1 - e^{-(t - \theta)/\tau} &= 0.50  \Longrightarrow  t - \theta = \tau \ln(2) = 2.14 (0.693) = 1.485 min \\
 t &= 5.4 + 1.485 = 6.88 min
 \end{align}
 $$
+
+
 Compare to the graphical reading at $T = 54.1^\circ$F. If the graph gives $t \approx 7$ min, the fit is consistent.
 ```
 
@@ -431,14 +608,15 @@ A second-order overdamped process has the true transfer function $G_{true}(s) = 
 - **Gain:** since $\lim_{s\to 0} G_{true}(s) = 1$, $K = 1$ as expected.
 
 - **Apparent FOPDT parameters:**
+
+
 $$
 \begin{align}
-
-
 \theta_{app} &= 1.3 (2.6) - 0.29 (8.0) = 3.38 - 2.32 = 1.06 \\
 \tau_{app}   &= 0.67 (8.0 - 2.6) = 0.67 (5.4) = 3.62
 \end{align}
 $$
+
 
 - **Interpretation:** The dominant true time constant is 5, the secondary is 1. The fit recovers $\tau_{app} = 3.62$ (an underestimate of the dominant pole because the secondary pole hides behind it) and gives a nonzero $\theta_{app} = 1.06$ that mimics the secondary lag with an equivalent dead time. The empirical rule of thumb is $\theta_{app} \approx$ the smaller time constant, $\tau_{app} \approx$ the larger one  -  here $\theta_{app} = 1.06 \approx 1$ \checkmark, and $\tau_{app} = 3.62$ (within $\sim$30\% of 5).
 
@@ -473,7 +651,13 @@ Two first-order processes in series, or a process plus controller, or many intri
 
 ```{note}
 The standard form of a second-order transfer function in process control is
-$$ G(s) = \frac{Y(s)}{X(s)} = \frac{K}{\tau^2 s^2 + 2 \zeta \tau s + 1} $$
+
+
+$$
+G(s) = \frac{Y(s)}{X(s)} = \frac{K}{\tau^2 s^2 + 2 \zeta \tau s + 1}
+$$
+
+
 Three parameters:
 
 
@@ -490,17 +674,25 @@ The denominator constant term is normalized to 1; if you encounter a denominator
 ```{note}
 **Putting an Arbitrary Second-Order ODE Into Standard Form**
 Given $a y + b y + c y = d x$, take the Laplace transform with $y(0) = y(0) = 0$ and divide through by $c$:
-$$ \frac{Y(s)}{X(s)} = \frac{d/c}{(a/c) s^2 + (b/c) s + 1} $$
+
+
+$$
+\frac{Y(s)}{X(s)} = \frac{d/c}{(a/c) s^2 + (b/c) s + 1}
+$$
+
+
 Identify
+
+
 $$
 \begin{align}
-
-
 K           &= d/c \\
 \tau^2      &= a/c  \Longrightarrow  \tau = \sqrt{a/c} \\
 2\zeta\tau  &= b/c  \Longrightarrow  \zeta = \frac{b}{2 c \tau} = \frac{b}{2 \sqrt{a c}}
 \end{align}
 $$
+
+
 The last expression $\zeta = b/(2\sqrt{ac})$ is the form most often used for quick numerical work.
 ```
 
@@ -529,30 +721,64 @@ For completeness, here is the path from $G(s)$ to $y(t)$ for the underdamped cas
 
 ```{dropdown} Solution Steps
 - **Output transform for a step of magnitude $M$:**
-$$ Y(s) = \frac{K}{\tau^2 s^2 + 2\zeta\tau s + 1} \cdot \frac{M}{s} = \frac{K M}{s (\tau^2 s^2 + 2 \zeta \tau s + 1)} $$
+
+
+$$
+Y(s) = \frac{K}{\tau^2 s^2 + 2\zeta\tau s + 1} \cdot \frac{M}{s} = \frac{K M}{s (\tau^2 s^2 + 2 \zeta \tau s + 1)}
+$$
+
 
 - **Factor the denominator quadratic.** The roots of $\tau^2 s^2 + 2\zeta\tau s + 1 = 0$ are
-$$ s = \frac{-2\zeta\tau \pm \sqrt{4\zeta^2\tau^2 - 4\tau^2}}{2\tau^2} = \frac{-\zeta \pm \sqrt{\zeta^2 - 1}}{\tau} $$
+
+
+$$
+s = \frac{-2\zeta\tau \pm \sqrt{4\zeta^2\tau^2 - 4\tau^2}}{2\tau^2} = \frac{-\zeta \pm \sqrt{\zeta^2 - 1}}{\tau}
+$$
+
+
 For $\zeta < 1$ the discriminant is negative; write $\sqrt{\zeta^2 - 1} = j\sqrt{1 - \zeta^2}$:
-$$ s = -\frac{\zeta}{\tau} \pm j \frac{\sqrt{1 - \zeta^2}}{\tau} $$
+
+
+$$
+s = -\frac{\zeta}{\tau} \pm j \frac{\sqrt{1 - \zeta^2}}{\tau}
+$$
+
+
 Define the damped frequency $\omega_d = \sqrt{1-\zeta^2}/\tau$ and the decay rate $\alpha = \zeta/\tau$. The poles are $s = -\alpha \pm j \omega_d$.
 
 - **Partial-fraction decomposition.** Write
-$$ Y(s) = \frac{KM}{\tau^2} \frac{1}{s (s+\alpha-j\omega_d)(s+\alpha+j\omega_d)} = \frac{A}{s} + \frac{B s + C}{(s+\alpha)^2 + \omega_d^2} $$
+
+
+$$
+Y(s) = \frac{KM}{\tau^2} \frac{1}{s (s+\alpha-j\omega_d)(s+\alpha+j\omega_d)} = \frac{A}{s} + \frac{B s + C}{(s+\alpha)^2 + \omega_d^2}
+$$
+
+
 Multiplying through and matching coefficients (standard algebra; details suppressed for compactness) gives
-$$ A = K M,   B = -K M,   C = -2 \alpha K M $$
+
+
+$$
+A = K M,   B = -K M,   C = -2 \alpha K M
+$$
+
 
 - **Inverse transform.** Using the damped-sine and damped-cosine pairs from the toolbox:
+
+
 $$
 \begin{align}
-
-
 L^{-1}\{\frac{s + \alpha}{(s+\alpha)^2 + \omega_d^2}\} &= e^{-\alpha t}\cos(\omega_d t) \\
 L^{-1}\{\frac{\omega_d}{(s+\alpha)^2 + \omega_d^2}\} &= e^{-\alpha t}\sin(\omega_d t)
 \end{align}
 $$
+
+
 After algebraic recombination,
-$$  y(t) = K M [ 1 - \frac{1}{\sqrt{1-\zeta^2}} e^{-\zeta t/\tau}\sin (\frac{\sqrt{1-\zeta^2}}{\tau} t + \phi)]    (0 < \zeta < 1) $$
+
+$$
+y(t) = K M [ 1 - \frac{1}{\sqrt{1-\zeta^2}} e^{-\zeta t/\tau}\sin (\frac{\sqrt{1-\zeta^2}}{\tau} t + \phi)]    (0 < \zeta < 1)
+$$
+
 where the phase $\phi = \tan^{-1} (\sqrt{1-\zeta^2}/\zeta) = \cos^{-1}(\zeta)$.
 ```
 
@@ -566,10 +792,20 @@ where the phase $\phi = \tan^{-1} (\sqrt{1-\zeta^2}/\zeta) = \cos^{-1}(\zeta)$.
 - **Time to first peak (rise to peak):** $t_p = \dfrac{\pi\tau}{\sqrt{1-\zeta^2}}$ (half the damped period).
 
 - **Overshoot** (fractional excess over the final value at the first peak):
-$$ OS = \exp (-\frac{\pi \zeta}{\sqrt{1-\zeta^2}}) $$
+
+
+$$
+OS = \exp (-\frac{\pi \zeta}{\sqrt{1-\zeta^2}})
+$$
+
 
 - **Decay ratio** (ratio of the second peak height to the first):
-$$ DR = OS^{ 2} = \exp (-\frac{2\pi \zeta}{\sqrt{1-\zeta^2}}) $$
+
+
+$$
+DR = OS^{ 2} = \exp (-\frac{2\pi \zeta}{\sqrt{1-\zeta^2}})
+$$
+
 
 - **Quarter-decay target (Ziegler-Nichols target):** $DR = 1/4$ corresponds to $\zeta \approx 0.215$.
 
@@ -583,7 +819,13 @@ $$ DR = OS^{ 2} = \exp (-\frac{2\pi \zeta}{\sqrt{1-\zeta^2}}) $$
 :label: instrumentationandcontrol-example-4
 
 A process is governed by the ODE
-$$ \frac{d^2 y}{dt^2} + K \frac{dy}{dt} + 4 y = x(t) $$
+
+
+$$
+\frac{d^2 y}{dt^2} + K \frac{dy}{dt} + 4 y = x(t)
+$$
+
+
 with $y(0) = y'(0) = 0$. The coefficient $K$ (here a real parameter of the process, not a controller gain) can vary. Determine:
 
 
@@ -595,36 +837,74 @@ with $y(0) = y'(0) = 0$. The coefficient $K$ (here a real parameter of the proce
 
 ```{dropdown} Solution Steps
 - **Laplace transform the ODE.** With zero initial conditions, $L\{y\} = s^2 Y$ and $L\{y\} = s Y$:
-$$ s^2 Y + K s Y + 4 Y = X $$
+
+
+$$
+s^2 Y + K s Y + 4 Y = X
+$$
+
+
 Factor out $Y$:
-$$ Y (s^2 + K s + 4) = X  \Longrightarrow  \frac{Y(s)}{X(s)} = \frac{1}{s^2 + K s + 4} $$
+
+
+$$
+Y (s^2 + K s + 4) = X  \Longrightarrow  \frac{Y(s)}{X(s)} = \frac{1}{s^2 + K s + 4}
+$$
 
 
 - **Reduce to standard form.** The denominator constant term is 4; divide numerator and denominator by 4:
-$$ \frac{Y(s)}{X(s)} = \frac{1/4}{\tfrac{1}{4} s^2 + \tfrac{K}{4} s + 1} $$
+
+
+$$
+\frac{Y(s)}{X(s)} = \frac{1/4}{\tfrac{1}{4} s^2 + \tfrac{K}{4} s + 1}
+$$
+
+
 Match against $\dfrac{K_p}{\tau^2 s^2 + 2\zeta\tau s + 1}$:
+
+
 $$
 \begin{align}
-
-
 K_p          &= \frac{1}{4} \\
 \tau^2       &= \frac{1}{4}  \Longrightarrow  \tau = \frac{1}{2}   (positive root) \\
 2 \zeta \tau &= \frac{K}{4}  \Longrightarrow  \zeta = \frac{K}{8 \tau} = \frac{K}{8 \cdot (1/2)} = \frac{K}{4}
 \end{align}
 $$
+
+
 ```
 
 
 ```{dropdown} Solution Steps
 - **(a) Oscillatory range.** A second-order system oscillates if $|\zeta| < 1$:
-$$ |\frac{K}{4}| < 1  \Longrightarrow  -4 < K < 4 $$
+
+
+$$
+|\frac{K}{4}| < 1  \Longrightarrow  -4 < K < 4
+$$
+
+
 *However,* $\zeta < 0$ ($K < 0$) gives unstable, growing oscillations. The transcript's stated answer is the full range $-4 < K < 4$ (oscillatory in form), but for a stable, decaying oscillation you need $0 < K < 4$. The PE-exam convention is to state the full range and then comment on stability separately, so:
-$$  -4 < K < 4    oscillatory (any decay direction) $$
-$$  0 < K < 4    stable, decaying oscillation $$
+
+
+$$
+-4 < K < 4    oscillatory (any decay direction)
+$$
+
+
+$$
+0 < K < 4    stable, decaying oscillation
+$$
 
 
 - **(b) Overdamped range.** Overdamped means $\zeta \geq 1$ (and stable):
-$$ \frac{K}{4} \geq 1  \Longrightarrow   K \geq 4  $$
+
+
+$$
+\frac{K}{4} \geq 1  \Longrightarrow   K \geq 4
+$$
+
+
 At exactly $K = 4$, $\zeta = 1$ (critically damped  -  the boundary).
 
 
@@ -652,15 +932,35 @@ A pressure-control loop's underdamped step response shows a first peak that over
 
 ```{dropdown} Solution Steps
 - **Get $\zeta$ from $DR = 1/4$.**
-$$ DR = e^{-2\pi\zeta/\sqrt{1-\zeta^2}} = 0.25  \Longrightarrow  -\frac{2\pi\zeta}{\sqrt{1-\zeta^2}} = \ln(0.25) = -1.386 $$
-$$ \frac{\zeta}{\sqrt{1-\zeta^2}} = \frac{1.386}{2\pi} = 0.2206 $$
+
+
+$$
+DR = e^{-2\pi\zeta/\sqrt{1-\zeta^2}} = 0.25  \Longrightarrow  -\frac{2\pi\zeta}{\sqrt{1-\zeta^2}} = \ln(0.25) = -1.386
+$$
+
+
+$$
+\frac{\zeta}{\sqrt{1-\zeta^2}} = \frac{1.386}{2\pi} = 0.2206
+$$
+
+
 Squaring: $\zeta^2/(1-\zeta^2) = 0.0487$, so $\zeta^2 = 0.0487(1-\zeta^2)$, i.e. $\zeta^2(1+0.0487) = 0.0487$, giving $\zeta^2 = 0.0464$, $\zeta = 0.215$. \checkmark The well-known "$\zeta \approx 0.215$ for quarter-decay" result.
 
 
 - **Get $\tau$ from the period.** The time from one peak to the next zero crossing is a quarter-period:
-$$ T/4 = 12  \Longrightarrow  T = 48 s $$
+
+
+$$
+T/4 = 12  \Longrightarrow  T = 48 s
+$$
+
+
 Solve $T = 2\pi\tau/\sqrt{1-\zeta^2}$ for $\tau$:
-$$ \tau = \frac{T \sqrt{1-\zeta^2}}{2\pi} = \frac{48 \sqrt{1-0.0464}}{2\pi} = \frac{48 \times 0.9766}{6.283} = 7.46 s $$
+
+
+$$
+\tau = \frac{T \sqrt{1-\zeta^2}}{2\pi} = \frac{48 \sqrt{1-0.0464}}{2\pi} = \frac{48 \times 0.9766}{6.283} = 7.46 s
+$$
 
 
 - **Verification.** $\omega_d = \sqrt{1-\zeta^2}/\tau = 0.9766/7.46 = 0.131$ rad/s. Damped period $T = 2\pi/\omega_d = 48$ s. \checkmark
@@ -688,7 +988,11 @@ The control valve is the physical device on the pipe that the controller's outpu
 
 ```{note}
 For an incompressible liquid (constant density), the volumetric flow rate through a control valve is
-$$ q = C_v \cdot f(\ell) \cdot \sqrt{\frac{\Delta P_v}{G_s}}   (Equation 2) $$
+
+
+$$
+q = C_v \cdot f(\ell) \cdot \sqrt{\frac{\Delta P_v}{G_s}}   (Equation 2)
+$$
 
 
 - $q$  -  volumetric flow rate. US customary units: US gpm. Metric: m\textsuperscript{3}/h with $K_v$ instead of $C_v$ (see conversion below).
@@ -710,7 +1014,13 @@ Limitations: Equation 2 is valid for incompressible liquids only. For gases, the
 US: $C_v$ in gpm/$\sqrt{psi}$, $q$ in gpm, $\Delta P_v$ in psi.
 
 Metric: $K_v$ in m\textsuperscript{3}/h/$\sqrt{bar}$, $q$ in m\textsuperscript{3}/h, $\Delta P_v$ in bar.
-$$ K_v \approx 0.865 C_v   C_v \approx 1.156 K_v $$
+
+
+$$
+K_v \approx 0.865 C_v   C_v \approx 1.156 K_v
+$$
+
+
 A third coefficient $A_v$ in SI (m\textsuperscript{2}) is sometimes used: $A_v = 2.4 \times 10^{-5} C_v$.
 ```
 
@@ -737,7 +1047,13 @@ At $\ell = 0$ all three give $f \to 0$; at $\ell = 1$ all give $f = 1$. The shap
 ```{note}
 **Why the Installed Characteristic Differs from the Inherent One**
 On a real plant, the control valve is in series with a long run of piping, fittings, possibly heat exchangers, and other equipment. The total system pressure drop from a fixed-pressure source to a fixed-pressure sink is fixed, but how it is divided between the valve and the rest of the system depends on flow rate:
-$$ \Delta P_{total} = \Delta P_v(q) + \Delta P_{piping}(q) $$
+
+
+$$
+\Delta P_{total} = \Delta P_v(q) + \Delta P_{piping}(q)
+$$
+
+
 $\Delta P_{piping}$ grows roughly as $q^2$ (Darcy-Weisbach friction). As $q$ increases, $\Delta P_{piping}$ rises and $\Delta P_v = \Delta P_{total} - \Delta P_{piping}$ falls. Therefore:
 
 
@@ -779,25 +1095,56 @@ A control valve with $C_v = 110$ gpm/$\sqrt{psi}$ must pass 200 gpm of water ($G
 
 ```{dropdown} Solution Steps
 - **Solve Equation 2 for the valve characteristic value $f$ regardless of valve type:**
-$$ f(\ell) = \frac{q}{C_v} \sqrt{\frac{G_s}{\Delta P_v}} $$
+
+
+$$
+f(\ell) = \frac{q}{C_v} \sqrt{\frac{G_s}{\Delta P_v}}
+$$
 
 
 - **Linear inherent, (a) $\Delta P_v = 10$ psi, $f = \ell$:**
-$$ \ell_{a,lin} = \frac{200}{110} \sqrt{\frac{1}{10}} = 1.818 \times 0.3162 = 0.575 $$
+
+
+$$
+\ell_{a,lin} = \frac{200}{110} \sqrt{\frac{1}{10}} = 1.818 \times 0.3162 = 0.575
+$$
 
 
 - **Linear installed, (b) compute the actual $\Delta P_v$ at the design flow:**
-$$ \Delta P_v(q=200) = 10 - 0.03(200) = 10 - 6 = 4 psi $$
+
+
+$$
+\Delta P_v(q=200) = 10 - 0.03(200) = 10 - 6 = 4 psi
+$$
+
+
 *Note: less valve pressure drop because the rest of the system is taking 6 psi at this flow.* Then
-$$ \ell_{b,lin} = \frac{200}{110} \sqrt{\frac{1}{4}} = 1.818 \times 0.500 = 0.909 $$
+
+
+$$
+\ell_{b,lin} = \frac{200}{110} \sqrt{\frac{1}{4}} = 1.818 \times 0.500 = 0.909
+$$
+
+
 The installed linear valve is at 91\% lift  -  close to fully open. Little upward authority remains.
 
 
 - **Equal percentage, (a):** the $f$ value is the same as the linear case (0.575) because $f$ depends only on $q$, $C_v$, $G_s$, $\Delta P_v$. Solve $R^{\ell - 1} = f$:
-$$ \ell = 1 + \frac{\log_{10} f}{\log_{10} R} = 1 + \frac{\log_{10}(0.575)}{\log_{10}(40)} = 1 + \frac{-0.2403}{1.6021} = 1 - 0.150 = 0.850 $$
+
+
+$$
+\ell = 1 + \frac{\log_{10} f}{\log_{10} R} = 1 + \frac{\log_{10}(0.575)}{\log_{10}(40)} = 1 + \frac{-0.2403}{1.6021} = 1 - 0.150 = 0.850
+$$
+
 
 - **Equal percentage, (b):** $\Delta P_v = 4$ psi so $f = 200/110 \cdot \sqrt{1/4} = 0.909$ (same as the linear installed case in step 3, because $f$ doesn't depend on the valve type). Then
-$$ \ell = 1 + \frac{\log_{10}(0.909)}{\log_{10}(40)} = 1 + \frac{-0.0414}{1.6021} = 1 - 0.026 = 0.974 $$
+
+
+$$
+\ell = 1 + \frac{\log_{10}(0.909)}{\log_{10}(40)} = 1 + \frac{-0.0414}{1.6021} = 1 - 0.026 = 0.974
+$$
+
+
 ```
 
 
@@ -833,7 +1180,13 @@ $$ \ell = 1 + \frac{\log_{10}(0.909)}{\log_{10}(40)} = 1 + \frac{-0.0414}{1.6021
 ```{note}
 **Valve Gain  -  The Slope of the Installed Characteristic**
 The **valve gain** $K_v(\ell) \equiv dq/d\ell$ is the local sensitivity of the flow to a lift change. The overall **loop gain** of a control loop is the product of the process gain, the controller proportional gain, the sensor gain, and the valve gain:
-$$ K_{loop} = K_p \cdot K_c \cdot K_s \cdot K_v $$
+
+
+$$
+K_{loop} = K_p \cdot K_c \cdot K_s \cdot K_v
+$$
+
+
 For stable, well-damped control, this product should be approximately constant over the operating range. The process gain is set by physics, the sensor gain by calibration, and the controller gain is fixed by the tuning. So the only knob the valve designer has to keep the loop gain constant is the valve characteristic. An equal-percentage valve gives $K_v \propto f \propto q$ (in inherent form), which is constant on a logarithmic scale  -  exactly the property needed to compensate for a process whose gain decreases with throughput (most processes).
 ```
 
@@ -845,7 +1198,13 @@ For stable, well-damped control, this product should be approximately constant o
 Equation 2 predicts that flow rises indefinitely as $\Delta P_v$ rises. In reality, when the pressure at the valve's vena contracta falls below the liquid's vapor pressure $P_v$, vapor bubbles form (cavitation) or the bulk liquid flashes. Past this point, additional $\Delta P_v$ does not increase the flow.
 
 The ISA-defined choked-flow limit:
-$$ \Delta P_{choked} = F_L^2 (P_1 - F_F P_v) $$
+
+
+$$
+\Delta P_{choked} = F_L^2 (P_1 - F_F P_v)
+$$
+
+
 where $F_L$ is the liquid-recovery factor (typical 0.6-0.9), $F_F$ is the liquid critical-pressure ratio factor $\approx 0.96 - 0.28\sqrt{P_v/P_c}$. If $\Delta P_v < \Delta P_{choked}$ flow scales with $\sqrt{\Delta P_v}$ (Equation 2); if $\Delta P_v > \Delta P_{choked}$ flow saturates at $C_v\sqrt{\Delta P_{choked}/G_s}$.
 
 Cavitation is destructive  -  the imploding bubbles erode trim. If predicted in service, specify anti-cavitation trim (multistage, drilled, or path-trim valves).
@@ -857,9 +1216,21 @@ Cavitation is destructive  -  the imploding bubbles erode trim. If predicted in 
 ```{important}
 **ISA Gas-Sizing Equation (Subcritical)**
 For a compressible gas with upstream pressure $P_1$, downstream pressure $P_2$, ratio of specific heats $k = c_p/c_v$:
-$$ q_{std} = 1360 C_v F_p P_1 Y \sqrt{\frac{x}{M T_1 Z}} $$
+
+
+$$
+q_{std} = 1360 C_v F_p P_1 Y \sqrt{\frac{x}{M T_1 Z}}
+$$
+
+
 where $q_{std}$ is in scfh, $P_1$ in psia, $T_1$ in $^\circ$R, $M$ is molecular weight, $Z$ is compressibility, $x = (P_1 - P_2)/P_1$ is the pressure-ratio drop, and $Y$ is the expansion factor
-$$ Y = 1 - \frac{x}{3 F_k x_T} $$
+
+
+$$
+Y = 1 - \frac{x}{3 F_k x_T}
+$$
+
+
 with $F_k = k/1.40$ and $x_T$ a valve-style modifier (0.6-0.8 typical).
 
 **Choked-flow limit for gases:** when $x \geq F_k x_T$, $Y = 2/3$ and flow saturates; further $\Delta P$ has no effect (the flow at the vena contracta has reached sonic velocity). For air, $k = 1.40$ so $F_k = 1$; choked when $P_2/P_1 \leq 0.53$ (typical valve).
@@ -1023,7 +1394,13 @@ We touched on inherent vs. installed in the control-valve section; this section 
 
 ```{note}
 Imagine a pipe segment from a fixed-pressure source $P_{source}$ to a fixed-pressure sink $P_{sink}$. In series: piping + fittings + a control valve. The system mechanical-energy balance is
-$$ P_{source} - P_{sink} = \Delta P_{piping}(q) + \Delta P_v(q) $$
+
+
+$$
+P_{source} - P_{sink} = \Delta P_{piping}(q) + \Delta P_v(q)
+$$
+
+
 where $\Delta P_{piping}$ scales roughly as $f \cdot L_e \cdot \rho v^2/(2D)$, i.e. approximately quadratically in $q$. The valve drop is whatever is left over.
 ```
 
@@ -1233,10 +1610,26 @@ The industry-standard transmitter output is a current loop ranging from 4 mA at 
 ```{important}
 **Calibration Equations**
 Linear map between measurement and 4-20 mA current:
-$$ I [mA] = 4 + 16 \cdot \frac{measurement - zero}{span} $$
-$$ measurement = zero + span \cdot \frac{I - 4}{16} $$
+
+
+$$
+I [mA] = 4 + 16 \cdot \frac{measurement - zero}{span}
+$$
+
+
+$$
+measurement = zero + span \cdot \frac{I - 4}{16}
+$$
+
+
 **Percent of span (\%TO):**
-$$ \%TO = 100 \cdot \frac{measurement - zero}{span} = \frac{I - 4}{16} \cdot 100 $$
+
+
+$$
+\%TO = 100 \cdot \frac{measurement - zero}{span} = \frac{I - 4}{16} \cdot 100
+$$
+
+
 ```
 
 
@@ -1260,18 +1653,42 @@ A pressure transmitter has range 50-250 psi. The controller's analog input reads
 - **Range, zero, span.** Range = 50-250 psi. Zero = 50 psi. Span = 250 - 50 = 200 psi.
 
 - **(a) 12.8 mA $\to$ pressure.**
-$$ \%TO = \frac{12.8 - 4}{16} \times 100 = \frac{8.8}{16} \times 100 = 55.0\% $$
-$$ P = 50 + 0.55(200) = 50 + 110 = 160 psi $$
+
+
+$$
+\%TO = \frac{12.8 - 4}{16} \times 100 = \frac{8.8}{16} \times 100 = 55.0\%
+$$
+
+
+$$
+P = 50 + 0.55(200) = 50 + 110 = 160 psi
+$$
 
 
 - **(b) 200 psi $\to$ mA.**
-$$ \%TO = \frac{200 - 50}{200} \times 100 = 75.0\% $$
-$$ I = 4 + 16(0.75) = 4 + 12 = 16.0 mA $$
+
+
+$$
+\%TO = \frac{200 - 50}{200} \times 100 = 75.0\%
+$$
+
+
+$$
+I = 4 + 16(0.75) = 4 + 12 = 16.0 mA
+$$
 
 
 - **(c) 75 psi $\to$ mA.**
-$$ \%TO = \frac{75 - 50}{200} \times 100 = 12.5\% $$
-$$ I = 4 + 16(0.125) = 4 + 2 = 6.0 mA $$
+
+
+$$
+\%TO = \frac{75 - 50}{200} \times 100 = 12.5\%
+$$
+
+
+$$
+I = 4 + 16(0.125) = 4 + 2 = 6.0 mA
+$$
 
 
 - **Verification by midpoint.** Mid-range pressure 150 psi $\to$ \%TO $= 50\%$ $\to$ $I = 4 + 8 = 12$ mA. \checkmark Linear calibration confirmed.
@@ -1326,8 +1743,18 @@ A typical feedback control loop consists of these blocks connected in series wit
 ```{important}
 **Closed-Loop Transfer Functions**
 For a unit-feedback loop with forward path $G(s) = G_c G_v G_p$ and feedback path $H(s) = G_m$:
-$$ Setpoint response:   \frac{Y(s)}{R(s)} = \frac{G_c G_v G_p}{1 + G_c G_v G_p G_m} $$
-$$ Load response:   \frac{Y(s)}{D(s)} = \frac{G_d}{1 + G_c G_v G_p G_m} $$
+
+
+$$
+Setpoint response:   \frac{Y(s)}{R(s)} = \frac{G_c G_v G_p}{1 + G_c G_v G_p G_m}
+$$
+
+
+$$
+Load response:   \frac{Y(s)}{D(s)} = \frac{G_d}{1 + G_c G_v G_p G_m}
+$$
+
+
 The denominator $1 + G_{OL}(s)$, with $G_{OL} = G_c G_v G_p G_m$, is the **characteristic equation**. Its roots are the closed-loop poles. The loop is stable if and only if all roots have negative real parts (Routh-Hurwitz).
 ```
 
@@ -1346,9 +1773,21 @@ The Proportional-Integral-Derivative (PID) controller is responsible for an esti
 
 ```{note}
 The most common form is the *parallel* or *textbook* form:
-$$ u(t) = u_{bias} + K_c e(t) + \frac{K_c}{\tau_I}\int_0^t e(\tau) d\tau + K_c \tau_D \frac{de(t)}{dt} $$
+
+
+$$
+u(t) = u_{bias} + K_c e(t) + \frac{K_c}{\tau_I}\int_0^t e(\tau) d\tau + K_c \tau_D \frac{de(t)}{dt}
+$$
+
+
 where $e(t) = r(t) - y(t)$ is the error. The Laplace-domain transfer function is
-$$ G_c(s) = \frac{U(s)}{E(s)} = K_c(1 + \frac{1}{\tau_I s} + \tau_D s) $$
+
+
+$$
+G_c(s) = \frac{U(s)}{E(s)} = K_c(1 + \frac{1}{\tau_I s} + \tau_D s)
+$$
+
+
 Three tuning parameters:
 
 
@@ -1421,7 +1860,13 @@ Sign of $K_c$: use the magnitude formula and *set the controller direct/reverse 
 ```{important}
 **IMC/Lambda Tuning for an FOPDT**
 Internal Model Control assumes an inverse-process controller filtered by a first-order lag with closed-loop time constant $\lambda$. The resulting PI parameters are
-$$ K_c = \frac{1}{K} \cdot \frac{\tau}{\lambda + \theta},   \tau_I = \tau $$
+
+
+$$
+K_c = \frac{1}{K} \cdot \frac{\tau}{\lambda + \theta},   \tau_I = \tau
+$$
+
+
 $\lambda$ is the user's choice. Aggressive: $\lambda \approx \theta$; moderate: $\lambda \approx \tau$; conservative: $\lambda \approx 3\tau$. IMC gives a stable, smooth, no-overshoot setpoint response.
 ```
 
@@ -1437,30 +1882,32 @@ Continuing the previous FOPDT example, $K = -1.5$ $^\circ$F/gpm, $\tau = 2.14$ m
 
 ```{dropdown} Solution Steps
 - **(a) Ziegler-Nichols PI.**
+
+
 $$
 \begin{align}
-
-
 K_c &= \frac{0.9}{|K|} \frac{\tau}{\theta} = \frac{0.9}{1.5} \frac{2.14}{5.4} = 0.60 \times 0.396 = 0.238 gpm/^\circ F \\
 \tau_I &= 3.33 \theta = 3.33 \times 5.4 = 18.0 min
 \end{align}
 $$
 
+
 - **(b) Cohen-Coon PI.** With $\theta/\tau = 5.4/2.14 = 2.524$:
+
+
 $$
 \begin{align}
-
-
 K_c &= \frac{1}{1.5} \frac{2.14}{5.4} (0.9 + \frac{5.4}{12 \times 2.14}) = 0.667 \times 0.396 \times (0.9 + 0.210) = 0.293 gpm/^\circ F \\
 \tau_I &= 5.4 \cdot \frac{30 + 3(2.524)}{9 + 20(2.524)} = 5.4 \cdot \frac{37.57}{59.48} = 5.4 \times 0.632 = 3.41 min
 \end{align}
 $$
 
+
 - **(c) IMC PI with $\lambda = \tau = 2.14$ min.**
+
+
 $$
 \begin{align}
-
-
 K_c &= \frac{1}{|K|} \frac{\tau}{\lambda + \theta} = \frac{1}{1.5} \frac{2.14}{2.14 + 5.4} = \frac{1}{1.5} \times 0.284 = 0.189 gpm/^\circ F \\
 \tau_I &= \tau = 2.14 min
 \end{align}
@@ -1537,12 +1984,28 @@ A PI controller $G_c(s) = K_c(1 + 1/(2 s))$ controls a process $G_p(s) = 1/[(s+1
 
 ```{dropdown} Solution Steps
 - **Open-loop transfer function:**
-$$ G_{OL}(s) = G_c G_p = K_c \frac{1}{(s+1)(s+2)}\cdot \frac{2s + 1}{2s} = \frac{K_c (2s + 1)}{2 s (s+1)(s+2)} $$
+
+
+$$
+G_{OL}(s) = G_c G_p = K_c \frac{1}{(s+1)(s+2)}\cdot \frac{2s + 1}{2s} = \frac{K_c (2s + 1)}{2 s (s+1)(s+2)}
+$$
+
 
 - **Characteristic equation:** $1 + G_{OL} = 0$, i.e.\
-$$ 2 s (s+1)(s+2) + K_c (2s + 1) = 0 $$
+
+
+$$
+2 s (s+1)(s+2) + K_c (2s + 1) = 0
+$$
+
+
 Expand:
-$$ 2 s (s^2 + 3s + 2) + 2 K_c s + K_c = 2 s^3 + 6 s^2 + 4 s + 2 K_c s + K_c = 2 s^3 + 6 s^2 + (4 + 2 K_c) s + K_c = 0 $$
+
+
+$$
+2 s (s^2 + 3s + 2) + 2 K_c s + K_c = 2 s^3 + 6 s^2 + 4 s + 2 K_c s + K_c = 2 s^3 + 6 s^2 + (4 + 2 K_c) s + K_c = 0
+$$
+
 
 - **Routh array** for $a_3 s^3 + a_2 s^2 + a_1 s + a_0$ with $a_3 = 2$, $a_2 = 6$, $a_1 = 4 + 2 K_c$, $a_0 = K_c$:
 
@@ -1618,7 +2081,13 @@ The single-loop PID is the workhorse, but many process challenges  -  significan
 ```{note}
 **Feedforward Algebra**
 **Feedforward** measures the disturbance directly, predicts its effect on the controlled variable from a model, and pre-compensates by adjusting the manipulated variable before the disturbance reaches the output. The ideal feedforward controller is
-$$ G_{ff}(s) = -\frac{G_d(s)}{G_p(s)} $$
+
+
+$$
+G_{ff}(s) = -\frac{G_d(s)}{G_p(s)}
+$$
+
+
 where $G_d$ is the disturbance-to-output transfer function and $G_p$ is the manipulated-to-output. This perfectly cancels the disturbance in the limit of a perfect model. Practical considerations:
 
 
@@ -1643,7 +2112,13 @@ where $G_d$ is the disturbance-to-output transfer function and $G_p$ is the mani
 
 ```{note}
 **Ratio control** sets the setpoint of one flow as a fixed ratio of another measured flow. The classic application is air/fuel ratio in combustion:
-$$ Air setpoint = R \times Fuel flow $$
+
+
+$$
+Air setpoint = R \times Fuel flow
+$$
+
+
 The implementation is a multiplier block ahead of a flow PI controller. Care is needed during transients: the air loop must lead the fuel loop on increases (avoid fuel-rich, smoke) and lag on decreases (avoid lean blowout).
 ```
 
@@ -1670,7 +2145,11 @@ The controller effectively sees the no-delay process, so it can be tuned for tha
 ```{note}
 **Pairing Loops to Minimize Interaction**
 When a process has multiple controlled and manipulated variables (e.g. a distillation column with reflux and reboiler manipulated, distillate and bottoms compositions controlled), the choice of which manipulated variable pairs with which controlled variable matters. The **Relative Gain Array (RGA)** quantifies the interaction:
-$$ \Lambda = G(0) \otimes [G(0)^{-1}]^T   (Hadamard product of G and the transpose of its inverse, evaluated at s=0) $$
+
+
+$$
+\Lambda = G(0) \otimes [G(0)^{-1}]^T   (Hadamard product of G and the transpose of its inverse, evaluated at s=0)
+$$
 
 
 - $\lambda_{ij} = 1$: no interaction; perfect pairing.
@@ -1722,30 +2201,64 @@ This last section gathers the most exam-relevant formulas and decisions in one p
 
 ```{tip}
 **First-Order Step Response**
-$$ y(t) = K M (1 - e^{-t/\tau}) $$
+
+
+$$
+y(t) = K M (1 - e^{-t/\tau})
+$$
+
+
 Landmarks: 63.2\% at $\tau$; 86.5\% at $2\tau$; 95.0\% at $3\tau$; 99.3\% at $5\tau$. Slope at $t=0$ is $KM/\tau$. Add back $y$ before quoting absolute value.
 ```
 
 
 ```{tip}
 **FOPDT and Sundaresan-Krishnaswamy**
-$$ G(s) = \frac{K e^{-\theta s}}{\tau s + 1} $$
-$$ \theta = 1.3 t_{35.3\%} - 0.29 t_{85.3\%},   \tau = 0.67(t_{85.3\%} - t_{35.3\%}),   K = \Delta y_{ss}/\Delta x $$
+
+
+$$
+G(s) = \frac{K e^{-\theta s}}{\tau s + 1}
+$$
+
+
+$$
+\theta = 1.3 t_{35.3\%} - 0.29 t_{85.3\%},   \tau = 0.67(t_{85.3\%} - t_{35.3\%}),   K = \Delta y_{ss}/\Delta x
+$$
+
+
 Controllability: $\theta/\tau < 0.1$ easy; $0.1$-$1$ classical; $> 1$ requires Smith predictor or feedforward.
 ```
 
 
 ```{tip}
 **Second-Order Damping**
-$$ \zeta = \frac{b}{2\sqrt{ac}},   \tau = \sqrt{a/c}   (for ay+by+cy = dx) $$
+
+
+$$
+\zeta = \frac{b}{2\sqrt{ac}},   \tau = \sqrt{a/c}   (for ay+by+cy = dx)
+$$
+
+
 $\zeta > 1$ overdamped; $\zeta = 1$ critical; $0 < \zeta < 1$ underdamped; $\zeta = 0$ undamped; $\zeta < 0$ unstable. Quarter-decay ($DR = 1/4$) at $\zeta \approx 0.215$.
-$$ OS = e^{-\pi\zeta/\sqrt{1-\zeta^2}},   DR = OS^2,   T = 2\pi\tau/\sqrt{1-\zeta^2} $$
+
+
+$$
+OS = e^{-\pi\zeta/\sqrt{1-\zeta^2}},   DR = OS^2,   T = 2\pi\tau/\sqrt{1-\zeta^2}
+$$
+
+
 ```
 
 
 ```{tip}
 **Control-Valve Sizing**
-$$ q = C_v f(\ell) \sqrt{\Delta P_v / G_s}   (liquid, gpm, psi, gpm/\sqrt{psi}) $$
+
+
+$$
+q = C_v f(\ell) \sqrt{\Delta P_v / G_s}   (liquid, gpm, psi, gpm/\sqrt{psi})
+$$
+
+
 Linear $f = \ell$; Equal-pct $f = R^{\ell-1}$; Quick-opening $f = \sqrt{\ell}$.
 $\beta = \Delta P_v/\Delta P_{total}$: $\beta > 0.5$ linear; $\beta < 0.5$ equal-pct.
 $K_v$ (metric) $\approx 0.865 C_v$. Target lift $0.3$-$0.75$ at design.
@@ -1761,7 +2274,13 @@ Cooling water: FO. Steam: FC. Vent: FO. Drain on inventory: FC. Hazardous reagen
 
 ```{tip}
 **4-20 mA Calibration**
-$$ I = 4 + 16 \frac{measurement - zero}{span},   \%TO = (I-4)/16 \times 100 $$
+
+
+$$
+I = 4 + 16 \frac{measurement - zero}{span},   \%TO = (I-4)/16 \times 100
+$$
+
+
 Zero = low end of range; Span = high $-$ low. Live zero (4 mA) distinguishes broken loop from low reading.
 ```
 

@@ -521,9 +521,12 @@ An instrument is shown as a small circle (“balloon” or “bubble”) with a 
 <div class="proof example admonition" id="processdesign-example-0">
 <p class="admonition-title"><span class="caption-number">Example 133 </span> (Identifying Information by Diagram Type)</p>
 <section class="example-content" id="proof-content">
-<p>For the ethylene oxide production process, ethylene and oxygen feed a catalytic reactor where the main reaction is
-$<span class="math notranslate nohighlight">\( \mathrm{C_2H_4 + \tfrac{1}{2} O_2 \rightarrow C_2H_4O} \)</span><span class="math notranslate nohighlight">\(
-with side reactions producing \)</span>\mathrm{CO_2}<span class="math notranslate nohighlight">\( and \)</span>\mathrm{H_2O}$. The reactor effluent flashes; unreacted ethylene is recycled; ethylene oxide is purified in a downstream distillation train. Which diagram type would show each of the following? (a) the recycle of unreacted ethylene back to the reactor; (b) the fail-safe action of the cooling-water valve on the reactor jacket; © the molar composition of the bottoms stream from the second column; (d) the carbon-steel material specification of the reactor-effluent piping; (e) the overall production rate of ethylene oxide.</p>
+<p>For the ethylene oxide production process, ethylene and oxygen feed a catalytic reactor where the main reaction is</p>
+<div class="math notranslate nohighlight">
+\[
+\mathrm{C_2H_4 + \tfrac{1}{2} O_2 \rightarrow C_2H_4O}
+\]</div>
+<p>with side reactions producing <span class="math notranslate nohighlight">\(\mathrm{CO_2}\)</span> and <span class="math notranslate nohighlight">\(\mathrm{H_2O}\)</span>. The reactor effluent flashes; unreacted ethylene is recycled; ethylene oxide is purified in a downstream distillation train. Which diagram type would show each of the following? (a) the recycle of unreacted ethylene back to the reactor; (b) the fail-safe action of the cooling-water valve on the reactor jacket; © the molar composition of the bottoms stream from the second column; (d) the carbon-steel material specification of the reactor-effluent piping; (e) the overall production rate of ethylene oxide.</p>
 </section>
 </div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -632,37 +635,55 @@ The pinch <em>thermodynamically decouples</em> the problem into two independent 
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Geometry of a counter-flow exchanger at the pinch.</strong> Designate inlet temperatures <span class="math notranslate nohighlight">\(T_h^{in}, T_c^{in}\)</span> and outlet temperatures <span class="math notranslate nohighlight">\(T_h^{out}, T_c^{out}\)</span>. Define
-$<span class="math notranslate nohighlight">\( \Delta T_1 \equiv T_h^{out} - T_c^{in},   \Delta T_2 \equiv T_h^{in} - T_c^{out} \)</span><span class="math notranslate nohighlight">\(
-so \)</span>\Delta T_1<span class="math notranslate nohighlight">\( is at the &quot;cold end&quot; and \)</span>\Delta T_2$ is at the “hot end” of the exchanger.</p></li>
-<li><p class="sd-card-text"><strong>Energy balances.</strong> For each stream, <span class="math notranslate nohighlight">\(Q\)</span> is the duty exchanged:
-$$
-\begin{align}</p></li>
+<li><p class="sd-card-text"><strong>Geometry of a counter-flow exchanger at the pinch.</strong> Designate inlet temperatures <span class="math notranslate nohighlight">\(T_h^{in}, T_c^{in}\)</span> and outlet temperatures <span class="math notranslate nohighlight">\(T_h^{out}, T_c^{out}\)</span>. Define</p></li>
 </ul>
-<p class="sd-card-text">Q &amp;= CP_h (T_h^{in} - T_h^{out}) \
+<div class="math notranslate nohighlight">
+\[
+\Delta T_1 \equiv T_h^{out} - T_c^{in},   \Delta T_2 \equiv T_h^{in} - T_c^{out}
+\]</div>
+<p class="sd-card-text">so <span class="math notranslate nohighlight">\(\Delta T_1\)</span> is at the “cold end” and <span class="math notranslate nohighlight">\(\Delta T_2\)</span> is at the “hot end” of the exchanger.</p>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Energy balances.</strong> For each stream, <span class="math notranslate nohighlight">\(Q\)</span> is the duty exchanged:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+Q &amp;= CP_h (T_h^{in} - T_h^{out}) \\
 Q &amp;= CP_c (T_c^{out} - T_c^{in})
 \end{align}
-$<span class="math notranslate nohighlight">\(
-Rearrange the second:
-\)</span><span class="math notranslate nohighlight">\( T_c^{out} - T_c^{in} = \frac{Q}{CP_c},   T_h^{in} - T_h^{out} = \frac{Q}{CP_h} \)</span>$</p>
+\end{split}\]</div>
+<p class="sd-card-text">Rearrange the second:</p>
+<div class="math notranslate nohighlight">
+\[
+T_c^{out} - T_c^{in} = \frac{Q}{CP_c},   T_h^{in} - T_h^{out} = \frac{Q}{CP_h}
+\]</div>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Subtract one equation from the other to relate <span class="math notranslate nohighlight">\(\Delta T_2 - \Delta T_1\)</span>.</strong>
-$$
-\begin{align}</p></li>
+<li><p class="sd-card-text"><strong>Subtract one equation from the other to relate <span class="math notranslate nohighlight">\(\Delta T_2 - \Delta T_1\)</span>.</strong></p></li>
 </ul>
-<p class="sd-card-text">\Delta T_2 - \Delta T_1 &amp;= (T_h^{in} - T_c^{out}) - (T_h^{out} - T_c^{in}) \
-&amp;= (T_h^{in} - T_h^{out}) - (T_c^{out} - T_c^{in}) \
-&amp;= \frac{Q}{CP_h} - \frac{Q}{CP_c} \
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\Delta T_2 - \Delta T_1 &amp;= (T_h^{in} - T_c^{out}) - (T_h^{out} - T_c^{in}) \\
+&amp;= (T_h^{in} - T_h^{out}) - (T_c^{out} - T_c^{in}) \\
+&amp;= \frac{Q}{CP_h} - \frac{Q}{CP_c} \\
 &amp;= Q \frac{CP_c - CP_h}{CP_h \cdot CP_c}
 \end{align}
-$$</p>
+\end{split}\]</div>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Apply the pinch constraint <span class="math notranslate nohighlight">\(\Delta T \geq \Delta T_{\min}\)</span> on each side.</strong></p></li>
-<li><p class="sd-card-text"><strong>Above the pinch:</strong> the exchanger’s hot end is the pinch, so <span class="math notranslate nohighlight">\(\Delta T_2 = \Delta T_{\min}\)</span>. Then <span class="math notranslate nohighlight">\(\Delta T_1 = \Delta T_{\min} + Q (CP_c - CP_h)/(CP_h CP_c)\)</span>. For feasibility we need <span class="math notranslate nohighlight">\(\Delta T_1 \geq \Delta T_{\min}\)</span>, which requires the extra term to be non-negative:
-$<span class="math notranslate nohighlight">\( Q \frac{CP_c - CP_h}{CP_h CP_c} \geq 0  \Longrightarrow  CP_c \geq CP_h   (above pinch) \)</span>$</p></li>
-<li><p class="sd-card-text"><strong>Below the pinch:</strong> the exchanger’s cold end is the pinch, so <span class="math notranslate nohighlight">\(\Delta T_1 = \Delta T_{\min}\)</span>. Then <span class="math notranslate nohighlight">\(\Delta T_2 = \Delta T_{\min} + Q (CP_h - CP_c)/(CP_h CP_c)\)</span>. Feasibility requires <span class="math notranslate nohighlight">\(\Delta T_2 \geq \Delta T_{\min}\)</span>:
-$<span class="math notranslate nohighlight">\( CP_h \geq CP_c   (below pinch) \)</span>$</p></li>
+<li><p class="sd-card-text"><strong>Above the pinch:</strong> the exchanger’s hot end is the pinch, so <span class="math notranslate nohighlight">\(\Delta T_2 = \Delta T_{\min}\)</span>. Then <span class="math notranslate nohighlight">\(\Delta T_1 = \Delta T_{\min} + Q (CP_c - CP_h)/(CP_h CP_c)\)</span>. For feasibility we need <span class="math notranslate nohighlight">\(\Delta T_1 \geq \Delta T_{\min}\)</span>, which requires the extra term to be non-negative:</p></li>
 </ul>
+<div class="math notranslate nohighlight">
+\[
+Q \frac{CP_c - CP_h}{CP_h CP_c} \geq 0  \Longrightarrow  CP_c \geq CP_h   (above pinch)
+\]</div>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Below the pinch:</strong> the exchanger’s cold end is the pinch, so <span class="math notranslate nohighlight">\(\Delta T_1 = \Delta T_{\min}\)</span>. Then <span class="math notranslate nohighlight">\(\Delta T_2 = \Delta T_{\min} + Q (CP_h - CP_c)/(CP_h CP_c)\)</span>. Feasibility requires <span class="math notranslate nohighlight">\(\Delta T_2 \geq \Delta T_{\min}\)</span>:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+CP_h \geq CP_c   (below pinch)
+\]</div>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -718,17 +739,36 @@ C2 | 80 | 140 | 5 | Cold (above pinch only)</p>
 </ul>
 <p class="sd-card-text">Therefore the only feasible pinch pairing is <strong>H1-C2</strong> and <strong>H2-C1</strong>.</p>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Match H1-C2 and maximize duty.</strong>
-$<span class="math notranslate nohighlight">\( Q_{H1-C2} = CP_{H1} (T_{H1}^{in} - T_{H1}^{out}) = 3 \times (180 - 90) = 270 kW \)</span><span class="math notranslate nohighlight">\(
-Check the cold-side response: C2 enters at 80\)</span>^\circ<span class="math notranslate nohighlight">\(C with \)</span>CP = 5<span class="math notranslate nohighlight">\(. After receiving 270 kW it would exit at
-\)</span><span class="math notranslate nohighlight">\( T_{C2}^{out} = 80 + \frac{270}{5} = 134^\circ C \)</span><span class="math notranslate nohighlight">\(
-Required final temperature of C2 is 140\)</span>^\circ<span class="math notranslate nohighlight">\(C, so 6\)</span>^\circ<span class="math notranslate nohighlight">\(C (\)</span>= 30$ kW additional duty) still must be supplied. H1 is fully “ticked off” (cooled to its pinch temperature).</p></li>
-<li><p class="sd-card-text"><strong>Match H2-C1 and maximize duty.</strong>
-$<span class="math notranslate nohighlight">\( Q_{H2-C1, max possible from hot} = 2 \times (150 - 90) = 120 kW \)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\( Q_{C1, required} = 2 \times (135 - 80) = 110 kW \)</span><span class="math notranslate nohighlight">\(
-Cold-side is the binding constraint: take \)</span>Q = 110<span class="math notranslate nohighlight">\( kW. C1 reaches its target 135\)</span>^\circ<span class="math notranslate nohighlight">\(C; H2 cools to
-\)</span><span class="math notranslate nohighlight">\( T_{H2}^{out} = 150 - \frac{110}{2} = 95^\circ C \)</span><span class="math notranslate nohighlight">\(
-H2 stops at 95\)</span>^\circ<span class="math notranslate nohighlight">\(C, which is 5\)</span>^\circ<span class="math notranslate nohighlight">\(C above the pinch. The remaining 5 \)</span>\times$ 2 = 10 kW of cooling cannot be done above the pinch (no cold utility allowed), so this residual is carried over to the below-pinch sub-problem.</p></li>
+<li><p class="sd-card-text"><strong>Match H1-C2 and maximize duty.</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+Q_{H1-C2} = CP_{H1} (T_{H1}^{in} - T_{H1}^{out}) = 3 \times (180 - 90) = 270 kW
+\]</div>
+<p class="sd-card-text">Check the cold-side response: C2 enters at 80<span class="math notranslate nohighlight">\(^\circ\)</span>C with <span class="math notranslate nohighlight">\(CP = 5\)</span>. After receiving 270 kW it would exit at</p>
+<div class="math notranslate nohighlight">
+\[
+T_{C2}^{out} = 80 + \frac{270}{5} = 134^\circ C
+\]</div>
+<p class="sd-card-text">Required final temperature of C2 is 140<span class="math notranslate nohighlight">\(^\circ\)</span>C, so 6<span class="math notranslate nohighlight">\(^\circ\)</span>C (<span class="math notranslate nohighlight">\(= 30\)</span> kW additional duty) still must be supplied. H1 is fully “ticked off” (cooled to its pinch temperature).</p>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Match H2-C1 and maximize duty.</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+Q_{H2-C1, max possible from hot} = 2 \times (150 - 90) = 120 kW
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+Q_{C1, required} = 2 \times (135 - 80) = 110 kW
+\]</div>
+<p class="sd-card-text">Cold-side is the binding constraint: take <span class="math notranslate nohighlight">\(Q = 110\)</span> kW. C1 reaches its target 135<span class="math notranslate nohighlight">\(^\circ\)</span>C; H2 cools to</p>
+<div class="math notranslate nohighlight">
+\[
+T_{H2}^{out} = 150 - \frac{110}{2} = 95^\circ C
+\]</div>
+<p class="sd-card-text">H2 stops at 95<span class="math notranslate nohighlight">\(^\circ\)</span>C, which is 5<span class="math notranslate nohighlight">\(^\circ\)</span>C above the pinch. The remaining 5 <span class="math notranslate nohighlight">\(\times\)</span> 2 = 10 kW of cooling cannot be done above the pinch (no cold utility allowed), so this residual is carried over to the below-pinch sub-problem.</p>
+<ul class="simple">
 <li><p class="sd-card-text"><strong>Hot-utility tally above the pinch.</strong></p></li>
 <li><p class="sd-card-text">C2 needs 30 kW more (from <span class="math notranslate nohighlight">\(134 \to 140^\circ\)</span>C).</p></li>
 <li><p class="sd-card-text">C1 is satisfied (took 110 kW from H2).</p></li>
@@ -748,12 +788,23 @@ H2 stops at 95\)</span>^\circ<span class="math notranslate nohighlight">\(C, whi
 <li><p class="sd-card-text"><strong>Apply CP rule below pinch (<span class="math notranslate nohighlight">\(CP_h \geq CP_c\)</span>).</strong></p></li>
 <li><p class="sd-card-text">C1 (<span class="math notranslate nohighlight">\(CP = 2\)</span>) needs a hot stream with <span class="math notranslate nohighlight">\(CP \geq 2\)</span>. Both H1 (<span class="math notranslate nohighlight">\(CP = 3\)</span>) and H2 (<span class="math notranslate nohighlight">\(CP = 2\)</span>) qualify.</p></li>
 <li><p class="sd-card-text">Choose H1-C1 first (larger <span class="math notranslate nohighlight">\(CP\)</span> margin gives more design flexibility).</p></li>
-<li><p class="sd-card-text"><strong>Match H1-C1 below pinch and maximize.</strong>
-$<span class="math notranslate nohighlight">\( Q_{H1, available below} = 3 \times (90 - 60) = 90 kW \)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\( Q_{C1, below} = 2 \times (80 - 30) = 100 kW \)</span><span class="math notranslate nohighlight">\(
-Hot-side is binding (H1 has only 90 kW available). Take \)</span>Q = 90<span class="math notranslate nohighlight">\( kW. H1 reaches its target 60\)</span>^\circ<span class="math notranslate nohighlight">\(C; C1 only heats to
-\)</span><span class="math notranslate nohighlight">\( T_{C1}^{out} = 30 + \frac{90}{2} = 75^\circ C \)</span><span class="math notranslate nohighlight">\(
-C1 still needs 5\)</span>^\circ<span class="math notranslate nohighlight">\(C of heating, \)</span>= 2 \times 5 = 10$ kW, which we attempt from H2.</p></li>
+<li><p class="sd-card-text"><strong>Match H1-C1 below pinch and maximize.</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+Q_{H1, available below} = 3 \times (90 - 60) = 90 kW
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+Q_{C1, below} = 2 \times (80 - 30) = 100 kW
+\]</div>
+<p class="sd-card-text">Hot-side is binding (H1 has only 90 kW available). Take <span class="math notranslate nohighlight">\(Q = 90\)</span> kW. H1 reaches its target 60<span class="math notranslate nohighlight">\(^\circ\)</span>C; C1 only heats to</p>
+<div class="math notranslate nohighlight">
+\[
+T_{C1}^{out} = 30 + \frac{90}{2} = 75^\circ C
+\]</div>
+<p class="sd-card-text">C1 still needs 5<span class="math notranslate nohighlight">\(^\circ\)</span>C of heating, <span class="math notranslate nohighlight">\(= 2 \times 5 = 10\)</span> kW, which we attempt from H2.</p>
+<ul class="simple">
 <li><p class="sd-card-text"><strong>Match H2-C1 (residual) below pinch.</strong>
 H2 (carrying its 5<span class="math notranslate nohighlight">\(^\circ\)</span>C above-pinch residual but here treating it as entering the below-pinch zone at 90<span class="math notranslate nohighlight">\(^\circ\)</span>C with <span class="math notranslate nohighlight">\(CP = 2\)</span> and need to cool to 30<span class="math notranslate nohighlight">\(^\circ\)</span>C, duty 120 kW available) can heat C1 from 75 to 80<span class="math notranslate nohighlight">\(^\circ\)</span>C: duty <span class="math notranslate nohighlight">\(= 2 \times 5 = 10\)</span> kW. H2 cools by <span class="math notranslate nohighlight">\(10/2 = 5^\circ\)</span>C, leaving it at <span class="math notranslate nohighlight">\(90 - 5 = 85^\circ\)</span>C still needing to fall to 30<span class="math notranslate nohighlight">\(^\circ\)</span>C.</p></li>
 <li><p class="sd-card-text"><strong>Cold-utility consumption below pinch.</strong>
@@ -837,11 +888,17 @@ C2 | 40 | 112 | 15</p>
 <li><p class="sd-card-text"><span class="math notranslate nohighlight">\(Q_{H,\min} = 300\)</span> kW (the hot utility we added at the top to make the cascade feasible).</p></li>
 <li><p class="sd-card-text"><span class="math notranslate nohighlight">\(Q_{C,\min} = 220\)</span> kW (the residual cascade at the bottom  -  what must be removed by cold utility).</p></li>
 <li><p class="sd-card-text"><strong>Pinch</strong> is where the corrected cascade first reaches zero. That happened at the bottom of the 160-120 interval, i.e. at <em>interval</em> temperature 120<span class="math notranslate nohighlight">\(^\circ\)</span>C. Converting back: hot pinch <span class="math notranslate nohighlight">\(= 120 + 5 = 125^\circ\)</span>C, cold pinch <span class="math notranslate nohighlight">\(= 120 - 5 = 115^\circ\)</span>C.</p></li>
-<li><p class="sd-card-text"><strong>Verification by overall energy balance.</strong>
-$<span class="math notranslate nohighlight">\( \sum (CP \cdot \Delta T)_{hot} = 10(175-45) + 40(125-65) = 1300 + 2400 = 3700 kW (total hot duty) \)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\( \sum (CP \cdot \Delta T)_{cold} = 20(155-20) + 15(112-40) = 2700 + 1080 = 3780 kW (total cold duty) \)</span><span class="math notranslate nohighlight">\(
-Difference: \)</span>3780 - 3700 = 80<span class="math notranslate nohighlight">\( kW (net deficit of hot, i.e. more cold needs heat than hot provides). Net hot utility minus net cold utility from the cascade: \)</span>300 - 220 = 80$ kW. \checkmark The balance closes.</p></li>
+<li><p class="sd-card-text"><strong>Verification by overall energy balance.</strong></p></li>
 </ul>
+<div class="math notranslate nohighlight">
+\[
+\sum (CP \cdot \Delta T)_{hot} = 10(175-45) + 40(125-65) = 1300 + 2400 = 3700 kW (total hot duty)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\sum (CP \cdot \Delta T)_{cold} = 20(155-20) + 15(112-40) = 2700 + 1080 = 3780 kW (total cold duty)
+\]</div>
+<p class="sd-card-text">Difference: <span class="math notranslate nohighlight">\(3780 - 3700 = 80\)</span> kW (net deficit of hot, i.e. more cold needs heat than hot provides). Net hot utility minus net cold utility from the cascade: <span class="math notranslate nohighlight">\(300 - 220 = 80\)</span> kW. \checkmark The balance closes.</p>
 </div>
 </details><div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -862,9 +919,12 @@ Difference: \)</span>3780 - 3700 = 80<span class="math notranslate nohighlight">
 <h3>The Generic Purchase Cost Equation<a class="headerlink" href="#the-generic-purchase-cost-equation" title="Link to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The installed purchase cost of a piece of equipment, <span class="math notranslate nohighlight">\(C_P\)</span>, is built from a <strong>base cost</strong> <span class="math notranslate nohighlight">\(C_B\)</span> (a function of size only, e.g. heat-exchanger area or pump power, evaluated for carbon-steel construction at low pressure in a reference base year) and correction factors for non-standard conditions:
-$<span class="math notranslate nohighlight">\( C_P = C_B \cdot F_M \cdot F_P \cdot F_L \cdot \frac{CEPCI_{now}}{CEPCI_{base}} \)</span>$
-where:</p>
+<p>The installed purchase cost of a piece of equipment, <span class="math notranslate nohighlight">\(C_P\)</span>, is built from a <strong>base cost</strong> <span class="math notranslate nohighlight">\(C_B\)</span> (a function of size only, e.g. heat-exchanger area or pump power, evaluated for carbon-steel construction at low pressure in a reference base year) and correction factors for non-standard conditions:</p>
+<div class="math notranslate nohighlight">
+\[
+C_P = C_B \cdot F_M \cdot F_P \cdot F_L \cdot \frac{CEPCI_{now}}{CEPCI_{base}}
+\]</div>
+<p>where:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(F_M\)</span> adjusts for material of construction (1.0 for CS, <span class="math notranslate nohighlight">\(&gt; 1\)</span> for SS, Hastelloy, Ti).</p></li>
 <li><p><span class="math notranslate nohighlight">\(F_P\)</span> adjusts for design pressure (1.0 at <span class="math notranslate nohighlight">\(\sim\)</span>1 bar, growing with pressure).</p></li>
@@ -888,12 +948,18 @@ where:</p>
 <h3>The Base-Cost Correlation<a class="headerlink" href="#the-base-cost-correlation" title="Link to this heading">#</a></h3>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p><strong>Turton Base-Cost Form (CEPCI = 397)</strong>
-$<span class="math notranslate nohighlight">\( \log_{10}(C_B) = K_1 + K_2 \log_{10}(A) + K_3 [\log_{10}(A)]^2 \)</span><span class="math notranslate nohighlight">\(
-with \)</span>A<span class="math notranslate nohighlight">\( in m\)</span>^2<span class="math notranslate nohighlight">\( for heat exchangers (or kW for pumps, m\)</span>^3<span class="math notranslate nohighlight">\( for vessels, etc.). For a shell-and-tube *floating-head* exchanger, \)</span>K_1 = 4.8306<span class="math notranslate nohighlight">\(, \)</span>K_2 = -0.8509<span class="math notranslate nohighlight">\(, \)</span>K_3 = 0.3187$. For a <em>fixed-tubesheet</em> exchanger, slightly lower; for a <em>U-tube</em>, in between.</p>
-<p>The pressure factor follows a similar log-quadratic form:
-$<span class="math notranslate nohighlight">\( \log_{10}(F_P) = C_1 + C_2 \log_{10}(P) + C_3 [\log_{10}(P)]^2 \)</span><span class="math notranslate nohighlight">\(
-with \)</span>P$ in barg.</p>
+<p><strong>Turton Base-Cost Form (CEPCI = 397)</strong></p>
+<div class="math notranslate nohighlight">
+\[
+\log_{10}(C_B) = K_1 + K_2 \log_{10}(A) + K_3 [\log_{10}(A)]^2
+\]</div>
+<p>with <span class="math notranslate nohighlight">\(A\)</span> in m<span class="math notranslate nohighlight">\(^2\)</span> for heat exchangers (or kW for pumps, m<span class="math notranslate nohighlight">\(^3\)</span> for vessels, etc.). For a shell-and-tube <em>floating-head</em> exchanger, <span class="math notranslate nohighlight">\(K_1 = 4.8306\)</span>, <span class="math notranslate nohighlight">\(K_2 = -0.8509\)</span>, <span class="math notranslate nohighlight">\(K_3 = 0.3187\)</span>. For a <em>fixed-tubesheet</em> exchanger, slightly lower; for a <em>U-tube</em>, in between.</p>
+<p>The pressure factor follows a similar log-quadratic form:</p>
+<div class="math notranslate nohighlight">
+\[
+\log_{10}(F_P) = C_1 + C_2 \log_{10}(P) + C_3 [\log_{10}(P)]^2
+\]</div>
+<p>with <span class="math notranslate nohighlight">\(P\)</span> in barg.</p>
 </div>
 </section>
 <section id="six-tenths-power-scaling-rule-williams">
@@ -901,9 +967,12 @@ with \)</span>P$ in barg.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Quick Cost Scaling with Capacity</strong>
-When detailed correlations are not available, use the <strong>six-tenths rule</strong>:
-$<span class="math notranslate nohighlight">\( C_2 = C_1 (\frac{S_2}{S_1})^n,   n \approx 0.6 \)</span><span class="math notranslate nohighlight">\(
-where \)</span>S<span class="math notranslate nohighlight">\( is a size or capacity parameter (area, volume, power). \)</span>n = 0.6<span class="math notranslate nohighlight">\( is the historical average; for specific equipment classes, \)</span>n$ ranges from 0.5 to 0.8 (Peters | Timmerhaus tabulates values). The rule reflects the economies of scale of fabrication: doubling the capacity less than doubles the cost.</p>
+When detailed correlations are not available, use the <strong>six-tenths rule</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+C_2 = C_1 (\frac{S_2}{S_1})^n,   n \approx 0.6
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(S\)</span> is a size or capacity parameter (area, volume, power). <span class="math notranslate nohighlight">\(n = 0.6\)</span> is the historical average; for specific equipment classes, <span class="math notranslate nohighlight">\(n\)</span> ranges from 0.5 to 0.8 (Peters | Timmerhaus tabulates values). The rule reflects the economies of scale of fabrication: doubling the capacity less than doubles the cost.</p>
 </div>
 </section>
 <section id="from-purchase-cost-to-total-capital-investment">
@@ -931,10 +1000,20 @@ The purchase cost <span class="math notranslate nohighlight">\(C_P\)</span> is o
 <span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Identify the relevant correction.</strong> Only the inflation correction applies; material, pressure, and geometry are unchanged.</p></li>
-<li><p class="sd-card-text"><strong>Apply the CEPCI ratio.</strong>
-$<span class="math notranslate nohighlight">\( C_{P,now} = C_{P,base} \cdot \frac{CEPCI_{now}}{CEPCI_{base}} = 23{,}000 \cdot \frac{800}{397} \)</span>$</p></li>
-<li><p class="sd-card-text"><strong>Compute.</strong>
-$<span class="math notranslate nohighlight">\( C_{P,now} = 23{,}000 \times 2.015 = \$46{,}346 \approx \$46{,}300 \)</span>$</p></li>
+<li><p class="sd-card-text"><strong>Apply the CEPCI ratio.</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+C_{P,now} = C_{P,base} \cdot \frac{CEPCI_{now}}{CEPCI_{base}} = 23{,}000 \cdot \frac{800}{397}
+\]</div>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Compute.</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+C_{P,now} = 23{,}000 \times 2.015 = \$46{,}346 \approx \$46{,}300
+\]</div>
+<ul class="simple">
 <li><p class="sd-card-text"><strong>Verification.</strong> The CEPCI roughly doubled, so the cost roughly doubled  -  consistent with the simple inflation interpretation.</p></li>
 </ul>
 </div>
@@ -950,8 +1029,13 @@ $<span class="math notranslate nohighlight">\( C_{P,now} = 23{,}000 \times 2.015
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Apply the six-tenths rule with <span class="math notranslate nohighlight">\(n = 0.6\)</span>.</strong>
-$<span class="math notranslate nohighlight">\( C_2 = C_1 (\frac{P_2}{P_1})^{0.6} = 8500 (\frac{150}{50})^{0.6} = 8500 \times 3^{0.6} \)</span>$</p></li>
+<li><p class="sd-card-text"><strong>Apply the six-tenths rule with <span class="math notranslate nohighlight">\(n = 0.6\)</span>.</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+C_2 = C_1 (\frac{P_2}{P_1})^{0.6} = 8500 (\frac{150}{50})^{0.6} = 8500 \times 3^{0.6}
+\]</div>
+<ul class="simple">
 <li><p class="sd-card-text"><strong>Compute <span class="math notranslate nohighlight">\(3^{0.6}\)</span>.</strong> <span class="math notranslate nohighlight">\(\log_{10}(3) = 0.4771\)</span>, so <span class="math notranslate nohighlight">\(0.6 \times 0.4771 = 0.2863\)</span>, <span class="math notranslate nohighlight">\(10^{0.2863} = 1.933\)</span>.</p></li>
 <li><p class="sd-card-text"><span class="math notranslate nohighlight">\(C_2 = 8500 \times 1.933 = \$16{,}430 \approx \$16{,}400\)</span>.</p></li>
 <li><p class="sd-card-text"><strong>Verification.</strong> Tripling the size more than doubles but less than triples the cost  -  exactly the spirit of the six-tenths rule. A doubled-size pump would cost <span class="math notranslate nohighlight">\(\$8500 \times 2^{0.6} = \$8500 \times 1.516 = \$12{,}900\)</span>.</p></li>
@@ -969,12 +1053,27 @@ $<span class="math notranslate nohighlight">\( C_2 = C_1 (\frac{P_2}{P_1})^{0.6}
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Compute purchase cost in the base year, with factors.</strong>
-$<span class="math notranslate nohighlight">\( C_{P, 2001} = C_B \cdot F_M \cdot F_P \cdot F_L = 28{,}000 \times 2.1 \times 1.5 \times 1.0 = \$88{,}200 \)</span>$</p></li>
-<li><p class="sd-card-text"><strong>Escalate to current CEPCI.</strong>
-$<span class="math notranslate nohighlight">\( C_{P, now} = 88{,}200 \times \frac{800}{397} = 88{,}200 \times 2.015 = \$177{,}700 \)</span>$</p></li>
-<li><p class="sd-card-text"><strong>Apply bare-module factor for installed cost.</strong>
-$<span class="math notranslate nohighlight">\( C_{BM} = F_{BM} \cdot C_{P, now} = 3.0 \times 177{,}700 = \$533{,}000 \)</span>$</p></li>
+<li><p class="sd-card-text"><strong>Compute purchase cost in the base year, with factors.</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+C_{P, 2001} = C_B \cdot F_M \cdot F_P \cdot F_L = 28{,}000 \times 2.1 \times 1.5 \times 1.0 = \$88{,}200
+\]</div>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Escalate to current CEPCI.</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+C_{P, now} = 88{,}200 \times \frac{800}{397} = 88{,}200 \times 2.015 = \$177{,}700
+\]</div>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Apply bare-module factor for installed cost.</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+C_{BM} = F_{BM} \cdot C_{P, now} = 3.0 \times 177{,}700 = \$533{,}000
+\]</div>
+<ul class="simple">
 <li><p class="sd-card-text"><strong>Verification.</strong> Sanity: a CS base of $28{,}000 grew to a 316 SS, 20 barg, installed cost of $533{,}000  -  a 19<span class="math notranslate nohighlight">\(\times\)</span> multiplier. The breakdown: 3<span class="math notranslate nohighlight">\(\times\)</span> from <span class="math notranslate nohighlight">\(F_{BM}\)</span>, 2<span class="math notranslate nohighlight">\(\times\)</span> from CEPCI, 2.1<span class="math notranslate nohighlight">\(\times\)</span> from material, 1.5<span class="math notranslate nohighlight">\(\times\)</span> from pressure. Product: <span class="math notranslate nohighlight">\(3 \times 2 \times 2.1 \times 1.5 \approx 19\)</span>. \checkmark</p></li>
 </ul>
 </div>
@@ -1014,32 +1113,63 @@ $<span class="math notranslate nohighlight">\( C_{BM} = F_{BM} \cdot C_{P, now} 
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Single-payment compound amount <span class="math notranslate nohighlight">\((F/P, i\%, n)\)</span>.</strong> A present sum <span class="math notranslate nohighlight">\(P\)</span> earning rate <span class="math notranslate nohighlight">\(i\)</span> compounded <span class="math notranslate nohighlight">\(n\)</span> times has future value
-$<span class="math notranslate nohighlight">\( F = P (1 + i)^n \)</span><span class="math notranslate nohighlight">\(
-Derivation: after one period, \)</span>P<span class="math notranslate nohighlight">\( becomes \)</span>P + P i = P(1+i)<span class="math notranslate nohighlight">\(. After two, \)</span>P(1+i)(1+i) = P(1+i)^2<span class="math notranslate nohighlight">\(. By induction, after \)</span>n<span class="math notranslate nohighlight">\(, \)</span>P(1+i)^n$.</p></li>
-<li><p class="sd-card-text"><strong>Single-payment present worth <span class="math notranslate nohighlight">\((P/F, i\%, n)\)</span>.</strong> Inverse of the previous:
-$<span class="math notranslate nohighlight">\( P = \frac{F}{(1 + i)^n} \)</span><span class="math notranslate nohighlight">\(
-The future sum \)</span>F$ is worth less now because money earns interest in between.</p></li>
-<li><p class="sd-card-text"><strong>Uniform-series compound amount <span class="math notranslate nohighlight">\((F/A, i\%, n)\)</span>.</strong> Sum the future values of each of the <span class="math notranslate nohighlight">\(n\)</span> end-of-year payments <span class="math notranslate nohighlight">\(A\)</span>:
-$<span class="math notranslate nohighlight">\( F = A + A(1+i) + A(1+i)^2 + ... + A(1+i)^{n-1} = A \sum_{k=0}^{n-1}(1+i)^k \)</span><span class="math notranslate nohighlight">\(
-The geometric series sums to
-\)</span><span class="math notranslate nohighlight">\( F = A \cdot \frac{(1+i)^n - 1}{i} \)</span><span class="math notranslate nohighlight">\(
-Note: the last payment (at the end of period \)</span>n<span class="math notranslate nohighlight">\() accrues no interest, the first (end of period 1) accrues \)</span>n-1$ periods.</p></li>
-<li><p class="sd-card-text"><strong>Sinking-fund deposit <span class="math notranslate nohighlight">\((A/F, i\%, n)\)</span>.</strong> Inverse of the previous:
-$<span class="math notranslate nohighlight">\( A = F \cdot \frac{i}{(1+i)^n - 1} \)</span><span class="math notranslate nohighlight">\(
-The annual deposit \)</span>A<span class="math notranslate nohighlight">\( needed to accumulate a target \)</span>F<span class="math notranslate nohighlight">\( at the end of \)</span>n$ years.</p></li>
+<li><p class="sd-card-text"><strong>Single-payment compound amount <span class="math notranslate nohighlight">\((F/P, i\%, n)\)</span>.</strong> A present sum <span class="math notranslate nohighlight">\(P\)</span> earning rate <span class="math notranslate nohighlight">\(i\)</span> compounded <span class="math notranslate nohighlight">\(n\)</span> times has future value</p></li>
 </ul>
+<div class="math notranslate nohighlight">
+\[
+F = P (1 + i)^n
+\]</div>
+<p class="sd-card-text">Derivation: after one period, <span class="math notranslate nohighlight">\(P\)</span> becomes <span class="math notranslate nohighlight">\(P + P i = P(1+i)\)</span>. After two, <span class="math notranslate nohighlight">\(P(1+i)(1+i) = P(1+i)^2\)</span>. By induction, after <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(P(1+i)^n\)</span>.</p>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Single-payment present worth <span class="math notranslate nohighlight">\((P/F, i\%, n)\)</span>.</strong> Inverse of the previous:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+P = \frac{F}{(1 + i)^n}
+\]</div>
+<p class="sd-card-text">The future sum <span class="math notranslate nohighlight">\(F\)</span> is worth less now because money earns interest in between.</p>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Uniform-series compound amount <span class="math notranslate nohighlight">\((F/A, i\%, n)\)</span>.</strong> Sum the future values of each of the <span class="math notranslate nohighlight">\(n\)</span> end-of-year payments <span class="math notranslate nohighlight">\(A\)</span>:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+F = A + A(1+i) + A(1+i)^2 + ... + A(1+i)^{n-1} = A \sum_{k=0}^{n-1}(1+i)^k
+\]</div>
+<p class="sd-card-text">The geometric series sums to</p>
+<div class="math notranslate nohighlight">
+\[
+F = A \cdot \frac{(1+i)^n - 1}{i}
+\]</div>
+<p class="sd-card-text">Note: the last payment (at the end of period <span class="math notranslate nohighlight">\(n\)</span>) accrues no interest, the first (end of period 1) accrues <span class="math notranslate nohighlight">\(n-1\)</span> periods.</p>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Sinking-fund deposit <span class="math notranslate nohighlight">\((A/F, i\%, n)\)</span>.</strong> Inverse of the previous:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+A = F \cdot \frac{i}{(1+i)^n - 1}
+\]</div>
+<p class="sd-card-text">The annual deposit <span class="math notranslate nohighlight">\(A\)</span> needed to accumulate a target <span class="math notranslate nohighlight">\(F\)</span> at the end of <span class="math notranslate nohighlight">\(n\)</span> years.</p>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Capital recovery <span class="math notranslate nohighlight">\((A/P, i\%, n)\)</span>.</strong> Combine <span class="math notranslate nohighlight">\((F/P)\)</span> and <span class="math notranslate nohighlight">\((A/F)\)</span>:
-$<span class="math notranslate nohighlight">\( A = P (1+i)^n \cdot \frac{i}{(1+i)^n - 1} = P \cdot \frac{i (1+i)^n}{(1+i)^n - 1} \)</span><span class="math notranslate nohighlight">\(
-The uniform annual payment \)</span>A<span class="math notranslate nohighlight">\( that pays off a present principal \)</span>P<span class="math notranslate nohighlight">\( in \)</span>n$ periods (mortgage-style amortization).</p></li>
-<li><p class="sd-card-text"><strong>Uniform-series present worth <span class="math notranslate nohighlight">\((P/A, i\%, n)\)</span>.</strong> Inverse of capital recovery:
-$<span class="math notranslate nohighlight">\( P = A \cdot \frac{(1+i)^n - 1}{i (1+i)^n} \)</span><span class="math notranslate nohighlight">\(
-The present worth of \)</span>n<span class="math notranslate nohighlight">\( end-of-year payments of \)</span>A$.</p></li>
+<li><p class="sd-card-text"><strong>Capital recovery <span class="math notranslate nohighlight">\((A/P, i\%, n)\)</span>.</strong> Combine <span class="math notranslate nohighlight">\((F/P)\)</span> and <span class="math notranslate nohighlight">\((A/F)\)</span>:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+A = P (1+i)^n \cdot \frac{i}{(1+i)^n - 1} = P \cdot \frac{i (1+i)^n}{(1+i)^n - 1}
+\]</div>
+<p class="sd-card-text">The uniform annual payment <span class="math notranslate nohighlight">\(A\)</span> that pays off a present principal <span class="math notranslate nohighlight">\(P\)</span> in <span class="math notranslate nohighlight">\(n\)</span> periods (mortgage-style amortization).</p>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Uniform-series present worth <span class="math notranslate nohighlight">\((P/A, i\%, n)\)</span>.</strong> Inverse of capital recovery:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+P = A \cdot \frac{(1+i)^n - 1}{i (1+i)^n}
+\]</div>
+<p class="sd-card-text">The present worth of <span class="math notranslate nohighlight">\(n\)</span> end-of-year payments of <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<ul class="simple">
 <li><p class="sd-card-text"><strong>Special case  -  perpetuity (<span class="math notranslate nohighlight">\(n \to \infty\)</span>):</strong> <span class="math notranslate nohighlight">\(P/A \to 1/i\)</span>, so <span class="math notranslate nohighlight">\(P = A/i\)</span>. The present worth of an infinite uniform series is simply the annual payment divided by the rate. This is the foundation of capitalized-cost analysis below.</p></li>
 </ul>
 </div>
@@ -1060,8 +1190,11 @@ The present worth of \)</span>n<span class="math notranslate nohighlight">\( end
 <h3>Nominal vs. Effective Interest Rates<a class="headerlink" href="#nominal-vs-effective-interest-rates" title="Link to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If a loan or investment quotes a <strong>nominal</strong> annual rate <span class="math notranslate nohighlight">\(r\)</span> with <span class="math notranslate nohighlight">\(m\)</span> compounding periods per year, the rate <em>per compounding period</em> is <span class="math notranslate nohighlight">\(r/m\)</span> and the <strong>effective</strong> annual rate is
-$<span class="math notranslate nohighlight">\( i_{eff} = (1 + \frac{r}{m})^m - 1 \)</span>$</p>
+<p>If a loan or investment quotes a <strong>nominal</strong> annual rate <span class="math notranslate nohighlight">\(r\)</span> with <span class="math notranslate nohighlight">\(m\)</span> compounding periods per year, the rate <em>per compounding period</em> is <span class="math notranslate nohighlight">\(r/m\)</span> and the <strong>effective</strong> annual rate is</p>
+<div class="math notranslate nohighlight">
+\[
+i_{eff} = (1 + \frac{r}{m})^m - 1
+\]</div>
 <ul class="simple">
 <li><p>Monthly compounding (<span class="math notranslate nohighlight">\(m = 12\)</span>) at 12% nominal: <span class="math notranslate nohighlight">\(i_{eff} = (1.01)^{12} - 1 = 12.68\%\)</span>.</p></li>
 <li><p>Continuous compounding (<span class="math notranslate nohighlight">\(m \to \infty\)</span>): <span class="math notranslate nohighlight">\(i_{eff} = e^r - 1\)</span>. At <span class="math notranslate nohighlight">\(r = 12\%\)</span>, <span class="math notranslate nohighlight">\(i_{eff} = e^{0.12} - 1 = 12.75\%\)</span>.</p></li>
@@ -1080,17 +1213,41 @@ $<span class="math notranslate nohighlight">\( i_{eff} = (1 + \frac{r}{m})^m - 1
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Future value of the principal alone (had no payments been made).</strong>
-$<span class="math notranslate nohighlight">\( F_{P, 5} = P (1+i)^5 = 200{,}000 \times 1.08^5 = 200{,}000 \times 1.4693 = \$293{,}860 \)</span>$</p></li>
-<li><p class="sd-card-text"><strong>Future value of the annual payments.</strong>
-$<span class="math notranslate nohighlight">\( F_{A, 5} = A \cdot \frac{(1+i)^5 - 1}{i} = 20{,}000 \times \frac{1.08^5 - 1}{0.08} = 20{,}000 \times \frac{0.4693}{0.08} = 20{,}000 \times 5.866 = \$117{,}320 \)</span>$</p></li>
-<li><p class="sd-card-text"><strong>Balloon payment = unpaid future principal:</strong>
-$<span class="math notranslate nohighlight">\( B = F_{P, 5} - F_{A, 5} = 293{,}860 - 117{,}320 = \$176{,}540 \)</span>$</p></li>
-<li><p class="sd-card-text"><strong>Verification by present-worth balance.</strong> PW of all payments must equal the loan principal:
-$<span class="math notranslate nohighlight">\( PW_{annuity} = 20{,}000 \cdot \frac{1.08^5 - 1}{0.08 \times 1.08^5} = 20{,}000 \times 3.993 = \$79{,}860 \)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\( PW_{balloon} = 176{,}540 / 1.08^5 = 176{,}540 / 1.4693 = \$120{,}140 \)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\( PW_{total} = 79{,}860 + 120{,}140 = \$200{,}000  \checkmark \)</span>$</p></li>
+<li><p class="sd-card-text"><strong>Future value of the principal alone (had no payments been made).</strong></p></li>
 </ul>
+<div class="math notranslate nohighlight">
+\[
+F_{P, 5} = P (1+i)^5 = 200{,}000 \times 1.08^5 = 200{,}000 \times 1.4693 = \$293{,}860
+\]</div>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Future value of the annual payments.</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+F_{A, 5} = A \cdot \frac{(1+i)^5 - 1}{i} = 20{,}000 \times \frac{1.08^5 - 1}{0.08} = 20{,}000 \times \frac{0.4693}{0.08} = 20{,}000 \times 5.866 = \$117{,}320
+\]</div>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Balloon payment = unpaid future principal:</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+B = F_{P, 5} - F_{A, 5} = 293{,}860 - 117{,}320 = \$176{,}540
+\]</div>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Verification by present-worth balance.</strong> PW of all payments must equal the loan principal:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+PW_{annuity} = 20{,}000 \cdot \frac{1.08^5 - 1}{0.08 \times 1.08^5} = 20{,}000 \times 3.993 = \$79{,}860
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+PW_{balloon} = 176{,}540 / 1.08^5 = 176{,}540 / 1.4693 = \$120{,}140
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+PW_{total} = 79{,}860 + 120{,}140 = \$200{,}000  \checkmark
+\]</div>
 </div>
 </details><div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1111,9 +1268,12 @@ $<span class="math notranslate nohighlight">\( PW_{annuity} = 20{,}000 \cdot \fr
 <h3>The Perpetuity Concept<a class="headerlink" href="#the-perpetuity-concept" title="Link to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>A <strong>perpetuity</strong> is an infinite series of identical cash flows. The present worth of a perpetuity of <span class="math notranslate nohighlight">\(A\)</span> per period at rate <span class="math notranslate nohighlight">\(i\)</span> per period is
-$<span class="math notranslate nohighlight">\( P_{perp} = \frac{A}{i} \)</span><span class="math notranslate nohighlight">\(
-Derivation: as \)</span>n \to \infty<span class="math notranslate nohighlight">\( in \)</span>(P/A, i, n) = [(1+i)^n - 1]/[i(1+i)^n]<span class="math notranslate nohighlight">\(, the numerator and denominator both grow as \)</span>(1+i)^n<span class="math notranslate nohighlight">\( except for the \)</span>-1<span class="math notranslate nohighlight">\( in the numerator. The ratio approaches \)</span>1/i<span class="math notranslate nohighlight">\(. Therefore \)</span>P = A \cdot 1/i = A/i$.</p>
+<p>A <strong>perpetuity</strong> is an infinite series of identical cash flows. The present worth of a perpetuity of <span class="math notranslate nohighlight">\(A\)</span> per period at rate <span class="math notranslate nohighlight">\(i\)</span> per period is</p>
+<div class="math notranslate nohighlight">
+\[
+P_{perp} = \frac{A}{i}
+\]</div>
+<p>Derivation: as <span class="math notranslate nohighlight">\(n \to \infty\)</span> in <span class="math notranslate nohighlight">\((P/A, i, n) = [(1+i)^n - 1]/[i(1+i)^n]\)</span>, the numerator and denominator both grow as <span class="math notranslate nohighlight">\((1+i)^n\)</span> except for the <span class="math notranslate nohighlight">\(-1\)</span> in the numerator. The ratio approaches <span class="math notranslate nohighlight">\(1/i\)</span>. Therefore <span class="math notranslate nohighlight">\(P = A \cdot 1/i = A/i\)</span>.</p>
 <p>The intuition: a fund of <span class="math notranslate nohighlight">\(P = A/i\)</span> invested at rate <span class="math notranslate nohighlight">\(i\)</span> earns exactly <span class="math notranslate nohighlight">\(A\)</span> per period in interest, paying <span class="math notranslate nohighlight">\(A\)</span> to the recipient forever without touching the principal.</p>
 </div>
 </section>
@@ -1123,10 +1283,16 @@ Derivation: as \)</span>n \to \infty<span class="math notranslate nohighlight">\
 <p class="admonition-title">Note</p>
 <p>The capitalized cost <span class="math notranslate nohighlight">\(K\)</span> of an asset is the present-day fund needed to (a) buy it now, and (b) replace it every <span class="math notranslate nohighlight">\(n\)</span> years forever.</p>
 <p>Let <span class="math notranslate nohighlight">\(C_I\)</span> = initial purchase + install + first-time annualized-maintenance present worth. Let <span class="math notranslate nohighlight">\(C_R = C_I - S\)</span> where <span class="math notranslate nohighlight">\(S\)</span> is the salvage credit at end of life <span class="math notranslate nohighlight">\(n\)</span>. The replacements form a perpetuity with period <span class="math notranslate nohighlight">\(n\)</span>.</p>
-<p>The present worth of a single replacement at time <span class="math notranslate nohighlight">\(n\)</span> is <span class="math notranslate nohighlight">\(C_R / (1+i)^n\)</span>. The present worth of a replacement every <span class="math notranslate nohighlight">\(n\)</span> years forever is the sum of a geometric series:
-$<span class="math notranslate nohighlight">\( P_{rep} = \frac{C_R}{(1+i)^n} + \frac{C_R}{(1+i)^{2n}} + ... = \frac{C_R / (1+i)^n}{1 - 1/(1+i)^n} = \frac{C_R}{(1+i)^n - 1} \)</span><span class="math notranslate nohighlight">\(
-So
-\)</span><span class="math notranslate nohighlight">\(  K = C_I + \frac{C_R}{(1+i)^n - 1}    (Equation 1, capitalized cost) \)</span>$</p>
+<p>The present worth of a single replacement at time <span class="math notranslate nohighlight">\(n\)</span> is <span class="math notranslate nohighlight">\(C_R / (1+i)^n\)</span>. The present worth of a replacement every <span class="math notranslate nohighlight">\(n\)</span> years forever is the sum of a geometric series:</p>
+<div class="math notranslate nohighlight">
+\[
+P_{rep} = \frac{C_R}{(1+i)^n} + \frac{C_R}{(1+i)^{2n}} + ... = \frac{C_R / (1+i)^n}{1 - 1/(1+i)^n} = \frac{C_R}{(1+i)^n - 1}
+\]</div>
+<p>So</p>
+<div class="math notranslate nohighlight">
+\[
+K = C_I + \frac{C_R}{(1+i)^n - 1}    (Equation 1, capitalized cost)
+\]</div>
 </div>
 </section>
 <section id="handling-annual-operating-costs-and-discrete-overhauls">
@@ -1134,9 +1300,12 @@ So
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Capitalizing Annual Operating Costs Into <span class="math notranslate nohighlight">\(C_I\)</span></strong>
-If there is an annual operating/maintenance cost <span class="math notranslate nohighlight">\(A_{op}\)</span> paid every year forever, its present worth is
-$<span class="math notranslate nohighlight">\( P_{op} = \frac{A_{op}}{i}   (perpetuity) \)</span><span class="math notranslate nohighlight">\(
-Add this perpetuity present worth to \)</span>C_I<span class="math notranslate nohighlight">\( before applying Equation 1. Some texts instead add the annual cost *only over the life of the first unit* (using \)</span>(P/A, i, n)<span class="math notranslate nohighlight">\() and then capitalize the replacement series; this is mathematically equivalent provided the annual cost is carried in each replacement's \)</span>C_R$ as well.</p>
+If there is an annual operating/maintenance cost <span class="math notranslate nohighlight">\(A_{op}\)</span> paid every year forever, its present worth is</p>
+<div class="math notranslate nohighlight">
+\[
+P_{op} = \frac{A_{op}}{i}   (perpetuity)
+\]</div>
+<p>Add this perpetuity present worth to <span class="math notranslate nohighlight">\(C_I\)</span> before applying Equation 1. Some texts instead add the annual cost <em>only over the life of the first unit</em> (using <span class="math notranslate nohighlight">\((P/A, i, n)\)</span>) and then capitalize the replacement series; this is mathematically equivalent provided the annual cost is carried in each replacement’s <span class="math notranslate nohighlight">\(C_R\)</span> as well.</p>
 <p>If there is a one-time overhaul at year <span class="math notranslate nohighlight">\(m &lt; n\)</span> (e.g. year 3 of a 6-year life), include it as a single-payment present worth <span class="math notranslate nohighlight">\(C_{ovh}/(1+i)^m\)</span> added to <span class="math notranslate nohighlight">\(C_I\)</span>, and include the overhaul in every replacement cycle by adding it to <span class="math notranslate nohighlight">\(C_R\)</span> at the same fractional time.</p>
 </div>
 </section>
@@ -1157,34 +1326,81 @@ Add this perpetuity present worth to \)</span>C_I<span class="math notranslate n
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Capitalize Reactor A’s annual maintenance over its 4-year life.</strong>
-$<span class="math notranslate nohighlight">\( P_{A,maint} = 2{,}000 \cdot \frac{(1.08)^4 - 1}{0.08 \cdot (1.08)^4} \)</span><span class="math notranslate nohighlight">\(
-Compute \)</span>(1.08)^4<span class="math notranslate nohighlight">\(: \)</span>1.08^2 = 1.1664<span class="math notranslate nohighlight">\(, \)</span>1.08^4 = 1.1664^2 = 1.3605<span class="math notranslate nohighlight">\(. So \)</span>[1.3605 - 1]/[0.08 \times 1.3605] = 0.3605/0.10884 = 3.312<span class="math notranslate nohighlight">\(.
-\)</span><span class="math notranslate nohighlight">\( P_{A,maint} = 2{,}000 \times 3.312 = \$6{,}624 \)</span><span class="math notranslate nohighlight">\(
-Total &quot;initial cost&quot; for Reactor A:
-\)</span><span class="math notranslate nohighlight">\( C_{I,A} = 25{,}000 + 6{,}624 = \$31{,}624 \)</span>$</p></li>
-<li><p class="sd-card-text"><strong>Replacement cost for Reactor A.</strong>
-$<span class="math notranslate nohighlight">\( C_{R,A} = C_{I,A} - S_A = 31{,}624 - 3{,}000 = \$28{,}624 \)</span>$</p></li>
-<li><p class="sd-card-text"><strong>Capitalized cost of Reactor A (apply Equation 1 with <span class="math notranslate nohighlight">\(n = 4\)</span>).</strong>
-$<span class="math notranslate nohighlight">\( K_A = C_{I,A} + \frac{C_{R,A}}{(1.08)^4 - 1} = 31{,}624 + \frac{28{,}624}{0.3605} = 31{,}624 + 79{,}400 = \$111{,}024 \approx \$111{,}000 \)</span>$</p></li>
+<li><p class="sd-card-text"><strong>Capitalize Reactor A’s annual maintenance over its 4-year life.</strong></p></li>
 </ul>
+<div class="math notranslate nohighlight">
+\[
+P_{A,maint} = 2{,}000 \cdot \frac{(1.08)^4 - 1}{0.08 \cdot (1.08)^4}
+\]</div>
+<p class="sd-card-text">Compute <span class="math notranslate nohighlight">\((1.08)^4\)</span>: <span class="math notranslate nohighlight">\(1.08^2 = 1.1664\)</span>, <span class="math notranslate nohighlight">\(1.08^4 = 1.1664^2 = 1.3605\)</span>. So <span class="math notranslate nohighlight">\([1.3605 - 1]/[0.08 \times 1.3605] = 0.3605/0.10884 = 3.312\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+P_{A,maint} = 2{,}000 \times 3.312 = \$6{,}624
+\]</div>
+<p class="sd-card-text">Total “initial cost” for Reactor A:</p>
+<div class="math notranslate nohighlight">
+\[
+C_{I,A} = 25{,}000 + 6{,}624 = \$31{,}624
+\]</div>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Replacement cost for Reactor A.</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+C_{R,A} = C_{I,A} - S_A = 31{,}624 - 3{,}000 = \$28{,}624
+\]</div>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Capitalized cost of Reactor A (apply Equation 1 with <span class="math notranslate nohighlight">\(n = 4\)</span>).</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+K_A = C_{I,A} + \frac{C_{R,A}}{(1.08)^4 - 1} = 31{,}624 + \frac{28{,}624}{0.3605} = 31{,}624 + 79{,}400 = \$111{,}024 \approx \$111{,}000
+\]</div>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Capitalize Reactor B’s annual maintenance over 6 years.</strong>
-$<span class="math notranslate nohighlight">\( P_{B,maint} = 4{,}000 \cdot \frac{(1.08)^6 - 1}{0.08 \cdot (1.08)^6} \)</span><span class="math notranslate nohighlight">\(
-Compute \)</span>(1.08)^6<span class="math notranslate nohighlight">\(: \)</span>1.08^3 = 1.2597<span class="math notranslate nohighlight">\(, \)</span>1.08^6 = 1.2597^2 = 1.5869<span class="math notranslate nohighlight">\(. So \)</span>[1.5869 - 1]/[0.08 \times 1.5869] = 0.5869/0.12695 = 4.623<span class="math notranslate nohighlight">\(.
-\)</span><span class="math notranslate nohighlight">\( P_{B,maint} = 4{,}000 \times 4.623 = \$18{,}492 \)</span>$</p></li>
-<li><p class="sd-card-text"><strong>Capitalize the year-3 overhaul for Reactor B.</strong>
-$<span class="math notranslate nohighlight">\( P_{B,ovh} = \frac{3{,}500}{(1.08)^3} = \frac{3{,}500}{1.2597} = \$2{,}778 \)</span>$</p></li>
-<li><p class="sd-card-text"><strong>Total “initial cost” for Reactor B.</strong>
-$<span class="math notranslate nohighlight">\( C_{I,B} = 15{,}000 + 18{,}492 + 2{,}778 = \$36{,}270 \)</span>$</p></li>
-<li><p class="sd-card-text"><strong>Replacement cost for Reactor B (no salvage).</strong>
-$<span class="math notranslate nohighlight">\( C_{R,B} = C_{I,B} = \$36{,}270 \)</span>$</p></li>
-<li><p class="sd-card-text"><strong>Capitalized cost of Reactor B (Equation 1, <span class="math notranslate nohighlight">\(n = 6\)</span>).</strong>
-$<span class="math notranslate nohighlight">\( K_B = 36{,}270 + \frac{36{,}270}{(1.08)^6 - 1} = 36{,}270 + \frac{36{,}270}{0.5869} = 36{,}270 + 61{,}800 = \$98{,}070 \approx \$98{,}000 \)</span>$</p></li>
+<li><p class="sd-card-text"><strong>Capitalize Reactor B’s annual maintenance over 6 years.</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+P_{B,maint} = 4{,}000 \cdot \frac{(1.08)^6 - 1}{0.08 \cdot (1.08)^6}
+\]</div>
+<p class="sd-card-text">Compute <span class="math notranslate nohighlight">\((1.08)^6\)</span>: <span class="math notranslate nohighlight">\(1.08^3 = 1.2597\)</span>, <span class="math notranslate nohighlight">\(1.08^6 = 1.2597^2 = 1.5869\)</span>. So <span class="math notranslate nohighlight">\([1.5869 - 1]/[0.08 \times 1.5869] = 0.5869/0.12695 = 4.623\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+P_{B,maint} = 4{,}000 \times 4.623 = \$18{,}492
+\]</div>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Capitalize the year-3 overhaul for Reactor B.</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+P_{B,ovh} = \frac{3{,}500}{(1.08)^3} = \frac{3{,}500}{1.2597} = \$2{,}778
+\]</div>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Total “initial cost” for Reactor B.</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+C_{I,B} = 15{,}000 + 18{,}492 + 2{,}778 = \$36{,}270
+\]</div>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Replacement cost for Reactor B (no salvage).</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+C_{R,B} = C_{I,B} = \$36{,}270
+\]</div>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Capitalized cost of Reactor B (Equation 1, <span class="math notranslate nohighlight">\(n = 6\)</span>).</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+K_B = 36{,}270 + \frac{36{,}270}{(1.08)^6 - 1} = 36{,}270 + \frac{36{,}270}{0.5869} = 36{,}270 + 61{,}800 = \$98{,}070 \approx \$98{,}000
+\]</div>
+<ul class="simple">
 <li><p class="sd-card-text"><strong>Decision.</strong> <span class="math notranslate nohighlight">\(K_B &lt; K_A\)</span> by about $13{,}000. <strong>Reactor B is the better long-term investment.</strong></p></li>
 <li><p class="sd-card-text"><strong>Verification.</strong> Although B has a higher annual cost and overhauls, its 6-year life means fewer replacement events per century compared to A’s 4-year life. The 50% longer life-cycle more than compensates for B’s larger per-cycle cost and absence of salvage credit. This is the typical pattern  -  longer-life equipment usually wins on capitalized-cost basis, even at higher per-cycle costs, provided <span class="math notranslate nohighlight">\(i\)</span> is not extreme.</p></li>
 </ul>
@@ -1251,7 +1467,9 @@ A cash-flow diagram is a timeline with vertical arrows at each event:</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <div class="math notranslate nohighlight">
-\[ PW = \sum_{k=0}^{n} \frac{CF_k}{(1+i)^k} \]</div>
+\[
+PW = \sum_{k=0}^{n} \frac{CF_k}{(1+i)^k}
+\]</div>
 <p>where <span class="math notranslate nohighlight">\(CF_k\)</span> is the signed cash flow at the end of year <span class="math notranslate nohighlight">\(k\)</span>. The result <span class="math notranslate nohighlight">\(PW\)</span> is signed: negative means net cost, positive means net benefit. Among competing alternatives, the one with the smallest absolute net cost (i.e. the least negative or most positive PW) is preferred.</p>
 </div>
 </section>
@@ -1290,18 +1508,34 @@ Most multi-event cash flows decompose into:</p>
 <li><p class="sd-card-text">Year 8: <span class="math notranslate nohighlight">\(+3{,}000\)</span> salvage and <span class="math notranslate nohighlight">\(-25{,}000\)</span> replacement. Net <span class="math notranslate nohighlight">\(-22{,}000\)</span>.</p></li>
 <li><p class="sd-card-text">Years 9, 10, 11, 12: <span class="math notranslate nohighlight">\(-2{,}000\)</span> each.</p></li>
 <li><p class="sd-card-text">Year 12: <span class="math notranslate nohighlight">\(+3{,}000\)</span> salvage (end of third cycle; no further replacement needed because the horizon ends).</p></li>
-<li><p class="sd-card-text"><strong>PW of A’s annual maintenance (years 1-12).</strong>
-$<span class="math notranslate nohighlight">\( PW_{maint} = -2{,}000 \cdot (P/A, 8, 12) \)</span><span class="math notranslate nohighlight">\(
-Compute \)</span>(P/A, 8, 12) = [(1.08)^{12} - 1]/[0.08 \cdot (1.08)^{12}]<span class="math notranslate nohighlight">\(. \)</span>(1.08)^{12}<span class="math notranslate nohighlight">\(: \)</span>(1.08)^4 = 1.3605<span class="math notranslate nohighlight">\(, \)</span>(1.08)^8 = 1.8509<span class="math notranslate nohighlight">\(, \)</span>(1.08)^{12} = 1.3605 \times 1.8509 = 2.518<span class="math notranslate nohighlight">\(. So \)</span>(P/A) = 1.518/(0.08 \times 2.518) = 1.518/0.2014 = 7.536<span class="math notranslate nohighlight">\(.
-\)</span><span class="math notranslate nohighlight">\( PW_{maint} = -2{,}000 \times 7.536 = -\$15{,}072 \)</span>$</p></li>
+<li><p class="sd-card-text"><strong>PW of A’s annual maintenance (years 1-12).</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+PW_{maint} = -2{,}000 \cdot (P/A, 8, 12)
+\]</div>
+<p class="sd-card-text">Compute <span class="math notranslate nohighlight">\((P/A, 8, 12) = [(1.08)^{12} - 1]/[0.08 \cdot (1.08)^{12}]\)</span>. <span class="math notranslate nohighlight">\((1.08)^{12}\)</span>: <span class="math notranslate nohighlight">\((1.08)^4 = 1.3605\)</span>, <span class="math notranslate nohighlight">\((1.08)^8 = 1.8509\)</span>, <span class="math notranslate nohighlight">\((1.08)^{12} = 1.3605 \times 1.8509 = 2.518\)</span>. So <span class="math notranslate nohighlight">\((P/A) = 1.518/(0.08 \times 2.518) = 1.518/0.2014 = 7.536\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+PW_{maint} = -2{,}000 \times 7.536 = -\$15{,}072
+\]</div>
+<ul class="simple">
 <li><p class="sd-card-text"><strong>PW of A’s replacements (net <span class="math notranslate nohighlight">\(-22{,}000\)</span> at years 4 and 8).</strong></p></li>
 <li><p class="sd-card-text">Year 4: <span class="math notranslate nohighlight">\(-22{,}000/(1.08)^4 = -22{,}000/1.3605 = -16{,}170\)</span>.</p></li>
 <li><p class="sd-card-text">Year 8: <span class="math notranslate nohighlight">\(-22{,}000/(1.08)^8 = -22{,}000/1.8509 = -11{,}887\)</span>.</p></li>
-<li><p class="sd-card-text"><strong>PW of A’s final-year salvage (<span class="math notranslate nohighlight">\(+3{,}000\)</span> at year 12).</strong>
-$<span class="math notranslate nohighlight">\( +3{,}000/(1.08)^{12} = 3{,}000/2.518 = +\$1{,}191 \)</span>$</p></li>
-<li><p class="sd-card-text"><strong>Total PW for A.</strong>
-$<span class="math notranslate nohighlight">\( PW_A = -25{,}000 - 15{,}072 - 16{,}170 - 11{,}887 + 1{,}191 = -\$66{,}938 \approx -\$67{,}000 \)</span>$</p></li>
+<li><p class="sd-card-text"><strong>PW of A’s final-year salvage (<span class="math notranslate nohighlight">\(+3{,}000\)</span> at year 12).</strong></p></li>
 </ul>
+<div class="math notranslate nohighlight">
+\[
++3{,}000/(1.08)^{12} = 3{,}000/2.518 = +\$1{,}191
+\]</div>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Total PW for A.</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+PW_A = -25{,}000 - 15{,}072 - 16{,}170 - 11{,}887 + 1{,}191 = -\$66{,}938 \approx -\$67{,}000
+\]</div>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -1314,15 +1548,30 @@ $<span class="math notranslate nohighlight">\( PW_A = -25{,}000 - 15{,}072 - 16{
 <li><p class="sd-card-text">Year 6: <span class="math notranslate nohighlight">\(-15{,}000\)</span> (replacement, no salvage).</p></li>
 <li><p class="sd-card-text">Year 9: <span class="math notranslate nohighlight">\(-3{,}500\)</span> (overhaul, equivalent to year 3 of cycle 2).</p></li>
 <li><p class="sd-card-text">Year 12: end of horizon (no more replacement).</p></li>
-<li><p class="sd-card-text"><strong>PW of B’s annual maintenance.</strong>
-$<span class="math notranslate nohighlight">\( PW_{maint} = -4{,}000 \times (P/A, 8, 12) = -4{,}000 \times 7.536 = -\$30{,}144 \)</span>$</p></li>
-<li><p class="sd-card-text"><strong>PW of B’s year-6 replacement.</strong>
-$<span class="math notranslate nohighlight">\( -15{,}000/(1.08)^6 = -15{,}000/1.5869 = -\$9{,}454 \)</span>$</p></li>
+<li><p class="sd-card-text"><strong>PW of B’s annual maintenance.</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+PW_{maint} = -4{,}000 \times (P/A, 8, 12) = -4{,}000 \times 7.536 = -\$30{,}144
+\]</div>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>PW of B’s year-6 replacement.</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+-15{,}000/(1.08)^6 = -15{,}000/1.5869 = -\$9{,}454
+\]</div>
+<ul class="simple">
 <li><p class="sd-card-text"><strong>PW of B’s overhauls (years 3 and 9).</strong></p></li>
 <li><p class="sd-card-text">Year 3: <span class="math notranslate nohighlight">\(-3{,}500/(1.08)^3 = -3{,}500/1.2597 = -\$2{,}778\)</span>.</p></li>
 <li><p class="sd-card-text">Year 9: <span class="math notranslate nohighlight">\(-3{,}500/(1.08)^9 = -3{,}500/1.9990 = -\$1{,}751\)</span>.</p></li>
-<li><p class="sd-card-text"><strong>Total PW for B.</strong>
-$<span class="math notranslate nohighlight">\( PW_B = -15{,}000 - 30{,}144 - 9{,}454 - 2{,}778 - 1{,}751 = -\$59{,}127 \approx -\$59{,}100 \)</span>$</p></li>
+<li><p class="sd-card-text"><strong>Total PW for B.</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+PW_B = -15{,}000 - 30{,}144 - 9{,}454 - 2{,}778 - 1{,}751 = -\$59{,}127 \approx -\$59{,}100
+\]</div>
+<ul class="simple">
 <li><p class="sd-card-text"><strong>Decision.</strong> <span class="math notranslate nohighlight">\(|PW_B| &lt; |PW_A|\)</span> (cost $59{,}100 vs. $67{,}000); <strong>Reactor B is cheaper in present-worth terms by $7{,}800</strong>.</p></li>
 <li><p class="sd-card-text"><strong>Cross-check.</strong> The capitalized-cost analysis (previous section) also chose B. Two independent methods agreeing is the strongest verification.</p></li>
 </ul>
@@ -1332,9 +1581,12 @@ $<span class="math notranslate nohighlight">\( PW_B = -15{,}000 - 30{,}144 - 9{,
 <h3>Annual-Equivalent (AE) Cost  -  The Third Way<a class="headerlink" href="#annual-equivalent-ae-cost-the-third-way" title="Link to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>A third comparison method, equivalent to PW but expressed as a uniform annual cost, is the <strong>annual equivalent (AE)</strong>:
-$<span class="math notranslate nohighlight">\( AE = PW \cdot (A/P, i, n) \)</span>$
-For the same Reactor A vs. B problem:</p>
+<p>A third comparison method, equivalent to PW but expressed as a uniform annual cost, is the <strong>annual equivalent (AE)</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+AE = PW \cdot (A/P, i, n)
+\]</div>
+<p>For the same Reactor A vs. B problem:</p>
 <ul class="simple">
 <li><p>AE<span class="math notranslate nohighlight">\(_A\)</span> = <span class="math notranslate nohighlight">\(-66{,}938 \cdot (A/P, 8, 12)\)</span>. <span class="math notranslate nohighlight">\((A/P) = 1/(P/A) = 1/7.536 = 0.1327\)</span>. AE<span class="math notranslate nohighlight">\(_A = -66{,}938 \times 0.1327 = -\$8{,}884\)</span>/yr.</p></li>
 <li><p>AE<span class="math notranslate nohighlight">\(_B\)</span> = <span class="math notranslate nohighlight">\(-59{,}127 \times 0.1327 = -\$7{,}847\)</span>/yr.</p></li>
@@ -1361,9 +1613,12 @@ For the same Reactor A vs. B problem:</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>The Per-Kilogram-of-Product Basis</strong>
-Choose the desired product as the basis: 1 kg of product. Compute the mass of each reactant and byproduct that participates in producing 1 kg of product, using stoichiometric coefficients and molecular weights:
-$<span class="math notranslate nohighlight">\( mass of species  i  per kg product = \frac{|\nu_i| M_i}{|\nu_P| M_P} \)</span><span class="math notranslate nohighlight">\(
-where \)</span>\nu_i<span class="math notranslate nohighlight">\( is the stoichiometric coefficient of species \)</span>i<span class="math notranslate nohighlight">\( (negative for reactants, positive for products), \)</span>M_i<span class="math notranslate nohighlight">\( is its molecular weight, and subscript \)</span>P$ is the desired product. This is the same operation in Felder | Rousseau’s introductory mass-balance chapters  -  you are reading the stoichiometry on a mass rather than molar basis.</p>
+Choose the desired product as the basis: 1 kg of product. Compute the mass of each reactant and byproduct that participates in producing 1 kg of product, using stoichiometric coefficients and molecular weights:</p>
+<div class="math notranslate nohighlight">
+\[
+mass of species  i  per kg product = \frac{|\nu_i| M_i}{|\nu_P| M_P}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\nu_i\)</span> is the stoichiometric coefficient of species <span class="math notranslate nohighlight">\(i\)</span> (negative for reactants, positive for products), <span class="math notranslate nohighlight">\(M_i\)</span> is its molecular weight, and subscript <span class="math notranslate nohighlight">\(P\)</span> is the desired product. This is the same operation in Felder | Rousseau’s introductory mass-balance chapters  -  you are reading the stoichiometry on a mass rather than molar basis.</p>
 </div>
 </section>
 <section id="the-gep-equation">
@@ -1371,7 +1626,9 @@ where \)</span>\nu_i<span class="math notranslate nohighlight">\( is the stoichi
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <div class="math notranslate nohighlight">
-\[ GEP = \sum_{products} \frac{|\nu_i| M_i}{|\nu_P| M_P} p_i  -  \sum_{reactants} \frac{|\nu_j| M_j}{|\nu_P| M_P} p_j \]</div>
+\[
+GEP = \sum_{products} \frac{|\nu_i| M_i}{|\nu_P| M_P} p_i  -  \sum_{reactants} \frac{|\nu_j| M_j}{|\nu_P| M_P} p_j
+\]</div>
 <p>where <span class="math notranslate nohighlight">\(p_i\)</span> is the market price of species <span class="math notranslate nohighlight">\(i\)</span> in $/kg.</p>
 <ul class="simple">
 <li><p>Treat byproducts that have market value as positive (a credit on the products side).</p></li>
@@ -1388,37 +1645,49 @@ where \)</span>\nu_i<span class="math notranslate nohighlight">\( is the stoichi
 <p class="admonition-title"><span class="caption-number">Example 144 </span> (GEP for Two Synthesis Routes to Vinyl Chloride Monomer)</p>
 <section class="example-content" id="proof-content">
 <p>Compare two synthesis routes to vinyl chloride monomer (VCM, <span class="math notranslate nohighlight">\(\mathrm{C_2H_3Cl}\)</span>, <span class="math notranslate nohighlight">\(M = 62.5\)</span>):</p>
-<p><strong>Route 1:</strong> Hydrochlorination of acetylene.
-$<span class="math notranslate nohighlight">\( \mathrm{C_2H_2 + HCl \rightarrow C_2H_3Cl} \)</span>$
-Prices: acetylene $1.85/kg, HCl $0.30/kg, VCM $0.75/kg.</p>
-<p><strong>Route 2:</strong> Oxychlorination/cracking of ethane.
-$<span class="math notranslate nohighlight">\( \mathrm{C_2H_6 + Cl_2 + \tfrac{1}{2} O_2 \rightarrow C_2H_3Cl + H_2O + HCl} \)</span><span class="math notranslate nohighlight">\(
-Prices: ethane \$0.20/kg, Cl\)</span>_2<span class="math notranslate nohighlight">\( \$0.25/kg, O\)</span>_2<span class="math notranslate nohighlight">\( \$0 (from air), VCM \$0.75/kg, byproduct HCl credit \$0.30/kg, H\)</span>_2$O $0.</p>
+<p><strong>Route 1:</strong> Hydrochlorination of acetylene.</p>
+<div class="math notranslate nohighlight">
+\[
+\mathrm{C_2H_2 + HCl \rightarrow C_2H_3Cl}
+\]</div>
+<p>Prices: acetylene $1.85/kg, HCl $0.30/kg, VCM $0.75/kg.</p>
+<p><strong>Route 2:</strong> Oxychlorination/cracking of ethane.</p>
+<div class="math notranslate nohighlight">
+\[
+\mathrm{C_2H_6 + Cl_2 + \tfrac{1}{2} O_2 \rightarrow C_2H_3Cl + H_2O + HCl}
+\]</div>
+<p>Prices: ethane $0.20/kg, Cl<span class="math notranslate nohighlight">\(_2\)</span> $0.25/kg, O<span class="math notranslate nohighlight">\(_2\)</span> $0 (from air), VCM $0.75/kg, byproduct HCl credit $0.30/kg, H<span class="math notranslate nohighlight">\(_2\)</span>O $0.</p>
 <p>Which route shows a positive GEP?</p>
 </section>
 </div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Molecular weights.</strong>
-$<span class="math notranslate nohighlight">\( M(\mathrm{C_2H_2}) = 26.0,   M(\mathrm{HCl}) = 36.5,   M(\mathrm{C_2H_3Cl}) = 62.5 \)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\( M(\mathrm{C_2H_6}) = 30.0,   M(\mathrm{Cl_2}) = 71.0,   M(\mathrm{O_2}) = 32.0,   M(\mathrm{H_2O}) = 18.0 \)</span>$</p></li>
+<li><p class="sd-card-text"><strong>Molecular weights.</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+M(\mathrm{C_2H_2}) = 26.0,   M(\mathrm{HCl}) = 36.5,   M(\mathrm{C_2H_3Cl}) = 62.5
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+M(\mathrm{C_2H_6}) = 30.0,   M(\mathrm{Cl_2}) = 71.0,   M(\mathrm{O_2}) = 32.0,   M(\mathrm{H_2O}) = 18.0
+\]</div>
+<ul class="simple">
 <li><p class="sd-card-text"><strong>Route 1: mass of each species per kg VCM.</strong></p></li>
 <li><p class="sd-card-text">Acetylene: <span class="math notranslate nohighlight">\(\nu = 1\)</span>, <span class="math notranslate nohighlight">\(M = 26.0\)</span>; mass <span class="math notranslate nohighlight">\(= 26.0/62.5 = 0.416\)</span> kg/kg VCM.</p></li>
 <li><p class="sd-card-text">HCl: <span class="math notranslate nohighlight">\(\nu = 1\)</span>, <span class="math notranslate nohighlight">\(M = 36.5\)</span>; mass <span class="math notranslate nohighlight">\(= 36.5/62.5 = 0.584\)</span> kg/kg VCM.</p></li>
 </ul>
-<p class="sd-card-text"><strong>GEP<span class="math notranslate nohighlight">\(_1\)</span>:</strong>
-$$</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e14f1ee9-f368-444d-90ad-68ddf1cb7986">
-<span class="eqno">(1)<a class="headerlink" href="#equation-e14f1ee9-f368-444d-90ad-68ddf1cb7986" title="Permalink to this equation">#</a></span>\[\begin{align}
-
-
+<p class="sd-card-text"><strong>GEP<span class="math notranslate nohighlight">\(_1\)</span>:</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
 GEP_1 &amp;= (1)(0.75) - (0.416)(1.85) - (0.584)(0.30) \\
 &amp;= 0.750 - 0.770 - 0.175 \\
 &amp;= -\$0.195  per kg VCM \approx -\$0.20/kg
-\end{align}\]</div>
-<p class="sd-card-text">$$
-<strong>Route 1 is a money loser on raw materials alone. Reject.</strong></p>
+\end{align}
+\end{split}\]</div>
+<p class="sd-card-text"><strong>Route 1 is a money loser on raw materials alone. Reject.</strong></p>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -1431,18 +1700,16 @@ GEP_1 &amp;= (1)(0.75) - (0.416)(1.85) - (0.584)(0.30) \\
 <li><p class="sd-card-text">H<span class="math notranslate nohighlight">\(_2\)</span>O byproduct: <span class="math notranslate nohighlight">\(18.0/62.5 = 0.288\)</span> kg/kg VCM (no value).</p></li>
 <li><p class="sd-card-text">HCl byproduct: <span class="math notranslate nohighlight">\(36.5/62.5 = 0.584\)</span> kg/kg VCM ($0.30/kg credit).</p></li>
 </ul>
-<p class="sd-card-text"><strong>GEP<span class="math notranslate nohighlight">\(_2\)</span>:</strong>
-$$</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f6c2e543-7580-415c-a60d-aef5c6bb8f7c">
-<span class="eqno">(2)<a class="headerlink" href="#equation-f6c2e543-7580-415c-a60d-aef5c6bb8f7c" title="Permalink to this equation">#</a></span>\[\begin{align}
-
-
+<p class="sd-card-text"><strong>GEP<span class="math notranslate nohighlight">\(_2\)</span>:</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
 GEP_2 &amp;= (1)(0.75) + (0.584)(0.30) - (0.480)(0.20) - (1.136)(0.25) - (0.256)(0) \\
 &amp;= 0.750 + 0.175 - 0.096 - 0.284 - 0 \\
 &amp;= +\$0.545  per kg VCM
-\end{align}\]</div>
-<p class="sd-card-text">$$
-<strong>Route 2 is profitable on a raw-material basis; proceeds to the next stage of design.</strong></p>
+\end{align}
+\end{split}\]</div>
+<p class="sd-card-text"><strong>Route 2 is profitable on a raw-material basis; proceeds to the next stage of design.</strong></p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Verification.</strong> Modern industrial VCM production is overwhelmingly via the ethylene/EDC oxychlorination route (a close cousin of Route 2), confirming the GEP-based selection in practice.</p></li>
 <li><p class="sd-card-text"><strong>What GEP does <em>not</em> tell you.</strong> A GEP of $0.545/kg leaves room for utilities (steam, electricity), labor, depreciation, taxes, and a profit margin. As a rule of thumb, 30-70% of GEP is consumed by these downstream costs, so the bottom-line plant margin is often $0.10-$0.35/kg.</p></li>
@@ -1460,15 +1727,16 @@ GEP_2 &amp;= (1)(0.75) + (0.584)(0.30) - (0.480)(0.20) - (1.136)(0.25) - (0.256)
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Set up the equation, treating Q’s disposal cost as a debit on the products side.</strong>
-$$
-\begin{align}</p></li>
+<li><p class="sd-card-text"><strong>Set up the equation, treating Q’s disposal cost as a debit on the products side.</strong></p></li>
 </ul>
-<p class="sd-card-text">GEP &amp;= (1.0)(1.00) + (0.1)(-0.40) - (0.6)(0.50) - (0.5)(0.30) \
-&amp;= 1.000 - 0.040 - 0.300 - 0.150 \
-&amp;= +$0.510  per kg P
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+GEP &amp;= (1.0)(1.00) + (0.1)(-0.40) - (0.6)(0.50) - (0.5)(0.30) \\
+&amp;= 1.000 - 0.040 - 0.300 - 0.150 \\
+&amp;= +\$0.510  per kg P
 \end{align}
-$$</p>
+\end{split}\]</div>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Sanity check.</strong> If Q had zero disposal cost instead, GEP would be $0.550. The disposal of 0.1 kg/kg of waste reduces profit by $0.04  -  about 8% of margin. If disposal cost rose to $5/kg (e.g. a regulated waste), the penalty would be 0.1 <span class="math notranslate nohighlight">\(\times\)</span> 5 = $0.50/kg, almost killing the route. Byproduct economics are often the deciding factor in route selection.</p></li>
 </ul>
@@ -1492,9 +1760,12 @@ $$</p>
 <h3>The NPV Equation<a class="headerlink" href="#the-npv-equation" title="Link to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Net Present Value</strong> is the discounted sum of all after-tax cash flows over the project life, less the initial investment:
-$<span class="math notranslate nohighlight">\( NPV = -I_0 + \sum_{k=1}^{n} \frac{CF_k}{(1+r)^k} + \frac{S_n + WC}{(1+r)^n} \)</span>$
-where:</p>
+<p><strong>Net Present Value</strong> is the discounted sum of all after-tax cash flows over the project life, less the initial investment:</p>
+<div class="math notranslate nohighlight">
+\[
+NPV = -I_0 + \sum_{k=1}^{n} \frac{CF_k}{(1+r)^k} + \frac{S_n + WC}{(1+r)^n}
+\]</div>
+<p>where:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(I_0\)</span> = total depreciable fixed-capital investment at time zero (or spread over construction years).</p></li>
 <li><p><span class="math notranslate nohighlight">\(CF_k\)</span> = after-tax cash flow in year <span class="math notranslate nohighlight">\(k\)</span>.</p></li>
@@ -1510,9 +1781,12 @@ where:</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Why Depreciation Matters</strong>
-Depreciation is not a cash outflow  -  the cash was spent when the equipment was purchased. But the tax code allows the company to deduct a portion of the original investment each year, reducing taxable income. The cash flow in year <span class="math notranslate nohighlight">\(k\)</span> is therefore:
-$<span class="math notranslate nohighlight">\( CF_k = (S_k - C_k - D_k)(1 - t) + D_k \)</span>$
-where:</p>
+Depreciation is not a cash outflow  -  the cash was spent when the equipment was purchased. But the tax code allows the company to deduct a portion of the original investment each year, reducing taxable income. The cash flow in year <span class="math notranslate nohighlight">\(k\)</span> is therefore:</p>
+<div class="math notranslate nohighlight">
+\[
+CF_k = (S_k - C_k - D_k)(1 - t) + D_k
+\]</div>
+<p>where:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(S_k\)</span> = revenue (Sales) in year <span class="math notranslate nohighlight">\(k\)</span>.</p></li>
 <li><p><span class="math notranslate nohighlight">\(C_k\)</span> = cash production cost in year <span class="math notranslate nohighlight">\(k\)</span> (raw materials, utilities, labor, overhead  -  but <em>not</em> depreciation).</p></li>
@@ -1604,9 +1878,14 @@ Let the discount factors be <span class="math notranslate nohighlight">\(1/(1.15
 <li><p class="sd-card-text">2021 (<span class="math notranslate nohighlight">\(k=14\)</span>): <span class="math notranslate nohighlight">\(70.00/7.0757 = 9.89\)</span>.</p></li>
 <li><p class="sd-card-text"><strong>Sum to get NPV.</strong>
 Sum of positives: <span class="math notranslate nohighlight">\(11.27 + 17.05 + 18.05 + 14.91 + 12.49 + 10.86 + 9.44 + 7.81 + 6.45 + 5.61 + 4.88 + 9.89 = 128.71\)</span>.
-Sum of negatives: <span class="math notranslate nohighlight">\(-30 - 26.09 - 52.93 = -109.02\)</span>.
-$<span class="math notranslate nohighlight">\( NPV = 128.71 - 109.02 \approx +\$19.7  M \)</span>$
-(The transcript’s quoted NPV is +$21.4M; small differences arise from the exact MACRS percentages used and from rounding. The signed result and order of magnitude match.)</p></li>
+Sum of negatives: <span class="math notranslate nohighlight">\(-30 - 26.09 - 52.93 = -109.02\)</span>.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+NPV = 128.71 - 109.02 \approx +\$19.7  M
+\]</div>
+<p class="sd-card-text">(The transcript’s quoted NPV is +$21.4M; small differences arise from the exact MACRS percentages used and from rounding. The signed result and order of magnitude match.)</p>
+<ul class="simple">
 <li><p class="sd-card-text"><strong>Cumulative discounted cash flow plot.</strong> Tracking the running sum from 2007 onward, the cumulative crosses zero somewhere in 2018  -  this is the <strong>discounted payback period</strong>, <span class="math notranslate nohighlight">\(\approx\)</span> 11 years.</p></li>
 <li><p class="sd-card-text"><strong>Interpretation.</strong> NPV <span class="math notranslate nohighlight">\(&gt; 0\)</span> at 15% cost of capital: the project creates value beyond what could be earned by investing the same $90M+ at 15%. Accept.</p></li>
 </ul>
@@ -1616,9 +1895,12 @@ $<span class="math notranslate nohighlight">\( NPV = 128.71 - 109.02 \approx +\$
 <h3>Internal Rate of Return (IRR)<a class="headerlink" href="#internal-rate-of-return-irr" title="Link to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The <strong>Internal Rate of Return</strong> (also called Investor’s Rate of Return) is the discount rate that drives NPV to exactly zero:
-$<span class="math notranslate nohighlight">\( NPV(r = IRR) = 0 \)</span><span class="math notranslate nohighlight">\(
-**Decision rule:** accept if IRR \)</span>&gt;<span class="math notranslate nohighlight">\( cost of capital. The two rules (NPV \)</span>&gt; 0<span class="math notranslate nohighlight">\(, IRR \)</span>&gt;$ cost of capital) are equivalent for a conventional cash-flow pattern (initial negative outlay followed by positive returns).</p>
+<p>The <strong>Internal Rate of Return</strong> (also called Investor’s Rate of Return) is the discount rate that drives NPV to exactly zero:</p>
+<div class="math notranslate nohighlight">
+\[
+NPV(r = IRR) = 0
+\]</div>
+<p><strong>Decision rule:</strong> accept if IRR <span class="math notranslate nohighlight">\(&gt;\)</span> cost of capital. The two rules (NPV <span class="math notranslate nohighlight">\(&gt; 0\)</span>, IRR <span class="math notranslate nohighlight">\(&gt;\)</span> cost of capital) are equivalent for a conventional cash-flow pattern (initial negative outlay followed by positive returns).</p>
 <p><strong>Computation:</strong> no closed form exists; use a spreadsheet’s Goal Seek or Solver to find <span class="math notranslate nohighlight">\(r\)</span> such that NPV <span class="math notranslate nohighlight">\(= 0\)</span>. Alternatively, plot NPV vs. <span class="math notranslate nohighlight">\(r\)</span> and read the zero-crossing.</p>
 <p><strong>Interpretation:</strong> IRR is the project’s intrinsic earning rate. “If we got this money back as interest from a bank, the equivalent interest rate would be IRR.” For the transcript’s project, IRR <span class="math notranslate nohighlight">\(\approx 18.5\%\)</span>, so the project beats a 15% hurdle rate by 3.5%  -  modest, but acceptable.</p>
 </div>
@@ -1638,8 +1920,13 @@ $<span class="math notranslate nohighlight">\( NPV(r = IRR) = 0 \)</span><span c
 <li><p class="sd-card-text"><strong>Try <span class="math notranslate nohighlight">\(r = 20\%\)</span>.</strong> NPV <span class="math notranslate nohighlight">\(= -100 + 40/1.2 + 50/1.44 + 30/1.728 = -100 + 33.33 + 34.72 + 17.36 = -14.59\)</span>. Negative.</p></li>
 <li><p class="sd-card-text"><strong>Bisect: try <span class="math notranslate nohighlight">\(r = 10\%\)</span>.</strong> NPV <span class="math notranslate nohighlight">\(= -100 + 40/1.1 + 50/1.21 + 30/1.331 = -100 + 36.36 + 41.32 + 22.54 = +0.22\)</span>. Almost zero.</p></li>
 <li><p class="sd-card-text"><strong>Refine: try <span class="math notranslate nohighlight">\(r = 11\%\)</span>.</strong> NPV <span class="math notranslate nohighlight">\(= -100 + 40/1.11 + 50/1.2321 + 30/1.3676 = -100 + 36.04 + 40.58 + 21.94 = -1.44\)</span>. Negative.</p></li>
-<li><p class="sd-card-text"><strong>IRR is between 10% and 11%, closer to 10%. Linear interpolation:</strong>
-$<span class="math notranslate nohighlight">\( IRR \approx 10\% + \frac{0.22}{0.22 + 1.44} \times 1\% = 10\% + 0.13\% = 10.13\% \)</span>$</p></li>
+<li><p class="sd-card-text"><strong>IRR is between 10% and 11%, closer to 10%. Linear interpolation:</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+IRR \approx 10\% + \frac{0.22}{0.22 + 1.44} \times 1\% = 10\% + 0.13\% = 10.13\%
+\]</div>
+<ul class="simple">
 <li><p class="sd-card-text"><strong>Verification.</strong> At 10.13%, NPV is essentially zero  -  check: <span class="math notranslate nohighlight">\(-100 + 40/1.1013 + 50/1.2129 + 30/1.3361 = -100 + 36.32 + 41.22 + 22.45 = -0.01\)</span>. \checkmark</p></li>
 </ul>
 </div>

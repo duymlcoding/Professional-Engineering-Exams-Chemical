@@ -154,7 +154,13 @@ Examples: `TIC-101` = Temperature Indicating Controller, first one in area 100. 
 :label: processdesign-example-0
 
 For the ethylene oxide production process, ethylene and oxygen feed a catalytic reactor where the main reaction is
-$$ \mathrm{C_2H_4 + \tfrac{1}{2} O_2 \rightarrow C_2H_4O} $$
+
+
+$$
+\mathrm{C_2H_4 + \tfrac{1}{2} O_2 \rightarrow C_2H_4O}
+$$
+
+
 with side reactions producing $\mathrm{CO_2}$ and $\mathrm{H_2O}$. The reactor effluent flashes; unreacted ethylene is recycled; ethylene oxide is purified in a downstream distillation train. Which diagram type would show each of the following? (a) the recycle of unreacted ethylene back to the reactor; (b) the fail-safe action of the cooling-water valve on the reactor jacket; (c) the molar composition of the bottoms stream from the second column; (d) the carbon-steel material specification of the reactor-effluent piping; (e) the overall production rate of ethylene oxide.
 ```
 
@@ -294,28 +300,38 @@ This derivation is exactly what the transcript walks through; we will reproduce 
 
 ```{dropdown} Solution Steps
 - **Geometry of a counter-flow exchanger at the pinch.** Designate inlet temperatures $T_h^{in}, T_c^{in}$ and outlet temperatures $T_h^{out}, T_c^{out}$. Define
-$$ \Delta T_1 \equiv T_h^{out} - T_c^{in},   \Delta T_2 \equiv T_h^{in} - T_c^{out} $$
+
+
+$$
+\Delta T_1 \equiv T_h^{out} - T_c^{in},   \Delta T_2 \equiv T_h^{in} - T_c^{out}
+$$
+
+
 so $\Delta T_1$ is at the "cold end" and $\Delta T_2$ is at the "hot end" of the exchanger.
 
 
 - **Energy balances.** For each stream, $Q$ is the duty exchanged:
+
+
 $$
 \begin{align}
-
-
 Q &= CP_h (T_h^{in} - T_h^{out}) \\
 Q &= CP_c (T_c^{out} - T_c^{in})
 \end{align}
 $$
-Rearrange the second:
-$$ T_c^{out} - T_c^{in} = \frac{Q}{CP_c},   T_h^{in} - T_h^{out} = \frac{Q}{CP_h} $$
 
+
+Rearrange the second:
+
+$$
+T_c^{out} - T_c^{in} = \frac{Q}{CP_c},   T_h^{in} - T_h^{out} = \frac{Q}{CP_h}
+$$
 
 - **Subtract one equation from the other to relate $\Delta T_2 - \Delta T_1$.**
+
+
 $$
 \begin{align}
-
-
 \Delta T_2 - \Delta T_1 &= (T_h^{in} - T_c^{out}) - (T_h^{out} - T_c^{in}) \\
 &= (T_h^{in} - T_h^{out}) - (T_c^{out} - T_c^{in}) \\
 &= \frac{Q}{CP_h} - \frac{Q}{CP_c} \\
@@ -328,10 +344,21 @@ $$
 
 
 - **Above the pinch:** the exchanger's hot end is the pinch, so $\Delta T_2 = \Delta T_{\min}$. Then $\Delta T_1 = \Delta T_{\min} + Q (CP_c - CP_h)/(CP_h CP_c)$. For feasibility we need $\Delta T_1 \geq \Delta T_{\min}$, which requires the extra term to be non-negative:
-$$ Q \frac{CP_c - CP_h}{CP_h CP_c} \geq 0  \Longrightarrow  CP_c \geq CP_h   (above pinch) $$
+
+
+$$
+Q \frac{CP_c - CP_h}{CP_h CP_c} \geq 0  \Longrightarrow  CP_c \geq CP_h   (above pinch)
+$$
+
 
 - **Below the pinch:** the exchanger's cold end is the pinch, so $\Delta T_1 = \Delta T_{\min}$. Then $\Delta T_2 = \Delta T_{\min} + Q (CP_h - CP_c)/(CP_h CP_c)$. Feasibility requires $\Delta T_2 \geq \Delta T_{\min}$:
-$$ CP_h \geq CP_c   (below pinch) $$
+
+
+$$
+CP_h \geq CP_c   (below pinch)
+$$
+
+
 ```
 
 
@@ -407,17 +434,45 @@ Therefore the only feasible pinch pairing is **H1-C2** and **H2-C1**.
 
 
 - **Match H1-C2 and maximize duty.**
-$$ Q_{H1-C2} = CP_{H1} (T_{H1}^{in} - T_{H1}^{out}) = 3 \times (180 - 90) = 270 kW $$
+
+
+$$
+Q_{H1-C2} = CP_{H1} (T_{H1}^{in} - T_{H1}^{out}) = 3 \times (180 - 90) = 270 kW
+$$
+
+
 Check the cold-side response: C2 enters at 80$^\circ$C with $CP = 5$. After receiving 270 kW it would exit at
-$$ T_{C2}^{out} = 80 + \frac{270}{5} = 134^\circ C $$
+
+
+$$
+T_{C2}^{out} = 80 + \frac{270}{5} = 134^\circ C
+$$
+
+
 Required final temperature of C2 is 140$^\circ$C, so 6$^\circ$C ($= 30$ kW additional duty) still must be supplied. H1 is fully "ticked off" (cooled to its pinch temperature).
 
 
 - **Match H2-C1 and maximize duty.**
-$$ Q_{H2-C1, max possible from hot} = 2 \times (150 - 90) = 120 kW $$
-$$ Q_{C1, required} = 2 \times (135 - 80) = 110 kW $$
+
+
+$$
+Q_{H2-C1, max possible from hot} = 2 \times (150 - 90) = 120 kW
+$$
+
+
+$$
+Q_{C1, required} = 2 \times (135 - 80) = 110 kW
+$$
+
+
 Cold-side is the binding constraint: take $Q = 110$ kW. C1 reaches its target 135$^\circ$C; H2 cools to
-$$ T_{H2}^{out} = 150 - \frac{110}{2} = 95^\circ C $$
+
+
+$$
+T_{H2}^{out} = 150 - \frac{110}{2} = 95^\circ C
+$$
+
+
 H2 stops at 95$^\circ$C, which is 5$^\circ$C above the pinch. The remaining 5 $\times$ 2 = 10 kW of cooling cannot be done above the pinch (no cold utility allowed), so this residual is carried over to the below-pinch sub-problem.
 
 
@@ -456,10 +511,26 @@ Hot utility used above the pinch: **30 kW.**
 
 
 - **Match H1-C1 below pinch and maximize.**
-$$ Q_{H1, available below} = 3 \times (90 - 60) = 90 kW $$
-$$ Q_{C1, below} = 2 \times (80 - 30) = 100 kW $$
+
+
+$$
+Q_{H1, available below} = 3 \times (90 - 60) = 90 kW
+$$
+
+
+$$
+Q_{C1, below} = 2 \times (80 - 30) = 100 kW
+$$
+
+
 Hot-side is binding (H1 has only 90 kW available). Take $Q = 90$ kW. H1 reaches its target 60$^\circ$C; C1 only heats to
-$$ T_{C1}^{out} = 30 + \frac{90}{2} = 75^\circ C $$
+
+
+$$
+T_{C1}^{out} = 30 + \frac{90}{2} = 75^\circ C
+$$
+
+
 C1 still needs 5$^\circ$C of heating, $= 2 \times 5 = 10$ kW, which we attempt from H2.
 
 
@@ -588,8 +659,18 @@ $\{170, 160, 120, 117, 60, 45, 40, 25\}$
 
 
 - **Verification by overall energy balance.**
-$$ \sum (CP \cdot \Delta T)_{hot} = 10(175-45) + 40(125-65) = 1300 + 2400 = 3700 kW (total hot duty) $$
-$$ \sum (CP \cdot \Delta T)_{cold} = 20(155-20) + 15(112-40) = 2700 + 1080 = 3780 kW (total cold duty) $$
+
+
+$$
+\sum (CP \cdot \Delta T)_{hot} = 10(175-45) + 40(125-65) = 1300 + 2400 = 3700 kW (total hot duty)
+$$
+
+
+$$
+\sum (CP \cdot \Delta T)_{cold} = 20(155-20) + 15(112-40) = 2700 + 1080 = 3780 kW (total cold duty)
+$$
+
+
 Difference: $3780 - 3700 = 80$ kW (net deficit of hot, i.e. more cold needs heat than hot provides). Net hot utility minus net cold utility from the cascade: $300 - 220 = 80$ kW. \checkmark The balance closes.
 ```
 
@@ -613,7 +694,13 @@ Capital cost estimation converts an equipment specification (type, size, materia
 
 ```{note}
 The installed purchase cost of a piece of equipment, $C_P$, is built from a **base cost** $C_B$ (a function of size only, e.g. heat-exchanger area or pump power, evaluated for carbon-steel construction at low pressure in a reference base year) and correction factors for non-standard conditions:
-$$ C_P = C_B \cdot F_M \cdot F_P \cdot F_L \cdot \frac{CEPCI_{now}}{CEPCI_{base}} $$
+
+
+$$
+C_P = C_B \cdot F_M \cdot F_P \cdot F_L \cdot \frac{CEPCI_{now}}{CEPCI_{base}}
+$$
+
+
 where:
 
 
@@ -646,11 +733,23 @@ where:
 
 ```{important}
 **Turton Base-Cost Form (CEPCI = 397)**
-$$ \log_{10}(C_B) = K_1 + K_2 \log_{10}(A) + K_3 [\log_{10}(A)]^2 $$
+
+
+$$
+\log_{10}(C_B) = K_1 + K_2 \log_{10}(A) + K_3 [\log_{10}(A)]^2
+$$
+
+
 with $A$ in m$^2$ for heat exchangers (or kW for pumps, m$^3$ for vessels, etc.). For a shell-and-tube *floating-head* exchanger, $K_1 = 4.8306$, $K_2 = -0.8509$, $K_3 = 0.3187$. For a *fixed-tubesheet* exchanger, slightly lower; for a *U-tube*, in between.
 
 The pressure factor follows a similar log-quadratic form:
-$$ \log_{10}(F_P) = C_1 + C_2 \log_{10}(P) + C_3 [\log_{10}(P)]^2 $$
+
+
+$$
+\log_{10}(F_P) = C_1 + C_2 \log_{10}(P) + C_3 [\log_{10}(P)]^2
+$$
+
+
 with $P$ in barg.
 ```
 
@@ -660,7 +759,13 @@ with $P$ in barg.
 ```{note}
 **Quick Cost Scaling with Capacity**
 When detailed correlations are not available, use the **six-tenths rule**:
-$$ C_2 = C_1 (\frac{S_2}{S_1})^n,   n \approx 0.6 $$
+
+
+$$
+C_2 = C_1 (\frac{S_2}{S_1})^n,   n \approx 0.6
+$$
+
+
 where $S$ is a size or capacity parameter (area, volume, power). $n = 0.6$ is the historical average; for specific equipment classes, $n$ ranges from 0.5 to 0.8 (Peters | Timmerhaus tabulates values). The rule reflects the economies of scale of fabrication: doubling the capacity less than doubles the cost.
 ```
 
@@ -693,10 +798,20 @@ A floating-head carbon-steel shell-and-tube heat exchanger with $A = 100$ m$^2$ 
 - **Identify the relevant correction.** Only the inflation correction applies; material, pressure, and geometry are unchanged.
 
 - **Apply the CEPCI ratio.**
-$$ C_{P,now} = C_{P,base} \cdot \frac{CEPCI_{now}}{CEPCI_{base}} = 23{,}000 \cdot \frac{800}{397} $$
+
+
+$$
+C_{P,now} = C_{P,base} \cdot \frac{CEPCI_{now}}{CEPCI_{base}} = 23{,}000 \cdot \frac{800}{397}
+$$
+
 
 - **Compute.**
-$$ C_{P,now} = 23{,}000 \times 2.015 = \$46{,}346 \approx \$46{,}300 $$
+
+
+$$
+C_{P,now} = 23{,}000 \times 2.015 = \$46{,}346 \approx \$46{,}300
+$$
+
 
 - **Verification.** The CEPCI roughly doubled, so the cost roughly doubled  -  consistent with the simple inflation interpretation.
 ```
@@ -713,7 +828,12 @@ A 50 kW centrifugal pump costs \$8{,}500 installed. Estimate the cost of a 150 k
 
 ```{dropdown} Solution Steps
 - **Apply the six-tenths rule with $n = 0.6$.**
-$$ C_2 = C_1 (\frac{P_2}{P_1})^{0.6} = 8500 (\frac{150}{50})^{0.6} = 8500 \times 3^{0.6} $$
+
+
+$$
+C_2 = C_1 (\frac{P_2}{P_1})^{0.6} = 8500 (\frac{150}{50})^{0.6} = 8500 \times 3^{0.6}
+$$
+
 
 - **Compute $3^{0.6}$.** $\log_{10}(3) = 0.4771$, so $0.6 \times 0.4771 = 0.2863$, $10^{0.2863} = 1.933$.
 
@@ -734,13 +854,28 @@ A 200 m$^2$ floating-head shell-and-tube exchanger is needed in 316 SS service a
 
 ```{dropdown} Solution Steps
 - **Compute purchase cost in the base year, with factors.**
-$$ C_{P, 2001} = C_B \cdot F_M \cdot F_P \cdot F_L = 28{,}000 \times 2.1 \times 1.5 \times 1.0 = \$88{,}200 $$
+
+
+$$
+C_{P, 2001} = C_B \cdot F_M \cdot F_P \cdot F_L = 28{,}000 \times 2.1 \times 1.5 \times 1.0 = \$88{,}200
+$$
+
 
 - **Escalate to current CEPCI.**
-$$ C_{P, now} = 88{,}200 \times \frac{800}{397} = 88{,}200 \times 2.015 = \$177{,}700 $$
+
+
+$$
+C_{P, now} = 88{,}200 \times \frac{800}{397} = 88{,}200 \times 2.015 = \$177{,}700
+$$
+
 
 - **Apply bare-module factor for installed cost.**
-$$ C_{BM} = F_{BM} \cdot C_{P, now} = 3.0 \times 177{,}700 = \$533{,}000 $$
+
+
+$$
+C_{BM} = F_{BM} \cdot C_{P, now} = 3.0 \times 177{,}700 = \$533{,}000
+$$
+
 
 - **Verification.** Sanity: a CS base of \$28{,}000 grew to a 316 SS, 20 barg, installed cost of \$533{,}000  -  a 19$\times$ multiplier. The breakdown: 3$\times$ from $F_{BM}$, 2$\times$ from CEPCI, 2.1$\times$ from material, 1.5$\times$ from pressure. Product: $3 \times 2 \times 2.1 \times 1.5 \approx 19$. \checkmark
 ```
@@ -783,36 +918,78 @@ The six factors connect $P$, $F$, and $A$ in all directions. The standard notati
 
 ```{dropdown} Solution Steps
 - **Single-payment compound amount $(F/P, i\%, n)$.** A present sum $P$ earning rate $i$ compounded $n$ times has future value
-$$ F = P (1 + i)^n $$
+
+
+$$
+F = P (1 + i)^n
+$$
+
+
 Derivation: after one period, $P$ becomes $P + P i = P(1+i)$. After two, $P(1+i)(1+i) = P(1+i)^2$. By induction, after $n$, $P(1+i)^n$.
 
 
 - **Single-payment present worth $(P/F, i\%, n)$.** Inverse of the previous:
-$$ P = \frac{F}{(1 + i)^n} $$
+
+
+$$
+P = \frac{F}{(1 + i)^n}
+$$
+
+
 The future sum $F$ is worth less now because money earns interest in between.
 
 
 - **Uniform-series compound amount $(F/A, i\%, n)$.** Sum the future values of each of the $n$ end-of-year payments $A$:
-$$ F = A + A(1+i) + A(1+i)^2 + ... + A(1+i)^{n-1} = A \sum_{k=0}^{n-1}(1+i)^k $$
+
+
+$$
+F = A + A(1+i) + A(1+i)^2 + ... + A(1+i)^{n-1} = A \sum_{k=0}^{n-1}(1+i)^k
+$$
+
+
 The geometric series sums to
-$$ F = A \cdot \frac{(1+i)^n - 1}{i} $$
+
+
+$$
+F = A \cdot \frac{(1+i)^n - 1}{i}
+$$
+
+
 Note: the last payment (at the end of period $n$) accrues no interest, the first (end of period 1) accrues $n-1$ periods.
 
 
 - **Sinking-fund deposit $(A/F, i\%, n)$.** Inverse of the previous:
-$$ A = F \cdot \frac{i}{(1+i)^n - 1} $$
+
+
+$$
+A = F \cdot \frac{i}{(1+i)^n - 1}
+$$
+
+
 The annual deposit $A$ needed to accumulate a target $F$ at the end of $n$ years.
 ```
 
 
 ```{dropdown} Solution Steps
 - **Capital recovery $(A/P, i\%, n)$.** Combine $(F/P)$ and $(A/F)$:
-$$ A = P (1+i)^n \cdot \frac{i}{(1+i)^n - 1} = P \cdot \frac{i (1+i)^n}{(1+i)^n - 1} $$
+
+
+$$
+A = P (1+i)^n \cdot \frac{i}{(1+i)^n - 1} = P \cdot \frac{i (1+i)^n}{(1+i)^n - 1}
+$$
+
+
 The uniform annual payment $A$ that pays off a present principal $P$ in $n$ periods (mortgage-style amortization).
 
 
 - **Uniform-series present worth $(P/A, i\%, n)$.** Inverse of capital recovery:
-$$ P = A \cdot \frac{(1+i)^n - 1}{i (1+i)^n} $$
+
+
+$$
+P = A \cdot \frac{(1+i)^n - 1}{i (1+i)^n}
+$$
+
+
 The present worth of $n$ end-of-year payments of $A$.
 
 
@@ -840,7 +1017,11 @@ The present worth of $n$ end-of-year payments of $A$.
 
 ```{note}
 If a loan or investment quotes a **nominal** annual rate $r$ with $m$ compounding periods per year, the rate *per compounding period* is $r/m$ and the **effective** annual rate is
-$$ i_{eff} = (1 + \frac{r}{m})^m - 1 $$
+
+
+$$
+i_{eff} = (1 + \frac{r}{m})^m - 1
+$$
 
 
 - Monthly compounding ($m = 12$) at 12\% nominal: $i_{eff} = (1.01)^{12} - 1 = 12.68\%$.
@@ -862,18 +1043,47 @@ A piece of equipment is purchased for \$200,000 with a 5-year loan at 8\% annual
 
 ```{dropdown} Solution Steps
 - **Future value of the principal alone (had no payments been made).**
-$$ F_{P, 5} = P (1+i)^5 = 200{,}000 \times 1.08^5 = 200{,}000 \times 1.4693 = \$293{,}860 $$
+
+
+$$
+F_{P, 5} = P (1+i)^5 = 200{,}000 \times 1.08^5 = 200{,}000 \times 1.4693 = \$293{,}860
+$$
+
 
 - **Future value of the annual payments.**
-$$ F_{A, 5} = A \cdot \frac{(1+i)^5 - 1}{i} = 20{,}000 \times \frac{1.08^5 - 1}{0.08} = 20{,}000 \times \frac{0.4693}{0.08} = 20{,}000 \times 5.866 = \$117{,}320 $$
+
+
+$$
+F_{A, 5} = A \cdot \frac{(1+i)^5 - 1}{i} = 20{,}000 \times \frac{1.08^5 - 1}{0.08} = 20{,}000 \times \frac{0.4693}{0.08} = 20{,}000 \times 5.866 = \$117{,}320
+$$
+
 
 - **Balloon payment = unpaid future principal:**
-$$ B = F_{P, 5} - F_{A, 5} = 293{,}860 - 117{,}320 = \$176{,}540 $$
+
+
+$$
+B = F_{P, 5} - F_{A, 5} = 293{,}860 - 117{,}320 = \$176{,}540
+$$
+
 
 - **Verification by present-worth balance.** PW of all payments must equal the loan principal:
-$$ PW_{annuity} = 20{,}000 \cdot \frac{1.08^5 - 1}{0.08 \times 1.08^5} = 20{,}000 \times 3.993 = \$79{,}860 $$
-$$ PW_{balloon} = 176{,}540 / 1.08^5 = 176{,}540 / 1.4693 = \$120{,}140 $$
-$$ PW_{total} = 79{,}860 + 120{,}140 = \$200{,}000  \checkmark $$
+
+
+$$
+PW_{annuity} = 20{,}000 \cdot \frac{1.08^5 - 1}{0.08 \times 1.08^5} = 20{,}000 \times 3.993 = \$79{,}860
+$$
+
+
+$$
+PW_{balloon} = 176{,}540 / 1.08^5 = 176{,}540 / 1.4693 = \$120{,}140
+$$
+
+
+$$
+PW_{total} = 79{,}860 + 120{,}140 = \$200{,}000  \checkmark
+$$
+
+
 ```
 
 
@@ -896,7 +1106,13 @@ Capitalized cost is the present-day lump sum required to fund a piece of equipme
 
 ```{note}
 A **perpetuity** is an infinite series of identical cash flows. The present worth of a perpetuity of $A$ per period at rate $i$ per period is
-$$ P_{perp} = \frac{A}{i} $$
+
+
+$$
+P_{perp} = \frac{A}{i}
+$$
+
+
 Derivation: as $n \to \infty$ in $(P/A, i, n) = [(1+i)^n - 1]/[i(1+i)^n]$, the numerator and denominator both grow as $(1+i)^n$ except for the $-1$ in the numerator. The ratio approaches $1/i$. Therefore $P = A \cdot 1/i = A/i$.
 
 The intuition: a fund of $P = A/i$ invested at rate $i$ earns exactly $A$ per period in interest, paying $A$ to the recipient forever without touching the principal.
@@ -911,9 +1127,21 @@ The capitalized cost $K$ of an asset is the present-day fund needed to (a) buy i
 Let $C_I$ = initial purchase + install + first-time annualized-maintenance present worth. Let $C_R = C_I - S$ where $S$ is the salvage credit at end of life $n$. The replacements form a perpetuity with period $n$.
 
 The present worth of a single replacement at time $n$ is $C_R / (1+i)^n$. The present worth of a replacement every $n$ years forever is the sum of a geometric series:
-$$ P_{rep} = \frac{C_R}{(1+i)^n} + \frac{C_R}{(1+i)^{2n}} + ... = \frac{C_R / (1+i)^n}{1 - 1/(1+i)^n} = \frac{C_R}{(1+i)^n - 1} $$
+
+
+$$
+P_{rep} = \frac{C_R}{(1+i)^n} + \frac{C_R}{(1+i)^{2n}} + ... = \frac{C_R / (1+i)^n}{1 - 1/(1+i)^n} = \frac{C_R}{(1+i)^n - 1}
+$$
+
+
 So
-$$  K = C_I + \frac{C_R}{(1+i)^n - 1}    (Equation 1, capitalized cost) $$
+
+
+$$
+K = C_I + \frac{C_R}{(1+i)^n - 1}    (Equation 1, capitalized cost)
+$$
+
+
 ```
 
 
@@ -922,7 +1150,13 @@ $$  K = C_I + \frac{C_R}{(1+i)^n - 1}    (Equation 1, capitalized cost) $$
 ```{note}
 **Capitalizing Annual Operating Costs Into $C_I$**
 If there is an annual operating/maintenance cost $A_{op}$ paid every year forever, its present worth is
-$$ P_{op} = \frac{A_{op}}{i}   (perpetuity) $$
+
+
+$$
+P_{op} = \frac{A_{op}}{i}   (perpetuity)
+$$
+
+
 Add this perpetuity present worth to $C_I$ before applying Equation 1. Some texts instead add the annual cost *only over the life of the first unit* (using $(P/A, i, n)$) and then capitalize the replacement series; this is mathematically equivalent provided the annual cost is carried in each replacement's $C_R$ as well.
 
 If there is a one-time overhaul at year $m < n$ (e.g. year 3 of a 6-year life), include it as a single-payment present worth $C_{ovh}/(1+i)^m$ added to $C_I$, and include the overhaul in every replacement cycle by adding it to $C_R$ at the same fractional time.
@@ -948,43 +1182,95 @@ Effective annual interest $i = 8\%$. Which reactor is the better long-term inves
 
 ```{dropdown} Solution Steps
 - **Capitalize Reactor A's annual maintenance over its 4-year life.**
-$$ P_{A,maint} = 2{,}000 \cdot \frac{(1.08)^4 - 1}{0.08 \cdot (1.08)^4} $$
+
+
+$$
+P_{A,maint} = 2{,}000 \cdot \frac{(1.08)^4 - 1}{0.08 \cdot (1.08)^4}
+$$
+
+
 Compute $(1.08)^4$: $1.08^2 = 1.1664$, $1.08^4 = 1.1664^2 = 1.3605$. So $[1.3605 - 1]/[0.08 \times 1.3605] = 0.3605/0.10884 = 3.312$.
-$$ P_{A,maint} = 2{,}000 \times 3.312 = \$6{,}624 $$
+
+
+$$
+P_{A,maint} = 2{,}000 \times 3.312 = \$6{,}624
+$$
+
+
 Total "initial cost" for Reactor A:
-$$ C_{I,A} = 25{,}000 + 6{,}624 = \$31{,}624 $$
+
+
+$$
+C_{I,A} = 25{,}000 + 6{,}624 = \$31{,}624
+$$
 
 
 - **Replacement cost for Reactor A.**
-$$ C_{R,A} = C_{I,A} - S_A = 31{,}624 - 3{,}000 = \$28{,}624 $$
+
+
+$$
+C_{R,A} = C_{I,A} - S_A = 31{,}624 - 3{,}000 = \$28{,}624
+$$
 
 
 - **Capitalized cost of Reactor A (apply Equation 1 with $n = 4$).**
-$$ K_A = C_{I,A} + \frac{C_{R,A}}{(1.08)^4 - 1} = 31{,}624 + \frac{28{,}624}{0.3605} = 31{,}624 + 79{,}400 = \$111{,}024 \approx \$111{,}000 $$
+
+
+$$
+K_A = C_{I,A} + \frac{C_{R,A}}{(1.08)^4 - 1} = 31{,}624 + \frac{28{,}624}{0.3605} = 31{,}624 + 79{,}400 = \$111{,}024 \approx \$111{,}000
+$$
+
+
 ```
 
 
 ```{dropdown} Solution Steps
 - **Capitalize Reactor B's annual maintenance over 6 years.**
-$$ P_{B,maint} = 4{,}000 \cdot \frac{(1.08)^6 - 1}{0.08 \cdot (1.08)^6} $$
+
+
+$$
+P_{B,maint} = 4{,}000 \cdot \frac{(1.08)^6 - 1}{0.08 \cdot (1.08)^6}
+$$
+
+
 Compute $(1.08)^6$: $1.08^3 = 1.2597$, $1.08^6 = 1.2597^2 = 1.5869$. So $[1.5869 - 1]/[0.08 \times 1.5869] = 0.5869/0.12695 = 4.623$.
-$$ P_{B,maint} = 4{,}000 \times 4.623 = \$18{,}492 $$
+
+
+$$
+P_{B,maint} = 4{,}000 \times 4.623 = \$18{,}492
+$$
 
 
 - **Capitalize the year-3 overhaul for Reactor B.**
-$$ P_{B,ovh} = \frac{3{,}500}{(1.08)^3} = \frac{3{,}500}{1.2597} = \$2{,}778 $$
+
+
+$$
+P_{B,ovh} = \frac{3{,}500}{(1.08)^3} = \frac{3{,}500}{1.2597} = \$2{,}778
+$$
 
 
 - **Total "initial cost" for Reactor B.**
-$$ C_{I,B} = 15{,}000 + 18{,}492 + 2{,}778 = \$36{,}270 $$
+
+
+$$
+C_{I,B} = 15{,}000 + 18{,}492 + 2{,}778 = \$36{,}270
+$$
 
 
 - **Replacement cost for Reactor B (no salvage).**
-$$ C_{R,B} = C_{I,B} = \$36{,}270 $$
+
+
+$$
+C_{R,B} = C_{I,B} = \$36{,}270
+$$
 
 
 - **Capitalized cost of Reactor B (Equation 1, $n = 6$).**
-$$ K_B = 36{,}270 + \frac{36{,}270}{(1.08)^6 - 1} = 36{,}270 + \frac{36{,}270}{0.5869} = 36{,}270 + 61{,}800 = \$98{,}070 \approx \$98{,}000 $$
+
+
+$$
+K_B = 36{,}270 + \frac{36{,}270}{(1.08)^6 - 1} = 36{,}270 + \frac{36{,}270}{0.5869} = 36{,}270 + 61{,}800 = \$98{,}070 \approx \$98{,}000
+$$
 
 
 - **Decision.** $K_B < K_A$ by about \$13{,}000. **Reactor B is the better long-term investment.**
@@ -1063,7 +1349,13 @@ End-of-year convention: all flows are placed at the end of the period in which t
 ### Present-Worth Algebra
 
 ```{important}
-$$ PW = \sum_{k=0}^{n} \frac{CF_k}{(1+i)^k} $$
+
+
+$$
+PW = \sum_{k=0}^{n} \frac{CF_k}{(1+i)^k}
+$$
+
+
 where $CF_k$ is the signed cash flow at the end of year $k$. The result $PW$ is signed: negative means net cost, positive means net benefit. Among competing alternatives, the one with the smallest absolute net cost (i.e. the least negative or most positive PW) is preferred.
 ```
 
@@ -1117,9 +1409,19 @@ Same data: A has 4-year life and salvage \$3{,}000, annual maintenance \$2{,}000
 
 
 - **PW of A's annual maintenance (years 1-12).**
-$$ PW_{maint} = -2{,}000 \cdot (P/A, 8, 12) $$
+
+
+$$
+PW_{maint} = -2{,}000 \cdot (P/A, 8, 12)
+$$
+
+
 Compute $(P/A, 8, 12) = [(1.08)^{12} - 1]/[0.08 \cdot (1.08)^{12}]$. $(1.08)^{12}$: $(1.08)^4 = 1.3605$, $(1.08)^8 = 1.8509$, $(1.08)^{12} = 1.3605 \times 1.8509 = 2.518$. So $(P/A) = 1.518/(0.08 \times 2.518) = 1.518/0.2014 = 7.536$.
-$$ PW_{maint} = -2{,}000 \times 7.536 = -\$15{,}072 $$
+
+
+$$
+PW_{maint} = -2{,}000 \times 7.536 = -\$15{,}072
+$$
 
 
 - **PW of A's replacements (net $-22{,}000$ at years 4 and 8).**
@@ -1131,11 +1433,21 @@ $$ PW_{maint} = -2{,}000 \times 7.536 = -\$15{,}072 $$
 
 
 - **PW of A's final-year salvage ($+3{,}000$ at year 12).**
-$$ +3{,}000/(1.08)^{12} = 3{,}000/2.518 = +\$1{,}191 $$
+
+
+$$
++3{,}000/(1.08)^{12} = 3{,}000/2.518 = +\$1{,}191
+$$
 
 
 - **Total PW for A.**
-$$ PW_A = -25{,}000 - 15{,}072 - 16{,}170 - 11{,}887 + 1{,}191 = -\$66{,}938 \approx -\$67{,}000 $$
+
+
+$$
+PW_A = -25{,}000 - 15{,}072 - 16{,}170 - 11{,}887 + 1{,}191 = -\$66{,}938 \approx -\$67{,}000
+$$
+
+
 ```
 
 
@@ -1157,11 +1469,19 @@ $$ PW_A = -25{,}000 - 15{,}072 - 16{,}170 - 11{,}887 + 1{,}191 = -\$66{,}938 \ap
 
 
 - **PW of B's annual maintenance.**
-$$ PW_{maint} = -4{,}000 \times (P/A, 8, 12) = -4{,}000 \times 7.536 = -\$30{,}144 $$
+
+
+$$
+PW_{maint} = -4{,}000 \times (P/A, 8, 12) = -4{,}000 \times 7.536 = -\$30{,}144
+$$
 
 
 - **PW of B's year-6 replacement.**
-$$ -15{,}000/(1.08)^6 = -15{,}000/1.5869 = -\$9{,}454 $$
+
+
+$$
+-15{,}000/(1.08)^6 = -15{,}000/1.5869 = -\$9{,}454
+$$
 
 
 - **PW of B's overhauls (years 3 and 9).**
@@ -1173,7 +1493,11 @@ $$ -15{,}000/(1.08)^6 = -15{,}000/1.5869 = -\$9{,}454 $$
 
 
 - **Total PW for B.**
-$$ PW_B = -15{,}000 - 30{,}144 - 9{,}454 - 2{,}778 - 1{,}751 = -\$59{,}127 \approx -\$59{,}100 $$
+
+
+$$
+PW_B = -15{,}000 - 30{,}144 - 9{,}454 - 2{,}778 - 1{,}751 = -\$59{,}127 \approx -\$59{,}100
+$$
 
 
 - **Decision.** $|PW_B| < |PW_A|$ (cost \$59{,}100 vs. \$67{,}000); **Reactor B is cheaper in present-worth terms by \$7{,}800**.
@@ -1187,7 +1511,13 @@ $$ PW_B = -15{,}000 - 30{,}144 - 9{,}454 - 2{,}778 - 1{,}751 = -\$59{,}127 \appr
 
 ```{note}
 A third comparison method, equivalent to PW but expressed as a uniform annual cost, is the **annual equivalent (AE)**:
-$$ AE = PW \cdot (A/P, i, n) $$
+
+
+$$
+AE = PW \cdot (A/P, i, n)
+$$
+
+
 For the same Reactor A vs. B problem:
 
 
@@ -1219,7 +1549,13 @@ Before any equipment is sized, before any land is purchased, a chemist's candida
 ```{note}
 **The Per-Kilogram-of-Product Basis**
 Choose the desired product as the basis: 1 kg of product. Compute the mass of each reactant and byproduct that participates in producing 1 kg of product, using stoichiometric coefficients and molecular weights:
-$$ mass of species  i  per kg product = \frac{|\nu_i| M_i}{|\nu_P| M_P} $$
+
+
+$$
+mass of species  i  per kg product = \frac{|\nu_i| M_i}{|\nu_P| M_P}
+$$
+
+
 where $\nu_i$ is the stoichiometric coefficient of species $i$ (negative for reactants, positive for products), $M_i$ is its molecular weight, and subscript $P$ is the desired product. This is the same operation in Felder | Rousseau's introductory mass-balance chapters  -  you are reading the stoichiometry on a mass rather than molar basis.
 ```
 
@@ -1227,7 +1563,13 @@ where $\nu_i$ is the stoichiometric coefficient of species $i$ (negative for rea
 ### The GEP Equation
 
 ```{important}
-$$ GEP = \sum_{products} \frac{|\nu_i| M_i}{|\nu_P| M_P} p_i  -  \sum_{reactants} \frac{|\nu_j| M_j}{|\nu_P| M_P} p_j $$
+
+
+$$
+GEP = \sum_{products} \frac{|\nu_i| M_i}{|\nu_P| M_P} p_i  -  \sum_{reactants} \frac{|\nu_j| M_j}{|\nu_P| M_P} p_j
+$$
+
+
 where $p_i$ is the market price of species $i$ in \$/kg.
 
 
@@ -1250,11 +1592,23 @@ The transcript's example, walked through completely.
 Compare two synthesis routes to vinyl chloride monomer (VCM, $\mathrm{C_2H_3Cl}$, $M = 62.5$):
 
 **Route 1:** Hydrochlorination of acetylene.
-$$ \mathrm{C_2H_2 + HCl \rightarrow C_2H_3Cl} $$
+
+
+$$
+\mathrm{C_2H_2 + HCl \rightarrow C_2H_3Cl}
+$$
+
+
 Prices: acetylene \$1.85/kg, HCl \$0.30/kg, VCM \$0.75/kg.
 
 **Route 2:** Oxychlorination/cracking of ethane.
-$$ \mathrm{C_2H_6 + Cl_2 + \tfrac{1}{2} O_2 \rightarrow C_2H_3Cl + H_2O + HCl} $$
+
+
+$$
+\mathrm{C_2H_6 + Cl_2 + \tfrac{1}{2} O_2 \rightarrow C_2H_3Cl + H_2O + HCl}
+$$
+
+
 Prices: ethane \$0.20/kg, Cl$_2$ \$0.25/kg, O$_2$ \$0 (from air), VCM \$0.75/kg, byproduct HCl credit \$0.30/kg, H$_2$O \$0.
 
 Which route shows a positive GEP?
@@ -1263,8 +1617,16 @@ Which route shows a positive GEP?
 
 ```{dropdown} Solution Steps
 - **Molecular weights.**
-$$ M(\mathrm{C_2H_2}) = 26.0,   M(\mathrm{HCl}) = 36.5,   M(\mathrm{C_2H_3Cl}) = 62.5 $$
-$$ M(\mathrm{C_2H_6}) = 30.0,   M(\mathrm{Cl_2}) = 71.0,   M(\mathrm{O_2}) = 32.0,   M(\mathrm{H_2O}) = 18.0 $$
+
+
+$$
+M(\mathrm{C_2H_2}) = 26.0,   M(\mathrm{HCl}) = 36.5,   M(\mathrm{C_2H_3Cl}) = 62.5
+$$
+
+
+$$
+M(\mathrm{C_2H_6}) = 30.0,   M(\mathrm{Cl_2}) = 71.0,   M(\mathrm{O_2}) = 32.0,   M(\mathrm{H_2O}) = 18.0
+$$
 
 
 - **Route 1: mass of each species per kg VCM.**
@@ -1275,15 +1637,17 @@ $$ M(\mathrm{C_2H_6}) = 30.0,   M(\mathrm{Cl_2}) = 71.0,   M(\mathrm{O_2}) = 32.
 - HCl: $\nu = 1$, $M = 36.5$; mass $= 36.5/62.5 = 0.584$ kg/kg VCM.
 
 **GEP$_1$:**
+
+
 $$
 \begin{align}
-
-
 GEP_1 &= (1)(0.75) - (0.416)(1.85) - (0.584)(0.30) \\
 &= 0.750 - 0.770 - 0.175 \\
 &= -\$0.195  per kg VCM \approx -\$0.20/kg
 \end{align}
 $$
+
+
 **Route 1 is a money loser on raw materials alone. Reject.**
 ```
 
@@ -1303,15 +1667,17 @@ $$
 - HCl byproduct: $36.5/62.5 = 0.584$ kg/kg VCM (\$0.30/kg credit).
 
 **GEP$_2$:**
+
+
 $$
 \begin{align}
-
-
 GEP_2 &= (1)(0.75) + (0.584)(0.30) - (0.480)(0.20) - (1.136)(0.25) - (0.256)(0) \\
 &= 0.750 + 0.175 - 0.096 - 0.284 - 0 \\
 &= +\$0.545  per kg VCM
 \end{align}
 $$
+
+
 **Route 2 is profitable on a raw-material basis; proceeds to the next stage of design.**
 
 
@@ -1333,15 +1699,16 @@ Consider a hypothetical reaction $\mathrm{A + B \rightarrow P + Q}$ where Q is a
 
 ```{dropdown} Solution Steps
 - **Set up the equation, treating Q's disposal cost as a debit on the products side.**
+
+
 $$
 \begin{align}
-
-
 GEP &= (1.0)(1.00) + (0.1)(-0.40) - (0.6)(0.50) - (0.5)(0.30) \\
 &= 1.000 - 0.040 - 0.300 - 0.150 \\
 &= +\$0.510  per kg P
 \end{align}
 $$
+
 
 - **Sanity check.** If Q had zero disposal cost instead, GEP would be \$0.550. The disposal of 0.1 kg/kg of waste reduces profit by \$0.04  -  about 8\% of margin. If disposal cost rose to \$5/kg (e.g. a regulated waste), the penalty would be 0.1 $\times$ 5 = \$0.50/kg, almost killing the route. Byproduct economics are often the deciding factor in route selection.
 ```
@@ -1366,7 +1733,13 @@ The Net Present Value (NPV) and Internal Rate of Return (IRR) are the two headli
 
 ```{note}
 **Net Present Value** is the discounted sum of all after-tax cash flows over the project life, less the initial investment:
-$$ NPV = -I_0 + \sum_{k=1}^{n} \frac{CF_k}{(1+r)^k} + \frac{S_n + WC}{(1+r)^n} $$
+
+
+$$
+NPV = -I_0 + \sum_{k=1}^{n} \frac{CF_k}{(1+r)^k} + \frac{S_n + WC}{(1+r)^n}
+$$
+
+
 where:
 
 
@@ -1389,7 +1762,13 @@ where:
 ```{note}
 **Why Depreciation Matters**
 Depreciation is not a cash outflow  -  the cash was spent when the equipment was purchased. But the tax code allows the company to deduct a portion of the original investment each year, reducing taxable income. The cash flow in year $k$ is therefore:
-$$ CF_k = (S_k - C_k - D_k)(1 - t) + D_k $$
+
+
+$$
+CF_k = (S_k - C_k - D_k)(1 - t) + D_k
+$$
+
+
 where:
 
 
@@ -1533,7 +1912,13 @@ Let the discount factors be $1/(1.15)^k$ where $k$ is years from 2007.
 - **Sum to get NPV.**
 Sum of positives: $11.27 + 17.05 + 18.05 + 14.91 + 12.49 + 10.86 + 9.44 + 7.81 + 6.45 + 5.61 + 4.88 + 9.89 = 128.71$.
 Sum of negatives: $-30 - 26.09 - 52.93 = -109.02$.
-$$ NPV = 128.71 - 109.02 \approx +\$19.7  M $$
+
+
+$$
+NPV = 128.71 - 109.02 \approx +\$19.7  M
+$$
+
+
 (The transcript's quoted NPV is +\$21.4M; small differences arise from the exact MACRS percentages used and from rounding. The signed result and order of magnitude match.)
 
 
@@ -1548,7 +1933,13 @@ $$ NPV = 128.71 - 109.02 \approx +\$19.7  M $$
 
 ```{note}
 The **Internal Rate of Return** (also called Investor's Rate of Return) is the discount rate that drives NPV to exactly zero:
-$$ NPV(r = IRR) = 0 $$
+
+
+$$
+NPV(r = IRR) = 0
+$$
+
+
 **Decision rule:** accept if IRR $>$ cost of capital. The two rules (NPV $> 0$, IRR $>$ cost of capital) are equivalent for a conventional cash-flow pattern (initial negative outlay followed by positive returns).
 
 **Computation:** no closed form exists; use a spreadsheet's Goal Seek or Solver to find $r$ such that NPV $= 0$. Alternatively, plot NPV vs. $r$ and read the zero-crossing.
@@ -1576,7 +1967,12 @@ A project costs \$100K at $t=0$ and returns \$40K, \$50K, \$30K at the ends of y
 - **Refine: try $r = 11\%$.** NPV $= -100 + 40/1.11 + 50/1.2321 + 30/1.3676 = -100 + 36.04 + 40.58 + 21.94 = -1.44$. Negative.
 
 - **IRR is between 10\% and 11\%, closer to 10\%. Linear interpolation:**
-$$ IRR \approx 10\% + \frac{0.22}{0.22 + 1.44} \times 1\% = 10\% + 0.13\% = 10.13\% $$
+
+
+$$
+IRR \approx 10\% + \frac{0.22}{0.22 + 1.44} \times 1\% = 10\% + 0.13\% = 10.13\%
+$$
+
 
 - **Verification.** At 10.13\%, NPV is essentially zero  -  check: $-100 + 40/1.1013 + 50/1.2129 + 30/1.3361 = -100 + 36.32 + 41.22 + 22.45 = -0.01$. \checkmark
 ```

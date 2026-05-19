@@ -22,11 +22,23 @@ For more general loadings, the stress is a tensor with nine components $\sigma_{
 ```{important}
 **Definitions**
 **Engineering (nominal) stress:**
-$$ \sigma = \frac{F}{A_0} $$
+
+
+$$
+\sigma = \frac{F}{A_0}
+$$
+
+
 $F$ is the instantaneous applied force; $A_0$ is the *original*, undeformed cross-sectional area. Units: Pa (N/m$^2$), MPa, psi, ksi.
 
 **Engineering (nominal) strain:**
-$$ \varepsilon = \frac{\Delta L}{L_0} = \frac{L_i - L_0}{L_0} $$
+
+
+$$
+\varepsilon = \frac{\Delta L}{L_0} = \frac{L_i - L_0}{L_0}
+$$
+
+
 $L_0$ is the original gauge length; $L_i$ is the instantaneous length under load; $\Delta L = L_i - L_0$ is the elongation. Dimensionless (m/m, often expressed as "in/in" or as a percent).
 ```
 
@@ -36,9 +48,21 @@ $L_0$ is the original gauge length; $L_i$ is the instantaneous length under load
 ```{note}
 **The Engineering-True Distinction**
 **Engineering stress** uses $A_0$ (original area). **True stress** uses $A_i$ (instantaneous, deformed area):
-$$ \sigma_{true} = \frac{F}{A_i} $$
+
+
+$$
+\sigma_{true} = \frac{F}{A_i}
+$$
+
+
 Engineering and true stress are identical at zero strain and diverge as the specimen deforms. Up to the onset of necking, the relationship is approximately
-$$ \sigma_{true} = \sigma (1 + \varepsilon),   \varepsilon_{true} = \ln(1 + \varepsilon) $$
+
+
+$$
+\sigma_{true} = \sigma (1 + \varepsilon),   \varepsilon_{true} = \ln(1 + \varepsilon)
+$$
+
+
 After necking begins, the specimen's cross-section is no longer uniform and these formulas break down.
 
 **Design implication.** Engineering stress is used everywhere in design codes (ASME, ASTM) because the original area is what the designer specifies. True stress matters in metal-forming and in research on deformation mechanisms but is rarely used in chemical-plant equipment design. Throughout this chapter, "stress" without qualifier means engineering stress.
@@ -98,15 +122,17 @@ With definitions in hand, we work through the algebra of computing engineering s
 
 ```{important}
 For tensile or compressive uniaxial loading:
+
+
 $$
 \begin{align}
-
-
 \sigma &= \frac{F}{A_0} = \frac{F}{\pi (d_0/2)^2}  (round cross-section) \\
 \sigma &= \frac{F}{A_0} = \frac{F}{w_0   t_0}  (rectangular cross-section, width w, thickness t) \\
 \varepsilon &= \frac{L_i - L_0}{L_0}
 \end{align}
 $$
+
+
 Units: $F$ in N gives $\sigma$ in Pa when $A_0$ is in m$^2$. To get MPa, either divide the Pa result by $10^6$ or use $A_0$ in mm$^2$ (then Pa·mm$^2$/m$^2 = $ MPa directly).
 
 The common-units shortcut: $\sigma [MPa] = F [N] / A_0 [mm^2]$.
@@ -124,18 +150,40 @@ A round metal specimen of original diameter $d_0 = 9.6$ mm and original gauge le
 
 ```{dropdown} Solution Steps
 - **Original cross-sectional area.**
-$$ A_0 = \pi(\frac{d_0}{2})^2 = \pi(\frac{9.6 \times 10^{-3}}{2})^2 = \pi (4.8 \times 10^{-3})^2 $$
+
+
+$$
+A_0 = \pi(\frac{d_0}{2})^2 = \pi(\frac{9.6 \times 10^{-3}}{2})^2 = \pi (4.8 \times 10^{-3})^2
+$$
+
+
 Step the algebra: $(4.8 \times 10^{-3})^2 = 23.04 \times 10^{-6} = 2.304 \times 10^{-5}$ m$^2$.
-$$ A_0 = \pi \times 2.304 \times 10^{-5} = 7.238 \times 10^{-5} m^2 $$
+
+
+$$
+A_0 = \pi \times 2.304 \times 10^{-5} = 7.238 \times 10^{-5} m^2
+$$
 
 
 - **Engineering stress.**
-$$ \sigma = \frac{F}{A_0} = \frac{18{,}000 N}{7.238 \times 10^{-5} m^2} = 2.488 \times 10^{8} Pa = 248.8 MPa \approx 249 MPa $$
+
+
+$$
+\sigma = \frac{F}{A_0} = \frac{18{,}000 N}{7.238 \times 10^{-5} m^2} = 2.488 \times 10^{8} Pa = 248.8 MPa \approx 249 MPa
+$$
+
+
 Quick double-check via the mm$^2$ shortcut: $A_0 [mm^2] = \pi (4.8)^2 = 72.38$ mm$^2$. $\sigma = 18{,}000/72.38 = 248.7$ MPa. \checkmark Same answer.
 
 
 - **Engineering strain.**
-$$ \varepsilon = \frac{L_i - L_0}{L_0} = \frac{401.5 - 400.0}{400.0} = \frac{1.5}{400.0} = 0.00375 $$
+
+
+$$
+\varepsilon = \frac{L_i - L_0}{L_0} = \frac{401.5 - 400.0}{400.0} = \frac{1.5}{400.0} = 0.00375
+$$
+
+
 Dimensionless. Often expressed as 0.375\%.
 
 
@@ -157,13 +205,28 @@ A flat steel bar with width $w_0 = 25$ mm and thickness $t_0 = 6$ mm is gripped 
 
 ```{dropdown} Solution Steps
 - **Cross-sectional area.**
-$$ A_0 = w_0 \times t_0 = 25 \times 6 = 150 mm^2 = 1.5 \times 10^{-4} m^2 $$
+
+
+$$
+A_0 = w_0 \times t_0 = 25 \times 6 = 150 mm^2 = 1.5 \times 10^{-4} m^2
+$$
+
 
 - **Stress (mm$^2$ shortcut).**
-$$ \sigma = \frac{F}{A_0} = \frac{45{,}000 N}{150 mm^2} = 300 MPa $$
+
+
+$$
+\sigma = \frac{F}{A_0} = \frac{45{,}000 N}{150 mm^2} = 300 MPa
+$$
+
 
 - **Strain.**
-$$ \varepsilon = \frac{0.29}{200} = 1.45 \times 10^{-3} $$
+
+
+$$
+\varepsilon = \frac{0.29}{200} = 1.45 \times 10^{-3}
+$$
+
 
 - **Hooke's law cross-check.** If the material is steel ($E = 207$ GPa = 207{,}000 MPa) and elastic, $\sigma = E\varepsilon$ predicts $\sigma = 207{,}000 \times 1.45 \times 10^{-3} = 300$ MPa. \checkmark Excellent agreement  -  the elastic-region assumption is consistent.
 
@@ -221,7 +284,13 @@ Starting at the origin and following the curve, you encounter (in order):
 
 ```{important}
 **Hooke's Law in 1-D**
-$$ \sigma = E \varepsilon  (elastic region only) $$
+
+
+$$
+\sigma = E \varepsilon  (elastic region only)
+$$
+
+
 $E$ is the **Young's modulus** or **modulus of elasticity**, with units of stress (GPa or psi). It is the slope of the linear portion of the stress-strain curve. It quantifies a material's *stiffness* (resistance to elastic deformation) and is largely set by interatomic bond strength  -  it varies relatively little with alloying or processing.
 
 Typical values (room temperature):
@@ -272,7 +341,11 @@ Equivalently: $\sigma_y$ is the stress at which, if the specimen were unloaded, 
 ```{note}
 If you load past the yield point into the plastic region and then release the load, you do not retrace the loading curve. Instead, the unloading line is *parallel to the elastic slope*. The horizontal distance from this unloading line to the strain axis is the **plastic strain** (permanent set) locked into the specimen; the recovered portion (along the unloading line) is the **elastic strain**, which equals $\sigma_{unload} / E$.
 
-$$ \varepsilon_{total} = \varepsilon_p + \varepsilon_e,   \varepsilon_e = \sigma/E,   \varepsilon_p = \varepsilon_{total} - \sigma/E $$
+
+$$
+\varepsilon_{total} = \varepsilon_p + \varepsilon_e,   \varepsilon_e = \sigma/E,   \varepsilon_p = \varepsilon_{total} - \sigma/E
+$$
+
 
 **Implication for material properties.** If a specimen is loaded to $\sigma_1$ in the plastic region, then unloaded, then reloaded, the new stress-strain curve follows the elastic line back up to $\sigma_1$, then continues along the original curve. The new effective yield strength is now $\sigma_1$ (work-hardening). The total ductility (strain to fracture) is reduced by the consumed plastic strain.
 ```
@@ -285,7 +358,13 @@ $$ \varepsilon_{total} = \varepsilon_p + \varepsilon_e,   \varepsilon_e = \sigma
 For a ductile metal in tension, the engineering stress rises as the specimen work-hardens, reaching a peak at the UTS. Past the peak, work-hardening can no longer keep pace with the geometric softening that comes from area reduction  -  some region of the gauge section begins to thin faster than the rest, concentrating strain locally. This is the **necking instability**.
 
 Mathematically, the condition for the onset of necking (the Consid\`ere criterion) is
-$$ \frac{d\sigma_{true}}{d\varepsilon_{true}} = \sigma_{true} $$
+
+
+$$
+\frac{d\sigma_{true}}{d\varepsilon_{true}} = \sigma_{true}
+$$
+
+
 at which point the engineering stress reaches its maximum (the UTS).
 
 After necking, the engineering stress drops (because the area, defined as $A_0$, hasn't changed but the load required to extend the necked region decreases). The true stress continues to rise. The specimen elongates almost exclusively in the neck region until fracture.
@@ -307,7 +386,12 @@ After necking, the engineering stress drops (because the area, defined as $A_0$,
 - **Percent elongation at fracture** $= \varepsilon_f \times 100$. Ductility measure.
 
 - **Modulus of resilience $U_r$** = elastic strain energy per unit volume:
-$$ U_r = \int_0^{\varepsilon_y} \sigma d\varepsilon = \frac{1}{2}\sigma_y \varepsilon_y = \frac{\sigma_y^2}{2E} $$
+
+
+$$
+U_r = \int_0^{\varepsilon_y} \sigma d\varepsilon = \frac{1}{2}\sigma_y \varepsilon_y = \frac{\sigma_y^2}{2E}
+$$
+
 
 - **Modulus of toughness** = total area under the stress-strain curve up to fracture. Total energy absorbed per unit volume; a combined strength + ductility measure.
 ```
@@ -335,30 +419,65 @@ Compute $E$, the modulus of resilience, the modulus of toughness (approximate), 
 
 ```{dropdown} Solution Steps
 - **Young's modulus from the elastic-region point.**
-$$ E = \frac{\sigma}{\varepsilon} = \frac{200 MPa}{0.001} = 200{,}000 MPa = 200 GPa $$
+
+
+$$
+E = \frac{\sigma}{\varepsilon} = \frac{200 MPa}{0.001} = 200{,}000 MPa = 200 GPa
+$$
+
+
 Consistent with typical steel.
 
 - **Yield strain (elastic limit).**
-$$ \varepsilon_y = \frac{\sigma_y}{E} = \frac{415}{200{,}000} = 2.08 \times 10^{-3} $$
+
+
+$$
+\varepsilon_y = \frac{\sigma_y}{E} = \frac{415}{200{,}000} = 2.08 \times 10^{-3}
+$$
+
 
 - **Modulus of resilience.**
-$$ U_r = \frac{\sigma_y^2}{2E} = \frac{(415)^2}{2 \times 200{,}000} = \frac{172{,}225}{400{,}000} = 0.431 MPa = 0.431 MJ/m^3 $$
+
+
+$$
+U_r = \frac{\sigma_y^2}{2E} = \frac{(415)^2}{2 \times 200{,}000} = \frac{172{,}225}{400{,}000} = 0.431 MPa = 0.431 MJ/m^3
+$$
+
+
 Recall that MPa = MJ/m$^3$ when interpreting strain-energy density.
 
 
 - **Modulus of toughness (approximate, triangle + rectangle).** A reasonable approximation treats the curve as an elastic triangle plus a plastic rectangle from $\sigma_y$ to $\sigma_u$ over the plastic strain range. Use the mean stress $(\sigma_y + \sigma_u)/2 = (415 + 500)/2 = 457.5$ MPa across plastic strain $\varepsilon_p \approx 0.18 - 0.002 = 0.178$.
-$$ U_T \approx U_r + 457.5 \times 0.178 = 0.43 + 81.4 = 81.8 MJ/m^3 $$
+
+
+$$
+U_T \approx U_r + 457.5 \times 0.178 = 0.43 + 81.4 = 81.8 MJ/m^3
+$$
+
+
 Toughness is dominated by the plastic-region area; resilience is a tiny fraction. This is why ductile materials are so much tougher than brittle ones  -  the plastic region is where energy is absorbed.
 
 
 - **Elastic strain at fracture.**
-$$ \varepsilon_{e,frac} = \frac{\sigma_f}{E} = \frac{380}{200{,}000} = 1.90 \times 10^{-3} $$
+
+
+$$
+\varepsilon_{e,frac} = \frac{\sigma_f}{E} = \frac{380}{200{,}000} = 1.90 \times 10^{-3}
+$$
+
+
 ```
 
 
 ```{dropdown} Solution Steps
 - **Plastic strain at fracture.**
-$$ \varepsilon_{p,frac} = \varepsilon_f - \varepsilon_{e,frac} = 0.18 - 0.00190 = 0.178 = 17.8\% $$
+
+
+$$
+\varepsilon_{p,frac} = \varepsilon_f - \varepsilon_{e,frac} = 0.18 - 0.00190 = 0.178 = 17.8\%
+$$
+
+
 The specimen's permanent elongation if recovered just before fracture would be 17.8\%. This is the value typically quoted as "\% elongation at fracture" on a material data sheet.
 
 - **Ductility interpretation.** 17.8\% elongation places this material firmly in the ductile-metal category. Brittle materials fail at $\varepsilon_f < 1\%$; ductile metals are typically 10-40\%; very ductile (annealed copper, pure aluminum) can reach 50-60\%.
@@ -411,7 +530,13 @@ A real pressure vessel sees biaxial or triaxial stress states, not pure uniaxial
 
 ```{note}
 At any point in a loaded body, the stress tensor can be diagonalized; the three eigenvalues are the **principal stresses** $\sigma_1 \geq \sigma_2 \geq \sigma_3$ along three mutually perpendicular principal directions. On these directions, the shear stresses vanish. The maximum shear stress at the point is
-$$ \tau_{\max} = \frac{\sigma_1 - \sigma_3}{2} $$
+
+
+$$
+\tau_{\max} = \frac{\sigma_1 - \sigma_3}{2}
+$$
+
+
 (half the difference between the algebraically largest and smallest principal stress).
 
 For a thin-walled pressure vessel, the principal stresses are well known:
@@ -432,7 +557,13 @@ So for a cylindrical pressure vessel, $\sigma_1 = \sigma_h, \sigma_2 = \sigma_\e
 ```{important}
 **Tresca (Maximum Shear Stress) Criterion**
 Yield occurs when the maximum shear stress reaches the yield shear stress measured in uniaxial tension:
-$$ \tau_{\max} = \frac{\sigma_1 - \sigma_3}{2} = \frac{\sigma_y}{2}  \Longleftrightarrow  \sigma_1 - \sigma_3 = \sigma_y $$
+
+
+$$
+\tau_{\max} = \frac{\sigma_1 - \sigma_3}{2} = \frac{\sigma_y}{2}  \Longleftrightarrow  \sigma_1 - \sigma_3 = \sigma_y
+$$
+
+
 Conservative; gives the safest design but slightly under-predicts yield strength.
 ```
 
@@ -440,7 +571,13 @@ Conservative; gives the safest design but slightly under-predicts yield strength
 ```{important}
 **von Mises (Distortion Energy) Criterion**
 Yield occurs when the equivalent (von Mises) stress reaches the uniaxial yield strength:
-$$ \sigma_{vM} = \sqrt{\frac{1}{2}[(\sigma_1 - \sigma_2)^2 + (\sigma_2 - \sigma_3)^2 + (\sigma_3 - \sigma_1)^2]} = \sigma_y $$
+
+
+$$
+\sigma_{vM} = \sqrt{\frac{1}{2}[(\sigma_1 - \sigma_2)^2 + (\sigma_2 - \sigma_3)^2 + (\sigma_3 - \sigma_1)^2]} = \sigma_y
+$$
+
+
 Slightly less conservative than Tresca; more accurate for most ductile metals. Used in modern finite-element codes by default.
 
 For pure shear ($\sigma_1 = \tau, \sigma_2 = 0, \sigma_3 = -\tau$), Tresca gives $\tau_y = \sigma_y/2$; von Mises gives $\tau_y = \sigma_y/\sqrt{3} = 0.577 \sigma_y$. The two differ by about 15\% in pure shear; closer in other states.
@@ -458,17 +595,35 @@ A thin-walled cylindrical pressure vessel has ID = 600 mm, wall thickness 10 mm.
 
 ```{dropdown} Solution Steps
 - **Compute the principal stresses in terms of $P$.** $R = 300$ mm, $t = 10$ mm.
-$$ \sigma_h = \frac{PR}{t} = \frac{P \times 300}{10} = 30 P,   \sigma_\ell = \frac{PR}{2t} = 15 P,   \sigma_r \approx 0 $$
+
+
+$$
+\sigma_h = \frac{PR}{t} = \frac{P \times 300}{10} = 30 P,   \sigma_\ell = \frac{PR}{2t} = 15 P,   \sigma_r \approx 0
+$$
+
+
 (with $P$ in MPa and $\sigma$ in MPa). So $\sigma_1 = 30P, \sigma_2 = 15P, \sigma_3 = 0$.
 
 
 - **(a) Tresca criterion.**
-$$ \sigma_1 - \sigma_3 = 30P - 0 = 30P = \sigma_y = 250  \Longrightarrow  P_Tresca = \frac{250}{30} = 8.33 MPa $$
+
+
+$$
+\sigma_1 - \sigma_3 = 30P - 0 = 30P = \sigma_y = 250  \Longrightarrow  P_Tresca = \frac{250}{30} = 8.33 MPa
+$$
 
 
 - **(b) von Mises criterion.**
-$$ \sigma_{vM}^2 = \tfrac{1}{2} [(30P - 15P)^2 + (15P - 0)^2 + (0 - 30P)^2] = \tfrac{1}{2} [225 + 225 + 900] P^2 = 675 P^2 $$
-$$ \sigma_{vM} = P \sqrt{675} = 25.98 P = \sigma_y = 250  \Longrightarrow  P_vM = \frac{250}{25.98} = 9.62 MPa $$
+
+
+$$
+\sigma_{vM}^2 = \tfrac{1}{2} [(30P - 15P)^2 + (15P - 0)^2 + (0 - 30P)^2] = \tfrac{1}{2} [225 + 225 + 900] P^2 = 675 P^2
+$$
+
+
+$$
+\sigma_{vM} = P \sqrt{675} = 25.98 P = \sigma_y = 250  \Longrightarrow  P_vM = \frac{250}{25.98} = 9.62 MPa
+$$
 
 
 - **Comparison.** The von Mises criterion allows a 15\% higher pressure (9.62 vs. 8.33 MPa). This is the classic 15\% gap between the two yield criteria, with Tresca being the conservative bound.
@@ -503,7 +658,12 @@ The simplest material-selection exercise screens candidates against two constrai
 - **Filter 1 (Yield):** reject any candidate whose $\sigma_y < \sigma$ (with a safety factor $N$ if specified, so $\sigma_y < N\sigma$ is the rejection criterion).
 
 - For the survivors, compute the elastic elongation under load using Hooke's law:
-$$ \Delta L = \frac{\sigma L_0}{E} = \frac{F L_0}{A_0 E} $$
+
+
+$$
+\Delta L = \frac{\sigma L_0}{E} = \frac{F L_0}{A_0 E}
+$$
+
 
 - **Filter 2 (Deflection):** reject any candidate whose $\Delta L > \Delta L_{\max}$.
 
@@ -556,8 +716,16 @@ A cylindrical rod is 380 mm long and 10 mm in diameter. It must carry a tensile 
 
 ```{dropdown} Solution Steps
 - **Compute the applied stress.**
-$$ A_0 = \pi(d/2)^2 = \pi(0.005)^2 = 7.854 \times 10^{-5} m^2 = 78.54 mm^2 $$
-$$ \sigma = \frac{F}{A_0} = \frac{24{,}500 N}{78.54 mm^2} = 312 MPa $$
+
+
+$$
+A_0 = \pi(d/2)^2 = \pi(0.005)^2 = 7.854 \times 10^{-5} m^2 = 78.54 mm^2
+$$
+
+
+$$
+\sigma = \frac{F}{A_0} = \frac{24{,}500 N}{78.54 mm^2} = 312 MPa
+$$
 
 
 - **Apply Filter 1: yield strength $> $ applied stress (312 MPa).**
@@ -603,10 +771,21 @@ A tension-loaded rod must meet a stiffness requirement (maximum elongation $\Del
 
 ```{dropdown} Solution Steps
 - **Express the constraint.** The stiffness constraint is $\Delta L \leq \Delta L_{\max}$, i.e.\
-$$ \frac{F L_0}{A E} \leq \Delta L_{\max}  \Longrightarrow  A \geq \frac{F L_0}{E \Delta L_{\max}} $$
+
+
+$$
+\frac{F L_0}{A E} \leq \Delta L_{\max}  \Longrightarrow  A \geq \frac{F L_0}{E \Delta L_{\max}}
+$$
+
 
 - **Express the mass.** The rod mass is
-$$ m = \rho A L_0 \geq \rho L_0 \cdot \frac{F L_0}{E \Delta L_{\max}} = \frac{F L_0^2}{\Delta L_{\max}} \frac{\rho}{E} $$
+
+
+$$
+m = \rho A L_0 \geq \rho L_0 \cdot \frac{F L_0}{E \Delta L_{\max}} = \frac{F L_0^2}{\Delta L_{\max}} \frac{\rho}{E}
+$$
+
+
 Everything inside the second-to-last fraction is a design constant. The only material-dependent factor is $\rho/E$. **Minimum mass** corresponds to **minimum $\rho/E$**, or equivalently **maximum $E/\rho$**.
 
 
@@ -651,7 +830,13 @@ The yield strength of a metal can range from a few MPa for annealed pure metals 
 ```{note}
 **Five Ways to Make Steel Stronger**
 - **Grain-size strengthening (Hall-Petch).** Grain boundaries impede dislocation motion. Smaller grains $\to$ higher yield strength:
-$$ \sigma_y = \sigma_0 + k_y \cdot d^{-1/2} $$
+
+
+$$
+\sigma_y = \sigma_0 + k_y \cdot d^{-1/2}
+$$
+
+
 where $d$ is the average grain diameter, $\sigma_0$ is the lattice-friction stress, and $k_y$ is the Hall-Petch coefficient (material-specific). Doubling the grain size raises $\sigma_y$ by a factor of $\sqrt{2}$.
 
 - **Solid-solution strengthening.** Foreign atoms (substitutional or interstitial) in the lattice produce local distortions that impede dislocations. Carbon in iron, nickel in copper, zinc in copper (brass). Yield strength rises roughly as the square root of solute concentration.
@@ -670,7 +855,13 @@ The mechanisms can be combined. A modern HSLA (high-strength low-alloy) steel us
 
 ```{important}
 **Hall-Petch Calculation**
-$$ \sigma_y = \sigma_0 + k_y d^{-1/2} $$
+
+
+$$
+\sigma_y = \sigma_0 + k_y d^{-1/2}
+$$
+
+
 Typical low-carbon steel: $\sigma_0 \approx 70$ MPa, $k_y \approx 0.74$ MPa$\cdot$m$^{1/2}$ (in SI). With $d$ in m:
 
 
@@ -728,7 +919,11 @@ The steady-state (minimum) creep rate $\varepsilon_s$ is the property most often
 ```{important}
 **Power-Law (Norton) Creep**
 The steady-state creep rate depends on stress and temperature as
-$$ \varepsilon_s = A \sigma^n \exp (-\frac{Q_c}{RT}) $$
+
+
+$$
+\varepsilon_s = A \sigma^n \exp (-\frac{Q_c}{RT})
+$$
 
 
 - $A$, $n$: material constants. $n$ is typically 3-8 for metals; large $n$ means steep stress dependence (small stress change $\to$ big creep-rate change).
@@ -740,7 +935,13 @@ $$ \varepsilon_s = A \sigma^n \exp (-\frac{Q_c}{RT}) $$
 The exponential dependence on $1/T$ means small temperature changes have outsized effects on creep life. A 25$^\circ$C overtemperature on a 500$^\circ$C tube can halve its remaining life.
 
 **Larson-Miller parameter (LMP)**: a single parameter combining temperature and time-to-rupture:
-$$ LMP = T (C + \log t_r) $$
+
+
+$$
+LMP = T (C + \log t_r)
+$$
+
+
 with $T$ in K, $t_r$ in hours, and $C \approx 20$ for most steels. Stress vs. LMP is a master curve  -  a single line that combines all $T$, $t_r$ pairs. Used to estimate creep life from short-term high-T tests.
 ```
 
@@ -756,16 +957,37 @@ A reformer tube operates at $T = 900^\circ$C (1173 K) under a stress of 25 MPa. 
 
 ```{dropdown} Solution Steps
 - **Solve LMP for $t_r$.**
-$$ LMP = T(C + \log t_r)  \Longrightarrow  \log t_r = \frac{LMP}{T} - C $$
-$$ \log t_r = \frac{22{,}000}{1173} - 20 = 18.76 - 20 = -1.24 $$
+
+
+$$
+LMP = T(C + \log t_r)  \Longrightarrow  \log t_r = \frac{LMP}{T} - C
+$$
+
+
+$$
+\log t_r = \frac{22{,}000}{1173} - 20 = 18.76 - 20 = -1.24
+$$
+
 
 - **Compute $t_r$.**
-$$ t_r = 10^{-1.24} = 0.058 hours = 3.5 minutes $$
+
+
+$$
+t_r = 10^{-1.24} = 0.058 hours = 3.5 minutes
+$$
+
+
 The tube ruptures in about 3.5 minutes. *Not* the design life  -  the LMP curve was either misread or the chosen stress/temperature combination is well outside the design envelope.
 
 
 - **Lesson on LMP interpretation.** A reformer tube designed for 100{,}000-hour life at 900$^\circ$C requires
-$$ LMP_{design} = 1173 \times (20 + \log 100{,}000) = 1173 \times 25 = 29{,}325 $$
+
+
+$$
+LMP_{design} = 1173 \times (20 + \log 100{,}000) = 1173 \times 25 = 29{,}325
+$$
+
+
 Reading the material's master curve at LMP = 29{,}325 gives the maximum allowable design stress  -  typically 5-10 MPa for 100{,}000-hour life on Inconel 800H or HK-40 alloy. The 25 MPa in this example exceeds the allowable, hence the very short life.
 
 
@@ -809,7 +1031,13 @@ For **non-ferrous metals** (aluminum, copper) the S-N curve continues to decline
 Most fatigue data is for fully reversed loading ($\sigma_{mean} = 0$). Real components see superposed mean stress; a tensile mean reduces the allowable amplitude.
 
 The **modified Goodman** criterion:
-$$ \frac{S_a}{S_e} + \frac{\sigma_{mean}}{\sigma_u} = \frac{1}{N} $$
+
+
+$$
+\frac{S_a}{S_e} + \frac{\sigma_{mean}}{\sigma_u} = \frac{1}{N}
+$$
+
+
 where $N$ is the design safety factor against fatigue. Solve for the allowable $S_a$ given a known $\sigma_{mean}$.
 
 The **Soderberg** criterion replaces $\sigma_u$ with $\sigma_y$; more conservative.
@@ -821,7 +1049,13 @@ The **Soderberg** criterion replaces $\sigma_u$ with $\sigma_y$; more conservati
 ```{note}
 **Why Welds and Holes Dominate Fatigue Life**
 A discontinuity (hole, notch, weld toe, change in section) locally amplifies stress. The **stress concentration factor** $K_t$ multiplies the nominal stress to give the actual peak stress at the discontinuity:
-$$ \sigma_{peak} = K_t \sigma_{nominal} $$
+
+
+$$
+\sigma_{peak} = K_t \sigma_{nominal}
+$$
+
+
 Typical values: small drilled hole in a wide plate $K_t = 3$; sharp notch $K_t = 5$-10; weld toe $K_t = 2$-4 (depending on geometry and grinding).
 
 In fatigue, the **fatigue stress concentration factor** $K_f$ replaces the geometric $K_t$, with $K_f \leq K_t$ (the difference accounts for "notch sensitivity" of the material). The allowable amplitude in Goodman is divided by $K_f$.
@@ -853,12 +1087,28 @@ Aqueous corrosion of a metal is a redox process consisting of two coupled half-r
 
 
 - **Anodic** (oxidation): metal dissolves into solution, releasing electrons:
-$$ \mathrm{M \rightarrow M^{n+} + n e^-}  (e.g., \mathrm{Fe \rightarrow Fe^{2+} + 2e^-}) $$
+
+
+$$
+\mathrm{M \rightarrow M^{n+} + n e^-}  (e.g., \mathrm{Fe \rightarrow Fe^{2+} + 2e^-})
+$$
+
 
 - **Cathodic** (reduction): the released electrons reduce some species in the environment. In oxygenated water:
-$$ \mathrm{O_2 + 2 H_2O + 4 e^- \rightarrow 4 OH^-} $$
+
+
+$$
+\mathrm{O_2 + 2 H_2O + 4 e^- \rightarrow 4 OH^-}
+$$
+
+
 In acid:
-$$ \mathrm{2H^+ + 2e^- \rightarrow H_2} $$
+
+
+$$
+\mathrm{2H^+ + 2e^- \rightarrow H_2}
+$$
+
 
 The two half-reactions must proceed at equal electron-transfer rates (charge balance). At the metal surface they are typically spatially separated: pits of anodic dissolution surrounded by larger cathodic regions. This separation is what makes corrosion damage so non-uniform and so hard to predict.
 ```
@@ -886,7 +1136,13 @@ Each half-reaction has a characteristic **standard electrode potential** $E^\cir
 The half-reaction with the higher $E^\circ$ proceeds spontaneously as written (reduction); the one with the lower $E^\circ$ runs in reverse (oxidation). The cell potential of the coupled reaction is $E_{cell} = E_cath - E_anode$; a positive value means the corrosion is spontaneous.
 
 The **Nernst equation** corrects $E^\circ$ for non-standard activities:
-$$ E = E^\circ - \frac{RT}{nF} \ln Q = E^\circ - \frac{0.0592}{n} \log_{10} Q  (at 25^\circ C) $$
+
+
+$$
+E = E^\circ - \frac{RT}{nF} \ln Q = E^\circ - \frac{0.0592}{n} \log_{10} Q  (at 25^\circ C)
+$$
+
+
 where $Q$ is the reaction quotient, $n$ is the number of electrons transferred, $R$ is the gas constant, $F$ is the Faraday constant ($96{,}485$ C/mol).
 ```
 
@@ -915,11 +1171,23 @@ The iron Pourbaix diagram has a passive region centered around pH 9-13 (where Fe
 ```{important}
 **Mixed-Potential Theory and the Tafel Equation**
 At the freely-corroding (open-circuit) potential, both anodic and cathodic reactions proceed at the same current density $i_{corr}$, the **corrosion current density**. The corrosion rate is directly proportional to $i_{corr}$ by Faraday's law:
-$$ r_{corr} = \frac{i_{corr} M}{n F \rho} $$
+
+
+$$
+r_{corr} = \frac{i_{corr} M}{n F \rho}
+$$
+
+
 where $M$ is the metal's molar mass, $n$ is the electron-transfer number, and $\rho$ is the metal density. Units of $r_{corr}$: m/s (penetration rate); often converted to mm/yr or mpy (mils per year).
 
 The activation polarization of each half-reaction is described by the **Tafel equation**:
-$$ \eta = a + b \log_{10}(i/i_0) $$
+
+
+$$
+\eta = a + b \log_{10}(i/i_0)
+$$
+
+
 where $\eta$ is the overpotential (deviation from equilibrium potential), $i$ is the current density, and $a$, $b$ are Tafel constants. Extrapolating both Tafel lines to their intersection gives the corrosion potential and corrosion current density  -  the **Tafel-extrapolation method** of corrosion-rate measurement.
 ```
 
@@ -929,11 +1197,23 @@ where $\eta$ is the overpotential (deviation from equilibrium potential), $i$ is
 ```{important}
 **Penetration Rate in Engineering Units**
 For a uniformly corroding flat surface, the penetration rate (depth lost per year) from a current density measurement is, in convenient engineering units:
-$$ CR [mpy] = \frac{0.129 i (eq.wt.)}{\rho} $$
+
+
+$$
+CR [mpy] = \frac{0.129 i (eq.wt.)}{\rho}
+$$
+
+
 with $i$ in $\mu$A/cm$^2$, equivalent weight in g/eq, $\rho$ in g/cm$^3$. "mpy" is mils per year ($1$ mil $= 0.001$ in).
 
 From weight-loss measurements (standard coupon test):
-$$ CR [mpy] = \frac{534 W}{\rho A t} $$
+
+
+$$
+CR [mpy] = \frac{534 W}{\rho A t}
+$$
+
+
 with $W$ = mass loss [mg], $\rho$ = density [g/cm$^3$], $A$ = exposed area [in$^2$], $t$ = exposure time [hr].
 
 **Acceptance criteria (rule of thumb):**
@@ -960,14 +1240,24 @@ A 304 SS coupon ($\rho = 7.9$ g/cm$^3$) of exposed area $A = 8$ in$^2$ is immers
 
 ```{dropdown} Solution Steps
 - **Apply the weight-loss formula.**
-$$ CR = \frac{534 W}{\rho A t} = \frac{534 \times 120}{7.9 \times 8 \times 720} = \frac{64{,}080}{45{,}504} = 1.41 mpy $$
+
+
+$$
+CR = \frac{534 W}{\rho A t} = \frac{534 \times 120}{7.9 \times 8 \times 720} = \frac{64{,}080}{45{,}504} = 1.41 mpy
+$$
 
 
 - **Apply the acceptance rule of thumb.** CR = 1.41 mpy $<$ 5 mpy: *acceptable*.
 
 
 - **Compute the 20-year metal loss to verify corrosion-allowance budget.**
-$$ Loss_{20 yr} = 1.41 mpy \times 20 yr = 28 mils = 0.71 mm $$
+
+
+$$
+Loss_{20 yr} = 1.41 mpy \times 20 yr = 28 mils = 0.71 mm
+$$
+
+
 This must be added as a corrosion allowance on top of the pressure-design wall thickness. Standard CA values: 1/16 in (1.6 mm), 1/8 in (3.2 mm), 1/4 in (6.4 mm). The 20-year loss (0.7 mm) easily fits inside a 1/16-in CA.
 
 
@@ -1028,7 +1318,13 @@ Fontana and Greene's classic textbook categorizes aqueous corrosion into eight f
 - Specify **Mo-containing alloys**: 316 (2-3\% Mo) is the standard upgrade from 304; duplex 2205 (2.5-3.5\% Mo, 22\% Cr) for tougher service; Hastelloy C-276 (15-17\% Mo) for the harshest.
 
 - The **Pitting Resistance Equivalent Number (PREN)** quantifies pitting resistance:
-$$ PREN = \%Cr + 3.3 \times \%Mo + 16 \times \%N $$
+
+
+$$
+PREN = \%Cr + 3.3 \times \%Mo + 16 \times \%N
+$$
+
+
 304: PREN $\approx 19$. 316: $\approx 25$. 2205: $\approx 35$. SAF 2507 super-duplex: $\approx 42$. Higher PREN = better pitting resistance.
 ```
 
@@ -1436,24 +1732,48 @@ Select the wall material and the corrosion allowance. Compute the required wall 
 Convert design pressure: 12 barg $= 174$ psig. ID $= 3$ m $= 118$ in, so $R = 59$ in.
 
 Check thin-wall: $P/(SE)$ with $E = 1.0$ (fully radiographed weld assumed):
-$$ \frac{174}{19{,}800 \times 1.0} = 0.0088 \ll 0.385  \checkmark $$
+
+
+$$
+\frac{174}{19{,}800 \times 1.0} = 0.0088 \ll 0.385  \checkmark
+$$
+
 
 Hoop equation governs:
-$$ t_{pressure} = \frac{P R}{S E - 0.6 P} = \frac{(174)(59)}{(19{,}800)(1.0) - (0.6)(174)} = \frac{10{,}266}{19{,}696} = 0.521 in $$
+
+
+$$
+t_{pressure} = \frac{P R}{S E - 0.6 P} = \frac{(174)(59)}{(19{,}800)(1.0) - (0.6)(174)} = \frac{10{,}266}{19{,}696} = 0.521 in
+$$
 
 
 - **Add the clad layer.** The cladding does not contribute structural strength but its thickness is included in the total wall:
-$$ t_{total} = t_{pressure} + t_{clad} = 0.521 + 0.118 = 0.639 in (clad = 3  mm = 0.118  in) $$
+
+
+$$
+t_{total} = t_{pressure} + t_{clad} = 0.521 + 0.118 = 0.639 in (clad = 3  mm = 0.118  in)
+$$
+
 
 Some codes also require a corrosion allowance on the structural CS substrate in case the clad fails locally; conservative practice adds 1/16 in (0.0625 in) for this:
-$$ t_{final} = 0.521 + 0.0625 + 0.118 = 0.702 in $$
+
+
+$$
+t_{final} = 0.521 + 0.0625 + 0.118 = 0.702 in
+$$
 
 
 - **Round up to standard plate.** Next standard gauge above 0.702 in is **3/4 in (0.750 in)**. The fabrication spec: 3/4-in A516-70 plate clad with 1/8-in (3.2 mm) Hastelloy C-276 on the process side.
 
 
 - **Verification.** Hoop stress at the chosen wall (using structural thickness 0.750 - 0.118 - 0.0625 = 0.5695 in):
-$$ \sigma_h = \frac{PR}{t_{struct}} = \frac{(174)(59)}{0.5695} = 18{,}030 psi < S = 19{,}800 psi \checkmark $$
+
+
+$$
+\sigma_h = \frac{PR}{t_{struct}} = \frac{(174)(59)}{0.5695} = 18{,}030 psi < S = 19{,}800 psi \checkmark
+$$
+
+
 The selection satisfies all constraints: pressure (Sec. VIII), corrosion (Hastelloy in dilute oxidizing HCl), cost (cladded construction saves $\sim$60\% over solid C-276), and service life (60+ years on the clad layer for a 20-year requirement).
 ```
 
