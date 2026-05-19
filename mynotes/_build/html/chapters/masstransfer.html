@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Mass Transfer &#8212; Introduction to Process Fundamentals</title>
+    <title>Mass Transfer &#8212; PE Chemical Engineering Exam Study Guide</title>
   
   
   
@@ -16,42 +16,46 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=8c6b312c" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=efcdb63b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=c73c0f3e"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -67,6 +71,7 @@
     <link rel="prev" title="Complete Heat Transfer Fundamentals" href="heattransfer.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -82,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -102,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search..."
          aria-label="Search..."
          autocomplete="off"
@@ -110,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -127,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -152,20 +146,16 @@
   
   
   
-    <p class="title logo__title">Process Fundamentals</p>
+    <p class="title logo__title">PE Chemical Engineering</p>
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
@@ -189,9 +179,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -222,70 +217,6 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-source-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
-    <i class="fab fa-github"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://github.com/duymlcoding/Pe" target="_blank"
-   class="btn btn-sm btn-source-repository-button dropdown-item"
-   title="Source repository"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="btn__text-container">Repository</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/duymlcoding/Pe/edit/main/chapters/masstransfer.md" target="_blank"
-   class="btn btn-sm btn-source-edit-button dropdown-item"
-   title="Suggest edit"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="btn__text-container">Suggest edit</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/duymlcoding/Pe/issues/new?title=Issue%20on%20page%20%2Fchapters/masstransfer.html&body=Your%20issue%20content%20here." target="_blank"
-   class="btn btn-sm btn-source-issues-button dropdown-item"
-   title="Open an issue"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="btn__text-container">Open issue</span>
-</a>
-</li>
-      
-  </ul>
-</div>
-
 
 
 
@@ -338,7 +269,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -352,25 +283,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -506,7 +429,7 @@ document.write(`
 <section id="example-problem-carburization-of-a-steel-alloy">
 <h3>Example Problem: Carburization of a Steel Alloy<a class="headerlink" href="#example-problem-carburization-of-a-steel-alloy" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-0">
-<p class="admonition-title"><span class="caption-number">Example 71 </span> (Carburization of a Steel Alloy)</p>
+<p class="admonition-title"><span class="caption-number">Example 72 </span> (Carburization of a Steel Alloy)</p>
 <section class="example-content" id="proof-content">
 <p>A steel alloy initially has a uniform carbon concentration of 0.10 wt%. To harden the surface, it is placed in a high-temperature furnace at 1000<span class="math notranslate nohighlight">\(^\circ\)</span>C where the carbon concentration at the surface is maintained at 1.5 wt%. The diffusion coefficient of carbon in steel at this temperature is <span class="math notranslate nohighlight">\(D_{AB} = 2.0 \times 10^{-11}\)</span> m<span class="math notranslate nohighlight">\(^2\)</span>/s. How long (in hours) will it take for the carbon concentration to reach 1.0 wt% at a depth of 1.0 mm below the surface?</p>
 </section>
@@ -680,7 +603,7 @@ y = \left(\frac{q}{q-1}\right)x - \left(\frac{z_F}{q-1}\right)
 <section id="comprehensive-example-acetone-ethanol-separation">
 <h3>Comprehensive Example: Acetone-Ethanol Separation<a class="headerlink" href="#comprehensive-example-acetone-ethanol-separation" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-1">
-<p class="admonition-title"><span class="caption-number">Example 72 </span> (Acetone-Ethanol Separation)</p>
+<p class="admonition-title"><span class="caption-number">Example 73 </span> (Acetone-Ethanol Separation)</p>
 <section class="example-content" id="proof-content">
 <p>Acetone and ethanol are to be separated in a distillation column. The column has a <strong>partial condenser</strong> and a <strong>partial reboiler</strong>, which each function as an equilibrium stage. An equimolar (<span class="math notranslate nohighlight">\(z_F=0.5\)</span>), sub-cooled liquid feed enters at 100 kmol/hr. The feed is cold enough that it condenses 1 mole of vapor inside the column for every 6 moles of feed that enters. The desired separation is a distillate <strong>vapor</strong> product of 95 mol% acetone (<span class="math notranslate nohighlight">\(y_D=0.95\)</span>) and a bottoms liquid product of 5 mol% acetone (<span class="math notranslate nohighlight">\(x_B=0.05\)</span>). The reflux returned from the condenser is a saturated liquid. The column is operated with a liquid-to-vapor flow ratio in the rectifying section of <span class="math notranslate nohighlight">\((L/V) = 1.4 \times (L/V)_{\text{min}}\)</span>. Assume Constant Molar Overflow.</p>
 <p><strong>Tasks:</strong></p>
@@ -836,7 +759,7 @@ B = 100 - D = 50 \, \text{kmol/hr}
 <section id="example-problem-variable-reflux-distillation">
 <h3>Example Problem: Variable Reflux Distillation<a class="headerlink" href="#example-problem-variable-reflux-distillation" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-2">
-<p class="admonition-title"><span class="caption-number">Example 73 </span> (Variable Reflux Distillation)</p>
+<p class="admonition-title"><span class="caption-number">Example 74 </span> (Variable Reflux Distillation)</p>
 <section class="example-content" id="proof-content">
 <p>A batch still is charged with 1000 moles of an ethanol-water mixture containing 30 mole % ethanol (<span class="math notranslate nohighlight">\(x_{W,i}=0.3\)</span>). The column has 2 equilibrium stages (including the partial reboiler). The distillation is run with a constant distillate composition of <span class="math notranslate nohighlight">\(x_D=0.6\)</span> until the reboiler composition drops to <span class="math notranslate nohighlight">\(x_{W,f}=0.09\)</span>. How much distillate is produced, and what is the range of reflux ratios used?</p>
 </section>
@@ -929,7 +852,7 @@ R_f = 0.75(R_f+1) \implies R_f = 0.75 R_f + 0.75
 <section id="example-problem-column-with-steam-injection">
 <h3>Example Problem: Column with Steam Injection<a class="headerlink" href="#example-problem-column-with-steam-injection" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-3">
-<p class="admonition-title"><span class="caption-number">Example 74 </span> (Column with Steam Injection)</p>
+<p class="admonition-title"><span class="caption-number">Example 75 </span> (Column with Steam Injection)</p>
 <section class="example-content" id="proof-content">
 <p>An ethanol-water distillation column has a total condenser and a partial reboiler. It is fed with a main subcooled liquid feed and a secondary feed of pure saturated steam, which enters on the first stage above the reboiler. The Top Operating Line (TOL), Bottom Operating Line (BOL), and main feed line are plotted. Determine the optimal feed plate location for the main feed and the total number of equilibrium stages required.</p>
 </section>
@@ -1046,7 +969,7 @@ W\frac{dx_W}{dt} = y_D\frac{dW}{dt} - x_W\frac{dW}{dt} = (y_D - x_W)\frac{dW}{dt
 An <strong>azeotrope</strong> is a liquid mixture which, at its boiling point, produces a vapor of the exact same composition as the liquid (<span class="math notranslate nohighlight">\(y=x\)</span>). Such mixtures represent a limit to separation by conventional distillation. A <strong>minimum-boiling azeotrope</strong> occurs when the boiling point of the azeotropic mixture is lower than that of either pure component. This azeotrope acts as an “attractor” for the vapor composition during distillation of mixtures on one side of it, and a “repeller” on the other.</p>
 </div>
 <div class="proof example admonition" id="example-4">
-<p class="admonition-title"><span class="caption-number">Example 75 </span> (Distillation of a System with an Azeotrope)</p>
+<p class="admonition-title"><span class="caption-number">Example 76 </span> (Distillation of a System with an Azeotrope)</p>
 <section class="example-content" id="proof-content">
 <p>A batch still is charged with a liquid mixture with a mole fraction of 0.2 of component 1. The T-x-y diagram shows that this system has a minimum-boiling azeotrope at a mole fraction of 0.5. With constant heating, describe how the temperature of the still and the composition of the vapor product change over time.</p>
 </section>
@@ -1071,7 +994,7 @@ Eventually, the liquid in the still will reach the azeotropic composition, <span
 <section id="example-problem-distillation-using-t-x-y-data">
 <h3>Example Problem: Distillation using T-x-y Data<a class="headerlink" href="#example-problem-distillation-using-t-x-y-data" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-5">
-<p class="admonition-title"><span class="caption-number">Example 76 </span> (Distillation using T-x-y Data)</p>
+<p class="admonition-title"><span class="caption-number">Example 77 </span> (Distillation using T-x-y Data)</p>
 <section class="example-content" id="proof-content">
 <p>A simple pot still is charged with 50 moles of an ethanol-water mixture. The distillation is started, and the initial vapor temperature (head temperature) is 84<span class="math notranslate nohighlight">\(^\circ\)</span>C. The process is stopped when the head temperature rises to 89<span class="math notranslate nohighlight">\(^\circ\)</span>C. Using the provided T-x-y diagram for the ethanol-water system, determine:</p>
 <ol class="arabic simple">
@@ -1150,7 +1073,7 @@ A sanity check confirms this is reasonable: the instantaneous vapor was richer t
 <section id="example-problem-distillation-using-raoults-law">
 <h3>Example Problem: Distillation using Raoult’s Law<a class="headerlink" href="#example-problem-distillation-using-raoults-law" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-6">
-<p class="admonition-title"><span class="caption-number">Example 77 </span> (Distillation using Raoult’s Law)</p>
+<p class="admonition-title"><span class="caption-number">Example 78 </span> (Distillation using Raoult’s Law)</p>
 <section class="example-content" id="proof-content">
 <p>A single-stage batch still is charged with 75 mol of an 82 mol% methanol / 18 mol% water mixture. The distillation is run until the <strong>average</strong> distillate concentration collected is 90.0 mol% methanol. Assuming the mixture is an ideal solution (follows Raoult’s Law) and operates at 760 mmHg:</p>
 <ol class="arabic simple">
@@ -1335,7 +1258,7 @@ y_{n+1} = \left(\frac{L}{V}\right)x_n + \left(y_1 - \frac{L}{V}x_0\right)
 <section id="example-problem-dilute-system-chloroform-scrubbing">
 <h3>Example Problem: Dilute System - Chloroform Scrubbing<a class="headerlink" href="#example-problem-dilute-system-chloroform-scrubbing" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-7">
-<p class="admonition-title"><span class="caption-number">Example 78 </span> (Chloroform Scrubbing)</p>
+<p class="admonition-title"><span class="caption-number">Example 79 </span> (Chloroform Scrubbing)</p>
 <section class="example-content" id="proof-content">
 <p>A laboratory process releases an air stream of 1000 kmol/hr containing 200 ppm of chloroform. To meet environmental standards, this concentration must be reduced to 10 ppm before release. An absorption column using pure water as the solvent is proposed. The system operates at 25<span class="math notranslate nohighlight">\(^\circ\)</span>C and 1.5 atm. How many theoretical equilibrium stages are required for this separation?</p>
 </section>
@@ -1411,7 +1334,7 @@ The Kremser equation predicts that <strong>6.1 theoretical stages</strong> are r
 <section id="example-problem-concentrated-system-co-2-removal">
 <h3>Example Problem: Concentrated System - CO<span class="math notranslate nohighlight">\(_2\)</span> Removal<a class="headerlink" href="#example-problem-concentrated-system-co-2-removal" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-8">
-<p class="admonition-title"><span class="caption-number">Example 79 </span> (CO2 Removal)</p>
+<p class="admonition-title"><span class="caption-number">Example 80 </span> (CO2 Removal)</p>
 <section class="example-content" id="proof-content">
 <p>We wish to remove 65% of the CO<span class="math notranslate nohighlight">\(_2\)</span> from a 100 mol/hr gas stream that is initially 8 mol% CO<span class="math notranslate nohighlight">\(_2\)</span> in nitrogen. The scrubbing is done with pure water at room temperature and atmospheric pressure, where the VLE relationship is approximately <span class="math notranslate nohighlight">\(y=1640x\)</span>. How many equilibrium stages are required if the solvent flow rate is 1.5 times the minimum?</p>
 </section>
@@ -1552,7 +1475,7 @@ The number of theoretical stages for a stripping column can be found graphically
 <section id="example-problem-stripping-an-organic-from-water">
 <h3>Example Problem: Stripping an Organic from Water<a class="headerlink" href="#example-problem-stripping-an-organic-from-water" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-9">
-<p class="admonition-title"><span class="caption-number">Example 80 </span> (Stripping an Organic from Water)</p>
+<p class="admonition-title"><span class="caption-number">Example 81 </span> (Stripping an Organic from Water)</p>
 <section class="example-content" id="proof-content">
 <p>A single-stage stripping process is used to remove a dissolved organic compound from a water stream. The contaminated water enters the stage at 20<span class="math notranslate nohighlight">\(^\circ\)</span>C with an organic concentration of 0.05 mol%. A stream of pure, dry air at 5 bar is contacted with the water to act as the stripping agent. The Henry’s Law constant for the organic in water at this temperature is 2.5 bar. What flow rate of air (in moles of air per mole of water) is needed to reduce the amount of organic in the water by 95%?</p>
 </section>
@@ -1709,14 +1632,16 @@ To achieve 95% removal of the organic compound, approximately <strong>38 moles o
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diffusion-into-a-solid">Diffusion into a Solid</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-governing-equation-ficks-second-law">The Governing Equation: Fick’s Second Law</a></li>
@@ -1812,8 +1737,8 @@ By PE Exam Preparation
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

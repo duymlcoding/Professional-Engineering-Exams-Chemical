@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Chemical Reaction Engineering &#8212; Introduction to Process Fundamentals</title>
+    <title>Chemical Reaction Engineering &#8212; PE Chemical Engineering Exam Study Guide</title>
   
   
   
@@ -16,42 +16,46 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=8c6b312c" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=efcdb63b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=c73c0f3e"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -67,6 +71,7 @@
     <link rel="prev" title="Mass Transfer" href="masstransfer.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -82,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -102,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search..."
          aria-label="Search..."
          autocomplete="off"
@@ -110,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -127,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -152,20 +146,16 @@
   
   
   
-    <p class="title logo__title">Process Fundamentals</p>
+    <p class="title logo__title">PE Chemical Engineering</p>
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
@@ -189,9 +179,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -222,70 +217,6 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-source-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
-    <i class="fab fa-github"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://github.com/duymlcoding/Pe" target="_blank"
-   class="btn btn-sm btn-source-repository-button dropdown-item"
-   title="Source repository"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="btn__text-container">Repository</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/duymlcoding/Pe/edit/main/chapters/chemicalreactionengineering.md" target="_blank"
-   class="btn btn-sm btn-source-edit-button dropdown-item"
-   title="Suggest edit"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="btn__text-container">Suggest edit</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/duymlcoding/Pe/issues/new?title=Issue%20on%20page%20%2Fchapters/chemicalreactionengineering.html&body=Your%20issue%20content%20here." target="_blank"
-   class="btn btn-sm btn-source-issues-button dropdown-item"
-   title="Open an issue"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="btn__text-container">Open issue</span>
-</a>
-</li>
-      
-  </ul>
-</div>
-
 
 
 
@@ -338,7 +269,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -352,25 +283,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -482,7 +405,7 @@ document.write(`
 <section id="visualizing-half-life">
 <h3>Visualizing Half-Life<a class="headerlink" href="#visualizing-half-life" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-0">
-<p class="admonition-title"><span class="caption-number">Example 81 </span> (Visualizing Half-Life in a First-Order Reaction)</p>
+<p class="admonition-title"><span class="caption-number">Example 82 </span> (Visualizing Half-Life in a First-Order Reaction)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> A first-order reaction, <span class="math notranslate nohighlight">\(A \rightarrow B\)</span>, starts with 16 molecules of reactant A. After 100 seconds, 8 molecules of A remain and 8 molecules of B have been formed. What will the mixture look like at 300 seconds?</p>
 </section>
@@ -553,7 +476,7 @@ The relationship between concentration and time for a first-order process is giv
 <section id="first-order-kinetics-calculation">
 <h3>First-Order Kinetics Calculation<a class="headerlink" href="#first-order-kinetics-calculation" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-1">
-<p class="admonition-title"><span class="caption-number">Example 82 </span> (First-Order Kinetics Calculations)</p>
+<p class="admonition-title"><span class="caption-number">Example 83 </span> (First-Order Kinetics Calculations)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> The decomposition of dimethyl ether is a first-order process with a half-life of 2165 seconds at <span class="math notranslate nohighlight">\(450^\circ\text{C}\)</span>. The reaction occurs in a constant volume container with an initial dimethyl ether concentration of 2.0 M.
 (a) What is the concentration of dimethyl ether after one hour?
@@ -650,7 +573,7 @@ The temperature dependence of the rate constant is given by:</p>
 <section id="activation-energy-calculation">
 <h3>Activation Energy Calculation<a class="headerlink" href="#activation-energy-calculation" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-2">
-<p class="admonition-title"><span class="caption-number">Example 83 </span> (Activation Energy and Temperature Effects)</p>
+<p class="admonition-title"><span class="caption-number">Example 84 </span> (Activation Energy and Temperature Effects)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> For a reaction <span class="math notranslate nohighlight">\(A \rightarrow \text{Products}\)</span>, a plot of <span class="math notranslate nohighlight">\(\ln(k)\)</span> versus <span class="math notranslate nohighlight">\(1/T\)</span> (where T is in Kelvin) yields a straight line with a slope of <span class="math notranslate nohighlight">\(-18000\)</span> K.
 (a) What is the activation energy (<span class="math notranslate nohighlight">\(E_a\)</span>) for this reaction? Use <span class="math notranslate nohighlight">\(R \approx 1.99 \times 10^{-3}\)</span> kcal/(mol<span class="math notranslate nohighlight">\(\cdot\)</span>K).
@@ -730,7 +653,7 @@ Substituting <span class="math notranslate nohighlight">\(r_A = -k C_A\)</span> 
 <section id="example-evaluating-cstr-performance">
 <h3>Example: Evaluating CSTR Performance<a class="headerlink" href="#example-evaluating-cstr-performance" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-3">
-<p class="admonition-title"><span class="caption-number">Example 84 </span> (Evaluating CSTR Performance)</p>
+<p class="admonition-title"><span class="caption-number">Example 85 </span> (Evaluating CSTR Performance)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> An existing 50 L CSTR is used for the liquid-phase reaction A <span class="math notranslate nohighlight">\(\rightarrow\)</span> Products. The reactor operates isothermally at 600 K, where <span class="math notranslate nohighlight">\(k = 2.15 \, \text{s}^{-1}\)</span>. The feed enters at <span class="math notranslate nohighlight">\(v_0 = 500\)</span> L/s with <span class="math notranslate nohighlight">\(C_{A0} = 0.4\)</span> mol/L. To be suitable, the molar flow rate of A exiting the reactor (<span class="math notranslate nohighlight">\(F_A\)</span>) must be less than 5 mol/s. Is the reactor suitable?</p>
 </section>
@@ -809,7 +732,7 @@ The differential design equation for a PFR is integrated to find the required vo
 <section id="example-reactor-sizing-with-a-levenspiel-plot">
 <h3>Example: Reactor Sizing with a Levenspiel Plot<a class="headerlink" href="#example-reactor-sizing-with-a-levenspiel-plot" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-4">
-<p class="admonition-title"><span class="caption-number">Example 85 </span> (Reactor Sizing with a Levenspiel Plot)</p>
+<p class="admonition-title"><span class="caption-number">Example 86 </span> (Reactor Sizing with a Levenspiel Plot)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> Given a Levenspiel plot for a reaction where the y-value, <span class="math notranslate nohighlight">\(\frac{F_{A0}}{-r_A}\)</span>, is 50 L for conversions between <span class="math notranslate nohighlight">\(X=0.1\)</span> and <span class="math notranslate nohighlight">\(X=0.5\)</span>. We have three available reactors: a 20 L PFR, a 15 L CSTR, and a 25 L CSTR.
 (a) What single reactor results in the largest conversion, and what is that conversion?
@@ -972,7 +895,7 @@ In a batch reactor, there is no inflow or outflow during the reaction, so <span 
 <section id="example-batch-reactor-with-multiple-reactions">
 <h3>Example: Batch Reactor with Multiple Reactions<a class="headerlink" href="#example-batch-reactor-with-multiple-reactions" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-5">
-<p class="admonition-title"><span class="caption-number">Example 86 </span> (Mole Balances for a Multi-Reaction System)</p>
+<p class="admonition-title"><span class="caption-number">Example 87 </span> (Mole Balances for a Multi-Reaction System)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> Consider an isothermal batch reactor where the following three liquid-phase reactions occur. The rates of reaction (<span class="math notranslate nohighlight">\(r_1, r_2, r_3\)</span>) are given in moles per liter per second. Write the mole balance equation for each species (A, B, C, D, E).</p>
 <div class="math notranslate nohighlight">
@@ -1023,7 +946,7 @@ This gives a system of five coupled ordinary differential equations (ODEs). To f
 <section id="example-copolymerization-in-a-batch-reactor">
 <h3>Example: Copolymerization in a Batch Reactor<a class="headerlink" href="#example-copolymerization-in-a-batch-reactor" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-6">
-<p class="admonition-title"><span class="caption-number">Example 87 </span> (Copolymerization of Styrene and Butadiene)</p>
+<p class="admonition-title"><span class="caption-number">Example 88 </span> (Copolymerization of Styrene and Butadiene)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> Styrene (S) and butadiene (B) are copolymerized in an isothermal batch reactor. The <span class="math notranslate nohighlight">\(27 \, \text{m}^3\)</span> reactor was charged with <span class="math notranslate nohighlight">\(2,200 \, \text{kg}\)</span> of styrene and <span class="math notranslate nohighlight">\(5,000 \, \text{kg}\)</span> of butadiene. The polymerization is first order in S and first order in B, and the rate constant is <span class="math notranslate nohighlight">\(k = 0.036 \, \text{m}^3\text{/(kmol}\cdot\text{h)}\)</span>. The reaction is <span class="math notranslate nohighlight">\(S + 3.2 B \rightarrow \text{polymer}\)</span>, and constant density is assumed. What are the concentrations of S and B after 10 h?</p>
 </section>
@@ -1077,7 +1000,7 @@ Equations to Solve:</p>
 <section id="example-pseudo-first-order-reaction">
 <h3>Example: Pseudo-First-Order Reaction<a class="headerlink" href="#example-pseudo-first-order-reaction" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-7">
-<p class="admonition-title"><span class="caption-number">Example 88 </span> (Hydration with a Component in Large Excess)</p>
+<p class="admonition-title"><span class="caption-number">Example 89 </span> (Hydration with a Component in Large Excess)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> The elementary, irreversible liquid-phase hydration of butylene oxide (A) produces butylene glycol ©: <span class="math notranslate nohighlight">\(C_4H_8O \text{ (A)} + H_2O \text{ (B)} \rightarrow C_4H_{10}O_2 \text{ (C)}\)</span>. The reaction is conducted using water (B) as the solvent, so it is in large excess. The initial concentration of butylene oxide is <span class="math notranslate nohighlight">\(C_{A0} = 0.25\)</span> mol/L. The rate constant is <span class="math notranslate nohighlight">\(k' = 8.3 \times 10^{-4}\)</span> L/(mol<span class="math notranslate nohighlight">\(\cdot\)</span>min) at 323 K. A batch reactor is used.
 (a) Determine the final concentration of butylene oxide after 45 min.
@@ -1193,7 +1116,7 @@ This reactor type is chosen to exert specific control over the reaction environm
 <section id="example-gas-liquid-hydrogenation">
 <h3>Example: Gas-Liquid Hydrogenation<a class="headerlink" href="#example-gas-liquid-hydrogenation" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-8">
-<p class="admonition-title"><span class="caption-number">Example 89 </span> (Hydrogenation in a Semibatch Reactor)</p>
+<p class="admonition-title"><span class="caption-number">Example 90 </span> (Hydrogenation in a Semibatch Reactor)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> In an isothermal semibatch reactor, a liquid-phase reactant A is hydrogenated to produce a liquid product P: <span class="math notranslate nohighlight">\(A(\text{liq}) + H_2(\text{g}) \rightarrow P(\text{liq})\)</span>. The reactor initially contains <span class="math notranslate nohighlight">\(N_{A0} = 150\)</span> mol of A. Hydrogen gas is fed from a cylinder to maintain a constant reactor pressure of 3 bar. The rate law is <span class="math notranslate nohighlight">\(-r_A = k C_A P_{H_2}\)</span>, where <span class="math notranslate nohighlight">\(k = 0.0074\)</span> bar<span class="math notranslate nohighlight">\(^{-1}\)</span>min<span class="math notranslate nohighlight">\(^{-1}\)</span>. Assume the volume of the liquid phase is constant.
 (a) Determine the time required to reach 80% conversion of A.
@@ -1252,7 +1175,7 @@ The mole balance simplifies to an algebraic equation for the inlet flow rate:</p
 <section id="example-catalytic-semibatch-reaction">
 <h3>Example: Catalytic Semibatch Reaction<a class="headerlink" href="#example-catalytic-semibatch-reaction" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-9">
-<p class="admonition-title"><span class="caption-number">Example 90 </span> (Semibatch Reaction with Changing Volume)</p>
+<p class="admonition-title"><span class="caption-number">Example 91 </span> (Semibatch Reaction with Changing Volume)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> A catalytic reaction, <span class="math notranslate nohighlight">\(A \rightarrow C\)</span>, takes place in the liquid phase of an isothermal semibatch reactor. The rate law is <span class="math notranslate nohighlight">\(r_A = -k C_A C_B\)</span>, with <span class="math notranslate nohighlight">\(k = 0.25\)</span> L/(mol<span class="math notranslate nohighlight">\(\cdot\)</span>min), where B is the catalyst. Initially, the reactor contains 2700 L of a solution with <span class="math notranslate nohighlight">\(C_{A0} = 20.0\)</span> mol/L. The initial concentration of catalyst B is zero. Starting at <span class="math notranslate nohighlight">\(t=0\)</span>, a solution containing 0.05 mol/L of B is fed to the reactor at a flow rate of 12.5 L/min. How many moles of product C are in the reactor after 200 min?</p>
 </section>
@@ -1346,7 +1269,7 @@ For a reaction <span class="math notranslate nohighlight">\(A \rightarrow \text{
 <section id="example-second-order-reaction-in-a-cstr">
 <h3>Example: Second-Order Reaction in a CSTR<a class="headerlink" href="#example-second-order-reaction-in-a-cstr" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-10">
-<p class="admonition-title"><span class="caption-number">Example 91 </span> (Second-Order Hydrolysis in a CSTR)</p>
+<p class="admonition-title"><span class="caption-number">Example 92 </span> (Second-Order Hydrolysis in a CSTR)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> The hydrolysis of acetic anhydride (A) to form acetic acid is carried out in a 1250-L CSTR. The feed contains 2.5 mol/L acetic anhydride and 50.0 mol/L of water (W). The reaction, <span class="math notranslate nohighlight">\((CH_3CO)_2O + H_2O \rightarrow 2CH_3COOH\)</span>, is first order in acetic anhydride and first order in water. At the reactor temperature, the rate constant is <span class="math notranslate nohighlight">\(k = 0.075\)</span> L/(mol<span class="math notranslate nohighlight">\(\cdot\)</span>s). The feed flow rate is 15 L/s. What is the conversion of acetic anhydride?</p>
 </section>
@@ -1394,7 +1317,7 @@ The conversion of acetic anhydride (A) is calculated from the inlet and outlet c
 <section id="example-reversible-reaction-in-a-cstr">
 <h3>Example: Reversible Reaction in a CSTR<a class="headerlink" href="#example-reversible-reaction-in-a-cstr" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-11">
-<p class="admonition-title"><span class="caption-number">Example 92 </span> (Reversible Reaction with a Change in Flow Rate)</p>
+<p class="admonition-title"><span class="caption-number">Example 93 </span> (Reversible Reaction with a Change in Flow Rate)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> The liquid-phase, reversible reaction <span class="math notranslate nohighlight">\(A + B \rightleftharpoons 2C\)</span> occurs in an isothermal CSTR. The feed contains equimolar amounts of A and B. The conversion of A is measured to be 60.0%. The equilibrium conversion under the same feed conditions is 80.0%. If the volumetric flow rate is increased by 50.0%, what is the new conversion of A? The forward reaction is first order in A and B; the reverse reaction is second order in C.</p>
 </section>
@@ -1615,7 +1538,7 @@ PFRs are generally preferred for:</p>
 <section id="example-gas-phase-reaction-with-changing-mole-number">
 <h3>Example: Gas-Phase Reaction with Changing Mole Number<a class="headerlink" href="#example-gas-phase-reaction-with-changing-mole-number" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-12">
-<p class="admonition-title"><span class="caption-number">Example 93 </span> (Gas-Phase PFR with Changing Volumetric Flow)</p>
+<p class="admonition-title"><span class="caption-number">Example 94 </span> (Gas-Phase PFR with Changing Volumetric Flow)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> Develop the equations required to determine the plug flow reactor volume needed to achieve 50% conversion of reactant A. The gas-phase reaction, <span class="math notranslate nohighlight">\(A + 2B \rightarrow 2D\)</span>, is carried out in an isothermal PFR at 5.0 atm and 55<span class="math notranslate nohighlight">\(^\circ\)</span>C. The feed volumetric flow rate is 50 L/min. The rate law is <span class="math notranslate nohighlight">\(r_A = -2.5 C_A^{0.5} C_B\)</span> mol/(L<span class="math notranslate nohighlight">\(\cdot\)</span>min). The feed consists of mole fractions <span class="math notranslate nohighlight">\(y_A = 0.2\)</span>, <span class="math notranslate nohighlight">\(y_B = 0.5\)</span>, and <span class="math notranslate nohighlight">\(y_C = 0.3\)</span>, where C is an inert.</p>
 </section>
@@ -1689,7 +1612,7 @@ Solving this system with a numerical package provides the reactor volume <span c
 <section id="example-gas-to-solid-reaction">
 <h3>Example: Gas-to-Solid Reaction<a class="headerlink" href="#example-gas-to-solid-reaction" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-13">
-<p class="admonition-title"><span class="caption-number">Example 94 </span> (PFR with a Phase Change)</p>
+<p class="admonition-title"><span class="caption-number">Example 95 </span> (PFR with a Phase Change)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> An isothermal plug flow reactor is used for the reaction <span class="math notranslate nohighlight">\(10A(g) \rightarrow B(s)\)</span>. The rate law is first order in A, with a rate expression <span class="math notranslate nohighlight">\(r_A = -10kC_A\)</span>, where the intrinsic rate constant is <span class="math notranslate nohighlight">\(k=0.30\)</span> L/(mol<span class="math notranslate nohighlight">\(\cdot\)</span>min). Small solid particles of product B are entrained in the gas flow. The solid is assumed to occupy a negligible volume compared to the gas. The feed of pure A is at a pressure of 10 bar, a temperature of 450 K, and a molar flow rate of 120 mol/min. The reactor volume is 100 L. Determine the exit conversion.</p>
 </section>
@@ -1816,7 +1739,7 @@ Using two or more CSTRs in series offers a significant advantage in reducing the
 <section id="example-adiabatic-temperature-calculation">
 <h3>Example: Adiabatic Temperature Calculation<a class="headerlink" href="#example-adiabatic-temperature-calculation" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-14">
-<p class="admonition-title"><span class="caption-number">Example 95 </span> (Calculating Adiabatic Temperature Rise)</p>
+<p class="admonition-title"><span class="caption-number">Example 96 </span> (Calculating Adiabatic Temperature Rise)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> The reaction <span class="math notranslate nohighlight">\(NO + 0.5 O_2 \rightarrow NO_2\)</span> occurs in an adiabatic reactor. The feed enters at 100<span class="math notranslate nohighlight">\(^\circ\)</span>C and consists of 1 mole of NO and 0.5 moles of O<span class="math notranslate nohighlight">\(_2\)</span>. The heat of reaction at 25<span class="math notranslate nohighlight">\(^\circ\)</span>C is <span class="math notranslate nohighlight">\(\Delta H_{rxn, 298K} = -57.0\)</span> kJ/mol. The heat capacities (<span class="math notranslate nohighlight">\(C_p/R\)</span>) are given as:</p>
 <ul class="simple">
@@ -1896,7 +1819,7 @@ Set the sum of the enthalpies to zero: <span class="math notranslate nohighlight
 <section id="example-endothermic-reaction-in-an-adiabatic-pbr">
 <h3>Example: Endothermic Reaction in an Adiabatic PBR<a class="headerlink" href="#example-endothermic-reaction-in-an-adiabatic-pbr" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-15">
-<p class="admonition-title"><span class="caption-number">Example 96 </span> (Adiabatic PBR with Constant Heat Capacities)</p>
+<p class="admonition-title"><span class="caption-number">Example 97 </span> (Adiabatic PBR with Constant Heat Capacities)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> An endothermic reaction occurs in an adiabatic packed bed reactor (PBR). The feed enters at 500 K, and the exit stream is at 487 K with 40% conversion. The heat capacities and heat of reaction are assumed to be constant.
 (a) Is the reaction endothermic or exothermic?
@@ -1930,7 +1853,7 @@ For an adiabatic reactor with constant heat capacities, the energy balance shows
 <section id="example-initial-temperature-profile-in-a-heated-pfr">
 <h3>Example: Initial Temperature Profile in a Heated PFR<a class="headerlink" href="#example-initial-temperature-profile-in-a-heated-pfr" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-16">
-<p class="admonition-title"><span class="caption-number">Example 97 </span> (Initial Temperature Profile in a Heated PFR)</p>
+<p class="admonition-title"><span class="caption-number">Example 98 </span> (Initial Temperature Profile in a Heated PFR)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> An endothermic, second-order reaction (<span class="math notranslate nohighlight">\(A \rightarrow \text{Products, } -r_A = k C_A^2\)</span>) takes place in a PFR with a diameter of 8 cm. The reactor is heated by a steam jacket that maintains a constant wall temperature of 300<span class="math notranslate nohighlight">\(^\circ\)</span>C. The feed enters at 250<span class="math notranslate nohighlight">\(^\circ\)</span>C. Other data includes: <span class="math notranslate nohighlight">\(\Delta H_{rxn} = 80\)</span> kJ/mol, <span class="math notranslate nohighlight">\(k = 0.5\)</span> L/(mol<span class="math notranslate nohighlight">\(\cdot\)</span>min) at 250<span class="math notranslate nohighlight">\(^\circ\)</span>C, and <span class="math notranslate nohighlight">\(U = 5000\)</span> kJ/(m<span class="math notranslate nohighlight">\(^2\cdot\)</span>h<span class="math notranslate nohighlight">\(\cdot\)</span>K). Immediately downstream from the reactor inlet, will the fluid temperature increase, decrease, or stay the same?</p>
 </section>
@@ -2025,14 +1948,16 @@ The initial temperature trend depends on the sign of <span class="math notransla
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-order-reaction-kinetics">First-Order Reaction Kinetics</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-half-life">Visualizing Half-Life</a></li>
@@ -2148,8 +2073,8 @@ By PE Exam Preparation
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

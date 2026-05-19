@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Chemical Equilibria &#8212; Introduction to Process Fundamentals</title>
+    <title>Chemical Equilibria &#8212; PE Chemical Engineering Exam Study Guide</title>
   
   
   
@@ -16,42 +16,46 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=8c6b312c" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=efcdb63b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=c73c0f3e"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -66,6 +70,7 @@
     <link rel="prev" title="Chemical Reaction Engineering" href="chemicalreactionengineering.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -81,19 +86,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -101,7 +95,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search..."
          aria-label="Search..."
          autocomplete="off"
@@ -109,8 +102,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -126,7 +119,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -151,20 +145,16 @@
   
   
   
-    <p class="title logo__title">Process Fundamentals</p>
+    <p class="title logo__title">PE Chemical Engineering</p>
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
@@ -188,9 +178,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -221,70 +216,6 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-source-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
-    <i class="fab fa-github"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://github.com/duymlcoding/Pe" target="_blank"
-   class="btn btn-sm btn-source-repository-button dropdown-item"
-   title="Source repository"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="btn__text-container">Repository</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/duymlcoding/Pe/edit/main/chapters/chemicalandphaseequilibria.md" target="_blank"
-   class="btn btn-sm btn-source-edit-button dropdown-item"
-   title="Suggest edit"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="btn__text-container">Suggest edit</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/duymlcoding/Pe/issues/new?title=Issue%20on%20page%20%2Fchapters/chemicalandphaseequilibria.html&body=Your%20issue%20content%20here." target="_blank"
-   class="btn btn-sm btn-source-issues-button dropdown-item"
-   title="Open an issue"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="btn__text-container">Open issue</span>
-</a>
-</li>
-      
-  </ul>
-</div>
-
 
 
 
@@ -337,7 +268,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -351,25 +282,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -601,7 +524,7 @@ document.write(`
 <section id="example-problems">
 <h3>Example Problems<a class="headerlink" href="#example-problems" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-0">
-<p class="admonition-title"><span class="caption-number">Example 98 </span> (Methanol Reforming for Hydrogen Production)</p>
+<p class="admonition-title"><span class="caption-number">Example 99 </span> (Methanol Reforming for Hydrogen Production)</p>
 <section class="example-content" id="proof-content">
 <p>Hydrogen for a fuel cell can be formed by the reaction:</p>
 <div class="math notranslate nohighlight">
@@ -714,7 +637,7 @@ document.write(`
 <p class="sd-card-text">The equilibrium conversion is <strong>92.3%</strong>.</p>
 </div>
 </details><div class="proof example admonition" id="example-1">
-<p class="admonition-title"><span class="caption-number">Example 99 </span> (Dehydrogenation of Butene)</p>
+<p class="admonition-title"><span class="caption-number">Example 100 </span> (Dehydrogenation of Butene)</p>
 <section class="example-content" id="proof-content">
 <p>The catalytic reaction <span class="math notranslate nohighlight">\(\text{C}_4\text{H}_8\text{(g)} \rightleftharpoons \text{C}_4\text{H}_6\text{(g)} + \text{H}_2\text{(g)}\)</span> takes place at <span class="math notranslate nohighlight">\(900^\circ\text{C}\)</span> and 1.0 bar. The feed contains steam and <span class="math notranslate nohighlight">\(\text{C}_4\text{H}_8\)</span> in a 10:1 ratio. At this temperature, <span class="math notranslate nohighlight">\(K_a = 0.329\)</span>.</p>
 <p>What is the equilibrium conversion with steam present? Does equilibrium conversion increase or decrease if steam is not fed to the system? Explain why.</p>
@@ -848,7 +771,7 @@ document.write(`
 <section id="id1">
 <h3>Example Problems<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-2">
-<p class="admonition-title"><span class="caption-number">Example 100 </span> (Adiabatic Equilibrium Temperature and Conversion)</p>
+<p class="admonition-title"><span class="caption-number">Example 101 </span> (Adiabatic Equilibrium Temperature and Conversion)</p>
 <section class="example-content" id="proof-content">
 <p>For the reversible, liquid-phase reaction, A <span class="math notranslate nohighlight">\(\leftrightarrow\)</span> B, determine the adiabatic equilibrium temperature and conversion when pure A is fed to the reactor at 300 K.</p>
 <ul class="simple">
@@ -881,7 +804,7 @@ document.write(`
 </ul>
 </div>
 </details><div class="proof example admonition" id="example-3">
-<p class="admonition-title"><span class="caption-number">Example 101 </span> (Heat Duty for an Isothermal Reactor)</p>
+<p class="admonition-title"><span class="caption-number">Example 102 </span> (Heat Duty for an Isothermal Reactor)</p>
 <section class="example-content" id="proof-content">
 <p>100 mol/h of <span class="math notranslate nohighlight">\(\text{N}_2\)</span> and 300 mol/h of <span class="math notranslate nohighlight">\(\text{H}_2\)</span> are fed to an isothermal reactor at <span class="math notranslate nohighlight">\(350^\circ\text{C}\)</span> to carry out the ammonia synthesis reaction:</p>
 <div class="math notranslate nohighlight">
@@ -1028,7 +951,7 @@ document.write(`
 <section id="id2">
 <h3>Example Problems<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-4">
-<p class="admonition-title"><span class="caption-number">Example 102 </span> (Water-Gas Shift Reaction)</p>
+<p class="admonition-title"><span class="caption-number">Example 103 </span> (Water-Gas Shift Reaction)</p>
 <section class="example-content" id="proof-content">
 <p>Calculate the equilibrium composition at 750 K and 1 bar for the water-gas shift reaction for a feed of 2 mol/s CO and 2 mol/s H<span class="math notranslate nohighlight">\(_{2}\)</span>O. Use both the extent of reaction method and Gibbs minimization with temperature-dependent data.</p>
 <div class="math notranslate nohighlight">
@@ -1087,7 +1010,7 @@ document.write(`
 <p class="sd-card-text">Moles H<span class="math notranslate nohighlight">\(_{2}\)</span> = Moles CO<span class="math notranslate nohighlight">\(_{2}\)</span> = <span class="math notranslate nohighlight">\(\xi = \mathbf{1.422}\)</span> mol.</p>
 </div>
 </details><div class="proof example admonition" id="example-5">
-<p class="admonition-title"><span class="caption-number">Example 103 </span> (Methane Steam Reforming (Multiple Reactions))</p>
+<p class="admonition-title"><span class="caption-number">Example 104 </span> (Methane Steam Reforming (Multiple Reactions))</p>
 <section class="example-content" id="proof-content">
 <p>Calculate the equilibrium composition at 950 K and 3.0 bar for a feed of 1.0 mol/s CH<span class="math notranslate nohighlight">\(_{4}\)</span> and 1.0 mol/s H<span class="math notranslate nohighlight">\(_{2}\)</span>O. The possible products are CO, CO<span class="math notranslate nohighlight">\(_{2}\)</span>, and H<span class="math notranslate nohighlight">\(_{2}\)</span>. Use the Gibbs minimization method.</p>
 </section>
@@ -1370,7 +1293,7 @@ document.write(`
 <section id="id3">
 <h2>Example Problems<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
 <div class="proof example admonition" id="example-6">
-<p class="admonition-title"><span class="caption-number">Example 104 </span> (Bubble Temperature Calculation)</p>
+<p class="admonition-title"><span class="caption-number">Example 105 </span> (Bubble Temperature Calculation)</p>
 <section class="example-content" id="proof-content">
 <p>Calculate the bubble temperature at 85 kPa for an ideal binary liquid solution with a composition of <span class="math notranslate nohighlight">\(x_1 = 0.40\)</span>. The saturation pressures are given by the following Antoine equations, where T is in <span class="math notranslate nohighlight">\(^\circ\)</span>C and P is in kPa:</p>
 <div class="math notranslate nohighlight">
@@ -1404,7 +1327,7 @@ document.write(`
 <p class="sd-card-text"><strong>Bubble Temperature: <span class="math notranslate nohighlight">\(T = 84.4^\circ\)</span>C</strong></p>
 </div>
 </details><div class="proof example admonition" id="example-7">
-<p class="admonition-title"><span class="caption-number">Example 105 </span> (Isothermal Flash Calculation)</p>
+<p class="admonition-title"><span class="caption-number">Example 106 </span> (Isothermal Flash Calculation)</p>
 <section class="example-content" id="proof-content">
 <p>A fixed-volume tank initially contains 1.0 mol of pure component A as a vapor at 1.9 bar. The saturation pressure of A at the tank temperature is <span class="math notranslate nohighlight">\(P_A^{sat} = 2.0\)</span> bar. Then, 1.0 mol of liquid component B, with a saturation pressure of <span class="math notranslate nohighlight">\(P_B^{sat} = 1.0\)</span> bar, is added to the tank. After the system reaches equilibrium at the same temperature, the final pressure is 1.44 bar. Assuming ideal behavior, determine the phases present, their compositions, and the number of moles of each phase.</p>
 </section>
@@ -1541,7 +1464,7 @@ document.write(`
 <section id="example-problem">
 <h3>Example Problem<a class="headerlink" href="#example-problem" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-8">
-<p class="admonition-title"><span class="caption-number">Example 106 </span> (Single-Stage Stripping Process)</p>
+<p class="admonition-title"><span class="caption-number">Example 107 </span> (Single-Stage Stripping Process)</p>
 <section class="example-content" id="proof-content">
 <p>A stream of dry air at 5 bar and 20<span class="math notranslate nohighlight">\(^\circ\)</span>C is used to strip a volatile organic compound (VOC) from a wastewater stream. The process occurs in a single equilibrium stage. The Henry’s constant for the VOC in water at this temperature is 2.5 bar. The inlet water contains the VOC at a mole fraction of 0.0005. What flow rate of air (in moles per mole of water) is needed to remove 95% of the VOC from the water?</p>
 </section>
@@ -1744,7 +1667,7 @@ Removal efficiency: 95%</p>
 <section id="id4">
 <h3>Example Problems<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-9">
-<p class="admonition-title"><span class="caption-number">Example 107 </span> (Melting Point of Ice under Pressure)</p>
+<p class="admonition-title"><span class="caption-number">Example 108 </span> (Melting Point of Ice under Pressure)</p>
 <section class="example-content" id="proof-content">
 <p>The molar heat of fusion of ice is 335 J/g. The densities of liquid water and ice at 0<span class="math notranslate nohighlight">\(^\circ\)</span>C are 1.00 g/cm<span class="math notranslate nohighlight">\(^3\)</span> and 0.915 g/cm<span class="math notranslate nohighlight">\(^3\)</span>, respectively. Calculate the melting temperature of ice when the system pressure is 110 MPa.</p>
 </section>
@@ -1806,7 +1729,7 @@ Removal efficiency: 95%</p>
 \[T_2 = 0.96998 \times 273.15 = 264.95 \text{ K}\]</div>
 </div>
 </details><div class="proof example admonition" id="example-10">
-<p class="admonition-title"><span class="caption-number">Example 108 </span> (Estimate <span class="math notranslate nohighlight">\(\Delta H_{vap}\)</span> from the Antoine Equation)</p>
+<p class="admonition-title"><span class="caption-number">Example 109 </span> (Estimate <span class="math notranslate nohighlight">\(\Delta H_{vap}\)</span> from the Antoine Equation)</p>
 <section class="example-content" id="proof-content">
 <p>Given the Antoine equation for benzene, <span class="math notranslate nohighlight">\(\log_{10}P^{sat} = 6.90 - 1211/(220.8 + T)\)</span>, where <span class="math notranslate nohighlight">\(P^{sat}\)</span> is in torr and <span class="math notranslate nohighlight">\(T\)</span> is in <span class="math notranslate nohighlight">\(^\circ\)</span>C, estimate the heat of vaporization of benzene at 60<span class="math notranslate nohighlight">\(^\circ\)</span>C.</p>
 </section>
@@ -1924,7 +1847,7 @@ Removal efficiency: 95%</p>
 <section id="id5">
 <h3>Example Problems<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-11">
-<p class="admonition-title"><span class="caption-number">Example 109 </span> (Bubble Pressure using the Margules Equation)</p>
+<p class="admonition-title"><span class="caption-number">Example 110 </span> (Bubble Pressure using the Margules Equation)</p>
 <section class="example-content" id="proof-content">
 <p>A vapor-phase mixture containing 30 mol% component 1 and 70 mol% component 2 is compressed at a fixed temperature until it is completely liquefied. The saturation pressures are <span class="math notranslate nohighlight">\(P_1^{sat} = 0.82\)</span> bar and <span class="math notranslate nohighlight">\(P_2^{sat} = 1.93\)</span> bar. Experimental data shows that the bubble pressure of a 50:50 mixture of these components is 1.08 bar.</p>
 <ul class="simple">
@@ -1995,7 +1918,7 @@ Removal efficiency: 95%</p>
 <p class="sd-card-text">As predicted, the ideal pressure (1.60 bar) is significantly higher than the real pressure (1.39 bar).</p>
 </div>
 </details><div class="proof example admonition" id="example-12">
-<p class="admonition-title"><span class="caption-number">Example 110 </span> (Bubble Temperature using the Van Laar Equation)</p>
+<p class="admonition-title"><span class="caption-number">Example 111 </span> (Bubble Temperature using the Van Laar Equation)</p>
 <section class="example-content" id="proof-content">
 <p>Calculate the bubble temperature and the equilibrium vapor composition for a binary system with a liquid mole fraction of <span class="math notranslate nohighlight">\(x_1 = 0.40\)</span> at a total pressure of 70 kPa. The system is non-ideal and is described by the two-parameter Van Laar model with <span class="math notranslate nohighlight">\(A_{12}=1.2\)</span> and <span class="math notranslate nohighlight">\(A_{21}=0.8\)</span>. The saturation pressures are given by the Antoine equations (T in <span class="math notranslate nohighlight">\(^\circ\)</span>C, P in kPa):</p>
 <div class="math notranslate nohighlight">
@@ -2091,7 +2014,7 @@ Removal efficiency: 95%</p>
 <section id="conceptual-examples-of-fugacity">
 <h2>Conceptual Examples of Fugacity<a class="headerlink" href="#conceptual-examples-of-fugacity" title="Link to this heading">#</a></h2>
 <div class="proof example admonition" id="example-13">
-<p class="admonition-title"><span class="caption-number">Example 111 </span> (Fugacity in a Binary VLE System)</p>
+<p class="admonition-title"><span class="caption-number">Example 112 </span> (Fugacity in a Binary VLE System)</p>
 <section class="example-content" id="proof-content">
 <p>A binary liquid mixture containing 70 mol% component A and 30 mol% component B is in equilibrium with its vapor. The partial pressures in the vapor phase are measured to be <span class="math notranslate nohighlight">\(P_A = 0.2\)</span> bar and <span class="math notranslate nohighlight">\(P_B = 0.8\)</span> bar. Which component has the higher fugacity in the liquid phase?</p>
 </section>
@@ -2117,7 +2040,7 @@ Removal efficiency: 95%</p>
 <p class="sd-card-text"><strong>Conclusion</strong>: Component B has the higher fugacity in the liquid (<span class="math notranslate nohighlight">\(\hat{f}_B^L &gt; \hat{f}_A^L\)</span>), even though it is the minority component by mole fraction (<span class="math notranslate nohighlight">\(x_B &lt; x_A\)</span>). This indicates component B is much more volatile than component A.</p>
 </div>
 </details><div class="proof example admonition" id="example-14">
-<p class="admonition-title"><span class="caption-number">Example 112 </span> (Fugacity of Salt in Water)</p>
+<p class="admonition-title"><span class="caption-number">Example 113 </span> (Fugacity of Salt in Water)</p>
 <section class="example-content" id="proof-content">
 <p>Sufficient NaCl is added to water at 25<span class="math notranslate nohighlight">\(^\circ\)</span>C so that a saturated solution is formed, with solid salt crystals present at the bottom. Does the water or the salt have a higher fugacity in the liquid solution?</p>
 </section>
@@ -2229,7 +2152,7 @@ The Gibbs Phase Rule determines the number of independent intensive variables th
 <section id="id6">
 <h3>Example Problems<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-15">
-<p class="admonition-title"><span class="caption-number">Example 113 </span> (Three-Phase Mass Balance)</p>
+<p class="admonition-title"><span class="caption-number">Example 114 </span> (Three-Phase Mass Balance)</p>
 <section class="example-content" id="proof-content">
 <p>One mole of a liquid mixture containing 25 mol% component A and 75 mol% component B is heated at constant pressure. When 0.05 moles of vapor have formed, the system is found to be at the three-phase equilibrium temperature. At this temperature, the compositions of the coexisting phases are:</p>
 <ul class="simple">
@@ -2308,7 +2231,7 @@ b) <span class="math notranslate nohighlight">\(0.27 L_\alpha + 0.83 L_\beta = 0
 </ul>
 </div>
 </details><div class="proof example admonition" id="example-16">
-<p class="admonition-title"><span class="caption-number">Example 114 </span> (Effect of Cooling from a Three-Phase State)</p>
+<p class="admonition-title"><span class="caption-number">Example 115 </span> (Effect of Cooling from a Three-Phase State)</p>
 <section class="example-content" id="proof-content">
 <p>A cyclohexane-water system is at equilibrium at 50<span class="math notranslate nohighlight">\(^\circ\)</span>C and a fixed pressure. The system contains three phases: a vapor phase, a water-rich liquid phase, and a cyclohexane-rich liquid phase. If the temperature is now decreased to 45<span class="math notranslate nohighlight">\(^\circ\)</span>C while keeping the pressure constant, what change will occur in the system?</p>
 </section>
@@ -2381,7 +2304,7 @@ b) <span class="math notranslate nohighlight">\(0.27 L_\alpha + 0.83 L_\beta = 0
 <section id="id7">
 <h3>Example Problems<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-17">
-<p class="admonition-title"><span class="caption-number">Example 115 </span> (Condensation of an Immiscible System)</p>
+<p class="admonition-title"><span class="caption-number">Example 116 </span> (Condensation of an Immiscible System)</p>
 <section class="example-content" id="proof-content">
 <p>A gas mixture containing 75 mol% component A and 25 mol% component B is compressed isothermally. At a total pressure of 1.6 bar, liquid A begins to condense. As the pressure is increased further, liquid B begins to condense at a total pressure of 2.4 bar. What are the saturation pressures of pure A and pure B at this temperature?</p>
 </section>
@@ -2410,7 +2333,7 @@ b) <span class="math notranslate nohighlight">\(0.27 L_\alpha + 0.83 L_\beta = 0
 \[P_B = P_B^{sat} \implies P_B^{sat} = 1.2 \, \text{bar}\]</div>
 </div>
 </details><div class="proof example admonition" id="example-18">
-<p class="admonition-title"><span class="caption-number">Example 116 </span> (Identifying Phases in an Immiscible System)</p>
+<p class="admonition-title"><span class="caption-number">Example 117 </span> (Identifying Phases in an Immiscible System)</p>
 <section class="example-content" id="proof-content">
 <p>A closed system contains 6 mol of component A and 4 mol of component B. The system is at equilibrium at 100<span class="math notranslate nohighlight">\(^\circ\)</span>C and a total pressure of 2.0 atm. A and B are completely immiscible in the liquid phase. Their saturation pressures at 100<span class="math notranslate nohighlight">\(^\circ\)</span>C are known to be <span class="math notranslate nohighlight">\(P_A^{sat} = 2.0\)</span> atm and <span class="math notranslate nohighlight">\(P_B^{sat} = 0.5\)</span> atm. Determine the phases present at equilibrium.</p>
 </section>
@@ -2594,7 +2517,7 @@ b) <span class="math notranslate nohighlight">\(0.27 L_\alpha + 0.83 L_\beta = 0
 <section id="id8">
 <h3>Example Problems<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-19">
-<p class="admonition-title"><span class="caption-number">Example 117 </span> (Flash with Known Vaporized Fraction)</p>
+<p class="admonition-title"><span class="caption-number">Example 118 </span> (Flash with Known Vaporized Fraction)</p>
 <section class="example-content" id="proof-content">
 <p>A 50/50 molar liquid mixture of benzene(1) and toluene(2) is flashed to a drum operating at 1.4 bar. At the resulting equilibrium temperature, it is known that 25% of the feed vaporizes. The saturation pressure of benzene at this temperature is <span class="math notranslate nohighlight">\(P_1^{sat} = 2.0\)</span> bar. Assuming an ideal solution, what is the composition of the vapor leaving the drum?</p>
 </section>
@@ -2623,7 +2546,7 @@ Goal: Find the vapor composition, <span class="math notranslate nohighlight">\(y
 <p class="sd-card-text">The vapor composition is approximately <strong>64.5% benzene</strong> (<span class="math notranslate nohighlight">\(y_1 = 0.645\)</span>) and 35.5% toluene.</p>
 </div>
 </details><div class="proof example admonition" id="example-20">
-<p class="admonition-title"><span class="caption-number">Example 118 </span> (Isothermal Flash Calculation)</p>
+<p class="admonition-title"><span class="caption-number">Example 119 </span> (Isothermal Flash Calculation)</p>
 <section class="example-content" id="proof-content">
 <p>A liquid feed containing 60 mol% component 1 and 40 mol% component 2 is flashed to an outlet condition of 150<span class="math notranslate nohighlight">\(^\circ\)</span>C and 1210 kPa. The system behaves as an ideal solution. The saturation pressures (in kPa) are given by the Antoine equations, where T is in <span class="math notranslate nohighlight">\(^\circ\)</span>C:</p>
 <div class="math notranslate nohighlight">
@@ -2720,7 +2643,7 @@ Goal: Find the vapor composition, <span class="math notranslate nohighlight">\(y
 \[x_{NaCl} = \frac{40}{40 + 100} = \frac{40}{140} \approx 0.286\]</div>
 </div>
 <div class="proof example admonition" id="example-21">
-<p class="admonition-title"><span class="caption-number">Example 119 </span> (Crystallizer Material Balance)</p>
+<p class="admonition-title"><span class="caption-number">Example 120 </span> (Crystallizer Material Balance)</p>
 <section class="example-content" id="proof-content">
 <p>A saturated aqueous solution of potassium dichromate (K<span class="math notranslate nohighlight">\(_2\)</span>Cr<span class="math notranslate nohighlight">\(_2\)</span>O<span class="math notranslate nohighlight">\(_7\)</span>) at 60<span class="math notranslate nohighlight">\(^\circ\)</span>C is fed to a crystallizer that operates at 20<span class="math notranslate nohighlight">\(^\circ\)</span>C. The outlet slurry is filtered, yielding 200 kg of solid K<span class="math notranslate nohighlight">\(_2\)</span>Cr<span class="math notranslate nohighlight">\(_2\)</span>O<span class="math notranslate nohighlight">\(_7\)</span> crystals and 400 kg of saturated solution at 20<span class="math notranslate nohighlight">\(^\circ\)</span>C. How much water was evaporated in the crystallizer?</p>
 </section>
@@ -2859,14 +2782,16 @@ The transition into and out of the supercritical state involves unique and obser
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Chemical Equilibria</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gas-phase-chemical-equilibrium">Gas-Phase Chemical Equilibrium</a><ul class="visible nav section-nav flex-column">
@@ -3009,8 +2934,8 @@ By PE Exam Preparation
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

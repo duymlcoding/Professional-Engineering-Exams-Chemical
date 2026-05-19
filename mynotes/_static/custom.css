@@ -1,0 +1,270 @@
+/* ================================================================
+   PE Chemical Engineering Study Guide — Custom Theme
+   ================================================================ */
+
+/* ── Typography ─────────────────────────────────────────────── */
+body {
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #1a1a2e;
+}
+
+.bd-article-container {
+  max-width: 900px;
+}
+
+h1 { font-size: 2rem; font-weight: 700; color: #0d1b2a; margin-top: 1.5rem; border-bottom: 3px solid #3a86ff; padding-bottom: 0.4rem; }
+h2 { font-size: 1.55rem; font-weight: 700; color: #0d1b2a; margin-top: 2rem; border-bottom: 1px solid #d0d7e0; padding-bottom: 0.25rem; }
+h3 { font-size: 1.2rem; font-weight: 600; color: #1a1a2e; margin-top: 1.5rem; }
+h4 { font-size: 1.05rem; font-weight: 600; color: #374151; }
+
+/* ── Math spacing ───────────────────────────────────────────── */
+mjx-container { font-size: 1.08em !important; }
+.math { overflow-x: auto; padding: 0.25rem 0; }
+
+/* ── Admonitions — base reset ───────────────────────────────── */
+.admonition {
+  border-radius: 8px;
+  border-left-width: 5px;
+  border-left-style: solid;
+  padding: 1rem 1.2rem;
+  margin: 1.2rem 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+
+.admonition p.admonition-title {
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+/* Important / Key Formula → deep blue */
+.admonition.important {
+  background: #eef4ff;
+  border-left-color: #3a86ff;
+}
+.admonition.important > .admonition-title {
+  color: #1d4ed8;
+}
+.admonition.important > .admonition-title::before {
+  content: "⚡ ";
+}
+
+/* Note / Key Concept → teal-green */
+.admonition.note {
+  background: #f0fdf4;
+  border-left-color: #22c55e;
+}
+.admonition.note > .admonition-title {
+  color: #15803d;
+}
+.admonition.note > .admonition-title::before {
+  content: "💡 ";
+}
+
+/* Tip / Term Definitions → amber */
+.admonition.tip {
+  background: #fffbeb;
+  border-left-color: #f59e0b;
+}
+.admonition.tip > .admonition-title {
+  color: #b45309;
+}
+.admonition.tip > .admonition-title::before {
+  content: "📖 ";
+}
+
+/* Warning → orange-red */
+.admonition.warning {
+  background: #fff7ed;
+  border-left-color: #f97316;
+}
+.admonition.warning > .admonition-title {
+  color: #c2410c;
+}
+.admonition.warning > .admonition-title::before {
+  content: "⚠️ ";
+}
+
+/* Caution / Common Mistakes → red */
+.admonition.caution {
+  background: #fff1f2;
+  border-left-color: #ef4444;
+}
+.admonition.caution > .admonition-title {
+  color: #b91c1c;
+}
+.admonition.caution > .admonition-title::before {
+  content: "🚫 ";
+}
+
+/* ── prf:example boxes → orange card ───────────────────────── */
+.prf-prf-example {
+  background: #fff8f0;
+  border: 1.5px solid #fb923c;
+  border-left: 5px solid #ea580c;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  margin: 1.2rem 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.prf-prf-example .prf-prf-title {
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #c2410c;
+  margin-bottom: 0.5rem;
+}
+
+.prf-prf-example .prf-prf-title::before {
+  content: "📝 Example — ";
+}
+
+/* ── Dropdown / Solution boxes ──────────────────────────────── */
+details.toggle {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-left: 4px solid #6366f1;
+  border-radius: 8px;
+  margin: 0.8rem 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+details.toggle summary {
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: #4338ca;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+details.toggle summary::marker { color: #6366f1; }
+
+details.toggle[open] summary {
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 0.5rem;
+}
+
+details.toggle > *:not(summary) {
+  padding: 0 1rem 0.8rem 1rem;
+}
+
+/* ── Formula summary tables ─────────────────────────────────── */
+table.formula-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+
+table.formula-table th {
+  background: #3a86ff;
+  color: white;
+  padding: 0.5rem 0.8rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+table.formula-table td {
+  padding: 0.45rem 0.8rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+table.formula-table tr:nth-child(even) td {
+  background: #f8fafc;
+}
+
+/* General table improvements */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+
+table th {
+  background: #1e3a5f;
+  color: #ffffff;
+  padding: 0.5rem 0.8rem;
+  text-align: left;
+}
+
+table td {
+  padding: 0.4rem 0.8rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+table tr:hover td {
+  background: #f0f7ff;
+}
+
+/* ── Section dividers ───────────────────────────────────────── */
+hr { border: none; border-top: 2px solid #e2e8f0; margin: 2rem 0; }
+
+/* ── Code blocks ────────────────────────────────────────────── */
+pre, code {
+  font-family: "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+  font-size: 0.88em;
+  border-radius: 5px;
+}
+
+div.highlight {
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+/* ── Sidebar navigation improvements ───────────────────────── */
+.bd-sidebar-primary {
+  font-size: 0.9rem;
+}
+
+.bd-sidebar-primary .nav-link.active {
+  font-weight: 700;
+  color: #3a86ff;
+  background: #eef4ff;
+  border-radius: 4px;
+}
+
+/* ── Navbar / topbar ────────────────────────────────────────── */
+.bd-header {
+  background: linear-gradient(135deg, #0d1b2a 0%, #1e3a5f 100%);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+  color: #e2e8f0 !important;
+}
+
+/* ── Chapter landing section cards ─────────────────────────── */
+.sd-card {
+  border-radius: 10px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.sd-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12) !important;
+}
+
+/* ── Print friendliness ─────────────────────────────────────── */
+@media print {
+  .bd-sidebar-primary, .bd-header, .bd-footer { display: none; }
+  .bd-article-container { max-width: 100%; }
+  .admonition { box-shadow: none; border: 1px solid #ccc; }
+  details.toggle { border: 1px solid #ccc; }
+  details.toggle[open] { display: block; }
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.3rem; }
+  .admonition { padding: 0.8rem; }
+}

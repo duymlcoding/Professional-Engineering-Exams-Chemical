@@ -16,6 +16,29 @@ Welcome to your chemical engineering refresher for the Professional Engineering 
 A **system** is a specific region of space we are interested in (e.g., a reactor, a distillation column, a pipe). The boundary separating the system from its surroundings is called the **control volume**. The analysis of what crosses this boundary is the key to solving process problems.
 ```
 
+---
+
+## Quick Reference: Key Equations
+
+| Formula | Equation | When to Use |
+|---------|----------|-------------|
+| General balance | $\text{Accum} = \dot{m}_{in} - \dot{m}_{out} + \text{Gen} - \text{Cons}$ | Any process |
+| Steady-state overall | $\dot{m}_{in} = \dot{m}_{out}$ | No rxn, SS |
+| Component balance | $F z_i = V y_i + L x_i$ | Separation units |
+| Transient balance | $\frac{dM}{dt} = \dot{m}_{in} - \dot{m}_{out}$ | Filling/draining tanks |
+| Extent of reaction | $\dot{n}_i = \dot{n}_{i,0} + \nu_i \xi$ | Reactive systems |
+| % Excess air | $\frac{\dot{n}_{air,fed} - \dot{n}_{air,theo}}{\dot{n}_{air,theo}} \times 100\%$ | Combustion |
+| Overall conversion | $X_{overall} = \frac{F_{A,0} - F_{A,f}}{F_{A,0}}$ | Recycle systems |
+| Single-pass conversion | $X_{SP} = \frac{F_{A,m} - F_{A,out}}{F_{A,m}}$ | Reactor only |
+| DoF | $\text{DoF} = \text{Unknowns} - \text{Indep. Equations}$ | Setup check |
+| Energy balance (SS) | $\dot{Q} = \Delta\dot{H} = \dot{m}(\hat{h}_{out} - \hat{h}_{in})$ | Heat exchangers |
+| Sensible heat | $\dot{Q}_s = \dot{m} c_p \Delta T$ | Temp change, no phase change |
+| Latent heat | $\dot{Q}_L = \dot{n} \Delta H_{phase}$ | Phase change |
+| Reactive energy balance | $\dot{Q} = \dot{\xi}\Delta\hat{H}_{rxn}^\circ + \sum_{out}\dot{n}_i\hat{h}_i - \sum_{in}\dot{n}_i\hat{h}_i$ | Reactors |
+| $\Delta H^\circ_{rxn}$ | $\sum_{prod}|\nu_i|\Delta\hat{H}_{f,i}^\circ - \sum_{react}|\nu_i|\Delta\hat{H}_{f,i}^\circ$ | Standard state |
+
+---
+
 ## Material Balances
 
 The principle of mass conservation states that mass cannot be created or destroyed. When applied to a process system, this gives us the general material balance equation.
@@ -379,6 +402,15 @@ In the mixing column example:
 - DoF = 5 - 3 = 2 (underspecified)
 
 Need 2 more pieces of information to solve!
+```
+
+```{caution}
+**PE Exam Traps — Material Balances**
+
+- **Over-counting equations:** The overall balance is NOT independent of component balances — it's the sum of all of them. Using all N components plus the overall gives N, not N+1, independent equations.
+- **Mole vs. mass basis:** Mixing streams with different molecular weights? Convert to a consistent basis (all moles or all mass) before writing balances. Mixing mole fractions and mass fractions in one equation is a common error.
+- **Recycle hides inerts:** An inert in a fresh feed will build up indefinitely without a purge stream. If the problem has an inert and no purge, re-read it — one must be implied.
+- **Fractional conversion ≠ mole fraction in product:** Conversion refers to the fraction of the *reactant fed* that reacts, not the product concentration.
 ```
 
 ## Material Balances with Multiple Reactions
@@ -1640,6 +1672,14 @@ Use Excel Solver or similar to solve 17 linear equations.
 - Using overall atomic balances as independent equations in the solution process
 ```
 
+```{caution}
+**PE Exam Traps — Combustion Calculations**
+
+- **Excess air vs. excess oxygen:** Always compute theoretical O₂ first, then convert to air using 21 mol% O₂. Applying the excess percentage directly to O₂ moles is correct; applying it to air gives the same answer — but mixing these up when air composition is unusual (problem gives 20% O₂) is a trap.
+- **Incomplete combustion products:** If the problem says "incomplete combustion" or gives a CO:CO₂ ratio, do NOT assume all C → CO₂. Use an atomic C balance instead.
+- **Water phase in flue gas:** At stack conditions, water is typically vapor. Don't use liquid water properties in a combustion gas composition calculation.
+```
+
 ## Introduction to Energy Balances
 
 ```{note}
@@ -1998,91 +2038,13 @@ Required cooling duty: **3808 kW**
 The negative sign confirms heat is being removed from the system.
 ```
 
-```{prf:example} Steam Heat Exchanger Analysis
+```{caution}
+**PE Exam Traps — Energy Balances**
 
-**Problem:** Superheated steam at 10 bar and 200°C flows at 2 kg/s into heat exchanger. Steam transfers 450 kW heat to preheat reactor feed. Pressure drop is negligible. Determine enthalpy, temperature, and phase of exiting steam.
-```
-
-```{note}
-**Solution Strategy**
-
-Use steam tables for direct enthalpy lookup. This simplifies calculations significantly compared to integration methods since extensive thermodynamic data is readily available for water.
-```
-
-```{dropdown} Solution Steps
-
-**Step 1: Set Up Energy Balance**
-
-For steady-state open system with no work and negligible kinetic/potential energy:
-
-$\dot{Q} = \dot{m}(\hat{h}_{out} - \hat{h}_{in})$
-
-Heat transferred *from* steam: $\dot{Q} = -450$ kW
-
-$-450 = (2)(\hat{h}_{out} - \hat{h}_{in})$
-
-**Step 2: Find Inlet Specific Enthalpy**
-
-From superheated steam tables at 10 bar and 200°C:
-
-$\hat{h}_{in} = 2828$ kJ/kg
-
-**Step 3: Calculate Outlet Specific Enthalpy**
-
-$\hat{h}_{out} = \hat{h}_{in} + \frac{\dot{Q}}{\dot{m}} = 2828 + \frac{-450}{2} = 2828 - 225 = 2603$ kJ/kg
-
-**Step 4: Determine Outlet Phase and Temperature**
-
-Compare $\hat{h}_{out}$ to saturation properties at 10 bar:
-
-$\hat{h}_f = 762.5$ kJ/kg (saturated liquid)
-
-$\hat{h}_g = 2777.1$ kJ/kg (saturated vapor)
-
-Since $762.5 < 2603 < 2777.1$: **Two-phase mixture**
-
-Temperature = saturation temperature at 10 bar = **179.9°C**
-
-**Step 5: Calculate Quality (Vapor Mass Fraction)**
-
-For two-phase mixture: $\hat{h}_{out} = x\hat{h}_g + (1-x)\hat{h}_f$
-
-$2603 = x(2777.1) + (1-x)(762.5)$
-
-$2603 = 2777.1x + 762.5 - 762.5x = 2014.6x + 762.5$
-
-$x = \frac{2603 - 762.5}{2014.6} = 0.914 = 91.4\%$
-```
-
-```{important}
-**Final Results**
-
-**Exiting Steam Conditions:**
-
-- Specific enthalpy: **2603 kJ/kg**
-- Phase: **Two-phase mixture (wet steam)**
-- Temperature: **179.9°C**
-- Quality: **91.4% vapor**
-```
-
-```{note}
-**Key Phase Change Energy Balance Principles**
-
-**Problem-Solving Guidelines:**
-
-- Use state function property to construct convenient calculation paths
-- Separate sensible heat (temperature change) from latent heat (phase change)
-- For complex heat capacity functions, integrate carefully over temperature ranges
-- Use steam tables when available for water/steam systems
-- Always check phase boundaries using saturation properties
-- Verify energy balance closure and sign conventions
-
-**Sign Conventions:**
-
-- Heat added to system: positive (+)
-- Heat removed from system: negative (-)
-- Condensation: negative enthalpy change
-- Vaporization: positive enthalpy change
+- **Sign convention:** $\dot{Q} > 0$ means heat **added to** the system. If steam exits a heat exchanger cooler than it entered, $\dot{Q}$ for the steam side is **negative** — the steam is the hot fluid losing energy.
+- **Steam tables vs. $c_p \Delta T$:** For water and steam, always prefer steam tables over $c_p \Delta T$ — $c_p$ for steam varies significantly with temperature and pressure. Only use $c_p \Delta T$ when steam tables are unavailable or for ideal gas approximations.
+- **Two-phase region:** If $\hat{h}_f < \hat{h}_{out} < \hat{h}_g$, the outlet is a wet mixture — don't report a temperature as if it's superheated. Report the saturation temperature plus the quality $x$.
+- **Sensible + latent sequencing:** When cooling a superheated gas through condensation to a subcooled liquid, you must use **three separate steps**: (1) sensible cool to dew point, (2) condense at constant T, (3) sensible cool liquid. Applying a single average $c_p$ across the phase transition gives a wrong answer.
 ```
 
 ## Energy Balances on Reactive Systems
@@ -2449,4 +2411,119 @@ The reaction is slightly less exothermic at higher temperature due to the positi
 - Generally small corrections unless temperature differences are large
 
 Both methods yield identical results when applied correctly.
+```
+
+---
+
+## PE Exam Practice Problems
+
+The following problems are written in the style of NCEES PE exam questions. Try each problem before opening the solution.
+
+---
+
+```{prf:example} Practice Problem 1 — Flash Drum with Recycle (Material Balance)
+
+A process feed of 500 kg/h containing 30 wt% toluene and 70 wt% benzene enters a flash drum. The overhead vapor is 80 wt% benzene and is completely condensed. Half of the condensate is returned to the drum as reflux; the other half is withdrawn as overhead product. The bottoms liquid from the drum is 15 wt% benzene.
+
+**(a)** What is the overhead product flow rate (kg/h)?
+
+**(b)** What is the bottoms flow rate (kg/h)?
+```
+
+```{dropdown} Solution
+
+**Step 1: Define streams and unknowns**
+
+Let:
+- $F = 500$ kg/h (feed), $z_B = 0.30$ (toluene fraction in feed), so benzene in feed = 0.70
+- $D$ = overhead product (kg/h), $B$ = bottoms (kg/h)
+- Vapor overhead: $y_{benz} = 0.80$, so toluene fraction = 0.20
+- Bottoms: $x_{benz} = 0.15$, toluene fraction = 0.85
+
+Note: the reflux is internal to the drum — it does NOT cross the overall system boundary. So the overall balance only involves F, D, and B.
+
+**Step 2: Overall mass balance**
+
+$$F = D + B \implies 500 = D + B \quad (1)$$
+
+**Step 3: Overall benzene balance**
+
+$$F \cdot 0.70 = D \cdot 0.80 + B \cdot 0.15$$
+
+$$350 = 0.80D + 0.15B \quad (2)$$
+
+**Step 4: Solve simultaneously**
+
+From (1): $B = 500 - D$. Substitute into (2):
+
+$$350 = 0.80D + 0.15(500-D) = 0.80D + 75 - 0.15D = 0.65D + 75$$
+
+$$D = \frac{275}{0.65} = 423.1 \text{ kg/h}$$
+
+$$B = 500 - 423.1 = 76.9 \text{ kg/h}$$
+
+**Answers:** (a) $D \approx \mathbf{423}$ **kg/h**, (b) $B \approx \mathbf{77}$ **kg/h**
+
+**Verification (toluene balance):** In: $500 \times 0.30 = 150$ kg/h. Out: $423.1 \times 0.20 + 76.9 \times 0.85 = 84.6 + 65.4 = 150$ kg/h ✓
+```
+
+---
+
+```{prf:example} Practice Problem 2 — Reactor with Purge (Material + Energy)
+
+Ethylene oxide ($\text{C}_2\text{H}_4\text{O}$) is produced by partial oxidation of ethylene over a silver catalyst:
+
+$$\text{C}_2\text{H}_4 + \tfrac{1}{2}\,\text{O}_2 \rightarrow \text{C}_2\text{H}_4\text{O} \qquad \Delta\hat{H}_{rxn}^\circ = -105 \text{ kJ/mol}$$
+
+A side reaction also occurs:
+
+$$\text{C}_2\text{H}_4 + 3\,\text{O}_2 \rightarrow 2\,\text{CO}_2 + 2\,\text{H}_2\text{O} \qquad \Delta\hat{H}_{rxn}^\circ = -1323 \text{ kJ/mol}$$
+
+Fresh feed: 100 mol/h C₂H₄ and 150 mol/h O₂. Per pass through the reactor, 30% of C₂H₄ reacts; selectivity to ethylene oxide (moles EO produced per mole C₂H₄ converted) is 0.75.
+
+**(a)** What is the molar production rate of ethylene oxide (mol/h)?
+
+**(b)** What is the total heat that must be removed from the reactor (kW), assuming inlet and outlet are both at 25°C?
+```
+
+```{dropdown} Solution
+
+**Step 1: Extent of each reaction**
+
+Basis: 100 mol/h C₂H₄ feed to reactor (assume once-through for this problem, no recycle specified).
+
+C₂H₄ converted per pass: $100 \times 0.30 = 30$ mol/h
+
+Selectivity = 0.75, so:
+- Moles EO produced: $30 \times 0.75 = 22.5$ mol/h → $\xi_1 = 22.5$ mol/h (main reaction)
+- Moles via combustion: $30 \times 0.25 = 7.5$ mol/h → $\xi_2 = 7.5$ mol/h (side reaction)
+
+**(a) Ethylene oxide production rate: $\mathbf{22.5}$ mol/h**
+
+**Step 2: Heat removed from reactor (Part b)**
+
+Since both inlet and outlet are at 25°C (standard state), only the heat of reaction contributes:
+
+$$\dot{Q} = \xi_1 \Delta\hat{H}_{rxn,1}^\circ + \xi_2 \Delta\hat{H}_{rxn,2}^\circ$$
+
+$$\dot{Q} = (22.5)(-105) + (7.5)(-1323)$$
+
+$$\dot{Q} = -2362.5 + (-9922.5) = -12{,}285 \text{ kJ/h}$$
+
+Convert to kW: $\dot{Q} = \frac{-12{,}285}{3600} = -3.41$ kW
+
+**(b) Heat removed: $\mathbf{3.41}$ kW** (negative sign confirms heat must be removed — exothermic reactions)
+
+**Key insight:** Even though the main reaction is only moderately exothermic, the side combustion reaction releases far more heat per mole. Always check the contribution of all reactions when sizing heat removal equipment.
+```
+
+---
+
+```{caution}
+**PE Exam Traps — Reactive Energy Balances**
+
+- **Don't forget the side reactions:** If a problem gives two reactions and asks for reactor heat duty, include the heat of reaction for **each** reaction scaled by its own extent. Omitting the combustion side reaction in Example 2 above would underestimate heat removal by 80%.
+- **Reference state consistency:** Standard heats of formation are at 25°C and 1 atm. If reactants enter at 300°C and products leave at 500°C, you must add sensible heat correction terms. The formula is: $\dot{Q} = \xi\Delta\hat{H}_{rxn}^\circ + \sum_{out}\dot{n}_i\hat{h}_i - \sum_{in}\dot{n}_i\hat{h}_i$.
+- **Exothermic sign check:** For an exothermic reaction, $\Delta\hat{H}_{rxn}^\circ < 0$ and $\dot{Q} < 0$ (heat leaves the reactor). If you get a positive $\dot{Q}$ for a combustion reaction, check your sign convention.
+- **Latent heats of formation:** Water formed by combustion is typically vapor at high temperature ($\Delta\hat{H}_{f,H_2O(g)}^\circ = -241.83$ kJ/mol). Using the liquid value ($-285.84$ kJ/mol) is wrong unless the product water is liquid.
 ```

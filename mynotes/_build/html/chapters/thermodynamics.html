@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Basic Thermodynamics &#8212; Introduction to Process Fundamentals</title>
+    <title>Basic Thermodynamics &#8212; PE Chemical Engineering Exam Study Guide</title>
   
   
   
@@ -16,42 +16,46 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=8c6b312c" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=efcdb63b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=c73c0f3e"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -67,6 +71,7 @@
     <link rel="prev" title="Mass and Energy Balance" href="massandenergybalance.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -82,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -102,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search..."
          aria-label="Search..."
          autocomplete="off"
@@ -110,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -127,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -152,20 +146,16 @@
   
   
   
-    <p class="title logo__title">Process Fundamentals</p>
+    <p class="title logo__title">PE Chemical Engineering</p>
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
@@ -189,9 +179,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -222,70 +217,6 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-source-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
-    <i class="fab fa-github"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://github.com/duymlcoding/Pe" target="_blank"
-   class="btn btn-sm btn-source-repository-button dropdown-item"
-   title="Source repository"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="btn__text-container">Repository</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/duymlcoding/Pe/edit/main/chapters/thermodynamics.md" target="_blank"
-   class="btn btn-sm btn-source-edit-button dropdown-item"
-   title="Suggest edit"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="btn__text-container">Suggest edit</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/duymlcoding/Pe/issues/new?title=Issue%20on%20page%20%2Fchapters/thermodynamics.html&body=Your%20issue%20content%20here." target="_blank"
-   class="btn btn-sm btn-source-issues-button dropdown-item"
-   title="Open an issue"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="btn__text-container">Open issue</span>
-</a>
-</li>
-      
-  </ul>
-</div>
-
 
 
 
@@ -338,7 +269,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -352,25 +283,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -530,7 +453,7 @@ document.write(`
 <section id="worked-examples">
 <h3>Worked Examples<a class="headerlink" href="#worked-examples" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-0">
-<p class="admonition-title"><span class="caption-number">Example 22 </span> (Water Vapor Volume Calculation &amp; Error Analysis)</p>
+<p class="admonition-title"><span class="caption-number">Example 23 </span> (Water Vapor Volume Calculation &amp; Error Analysis)</p>
 <section class="example-content" id="proof-content">
 <p>Calculate the volume of water vapor using the ideal gas law and determine the error compared to steam table values:</p>
 <ul class="simple">
@@ -566,7 +489,7 @@ document.write(`
 \[\text{Error \%} = \left|\frac{0.0210 - 0.0482}{0.0482}\right| \times 100\% = 56.4\%\]</div>
 </div>
 </details><div class="proof example admonition" id="example-1">
-<p class="admonition-title"><span class="caption-number">Example 23 </span> (Gas Mixture Analysis)</p>
+<p class="admonition-title"><span class="caption-number">Example 24 </span> (Gas Mixture Analysis)</p>
 <section class="example-content" id="proof-content">
 <p>An ideal gas mixture at 2 atm and 35°C has volume compositions: 15% O<span class="math notranslate nohighlight">\(_2\)</span>, 65% N<span class="math notranslate nohighlight">\(_2\)</span>, 12% CO<span class="math notranslate nohighlight">\(_2\)</span>, 7% CO, 1% H<span class="math notranslate nohighlight">\(_2\)</span>O.
 Calculate:</p>
@@ -650,7 +573,7 @@ For any state function <span class="math notranslate nohighlight">\(\phi\)</span
 <section id="id1">
 <h3>Worked Examples<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-2">
-<p class="admonition-title"><span class="caption-number">Example 24 </span> (Adiabatic Water Evaporation and Freezing)</p>
+<p class="admonition-title"><span class="caption-number">Example 25 </span> (Adiabatic Water Evaporation and Freezing)</p>
 <section class="example-content" id="proof-content">
 <p>One kg of liquid water at <span class="math notranslate nohighlight">\(40^\circ\text{C}\)</span> is in a flask connected through a valve to a vacuum pump. Water evaporates when the valve is opened. The water vapor is removed fast enough that the flask can be considered adiabatic (<span class="math notranslate nohighlight">\(Q=0\)</span>). As water evaporates, the remaining liquid cools, and when it reaches <span class="math notranslate nohighlight">\(0^\circ\text{C}\)</span>, it starts to freeze. What fraction of the water will have evaporated when the rest is frozen?</p>
 </section>
@@ -691,7 +614,7 @@ Approximately <strong>17.5%</strong> of the water will have evaporated by the ti
 <p class="sd-card-text"><strong>Physical Interpretation:</strong> The energy stored as sensible heat in the <span class="math notranslate nohighlight">\(40^\circ\text{C}\)</span> water (168 kJ/kg) provides the energy needed for both freezing the remaining liquid (<span class="math notranslate nohighlight">\(-334\)</span> kJ/kg per kg frozen) and vaporizing the evaporated portion (2537 kJ/kg per kg evaporated).</p>
 </div>
 </details><div class="proof example admonition" id="example-3">
-<p class="admonition-title"><span class="caption-number">Example 25 </span> (Heat of Reaction Temperature Dependence)</p>
+<p class="admonition-title"><span class="caption-number">Example 26 </span> (Heat of Reaction Temperature Dependence)</p>
 <section class="example-content" id="proof-content">
 <p>Calculate the heat of reaction (<span class="math notranslate nohighlight">\(\Delta H_{rxn}\)</span>) for ammonia formation at <span class="math notranslate nohighlight">\(175^\circ\text{C}\)</span>, given data at <span class="math notranslate nohighlight">\(25^\circ\text{C}\)</span> and heat capacities.</p>
 <div class="math notranslate nohighlight">
@@ -843,7 +766,7 @@ When pressure is constant and the process is reversible, heat added equals the c
 <section id="derivation-of-adiabatic-reversible-process">
 <h3>Derivation of Adiabatic Reversible Process<a class="headerlink" href="#derivation-of-adiabatic-reversible-process" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-4">
-<p class="admonition-title"><span class="caption-number">Example 26 </span> (Temperature-Pressure Relationship for Adiabatic Reversible Process)</p>
+<p class="admonition-title"><span class="caption-number">Example 27 </span> (Temperature-Pressure Relationship for Adiabatic Reversible Process)</p>
 <section class="example-content" id="proof-content">
 <p>Derive the relationship between initial and final temperatures and pressures for an ideal gas undergoing an adiabatic, reversible process in a closed system.</p>
 </section>
@@ -905,7 +828,7 @@ Exponentiating both sides:</p>
 <section id="examples-for-closed-systems">
 <h3>Examples for Closed Systems<a class="headerlink" href="#examples-for-closed-systems" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-5">
-<p class="admonition-title"><span class="caption-number">Example 27 </span> (Adiabatic Reversible Compression of Ideal Gas)</p>
+<p class="admonition-title"><span class="caption-number">Example 28 </span> (Adiabatic Reversible Compression of Ideal Gas)</p>
 <section class="example-content" id="proof-content">
 <p>Calculate the final temperature and pressure for the adiabatic, reversible compression of an ideal gas compressed to a final volume of 1 cm<span class="math notranslate nohighlight">\(^3\)</span>.
 <strong>Given Initial Conditions:</strong></p>
@@ -969,7 +892,7 @@ Final conditions: <span class="math notranslate nohighlight">\(T_2 = \textbf{753
 If this compression were irreversible, more work would be required to reach the same final volume. Since <span class="math notranslate nohighlight">\(\Delta U = W\)</span> for an adiabatic process, larger work input results in higher internal energy, leading to final temperature and pressure <strong>higher</strong> than the reversible case.</p>
 </div>
 <div class="proof example admonition" id="example-6">
-<p class="admonition-title"><span class="caption-number">Example 28 </span> (Constant Pressure vs. Constant Volume Heating)</p>
+<p class="admonition-title"><span class="caption-number">Example 29 </span> (Constant Pressure vs. Constant Volume Heating)</p>
 <section class="example-content" id="proof-content">
 <p>Two containers at 350 K and 0.5 MPa each contain 1.0 mol of ideal gas with <span class="math notranslate nohighlight">\(C_P = 31\)</span> J/(mol<span class="math notranslate nohighlight">\(\cdot\)</span>K).</p>
 <ul class="simple">
@@ -1090,7 +1013,7 @@ Steady-state, adiabatic, no work:</p>
 <section id="id2">
 <h2>Worked Examples<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <div class="proof example admonition" id="example-7">
-<p class="admonition-title"><span class="caption-number">Example 29 </span> (Filling an Empty Tank with Steam)</p>
+<p class="admonition-title"><span class="caption-number">Example 30 </span> (Filling an Empty Tank with Steam)</p>
 <section class="example-content" id="proof-content">
 <p>An empty, adiabatic tank is filled by opening a valve and allowing steam at <span class="math notranslate nohighlight">\(450^\circ\text{C}\)</span> and 10 MPa to flow into it until the pressure equalizes at 10 MPa. What is the final temperature in the tank?</p>
 </section>
@@ -1136,7 +1059,7 @@ Using steam tables at 10 MPa, find temperature where <span class="math notransla
 The temperature increases from <span class="math notranslate nohighlight">\(450^\circ\text{C}\)</span> to <span class="math notranslate nohighlight">\(600^\circ\text{C}\)</span> because the flow work done by upstream fluid to push steam into the tank converts to internal energy, raising the temperature significantly.</p>
 </div>
 </details><div class="proof example admonition" id="example-8">
-<p class="admonition-title"><span class="caption-number">Example 30 </span> (Adiabatic Semi-Batch Reactor)</p>
+<p class="admonition-title"><span class="caption-number">Example 31 </span> (Adiabatic Semi-Batch Reactor)</p>
 <section class="example-content" id="proof-content">
 <p>An adiabatic reactor initially contains 100 mol of product B at <span class="math notranslate nohighlight">\(50^\circ\text{C}\)</span>. Reactant A is fed at <span class="math notranslate nohighlight">\(90^\circ\text{C}\)</span> at 15 mol/hr. The exothermic reaction A <span class="math notranslate nohighlight">\(\rightarrow\)</span> B is very fast. Find reactor temperature after 6 hours.</p>
 <p><strong>Given Data:</strong> <span class="math notranslate nohighlight">\(\Delta H_{rxn} = -20\)</span> kJ/mol, <span class="math notranslate nohighlight">\(C_{P,A} = 60\)</span> J/(mol<span class="math notranslate nohighlight">\(\cdot\)</span>K), <span class="math notranslate nohighlight">\(C_{P,B} = 70\)</span> J/(mol<span class="math notranslate nohighlight">\(\cdot\)</span>K)</p>
@@ -1249,7 +1172,7 @@ The reactor temperature increases from <span class="math notranslate nohighlight
 <section id="enthalpy-properties-and-derivations">
 <h3>Enthalpy Properties and Derivations<a class="headerlink" href="#enthalpy-properties-and-derivations" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-9">
-<p class="admonition-title"><span class="caption-number">Example 31 </span> (Derivation: Enthalpy and Heat Transfer at Constant Pressure)</p>
+<p class="admonition-title"><span class="caption-number">Example 32 </span> (Derivation: Enthalpy and Heat Transfer at Constant Pressure)</p>
 <section class="example-content" id="proof-content">
 <p>Show that for a closed, reversible system at constant pressure, the change in enthalpy equals the heat transferred: <span class="math notranslate nohighlight">\(\Delta H = Q_P\)</span>.</p>
 </section>
@@ -1278,7 +1201,7 @@ Integrating over the entire process:</p>
 <p class="sd-card-text">This fundamental relationship makes enthalpy extremely useful for analyzing constant pressure processes.</p>
 </div>
 </details><div class="proof example admonition" id="example-10">
-<p class="admonition-title"><span class="caption-number">Example 32 </span> (Derivation: Heat Capacity Relationship for Ideal Gas)</p>
+<p class="admonition-title"><span class="caption-number">Example 33 </span> (Derivation: Heat Capacity Relationship for Ideal Gas)</p>
 <section class="example-content" id="proof-content">
 <p>Derive the relationship <span class="math notranslate nohighlight">\(C_P = C_V + R\)</span> for an ideal gas.</p>
 </section>
@@ -1387,7 +1310,7 @@ By definition: <span class="math notranslate nohighlight">\(dH = C_P dT\)</span>
 <section id="entropy-change-derivations">
 <h3>Entropy Change Derivations<a class="headerlink" href="#entropy-change-derivations" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-11">
-<p class="admonition-title"><span class="caption-number">Example 33 </span> (Derivation: Entropy Change for Ideal Gas (T and V form))</p>
+<p class="admonition-title"><span class="caption-number">Example 34 </span> (Derivation: Entropy Change for Ideal Gas (T and V form))</p>
 <section class="example-content" id="proof-content">
 <p>Derive the entropy change equation in terms of temperature and volume for an ideal gas.</p>
 </section>
@@ -1421,7 +1344,7 @@ Assuming constant heat capacities:</p>
 <p class="sd-card-text">This is the entropy change equation in terms of temperature and volume.</p>
 </div>
 </details><div class="proof example admonition" id="example-12">
-<p class="admonition-title"><span class="caption-number">Example 34 </span> (Derivation: Entropy Change for Ideal Gas (T and P form))</p>
+<p class="admonition-title"><span class="caption-number">Example 35 </span> (Derivation: Entropy Change for Ideal Gas (T and P form))</p>
 <section class="example-content" id="proof-content">
 <p>Convert the (T,V) entropy equation to (T,P) form for an ideal gas.</p>
 </section>
@@ -1526,7 +1449,7 @@ Since <span class="math notranslate nohighlight">\(C_P = C_V + R\)</span>:</p>
 <section id="heat-transfer-applications">
 <h3>Heat Transfer Applications<a class="headerlink" href="#heat-transfer-applications" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-13">
-<p class="admonition-title"><span class="caption-number">Example 35 </span> (Convective Heat Transfer from Solar Cell)</p>
+<p class="admonition-title"><span class="caption-number">Example 36 </span> (Convective Heat Transfer from Solar Cell)</p>
 <section class="example-content" id="proof-content">
 <p>A solar cell (0.5 m long, 0.2 m wide) has a protective glass layer. Air at <span class="math notranslate nohighlight">\(25^\circ\text{C}\)</span> blows over the solar cell at 5 m/s. Calculate the average convective heat transfer coefficient, <span class="math notranslate nohighlight">\(\bar{h}\)</span>, in W/(m<span class="math notranslate nohighlight">\(^2\cdot\)</span>K).</p>
 </section>
@@ -1558,7 +1481,7 @@ Following reference material (noting inconsistency), using laminar correlation:<
 Due to inconsistencies in reference material (incorrect kinematic viscosity and flow regime classification), a more realistic value would be closer to 12 W/(m<span class="math notranslate nohighlight">\(^2\cdot\)</span>K) using correct fluid properties and laminar flow correlation.</p>
 </div>
 </details><div class="proof example admonition" id="example-14">
-<p class="admonition-title"><span class="caption-number">Example 36 </span> (Convective Heat Transfer from Motorcycle Fin)</p>
+<p class="admonition-title"><span class="caption-number">Example 37 </span> (Convective Heat Transfer from Motorcycle Fin)</p>
 <section class="example-content" id="proof-content">
 <p>A motorcycle cooling fin is 5 cm long and dissipates heat at <span class="math notranslate nohighlight">\(q' = 1200\)</span> W per meter of width. The motorcycle travels at 40 km/h through ambient air at <span class="math notranslate nohighlight">\(27^\circ\text{C}\)</span>. Modeling the fin as a flat plate with uniform temperature, calculate its surface temperature <span class="math notranslate nohighlight">\(T_s\)</span>.</p>
 </section>
@@ -1688,7 +1611,7 @@ Rearranging heat transfer equation:</p>
 <section id="example-problems">
 <h3>Example Problems<a class="headerlink" href="#example-problems" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-15">
-<p class="admonition-title"><span class="caption-number">Example 37 </span> (Carnot Heat Pump Analysis)</p>
+<p class="admonition-title"><span class="caption-number">Example 38 </span> (Carnot Heat Pump Analysis)</p>
 <section class="example-content" id="proof-content">
 <p>A Carnot heat pump transfers heat from a cold reservoir at <span class="math notranslate nohighlight">\(T_C = 250\)</span> K to a hot reservoir at <span class="math notranslate nohighlight">\(T_H = 300\)</span> K. The work done on the pump during one cycle is 500 J. Determine:</p>
 <ol class="arabic simple">
@@ -1719,7 +1642,7 @@ Multiply by <span class="math notranslate nohighlight">\((300)(250)\)</span>: <s
 \[\text{COP} = \frac{\text{Desired Heat Transfer}}{\text{Work Input}} = \frac{Q_C}{W} = \frac{2500 \text{ J}}{500 \text{ J}} = \textbf{5}\]</div>
 </div>
 </details><div class="proof example admonition" id="example-16">
-<p class="admonition-title"><span class="caption-number">Example 38 </span> (Feasibility of a Combined System)</p>
+<p class="admonition-title"><span class="caption-number">Example 39 </span> (Feasibility of a Combined System)</p>
 <section class="example-content" id="proof-content">
 <p>A Carnot heat engine receives 200 kJ of heat from a 400 K source and rejects heat to a 300 K sink. The work produced drives a Carnot heat pump that takes heat from the 300 K sink and delivers 75 kJ of heat to a 500 K reservoir. Is this entire process possible?</p>
 </section>
@@ -1842,7 +1765,7 @@ Since the total entropy change of the universe is positive (<span class="math no
 <section id="id3">
 <h3>Example Problems<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-17">
-<p class="admonition-title"><span class="caption-number">Example 39 </span> (Cycle Thermal Efficiency)</p>
+<p class="admonition-title"><span class="caption-number">Example 40 </span> (Cycle Thermal Efficiency)</p>
 <section class="example-content" id="proof-content">
 <p>Steam is generated in a power plant at 8.0 MPa and 500°C and is fed to a turbine. The exhaust from the turbine enters a condenser at 15 kPa, where it is condensed to a saturated liquid. This liquid is then pumped back to the boiler. What is the thermal efficiency of a Rankine cycle with a reversible, adiabatic turbine operating at these conditions?</p>
 </section>
@@ -1895,7 +1818,7 @@ From an energy balance on the turbine: <span class="math notranslate nohighlight
 \[\eta = \frac{|W_{net}|}{Q_H} = \frac{|-1213.1|}{3165.5} = 0.383 \approx \textbf{38.3\%}\]</div>
 </div>
 </details><div class="proof example admonition" id="example-18">
-<p class="admonition-title"><span class="caption-number">Example 40 </span> (Component Heat and Work Calculation)</p>
+<p class="admonition-title"><span class="caption-number">Example 41 </span> (Component Heat and Work Calculation)</p>
 <section class="example-content" id="proof-content">
 <p>Calculate the heat transfer or the work for each step of a Rankine cycle. The boiler operates at 19.8 bar and superheats the steam to 500°C. The condenser operates at 0.10 bar, and the turbine is adiabatic and reversible. Also calculate the thermodynamic efficiency of the cycle.</p>
 </section>
@@ -1986,7 +1909,7 @@ At 10 kPa: <span class="math notranslate nohighlight">\(H_{liquid} = 191.81\)</s
 <section id="id4">
 <h3>Example Problems<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-19">
-<p class="admonition-title"><span class="caption-number">Example 41 </span> (Cycle Analysis using a P-H Diagram)</p>
+<p class="admonition-title"><span class="caption-number">Example 42 </span> (Cycle Analysis using a P-H Diagram)</p>
 <section class="example-content" id="proof-content">
 <p>A refrigeration cycle using Freon-12 is shown on a log P vs. H diagram, with state points labeled. Using the enthalpy and entropy values from the plot, calculate: (1) <span class="math notranslate nohighlight">\(Q_C\)</span> and <span class="math notranslate nohighlight">\(Q_H\)</span>, (2) The work input <span class="math notranslate nohighlight">\(W_S\)</span> for the ideal cycle, (3) The COP for the ideal cycle, and (4) The COP if the compressor is only 70% efficient.
 <strong>Given:</strong> State points from diagram: <span class="math notranslate nohighlight">\(H_1 = 76.2\)</span>, <span class="math notranslate nohighlight">\(H_2 = 76.2\)</span>, <span class="math notranslate nohighlight">\(H_3 = 87.5\)</span>, <span class="math notranslate nohighlight">\(H_4 = 26.35\)</span> (all in BTU/lb). Process 2→3 is reversible compression (<span class="math notranslate nohighlight">\(S_2 = S_3\)</span>).</p>
@@ -2019,7 +1942,7 @@ An inefficient compressor requires more work for the same pressure change:</p>
 \[\text{COP}_{irrev} = \frac{Q_C}{W_{S,irrev}} = \frac{52.15 \text{ BTU/lb}}{16.1 \text{ BTU/lb}} \approx \textbf{3.2}\]</div>
 </div>
 </details><div class="proof example admonition" id="example-20">
-<p class="admonition-title"><span class="caption-number">Example 42 </span> (Cycle Analysis using Property Tables)</p>
+<p class="admonition-title"><span class="caption-number">Example 43 </span> (Cycle Analysis using Property Tables)</p>
 <section class="example-content" id="proof-content">
 <p>Consider a vapor-compression refrigeration cycle using R134a. The condenser operates at 45°C (yielding saturated liquid), and the evaporator operates at -10°C (yielding saturated vapor). The compressor is 80.0% efficient. Using the provided data, find the cooling per kg (<span class="math notranslate nohighlight">\(Q_C\)</span>), heat rejected per kg (<span class="math notranslate nohighlight">\(Q_H\)</span>), and the COP.</p>
 </section>
@@ -2137,7 +2060,7 @@ The COP is based on the actual cooling and the actual work input:</p>
 <section id="id5">
 <h3>Example Problems<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-21">
-<p class="admonition-title"><span class="caption-number">Example 43 </span> (Comparing Inefficient Turbines)</p>
+<p class="admonition-title"><span class="caption-number">Example 44 </span> (Comparing Inefficient Turbines)</p>
 <section class="example-content" id="proof-content">
 <p>Two turbines, A (70% efficient) and B (50% efficient), are used to expand an ideal gas from 1.0 MPa and 650 K. They are operated such that their exit temperatures are identical. Under these conditions, which turbine produces more work?</p>
 </section>
@@ -2165,7 +2088,7 @@ The entropy change for an ideal gas is:</p>
 To achieve the same outlet temperature, the less efficient Turbine B must undergo a <strong>larger pressure drop</strong>.</p>
 </div>
 </details><div class="proof example admonition" id="example-22">
-<p class="admonition-title"><span class="caption-number">Example 44 </span> (Adiabatic Compression)</p>
+<p class="admonition-title"><span class="caption-number">Example 45 </span> (Adiabatic Compression)</p>
 <section class="example-content" id="proof-content">
 <p>An ideal gas (<span class="math notranslate nohighlight">\(C_P = 25\)</span> J/(mol·K)) is continuously compressed adiabatically from 25°C and 2.0 bar to 7.0 bar. Find the exit temperature if the compression is (1) Reversible, and (2) Irreversible, requiring 20% more work than the reversible process.</p>
 </section>
@@ -2259,14 +2182,16 @@ The First Law still applies: <span class="math notranslate nohighlight">\(W_{irr
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Basic Thermodynamics</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ideal-gas-law">Ideal Gas Law</a><ul class="visible nav section-nav flex-column">
@@ -2379,8 +2304,8 @@ By PE Exam Preparation
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

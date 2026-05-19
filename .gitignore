@@ -51,3 +51,9 @@ Thumbs.db
 # Temporary files
 *.log
 *.tmp
+
+# LaTeX source files (not for public distribution)
+source/
+
+# Python virtual environment
+.venv/

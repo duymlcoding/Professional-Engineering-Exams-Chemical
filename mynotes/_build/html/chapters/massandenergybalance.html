@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Mass and Energy Balance &#8212; Introduction to Process Fundamentals</title>
+    <title>Mass and Energy Balance &#8212; PE Chemical Engineering Exam Study Guide</title>
   
   
   
@@ -16,42 +16,46 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=8c6b312c" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=efcdb63b" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=c73c0f3e"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -67,6 +71,7 @@
     <link rel="prev" title="Chemical Engineering PE Exam Study Guide" href="../index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -82,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -102,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search..."
          aria-label="Search..."
          autocomplete="off"
@@ -110,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -127,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -152,20 +146,16 @@
   
   
   
-    <p class="title logo__title">Process Fundamentals</p>
+    <p class="title logo__title">PE Chemical Engineering</p>
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
@@ -189,9 +179,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -222,70 +217,6 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-source-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
-    <i class="fab fa-github"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://github.com/duymlcoding/Pe" target="_blank"
-   class="btn btn-sm btn-source-repository-button dropdown-item"
-   title="Source repository"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="btn__text-container">Repository</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/duymlcoding/Pe/edit/main/chapters/massandenergybalance.md" target="_blank"
-   class="btn btn-sm btn-source-edit-button dropdown-item"
-   title="Suggest edit"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="btn__text-container">Suggest edit</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/duymlcoding/Pe/issues/new?title=Issue%20on%20page%20%2Fchapters/massandenergybalance.html&body=Your%20issue%20content%20here." target="_blank"
-   class="btn btn-sm btn-source-issues-button dropdown-item"
-   title="Open an issue"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="btn__text-container">Open issue</span>
-</a>
-</li>
-      
-  </ul>
-</div>
-
 
 
 
@@ -338,7 +269,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -352,25 +283,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -396,6 +319,7 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Mass and Energy Balance</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#process-fundamentals-study-guide">Process Fundamentals Study Guide</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-process-fundamentals">Introduction to Process Fundamentals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-reference-key-equations">Quick Reference: Key Equations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#material-balances">Material Balances</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-general-balance-equation">The General Balance Equation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overall-steady-state-balance-no-reaction">Overall Steady-State Balance (No Reaction)</a></li>
@@ -481,6 +405,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#effect-of-temperature-on-heat-of-reaction">Effect of Temperature on Heat of Reaction</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-exam-practice-problems">PE Exam Practice Problems</a></li>
 </ul>
 </li>
 </ul>
@@ -508,6 +433,78 @@ document.write(`
 <p>A <strong>system</strong> is a specific region of space we are interested in (e.g., a reactor, a distillation column, a pipe). The boundary separating the system from its surroundings is called the <strong>control volume</strong>. The analysis of what crosses this boundary is the key to solving process problems.</p>
 </div>
 </section>
+<hr class="docutils" />
+<section id="quick-reference-key-equations">
+<h2>Quick Reference: Key Equations<a class="headerlink" href="#quick-reference-key-equations" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Formula</p></th>
+<th class="head"><p>Equation</p></th>
+<th class="head"><p>When to Use</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>General balance</p></td>
+<td><p><span class="math notranslate nohighlight">\(\text{Accum} = \dot{m}_{in} - \dot{m}_{out} + \text{Gen} - \text{Cons}\)</span></p></td>
+<td><p>Any process</p></td>
+</tr>
+<tr class="row-odd"><td><p>Steady-state overall</p></td>
+<td><p><span class="math notranslate nohighlight">\(\dot{m}_{in} = \dot{m}_{out}\)</span></p></td>
+<td><p>No rxn, SS</p></td>
+</tr>
+<tr class="row-even"><td><p>Component balance</p></td>
+<td><p><span class="math notranslate nohighlight">\(F z_i = V y_i + L x_i\)</span></p></td>
+<td><p>Separation units</p></td>
+</tr>
+<tr class="row-odd"><td><p>Transient balance</p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{dM}{dt} = \dot{m}_{in} - \dot{m}_{out}\)</span></p></td>
+<td><p>Filling/draining tanks</p></td>
+</tr>
+<tr class="row-even"><td><p>Extent of reaction</p></td>
+<td><p><span class="math notranslate nohighlight">\(\dot{n}_i = \dot{n}_{i,0} + \nu_i \xi\)</span></p></td>
+<td><p>Reactive systems</p></td>
+</tr>
+<tr class="row-odd"><td><p>% Excess air</p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{\dot{n}_{air,fed} - \dot{n}_{air,theo}}{\dot{n}_{air,theo}} \times 100\%\)</span></p></td>
+<td><p>Combustion</p></td>
+</tr>
+<tr class="row-even"><td><p>Overall conversion</p></td>
+<td><p><span class="math notranslate nohighlight">\(X_{overall} = \frac{F_{A,0} - F_{A,f}}{F_{A,0}}\)</span></p></td>
+<td><p>Recycle systems</p></td>
+</tr>
+<tr class="row-odd"><td><p>Single-pass conversion</p></td>
+<td><p><span class="math notranslate nohighlight">\(X_{SP} = \frac{F_{A,m} - F_{A,out}}{F_{A,m}}\)</span></p></td>
+<td><p>Reactor only</p></td>
+</tr>
+<tr class="row-even"><td><p>DoF</p></td>
+<td><p><span class="math notranslate nohighlight">\(\text{DoF} = \text{Unknowns} - \text{Indep. Equations}\)</span></p></td>
+<td><p>Setup check</p></td>
+</tr>
+<tr class="row-odd"><td><p>Energy balance (SS)</p></td>
+<td><p><span class="math notranslate nohighlight">\(\dot{Q} = \Delta\dot{H} = \dot{m}(\hat{h}_{out} - \hat{h}_{in})\)</span></p></td>
+<td><p>Heat exchangers</p></td>
+</tr>
+<tr class="row-even"><td><p>Sensible heat</p></td>
+<td><p><span class="math notranslate nohighlight">\(\dot{Q}_s = \dot{m} c_p \Delta T\)</span></p></td>
+<td><p>Temp change, no phase change</p></td>
+</tr>
+<tr class="row-odd"><td><p>Latent heat</p></td>
+<td><p><span class="math notranslate nohighlight">\(\dot{Q}_L = \dot{n} \Delta H_{phase}\)</span></p></td>
+<td><p>Phase change</p></td>
+</tr>
+<tr class="row-even"><td><p>Reactive energy balance</p></td>
+<td><p><span class="math notranslate nohighlight">\(\dot{Q} = \dot{\xi}\Delta\hat{H}_{rxn}^\circ + \sum_{out}\dot{n}_i\hat{h}_i - \sum_{in}\dot{n}_i\hat{h}_i\)</span></p></td>
+<td><p>Reactors</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\Delta H^\circ_{rxn}\)</span></p></td>
+<td><p>$\sum_{prod}</p></td>
+<td><p>\nu_i</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
 <section id="material-balances">
 <h2>Material Balances<a class="headerlink" href="#material-balances" title="Link to this heading">#</a></h2>
 <p>The principle of mass conservation states that mass cannot be created or destroyed. When applied to a process system, this gives us the general material balance equation.</p>
@@ -833,6 +830,16 @@ L = 1000 - 400 = 600 \text{ kg/hr}
 <li><p>DoF = 5 - 3 = 2 (underspecified)</p></li>
 </ul>
 <p>Need 2 more pieces of information to solve!</p>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p><strong>PE Exam Traps — Material Balances</strong></p>
+<ul class="simple">
+<li><p><strong>Over-counting equations:</strong> The overall balance is NOT independent of component balances — it’s the sum of all of them. Using all N components plus the overall gives N, not N+1, independent equations.</p></li>
+<li><p><strong>Mole vs. mass basis:</strong> Mixing streams with different molecular weights? Convert to a consistent basis (all moles or all mass) before writing balances. Mixing mole fractions and mass fractions in one equation is a common error.</p></li>
+<li><p><strong>Recycle hides inerts:</strong> An inert in a fresh feed will build up indefinitely without a purge stream. If the problem has an inert and no purge, re-read it — one must be implied.</p></li>
+<li><p><strong>Fractional conversion ≠ mole fraction in product:</strong> Conversion refers to the fraction of the <em>reactant fed</em> that reacts, not the product concentration.</p></li>
+</ul>
 </div>
 </section>
 </section>
@@ -1818,6 +1825,15 @@ x_{i,5} = x_{i,6} = x_{i,7} \text{ (for each component i)}
 <li><p>Using overall atomic balances as independent equations in the solution process</p></li>
 </ul>
 </div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p><strong>PE Exam Traps — Combustion Calculations</strong></p>
+<ul class="simple">
+<li><p><strong>Excess air vs. excess oxygen:</strong> Always compute theoretical O₂ first, then convert to air using 21 mol% O₂. Applying the excess percentage directly to O₂ moles is correct; applying it to air gives the same answer — but mixing these up when air composition is unusual (problem gives 20% O₂) is a trap.</p></li>
+<li><p><strong>Incomplete combustion products:</strong> If the problem says “incomplete combustion” or gives a CO:CO₂ ratio, do NOT assume all C → CO₂. Use an atomic C balance instead.</p></li>
+<li><p><strong>Water phase in flue gas:</strong> At stack conditions, water is typically vapor. Don’t use liquid water properties in a combustion gas composition calculation.</p></li>
+</ul>
+</div>
 </section>
 </section>
 <section id="introduction-to-energy-balances">
@@ -2124,70 +2140,14 @@ Q_L = n\Delta H_{\text{phase change}}
 <p>Required cooling duty: <strong>3808 kW</strong></p>
 <p>The negative sign confirms heat is being removed from the system.</p>
 </div>
-<div class="proof example admonition" id="example-17">
-<p class="admonition-title"><span class="caption-number">Example 18 </span> (Steam Heat Exchanger Analysis)</p>
-<section class="example-content" id="proof-content">
-<p><strong>Problem:</strong> Superheated steam at 10 bar and 200°C flows at 2 kg/s into heat exchanger. Steam transfers 450 kW heat to preheat reactor feed. Pressure drop is negligible. Determine enthalpy, temperature, and phase of exiting steam.</p>
-</section>
-</div><div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><strong>Solution Strategy</strong></p>
-<p>Use steam tables for direct enthalpy lookup. This simplifies calculations significantly compared to integration methods since extensive thermodynamic data is readily available for water.</p>
-</div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><strong>Step 1: Set Up Energy Balance</strong></p>
-<p class="sd-card-text">For steady-state open system with no work and negligible kinetic/potential energy:</p>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(\dot{Q} = \dot{m}(\hat{h}_{out} - \hat{h}_{in})\)</span></p>
-<p class="sd-card-text">Heat transferred <em>from</em> steam: <span class="math notranslate nohighlight">\(\dot{Q} = -450\)</span> kW</p>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(-450 = (2)(\hat{h}_{out} - \hat{h}_{in})\)</span></p>
-<p class="sd-card-text"><strong>Step 2: Find Inlet Specific Enthalpy</strong></p>
-<p class="sd-card-text">From superheated steam tables at 10 bar and 200°C:</p>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(\hat{h}_{in} = 2828\)</span> kJ/kg</p>
-<p class="sd-card-text"><strong>Step 3: Calculate Outlet Specific Enthalpy</strong></p>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(\hat{h}_{out} = \hat{h}_{in} + \frac{\dot{Q}}{\dot{m}} = 2828 + \frac{-450}{2} = 2828 - 225 = 2603\)</span> kJ/kg</p>
-<p class="sd-card-text"><strong>Step 4: Determine Outlet Phase and Temperature</strong></p>
-<p class="sd-card-text">Compare <span class="math notranslate nohighlight">\(\hat{h}_{out}\)</span> to saturation properties at 10 bar:</p>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(\hat{h}_f = 762.5\)</span> kJ/kg (saturated liquid)</p>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(\hat{h}_g = 2777.1\)</span> kJ/kg (saturated vapor)</p>
-<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(762.5 &lt; 2603 &lt; 2777.1\)</span>: <strong>Two-phase mixture</strong></p>
-<p class="sd-card-text">Temperature = saturation temperature at 10 bar = <strong>179.9°C</strong></p>
-<p class="sd-card-text"><strong>Step 5: Calculate Quality (Vapor Mass Fraction)</strong></p>
-<p class="sd-card-text">For two-phase mixture: <span class="math notranslate nohighlight">\(\hat{h}_{out} = x\hat{h}_g + (1-x)\hat{h}_f\)</span></p>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(2603 = x(2777.1) + (1-x)(762.5)\)</span></p>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(2603 = 2777.1x + 762.5 - 762.5x = 2014.6x + 762.5\)</span></p>
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(x = \frac{2603 - 762.5}{2014.6} = 0.914 = 91.4\%\)</span></p>
-</div>
-</details><div class="admonition important">
-<p class="admonition-title">Important</p>
-<p><strong>Final Results</strong></p>
-<p><strong>Exiting Steam Conditions:</strong></p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p><strong>PE Exam Traps — Energy Balances</strong></p>
 <ul class="simple">
-<li><p>Specific enthalpy: <strong>2603 kJ/kg</strong></p></li>
-<li><p>Phase: <strong>Two-phase mixture (wet steam)</strong></p></li>
-<li><p>Temperature: <strong>179.9°C</strong></p></li>
-<li><p>Quality: <strong>91.4% vapor</strong></p></li>
-</ul>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><strong>Key Phase Change Energy Balance Principles</strong></p>
-<p><strong>Problem-Solving Guidelines:</strong></p>
-<ul class="simple">
-<li><p>Use state function property to construct convenient calculation paths</p></li>
-<li><p>Separate sensible heat (temperature change) from latent heat (phase change)</p></li>
-<li><p>For complex heat capacity functions, integrate carefully over temperature ranges</p></li>
-<li><p>Use steam tables when available for water/steam systems</p></li>
-<li><p>Always check phase boundaries using saturation properties</p></li>
-<li><p>Verify energy balance closure and sign conventions</p></li>
-</ul>
-<p><strong>Sign Conventions:</strong></p>
-<ul class="simple">
-<li><p>Heat added to system: positive (+)</p></li>
-<li><p>Heat removed from system: negative (-)</p></li>
-<li><p>Condensation: negative enthalpy change</p></li>
-<li><p>Vaporization: positive enthalpy change</p></li>
+<li><p><strong>Sign convention:</strong> <span class="math notranslate nohighlight">\(\dot{Q} &gt; 0\)</span> means heat <strong>added to</strong> the system. If steam exits a heat exchanger cooler than it entered, <span class="math notranslate nohighlight">\(\dot{Q}\)</span> for the steam side is <strong>negative</strong> — the steam is the hot fluid losing energy.</p></li>
+<li><p><strong>Steam tables vs. <span class="math notranslate nohighlight">\(c_p \Delta T\)</span>:</strong> For water and steam, always prefer steam tables over <span class="math notranslate nohighlight">\(c_p \Delta T\)</span> — <span class="math notranslate nohighlight">\(c_p\)</span> for steam varies significantly with temperature and pressure. Only use <span class="math notranslate nohighlight">\(c_p \Delta T\)</span> when steam tables are unavailable or for ideal gas approximations.</p></li>
+<li><p><strong>Two-phase region:</strong> If <span class="math notranslate nohighlight">\(\hat{h}_f &lt; \hat{h}_{out} &lt; \hat{h}_g\)</span>, the outlet is a wet mixture — don’t report a temperature as if it’s superheated. Report the saturation temperature plus the quality <span class="math notranslate nohighlight">\(x\)</span>.</p></li>
+<li><p><strong>Sensible + latent sequencing:</strong> When cooling a superheated gas through condensation to a subcooled liquid, you must use <strong>three separate steps</strong>: (1) sensible cool to dew point, (2) condense at constant T, (3) sensible cool liquid. Applying a single average <span class="math notranslate nohighlight">\(c_p\)</span> across the phase transition gives a wrong answer.</p></li>
 </ul>
 </div>
 </section>
@@ -2257,8 +2217,8 @@ Q_L = n\Delta H_{\text{phase change}}
 <p><strong>Standard Heat of Formation Definition</strong></p>
 <p>The standard heat of formation (<span class="math notranslate nohighlight">\(\Delta \hat{H}_{f}^\circ\)</span>) is the enthalpy change when one mole of a substance is formed from its constituent elements in their standard state at 25°C and 1 atm.</p>
 </div>
-<div class="proof example admonition" id="example-18">
-<p class="admonition-title"><span class="caption-number">Example 19 </span> (Water-Gas Shift Reactor Energy Balance)</p>
+<div class="proof example admonition" id="example-17">
+<p class="admonition-title"><span class="caption-number">Example 18 </span> (Water-Gas Shift Reactor Energy Balance)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Problem:</strong> In the water-gas shift reaction, CO reacts with steam to produce <span class="math notranslate nohighlight">\(CO_2\)</span> and <span class="math notranslate nohighlight">\(H_2\)</span>. Feed enters at 300°C, product exits at 500°C. Feed: 1.0 mol CO with 50% excess steam. CO conversion: 80%. Determine reactor heat duty (<span class="math notranslate nohighlight">\(\dot{Q}\)</span>).</p>
 <p><strong>Reaction:</strong> <span class="math notranslate nohighlight">\(CO(g) + H_2O(g) \rightarrow CO_2(g) + H_2(g)\)</span></p>
@@ -2406,8 +2366,8 @@ Q_L = n\Delta H_{\text{phase change}}
 \]</div>
 <p>The reaction term is implicitly included in the absolute enthalpies.</p>
 </div>
-<div class="proof example admonition" id="example-19">
-<p class="admonition-title"><span class="caption-number">Example 20 </span> (Water-Gas Shift Reactor (Heat of Formation Method))</p>
+<div class="proof example admonition" id="example-18">
+<p class="admonition-title"><span class="caption-number">Example 19 </span> (Water-Gas Shift Reactor (Heat of Formation Method))</p>
 <section class="example-content" id="proof-content">
 <p><strong>Problem:</strong> Re-solve the previous water-gas shift example using Heat of Formation method to demonstrate equivalency. CO and <span class="math notranslate nohighlight">\(H_2O\)</span> enter at 300°C, products leave at 500°C. Feed: 1.0 mol CO, 1.5 mol <span class="math notranslate nohighlight">\(H_2O\)</span>. CO conversion: 80%.</p>
 <p><strong>Reaction:</strong> <span class="math notranslate nohighlight">\(CO(g) + H_2O(g) \rightarrow CO_2(g) + H_2(g)\)</span></p>
@@ -2500,8 +2460,8 @@ Q_L = n\Delta H_{\text{phase change}}
 \Delta C_p = \sum_{\text{products}} |\nu_i| C_{p,i} - \sum_{\text{reactants}} |\nu_i| C_{p,i}
 \]</div>
 </div>
-<div class="proof example admonition" id="example-20">
-<p class="admonition-title"><span class="caption-number">Example 21 </span> (Heat of Reaction at Elevated Temperature)</p>
+<div class="proof example admonition" id="example-19">
+<p class="admonition-title"><span class="caption-number">Example 20 </span> (Heat of Reaction at Elevated Temperature)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Problem:</strong> Calculate the heat of reaction at 600 K for hydrazine decomposition.</p>
 <p><strong>Reaction:</strong> <span class="math notranslate nohighlight">\(N_2H_4(g) \rightarrow N_2(g) + 2H_2(g)\)</span></p>
@@ -2557,6 +2517,99 @@ Q_L = n\Delta H_{\text{phase change}}
 <p>Both methods yield identical results when applied correctly.</p>
 </div>
 </section>
+</section>
+<hr class="docutils" />
+<section id="pe-exam-practice-problems">
+<h2>PE Exam Practice Problems<a class="headerlink" href="#pe-exam-practice-problems" title="Link to this heading">#</a></h2>
+<p>The following problems are written in the style of NCEES PE exam questions. Try each problem before opening the solution.</p>
+<hr class="docutils" />
+<div class="proof example admonition" id="example-20">
+<p class="admonition-title"><span class="caption-number">Example 21 </span> (Practice Problem 1 — Flash Drum with Recycle (Material Balance))</p>
+<section class="example-content" id="proof-content">
+<p>A process feed of 500 kg/h containing 30 wt% toluene and 70 wt% benzene enters a flash drum. The overhead vapor is 80 wt% benzene and is completely condensed. Half of the condensate is returned to the drum as reflux; the other half is withdrawn as overhead product. The bottoms liquid from the drum is 15 wt% benzene.</p>
+<p><strong>(a)</strong> What is the overhead product flow rate (kg/h)?</p>
+<p><strong>(b)</strong> What is the bottoms flow rate (kg/h)?</p>
+</section>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Step 1: Define streams and unknowns</strong></p>
+<p class="sd-card-text">Let:</p>
+<ul class="simple">
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(F = 500\)</span> kg/h (feed), <span class="math notranslate nohighlight">\(z_B = 0.30\)</span> (toluene fraction in feed), so benzene in feed = 0.70</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(D\)</span> = overhead product (kg/h), <span class="math notranslate nohighlight">\(B\)</span> = bottoms (kg/h)</p></li>
+<li><p class="sd-card-text">Vapor overhead: <span class="math notranslate nohighlight">\(y_{benz} = 0.80\)</span>, so toluene fraction = 0.20</p></li>
+<li><p class="sd-card-text">Bottoms: <span class="math notranslate nohighlight">\(x_{benz} = 0.15\)</span>, toluene fraction = 0.85</p></li>
+</ul>
+<p class="sd-card-text">Note: the reflux is internal to the drum — it does NOT cross the overall system boundary. So the overall balance only involves F, D, and B.</p>
+<p class="sd-card-text"><strong>Step 2: Overall mass balance</strong></p>
+<div class="math notranslate nohighlight">
+\[F = D + B \implies 500 = D + B \quad (1)\]</div>
+<p class="sd-card-text"><strong>Step 3: Overall benzene balance</strong></p>
+<div class="math notranslate nohighlight">
+\[F \cdot 0.70 = D \cdot 0.80 + B \cdot 0.15\]</div>
+<div class="math notranslate nohighlight">
+\[350 = 0.80D + 0.15B \quad (2)\]</div>
+<p class="sd-card-text"><strong>Step 4: Solve simultaneously</strong></p>
+<p class="sd-card-text">From (1): <span class="math notranslate nohighlight">\(B = 500 - D\)</span>. Substitute into (2):</p>
+<div class="math notranslate nohighlight">
+\[350 = 0.80D + 0.15(500-D) = 0.80D + 75 - 0.15D = 0.65D + 75\]</div>
+<div class="math notranslate nohighlight">
+\[D = \frac{275}{0.65} = 423.1 \text{ kg/h}\]</div>
+<div class="math notranslate nohighlight">
+\[B = 500 - 423.1 = 76.9 \text{ kg/h}\]</div>
+<p class="sd-card-text"><strong>Answers:</strong> (a) <span class="math notranslate nohighlight">\(D \approx \mathbf{423}\)</span> <strong>kg/h</strong>, (b) <span class="math notranslate nohighlight">\(B \approx \mathbf{77}\)</span> <strong>kg/h</strong></p>
+<p class="sd-card-text"><strong>Verification (toluene balance):</strong> In: <span class="math notranslate nohighlight">\(500 \times 0.30 = 150\)</span> kg/h. Out: <span class="math notranslate nohighlight">\(423.1 \times 0.20 + 76.9 \times 0.85 = 84.6 + 65.4 = 150\)</span> kg/h ✓</p>
+</div>
+</details><hr class="docutils" />
+<div class="proof example admonition" id="example-21">
+<p class="admonition-title"><span class="caption-number">Example 22 </span> (Practice Problem 2 — Reactor with Purge (Material + Energy))</p>
+<section class="example-content" id="proof-content">
+<p>Ethylene oxide (<span class="math notranslate nohighlight">\(\text{C}_2\text{H}_4\text{O}\)</span>) is produced by partial oxidation of ethylene over a silver catalyst:</p>
+<div class="math notranslate nohighlight">
+\[\text{C}_2\text{H}_4 + \tfrac{1}{2}\,\text{O}_2 \rightarrow \text{C}_2\text{H}_4\text{O} \qquad \Delta\hat{H}_{rxn}^\circ = -105 \text{ kJ/mol}\]</div>
+<p>A side reaction also occurs:</p>
+<div class="math notranslate nohighlight">
+\[\text{C}_2\text{H}_4 + 3\,\text{O}_2 \rightarrow 2\,\text{CO}_2 + 2\,\text{H}_2\text{O} \qquad \Delta\hat{H}_{rxn}^\circ = -1323 \text{ kJ/mol}\]</div>
+<p>Fresh feed: 100 mol/h C₂H₄ and 150 mol/h O₂. Per pass through the reactor, 30% of C₂H₄ reacts; selectivity to ethylene oxide (moles EO produced per mole C₂H₄ converted) is 0.75.</p>
+<p><strong>(a)</strong> What is the molar production rate of ethylene oxide (mol/h)?</p>
+<p><strong>(b)</strong> What is the total heat that must be removed from the reactor (kW), assuming inlet and outlet are both at 25°C?</p>
+</section>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Step 1: Extent of each reaction</strong></p>
+<p class="sd-card-text">Basis: 100 mol/h C₂H₄ feed to reactor (assume once-through for this problem, no recycle specified).</p>
+<p class="sd-card-text">C₂H₄ converted per pass: <span class="math notranslate nohighlight">\(100 \times 0.30 = 30\)</span> mol/h</p>
+<p class="sd-card-text">Selectivity = 0.75, so:</p>
+<ul class="simple">
+<li><p class="sd-card-text">Moles EO produced: <span class="math notranslate nohighlight">\(30 \times 0.75 = 22.5\)</span> mol/h → <span class="math notranslate nohighlight">\(\xi_1 = 22.5\)</span> mol/h (main reaction)</p></li>
+<li><p class="sd-card-text">Moles via combustion: <span class="math notranslate nohighlight">\(30 \times 0.25 = 7.5\)</span> mol/h → <span class="math notranslate nohighlight">\(\xi_2 = 7.5\)</span> mol/h (side reaction)</p></li>
+</ul>
+<p class="sd-card-text"><strong>(a) Ethylene oxide production rate: <span class="math notranslate nohighlight">\(\mathbf{22.5}\)</span> mol/h</strong></p>
+<p class="sd-card-text"><strong>Step 2: Heat removed from reactor (Part b)</strong></p>
+<p class="sd-card-text">Since both inlet and outlet are at 25°C (standard state), only the heat of reaction contributes:</p>
+<div class="math notranslate nohighlight">
+\[\dot{Q} = \xi_1 \Delta\hat{H}_{rxn,1}^\circ + \xi_2 \Delta\hat{H}_{rxn,2}^\circ\]</div>
+<div class="math notranslate nohighlight">
+\[\dot{Q} = (22.5)(-105) + (7.5)(-1323)\]</div>
+<div class="math notranslate nohighlight">
+\[\dot{Q} = -2362.5 + (-9922.5) = -12{,}285 \text{ kJ/h}\]</div>
+<p class="sd-card-text">Convert to kW: <span class="math notranslate nohighlight">\(\dot{Q} = \frac{-12{,}285}{3600} = -3.41\)</span> kW</p>
+<p class="sd-card-text"><strong>(b) Heat removed: <span class="math notranslate nohighlight">\(\mathbf{3.41}\)</span> kW</strong> (negative sign confirms heat must be removed — exothermic reactions)</p>
+<p class="sd-card-text"><strong>Key insight:</strong> Even though the main reaction is only moderately exothermic, the side combustion reaction releases far more heat per mole. Always check the contribution of all reactions when sizing heat removal equipment.</p>
+</div>
+</details><hr class="docutils" />
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p><strong>PE Exam Traps — Reactive Energy Balances</strong></p>
+<ul class="simple">
+<li><p><strong>Don’t forget the side reactions:</strong> If a problem gives two reactions and asks for reactor heat duty, include the heat of reaction for <strong>each</strong> reaction scaled by its own extent. Omitting the combustion side reaction in Example 2 above would underestimate heat removal by 80%.</p></li>
+<li><p><strong>Reference state consistency:</strong> Standard heats of formation are at 25°C and 1 atm. If reactants enter at 300°C and products leave at 500°C, you must add sensible heat correction terms. The formula is: <span class="math notranslate nohighlight">\(\dot{Q} = \xi\Delta\hat{H}_{rxn}^\circ + \sum_{out}\dot{n}_i\hat{h}_i - \sum_{in}\dot{n}_i\hat{h}_i\)</span>.</p></li>
+<li><p><strong>Exothermic sign check:</strong> For an exothermic reaction, <span class="math notranslate nohighlight">\(\Delta\hat{H}_{rxn}^\circ &lt; 0\)</span> and <span class="math notranslate nohighlight">\(\dot{Q} &lt; 0\)</span> (heat leaves the reactor). If you get a positive <span class="math notranslate nohighlight">\(\dot{Q}\)</span> for a combustion reaction, check your sign convention.</p></li>
+<li><p><strong>Latent heats of formation:</strong> Water formed by combustion is typically vapor at high temperature (<span class="math notranslate nohighlight">\(\Delta\hat{H}_{f,H_2O(g)}^\circ = -241.83\)</span> kJ/mol). Using the liquid value (<span class="math notranslate nohighlight">\(-285.84\)</span> kJ/mol) is wrong unless the product water is liquid.</p></li>
+</ul>
+</div>
 </section>
 </section>
 
@@ -2615,18 +2668,21 @@ Q_L = n\Delta H_{\text{phase change}}
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Mass and Energy Balance</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#process-fundamentals-study-guide">Process Fundamentals Study Guide</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-process-fundamentals">Introduction to Process Fundamentals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-reference-key-equations">Quick Reference: Key Equations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#material-balances">Material Balances</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-general-balance-equation">The General Balance Equation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overall-steady-state-balance-no-reaction">Overall Steady-State Balance (No Reaction)</a></li>
@@ -2712,6 +2768,7 @@ Q_L = n\Delta H_{\text{phase change}}
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#effect-of-temperature-on-heat-of-reaction">Effect of Temperature on Heat of Reaction</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-exam-practice-problems">PE Exam Practice Problems</a></li>
 </ul>
 </li>
 </ul>
@@ -2763,8 +2820,8 @@ By PE Exam Preparation
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>
